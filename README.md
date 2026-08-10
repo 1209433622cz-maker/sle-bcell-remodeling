@@ -47,45 +47,27 @@ The active proposal files are:
 - `04_submission/document_qc/research_proposal_v14_2026-08-10_external_audit_integrated_qc_r2/RESEARCH_PROPOSAL_V14_QC.md`:
   final render, content-consistency and accessibility audit.
 
-Superseded proposal sources retained for provenance:
+Selected proposal sources retained for provenance:
 
 - `01_manuscript/proposal_basis_final_v4.docx`
 - `01_manuscript/proposal_basis_humanized_v13.docx`
 - `01_manuscript/proposal_latex_source/main.tex`: editable LaTeX proposal source.
-- `00_project_management/legacy_rp_archive_2026-08-10/`: recovered Chinese, bilingual, working-draft, v7, and v10 versions; archive only.
 
-The former `RP/` directory was deliberately removed during cleanup after these active files were moved. The original path mapping is recorded in `00_project_management/keepers_moved_2026-06-22.csv`.
+## Repository Layout
 
-## What Was Kept
-
-- `Data/`: retained accession notes and currently available supplementary data.
-- `PAPER/`: retained canonical English PDF literature set.
-- `01_manuscript/`: retained the two most useful proposal basis documents and LaTeX proposal source.
-- `99_admin_course_docs/`: moved course/admin documents out of the manuscript root.
-- `00_project_management/`: cleanup manifests and movement logs.
-
-## Cleanup Log
-
-The large legacy folders and generated artifacts were removed from the active workspace on 2026-06-22. The main action log is:
-
-- `00_project_management/cleanup_manifest_2026-06-22.csv`
-- `00_project_management/cleanup_actions_2026-06-22.csv`
-- `00_project_management/cleanup_manifest_extra_2026-06-22.csv`
-- `00_project_management/cleanup_actions_extra_2026-06-22.csv`
-- `00_project_management/keepers_moved_2026-06-22.csv`
-
-Removed items were sent to the Windows Recycle Bin.
-
-Exception: `RP/` and `RP-TT/` reappeared after the Recycle Bin operation on the H: drive, so they were permanently deleted after path verification. See `00_project_management/cleanup_actions_permanent_2026-06-22.csv`.
-
-## Current Working Folders
-
-- `01_manuscript/`: active RP, v7 blueprint and frozen v1-v6 manuscript sources.
-- `02_analysis/`: established analysis scripts, environments and runbooks.
-- `03_results/`: frozen analysis tables and figure outputs from completed phases.
-- `04_submission/`: v6 provenance package, quality audits and v7 figure design.
+- `00_project_management/`: scientific audits, evidence tables and gate decisions.
+- `01_manuscript/`: active RP, v7 blueprint and frozen manuscript provenance.
+- `02_analysis/`: analysis scripts, environments, data inventory and runbooks.
+- `03_results/`: the active v7 Figure 1 bundle and its source tables.
+- `04_submission/`: current figure architecture and RP quality-control records.
 - `audit_tools/`: active Phase 17 gate scripts and scientific decision reports.
-- `phase17_v7/`: timestamped v7 raw-count rerun outputs.
+- `phase17_v7/`: compact gate summaries and diagnostic figures required to audit
+  the v7 rerun.
+
+Raw and processed matrices, source literature, local administration files,
+large per-cell exports and software-test artifacts remain outside Git. Their
+accessions, checksums and reconstruction instructions are recorded in the
+tracked manifests and `REPRODUCIBILITY.md`.
 
 ## Near-Term Priorities
 
