@@ -1,0 +1,18 @@
+{
+  "reviewed_at": "2026-08-10T17:02:38+08:00",
+  "run_dir": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\gateC2A\\20260810_164012_smoke",
+  "representation_gate": "GO_TO_FULL_C2B",
+  "doublet_gate": "NO_GO_FOR_FREEZE",
+  "annotation_gate": "PROVISIONAL_ONLY",
+  "submission_gate": "NO_GO",
+  "coverage_pass": true,
+  "harmony_mixing_improved": true,
+  "doublet_summary": {
+    "n_libraries_successful": 87,
+    "median_fraction": 0.1479591836734693,
+    "mean_fraction": 0.1572376580152752,
+    "maximum_fraction": 0.4365482233502538,
+    "libraries_above_0_20": 17
+  },
+  "reason": "Disease-blind biological structure, batch mixing and cluster coverage support a full rerun. Smoke-stage Scrublet calls are invalid for freezing because balanced sampling preceded per-library calling."
+}

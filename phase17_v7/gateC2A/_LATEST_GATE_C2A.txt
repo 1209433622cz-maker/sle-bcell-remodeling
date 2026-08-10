@@ -1,0 +1,1 @@
+run_dir=H:\cuhk-2025fALL\6013RP-wyf\phase17_v7\gateC2A\20260810_164012_smoke

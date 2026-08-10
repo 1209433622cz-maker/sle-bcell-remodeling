@@ -1,0 +1,18 @@
+{
+  "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\Data\\processed\\GSE174188_perez_cellxgene\\bcell_subset_full.h5ad",
+  "size_bytes": 1306803705,
+  "sha256": "fbd4692e033a57412fcc9dfe761180a9e4bdae37c4fda8f5ecc2e28fde46371b",
+  "n_obs": 152981,
+  "n_vars": 30172,
+  "has_raw": true,
+  "raw_x_encoding": "csr_matrix",
+  "raw_x_shape": "152981x30172",
+  "raw_sample_min": 1.0,
+  "raw_sample_max": 387.0,
+  "raw_sample_integer_fraction": 1.0,
+  "raw_sample_nonnegative": true,
+  "obs_columns": "Processing_Cohort | assay | assay_ontology_term_id | author_cell_type | cell_state | cell_type | cell_type_ontology_term_id | ct_cov | development_stage | development_stage_ontology_term_id | disease | disease_ontology_term_id | disease_state | donor_id | ind_cov | index | is_primary_data | library_uuid | mapped_reference_annotation | observation_joinid | sample_uuid | self_reported_ethnicity | self_reported_ethnicity_ontology_term_id | sex | sex_ontology_term_id | suspension_enriched_cell_types | suspension_type | suspension_uuid | tissue | tissue_ontology_term_id | tissue_type",
+  "raw_var_columns": "_index | feature_biotype | feature_length | feature_name | feature_reference | feature_type",
+  "status": "ok",
+  "message": ""
+}

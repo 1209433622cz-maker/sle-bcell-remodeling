@@ -1,0 +1,15 @@
+﻿leiden_harmony_r0_6,disease,n_cells,within_cluster_fraction
+0,normal,1814,0.3000827129859388
+0,systemic lupus erythematosus,4231,0.6999172870140612
+1,normal,1765,0.4125759700794764
+1,systemic lupus erythematosus,2513,0.5874240299205236
+2,normal,2042,0.5191965420798372
+2,systemic lupus erythematosus,1891,0.4808034579201627
+3,normal,596,0.42209631728045327
+3,systemic lupus erythematosus,816,0.5779036827195467
+4,normal,182,0.23821989528795812
+4,systemic lupus erythematosus,582,0.7617801047120419
+5,normal,99,0.29376854599406527
+5,systemic lupus erythematosus,238,0.7062314540059347
+6,normal,65,0.28634361233480177
+6,systemic lupus erythematosus,162,0.7136563876651982

@@ -1,0 +1,31 @@
+\ProvidesPackage{mbi6013}[2026/04/01 Custom Style for MBI6013 Research Proposal]
+
+% --- 页面与字体设置 ---
+\RequirePackage[margin=1in]{geometry} % 1英寸标准页边距
+\RequirePackage{fontspec}
+\setmainfont{Times New Roman} % Times New Roman 12pt
+\RequirePackage{setspace}
+\setstretch{1.15} % 适度增加行距，提高可读性
+
+% --- 常用宏包 ---
+\RequirePackage{graphicx} % 插入图片
+\RequirePackage{float} % 强制图片位置 [H]
+\RequirePackage{titlesec} % 自定义章节标题格式
+\RequirePackage{enumitem} % 自定义列表格式
+\RequirePackage{indentfirst} % 首行缩进
+\RequirePackage{xcolor}
+
+% --- 章节标题格式化 (A. B. C. 风格) ---
+\titleformat{\section}{\normalfont\Large\bfseries}{}{0pt}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{}{0pt}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries\itshape}{}{0pt}{}
+
+% --- 超链接颜色设置 ---
+\RequirePackage{hyperref} % 超链接支持必须放在较后的位置
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=black,
+}

@@ -1,0 +1,24 @@
+name: sle-bcell
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - pip
+  - scanpy
+  - anndata
+  - pandas
+  - numpy
+  - scipy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - statsmodels
+  - python-igraph
+  - leidenalg
+  - harmonypy
+  - h5py
+  - pytables
+  - zstandard
+  - pip:
+      - session-info

@@ -1,0 +1,76 @@
+{
+  "input": "Data\\processed\\GSE174188_perez_cellxgene\\perez_gse174188_cellxgene.h5ad",
+  "n_obs": 1263676,
+  "n_vars": 30172,
+  "obs_columns": [
+    "library_uuid",
+    "assay_ontology_term_id",
+    "mapped_reference_annotation",
+    "is_primary_data",
+    "cell_type_ontology_term_id",
+    "author_cell_type",
+    "cell_state",
+    "sample_uuid",
+    "tissue_ontology_term_id",
+    "development_stage_ontology_term_id",
+    "disease_state",
+    "suspension_enriched_cell_types",
+    "suspension_uuid",
+    "suspension_type",
+    "donor_id",
+    "self_reported_ethnicity_ontology_term_id",
+    "disease_ontology_term_id",
+    "sex_ontology_term_id",
+    "Processing_Cohort",
+    "ct_cov",
+    "ind_cov",
+    "tissue_type",
+    "cell_type",
+    "assay",
+    "disease",
+    "sex",
+    "tissue",
+    "self_reported_ethnicity",
+    "development_stage",
+    "observation_joinid"
+  ],
+  "var_columns": [
+    "feature_is_filtered",
+    "feature_name",
+    "feature_reference",
+    "feature_biotype",
+    "feature_length",
+    "feature_type"
+  ],
+  "obsm_keys": [
+    "X_pca",
+    "X_umap"
+  ],
+  "layers": [],
+  "uns_keys": [
+    "citation",
+    "default_embedding",
+    "is_pre_analysis",
+    "organism",
+    "organism_ontology_term_id",
+    "schema_reference",
+    "schema_version",
+    "title"
+  ],
+  "candidate_cell_type_columns": [
+    "mapped_reference_annotation",
+    "cell_type_ontology_term_id",
+    "author_cell_type",
+    "suspension_enriched_cell_types",
+    "cell_type"
+  ],
+  "candidate_status_columns": [
+    "disease_state",
+    "disease_ontology_term_id",
+    "disease"
+  ],
+  "candidate_donor_columns": [
+    "sample_uuid",
+    "donor_id"
+  ]
+}

@@ -1,0 +1,9 @@
+processing_cohort,disease,n_strict_biological_units
+1,Normal,28
+1,SLE,0
+2,Normal,1
+2,SLE,87
+3,Normal,5
+3,SLE,8
+4,Normal,41
+4,SLE,25

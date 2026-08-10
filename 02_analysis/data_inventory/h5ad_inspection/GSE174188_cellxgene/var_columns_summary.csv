@@ -1,0 +1,7 @@
+﻿column,dtype,non_null,n_unique,examples
+feature_is_filtered,bool,30172,2,True | False
+feature_name,category,30172,30162,MIR1302-2HG | FAM138A | OR4F5 | ENSG00000239945 | ENSG00000239906 | ENSG00000241599 | ENSG00000228463 | ENSG00000237094 | ENSG00000236601 | ENSG00000235146 | ENSG00000230021 | ENSG00000229905
+feature_reference,category,30172,1,NCBITaxon:9606
+feature_biotype,category,30172,1,gene
+feature_length,category,30172,4854,517 | 1015 | 2618 | 1319 | 323 | 457 | 183 | 620 | 675 | 456 | 417 | 1089
+feature_type,category,30172,14,lncRNA | protein_coding | transcribed_processed_pseudogene | transcribed_unprocessed_pseudogene | TEC | transcribed_unitary_pseudogene | unprocessed_pseudogene | misc_RNA | processed_pseudogene | IG_V_pseudogene | IG_V_gene | vault_RNA

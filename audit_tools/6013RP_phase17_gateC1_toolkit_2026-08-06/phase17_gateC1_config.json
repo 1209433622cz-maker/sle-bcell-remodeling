@@ -1,0 +1,15 @@
+{
+  "project_root": "H:\\cuhk-2025fALL\\6013RP-wyf",
+  "discovery_h5ad": "Data\\processed\\GSE174188_perez_cellxgene\\bcell_subset_full.h5ad",
+  "output_root": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\gateC1",
+  "raw_matrix": "raw/X",
+  "primary_sample_unit": "sample_uuid",
+  "subject_id": "donor_id",
+  "technical_batch": "library_uuid",
+  "processing_stratum": "Processing_Cohort",
+  "qc": {
+    "sample_aware": true,
+    "mad_multiplier_candidate": 3.0,
+    "apply_filter_automatically": false
+  }
+}

@@ -1,0 +1,4 @@
+scikit-image==0.26.0
+scipy==1.17.1
+session-info==1.0.1
+stdlib-list==0.12.0

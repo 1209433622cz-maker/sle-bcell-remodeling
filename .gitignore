@@ -1,0 +1,76 @@
+# Raw, processed and reference data are accession/checksum managed outside Git.
+Data/
+PAPER/
+99_admin_course_docs/
+_phase17_review_pack/
+
+# Large scientific matrices, archives and per-cell exports.
+*.h5ad
+*.h5
+*.hdf5
+*.loom
+*.rds
+*.tar
+*.tar.gz
+*.zip
+*.7z
+*.fastq
+*.fastq.gz
+*.bam
+*.bai
+*.mtx.gz
+*.csv.gz
+
+# Legacy generated results; retain the active v7 Figure 1 bundle.
+03_results/*
+!03_results/phase17_v7_figure1_study_design_2026-08-10/
+
+# Legacy submission builds; retain only the active design and final RP QC note.
+04_submission/*
+!04_submission/figure_architecture_v7_nature_style_2026-08-10.md
+!04_submission/document_qc/
+04_submission/document_qc/*
+!04_submission/document_qc/research_proposal_v14_2026-08-10_external_audit_integrated_qc_r2/
+04_submission/document_qc/research_proposal_v14_2026-08-10_external_audit_integrated_qc_r2/*
+!04_submission/document_qc/research_proposal_v14_2026-08-10_external_audit_integrated_qc_r2/RESEARCH_PROPOSAL_V14_QC.md
+
+# Local software-test matrices and generated diagnostics.
+phase17_v7/**/_software_tests/
+phase17_v7/**/_software_test*/
+
+# Local/root archives and duplicate literature files.
+6013RP-wyf*.zip
+science.abf1970.pdf
+
+# Local audit inventories and superseded proposal binaries can contain machine paths.
+00_project_management/audit_2026-06-23/
+00_project_management/cleanup_*
+00_project_management/pdf_inventory_*
+00_project_management/keepers_moved_*
+00_project_management/legacy_rp_archive_2026-08-10/
+
+# Recomputable cell-level exports and transient run pointers.
+phase17_v7/gateC2A/*/10_ranked_markers_*.csv
+phase17_v7/**/_RUNNING_*.txt
+
+# Runtime, editor and Office artifacts.
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+~$*
+*.tmp
+*.log
+
+# Credentials and local configuration.
+.env
+.env.*
+!.env.example
+credentials.json
+secrets.*

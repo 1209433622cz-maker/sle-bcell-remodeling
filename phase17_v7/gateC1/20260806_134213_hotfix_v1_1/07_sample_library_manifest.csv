@@ -1,0 +1,1374 @@
+﻿sample_uuid,library_uuid,n_bcells,donor_id,disease,disease_state,Processing_Cohort_n_unique,Processing_Cohort,record_conflict
+00d8685c-548c-4e5f-b151-47d678b31cd6,1e3165e4-e0c0-4bf7-b803-7d8271b99fd5,118,2082,systemic lupus erythematosus,managed,1,4.0,False
+00d8685c-548c-4e5f-b151-47d678b31cd6,60373b7d-7c45-428f-9622-aa4f854c4860,136,2082,systemic lupus erythematosus,managed,1,4.0,False
+00d8685c-548c-4e5f-b151-47d678b31cd6,d4d2da4e-6580-479c-b5f6-77b109e72715,141,2082,systemic lupus erythematosus,managed,1,4.0,False
+00d8685c-548c-4e5f-b151-47d678b31cd6,fb1e97d1-dd9c-4314-aae2-9c3745df1411,144,2082,systemic lupus erythematosus,managed,1,4.0,False
+02404cf5-4210-43b8-b998-797422f7b1a8,1495b93b-a19f-4364-95a3-6d8ac531eac6,129,HC-585,normal,na,1,4.0,False
+02404cf5-4210-43b8-b998-797422f7b1a8,3332f018-936e-4c4c-9105-99d9503db5a3,105,HC-585,normal,na,1,4.0,False
+02404cf5-4210-43b8-b998-797422f7b1a8,70a004b7-4a17-4702-8910-4557aa0c4279,97,HC-585,normal,na,1,4.0,False
+02404cf5-4210-43b8-b998-797422f7b1a8,cdab3145-edc9-4352-932c-1638e791bfc9,131,HC-585,normal,na,1,4.0,False
+025b6b04-0e79-4c4b-bbb5-15042ca0474e,28401515-eca4-442a-85fc-f8c2793b1c26,143,1785,systemic lupus erythematosus,managed,1,2.0,False
+025b6b04-0e79-4c4b-bbb5-15042ca0474e,9184b09f-ca66-4623-a733-1f64bc1b424f,130,1785,systemic lupus erythematosus,managed,1,2.0,False
+025b6b04-0e79-4c4b-bbb5-15042ca0474e,d9bf3113-086e-4165-ba13-e78a3d7b4138,136,1785,systemic lupus erythematosus,managed,1,2.0,False
+025b6b04-0e79-4c4b-bbb5-15042ca0474e,e16d2c39-bfd1-4fb1-8ed6-ad6b16f3652e,42,1785,systemic lupus erythematosus,managed,1,2.0,False
+0332dc59-e2c0-4b55-9921-3e0d0f565e5e,2236c52d-924b-415a-aae0-00fa08d12d1f,65,IGTB1542,normal,na,1,2.0,False
+0332dc59-e2c0-4b55-9921-3e0d0f565e5e,894c6ccb-cb7a-4ea1-b032-b1d93b25247d,45,IGTB1542,normal,na,1,2.0,False
+0332dc59-e2c0-4b55-9921-3e0d0f565e5e,9850fb76-4155-4910-881f-b5d33ee0835c,69,IGTB1542,normal,na,1,2.0,False
+0332dc59-e2c0-4b55-9921-3e0d0f565e5e,f2380b81-e46f-430b-8fd2-e3897ddf7be9,65,IGTB1542,normal,na,1,2.0,False
+037d2b66-6091-42f8-b0ff-07c9130dea62,16552c24-ef48-4e1f-aff5-319a1f739299,113,HC-563,normal,na,1,4.0,False
+037d2b66-6091-42f8-b0ff-07c9130dea62,43b9b939-e389-4784-b4e0-ee9d12aa7ca1,142,HC-563,normal,na,1,4.0,False
+037d2b66-6091-42f8-b0ff-07c9130dea62,91761416-a756-48e5-8768-fd169c7c564c,128,HC-563,normal,na,1,4.0,False
+037d2b66-6091-42f8-b0ff-07c9130dea62,d9942805-5a63-4958-b714-7088c0428c65,103,HC-563,normal,na,1,4.0,False
+0426d045-1567-4897-8407-e7925395251c,0c3a7808-800f-43b1-a57b-08c3b2bb9e5a,78,1615,systemic lupus erythematosus,managed,1,2.0,False
+0426d045-1567-4897-8407-e7925395251c,222b358b-71e7-4b0f-9f9b-47b4c67aaa27,99,1615,systemic lupus erythematosus,managed,1,2.0,False
+0426d045-1567-4897-8407-e7925395251c,585af22b-b80b-4a1d-8cc8-17d65b2639e1,78,1615,systemic lupus erythematosus,managed,1,2.0,False
+0426d045-1567-4897-8407-e7925395251c,d8a37460-32f2-4b61-b1d2-1f7f0ba92779,88,1615,systemic lupus erythematosus,managed,1,2.0,False
+09e143b6-bb61-40d5-99d8-bcf32ae0a20a,28401515-eca4-442a-85fc-f8c2793b1c26,26,1567,systemic lupus erythematosus,managed,1,2.0,False
+09e143b6-bb61-40d5-99d8-bcf32ae0a20a,9184b09f-ca66-4623-a733-1f64bc1b424f,26,1567,systemic lupus erythematosus,managed,1,2.0,False
+09e143b6-bb61-40d5-99d8-bcf32ae0a20a,d9bf3113-086e-4165-ba13-e78a3d7b4138,14,1567,systemic lupus erythematosus,managed,1,2.0,False
+09e143b6-bb61-40d5-99d8-bcf32ae0a20a,e16d2c39-bfd1-4fb1-8ed6-ad6b16f3652e,2,1567,systemic lupus erythematosus,managed,1,2.0,False
+09fc2399-2a9e-47ec-a0f4-f0c83ee59b98,1e3165e4-e0c0-4bf7-b803-7d8271b99fd5,87,HC-536,normal,na,1,4.0,False
+09fc2399-2a9e-47ec-a0f4-f0c83ee59b98,60373b7d-7c45-428f-9622-aa4f854c4860,102,HC-536,normal,na,1,4.0,False
+09fc2399-2a9e-47ec-a0f4-f0c83ee59b98,d4d2da4e-6580-479c-b5f6-77b109e72715,113,HC-536,normal,na,1,4.0,False
+09fc2399-2a9e-47ec-a0f4-f0c83ee59b98,fb1e97d1-dd9c-4314-aae2-9c3745df1411,101,HC-536,normal,na,1,4.0,False
+0a1148dc-356f-4dc4-9c32-bf0823257d93,1495b93b-a19f-4364-95a3-6d8ac531eac6,129,HC-546,normal,na,1,4.0,False
+0a1148dc-356f-4dc4-9c32-bf0823257d93,3332f018-936e-4c4c-9105-99d9503db5a3,157,HC-546,normal,na,1,4.0,False
+0a1148dc-356f-4dc4-9c32-bf0823257d93,70a004b7-4a17-4702-8910-4557aa0c4279,150,HC-546,normal,na,1,4.0,False
+0a1148dc-356f-4dc4-9c32-bf0823257d93,cdab3145-edc9-4352-932c-1638e791bfc9,143,HC-546,normal,na,1,4.0,False
+0a4bb8a3-0abf-46eb-a33c-c14a23d44387,3639058a-5dc3-49ad-82ff-cec405483912,96,IGTB1762,normal,na,1,1.0,False
+0a4bb8a3-0abf-46eb-a33c-c14a23d44387,56b848af-d12b-4f9c-b605-947e296caa46,78,IGTB1762,normal,na,1,1.0,False
+0a4bb8a3-0abf-46eb-a33c-c14a23d44387,8950207b-4940-4ef9-ad01-0ad0dace6f27,113,IGTB1762,normal,na,1,1.0,False
+0a4bb8a3-0abf-46eb-a33c-c14a23d44387,b993ef60-52c8-41e2-83a2-bb44f1fb916f,81,IGTB1762,normal,na,1,1.0,False
+0b078cad-b547-43a9-a401-35cab69549b4,2dbf699a-f6cd-446d-8dc4-0595319cfa99,134,1338,systemic lupus erythematosus,managed,1,2.0,False
+0b078cad-b547-43a9-a401-35cab69549b4,39564abe-76f3-4a33-9f10-f574069834bc,124,1338,systemic lupus erythematosus,managed,1,2.0,False
+0b078cad-b547-43a9-a401-35cab69549b4,78c34b8c-196b-4a31-b700-08882bfaf4ab,199,1338,systemic lupus erythematosus,managed,1,2.0,False
+0b078cad-b547-43a9-a401-35cab69549b4,cdf51e52-a49a-474f-a6ba-da5a14137d09,151,1338,systemic lupus erythematosus,managed,1,2.0,False
+0e4725c3-8e87-420e-bbf1-15781f6bbf5c,0c7c125d-46d6-40ba-8088-31fb2b526a78,234,1294,systemic lupus erythematosus,managed,1,2.0,False
+0e4725c3-8e87-420e-bbf1-15781f6bbf5c,272dbb99-7929-46e2-8446-a19c21af05da,357,1294,systemic lupus erythematosus,managed,1,2.0,False
+0e4725c3-8e87-420e-bbf1-15781f6bbf5c,6ab35eea-1bae-4ee8-8e5f-5f1505715ac3,301,1294,systemic lupus erythematosus,managed,1,2.0,False
+0e4725c3-8e87-420e-bbf1-15781f6bbf5c,fc140c51-9b4f-427f-8e11-640bc7400007,315,1294,systemic lupus erythematosus,managed,1,2.0,False
+0e59aacb-7550-45ed-8510-b29b63163539,16552c24-ef48-4e1f-aff5-319a1f739299,118,1256,systemic lupus erythematosus,managed,1,4.0,False
+0e59aacb-7550-45ed-8510-b29b63163539,43b9b939-e389-4784-b4e0-ee9d12aa7ca1,96,1256,systemic lupus erythematosus,managed,1,4.0,False
+0e59aacb-7550-45ed-8510-b29b63163539,91761416-a756-48e5-8768-fd169c7c564c,134,1256,systemic lupus erythematosus,managed,1,4.0,False
+0e59aacb-7550-45ed-8510-b29b63163539,d9942805-5a63-4958-b714-7088c0428c65,117,1256,systemic lupus erythematosus,managed,1,4.0,False
+0eebb9c2-8cf2-4e46-abcb-0525a9507033,0955850b-157b-4396-a3da-83b8bcbed172,462,1325,systemic lupus erythematosus,managed,1,4.0,False
+0eebb9c2-8cf2-4e46-abcb-0525a9507033,34585dab-86cd-40a1-9780-83204c304046,434,1325,systemic lupus erythematosus,managed,1,4.0,False
+0eebb9c2-8cf2-4e46-abcb-0525a9507033,ddae4c77-2b07-4e3e-97f1-84a37cf04321,443,1325,systemic lupus erythematosus,managed,1,4.0,False
+0eebb9c2-8cf2-4e46-abcb-0525a9507033,ecd9109f-7197-46df-b3a8-1ac2d9990185,458,1325,systemic lupus erythematosus,managed,1,4.0,False
+0f3a21f5-e7b9-4139-93fb-5407dbfde4fc,152e2bfd-e9ea-4d70-a999-6f37fb3fb96c,96,FLARE006,systemic lupus erythematosus,flare,1,3.0,False
+0f3a21f5-e7b9-4139-93fb-5407dbfde4fc,30bbf8d6-bd6a-4b4f-8d3e-a54bf78f79d5,100,FLARE006,systemic lupus erythematosus,flare,1,3.0,False
+0f3a21f5-e7b9-4139-93fb-5407dbfde4fc,b816335c-8d84-4ecc-aa3e-2dea51795320,114,FLARE006,systemic lupus erythematosus,flare,1,3.0,False
+0f3a21f5-e7b9-4139-93fb-5407dbfde4fc,df159c28-05fb-4f35-83b8-8c14af793f2a,110,FLARE006,systemic lupus erythematosus,flare,1,3.0,False
+1046eed3-a68a-4d02-b26c-4f8054029760,1e3165e4-e0c0-4bf7-b803-7d8271b99fd5,161,HC-526,normal,na,1,4.0,False
+1046eed3-a68a-4d02-b26c-4f8054029760,60373b7d-7c45-428f-9622-aa4f854c4860,166,HC-526,normal,na,1,4.0,False
+1046eed3-a68a-4d02-b26c-4f8054029760,d4d2da4e-6580-479c-b5f6-77b109e72715,151,HC-526,normal,na,1,4.0,False
+1046eed3-a68a-4d02-b26c-4f8054029760,fb1e97d1-dd9c-4314-aae2-9c3745df1411,161,HC-526,normal,na,1,4.0,False
+11c6a06c-f0e0-45bc-b5ec-1b14445548d4,28401515-eca4-442a-85fc-f8c2793b1c26,106,IGTB1539,normal,na,1,2.0,False
+11c6a06c-f0e0-45bc-b5ec-1b14445548d4,9184b09f-ca66-4623-a733-1f64bc1b424f,99,IGTB1539,normal,na,1,2.0,False
+11c6a06c-f0e0-45bc-b5ec-1b14445548d4,a5cedd63-caae-415f-b7e4-c7f660fc89c8,159,IGTB1539,normal,na,1,1.0,False
+11c6a06c-f0e0-45bc-b5ec-1b14445548d4,cd2306bc-106c-4506-b778-d184713c463a,157,IGTB1539,normal,na,1,1.0,False
+11c6a06c-f0e0-45bc-b5ec-1b14445548d4,d9278721-fad6-4eba-a1bb-4a26c0aea206,143,IGTB1539,normal,na,1,1.0,False
+11c6a06c-f0e0-45bc-b5ec-1b14445548d4,d9bf3113-086e-4165-ba13-e78a3d7b4138,104,IGTB1539,normal,na,1,2.0,False
+11c6a06c-f0e0-45bc-b5ec-1b14445548d4,e16d2c39-bfd1-4fb1-8ed6-ad6b16f3652e,27,IGTB1539,normal,na,1,2.0,False
+11c6a06c-f0e0-45bc-b5ec-1b14445548d4,f1568b25-4a87-414f-8329-1a860a3a8aeb,183,IGTB1539,normal,na,1,1.0,False
+11e9756a-d4e3-4024-8167-81f1c9013e09,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,76,HC-002,normal,na,1,3.0,False
+11e9756a-d4e3-4024-8167-81f1c9013e09,7a2abe44-abb7-4648-bb14-224625a6da0b,93,HC-002,normal,na,1,3.0,False
+11e9756a-d4e3-4024-8167-81f1c9013e09,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,93,HC-002,normal,na,1,3.0,False
+11e9756a-d4e3-4024-8167-81f1c9013e09,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,93,HC-002,normal,na,1,3.0,False
+13ec931d-a536-4679-ad6c-39d7bbaa8d5d,0103e306-959a-46b0-896d-d8b9dee40157,126,IGTB1650,normal,na,1,1.0,False
+13ec931d-a536-4679-ad6c-39d7bbaa8d5d,0be87f87-d01a-495e-9605-d89d36240908,106,IGTB1650,normal,na,1,2.0,False
+13ec931d-a536-4679-ad6c-39d7bbaa8d5d,1556abac-8f1a-404a-8a2f-402ac562143c,60,IGTB1650,normal,na,1,2.0,False
+13ec931d-a536-4679-ad6c-39d7bbaa8d5d,3044f2b9-48b5-45ec-ac14-107f0d7372f0,61,IGTB1650,normal,na,1,2.0,False
+13ec931d-a536-4679-ad6c-39d7bbaa8d5d,54530f14-aadf-4c2a-8f92-9c22a69cc022,104,IGTB1650,normal,na,1,2.0,False
+13ec931d-a536-4679-ad6c-39d7bbaa8d5d,665a3535-8f40-4ae3-9260-cbce7060781f,73,IGTB1650,normal,na,1,2.0,False
+13ec931d-a536-4679-ad6c-39d7bbaa8d5d,9586e7f4-5c57-452e-bb13-90ceef874118,139,IGTB1650,normal,na,1,1.0,False
+13ec931d-a536-4679-ad6c-39d7bbaa8d5d,b795713b-ff23-4494-b6a3-1438b2baee3e,46,IGTB1650,normal,na,1,2.0,False
+13ec931d-a536-4679-ad6c-39d7bbaa8d5d,d461010c-38fd-414f-91bd-e1b3e7e2f8fb,130,IGTB1650,normal,na,1,1.0,False
+13ec931d-a536-4679-ad6c-39d7bbaa8d5d,dac92812-557b-4abd-8fb0-4f823ae8ff59,106,IGTB1650,normal,na,1,2.0,False
+13ec931d-a536-4679-ad6c-39d7bbaa8d5d,e3629615-6d5c-4167-808f-996d53989dbf,79,IGTB1650,normal,na,1,2.0,False
+13ec931d-a536-4679-ad6c-39d7bbaa8d5d,e7240495-f3e8-42a3-ac5c-4a9a7eebc341,137,IGTB1650,normal,na,1,1.0,False
+145e48d0-e1f3-48cd-a198-d4c62e1f8ba0,1495b93b-a19f-4364-95a3-6d8ac531eac6,25,HC-556,normal,na,1,4.0,False
+145e48d0-e1f3-48cd-a198-d4c62e1f8ba0,3332f018-936e-4c4c-9105-99d9503db5a3,24,HC-556,normal,na,1,4.0,False
+145e48d0-e1f3-48cd-a198-d4c62e1f8ba0,70a004b7-4a17-4702-8910-4557aa0c4279,25,HC-556,normal,na,1,4.0,False
+145e48d0-e1f3-48cd-a198-d4c62e1f8ba0,cdab3145-edc9-4352-932c-1638e791bfc9,26,HC-556,normal,na,1,4.0,False
+150f491b-4af3-4972-853f-5d39e7ea824a,0c7c125d-46d6-40ba-8088-31fb2b526a78,29,1414,systemic lupus erythematosus,managed,1,2.0,False
+150f491b-4af3-4972-853f-5d39e7ea824a,272dbb99-7929-46e2-8446-a19c21af05da,57,1414,systemic lupus erythematosus,managed,1,2.0,False
+150f491b-4af3-4972-853f-5d39e7ea824a,6ab35eea-1bae-4ee8-8e5f-5f1505715ac3,47,1414,systemic lupus erythematosus,managed,1,2.0,False
+150f491b-4af3-4972-853f-5d39e7ea824a,fc140c51-9b4f-427f-8e11-640bc7400007,65,1414,systemic lupus erythematosus,managed,1,2.0,False
+168bc7ce-f2e2-46f4-8b35-43f4ddf39693,28401515-eca4-442a-85fc-f8c2793b1c26,277,1584,systemic lupus erythematosus,managed,1,2.0,False
+168bc7ce-f2e2-46f4-8b35-43f4ddf39693,9184b09f-ca66-4623-a733-1f64bc1b424f,263,1584,systemic lupus erythematosus,managed,1,2.0,False
+168bc7ce-f2e2-46f4-8b35-43f4ddf39693,d9bf3113-086e-4165-ba13-e78a3d7b4138,245,1584,systemic lupus erythematosus,managed,1,2.0,False
+168bc7ce-f2e2-46f4-8b35-43f4ddf39693,e16d2c39-bfd1-4fb1-8ed6-ad6b16f3652e,89,1584,systemic lupus erythematosus,managed,1,2.0,False
+18773af4-60a6-4a6a-9249-429ddf7f5a89,152e2bfd-e9ea-4d70-a999-6f37fb3fb96c,90,FLARE004,systemic lupus erythematosus,flare,1,3.0,False
+18773af4-60a6-4a6a-9249-429ddf7f5a89,30bbf8d6-bd6a-4b4f-8d3e-a54bf78f79d5,93,FLARE004,systemic lupus erythematosus,flare,1,3.0,False
+18773af4-60a6-4a6a-9249-429ddf7f5a89,b816335c-8d84-4ecc-aa3e-2dea51795320,107,FLARE004,systemic lupus erythematosus,flare,1,3.0,False
+18773af4-60a6-4a6a-9249-429ddf7f5a89,df159c28-05fb-4f35-83b8-8c14af793f2a,82,FLARE004,systemic lupus erythematosus,flare,1,3.0,False
+1990a6b9-ef47-4b7d-ac77-421031dec003,048cb921-e15f-47a6-a9e3-ed512574e5d7,95,1827,systemic lupus erythematosus,managed,1,2.0,False
+1990a6b9-ef47-4b7d-ac77-421031dec003,c64fa002-95f9-4429-b65c-6f55c7f907d4,121,1827,systemic lupus erythematosus,managed,1,2.0,False
+1990a6b9-ef47-4b7d-ac77-421031dec003,c7f79595-aa68-4139-9a87-094c761cc5ab,110,1827,systemic lupus erythematosus,managed,1,2.0,False
+1990a6b9-ef47-4b7d-ac77-421031dec003,d641571e-6406-4309-ae61-acc6f2e0a50d,129,1827,systemic lupus erythematosus,managed,1,2.0,False
+1d10643b-90b7-4d0c-ad8d-534e5bd1ae8a,8321fef1-a067-4a62-a461-37e1f1b4f868,413,1226,systemic lupus erythematosus,managed,1,2.0,False
+1d10643b-90b7-4d0c-ad8d-534e5bd1ae8a,8627b3d4-c529-45b3-bf1e-0313791be91d,409,1226,systemic lupus erythematosus,managed,1,2.0,False
+1d10643b-90b7-4d0c-ad8d-534e5bd1ae8a,cfb525cf-987b-42c8-afca-8dd18f45b32d,390,1226,systemic lupus erythematosus,managed,1,2.0,False
+1d10643b-90b7-4d0c-ad8d-534e5bd1ae8a,d49aa545-2b96-409c-85e8-2bf8706475fb,370,1226,systemic lupus erythematosus,managed,1,2.0,False
+1d38192e-5e0c-43e5-a813-835461e099ae,16552c24-ef48-4e1f-aff5-319a1f739299,206,HC-519,normal,na,1,4.0,False
+1d38192e-5e0c-43e5-a813-835461e099ae,43b9b939-e389-4784-b4e0-ee9d12aa7ca1,173,HC-519,normal,na,1,4.0,False
+1d38192e-5e0c-43e5-a813-835461e099ae,91761416-a756-48e5-8768-fd169c7c564c,204,HC-519,normal,na,1,4.0,False
+1d38192e-5e0c-43e5-a813-835461e099ae,d9942805-5a63-4958-b714-7088c0428c65,186,HC-519,normal,na,1,4.0,False
+1f4f30c3-dbfc-4478-be7e-e047b7ad642a,15024b21-fb68-4bbe-92cf-0c9ab90f11a6,165,1366,systemic lupus erythematosus,managed,1,2.0,False
+1f4f30c3-dbfc-4478-be7e-e047b7ad642a,683bd537-4ff4-4741-afe5-be328f499d4b,141,1366,systemic lupus erythematosus,managed,1,2.0,False
+1f4f30c3-dbfc-4478-be7e-e047b7ad642a,68492085-4a2b-4551-9b12-75062c694069,142,1366,systemic lupus erythematosus,managed,1,2.0,False
+1f4f30c3-dbfc-4478-be7e-e047b7ad642a,bdc30514-427c-403e-a0ee-61e7d04e407e,169,1366,systemic lupus erythematosus,managed,1,2.0,False
+1fccdc9f-3051-4556-bea4-57412a092eb8,15024b21-fb68-4bbe-92cf-0c9ab90f11a6,47,1588,systemic lupus erythematosus,managed,1,2.0,False
+1fccdc9f-3051-4556-bea4-57412a092eb8,683bd537-4ff4-4741-afe5-be328f499d4b,52,1588,systemic lupus erythematosus,managed,1,2.0,False
+1fccdc9f-3051-4556-bea4-57412a092eb8,68492085-4a2b-4551-9b12-75062c694069,47,1588,systemic lupus erythematosus,managed,1,2.0,False
+1fccdc9f-3051-4556-bea4-57412a092eb8,bdc30514-427c-403e-a0ee-61e7d04e407e,50,1588,systemic lupus erythematosus,managed,1,2.0,False
+20e15d59-e68c-4af0-873f-199998c6ee3b,2236c52d-924b-415a-aae0-00fa08d12d1f,90,1958,systemic lupus erythematosus,managed,1,2.0,False
+20e15d59-e68c-4af0-873f-199998c6ee3b,894c6ccb-cb7a-4ea1-b032-b1d93b25247d,66,1958,systemic lupus erythematosus,managed,1,2.0,False
+20e15d59-e68c-4af0-873f-199998c6ee3b,9850fb76-4155-4910-881f-b5d33ee0835c,78,1958,systemic lupus erythematosus,managed,1,2.0,False
+20e15d59-e68c-4af0-873f-199998c6ee3b,f2380b81-e46f-430b-8fd2-e3897ddf7be9,75,1958,systemic lupus erythematosus,managed,1,2.0,False
+2261aca1-82ee-4276-9eaa-1d61688bd2f8,1e3165e4-e0c0-4bf7-b803-7d8271b99fd5,73,HC-516,normal,na,1,4.0,False
+2261aca1-82ee-4276-9eaa-1d61688bd2f8,60373b7d-7c45-428f-9622-aa4f854c4860,94,HC-516,normal,na,1,4.0,False
+2261aca1-82ee-4276-9eaa-1d61688bd2f8,d4d2da4e-6580-479c-b5f6-77b109e72715,79,HC-516,normal,na,1,4.0,False
+2261aca1-82ee-4276-9eaa-1d61688bd2f8,fb1e97d1-dd9c-4314-aae2-9c3745df1411,93,HC-516,normal,na,1,4.0,False
+23373939-b15c-4982-bc28-48770bad82e2,0c7c125d-46d6-40ba-8088-31fb2b526a78,46,1324,systemic lupus erythematosus,managed,1,2.0,False
+23373939-b15c-4982-bc28-48770bad82e2,272dbb99-7929-46e2-8446-a19c21af05da,100,1324,systemic lupus erythematosus,managed,1,2.0,False
+23373939-b15c-4982-bc28-48770bad82e2,6ab35eea-1bae-4ee8-8e5f-5f1505715ac3,73,1324,systemic lupus erythematosus,managed,1,2.0,False
+23373939-b15c-4982-bc28-48770bad82e2,fc140c51-9b4f-427f-8e11-640bc7400007,78,1324,systemic lupus erythematosus,managed,1,2.0,False
+2512ead7-e6f3-4ceb-9894-46e1e71eb8df,0c7c125d-46d6-40ba-8088-31fb2b526a78,78,1368,systemic lupus erythematosus,managed,1,2.0,False
+2512ead7-e6f3-4ceb-9894-46e1e71eb8df,272dbb99-7929-46e2-8446-a19c21af05da,115,1368,systemic lupus erythematosus,managed,1,2.0,False
+2512ead7-e6f3-4ceb-9894-46e1e71eb8df,6ab35eea-1bae-4ee8-8e5f-5f1505715ac3,107,1368,systemic lupus erythematosus,managed,1,2.0,False
+2512ead7-e6f3-4ceb-9894-46e1e71eb8df,fc140c51-9b4f-427f-8e11-640bc7400007,108,1368,systemic lupus erythematosus,managed,1,2.0,False
+261c08e0-fa34-4086-950f-1d8425f2476b,16552c24-ef48-4e1f-aff5-319a1f739299,61,1941,systemic lupus erythematosus,managed,1,4.0,False
+261c08e0-fa34-4086-950f-1d8425f2476b,43b9b939-e389-4784-b4e0-ee9d12aa7ca1,63,1941,systemic lupus erythematosus,managed,1,4.0,False
+261c08e0-fa34-4086-950f-1d8425f2476b,91761416-a756-48e5-8768-fd169c7c564c,52,1941,systemic lupus erythematosus,managed,1,4.0,False
+261c08e0-fa34-4086-950f-1d8425f2476b,d9942805-5a63-4958-b714-7088c0428c65,59,1941,systemic lupus erythematosus,managed,1,4.0,False
+2688f505-eb1a-4f9f-af54-e30b3da7dff3,048cb921-e15f-47a6-a9e3-ed512574e5d7,149,1682,systemic lupus erythematosus,managed,1,2.0,False
+2688f505-eb1a-4f9f-af54-e30b3da7dff3,16552c24-ef48-4e1f-aff5-319a1f739299,118,1682,systemic lupus erythematosus,managed,1,4.0,False
+2688f505-eb1a-4f9f-af54-e30b3da7dff3,43b9b939-e389-4784-b4e0-ee9d12aa7ca1,130,1682,systemic lupus erythematosus,managed,1,4.0,False
+2688f505-eb1a-4f9f-af54-e30b3da7dff3,91761416-a756-48e5-8768-fd169c7c564c,119,1682,systemic lupus erythematosus,managed,1,4.0,False
+2688f505-eb1a-4f9f-af54-e30b3da7dff3,c64fa002-95f9-4429-b65c-6f55c7f907d4,149,1682,systemic lupus erythematosus,managed,1,2.0,False
+2688f505-eb1a-4f9f-af54-e30b3da7dff3,c7f79595-aa68-4139-9a87-094c761cc5ab,173,1682,systemic lupus erythematosus,managed,1,2.0,False
+2688f505-eb1a-4f9f-af54-e30b3da7dff3,d641571e-6406-4309-ae61-acc6f2e0a50d,139,1682,systemic lupus erythematosus,managed,1,2.0,False
+2688f505-eb1a-4f9f-af54-e30b3da7dff3,d9942805-5a63-4958-b714-7088c0428c65,147,1682,systemic lupus erythematosus,managed,1,4.0,False
+27978e88-cfed-4b90-b622-fd572e5ea40d,3639058a-5dc3-49ad-82ff-cec405483912,237,IGTB1966,normal,na,1,1.0,False
+27978e88-cfed-4b90-b622-fd572e5ea40d,56b848af-d12b-4f9c-b605-947e296caa46,225,IGTB1966,normal,na,1,1.0,False
+27978e88-cfed-4b90-b622-fd572e5ea40d,8950207b-4940-4ef9-ad01-0ad0dace6f27,241,IGTB1966,normal,na,1,1.0,False
+27978e88-cfed-4b90-b622-fd572e5ea40d,b993ef60-52c8-41e2-83a2-bb44f1fb916f,222,IGTB1966,normal,na,1,1.0,False
+279d06b2-a656-413d-8805-b07615ea48ee,39093cbf-e0a9-480d-ab0b-e9e4cf95a9f8,118,HC-580,normal,na,1,4.0,False
+279d06b2-a656-413d-8805-b07615ea48ee,64f6fec6-18a3-4563-b731-189faf6423f2,138,HC-580,normal,na,1,4.0,False
+279d06b2-a656-413d-8805-b07615ea48ee,6fd714df-b88d-43a6-8f75-3d300278329d,130,HC-580,normal,na,1,4.0,False
+279d06b2-a656-413d-8805-b07615ea48ee,c2641f62-eb23-4dad-9c22-b52e72b79df2,128,HC-580,normal,na,1,4.0,False
+27ae3b51-85d4-49fe-bcc3-89b0cbd59e23,16552c24-ef48-4e1f-aff5-319a1f739299,81,HC-506,normal,na,1,4.0,False
+27ae3b51-85d4-49fe-bcc3-89b0cbd59e23,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,128,HC-506,normal,na,1,3.0,False
+27ae3b51-85d4-49fe-bcc3-89b0cbd59e23,43b9b939-e389-4784-b4e0-ee9d12aa7ca1,90,HC-506,normal,na,1,4.0,False
+27ae3b51-85d4-49fe-bcc3-89b0cbd59e23,7a2abe44-abb7-4648-bb14-224625a6da0b,123,HC-506,normal,na,1,3.0,False
+27ae3b51-85d4-49fe-bcc3-89b0cbd59e23,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,155,HC-506,normal,na,1,3.0,False
+27ae3b51-85d4-49fe-bcc3-89b0cbd59e23,91761416-a756-48e5-8768-fd169c7c564c,101,HC-506,normal,na,1,4.0,False
+27ae3b51-85d4-49fe-bcc3-89b0cbd59e23,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,142,HC-506,normal,na,1,3.0,False
+27ae3b51-85d4-49fe-bcc3-89b0cbd59e23,d9942805-5a63-4958-b714-7088c0428c65,91,HC-506,normal,na,1,4.0,False
+27b03089-9abd-4025-b745-1a4d42f729a3,2236c52d-924b-415a-aae0-00fa08d12d1f,180,1754,systemic lupus erythematosus,managed,1,2.0,False
+27b03089-9abd-4025-b745-1a4d42f729a3,4e57f7cc-1df2-467f-8bfe-cb19af5d7350,462,1754,systemic lupus erythematosus,managed,1,3.0,False
+27b03089-9abd-4025-b745-1a4d42f729a3,894c6ccb-cb7a-4ea1-b032-b1d93b25247d,198,1754,systemic lupus erythematosus,managed,1,2.0,False
+27b03089-9abd-4025-b745-1a4d42f729a3,9850fb76-4155-4910-881f-b5d33ee0835c,219,1754,systemic lupus erythematosus,managed,1,2.0,False
+27b03089-9abd-4025-b745-1a4d42f729a3,ddb0a996-79fe-4eac-8760-76ee74c7c333,449,1754,systemic lupus erythematosus,managed,1,3.0,False
+27b03089-9abd-4025-b745-1a4d42f729a3,f2380b81-e46f-430b-8fd2-e3897ddf7be9,209,1754,systemic lupus erythematosus,managed,1,2.0,False
+2899cc75-6bcb-4c24-9375-81a37c2a62f5,0c3a7808-800f-43b1-a57b-08c3b2bb9e5a,70,1602,systemic lupus erythematosus,managed,1,2.0,False
+2899cc75-6bcb-4c24-9375-81a37c2a62f5,222b358b-71e7-4b0f-9f9b-47b4c67aaa27,94,1602,systemic lupus erythematosus,managed,1,2.0,False
+2899cc75-6bcb-4c24-9375-81a37c2a62f5,585af22b-b80b-4a1d-8cc8-17d65b2639e1,84,1602,systemic lupus erythematosus,managed,1,2.0,False
+2899cc75-6bcb-4c24-9375-81a37c2a62f5,d8a37460-32f2-4b61-b1d2-1f7f0ba92779,99,1602,systemic lupus erythematosus,managed,1,2.0,False
+2c6239f0-efd3-469e-86aa-554f62dfb4f8,2236c52d-924b-415a-aae0-00fa08d12d1f,83,1791,systemic lupus erythematosus,managed,1,2.0,False
+2c6239f0-efd3-469e-86aa-554f62dfb4f8,3c722d55-1664-4996-8228-63504e862676,164,1791,systemic lupus erythematosus,managed,1,3.0,False
+2c6239f0-efd3-469e-86aa-554f62dfb4f8,894c6ccb-cb7a-4ea1-b032-b1d93b25247d,95,1791,systemic lupus erythematosus,managed,1,2.0,False
+2c6239f0-efd3-469e-86aa-554f62dfb4f8,9850fb76-4155-4910-881f-b5d33ee0835c,69,1791,systemic lupus erythematosus,managed,1,2.0,False
+2c6239f0-efd3-469e-86aa-554f62dfb4f8,e9ebbe1e-ce77-4c97-a04e-4a64befe98c8,164,1791,systemic lupus erythematosus,managed,1,3.0,False
+2c6239f0-efd3-469e-86aa-554f62dfb4f8,f2380b81-e46f-430b-8fd2-e3897ddf7be9,92,1791,systemic lupus erythematosus,managed,1,2.0,False
+2d3d3f42-1bf4-4177-9be3-0f70a79f9d49,048cb921-e15f-47a6-a9e3-ed512574e5d7,136,1848,systemic lupus erythematosus,managed,1,2.0,False
+2d3d3f42-1bf4-4177-9be3-0f70a79f9d49,c64fa002-95f9-4429-b65c-6f55c7f907d4,147,1848,systemic lupus erythematosus,managed,1,2.0,False
+2d3d3f42-1bf4-4177-9be3-0f70a79f9d49,c7f79595-aa68-4139-9a87-094c761cc5ab,166,1848,systemic lupus erythematosus,managed,1,2.0,False
+2d3d3f42-1bf4-4177-9be3-0f70a79f9d49,d641571e-6406-4309-ae61-acc6f2e0a50d,136,1848,systemic lupus erythematosus,managed,1,2.0,False
+2de24ffa-ba31-4218-a87f-7176c9b8f67c,048cb921-e15f-47a6-a9e3-ed512574e5d7,6,1829,systemic lupus erythematosus,managed,1,2.0,False
+2de24ffa-ba31-4218-a87f-7176c9b8f67c,c64fa002-95f9-4429-b65c-6f55c7f907d4,7,1829,systemic lupus erythematosus,managed,1,2.0,False
+2de24ffa-ba31-4218-a87f-7176c9b8f67c,c7f79595-aa68-4139-9a87-094c761cc5ab,6,1829,systemic lupus erythematosus,managed,1,2.0,False
+2de24ffa-ba31-4218-a87f-7176c9b8f67c,d641571e-6406-4309-ae61-acc6f2e0a50d,4,1829,systemic lupus erythematosus,managed,1,2.0,False
+2e90178e-8c6e-44a4-8d5a-82dab547abcf,152e2bfd-e9ea-4d70-a999-6f37fb3fb96c,200,FLARE005,systemic lupus erythematosus,flare,1,3.0,False
+2e90178e-8c6e-44a4-8d5a-82dab547abcf,30bbf8d6-bd6a-4b4f-8d3e-a54bf78f79d5,239,FLARE005,systemic lupus erythematosus,flare,1,3.0,False
+2e90178e-8c6e-44a4-8d5a-82dab547abcf,b816335c-8d84-4ecc-aa3e-2dea51795320,217,FLARE005,systemic lupus erythematosus,flare,1,3.0,False
+2e90178e-8c6e-44a4-8d5a-82dab547abcf,df159c28-05fb-4f35-83b8-8c14af793f2a,231,FLARE005,systemic lupus erythematosus,flare,1,3.0,False
+2ed3aef8-6c08-4c7c-9d7c-8aa618321841,0955850b-157b-4396-a3da-83b8bcbed172,164,HC-538,normal,na,1,4.0,False
+2ed3aef8-6c08-4c7c-9d7c-8aa618321841,34585dab-86cd-40a1-9780-83204c304046,162,HC-538,normal,na,1,4.0,False
+2ed3aef8-6c08-4c7c-9d7c-8aa618321841,ddae4c77-2b07-4e3e-97f1-84a37cf04321,173,HC-538,normal,na,1,4.0,False
+2ed3aef8-6c08-4c7c-9d7c-8aa618321841,ecd9109f-7197-46df-b3a8-1ac2d9990185,191,HC-538,normal,na,1,4.0,False
+2f17ecfd-2b2e-4603-bf0e-4105f13870b5,15024b21-fb68-4bbe-92cf-0c9ab90f11a6,41,1558,systemic lupus erythematosus,managed,1,2.0,False
+2f17ecfd-2b2e-4603-bf0e-4105f13870b5,683bd537-4ff4-4741-afe5-be328f499d4b,36,1558,systemic lupus erythematosus,managed,1,2.0,False
+2f17ecfd-2b2e-4603-bf0e-4105f13870b5,68492085-4a2b-4551-9b12-75062c694069,30,1558,systemic lupus erythematosus,managed,1,2.0,False
+2f17ecfd-2b2e-4603-bf0e-4105f13870b5,bdc30514-427c-403e-a0ee-61e7d04e407e,39,1558,systemic lupus erythematosus,managed,1,2.0,False
+3098a146-f3f2-4994-b7d1-770425e1f8b8,28401515-eca4-442a-85fc-f8c2793b1c26,82,1731,systemic lupus erythematosus,managed,1,2.0,False
+3098a146-f3f2-4994-b7d1-770425e1f8b8,9184b09f-ca66-4623-a733-1f64bc1b424f,83,1731,systemic lupus erythematosus,managed,1,2.0,False
+3098a146-f3f2-4994-b7d1-770425e1f8b8,d9bf3113-086e-4165-ba13-e78a3d7b4138,79,1731,systemic lupus erythematosus,managed,1,2.0,False
+3098a146-f3f2-4994-b7d1-770425e1f8b8,e16d2c39-bfd1-4fb1-8ed6-ad6b16f3652e,26,1731,systemic lupus erythematosus,managed,1,2.0,False
+3178b123-e965-4449-8944-c88b17d0d082,1e3165e4-e0c0-4bf7-b803-7d8271b99fd5,180,1772,systemic lupus erythematosus,managed,1,4.0,False
+3178b123-e965-4449-8944-c88b17d0d082,60373b7d-7c45-428f-9622-aa4f854c4860,199,1772,systemic lupus erythematosus,managed,1,4.0,False
+3178b123-e965-4449-8944-c88b17d0d082,d4d2da4e-6580-479c-b5f6-77b109e72715,180,1772,systemic lupus erythematosus,managed,1,4.0,False
+3178b123-e965-4449-8944-c88b17d0d082,fb1e97d1-dd9c-4314-aae2-9c3745df1411,157,1772,systemic lupus erythematosus,managed,1,4.0,False
+32207039-fb11-4f7f-8113-13538664ea08,152e2bfd-e9ea-4d70-a999-6f37fb3fb96c,39,FLARE014,systemic lupus erythematosus,flare,1,3.0,False
+32207039-fb11-4f7f-8113-13538664ea08,30bbf8d6-bd6a-4b4f-8d3e-a54bf78f79d5,34,FLARE014,systemic lupus erythematosus,flare,1,3.0,False
+32207039-fb11-4f7f-8113-13538664ea08,b816335c-8d84-4ecc-aa3e-2dea51795320,51,FLARE014,systemic lupus erythematosus,flare,1,3.0,False
+32207039-fb11-4f7f-8113-13538664ea08,df159c28-05fb-4f35-83b8-8c14af793f2a,35,FLARE014,systemic lupus erythematosus,flare,1,3.0,False
+3382e6de-ead1-467c-9d88-972e44e867bf,1495b93b-a19f-4364-95a3-6d8ac531eac6,13,1225,systemic lupus erythematosus,managed,1,4.0,False
+3382e6de-ead1-467c-9d88-972e44e867bf,3332f018-936e-4c4c-9105-99d9503db5a3,6,1225,systemic lupus erythematosus,managed,1,4.0,False
+3382e6de-ead1-467c-9d88-972e44e867bf,70a004b7-4a17-4702-8910-4557aa0c4279,15,1225,systemic lupus erythematosus,managed,1,4.0,False
+3382e6de-ead1-467c-9d88-972e44e867bf,cdab3145-edc9-4352-932c-1638e791bfc9,11,1225,systemic lupus erythematosus,managed,1,4.0,False
+342b5092-67e5-4a0e-a437-8b735f2a863c,16552c24-ef48-4e1f-aff5-319a1f739299,64,1768,systemic lupus erythematosus,managed,1,4.0,False
+342b5092-67e5-4a0e-a437-8b735f2a863c,2236c52d-924b-415a-aae0-00fa08d12d1f,101,1768,systemic lupus erythematosus,managed,1,2.0,False
+342b5092-67e5-4a0e-a437-8b735f2a863c,43b9b939-e389-4784-b4e0-ee9d12aa7ca1,64,1768,systemic lupus erythematosus,managed,1,4.0,False
+342b5092-67e5-4a0e-a437-8b735f2a863c,894c6ccb-cb7a-4ea1-b032-b1d93b25247d,96,1768,systemic lupus erythematosus,managed,1,2.0,False
+342b5092-67e5-4a0e-a437-8b735f2a863c,91761416-a756-48e5-8768-fd169c7c564c,70,1768,systemic lupus erythematosus,managed,1,4.0,False
+342b5092-67e5-4a0e-a437-8b735f2a863c,9850fb76-4155-4910-881f-b5d33ee0835c,99,1768,systemic lupus erythematosus,managed,1,2.0,False
+342b5092-67e5-4a0e-a437-8b735f2a863c,d9942805-5a63-4958-b714-7088c0428c65,51,1768,systemic lupus erythematosus,managed,1,4.0,False
+342b5092-67e5-4a0e-a437-8b735f2a863c,f2380b81-e46f-430b-8fd2-e3897ddf7be9,111,1768,systemic lupus erythematosus,managed,1,2.0,False
+3434bd39-04ed-4492-97b1-7410192739e8,2236c52d-924b-415a-aae0-00fa08d12d1f,98,1961,systemic lupus erythematosus,managed,1,2.0,False
+3434bd39-04ed-4492-97b1-7410192739e8,894c6ccb-cb7a-4ea1-b032-b1d93b25247d,109,1961,systemic lupus erythematosus,managed,1,2.0,False
+3434bd39-04ed-4492-97b1-7410192739e8,9850fb76-4155-4910-881f-b5d33ee0835c,123,1961,systemic lupus erythematosus,managed,1,2.0,False
+3434bd39-04ed-4492-97b1-7410192739e8,f2380b81-e46f-430b-8fd2-e3897ddf7be9,117,1961,systemic lupus erythematosus,managed,1,2.0,False
+34fcf40d-5976-44a6-8f49-1fe0e3b1c064,8321fef1-a067-4a62-a461-37e1f1b4f868,69,1165,systemic lupus erythematosus,managed,1,2.0,False
+34fcf40d-5976-44a6-8f49-1fe0e3b1c064,8627b3d4-c529-45b3-bf1e-0313791be91d,92,1165,systemic lupus erythematosus,managed,1,2.0,False
+34fcf40d-5976-44a6-8f49-1fe0e3b1c064,cfb525cf-987b-42c8-afca-8dd18f45b32d,96,1165,systemic lupus erythematosus,managed,1,2.0,False
+34fcf40d-5976-44a6-8f49-1fe0e3b1c064,d49aa545-2b96-409c-85e8-2bf8706475fb,78,1165,systemic lupus erythematosus,managed,1,2.0,False
+3672d82d-f24c-4536-b75a-0627889e1426,1556abac-8f1a-404a-8a2f-402ac562143c,57,IGTB498,normal,na,1,2.0,False
+3672d82d-f24c-4536-b75a-0627889e1426,3044f2b9-48b5-45ec-ac14-107f0d7372f0,66,IGTB498,normal,na,1,2.0,False
+3672d82d-f24c-4536-b75a-0627889e1426,665a3535-8f40-4ae3-9260-cbce7060781f,52,IGTB498,normal,na,1,2.0,False
+3672d82d-f24c-4536-b75a-0627889e1426,8321fef1-a067-4a62-a461-37e1f1b4f868,59,IGTB498,normal,na,1,2.0,False
+3672d82d-f24c-4536-b75a-0627889e1426,8627b3d4-c529-45b3-bf1e-0313791be91d,77,IGTB498,normal,na,1,2.0,False
+3672d82d-f24c-4536-b75a-0627889e1426,a5cedd63-caae-415f-b7e4-c7f660fc89c8,117,IGTB498,normal,na,1,1.0,False
+3672d82d-f24c-4536-b75a-0627889e1426,b795713b-ff23-4494-b6a3-1438b2baee3e,50,IGTB498,normal,na,1,2.0,False
+3672d82d-f24c-4536-b75a-0627889e1426,cd2306bc-106c-4506-b778-d184713c463a,129,IGTB498,normal,na,1,1.0,False
+3672d82d-f24c-4536-b75a-0627889e1426,cfb525cf-987b-42c8-afca-8dd18f45b32d,60,IGTB498,normal,na,1,2.0,False
+3672d82d-f24c-4536-b75a-0627889e1426,d49aa545-2b96-409c-85e8-2bf8706475fb,74,IGTB498,normal,na,1,2.0,False
+3672d82d-f24c-4536-b75a-0627889e1426,d9278721-fad6-4eba-a1bb-4a26c0aea206,123,IGTB498,normal,na,1,1.0,False
+3672d82d-f24c-4536-b75a-0627889e1426,f1568b25-4a87-414f-8329-1a860a3a8aeb,127,IGTB498,normal,na,1,1.0,False
+37214563-4102-451e-a546-a1833db3aedd,0955850b-157b-4396-a3da-83b8bcbed172,94,HC-011,normal,na,1,4.0,False
+37214563-4102-451e-a546-a1833db3aedd,34585dab-86cd-40a1-9780-83204c304046,90,HC-011,normal,na,1,4.0,False
+37214563-4102-451e-a546-a1833db3aedd,ddae4c77-2b07-4e3e-97f1-84a37cf04321,107,HC-011,normal,na,1,4.0,False
+37214563-4102-451e-a546-a1833db3aedd,ecd9109f-7197-46df-b3a8-1ac2d9990185,91,HC-011,normal,na,1,4.0,False
+37d3daeb-c0f5-414a-8b98-0517e7464535,16552c24-ef48-4e1f-aff5-319a1f739299,112,HC-578,normal,na,1,4.0,False
+37d3daeb-c0f5-414a-8b98-0517e7464535,43b9b939-e389-4784-b4e0-ee9d12aa7ca1,118,HC-578,normal,na,1,4.0,False
+37d3daeb-c0f5-414a-8b98-0517e7464535,91761416-a756-48e5-8768-fd169c7c564c,114,HC-578,normal,na,1,4.0,False
+37d3daeb-c0f5-414a-8b98-0517e7464535,d9942805-5a63-4958-b714-7088c0428c65,96,HC-578,normal,na,1,4.0,False
+385a6725-3504-4717-af12-cfed4adc3e9b,048cb921-e15f-47a6-a9e3-ed512574e5d7,6,1672,systemic lupus erythematosus,managed,1,2.0,False
+385a6725-3504-4717-af12-cfed4adc3e9b,c64fa002-95f9-4429-b65c-6f55c7f907d4,9,1672,systemic lupus erythematosus,managed,1,2.0,False
+385a6725-3504-4717-af12-cfed4adc3e9b,c7f79595-aa68-4139-9a87-094c761cc5ab,9,1672,systemic lupus erythematosus,managed,1,2.0,False
+385a6725-3504-4717-af12-cfed4adc3e9b,d641571e-6406-4309-ae61-acc6f2e0a50d,7,1672,systemic lupus erythematosus,managed,1,2.0,False
+3876bd23-e063-4b96-89ae-eec693743c86,048cb921-e15f-47a6-a9e3-ed512574e5d7,20,IGTB645,normal,na,1,2.0,False
+3876bd23-e063-4b96-89ae-eec693743c86,28401515-eca4-442a-85fc-f8c2793b1c26,46,IGTB645,normal,na,1,2.0,False
+3876bd23-e063-4b96-89ae-eec693743c86,9184b09f-ca66-4623-a733-1f64bc1b424f,39,IGTB645,normal,na,1,2.0,False
+3876bd23-e063-4b96-89ae-eec693743c86,a5cedd63-caae-415f-b7e4-c7f660fc89c8,59,IGTB645,normal,na,1,1.0,False
+3876bd23-e063-4b96-89ae-eec693743c86,c64fa002-95f9-4429-b65c-6f55c7f907d4,33,IGTB645,normal,na,1,2.0,False
+3876bd23-e063-4b96-89ae-eec693743c86,c7f79595-aa68-4139-9a87-094c761cc5ab,33,IGTB645,normal,na,1,2.0,False
+3876bd23-e063-4b96-89ae-eec693743c86,cd2306bc-106c-4506-b778-d184713c463a,69,IGTB645,normal,na,1,1.0,False
+3876bd23-e063-4b96-89ae-eec693743c86,d641571e-6406-4309-ae61-acc6f2e0a50d,27,IGTB645,normal,na,1,2.0,False
+3876bd23-e063-4b96-89ae-eec693743c86,d9278721-fad6-4eba-a1bb-4a26c0aea206,69,IGTB645,normal,na,1,1.0,False
+3876bd23-e063-4b96-89ae-eec693743c86,d9bf3113-086e-4165-ba13-e78a3d7b4138,36,IGTB645,normal,na,1,2.0,False
+3876bd23-e063-4b96-89ae-eec693743c86,e16d2c39-bfd1-4fb1-8ed6-ad6b16f3652e,12,IGTB645,normal,na,1,2.0,False
+3876bd23-e063-4b96-89ae-eec693743c86,f1568b25-4a87-414f-8329-1a860a3a8aeb,71,IGTB645,normal,na,1,1.0,False
+38c6ab44-8cf8-4bcf-93da-5c8b0c104bbc,0c3a7808-800f-43b1-a57b-08c3b2bb9e5a,33,1270,systemic lupus erythematosus,managed,1,2.0,False
+38c6ab44-8cf8-4bcf-93da-5c8b0c104bbc,222b358b-71e7-4b0f-9f9b-47b4c67aaa27,31,1270,systemic lupus erythematosus,managed,1,2.0,False
+38c6ab44-8cf8-4bcf-93da-5c8b0c104bbc,2dbf699a-f6cd-446d-8dc4-0595319cfa99,14,1270,systemic lupus erythematosus,managed,1,2.0,False
+38c6ab44-8cf8-4bcf-93da-5c8b0c104bbc,39564abe-76f3-4a33-9f10-f574069834bc,17,1270,systemic lupus erythematosus,managed,1,2.0,False
+38c6ab44-8cf8-4bcf-93da-5c8b0c104bbc,585af22b-b80b-4a1d-8cc8-17d65b2639e1,30,1270,systemic lupus erythematosus,managed,1,2.0,False
+38c6ab44-8cf8-4bcf-93da-5c8b0c104bbc,78c34b8c-196b-4a31-b700-08882bfaf4ab,23,1270,systemic lupus erythematosus,managed,1,2.0,False
+38c6ab44-8cf8-4bcf-93da-5c8b0c104bbc,cdf51e52-a49a-474f-a6ba-da5a14137d09,17,1270,systemic lupus erythematosus,managed,1,2.0,False
+38c6ab44-8cf8-4bcf-93da-5c8b0c104bbc,d8a37460-32f2-4b61-b1d2-1f7f0ba92779,34,1270,systemic lupus erythematosus,managed,1,2.0,False
+39006dbe-f7a7-4f05-aeac-0ca1876a7a3f,1495b93b-a19f-4364-95a3-6d8ac531eac6,148,HC-572,normal,na,1,4.0,False
+39006dbe-f7a7-4f05-aeac-0ca1876a7a3f,3332f018-936e-4c4c-9105-99d9503db5a3,165,HC-572,normal,na,1,4.0,False
+39006dbe-f7a7-4f05-aeac-0ca1876a7a3f,70a004b7-4a17-4702-8910-4557aa0c4279,168,HC-572,normal,na,1,4.0,False
+39006dbe-f7a7-4f05-aeac-0ca1876a7a3f,cdab3145-edc9-4352-932c-1638e791bfc9,152,HC-572,normal,na,1,4.0,False
+39824ee5-7478-4dc4-baad-9a90e3ca30ff,3639058a-5dc3-49ad-82ff-cec405483912,198,IGTB1815,normal,na,1,1.0,False
+39824ee5-7478-4dc4-baad-9a90e3ca30ff,56b848af-d12b-4f9c-b605-947e296caa46,188,IGTB1815,normal,na,1,1.0,False
+39824ee5-7478-4dc4-baad-9a90e3ca30ff,8950207b-4940-4ef9-ad01-0ad0dace6f27,184,IGTB1815,normal,na,1,1.0,False
+39824ee5-7478-4dc4-baad-9a90e3ca30ff,b993ef60-52c8-41e2-83a2-bb44f1fb916f,150,IGTB1815,normal,na,1,1.0,False
+39b05a41-41b3-4146-896b-017b0443556d,15024b21-fb68-4bbe-92cf-0c9ab90f11a6,98,1404,systemic lupus erythematosus,managed,1,2.0,False
+39b05a41-41b3-4146-896b-017b0443556d,683bd537-4ff4-4741-afe5-be328f499d4b,117,1404,systemic lupus erythematosus,managed,1,2.0,False
+39b05a41-41b3-4146-896b-017b0443556d,68492085-4a2b-4551-9b12-75062c694069,92,1404,systemic lupus erythematosus,managed,1,2.0,False
+39b05a41-41b3-4146-896b-017b0443556d,bdc30514-427c-403e-a0ee-61e7d04e407e,109,1404,systemic lupus erythematosus,managed,1,2.0,False
+3acf43ac-421f-48ad-9363-a51cce15e119,0c7c125d-46d6-40ba-8088-31fb2b526a78,69,1341,systemic lupus erythematosus,managed,1,2.0,False
+3acf43ac-421f-48ad-9363-a51cce15e119,272dbb99-7929-46e2-8446-a19c21af05da,113,1341,systemic lupus erythematosus,managed,1,2.0,False
+3acf43ac-421f-48ad-9363-a51cce15e119,6ab35eea-1bae-4ee8-8e5f-5f1505715ac3,78,1341,systemic lupus erythematosus,managed,1,2.0,False
+3acf43ac-421f-48ad-9363-a51cce15e119,fc140c51-9b4f-427f-8e11-640bc7400007,104,1341,systemic lupus erythematosus,managed,1,2.0,False
+3b0f67b7-7799-4746-8435-9ccb71ccacec,2dbf699a-f6cd-446d-8dc4-0595319cfa99,191,1251,systemic lupus erythematosus,managed,1,2.0,False
+3b0f67b7-7799-4746-8435-9ccb71ccacec,39564abe-76f3-4a33-9f10-f574069834bc,209,1251,systemic lupus erythematosus,managed,1,2.0,False
+3b0f67b7-7799-4746-8435-9ccb71ccacec,78c34b8c-196b-4a31-b700-08882bfaf4ab,261,1251,systemic lupus erythematosus,managed,1,2.0,False
+3b0f67b7-7799-4746-8435-9ccb71ccacec,cdf51e52-a49a-474f-a6ba-da5a14137d09,222,1251,systemic lupus erythematosus,managed,1,2.0,False
+3be3bf0e-065c-4451-bdff-100e1f88b8d9,3639058a-5dc3-49ad-82ff-cec405483912,101,IGTB2065,normal,na,1,1.0,False
+3be3bf0e-065c-4451-bdff-100e1f88b8d9,56b848af-d12b-4f9c-b605-947e296caa46,70,IGTB2065,normal,na,1,1.0,False
+3be3bf0e-065c-4451-bdff-100e1f88b8d9,8950207b-4940-4ef9-ad01-0ad0dace6f27,73,IGTB2065,normal,na,1,1.0,False
+3be3bf0e-065c-4451-bdff-100e1f88b8d9,b993ef60-52c8-41e2-83a2-bb44f1fb916f,94,IGTB2065,normal,na,1,1.0,False
+3caa3c5a-9c12-464a-a794-8b7ca2cfaace,0103e306-959a-46b0-896d-d8b9dee40157,182,IGTB1844,normal,na,1,1.0,False
+3caa3c5a-9c12-464a-a794-8b7ca2cfaace,9586e7f4-5c57-452e-bb13-90ceef874118,145,IGTB1844,normal,na,1,1.0,False
+3caa3c5a-9c12-464a-a794-8b7ca2cfaace,d461010c-38fd-414f-91bd-e1b3e7e2f8fb,148,IGTB1844,normal,na,1,1.0,False
+3caa3c5a-9c12-464a-a794-8b7ca2cfaace,e7240495-f3e8-42a3-ac5c-4a9a7eebc341,140,IGTB1844,normal,na,1,1.0,False
+3e17b93b-6d64-4b05-adf1-bee9b370788c,3639058a-5dc3-49ad-82ff-cec405483912,61,IGTB1793,normal,na,1,1.0,False
+3e17b93b-6d64-4b05-adf1-bee9b370788c,56b848af-d12b-4f9c-b605-947e296caa46,101,IGTB1793,normal,na,1,1.0,False
+3e17b93b-6d64-4b05-adf1-bee9b370788c,8950207b-4940-4ef9-ad01-0ad0dace6f27,80,IGTB1793,normal,na,1,1.0,False
+3e17b93b-6d64-4b05-adf1-bee9b370788c,b993ef60-52c8-41e2-83a2-bb44f1fb916f,77,IGTB1793,normal,na,1,1.0,False
+3ecf5ad3-4ae3-4152-a1d2-4c9c548c5551,15024b21-fb68-4bbe-92cf-0c9ab90f11a6,203,1420,systemic lupus erythematosus,managed,1,2.0,False
+3ecf5ad3-4ae3-4152-a1d2-4c9c548c5551,16552c24-ef48-4e1f-aff5-319a1f739299,112,1420,systemic lupus erythematosus,managed,1,4.0,False
+3ecf5ad3-4ae3-4152-a1d2-4c9c548c5551,43b9b939-e389-4784-b4e0-ee9d12aa7ca1,138,1420,systemic lupus erythematosus,managed,1,4.0,False
+3ecf5ad3-4ae3-4152-a1d2-4c9c548c5551,683bd537-4ff4-4741-afe5-be328f499d4b,211,1420,systemic lupus erythematosus,managed,1,2.0,False
+3ecf5ad3-4ae3-4152-a1d2-4c9c548c5551,68492085-4a2b-4551-9b12-75062c694069,169,1420,systemic lupus erythematosus,managed,1,2.0,False
+3ecf5ad3-4ae3-4152-a1d2-4c9c548c5551,91761416-a756-48e5-8768-fd169c7c564c,101,1420,systemic lupus erythematosus,managed,1,4.0,False
+3ecf5ad3-4ae3-4152-a1d2-4c9c548c5551,bdc30514-427c-403e-a0ee-61e7d04e407e,229,1420,systemic lupus erythematosus,managed,1,2.0,False
+3ecf5ad3-4ae3-4152-a1d2-4c9c548c5551,d9942805-5a63-4958-b714-7088c0428c65,113,1420,systemic lupus erythematosus,managed,1,4.0,False
+3f068829-713e-4b6a-a79a-754b7d9eef46,1495b93b-a19f-4364-95a3-6d8ac531eac6,329,1419,systemic lupus erythematosus,managed,1,4.0,False
+3f068829-713e-4b6a-a79a-754b7d9eef46,15024b21-fb68-4bbe-92cf-0c9ab90f11a6,314,1419,systemic lupus erythematosus,managed,1,2.0,False
+3f068829-713e-4b6a-a79a-754b7d9eef46,3332f018-936e-4c4c-9105-99d9503db5a3,284,1419,systemic lupus erythematosus,managed,1,4.0,False
+3f068829-713e-4b6a-a79a-754b7d9eef46,683bd537-4ff4-4741-afe5-be328f499d4b,349,1419,systemic lupus erythematosus,managed,1,2.0,False
+3f068829-713e-4b6a-a79a-754b7d9eef46,68492085-4a2b-4551-9b12-75062c694069,327,1419,systemic lupus erythematosus,managed,1,2.0,False
+3f068829-713e-4b6a-a79a-754b7d9eef46,70a004b7-4a17-4702-8910-4557aa0c4279,365,1419,systemic lupus erythematosus,managed,1,4.0,False
+3f068829-713e-4b6a-a79a-754b7d9eef46,bdc30514-427c-403e-a0ee-61e7d04e407e,331,1419,systemic lupus erythematosus,managed,1,2.0,False
+3f068829-713e-4b6a-a79a-754b7d9eef46,cdab3145-edc9-4352-932c-1638e791bfc9,331,1419,systemic lupus erythematosus,managed,1,4.0,False
+3f29e4ef-952a-4a98-9659-d26028f71319,0c3a7808-800f-43b1-a57b-08c3b2bb9e5a,184,1492,systemic lupus erythematosus,managed,1,2.0,False
+3f29e4ef-952a-4a98-9659-d26028f71319,222b358b-71e7-4b0f-9f9b-47b4c67aaa27,172,1492,systemic lupus erythematosus,managed,1,2.0,False
+3f29e4ef-952a-4a98-9659-d26028f71319,585af22b-b80b-4a1d-8cc8-17d65b2639e1,193,1492,systemic lupus erythematosus,managed,1,2.0,False
+3f29e4ef-952a-4a98-9659-d26028f71319,d8a37460-32f2-4b61-b1d2-1f7f0ba92779,205,1492,systemic lupus erythematosus,managed,1,2.0,False
+3f7db560-4400-424a-87a7-45e712c31264,1556abac-8f1a-404a-8a2f-402ac562143c,112,1196,systemic lupus erythematosus,managed,1,2.0,False
+3f7db560-4400-424a-87a7-45e712c31264,3044f2b9-48b5-45ec-ac14-107f0d7372f0,117,1196,systemic lupus erythematosus,managed,1,2.0,False
+3f7db560-4400-424a-87a7-45e712c31264,665a3535-8f40-4ae3-9260-cbce7060781f,118,1196,systemic lupus erythematosus,managed,1,2.0,False
+3f7db560-4400-424a-87a7-45e712c31264,b795713b-ff23-4494-b6a3-1438b2baee3e,104,1196,systemic lupus erythematosus,managed,1,2.0,False
+3ff8915f-d4b6-418d-89ec-61fffb366646,0c3a7808-800f-43b1-a57b-08c3b2bb9e5a,153,1730,systemic lupus erythematosus,managed,1,2.0,False
+3ff8915f-d4b6-418d-89ec-61fffb366646,10cec51f-a79f-4907-8745-b45df64f6946,133,1730,systemic lupus erythematosus,managed,1,4.0,False
+3ff8915f-d4b6-418d-89ec-61fffb366646,222b358b-71e7-4b0f-9f9b-47b4c67aaa27,161,1730,systemic lupus erythematosus,managed,1,2.0,False
+3ff8915f-d4b6-418d-89ec-61fffb366646,32436280-1ea6-4678-bb18-4632fe8c4933,170,1730,systemic lupus erythematosus,managed,1,4.0,False
+3ff8915f-d4b6-418d-89ec-61fffb366646,585af22b-b80b-4a1d-8cc8-17d65b2639e1,172,1730,systemic lupus erythematosus,managed,1,2.0,False
+3ff8915f-d4b6-418d-89ec-61fffb366646,90e60bb7-e776-4dff-a8ba-6390acefdbee,128,1730,systemic lupus erythematosus,managed,1,4.0,False
+3ff8915f-d4b6-418d-89ec-61fffb366646,ca103ed6-7a7e-4450-9546-ac295532bced,136,1730,systemic lupus erythematosus,managed,1,4.0,False
+3ff8915f-d4b6-418d-89ec-61fffb366646,d8a37460-32f2-4b61-b1d2-1f7f0ba92779,179,1730,systemic lupus erythematosus,managed,1,2.0,False
+4227d4ba-c467-4e19-8f48-5181a811a565,2dbf699a-f6cd-446d-8dc4-0595319cfa99,121,1315,systemic lupus erythematosus,managed,1,2.0,False
+4227d4ba-c467-4e19-8f48-5181a811a565,39564abe-76f3-4a33-9f10-f574069834bc,145,1315,systemic lupus erythematosus,managed,1,2.0,False
+4227d4ba-c467-4e19-8f48-5181a811a565,78c34b8c-196b-4a31-b700-08882bfaf4ab,179,1315,systemic lupus erythematosus,managed,1,2.0,False
+4227d4ba-c467-4e19-8f48-5181a811a565,cdf51e52-a49a-474f-a6ba-da5a14137d09,149,1315,systemic lupus erythematosus,managed,1,2.0,False
+42e0623b-6872-409f-bd76-1c2cb5e3b5c0,0be87f87-d01a-495e-9605-d89d36240908,11,1004,systemic lupus erythematosus,managed,1,2.0,False
+42e0623b-6872-409f-bd76-1c2cb5e3b5c0,54530f14-aadf-4c2a-8f92-9c22a69cc022,9,1004,systemic lupus erythematosus,managed,1,2.0,False
+42e0623b-6872-409f-bd76-1c2cb5e3b5c0,dac92812-557b-4abd-8fb0-4f823ae8ff59,19,1004,systemic lupus erythematosus,managed,1,2.0,False
+42e0623b-6872-409f-bd76-1c2cb5e3b5c0,e3629615-6d5c-4167-808f-996d53989dbf,10,1004,systemic lupus erythematosus,managed,1,2.0,False
+4334dd89-25d8-4a14-a25a-dd3c14318ff2,3c722d55-1664-4996-8228-63504e862676,53,1763,systemic lupus erythematosus,flare,1,3.0,False
+4334dd89-25d8-4a14-a25a-dd3c14318ff2,e9ebbe1e-ce77-4c97-a04e-4a64befe98c8,42,1763,systemic lupus erythematosus,flare,1,3.0,False
+43af3cab-af35-45c0-82f6-304ca64e9f0d,10cec51f-a79f-4907-8745-b45df64f6946,98,HC-532,normal,na,1,4.0,False
+43af3cab-af35-45c0-82f6-304ca64e9f0d,32436280-1ea6-4678-bb18-4632fe8c4933,135,HC-532,normal,na,1,4.0,False
+43af3cab-af35-45c0-82f6-304ca64e9f0d,90e60bb7-e776-4dff-a8ba-6390acefdbee,120,HC-532,normal,na,1,4.0,False
+43af3cab-af35-45c0-82f6-304ca64e9f0d,ca103ed6-7a7e-4450-9546-ac295532bced,124,HC-532,normal,na,1,4.0,False
+43f3d10e-a47a-4f63-965c-a8fe58d5861f,0103e306-959a-46b0-896d-d8b9dee40157,74,IGTB1913,normal,na,1,1.0,False
+43f3d10e-a47a-4f63-965c-a8fe58d5861f,9586e7f4-5c57-452e-bb13-90ceef874118,67,IGTB1913,normal,na,1,1.0,False
+43f3d10e-a47a-4f63-965c-a8fe58d5861f,d461010c-38fd-414f-91bd-e1b3e7e2f8fb,67,IGTB1913,normal,na,1,1.0,False
+43f3d10e-a47a-4f63-965c-a8fe58d5861f,e7240495-f3e8-42a3-ac5c-4a9a7eebc341,71,IGTB1913,normal,na,1,1.0,False
+4452abfd-aa95-4982-b2c8-ac779e0cc76e,1e3165e4-e0c0-4bf7-b803-7d8271b99fd5,427,HC-524,normal,na,1,4.0,False
+4452abfd-aa95-4982-b2c8-ac779e0cc76e,60373b7d-7c45-428f-9622-aa4f854c4860,458,HC-524,normal,na,1,4.0,False
+4452abfd-aa95-4982-b2c8-ac779e0cc76e,d4d2da4e-6580-479c-b5f6-77b109e72715,455,HC-524,normal,na,1,4.0,False
+4452abfd-aa95-4982-b2c8-ac779e0cc76e,fb1e97d1-dd9c-4314-aae2-9c3745df1411,464,HC-524,normal,na,1,4.0,False
+44c75170-6dfa-485f-99eb-275a1d77620b,048cb921-e15f-47a6-a9e3-ed512574e5d7,106,1892,systemic lupus erythematosus,managed,1,2.0,False
+44c75170-6dfa-485f-99eb-275a1d77620b,c64fa002-95f9-4429-b65c-6f55c7f907d4,116,1892,systemic lupus erythematosus,managed,1,2.0,False
+44c75170-6dfa-485f-99eb-275a1d77620b,c7f79595-aa68-4139-9a87-094c761cc5ab,124,1892,systemic lupus erythematosus,managed,1,2.0,False
+44c75170-6dfa-485f-99eb-275a1d77620b,d641571e-6406-4309-ae61-acc6f2e0a50d,104,1892,systemic lupus erythematosus,managed,1,2.0,False
+45abcda8-4f12-4496-983b-9c712250dc3c,28401515-eca4-442a-85fc-f8c2793b1c26,96,1582,systemic lupus erythematosus,managed,1,2.0,False
+45abcda8-4f12-4496-983b-9c712250dc3c,9184b09f-ca66-4623-a733-1f64bc1b424f,97,1582,systemic lupus erythematosus,managed,1,2.0,False
+45abcda8-4f12-4496-983b-9c712250dc3c,d9bf3113-086e-4165-ba13-e78a3d7b4138,104,1582,systemic lupus erythematosus,managed,1,2.0,False
+45abcda8-4f12-4496-983b-9c712250dc3c,e16d2c39-bfd1-4fb1-8ed6-ad6b16f3652e,33,1582,systemic lupus erythematosus,managed,1,2.0,False
+45eb2bf7-4993-46ea-9055-645ad7d29a5e,1e3165e4-e0c0-4bf7-b803-7d8271b99fd5,38,HC-512,normal,na,1,4.0,False
+45eb2bf7-4993-46ea-9055-645ad7d29a5e,60373b7d-7c45-428f-9622-aa4f854c4860,46,HC-512,normal,na,1,4.0,False
+45eb2bf7-4993-46ea-9055-645ad7d29a5e,d4d2da4e-6580-479c-b5f6-77b109e72715,43,HC-512,normal,na,1,4.0,False
+45eb2bf7-4993-46ea-9055-645ad7d29a5e,fb1e97d1-dd9c-4314-aae2-9c3745df1411,51,HC-512,normal,na,1,4.0,False
+46e0206c-f34e-4e58-a099-c5de09a89bdb,10cec51f-a79f-4907-8745-b45df64f6946,28,HC-571,normal,na,1,4.0,False
+46e0206c-f34e-4e58-a099-c5de09a89bdb,32436280-1ea6-4678-bb18-4632fe8c4933,36,HC-571,normal,na,1,4.0,False
+46e0206c-f34e-4e58-a099-c5de09a89bdb,90e60bb7-e776-4dff-a8ba-6390acefdbee,35,HC-571,normal,na,1,4.0,False
+46e0206c-f34e-4e58-a099-c5de09a89bdb,ca103ed6-7a7e-4450-9546-ac295532bced,34,HC-571,normal,na,1,4.0,False
+46e6ff98-de92-4b09-98ae-ff683d6ed775,10cec51f-a79f-4907-8745-b45df64f6946,87,1743,systemic lupus erythematosus,managed,1,4.0,False
+46e6ff98-de92-4b09-98ae-ff683d6ed775,2236c52d-924b-415a-aae0-00fa08d12d1f,167,1743,systemic lupus erythematosus,managed,1,2.0,False
+46e6ff98-de92-4b09-98ae-ff683d6ed775,32436280-1ea6-4678-bb18-4632fe8c4933,101,1743,systemic lupus erythematosus,managed,1,4.0,False
+46e6ff98-de92-4b09-98ae-ff683d6ed775,894c6ccb-cb7a-4ea1-b032-b1d93b25247d,154,1743,systemic lupus erythematosus,managed,1,2.0,False
+46e6ff98-de92-4b09-98ae-ff683d6ed775,90e60bb7-e776-4dff-a8ba-6390acefdbee,67,1743,systemic lupus erythematosus,managed,1,4.0,False
+46e6ff98-de92-4b09-98ae-ff683d6ed775,9850fb76-4155-4910-881f-b5d33ee0835c,176,1743,systemic lupus erythematosus,managed,1,2.0,False
+46e6ff98-de92-4b09-98ae-ff683d6ed775,ca103ed6-7a7e-4450-9546-ac295532bced,92,1743,systemic lupus erythematosus,managed,1,4.0,False
+46e6ff98-de92-4b09-98ae-ff683d6ed775,f2380b81-e46f-430b-8fd2-e3897ddf7be9,141,1743,systemic lupus erythematosus,managed,1,2.0,False
+4752a18e-a3a0-4699-99e8-18c7fee59072,15024b21-fb68-4bbe-92cf-0c9ab90f11a6,128,IGTB826,normal,na,1,2.0,False
+4752a18e-a3a0-4699-99e8-18c7fee59072,152e2bfd-e9ea-4d70-a999-6f37fb3fb96c,117,IGTB826,normal,na,1,3.0,False
+4752a18e-a3a0-4699-99e8-18c7fee59072,30bbf8d6-bd6a-4b4f-8d3e-a54bf78f79d5,122,IGTB826,normal,na,1,3.0,False
+4752a18e-a3a0-4699-99e8-18c7fee59072,683bd537-4ff4-4741-afe5-be328f499d4b,120,IGTB826,normal,na,1,2.0,False
+4752a18e-a3a0-4699-99e8-18c7fee59072,68492085-4a2b-4551-9b12-75062c694069,142,IGTB826,normal,na,1,2.0,False
+4752a18e-a3a0-4699-99e8-18c7fee59072,a5cedd63-caae-415f-b7e4-c7f660fc89c8,216,IGTB826,normal,na,1,1.0,False
+4752a18e-a3a0-4699-99e8-18c7fee59072,b816335c-8d84-4ecc-aa3e-2dea51795320,116,IGTB826,normal,na,1,3.0,False
+4752a18e-a3a0-4699-99e8-18c7fee59072,bdc30514-427c-403e-a0ee-61e7d04e407e,152,IGTB826,normal,na,1,2.0,False
+4752a18e-a3a0-4699-99e8-18c7fee59072,cd2306bc-106c-4506-b778-d184713c463a,240,IGTB826,normal,na,1,1.0,False
+4752a18e-a3a0-4699-99e8-18c7fee59072,d9278721-fad6-4eba-a1bb-4a26c0aea206,213,IGTB826,normal,na,1,1.0,False
+4752a18e-a3a0-4699-99e8-18c7fee59072,df159c28-05fb-4f35-83b8-8c14af793f2a,105,IGTB826,normal,na,1,3.0,False
+4752a18e-a3a0-4699-99e8-18c7fee59072,f1568b25-4a87-414f-8329-1a860a3a8aeb,211,IGTB826,normal,na,1,1.0,False
+486df2f6-0fc3-4c16-a895-ed987f19d081,0955850b-157b-4396-a3da-83b8bcbed172,49,1039,systemic lupus erythematosus,managed,1,4.0,False
+486df2f6-0fc3-4c16-a895-ed987f19d081,34585dab-86cd-40a1-9780-83204c304046,34,1039,systemic lupus erythematosus,managed,1,4.0,False
+486df2f6-0fc3-4c16-a895-ed987f19d081,ddae4c77-2b07-4e3e-97f1-84a37cf04321,44,1039,systemic lupus erythematosus,managed,1,4.0,False
+486df2f6-0fc3-4c16-a895-ed987f19d081,ecd9109f-7197-46df-b3a8-1ac2d9990185,41,1039,systemic lupus erythematosus,managed,1,4.0,False
+4a555a89-3c4e-4e35-91ed-eed175492e5d,1495b93b-a19f-4364-95a3-6d8ac531eac6,107,1259,systemic lupus erythematosus,managed,1,4.0,False
+4a555a89-3c4e-4e35-91ed-eed175492e5d,2dbf699a-f6cd-446d-8dc4-0595319cfa99,69,1259,systemic lupus erythematosus,managed,1,2.0,False
+4a555a89-3c4e-4e35-91ed-eed175492e5d,3332f018-936e-4c4c-9105-99d9503db5a3,99,1259,systemic lupus erythematosus,managed,1,4.0,False
+4a555a89-3c4e-4e35-91ed-eed175492e5d,39564abe-76f3-4a33-9f10-f574069834bc,77,1259,systemic lupus erythematosus,managed,1,2.0,False
+4a555a89-3c4e-4e35-91ed-eed175492e5d,70a004b7-4a17-4702-8910-4557aa0c4279,104,1259,systemic lupus erythematosus,managed,1,4.0,False
+4a555a89-3c4e-4e35-91ed-eed175492e5d,78c34b8c-196b-4a31-b700-08882bfaf4ab,113,1259,systemic lupus erythematosus,managed,1,2.0,False
+4a555a89-3c4e-4e35-91ed-eed175492e5d,cdab3145-edc9-4352-932c-1638e791bfc9,92,1259,systemic lupus erythematosus,managed,1,4.0,False
+4a555a89-3c4e-4e35-91ed-eed175492e5d,cdf51e52-a49a-474f-a6ba-da5a14137d09,77,1259,systemic lupus erythematosus,managed,1,2.0,False
+4be5b6e5-f225-4892-9ac0-9233bf04dbb9,0c3a7808-800f-43b1-a57b-08c3b2bb9e5a,381,1621,systemic lupus erythematosus,managed,1,2.0,False
+4be5b6e5-f225-4892-9ac0-9233bf04dbb9,222b358b-71e7-4b0f-9f9b-47b4c67aaa27,418,1621,systemic lupus erythematosus,managed,1,2.0,False
+4be5b6e5-f225-4892-9ac0-9233bf04dbb9,585af22b-b80b-4a1d-8cc8-17d65b2639e1,379,1621,systemic lupus erythematosus,managed,1,2.0,False
+4be5b6e5-f225-4892-9ac0-9233bf04dbb9,d8a37460-32f2-4b61-b1d2-1f7f0ba92779,412,1621,systemic lupus erythematosus,managed,1,2.0,False
+4cb8f7e8-d13c-46e6-b86a-ee6dcb42db1a,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,51,FLARE016,systemic lupus erythematosus,flare,1,3.0,False
+4cb8f7e8-d13c-46e6-b86a-ee6dcb42db1a,7a2abe44-abb7-4648-bb14-224625a6da0b,77,FLARE016,systemic lupus erythematosus,flare,1,3.0,False
+4cb8f7e8-d13c-46e6-b86a-ee6dcb42db1a,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,59,FLARE016,systemic lupus erythematosus,flare,1,3.0,False
+4cb8f7e8-d13c-46e6-b86a-ee6dcb42db1a,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,67,FLARE016,systemic lupus erythematosus,flare,1,3.0,False
+4d63229d-5cc2-4b05-a3f4-28040827bd13,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,5,FLARE017,systemic lupus erythematosus,flare,1,3.0,False
+4d63229d-5cc2-4b05-a3f4-28040827bd13,7a2abe44-abb7-4648-bb14-224625a6da0b,7,FLARE017,systemic lupus erythematosus,flare,1,3.0,False
+4d63229d-5cc2-4b05-a3f4-28040827bd13,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,6,FLARE017,systemic lupus erythematosus,flare,1,3.0,False
+4d63229d-5cc2-4b05-a3f4-28040827bd13,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,8,FLARE017,systemic lupus erythematosus,flare,1,3.0,False
+4e63511b-e07c-4fe2-af13-d535b769bbbd,2236c52d-924b-415a-aae0-00fa08d12d1f,143,1804,systemic lupus erythematosus,managed,1,2.0,False
+4e63511b-e07c-4fe2-af13-d535b769bbbd,4e57f7cc-1df2-467f-8bfe-cb19af5d7350,170,1804,systemic lupus erythematosus,managed,1,3.0,False
+4e63511b-e07c-4fe2-af13-d535b769bbbd,894c6ccb-cb7a-4ea1-b032-b1d93b25247d,113,1804,systemic lupus erythematosus,managed,1,2.0,False
+4e63511b-e07c-4fe2-af13-d535b769bbbd,9850fb76-4155-4910-881f-b5d33ee0835c,156,1804,systemic lupus erythematosus,managed,1,2.0,False
+4e63511b-e07c-4fe2-af13-d535b769bbbd,ddb0a996-79fe-4eac-8760-76ee74c7c333,154,1804,systemic lupus erythematosus,managed,1,3.0,False
+4e63511b-e07c-4fe2-af13-d535b769bbbd,f2380b81-e46f-430b-8fd2-e3897ddf7be9,148,1804,systemic lupus erythematosus,managed,1,2.0,False
+4f96324f-0403-4ba1-b110-02c96a5cba84,0955850b-157b-4396-a3da-83b8bcbed172,69,HC-014,normal,na,1,4.0,False
+4f96324f-0403-4ba1-b110-02c96a5cba84,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,107,HC-014,normal,na,1,3.0,False
+4f96324f-0403-4ba1-b110-02c96a5cba84,34585dab-86cd-40a1-9780-83204c304046,74,HC-014,normal,na,1,4.0,False
+4f96324f-0403-4ba1-b110-02c96a5cba84,7a2abe44-abb7-4648-bb14-224625a6da0b,128,HC-014,normal,na,1,3.0,False
+4f96324f-0403-4ba1-b110-02c96a5cba84,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,140,HC-014,normal,na,1,3.0,False
+4f96324f-0403-4ba1-b110-02c96a5cba84,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,119,HC-014,normal,na,1,3.0,False
+4f96324f-0403-4ba1-b110-02c96a5cba84,ddae4c77-2b07-4e3e-97f1-84a37cf04321,96,HC-014,normal,na,1,4.0,False
+4f96324f-0403-4ba1-b110-02c96a5cba84,ecd9109f-7197-46df-b3a8-1ac2d9990185,87,HC-014,normal,na,1,4.0,False
+503f2d5f-e904-46f9-99c6-c89dec37be2d,0955850b-157b-4396-a3da-83b8bcbed172,113,HC-541,normal,na,1,4.0,False
+503f2d5f-e904-46f9-99c6-c89dec37be2d,34585dab-86cd-40a1-9780-83204c304046,125,HC-541,normal,na,1,4.0,False
+503f2d5f-e904-46f9-99c6-c89dec37be2d,ddae4c77-2b07-4e3e-97f1-84a37cf04321,106,HC-541,normal,na,1,4.0,False
+503f2d5f-e904-46f9-99c6-c89dec37be2d,ecd9109f-7197-46df-b3a8-1ac2d9990185,118,HC-541,normal,na,1,4.0,False
+5178b16a-a577-456e-b53c-6ab4be7bed85,39093cbf-e0a9-480d-ab0b-e9e4cf95a9f8,89,1445,systemic lupus erythematosus,managed,1,4.0,False
+5178b16a-a577-456e-b53c-6ab4be7bed85,64f6fec6-18a3-4563-b731-189faf6423f2,75,1445,systemic lupus erythematosus,managed,1,4.0,False
+5178b16a-a577-456e-b53c-6ab4be7bed85,6fd714df-b88d-43a6-8f75-3d300278329d,86,1445,systemic lupus erythematosus,managed,1,4.0,False
+5178b16a-a577-456e-b53c-6ab4be7bed85,c2641f62-eb23-4dad-9c22-b52e72b79df2,81,1445,systemic lupus erythematosus,managed,1,4.0,False
+52c33723-f3ef-430c-a3f2-dd9ddfe0a0dd,15024b21-fb68-4bbe-92cf-0c9ab90f11a6,209,1418,systemic lupus erythematosus,managed,1,2.0,False
+52c33723-f3ef-430c-a3f2-dd9ddfe0a0dd,683bd537-4ff4-4741-afe5-be328f499d4b,216,1418,systemic lupus erythematosus,managed,1,2.0,False
+52c33723-f3ef-430c-a3f2-dd9ddfe0a0dd,68492085-4a2b-4551-9b12-75062c694069,214,1418,systemic lupus erythematosus,managed,1,2.0,False
+52c33723-f3ef-430c-a3f2-dd9ddfe0a0dd,bdc30514-427c-403e-a0ee-61e7d04e407e,208,1418,systemic lupus erythematosus,managed,1,2.0,False
+53003f7f-f631-4dd0-ac73-543dcf566b81,0be87f87-d01a-495e-9605-d89d36240908,327,1046,systemic lupus erythematosus,managed,1,2.0,False
+53003f7f-f631-4dd0-ac73-543dcf566b81,54530f14-aadf-4c2a-8f92-9c22a69cc022,246,1046,systemic lupus erythematosus,managed,1,2.0,False
+53003f7f-f631-4dd0-ac73-543dcf566b81,dac92812-557b-4abd-8fb0-4f823ae8ff59,277,1046,systemic lupus erythematosus,managed,1,2.0,False
+53003f7f-f631-4dd0-ac73-543dcf566b81,e3629615-6d5c-4167-808f-996d53989dbf,262,1046,systemic lupus erythematosus,managed,1,2.0,False
+553053e8-aa00-41be-a991-04eacc015380,0955850b-157b-4396-a3da-83b8bcbed172,80,1285,systemic lupus erythematosus,managed,1,4.0,False
+553053e8-aa00-41be-a991-04eacc015380,34585dab-86cd-40a1-9780-83204c304046,62,1285,systemic lupus erythematosus,managed,1,4.0,False
+553053e8-aa00-41be-a991-04eacc015380,ddae4c77-2b07-4e3e-97f1-84a37cf04321,89,1285,systemic lupus erythematosus,managed,1,4.0,False
+553053e8-aa00-41be-a991-04eacc015380,ecd9109f-7197-46df-b3a8-1ac2d9990185,67,1285,systemic lupus erythematosus,managed,1,4.0,False
+55555033-33d9-49bc-b378-c20c8ed2fb1b,1495b93b-a19f-4364-95a3-6d8ac531eac6,108,HC-554,normal,na,1,4.0,False
+55555033-33d9-49bc-b378-c20c8ed2fb1b,3332f018-936e-4c4c-9105-99d9503db5a3,116,HC-554,normal,na,1,4.0,False
+55555033-33d9-49bc-b378-c20c8ed2fb1b,70a004b7-4a17-4702-8910-4557aa0c4279,99,HC-554,normal,na,1,4.0,False
+55555033-33d9-49bc-b378-c20c8ed2fb1b,cdab3145-edc9-4352-932c-1638e791bfc9,106,HC-554,normal,na,1,4.0,False
+55e1ebfb-4571-4e95-9c84-8f81d3335fd9,0103e306-959a-46b0-896d-d8b9dee40157,102,IGTB1731,normal,na,1,1.0,False
+55e1ebfb-4571-4e95-9c84-8f81d3335fd9,9586e7f4-5c57-452e-bb13-90ceef874118,60,IGTB1731,normal,na,1,1.0,False
+55e1ebfb-4571-4e95-9c84-8f81d3335fd9,d461010c-38fd-414f-91bd-e1b3e7e2f8fb,92,IGTB1731,normal,na,1,1.0,False
+55e1ebfb-4571-4e95-9c84-8f81d3335fd9,e7240495-f3e8-42a3-ac5c-4a9a7eebc341,74,IGTB1731,normal,na,1,1.0,False
+5699f1b6-492f-4e2a-8e10-54f25a6cae68,1495b93b-a19f-4364-95a3-6d8ac531eac6,6,1320,systemic lupus erythematosus,managed,1,4.0,False
+5699f1b6-492f-4e2a-8e10-54f25a6cae68,3332f018-936e-4c4c-9105-99d9503db5a3,1,1320,systemic lupus erythematosus,managed,1,4.0,False
+5699f1b6-492f-4e2a-8e10-54f25a6cae68,70a004b7-4a17-4702-8910-4557aa0c4279,5,1320,systemic lupus erythematosus,managed,1,4.0,False
+5699f1b6-492f-4e2a-8e10-54f25a6cae68,cdab3145-edc9-4352-932c-1638e791bfc9,4,1320,systemic lupus erythematosus,managed,1,4.0,False
+577bce84-8d37-4851-9fb4-53f9467699ba,1495b93b-a19f-4364-95a3-6d8ac531eac6,71,1132,systemic lupus erythematosus,managed,1,4.0,False
+577bce84-8d37-4851-9fb4-53f9467699ba,1556abac-8f1a-404a-8a2f-402ac562143c,123,1132,systemic lupus erythematosus,managed,1,2.0,False
+577bce84-8d37-4851-9fb4-53f9467699ba,3044f2b9-48b5-45ec-ac14-107f0d7372f0,136,1132,systemic lupus erythematosus,managed,1,2.0,False
+577bce84-8d37-4851-9fb4-53f9467699ba,3332f018-936e-4c4c-9105-99d9503db5a3,80,1132,systemic lupus erythematosus,managed,1,4.0,False
+577bce84-8d37-4851-9fb4-53f9467699ba,665a3535-8f40-4ae3-9260-cbce7060781f,138,1132,systemic lupus erythematosus,managed,1,2.0,False
+577bce84-8d37-4851-9fb4-53f9467699ba,70a004b7-4a17-4702-8910-4557aa0c4279,72,1132,systemic lupus erythematosus,managed,1,4.0,False
+577bce84-8d37-4851-9fb4-53f9467699ba,b795713b-ff23-4494-b6a3-1438b2baee3e,132,1132,systemic lupus erythematosus,managed,1,2.0,False
+577bce84-8d37-4851-9fb4-53f9467699ba,cdab3145-edc9-4352-932c-1638e791bfc9,58,1132,systemic lupus erythematosus,managed,1,4.0,False
+57f0790a-15ce-4b6a-aae1-b45763b8d226,0c3a7808-800f-43b1-a57b-08c3b2bb9e5a,314,1480,systemic lupus erythematosus,managed,1,2.0,False
+57f0790a-15ce-4b6a-aae1-b45763b8d226,222b358b-71e7-4b0f-9f9b-47b4c67aaa27,351,1480,systemic lupus erythematosus,managed,1,2.0,False
+57f0790a-15ce-4b6a-aae1-b45763b8d226,585af22b-b80b-4a1d-8cc8-17d65b2639e1,335,1480,systemic lupus erythematosus,managed,1,2.0,False
+57f0790a-15ce-4b6a-aae1-b45763b8d226,d8a37460-32f2-4b61-b1d2-1f7f0ba92779,369,1480,systemic lupus erythematosus,managed,1,2.0,False
+58491584-2df2-4f81-829b-6f930c4d8649,10cec51f-a79f-4907-8745-b45df64f6946,109,HC-504,normal,na,1,4.0,False
+58491584-2df2-4f81-829b-6f930c4d8649,152e2bfd-e9ea-4d70-a999-6f37fb3fb96c,147,HC-504,normal,na,1,3.0,False
+58491584-2df2-4f81-829b-6f930c4d8649,30bbf8d6-bd6a-4b4f-8d3e-a54bf78f79d5,136,HC-504,normal,na,1,3.0,False
+58491584-2df2-4f81-829b-6f930c4d8649,32436280-1ea6-4678-bb18-4632fe8c4933,120,HC-504,normal,na,1,4.0,False
+58491584-2df2-4f81-829b-6f930c4d8649,90e60bb7-e776-4dff-a8ba-6390acefdbee,123,HC-504,normal,na,1,4.0,False
+58491584-2df2-4f81-829b-6f930c4d8649,b816335c-8d84-4ecc-aa3e-2dea51795320,141,HC-504,normal,na,1,3.0,False
+58491584-2df2-4f81-829b-6f930c4d8649,ca103ed6-7a7e-4450-9546-ac295532bced,130,HC-504,normal,na,1,4.0,False
+58491584-2df2-4f81-829b-6f930c4d8649,df159c28-05fb-4f35-83b8-8c14af793f2a,134,HC-504,normal,na,1,3.0,False
+58d745d1-10b8-4195-9cc0-7d5aadf9a791,10cec51f-a79f-4907-8745-b45df64f6946,195,1493,systemic lupus erythematosus,managed,1,4.0,False
+58d745d1-10b8-4195-9cc0-7d5aadf9a791,32436280-1ea6-4678-bb18-4632fe8c4933,310,1493,systemic lupus erythematosus,managed,1,4.0,False
+58d745d1-10b8-4195-9cc0-7d5aadf9a791,90e60bb7-e776-4dff-a8ba-6390acefdbee,232,1493,systemic lupus erythematosus,managed,1,4.0,False
+58d745d1-10b8-4195-9cc0-7d5aadf9a791,ca103ed6-7a7e-4450-9546-ac295532bced,231,1493,systemic lupus erythematosus,managed,1,4.0,False
+5a4d2669-4967-4de5-853b-13c224029d30,0c7c125d-46d6-40ba-8088-31fb2b526a78,117,1496,systemic lupus erythematosus,managed,1,2.0,False
+5a4d2669-4967-4de5-853b-13c224029d30,272dbb99-7929-46e2-8446-a19c21af05da,165,1496,systemic lupus erythematosus,managed,1,2.0,False
+5a4d2669-4967-4de5-853b-13c224029d30,39093cbf-e0a9-480d-ab0b-e9e4cf95a9f8,95,1496,systemic lupus erythematosus,managed,1,4.0,False
+5a4d2669-4967-4de5-853b-13c224029d30,64f6fec6-18a3-4563-b731-189faf6423f2,84,1496,systemic lupus erythematosus,managed,1,4.0,False
+5a4d2669-4967-4de5-853b-13c224029d30,6ab35eea-1bae-4ee8-8e5f-5f1505715ac3,147,1496,systemic lupus erythematosus,managed,1,2.0,False
+5a4d2669-4967-4de5-853b-13c224029d30,6fd714df-b88d-43a6-8f75-3d300278329d,102,1496,systemic lupus erythematosus,managed,1,4.0,False
+5a4d2669-4967-4de5-853b-13c224029d30,c2641f62-eb23-4dad-9c22-b52e72b79df2,91,1496,systemic lupus erythematosus,managed,1,4.0,False
+5a4d2669-4967-4de5-853b-13c224029d30,fc140c51-9b4f-427f-8e11-640bc7400007,137,1496,systemic lupus erythematosus,managed,1,2.0,False
+5d0826b4-fa43-4e32-8426-4ee9b3950e0f,3639058a-5dc3-49ad-82ff-cec405483912,112,IGTB1871,normal,na,1,1.0,False
+5d0826b4-fa43-4e32-8426-4ee9b3950e0f,56b848af-d12b-4f9c-b605-947e296caa46,124,IGTB1871,normal,na,1,1.0,False
+5d0826b4-fa43-4e32-8426-4ee9b3950e0f,8950207b-4940-4ef9-ad01-0ad0dace6f27,129,IGTB1871,normal,na,1,1.0,False
+5d0826b4-fa43-4e32-8426-4ee9b3950e0f,b993ef60-52c8-41e2-83a2-bb44f1fb916f,115,IGTB1871,normal,na,1,1.0,False
+5d55e840-0d9f-48df-bc26-6f4466c02eb6,048cb921-e15f-47a6-a9e3-ed512574e5d7,182,1891,systemic lupus erythematosus,managed,1,2.0,False
+5d55e840-0d9f-48df-bc26-6f4466c02eb6,c64fa002-95f9-4429-b65c-6f55c7f907d4,196,1891,systemic lupus erythematosus,managed,1,2.0,False
+5d55e840-0d9f-48df-bc26-6f4466c02eb6,c7f79595-aa68-4139-9a87-094c761cc5ab,211,1891,systemic lupus erythematosus,managed,1,2.0,False
+5d55e840-0d9f-48df-bc26-6f4466c02eb6,d641571e-6406-4309-ae61-acc6f2e0a50d,168,1891,systemic lupus erythematosus,managed,1,2.0,False
+5e0ed28c-a75a-4ecd-a0c7-49e71264690b,1556abac-8f1a-404a-8a2f-402ac562143c,54,1110,systemic lupus erythematosus,managed,1,2.0,False
+5e0ed28c-a75a-4ecd-a0c7-49e71264690b,3044f2b9-48b5-45ec-ac14-107f0d7372f0,64,1110,systemic lupus erythematosus,managed,1,2.0,False
+5e0ed28c-a75a-4ecd-a0c7-49e71264690b,39093cbf-e0a9-480d-ab0b-e9e4cf95a9f8,55,1110,systemic lupus erythematosus,managed,1,4.0,False
+5e0ed28c-a75a-4ecd-a0c7-49e71264690b,64f6fec6-18a3-4563-b731-189faf6423f2,59,1110,systemic lupus erythematosus,managed,1,4.0,False
+5e0ed28c-a75a-4ecd-a0c7-49e71264690b,665a3535-8f40-4ae3-9260-cbce7060781f,67,1110,systemic lupus erythematosus,managed,1,2.0,False
+5e0ed28c-a75a-4ecd-a0c7-49e71264690b,6fd714df-b88d-43a6-8f75-3d300278329d,53,1110,systemic lupus erythematosus,managed,1,4.0,False
+5e0ed28c-a75a-4ecd-a0c7-49e71264690b,b795713b-ff23-4494-b6a3-1438b2baee3e,49,1110,systemic lupus erythematosus,managed,1,2.0,False
+5e0ed28c-a75a-4ecd-a0c7-49e71264690b,c2641f62-eb23-4dad-9c22-b52e72b79df2,57,1110,systemic lupus erythematosus,managed,1,4.0,False
+5f31d290-7101-4ef4-9510-f3692aba34de,0c7c125d-46d6-40ba-8088-31fb2b526a78,31,IGTB469,normal,na,1,2.0,False
+5f31d290-7101-4ef4-9510-f3692aba34de,15024b21-fb68-4bbe-92cf-0c9ab90f11a6,46,IGTB469,normal,na,1,2.0,False
+5f31d290-7101-4ef4-9510-f3692aba34de,272dbb99-7929-46e2-8446-a19c21af05da,40,IGTB469,normal,na,1,2.0,False
+5f31d290-7101-4ef4-9510-f3692aba34de,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,78,IGTB469,normal,na,1,3.0,False
+5f31d290-7101-4ef4-9510-f3692aba34de,683bd537-4ff4-4741-afe5-be328f499d4b,57,IGTB469,normal,na,1,2.0,False
+5f31d290-7101-4ef4-9510-f3692aba34de,68492085-4a2b-4551-9b12-75062c694069,50,IGTB469,normal,na,1,2.0,False
+5f31d290-7101-4ef4-9510-f3692aba34de,6ab35eea-1bae-4ee8-8e5f-5f1505715ac3,58,IGTB469,normal,na,1,2.0,False
+5f31d290-7101-4ef4-9510-f3692aba34de,7a2abe44-abb7-4648-bb14-224625a6da0b,78,IGTB469,normal,na,1,3.0,False
+5f31d290-7101-4ef4-9510-f3692aba34de,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,85,IGTB469,normal,na,1,3.0,False
+5f31d290-7101-4ef4-9510-f3692aba34de,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,102,IGTB469,normal,na,1,3.0,False
+5f31d290-7101-4ef4-9510-f3692aba34de,a5cedd63-caae-415f-b7e4-c7f660fc89c8,82,IGTB469,normal,na,1,1.0,False
+5f31d290-7101-4ef4-9510-f3692aba34de,bdc30514-427c-403e-a0ee-61e7d04e407e,48,IGTB469,normal,na,1,2.0,False
+5f31d290-7101-4ef4-9510-f3692aba34de,cd2306bc-106c-4506-b778-d184713c463a,95,IGTB469,normal,na,1,1.0,False
+5f31d290-7101-4ef4-9510-f3692aba34de,d9278721-fad6-4eba-a1bb-4a26c0aea206,78,IGTB469,normal,na,1,1.0,False
+5f31d290-7101-4ef4-9510-f3692aba34de,f1568b25-4a87-414f-8329-1a860a3a8aeb,90,IGTB469,normal,na,1,1.0,False
+5f31d290-7101-4ef4-9510-f3692aba34de,fc140c51-9b4f-427f-8e11-640bc7400007,36,IGTB469,normal,na,1,2.0,False
+612207b0-dca1-4ac5-80c1-65a495c1a99d,0be87f87-d01a-495e-9605-d89d36240908,40,1031,systemic lupus erythematosus,managed,1,2.0,False
+612207b0-dca1-4ac5-80c1-65a495c1a99d,54530f14-aadf-4c2a-8f92-9c22a69cc022,49,1031,systemic lupus erythematosus,managed,1,2.0,False
+612207b0-dca1-4ac5-80c1-65a495c1a99d,dac92812-557b-4abd-8fb0-4f823ae8ff59,38,1031,systemic lupus erythematosus,managed,1,2.0,False
+612207b0-dca1-4ac5-80c1-65a495c1a99d,e3629615-6d5c-4167-808f-996d53989dbf,51,1031,systemic lupus erythematosus,managed,1,2.0,False
+6242534a-ef16-4237-b53e-9dc823087738,28401515-eca4-442a-85fc-f8c2793b1c26,49,1799,systemic lupus erythematosus,managed,1,2.0,False
+6242534a-ef16-4237-b53e-9dc823087738,9184b09f-ca66-4623-a733-1f64bc1b424f,63,1799,systemic lupus erythematosus,managed,1,2.0,False
+6242534a-ef16-4237-b53e-9dc823087738,d9bf3113-086e-4165-ba13-e78a3d7b4138,59,1799,systemic lupus erythematosus,managed,1,2.0,False
+6242534a-ef16-4237-b53e-9dc823087738,e16d2c39-bfd1-4fb1-8ed6-ad6b16f3652e,17,1799,systemic lupus erythematosus,managed,1,2.0,False
+6307a65a-3edb-45f0-bc18-27a090661e19,39093cbf-e0a9-480d-ab0b-e9e4cf95a9f8,59,1928,systemic lupus erythematosus,managed,1,4.0,False
+6307a65a-3edb-45f0-bc18-27a090661e19,64f6fec6-18a3-4563-b731-189faf6423f2,40,1928,systemic lupus erythematosus,managed,1,4.0,False
+6307a65a-3edb-45f0-bc18-27a090661e19,6fd714df-b88d-43a6-8f75-3d300278329d,40,1928,systemic lupus erythematosus,managed,1,4.0,False
+6307a65a-3edb-45f0-bc18-27a090661e19,c2641f62-eb23-4dad-9c22-b52e72b79df2,62,1928,systemic lupus erythematosus,managed,1,4.0,False
+63c521a1-5a88-4a39-8d65-a0999cb2cfa6,39093cbf-e0a9-480d-ab0b-e9e4cf95a9f8,75,HC-015,normal,na,1,4.0,False
+63c521a1-5a88-4a39-8d65-a0999cb2cfa6,64f6fec6-18a3-4563-b731-189faf6423f2,74,HC-015,normal,na,1,4.0,False
+63c521a1-5a88-4a39-8d65-a0999cb2cfa6,6fd714df-b88d-43a6-8f75-3d300278329d,79,HC-015,normal,na,1,4.0,False
+63c521a1-5a88-4a39-8d65-a0999cb2cfa6,c2641f62-eb23-4dad-9c22-b52e72b79df2,83,HC-015,normal,na,1,4.0,False
+64c3201b-c402-4c5a-a7a5-ee67e5dc4351,1495b93b-a19f-4364-95a3-6d8ac531eac6,68,1721,systemic lupus erythematosus,managed,1,4.0,False
+64c3201b-c402-4c5a-a7a5-ee67e5dc4351,3332f018-936e-4c4c-9105-99d9503db5a3,64,1721,systemic lupus erythematosus,managed,1,4.0,False
+64c3201b-c402-4c5a-a7a5-ee67e5dc4351,70a004b7-4a17-4702-8910-4557aa0c4279,58,1721,systemic lupus erythematosus,managed,1,4.0,False
+64c3201b-c402-4c5a-a7a5-ee67e5dc4351,cdab3145-edc9-4352-932c-1638e791bfc9,45,1721,systemic lupus erythematosus,managed,1,4.0,False
+64d258d2-f11a-4c9b-8206-614aef9d5a38,0955850b-157b-4396-a3da-83b8bcbed172,146,HC-022,normal,na,1,4.0,False
+64d258d2-f11a-4c9b-8206-614aef9d5a38,34585dab-86cd-40a1-9780-83204c304046,145,HC-022,normal,na,1,4.0,False
+64d258d2-f11a-4c9b-8206-614aef9d5a38,ddae4c77-2b07-4e3e-97f1-84a37cf04321,127,HC-022,normal,na,1,4.0,False
+64d258d2-f11a-4c9b-8206-614aef9d5a38,ecd9109f-7197-46df-b3a8-1ac2d9990185,157,HC-022,normal,na,1,4.0,False
+66e0d3ad-e8b3-4bae-a700-2626841e8d16,2236c52d-924b-415a-aae0-00fa08d12d1f,108,1767,systemic lupus erythematosus,managed,1,2.0,False
+66e0d3ad-e8b3-4bae-a700-2626841e8d16,894c6ccb-cb7a-4ea1-b032-b1d93b25247d,133,1767,systemic lupus erythematosus,managed,1,2.0,False
+66e0d3ad-e8b3-4bae-a700-2626841e8d16,9850fb76-4155-4910-881f-b5d33ee0835c,114,1767,systemic lupus erythematosus,managed,1,2.0,False
+66e0d3ad-e8b3-4bae-a700-2626841e8d16,f2380b81-e46f-430b-8fd2-e3897ddf7be9,133,1767,systemic lupus erythematosus,managed,1,2.0,False
+670c5ac9-5e1c-4834-8087-2dd39d87d04b,0c7c125d-46d6-40ba-8088-31fb2b526a78,45,1326,systemic lupus erythematosus,managed,1,2.0,False
+670c5ac9-5e1c-4834-8087-2dd39d87d04b,10cec51f-a79f-4907-8745-b45df64f6946,36,1326,systemic lupus erythematosus,managed,1,4.0,False
+670c5ac9-5e1c-4834-8087-2dd39d87d04b,272dbb99-7929-46e2-8446-a19c21af05da,57,1326,systemic lupus erythematosus,managed,1,2.0,False
+670c5ac9-5e1c-4834-8087-2dd39d87d04b,32436280-1ea6-4678-bb18-4632fe8c4933,40,1326,systemic lupus erythematosus,managed,1,4.0,False
+670c5ac9-5e1c-4834-8087-2dd39d87d04b,6ab35eea-1bae-4ee8-8e5f-5f1505715ac3,47,1326,systemic lupus erythematosus,managed,1,2.0,False
+670c5ac9-5e1c-4834-8087-2dd39d87d04b,90e60bb7-e776-4dff-a8ba-6390acefdbee,31,1326,systemic lupus erythematosus,managed,1,4.0,False
+670c5ac9-5e1c-4834-8087-2dd39d87d04b,ca103ed6-7a7e-4450-9546-ac295532bced,31,1326,systemic lupus erythematosus,managed,1,4.0,False
+670c5ac9-5e1c-4834-8087-2dd39d87d04b,fc140c51-9b4f-427f-8e11-640bc7400007,34,1326,systemic lupus erythematosus,managed,1,2.0,False
+6779676d-7bac-4431-bbb0-0b7c773b55da,0c7c125d-46d6-40ba-8088-31fb2b526a78,97,1514,systemic lupus erythematosus,managed,1,2.0,False
+6779676d-7bac-4431-bbb0-0b7c773b55da,1495b93b-a19f-4364-95a3-6d8ac531eac6,85,1514,systemic lupus erythematosus,managed,1,4.0,False
+6779676d-7bac-4431-bbb0-0b7c773b55da,272dbb99-7929-46e2-8446-a19c21af05da,124,1514,systemic lupus erythematosus,managed,1,2.0,False
+6779676d-7bac-4431-bbb0-0b7c773b55da,3332f018-936e-4c4c-9105-99d9503db5a3,79,1514,systemic lupus erythematosus,managed,1,4.0,False
+6779676d-7bac-4431-bbb0-0b7c773b55da,6ab35eea-1bae-4ee8-8e5f-5f1505715ac3,117,1514,systemic lupus erythematosus,managed,1,2.0,False
+6779676d-7bac-4431-bbb0-0b7c773b55da,70a004b7-4a17-4702-8910-4557aa0c4279,92,1514,systemic lupus erythematosus,managed,1,4.0,False
+6779676d-7bac-4431-bbb0-0b7c773b55da,cdab3145-edc9-4352-932c-1638e791bfc9,83,1514,systemic lupus erythematosus,managed,1,4.0,False
+6779676d-7bac-4431-bbb0-0b7c773b55da,fc140c51-9b4f-427f-8e11-640bc7400007,112,1514,systemic lupus erythematosus,managed,1,2.0,False
+678d2b37-30f0-4771-9702-7e74c70f1d12,0be87f87-d01a-495e-9605-d89d36240908,116,1045,systemic lupus erythematosus,managed,1,2.0,False
+678d2b37-30f0-4771-9702-7e74c70f1d12,54530f14-aadf-4c2a-8f92-9c22a69cc022,105,1045,systemic lupus erythematosus,managed,1,2.0,False
+678d2b37-30f0-4771-9702-7e74c70f1d12,dac92812-557b-4abd-8fb0-4f823ae8ff59,100,1045,systemic lupus erythematosus,managed,1,2.0,False
+678d2b37-30f0-4771-9702-7e74c70f1d12,e3629615-6d5c-4167-808f-996d53989dbf,70,1045,systemic lupus erythematosus,managed,1,2.0,False
+68a0c04e-d86a-4f1b-a557-ec0331c4f71f,10cec51f-a79f-4907-8745-b45df64f6946,94,HC-552,normal,na,1,4.0,False
+68a0c04e-d86a-4f1b-a557-ec0331c4f71f,32436280-1ea6-4678-bb18-4632fe8c4933,126,HC-552,normal,na,1,4.0,False
+68a0c04e-d86a-4f1b-a557-ec0331c4f71f,90e60bb7-e776-4dff-a8ba-6390acefdbee,100,HC-552,normal,na,1,4.0,False
+68a0c04e-d86a-4f1b-a557-ec0331c4f71f,ca103ed6-7a7e-4450-9546-ac295532bced,91,HC-552,normal,na,1,4.0,False
+69b3abaf-0498-44c8-867f-086ccc8dce13,048cb921-e15f-47a6-a9e3-ed512574e5d7,63,1660,systemic lupus erythematosus,managed,1,2.0,False
+69b3abaf-0498-44c8-867f-086ccc8dce13,16552c24-ef48-4e1f-aff5-319a1f739299,65,1660,systemic lupus erythematosus,managed,1,4.0,False
+69b3abaf-0498-44c8-867f-086ccc8dce13,43b9b939-e389-4784-b4e0-ee9d12aa7ca1,77,1660,systemic lupus erythematosus,managed,1,4.0,False
+69b3abaf-0498-44c8-867f-086ccc8dce13,91761416-a756-48e5-8768-fd169c7c564c,79,1660,systemic lupus erythematosus,managed,1,4.0,False
+69b3abaf-0498-44c8-867f-086ccc8dce13,c64fa002-95f9-4429-b65c-6f55c7f907d4,54,1660,systemic lupus erythematosus,managed,1,2.0,False
+69b3abaf-0498-44c8-867f-086ccc8dce13,c7f79595-aa68-4139-9a87-094c761cc5ab,38,1660,systemic lupus erythematosus,managed,1,2.0,False
+69b3abaf-0498-44c8-867f-086ccc8dce13,d641571e-6406-4309-ae61-acc6f2e0a50d,46,1660,systemic lupus erythematosus,managed,1,2.0,False
+69b3abaf-0498-44c8-867f-086ccc8dce13,d9942805-5a63-4958-b714-7088c0428c65,57,1660,systemic lupus erythematosus,managed,1,4.0,False
+69f01d3d-94dc-44e1-a463-74beabeb022f,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,3,FLARE010,systemic lupus erythematosus,flare,1,3.0,False
+69f01d3d-94dc-44e1-a463-74beabeb022f,7a2abe44-abb7-4648-bb14-224625a6da0b,9,FLARE010,systemic lupus erythematosus,flare,1,3.0,False
+69f01d3d-94dc-44e1-a463-74beabeb022f,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,9,FLARE010,systemic lupus erythematosus,flare,1,3.0,False
+69f01d3d-94dc-44e1-a463-74beabeb022f,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,10,FLARE010,systemic lupus erythematosus,flare,1,3.0,False
+6a84e718-fd28-4df4-be57-5d3a0b9b06a4,0be87f87-d01a-495e-9605-d89d36240908,22,1068,systemic lupus erythematosus,managed,1,2.0,False
+6a84e718-fd28-4df4-be57-5d3a0b9b06a4,54530f14-aadf-4c2a-8f92-9c22a69cc022,20,1068,systemic lupus erythematosus,managed,1,2.0,False
+6a84e718-fd28-4df4-be57-5d3a0b9b06a4,dac92812-557b-4abd-8fb0-4f823ae8ff59,30,1068,systemic lupus erythematosus,managed,1,2.0,False
+6a84e718-fd28-4df4-be57-5d3a0b9b06a4,e3629615-6d5c-4167-808f-996d53989dbf,17,1068,systemic lupus erythematosus,managed,1,2.0,False
+6c925f38-0ae8-4db8-ba05-b5e2a2563511,8321fef1-a067-4a62-a461-37e1f1b4f868,25,1195,systemic lupus erythematosus,managed,1,2.0,False
+6c925f38-0ae8-4db8-ba05-b5e2a2563511,8627b3d4-c529-45b3-bf1e-0313791be91d,21,1195,systemic lupus erythematosus,managed,1,2.0,False
+6c925f38-0ae8-4db8-ba05-b5e2a2563511,cfb525cf-987b-42c8-afca-8dd18f45b32d,27,1195,systemic lupus erythematosus,managed,1,2.0,False
+6c925f38-0ae8-4db8-ba05-b5e2a2563511,d49aa545-2b96-409c-85e8-2bf8706475fb,26,1195,systemic lupus erythematosus,managed,1,2.0,False
+6d32f89c-b5b9-4486-94f8-5368115f0408,3639058a-5dc3-49ad-82ff-cec405483912,142,IGTB1895,normal,na,1,1.0,False
+6d32f89c-b5b9-4486-94f8-5368115f0408,56b848af-d12b-4f9c-b605-947e296caa46,148,IGTB1895,normal,na,1,1.0,False
+6d32f89c-b5b9-4486-94f8-5368115f0408,8950207b-4940-4ef9-ad01-0ad0dace6f27,146,IGTB1895,normal,na,1,1.0,False
+6d32f89c-b5b9-4486-94f8-5368115f0408,b993ef60-52c8-41e2-83a2-bb44f1fb916f,150,IGTB1895,normal,na,1,1.0,False
+6d8ca891-26ad-487f-b162-a32a835fd534,0103e306-959a-46b0-896d-d8b9dee40157,63,IGTB1908,normal,na,1,1.0,False
+6d8ca891-26ad-487f-b162-a32a835fd534,9586e7f4-5c57-452e-bb13-90ceef874118,66,IGTB1908,normal,na,1,1.0,False
+6d8ca891-26ad-487f-b162-a32a835fd534,d461010c-38fd-414f-91bd-e1b3e7e2f8fb,71,IGTB1908,normal,na,1,1.0,False
+6d8ca891-26ad-487f-b162-a32a835fd534,e7240495-f3e8-42a3-ac5c-4a9a7eebc341,63,IGTB1908,normal,na,1,1.0,False
+6e8c12a9-b87c-4eb7-9587-70b0174e3f60,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,55,HC-503,normal,na,1,3.0,False
+6e8c12a9-b87c-4eb7-9587-70b0174e3f60,7a2abe44-abb7-4648-bb14-224625a6da0b,72,HC-503,normal,na,1,3.0,False
+6e8c12a9-b87c-4eb7-9587-70b0174e3f60,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,51,HC-503,normal,na,1,3.0,False
+6e8c12a9-b87c-4eb7-9587-70b0174e3f60,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,63,HC-503,normal,na,1,3.0,False
+6f092ad4-41e1-4b4f-b492-64496cf82fcb,048cb921-e15f-47a6-a9e3-ed512574e5d7,219,1815,systemic lupus erythematosus,managed,1,2.0,False
+6f092ad4-41e1-4b4f-b492-64496cf82fcb,c64fa002-95f9-4429-b65c-6f55c7f907d4,246,1815,systemic lupus erythematosus,managed,1,2.0,False
+6f092ad4-41e1-4b4f-b492-64496cf82fcb,c7f79595-aa68-4139-9a87-094c761cc5ab,228,1815,systemic lupus erythematosus,managed,1,2.0,False
+6f092ad4-41e1-4b4f-b492-64496cf82fcb,d641571e-6406-4309-ae61-acc6f2e0a50d,195,1815,systemic lupus erythematosus,managed,1,2.0,False
+7075f840-56e5-4fef-89af-7797d3becf4d,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,36,FLARE009,systemic lupus erythematosus,treated,1,3.0,False
+7075f840-56e5-4fef-89af-7797d3becf4d,7a2abe44-abb7-4648-bb14-224625a6da0b,35,FLARE009,systemic lupus erythematosus,treated,1,3.0,False
+7075f840-56e5-4fef-89af-7797d3becf4d,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,43,FLARE009,systemic lupus erythematosus,treated,1,3.0,False
+7075f840-56e5-4fef-89af-7797d3becf4d,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,39,FLARE009,systemic lupus erythematosus,treated,1,3.0,False
+71ddcc80-c234-4f27-aa06-b49ae5a28784,16552c24-ef48-4e1f-aff5-319a1f739299,97,HC-573,normal,na,1,4.0,False
+71ddcc80-c234-4f27-aa06-b49ae5a28784,43b9b939-e389-4784-b4e0-ee9d12aa7ca1,87,HC-573,normal,na,1,4.0,False
+71ddcc80-c234-4f27-aa06-b49ae5a28784,91761416-a756-48e5-8768-fd169c7c564c,101,HC-573,normal,na,1,4.0,False
+71ddcc80-c234-4f27-aa06-b49ae5a28784,d9942805-5a63-4958-b714-7088c0428c65,83,HC-573,normal,na,1,4.0,False
+72cad246-b111-4616-88b5-8d1373736f54,1e3165e4-e0c0-4bf7-b803-7d8271b99fd5,125,1015,systemic lupus erythematosus,managed,1,4.0,False
+72cad246-b111-4616-88b5-8d1373736f54,60373b7d-7c45-428f-9622-aa4f854c4860,134,1015,systemic lupus erythematosus,managed,1,4.0,False
+72cad246-b111-4616-88b5-8d1373736f54,d4d2da4e-6580-479c-b5f6-77b109e72715,126,1015,systemic lupus erythematosus,managed,1,4.0,False
+72cad246-b111-4616-88b5-8d1373736f54,fb1e97d1-dd9c-4314-aae2-9c3745df1411,148,1015,systemic lupus erythematosus,managed,1,4.0,False
+74489391-0e1a-40c9-9ac8-2691e7e42cf1,28401515-eca4-442a-85fc-f8c2793b1c26,112,1775,systemic lupus erythematosus,managed,1,2.0,False
+74489391-0e1a-40c9-9ac8-2691e7e42cf1,9184b09f-ca66-4623-a733-1f64bc1b424f,113,1775,systemic lupus erythematosus,managed,1,2.0,False
+74489391-0e1a-40c9-9ac8-2691e7e42cf1,d9bf3113-086e-4165-ba13-e78a3d7b4138,133,1775,systemic lupus erythematosus,managed,1,2.0,False
+74489391-0e1a-40c9-9ac8-2691e7e42cf1,e16d2c39-bfd1-4fb1-8ed6-ad6b16f3652e,53,1775,systemic lupus erythematosus,managed,1,2.0,False
+76337712-cfcd-4760-a462-1269a5ff215c,10cec51f-a79f-4907-8745-b45df64f6946,36,HC-500,normal,na,1,4.0,False
+76337712-cfcd-4760-a462-1269a5ff215c,32436280-1ea6-4678-bb18-4632fe8c4933,48,HC-500,normal,na,1,4.0,False
+76337712-cfcd-4760-a462-1269a5ff215c,90e60bb7-e776-4dff-a8ba-6390acefdbee,47,HC-500,normal,na,1,4.0,False
+76337712-cfcd-4760-a462-1269a5ff215c,ca103ed6-7a7e-4450-9546-ac295532bced,36,HC-500,normal,na,1,4.0,False
+77712740-d29f-4bb0-9b90-2aa3db72f3ba,15024b21-fb68-4bbe-92cf-0c9ab90f11a6,66,IGTB141,normal,na,1,2.0,False
+77712740-d29f-4bb0-9b90-2aa3db72f3ba,683bd537-4ff4-4741-afe5-be328f499d4b,57,IGTB141,normal,na,1,2.0,False
+77712740-d29f-4bb0-9b90-2aa3db72f3ba,68492085-4a2b-4551-9b12-75062c694069,62,IGTB141,normal,na,1,2.0,False
+77712740-d29f-4bb0-9b90-2aa3db72f3ba,a5cedd63-caae-415f-b7e4-c7f660fc89c8,115,IGTB141,normal,na,1,1.0,False
+77712740-d29f-4bb0-9b90-2aa3db72f3ba,bdc30514-427c-403e-a0ee-61e7d04e407e,74,IGTB141,normal,na,1,2.0,False
+77712740-d29f-4bb0-9b90-2aa3db72f3ba,cd2306bc-106c-4506-b778-d184713c463a,118,IGTB141,normal,na,1,1.0,False
+77712740-d29f-4bb0-9b90-2aa3db72f3ba,d9278721-fad6-4eba-a1bb-4a26c0aea206,112,IGTB141,normal,na,1,1.0,False
+77712740-d29f-4bb0-9b90-2aa3db72f3ba,f1568b25-4a87-414f-8329-1a860a3a8aeb,118,IGTB141,normal,na,1,1.0,False
+7b7167c1-bc81-4fa8-b322-18bab1ea6269,0c3a7808-800f-43b1-a57b-08c3b2bb9e5a,229,1716,systemic lupus erythematosus,managed,1,2.0,False
+7b7167c1-bc81-4fa8-b322-18bab1ea6269,222b358b-71e7-4b0f-9f9b-47b4c67aaa27,232,1716,systemic lupus erythematosus,managed,1,2.0,False
+7b7167c1-bc81-4fa8-b322-18bab1ea6269,39093cbf-e0a9-480d-ab0b-e9e4cf95a9f8,136,1716,systemic lupus erythematosus,managed,1,4.0,False
+7b7167c1-bc81-4fa8-b322-18bab1ea6269,585af22b-b80b-4a1d-8cc8-17d65b2639e1,250,1716,systemic lupus erythematosus,managed,1,2.0,False
+7b7167c1-bc81-4fa8-b322-18bab1ea6269,64f6fec6-18a3-4563-b731-189faf6423f2,134,1716,systemic lupus erythematosus,managed,1,4.0,False
+7b7167c1-bc81-4fa8-b322-18bab1ea6269,6fd714df-b88d-43a6-8f75-3d300278329d,144,1716,systemic lupus erythematosus,managed,1,4.0,False
+7b7167c1-bc81-4fa8-b322-18bab1ea6269,c2641f62-eb23-4dad-9c22-b52e72b79df2,150,1716,systemic lupus erythematosus,managed,1,4.0,False
+7b7167c1-bc81-4fa8-b322-18bab1ea6269,d8a37460-32f2-4b61-b1d2-1f7f0ba92779,230,1716,systemic lupus erythematosus,managed,1,2.0,False
+7bbdb647-9288-4863-b66b-be24f9413e7b,1556abac-8f1a-404a-8a2f-402ac562143c,38,1203,systemic lupus erythematosus,managed,1,2.0,False
+7bbdb647-9288-4863-b66b-be24f9413e7b,3044f2b9-48b5-45ec-ac14-107f0d7372f0,47,1203,systemic lupus erythematosus,managed,1,2.0,False
+7bbdb647-9288-4863-b66b-be24f9413e7b,665a3535-8f40-4ae3-9260-cbce7060781f,39,1203,systemic lupus erythematosus,managed,1,2.0,False
+7bbdb647-9288-4863-b66b-be24f9413e7b,b795713b-ff23-4494-b6a3-1438b2baee3e,46,1203,systemic lupus erythematosus,managed,1,2.0,False
+7bedd5b4-8835-4825-ba08-502811d18911,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,179,FLARE001,systemic lupus erythematosus,treated,1,3.0,False
+7bedd5b4-8835-4825-ba08-502811d18911,7a2abe44-abb7-4648-bb14-224625a6da0b,142,FLARE001,systemic lupus erythematosus,treated,1,3.0,False
+7bedd5b4-8835-4825-ba08-502811d18911,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,166,FLARE001,systemic lupus erythematosus,treated,1,3.0,False
+7bedd5b4-8835-4825-ba08-502811d18911,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,168,FLARE001,systemic lupus erythematosus,treated,1,3.0,False
+7ded846e-1cc6-405e-b17f-6e99856f39e4,10cec51f-a79f-4907-8745-b45df64f6946,47,HC-019,normal,na,1,4.0,False
+7ded846e-1cc6-405e-b17f-6e99856f39e4,32436280-1ea6-4678-bb18-4632fe8c4933,91,HC-019,normal,na,1,4.0,False
+7ded846e-1cc6-405e-b17f-6e99856f39e4,90e60bb7-e776-4dff-a8ba-6390acefdbee,79,HC-019,normal,na,1,4.0,False
+7ded846e-1cc6-405e-b17f-6e99856f39e4,ca103ed6-7a7e-4450-9546-ac295532bced,80,HC-019,normal,na,1,4.0,False
+7eebe697-187f-4cce-b10d-9f71235d3a4f,a5cedd63-caae-415f-b7e4-c7f660fc89c8,141,IGTB1906,normal,na,1,1.0,False
+7eebe697-187f-4cce-b10d-9f71235d3a4f,cd2306bc-106c-4506-b778-d184713c463a,134,IGTB1906,normal,na,1,1.0,False
+7eebe697-187f-4cce-b10d-9f71235d3a4f,d9278721-fad6-4eba-a1bb-4a26c0aea206,100,IGTB1906,normal,na,1,1.0,False
+7eebe697-187f-4cce-b10d-9f71235d3a4f,f1568b25-4a87-414f-8329-1a860a3a8aeb,117,IGTB1906,normal,na,1,1.0,False
+7eff9450-2afd-4265-a1f4-4c53580b47bc,39093cbf-e0a9-480d-ab0b-e9e4cf95a9f8,91,1222,systemic lupus erythematosus,managed,1,4.0,False
+7eff9450-2afd-4265-a1f4-4c53580b47bc,64f6fec6-18a3-4563-b731-189faf6423f2,84,1222,systemic lupus erythematosus,managed,1,4.0,False
+7eff9450-2afd-4265-a1f4-4c53580b47bc,6fd714df-b88d-43a6-8f75-3d300278329d,94,1222,systemic lupus erythematosus,managed,1,4.0,False
+7eff9450-2afd-4265-a1f4-4c53580b47bc,8321fef1-a067-4a62-a461-37e1f1b4f868,111,1222,systemic lupus erythematosus,managed,1,2.0,False
+7eff9450-2afd-4265-a1f4-4c53580b47bc,8627b3d4-c529-45b3-bf1e-0313791be91d,113,1222,systemic lupus erythematosus,managed,1,2.0,False
+7eff9450-2afd-4265-a1f4-4c53580b47bc,c2641f62-eb23-4dad-9c22-b52e72b79df2,72,1222,systemic lupus erythematosus,managed,1,4.0,False
+7eff9450-2afd-4265-a1f4-4c53580b47bc,cfb525cf-987b-42c8-afca-8dd18f45b32d,111,1222,systemic lupus erythematosus,managed,1,2.0,False
+7eff9450-2afd-4265-a1f4-4c53580b47bc,d49aa545-2b96-409c-85e8-2bf8706475fb,95,1222,systemic lupus erythematosus,managed,1,2.0,False
+8037ce3c-a2dd-415b-b3d1-9116744c77e5,2236c52d-924b-415a-aae0-00fa08d12d1f,27,1763,systemic lupus erythematosus,managed,1,2.0,False
+8037ce3c-a2dd-415b-b3d1-9116744c77e5,894c6ccb-cb7a-4ea1-b032-b1d93b25247d,32,1763,systemic lupus erythematosus,managed,1,2.0,False
+8037ce3c-a2dd-415b-b3d1-9116744c77e5,9850fb76-4155-4910-881f-b5d33ee0835c,23,1763,systemic lupus erythematosus,managed,1,2.0,False
+8037ce3c-a2dd-415b-b3d1-9116744c77e5,f2380b81-e46f-430b-8fd2-e3897ddf7be9,34,1763,systemic lupus erythematosus,managed,1,2.0,False
+803fece6-2b2d-4ba2-8370-49385734ab3b,3639058a-5dc3-49ad-82ff-cec405483912,129,IGTB1819,normal,na,1,1.0,False
+803fece6-2b2d-4ba2-8370-49385734ab3b,56b848af-d12b-4f9c-b605-947e296caa46,129,IGTB1819,normal,na,1,1.0,False
+803fece6-2b2d-4ba2-8370-49385734ab3b,8950207b-4940-4ef9-ad01-0ad0dace6f27,130,IGTB1819,normal,na,1,1.0,False
+803fece6-2b2d-4ba2-8370-49385734ab3b,b993ef60-52c8-41e2-83a2-bb44f1fb916f,112,IGTB1819,normal,na,1,1.0,False
+81d6439e-3bb2-4356-8a46-380b6620a895,15024b21-fb68-4bbe-92cf-0c9ab90f11a6,84,1569,systemic lupus erythematosus,managed,1,2.0,False
+81d6439e-3bb2-4356-8a46-380b6620a895,683bd537-4ff4-4741-afe5-be328f499d4b,70,1569,systemic lupus erythematosus,managed,1,2.0,False
+81d6439e-3bb2-4356-8a46-380b6620a895,68492085-4a2b-4551-9b12-75062c694069,105,1569,systemic lupus erythematosus,managed,1,2.0,False
+81d6439e-3bb2-4356-8a46-380b6620a895,bdc30514-427c-403e-a0ee-61e7d04e407e,72,1569,systemic lupus erythematosus,managed,1,2.0,False
+8252bf55-2aa7-411f-b276-fbc747265666,0c3a7808-800f-43b1-a57b-08c3b2bb9e5a,137,1522,systemic lupus erythematosus,managed,1,2.0,False
+8252bf55-2aa7-411f-b276-fbc747265666,222b358b-71e7-4b0f-9f9b-47b4c67aaa27,146,1522,systemic lupus erythematosus,managed,1,2.0,False
+8252bf55-2aa7-411f-b276-fbc747265666,585af22b-b80b-4a1d-8cc8-17d65b2639e1,134,1522,systemic lupus erythematosus,managed,1,2.0,False
+8252bf55-2aa7-411f-b276-fbc747265666,d8a37460-32f2-4b61-b1d2-1f7f0ba92779,140,1522,systemic lupus erythematosus,managed,1,2.0,False
+8273e790-4f85-4d7a-8863-6a7674ae9659,152e2bfd-e9ea-4d70-a999-6f37fb3fb96c,70,FLARE016,systemic lupus erythematosus,treated,1,3.0,False
+8273e790-4f85-4d7a-8863-6a7674ae9659,30bbf8d6-bd6a-4b4f-8d3e-a54bf78f79d5,76,FLARE016,systemic lupus erythematosus,treated,1,3.0,False
+8273e790-4f85-4d7a-8863-6a7674ae9659,b816335c-8d84-4ecc-aa3e-2dea51795320,75,FLARE016,systemic lupus erythematosus,treated,1,3.0,False
+8273e790-4f85-4d7a-8863-6a7674ae9659,df159c28-05fb-4f35-83b8-8c14af793f2a,73,FLARE016,systemic lupus erythematosus,treated,1,3.0,False
+83a38413-11d1-494e-81d3-56f594148b71,3639058a-5dc3-49ad-82ff-cec405483912,103,IGTB2007,normal,na,1,1.0,False
+83a38413-11d1-494e-81d3-56f594148b71,56b848af-d12b-4f9c-b605-947e296caa46,97,IGTB2007,normal,na,1,1.0,False
+83a38413-11d1-494e-81d3-56f594148b71,8950207b-4940-4ef9-ad01-0ad0dace6f27,96,IGTB2007,normal,na,1,1.0,False
+83a38413-11d1-494e-81d3-56f594148b71,b993ef60-52c8-41e2-83a2-bb44f1fb916f,101,IGTB2007,normal,na,1,1.0,False
+846608fe-7084-4723-8ed0-55e36de70877,8321fef1-a067-4a62-a461-37e1f1b4f868,125,1234,systemic lupus erythematosus,managed,1,2.0,False
+846608fe-7084-4723-8ed0-55e36de70877,8627b3d4-c529-45b3-bf1e-0313791be91d,128,1234,systemic lupus erythematosus,managed,1,2.0,False
+846608fe-7084-4723-8ed0-55e36de70877,cfb525cf-987b-42c8-afca-8dd18f45b32d,121,1234,systemic lupus erythematosus,managed,1,2.0,False
+846608fe-7084-4723-8ed0-55e36de70877,d49aa545-2b96-409c-85e8-2bf8706475fb,130,1234,systemic lupus erythematosus,managed,1,2.0,False
+869da0bb-4487-493b-86ca-e601eee46196,39093cbf-e0a9-480d-ab0b-e9e4cf95a9f8,56,HC-006,normal,na,1,4.0,False
+869da0bb-4487-493b-86ca-e601eee46196,64f6fec6-18a3-4563-b731-189faf6423f2,60,HC-006,normal,na,1,4.0,False
+869da0bb-4487-493b-86ca-e601eee46196,6fd714df-b88d-43a6-8f75-3d300278329d,70,HC-006,normal,na,1,4.0,False
+869da0bb-4487-493b-86ca-e601eee46196,c2641f62-eb23-4dad-9c22-b52e72b79df2,73,HC-006,normal,na,1,4.0,False
+886dc81a-06f7-47dc-bdf6-da1524e86d7d,0103e306-959a-46b0-896d-d8b9dee40157,112,IGTB884,normal,na,1,1.0,False
+886dc81a-06f7-47dc-bdf6-da1524e86d7d,0c7c125d-46d6-40ba-8088-31fb2b526a78,51,IGTB884,normal,na,1,2.0,False
+886dc81a-06f7-47dc-bdf6-da1524e86d7d,272dbb99-7929-46e2-8446-a19c21af05da,62,IGTB884,normal,na,1,2.0,False
+886dc81a-06f7-47dc-bdf6-da1524e86d7d,2dbf699a-f6cd-446d-8dc4-0595319cfa99,60,IGTB884,normal,na,1,2.0,False
+886dc81a-06f7-47dc-bdf6-da1524e86d7d,39564abe-76f3-4a33-9f10-f574069834bc,63,IGTB884,normal,na,1,2.0,False
+886dc81a-06f7-47dc-bdf6-da1524e86d7d,6ab35eea-1bae-4ee8-8e5f-5f1505715ac3,56,IGTB884,normal,na,1,2.0,False
+886dc81a-06f7-47dc-bdf6-da1524e86d7d,78c34b8c-196b-4a31-b700-08882bfaf4ab,67,IGTB884,normal,na,1,2.0,False
+886dc81a-06f7-47dc-bdf6-da1524e86d7d,9586e7f4-5c57-452e-bb13-90ceef874118,92,IGTB884,normal,na,1,1.0,False
+886dc81a-06f7-47dc-bdf6-da1524e86d7d,cdf51e52-a49a-474f-a6ba-da5a14137d09,67,IGTB884,normal,na,1,2.0,False
+886dc81a-06f7-47dc-bdf6-da1524e86d7d,d461010c-38fd-414f-91bd-e1b3e7e2f8fb,95,IGTB884,normal,na,1,1.0,False
+886dc81a-06f7-47dc-bdf6-da1524e86d7d,e7240495-f3e8-42a3-ac5c-4a9a7eebc341,90,IGTB884,normal,na,1,1.0,False
+886dc81a-06f7-47dc-bdf6-da1524e86d7d,fc140c51-9b4f-427f-8e11-640bc7400007,55,IGTB884,normal,na,1,2.0,False
+8a1f4cc3-6e34-4cd2-aba9-0f4d266e7dd9,10cec51f-a79f-4907-8745-b45df64f6946,16,1101,systemic lupus erythematosus,managed,1,4.0,False
+8a1f4cc3-6e34-4cd2-aba9-0f4d266e7dd9,1556abac-8f1a-404a-8a2f-402ac562143c,17,1101,systemic lupus erythematosus,managed,1,2.0,False
+8a1f4cc3-6e34-4cd2-aba9-0f4d266e7dd9,3044f2b9-48b5-45ec-ac14-107f0d7372f0,20,1101,systemic lupus erythematosus,managed,1,2.0,False
+8a1f4cc3-6e34-4cd2-aba9-0f4d266e7dd9,32436280-1ea6-4678-bb18-4632fe8c4933,9,1101,systemic lupus erythematosus,managed,1,4.0,False
+8a1f4cc3-6e34-4cd2-aba9-0f4d266e7dd9,665a3535-8f40-4ae3-9260-cbce7060781f,20,1101,systemic lupus erythematosus,managed,1,2.0,False
+8a1f4cc3-6e34-4cd2-aba9-0f4d266e7dd9,90e60bb7-e776-4dff-a8ba-6390acefdbee,13,1101,systemic lupus erythematosus,managed,1,4.0,False
+8a1f4cc3-6e34-4cd2-aba9-0f4d266e7dd9,b795713b-ff23-4494-b6a3-1438b2baee3e,20,1101,systemic lupus erythematosus,managed,1,2.0,False
+8a1f4cc3-6e34-4cd2-aba9-0f4d266e7dd9,ca103ed6-7a7e-4450-9546-ac295532bced,3,1101,systemic lupus erythematosus,managed,1,4.0,False
+8ac7e282-b60a-4595-9904-8a46773e2c31,8321fef1-a067-4a62-a461-37e1f1b4f868,531,1197,systemic lupus erythematosus,managed,1,2.0,False
+8ac7e282-b60a-4595-9904-8a46773e2c31,8627b3d4-c529-45b3-bf1e-0313791be91d,416,1197,systemic lupus erythematosus,managed,1,2.0,False
+8ac7e282-b60a-4595-9904-8a46773e2c31,cfb525cf-987b-42c8-afca-8dd18f45b32d,402,1197,systemic lupus erythematosus,managed,1,2.0,False
+8ac7e282-b60a-4595-9904-8a46773e2c31,d49aa545-2b96-409c-85e8-2bf8706475fb,445,1197,systemic lupus erythematosus,managed,1,2.0,False
+8c16622f-c4c5-4c77-bb15-c5cf74910184,28401515-eca4-442a-85fc-f8c2793b1c26,27,1597,systemic lupus erythematosus,managed,1,2.0,False
+8c16622f-c4c5-4c77-bb15-c5cf74910184,9184b09f-ca66-4623-a733-1f64bc1b424f,25,1597,systemic lupus erythematosus,managed,1,2.0,False
+8c16622f-c4c5-4c77-bb15-c5cf74910184,d9bf3113-086e-4165-ba13-e78a3d7b4138,21,1597,systemic lupus erythematosus,managed,1,2.0,False
+8c16622f-c4c5-4c77-bb15-c5cf74910184,e16d2c39-bfd1-4fb1-8ed6-ad6b16f3652e,8,1597,systemic lupus erythematosus,managed,1,2.0,False
+8e5ccbdf-00ee-4cd5-9007-ff2ab414bbbf,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,109,FLARE013,systemic lupus erythematosus,flare,1,3.0,False
+8e5ccbdf-00ee-4cd5-9007-ff2ab414bbbf,7a2abe44-abb7-4648-bb14-224625a6da0b,139,FLARE013,systemic lupus erythematosus,flare,1,3.0,False
+8e5ccbdf-00ee-4cd5-9007-ff2ab414bbbf,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,128,FLARE013,systemic lupus erythematosus,flare,1,3.0,False
+8e5ccbdf-00ee-4cd5-9007-ff2ab414bbbf,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,140,FLARE013,systemic lupus erythematosus,flare,1,3.0,False
+910e95f1-f837-41c6-bcb3-683780852c38,1e3165e4-e0c0-4bf7-b803-7d8271b99fd5,94,HC-520,normal,na,1,4.0,False
+910e95f1-f837-41c6-bcb3-683780852c38,60373b7d-7c45-428f-9622-aa4f854c4860,104,HC-520,normal,na,1,4.0,False
+910e95f1-f837-41c6-bcb3-683780852c38,d4d2da4e-6580-479c-b5f6-77b109e72715,123,HC-520,normal,na,1,4.0,False
+910e95f1-f837-41c6-bcb3-683780852c38,fb1e97d1-dd9c-4314-aae2-9c3745df1411,110,HC-520,normal,na,1,4.0,False
+9198675e-be82-472f-b352-a98629c9876a,1556abac-8f1a-404a-8a2f-402ac562143c,124,1056,systemic lupus erythematosus,managed,1,2.0,False
+9198675e-be82-472f-b352-a98629c9876a,3044f2b9-48b5-45ec-ac14-107f0d7372f0,126,1056,systemic lupus erythematosus,managed,1,2.0,False
+9198675e-be82-472f-b352-a98629c9876a,665a3535-8f40-4ae3-9260-cbce7060781f,150,1056,systemic lupus erythematosus,managed,1,2.0,False
+9198675e-be82-472f-b352-a98629c9876a,b795713b-ff23-4494-b6a3-1438b2baee3e,119,1056,systemic lupus erythematosus,managed,1,2.0,False
+9245fdfa-904c-4421-ba87-60da990f40ed,048cb921-e15f-47a6-a9e3-ed512574e5d7,78,IGTB514,normal,na,1,2.0,False
+9245fdfa-904c-4421-ba87-60da990f40ed,28401515-eca4-442a-85fc-f8c2793b1c26,64,IGTB514,normal,na,1,2.0,False
+9245fdfa-904c-4421-ba87-60da990f40ed,3c722d55-1664-4996-8228-63504e862676,285,IGTB514,normal,na,1,3.0,False
+9245fdfa-904c-4421-ba87-60da990f40ed,9184b09f-ca66-4623-a733-1f64bc1b424f,83,IGTB514,normal,na,1,2.0,False
+9245fdfa-904c-4421-ba87-60da990f40ed,a5cedd63-caae-415f-b7e4-c7f660fc89c8,114,IGTB514,normal,na,1,1.0,False
+9245fdfa-904c-4421-ba87-60da990f40ed,c64fa002-95f9-4429-b65c-6f55c7f907d4,73,IGTB514,normal,na,1,2.0,False
+9245fdfa-904c-4421-ba87-60da990f40ed,c7f79595-aa68-4139-9a87-094c761cc5ab,89,IGTB514,normal,na,1,2.0,False
+9245fdfa-904c-4421-ba87-60da990f40ed,cd2306bc-106c-4506-b778-d184713c463a,137,IGTB514,normal,na,1,1.0,False
+9245fdfa-904c-4421-ba87-60da990f40ed,d641571e-6406-4309-ae61-acc6f2e0a50d,78,IGTB514,normal,na,1,2.0,False
+9245fdfa-904c-4421-ba87-60da990f40ed,d9278721-fad6-4eba-a1bb-4a26c0aea206,141,IGTB514,normal,na,1,1.0,False
+9245fdfa-904c-4421-ba87-60da990f40ed,d9bf3113-086e-4165-ba13-e78a3d7b4138,84,IGTB514,normal,na,1,2.0,False
+9245fdfa-904c-4421-ba87-60da990f40ed,e16d2c39-bfd1-4fb1-8ed6-ad6b16f3652e,21,IGTB514,normal,na,1,2.0,False
+9245fdfa-904c-4421-ba87-60da990f40ed,e9ebbe1e-ce77-4c97-a04e-4a64befe98c8,294,IGTB514,normal,na,1,3.0,False
+9245fdfa-904c-4421-ba87-60da990f40ed,f1568b25-4a87-414f-8329-1a860a3a8aeb,161,IGTB514,normal,na,1,1.0,False
+9258d552-bade-4414-ad62-96fea54df354,0955850b-157b-4396-a3da-83b8bcbed172,148,1614,systemic lupus erythematosus,managed,1,4.0,False
+9258d552-bade-4414-ad62-96fea54df354,28401515-eca4-442a-85fc-f8c2793b1c26,121,1614,systemic lupus erythematosus,managed,1,2.0,False
+9258d552-bade-4414-ad62-96fea54df354,34585dab-86cd-40a1-9780-83204c304046,119,1614,systemic lupus erythematosus,managed,1,4.0,False
+9258d552-bade-4414-ad62-96fea54df354,9184b09f-ca66-4623-a733-1f64bc1b424f,128,1614,systemic lupus erythematosus,managed,1,2.0,False
+9258d552-bade-4414-ad62-96fea54df354,d9bf3113-086e-4165-ba13-e78a3d7b4138,131,1614,systemic lupus erythematosus,managed,1,2.0,False
+9258d552-bade-4414-ad62-96fea54df354,ddae4c77-2b07-4e3e-97f1-84a37cf04321,151,1614,systemic lupus erythematosus,managed,1,4.0,False
+9258d552-bade-4414-ad62-96fea54df354,e16d2c39-bfd1-4fb1-8ed6-ad6b16f3652e,48,1614,systemic lupus erythematosus,managed,1,2.0,False
+9258d552-bade-4414-ad62-96fea54df354,ecd9109f-7197-46df-b3a8-1ac2d9990185,121,1614,systemic lupus erythematosus,managed,1,4.0,False
+92d39096-b1d1-4746-9812-474db1f5f049,0c7c125d-46d6-40ba-8088-31fb2b526a78,83,1510,systemic lupus erythematosus,managed,1,2.0,False
+92d39096-b1d1-4746-9812-474db1f5f049,10cec51f-a79f-4907-8745-b45df64f6946,79,1510,systemic lupus erythematosus,managed,1,4.0,False
+92d39096-b1d1-4746-9812-474db1f5f049,272dbb99-7929-46e2-8446-a19c21af05da,110,1510,systemic lupus erythematosus,managed,1,2.0,False
+92d39096-b1d1-4746-9812-474db1f5f049,32436280-1ea6-4678-bb18-4632fe8c4933,107,1510,systemic lupus erythematosus,managed,1,4.0,False
+92d39096-b1d1-4746-9812-474db1f5f049,6ab35eea-1bae-4ee8-8e5f-5f1505715ac3,116,1510,systemic lupus erythematosus,managed,1,2.0,False
+92d39096-b1d1-4746-9812-474db1f5f049,90e60bb7-e776-4dff-a8ba-6390acefdbee,100,1510,systemic lupus erythematosus,managed,1,4.0,False
+92d39096-b1d1-4746-9812-474db1f5f049,ca103ed6-7a7e-4450-9546-ac295532bced,97,1510,systemic lupus erythematosus,managed,1,4.0,False
+92d39096-b1d1-4746-9812-474db1f5f049,fc140c51-9b4f-427f-8e11-640bc7400007,114,1510,systemic lupus erythematosus,managed,1,2.0,False
+9304bd33-e67a-46ba-96c5-954e5358db76,0be87f87-d01a-495e-9605-d89d36240908,112,1063,systemic lupus erythematosus,managed,1,2.0,False
+9304bd33-e67a-46ba-96c5-954e5358db76,54530f14-aadf-4c2a-8f92-9c22a69cc022,106,1063,systemic lupus erythematosus,managed,1,2.0,False
+9304bd33-e67a-46ba-96c5-954e5358db76,dac92812-557b-4abd-8fb0-4f823ae8ff59,93,1063,systemic lupus erythematosus,managed,1,2.0,False
+9304bd33-e67a-46ba-96c5-954e5358db76,e3629615-6d5c-4167-808f-996d53989dbf,83,1063,systemic lupus erythematosus,managed,1,2.0,False
+982d60b4-5677-4e2d-8b58-79503863710d,0c3a7808-800f-43b1-a57b-08c3b2bb9e5a,81,1479,systemic lupus erythematosus,managed,1,2.0,False
+982d60b4-5677-4e2d-8b58-79503863710d,222b358b-71e7-4b0f-9f9b-47b4c67aaa27,69,1479,systemic lupus erythematosus,managed,1,2.0,False
+982d60b4-5677-4e2d-8b58-79503863710d,585af22b-b80b-4a1d-8cc8-17d65b2639e1,93,1479,systemic lupus erythematosus,managed,1,2.0,False
+982d60b4-5677-4e2d-8b58-79503863710d,d8a37460-32f2-4b61-b1d2-1f7f0ba92779,76,1479,systemic lupus erythematosus,managed,1,2.0,False
+98e974a9-c08e-4066-8930-d627b18f1a89,0be87f87-d01a-495e-9605-d89d36240908,127,IGTB670,normal,na,1,2.0,False
+98e974a9-c08e-4066-8930-d627b18f1a89,54530f14-aadf-4c2a-8f92-9c22a69cc022,111,IGTB670,normal,na,1,2.0,False
+98e974a9-c08e-4066-8930-d627b18f1a89,a5cedd63-caae-415f-b7e4-c7f660fc89c8,101,IGTB670,normal,na,1,1.0,False
+98e974a9-c08e-4066-8930-d627b18f1a89,cd2306bc-106c-4506-b778-d184713c463a,121,IGTB670,normal,na,1,1.0,False
+98e974a9-c08e-4066-8930-d627b18f1a89,d9278721-fad6-4eba-a1bb-4a26c0aea206,111,IGTB670,normal,na,1,1.0,False
+98e974a9-c08e-4066-8930-d627b18f1a89,dac92812-557b-4abd-8fb0-4f823ae8ff59,134,IGTB670,normal,na,1,2.0,False
+98e974a9-c08e-4066-8930-d627b18f1a89,e3629615-6d5c-4167-808f-996d53989dbf,95,IGTB670,normal,na,1,2.0,False
+98e974a9-c08e-4066-8930-d627b18f1a89,f1568b25-4a87-414f-8329-1a860a3a8aeb,127,IGTB670,normal,na,1,1.0,False
+99893daf-e8a9-4266-b669-73ef48ebc383,1e3165e4-e0c0-4bf7-b803-7d8271b99fd5,80,1886,systemic lupus erythematosus,managed,1,4.0,False
+99893daf-e8a9-4266-b669-73ef48ebc383,60373b7d-7c45-428f-9622-aa4f854c4860,70,1886,systemic lupus erythematosus,managed,1,4.0,False
+99893daf-e8a9-4266-b669-73ef48ebc383,d4d2da4e-6580-479c-b5f6-77b109e72715,75,1886,systemic lupus erythematosus,managed,1,4.0,False
+99893daf-e8a9-4266-b669-73ef48ebc383,fb1e97d1-dd9c-4314-aae2-9c3745df1411,71,1886,systemic lupus erythematosus,managed,1,4.0,False
+9a3e6aa1-13a1-462d-996b-6499cc31a81c,1556abac-8f1a-404a-8a2f-402ac562143c,82,1119,systemic lupus erythematosus,managed,1,2.0,False
+9a3e6aa1-13a1-462d-996b-6499cc31a81c,3044f2b9-48b5-45ec-ac14-107f0d7372f0,65,1119,systemic lupus erythematosus,managed,1,2.0,False
+9a3e6aa1-13a1-462d-996b-6499cc31a81c,665a3535-8f40-4ae3-9260-cbce7060781f,66,1119,systemic lupus erythematosus,managed,1,2.0,False
+9a3e6aa1-13a1-462d-996b-6499cc31a81c,b795713b-ff23-4494-b6a3-1438b2baee3e,66,1119,systemic lupus erythematosus,managed,1,2.0,False
+9b194366-b70d-40d8-8a9b-7157a95d6c13,152e2bfd-e9ea-4d70-a999-6f37fb3fb96c,5,FLARE011,systemic lupus erythematosus,treated,1,3.0,False
+9b194366-b70d-40d8-8a9b-7157a95d6c13,30bbf8d6-bd6a-4b4f-8d3e-a54bf78f79d5,6,FLARE011,systemic lupus erythematosus,treated,1,3.0,False
+9b194366-b70d-40d8-8a9b-7157a95d6c13,b816335c-8d84-4ecc-aa3e-2dea51795320,9,FLARE011,systemic lupus erythematosus,treated,1,3.0,False
+9b194366-b70d-40d8-8a9b-7157a95d6c13,df159c28-05fb-4f35-83b8-8c14af793f2a,7,FLARE011,systemic lupus erythematosus,treated,1,3.0,False
+9c889cb3-c0ae-400b-b27d-e52241a7d342,0103e306-959a-46b0-896d-d8b9dee40157,124,IGTB1826,normal,na,1,1.0,False
+9c889cb3-c0ae-400b-b27d-e52241a7d342,9586e7f4-5c57-452e-bb13-90ceef874118,129,IGTB1826,normal,na,1,1.0,False
+9c889cb3-c0ae-400b-b27d-e52241a7d342,d461010c-38fd-414f-91bd-e1b3e7e2f8fb,103,IGTB1826,normal,na,1,1.0,False
+9c889cb3-c0ae-400b-b27d-e52241a7d342,e7240495-f3e8-42a3-ac5c-4a9a7eebc341,126,IGTB1826,normal,na,1,1.0,False
+9ce1287e-217d-4812-a293-ced526e1b6a2,0be87f87-d01a-495e-9605-d89d36240908,291,1022,systemic lupus erythematosus,managed,1,2.0,False
+9ce1287e-217d-4812-a293-ced526e1b6a2,54530f14-aadf-4c2a-8f92-9c22a69cc022,254,1022,systemic lupus erythematosus,managed,1,2.0,False
+9ce1287e-217d-4812-a293-ced526e1b6a2,dac92812-557b-4abd-8fb0-4f823ae8ff59,257,1022,systemic lupus erythematosus,managed,1,2.0,False
+9ce1287e-217d-4812-a293-ced526e1b6a2,e3629615-6d5c-4167-808f-996d53989dbf,241,1022,systemic lupus erythematosus,managed,1,2.0,False
+9e51b938-f3a9-4d97-8802-b820ed2a6b96,0be87f87-d01a-495e-9605-d89d36240908,117,1078,systemic lupus erythematosus,managed,1,2.0,False
+9e51b938-f3a9-4d97-8802-b820ed2a6b96,1e3165e4-e0c0-4bf7-b803-7d8271b99fd5,160,1078,systemic lupus erythematosus,managed,1,4.0,False
+9e51b938-f3a9-4d97-8802-b820ed2a6b96,54530f14-aadf-4c2a-8f92-9c22a69cc022,94,1078,systemic lupus erythematosus,managed,1,2.0,False
+9e51b938-f3a9-4d97-8802-b820ed2a6b96,60373b7d-7c45-428f-9622-aa4f854c4860,157,1078,systemic lupus erythematosus,managed,1,4.0,False
+9e51b938-f3a9-4d97-8802-b820ed2a6b96,d4d2da4e-6580-479c-b5f6-77b109e72715,143,1078,systemic lupus erythematosus,managed,1,4.0,False
+9e51b938-f3a9-4d97-8802-b820ed2a6b96,dac92812-557b-4abd-8fb0-4f823ae8ff59,92,1078,systemic lupus erythematosus,managed,1,2.0,False
+9e51b938-f3a9-4d97-8802-b820ed2a6b96,e3629615-6d5c-4167-808f-996d53989dbf,93,1078,systemic lupus erythematosus,managed,1,2.0,False
+9e51b938-f3a9-4d97-8802-b820ed2a6b96,fb1e97d1-dd9c-4314-aae2-9c3745df1411,153,1078,systemic lupus erythematosus,managed,1,4.0,False
+9e6a490c-24a3-41fa-a5e3-2879e75b45ff,16552c24-ef48-4e1f-aff5-319a1f739299,126,HC-567,normal,na,1,4.0,False
+9e6a490c-24a3-41fa-a5e3-2879e75b45ff,43b9b939-e389-4784-b4e0-ee9d12aa7ca1,153,HC-567,normal,na,1,4.0,False
+9e6a490c-24a3-41fa-a5e3-2879e75b45ff,91761416-a756-48e5-8768-fd169c7c564c,122,HC-567,normal,na,1,4.0,False
+9e6a490c-24a3-41fa-a5e3-2879e75b45ff,d9942805-5a63-4958-b714-7088c0428c65,155,HC-567,normal,na,1,4.0,False
+9ec7931d-1e6f-48eb-b455-4161dc116c2d,2236c52d-924b-415a-aae0-00fa08d12d1f,306,1741,systemic lupus erythematosus,managed,1,2.0,False
+9ec7931d-1e6f-48eb-b455-4161dc116c2d,894c6ccb-cb7a-4ea1-b032-b1d93b25247d,224,1741,systemic lupus erythematosus,managed,1,2.0,False
+9ec7931d-1e6f-48eb-b455-4161dc116c2d,9850fb76-4155-4910-881f-b5d33ee0835c,324,1741,systemic lupus erythematosus,managed,1,2.0,False
+9ec7931d-1e6f-48eb-b455-4161dc116c2d,f2380b81-e46f-430b-8fd2-e3897ddf7be9,265,1741,systemic lupus erythematosus,managed,1,2.0,False
+9fb00ed6-2678-41f8-8e8e-c3ea1350b61b,1556abac-8f1a-404a-8a2f-402ac562143c,160,1127,systemic lupus erythematosus,managed,1,2.0,False
+9fb00ed6-2678-41f8-8e8e-c3ea1350b61b,3044f2b9-48b5-45ec-ac14-107f0d7372f0,145,1127,systemic lupus erythematosus,managed,1,2.0,False
+9fb00ed6-2678-41f8-8e8e-c3ea1350b61b,665a3535-8f40-4ae3-9260-cbce7060781f,167,1127,systemic lupus erythematosus,managed,1,2.0,False
+9fb00ed6-2678-41f8-8e8e-c3ea1350b61b,b795713b-ff23-4494-b6a3-1438b2baee3e,150,1127,systemic lupus erythematosus,managed,1,2.0,False
+a17b2b7f-ab2c-47b0-bb6f-257e8d2fa4c9,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,113,1772,systemic lupus erythematosus,flare,1,3.0,False
+a17b2b7f-ab2c-47b0-bb6f-257e8d2fa4c9,7a2abe44-abb7-4648-bb14-224625a6da0b,104,1772,systemic lupus erythematosus,flare,1,3.0,False
+a17b2b7f-ab2c-47b0-bb6f-257e8d2fa4c9,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,118,1772,systemic lupus erythematosus,flare,1,3.0,False
+a17b2b7f-ab2c-47b0-bb6f-257e8d2fa4c9,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,115,1772,systemic lupus erythematosus,flare,1,3.0,False
+a3a3384a-3f4b-45ef-b48e-a4631cd99699,3c722d55-1664-4996-8228-63504e862676,4,1586,systemic lupus erythematosus,treated,1,3.0,False
+a3a3384a-3f4b-45ef-b48e-a4631cd99699,e9ebbe1e-ce77-4c97-a04e-4a64befe98c8,2,1586,systemic lupus erythematosus,treated,1,3.0,False
+a3ef43c2-caad-4ca3-86d0-3c362e778877,3639058a-5dc3-49ad-82ff-cec405483912,145,IGTB1901,normal,na,1,1.0,False
+a3ef43c2-caad-4ca3-86d0-3c362e778877,56b848af-d12b-4f9c-b605-947e296caa46,126,IGTB1901,normal,na,1,1.0,False
+a3ef43c2-caad-4ca3-86d0-3c362e778877,8950207b-4940-4ef9-ad01-0ad0dace6f27,152,IGTB1901,normal,na,1,1.0,False
+a3ef43c2-caad-4ca3-86d0-3c362e778877,b993ef60-52c8-41e2-83a2-bb44f1fb916f,113,IGTB1901,normal,na,1,1.0,False
+a42d987e-b022-41a5-ba50-a831d04c3a5e,0955850b-157b-4396-a3da-83b8bcbed172,59,1737,systemic lupus erythematosus,managed,1,4.0,False
+a42d987e-b022-41a5-ba50-a831d04c3a5e,34585dab-86cd-40a1-9780-83204c304046,43,1737,systemic lupus erythematosus,managed,1,4.0,False
+a42d987e-b022-41a5-ba50-a831d04c3a5e,ddae4c77-2b07-4e3e-97f1-84a37cf04321,37,1737,systemic lupus erythematosus,managed,1,4.0,False
+a42d987e-b022-41a5-ba50-a831d04c3a5e,ecd9109f-7197-46df-b3a8-1ac2d9990185,51,1737,systemic lupus erythematosus,managed,1,4.0,False
+a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,2dbf699a-f6cd-446d-8dc4-0595319cfa99,44,IGTB1506,normal,na,1,2.0,False
+a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,95,IGTB1506,normal,na,1,3.0,False
+a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,39564abe-76f3-4a33-9f10-f574069834bc,38,IGTB1506,normal,na,1,2.0,False
+a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,78c34b8c-196b-4a31-b700-08882bfaf4ab,62,IGTB1506,normal,na,1,2.0,False
+a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,7a2abe44-abb7-4648-bb14-224625a6da0b,100,IGTB1506,normal,na,1,3.0,False
+a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,102,IGTB1506,normal,na,1,3.0,False
+a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,8321fef1-a067-4a62-a461-37e1f1b4f868,62,IGTB1506,normal,na,1,2.0,False
+a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,8627b3d4-c529-45b3-bf1e-0313791be91d,61,IGTB1506,normal,na,1,2.0,False
+a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,138,IGTB1506,normal,na,1,3.0,False
+a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,a5cedd63-caae-415f-b7e4-c7f660fc89c8,97,IGTB1506,normal,na,1,1.0,False
+a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,cd2306bc-106c-4506-b778-d184713c463a,122,IGTB1506,normal,na,1,1.0,False
+a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,cdf51e52-a49a-474f-a6ba-da5a14137d09,36,IGTB1506,normal,na,1,2.0,False
+a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,cfb525cf-987b-42c8-afca-8dd18f45b32d,52,IGTB1506,normal,na,1,2.0,False
+a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,d49aa545-2b96-409c-85e8-2bf8706475fb,51,IGTB1506,normal,na,1,2.0,False
+a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,d9278721-fad6-4eba-a1bb-4a26c0aea206,97,IGTB1506,normal,na,1,1.0,False
+a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,f1568b25-4a87-414f-8329-1a860a3a8aeb,102,IGTB1506,normal,na,1,1.0,False
+a66eb64a-2485-4539-9244-f1e1b7bb5d1b,1556abac-8f1a-404a-8a2f-402ac562143c,27,1121,systemic lupus erythematosus,managed,1,2.0,False
+a66eb64a-2485-4539-9244-f1e1b7bb5d1b,3044f2b9-48b5-45ec-ac14-107f0d7372f0,32,1121,systemic lupus erythematosus,managed,1,2.0,False
+a66eb64a-2485-4539-9244-f1e1b7bb5d1b,665a3535-8f40-4ae3-9260-cbce7060781f,32,1121,systemic lupus erythematosus,managed,1,2.0,False
+a66eb64a-2485-4539-9244-f1e1b7bb5d1b,b795713b-ff23-4494-b6a3-1438b2baee3e,26,1121,systemic lupus erythematosus,managed,1,2.0,False
+a6ac0788-1205-4bfa-bc0d-bdedd7f77542,0c3a7808-800f-43b1-a57b-08c3b2bb9e5a,165,1535,systemic lupus erythematosus,managed,1,2.0,False
+a6ac0788-1205-4bfa-bc0d-bdedd7f77542,222b358b-71e7-4b0f-9f9b-47b4c67aaa27,199,1535,systemic lupus erythematosus,managed,1,2.0,False
+a6ac0788-1205-4bfa-bc0d-bdedd7f77542,585af22b-b80b-4a1d-8cc8-17d65b2639e1,189,1535,systemic lupus erythematosus,managed,1,2.0,False
+a6ac0788-1205-4bfa-bc0d-bdedd7f77542,d8a37460-32f2-4b61-b1d2-1f7f0ba92779,194,1535,systemic lupus erythematosus,managed,1,2.0,False
+a6c08d83-0500-4219-920e-e25d334a6409,2dbf699a-f6cd-446d-8dc4-0595319cfa99,207,1240,systemic lupus erythematosus,managed,1,2.0,False
+a6c08d83-0500-4219-920e-e25d334a6409,39564abe-76f3-4a33-9f10-f574069834bc,235,1240,systemic lupus erythematosus,managed,1,2.0,False
+a6c08d83-0500-4219-920e-e25d334a6409,78c34b8c-196b-4a31-b700-08882bfaf4ab,290,1240,systemic lupus erythematosus,managed,1,2.0,False
+a6c08d83-0500-4219-920e-e25d334a6409,cdf51e52-a49a-474f-a6ba-da5a14137d09,241,1240,systemic lupus erythematosus,managed,1,2.0,False
+a7044233-6fb9-4b71-96bb-62aa3b6062ea,28401515-eca4-442a-85fc-f8c2793b1c26,243,1623,systemic lupus erythematosus,managed,1,2.0,False
+a7044233-6fb9-4b71-96bb-62aa3b6062ea,9184b09f-ca66-4623-a733-1f64bc1b424f,272,1623,systemic lupus erythematosus,managed,1,2.0,False
+a7044233-6fb9-4b71-96bb-62aa3b6062ea,d9bf3113-086e-4165-ba13-e78a3d7b4138,270,1623,systemic lupus erythematosus,managed,1,2.0,False
+a7044233-6fb9-4b71-96bb-62aa3b6062ea,e16d2c39-bfd1-4fb1-8ed6-ad6b16f3652e,96,1623,systemic lupus erythematosus,managed,1,2.0,False
+a84b33db-a349-489f-af0b-22d57fb9bd69,8321fef1-a067-4a62-a461-37e1f1b4f868,120,1219,systemic lupus erythematosus,managed,1,2.0,False
+a84b33db-a349-489f-af0b-22d57fb9bd69,8627b3d4-c529-45b3-bf1e-0313791be91d,107,1219,systemic lupus erythematosus,managed,1,2.0,False
+a84b33db-a349-489f-af0b-22d57fb9bd69,cfb525cf-987b-42c8-afca-8dd18f45b32d,91,1219,systemic lupus erythematosus,managed,1,2.0,False
+a84b33db-a349-489f-af0b-22d57fb9bd69,d49aa545-2b96-409c-85e8-2bf8706475fb,90,1219,systemic lupus erythematosus,managed,1,2.0,False
+a8a25630-19f3-4fc6-811b-62332dee7b86,152e2bfd-e9ea-4d70-a999-6f37fb3fb96c,102,HC-501,normal,na,1,3.0,False
+a8a25630-19f3-4fc6-811b-62332dee7b86,30bbf8d6-bd6a-4b4f-8d3e-a54bf78f79d5,104,HC-501,normal,na,1,3.0,False
+a8a25630-19f3-4fc6-811b-62332dee7b86,b816335c-8d84-4ecc-aa3e-2dea51795320,103,HC-501,normal,na,1,3.0,False
+a8a25630-19f3-4fc6-811b-62332dee7b86,df159c28-05fb-4f35-83b8-8c14af793f2a,104,HC-501,normal,na,1,3.0,False
+a95f8d98-ff4e-45fc-8ede-1687c1495833,2236c52d-924b-415a-aae0-00fa08d12d1f,153,1947,systemic lupus erythematosus,managed,1,2.0,False
+a95f8d98-ff4e-45fc-8ede-1687c1495833,894c6ccb-cb7a-4ea1-b032-b1d93b25247d,147,1947,systemic lupus erythematosus,managed,1,2.0,False
+a95f8d98-ff4e-45fc-8ede-1687c1495833,9850fb76-4155-4910-881f-b5d33ee0835c,163,1947,systemic lupus erythematosus,managed,1,2.0,False
+a95f8d98-ff4e-45fc-8ede-1687c1495833,f2380b81-e46f-430b-8fd2-e3897ddf7be9,148,1947,systemic lupus erythematosus,managed,1,2.0,False
+ae1510fa-1501-4ddd-8291-9ccd1917369e,16552c24-ef48-4e1f-aff5-319a1f739299,84,1249,systemic lupus erythematosus,managed,1,4.0,False
+ae1510fa-1501-4ddd-8291-9ccd1917369e,43b9b939-e389-4784-b4e0-ee9d12aa7ca1,95,1249,systemic lupus erythematosus,managed,1,4.0,False
+ae1510fa-1501-4ddd-8291-9ccd1917369e,91761416-a756-48e5-8768-fd169c7c564c,105,1249,systemic lupus erythematosus,managed,1,4.0,False
+ae1510fa-1501-4ddd-8291-9ccd1917369e,d9942805-5a63-4958-b714-7088c0428c65,79,1249,systemic lupus erythematosus,managed,1,4.0,False
+b0c3cf74-58cf-43e7-b4df-61ef0b3a9fdc,3639058a-5dc3-49ad-82ff-cec405483912,225,IGTB1840,normal,na,1,1.0,False
+b0c3cf74-58cf-43e7-b4df-61ef0b3a9fdc,56b848af-d12b-4f9c-b605-947e296caa46,213,IGTB1840,normal,na,1,1.0,False
+b0c3cf74-58cf-43e7-b4df-61ef0b3a9fdc,8950207b-4940-4ef9-ad01-0ad0dace6f27,249,IGTB1840,normal,na,1,1.0,False
+b0c3cf74-58cf-43e7-b4df-61ef0b3a9fdc,b993ef60-52c8-41e2-83a2-bb44f1fb916f,220,IGTB1840,normal,na,1,1.0,False
+b25deecf-dab2-4c86-ae98-047ee79ce320,3639058a-5dc3-49ad-82ff-cec405483912,168,IGTB1828,normal,na,1,1.0,False
+b25deecf-dab2-4c86-ae98-047ee79ce320,56b848af-d12b-4f9c-b605-947e296caa46,169,IGTB1828,normal,na,1,1.0,False
+b25deecf-dab2-4c86-ae98-047ee79ce320,8950207b-4940-4ef9-ad01-0ad0dace6f27,197,IGTB1828,normal,na,1,1.0,False
+b25deecf-dab2-4c86-ae98-047ee79ce320,b993ef60-52c8-41e2-83a2-bb44f1fb916f,170,IGTB1828,normal,na,1,1.0,False
+b27b5052-47f3-4c7d-b9a3-4a3b2934e78c,15024b21-fb68-4bbe-92cf-0c9ab90f11a6,275,1417,systemic lupus erythematosus,managed,1,2.0,False
+b27b5052-47f3-4c7d-b9a3-4a3b2934e78c,683bd537-4ff4-4741-afe5-be328f499d4b,281,1417,systemic lupus erythematosus,managed,1,2.0,False
+b27b5052-47f3-4c7d-b9a3-4a3b2934e78c,68492085-4a2b-4551-9b12-75062c694069,268,1417,systemic lupus erythematosus,managed,1,2.0,False
+b27b5052-47f3-4c7d-b9a3-4a3b2934e78c,bdc30514-427c-403e-a0ee-61e7d04e407e,250,1417,systemic lupus erythematosus,managed,1,2.0,False
+b4cbfe6a-acdc-48e8-a9f1-6f0ae959301f,10cec51f-a79f-4907-8745-b45df64f6946,8,1243,systemic lupus erythematosus,managed,1,4.0,False
+b4cbfe6a-acdc-48e8-a9f1-6f0ae959301f,32436280-1ea6-4678-bb18-4632fe8c4933,10,1243,systemic lupus erythematosus,managed,1,4.0,False
+b4cbfe6a-acdc-48e8-a9f1-6f0ae959301f,8321fef1-a067-4a62-a461-37e1f1b4f868,11,1243,systemic lupus erythematosus,managed,1,2.0,False
+b4cbfe6a-acdc-48e8-a9f1-6f0ae959301f,8627b3d4-c529-45b3-bf1e-0313791be91d,5,1243,systemic lupus erythematosus,managed,1,2.0,False
+b4cbfe6a-acdc-48e8-a9f1-6f0ae959301f,90e60bb7-e776-4dff-a8ba-6390acefdbee,11,1243,systemic lupus erythematosus,managed,1,4.0,False
+b4cbfe6a-acdc-48e8-a9f1-6f0ae959301f,ca103ed6-7a7e-4450-9546-ac295532bced,13,1243,systemic lupus erythematosus,managed,1,4.0,False
+b4cbfe6a-acdc-48e8-a9f1-6f0ae959301f,cfb525cf-987b-42c8-afca-8dd18f45b32d,11,1243,systemic lupus erythematosus,managed,1,2.0,False
+b4cbfe6a-acdc-48e8-a9f1-6f0ae959301f,d49aa545-2b96-409c-85e8-2bf8706475fb,10,1243,systemic lupus erythematosus,managed,1,2.0,False
+b5b93cb0-7248-4b48-ad21-5ea028207cac,152e2bfd-e9ea-4d70-a999-6f37fb3fb96c,159,FLARE015,systemic lupus erythematosus,flare,1,3.0,False
+b5b93cb0-7248-4b48-ad21-5ea028207cac,30bbf8d6-bd6a-4b4f-8d3e-a54bf78f79d5,151,FLARE015,systemic lupus erythematosus,flare,1,3.0,False
+b5b93cb0-7248-4b48-ad21-5ea028207cac,b816335c-8d84-4ecc-aa3e-2dea51795320,154,FLARE015,systemic lupus erythematosus,flare,1,3.0,False
+b5b93cb0-7248-4b48-ad21-5ea028207cac,df159c28-05fb-4f35-83b8-8c14af793f2a,157,FLARE015,systemic lupus erythematosus,flare,1,3.0,False
+b6fa3b09-f5e2-46d0-a42a-c15cb3089214,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,98,FLARE004,systemic lupus erythematosus,treated,1,3.0,False
+b6fa3b09-f5e2-46d0-a42a-c15cb3089214,7a2abe44-abb7-4648-bb14-224625a6da0b,82,FLARE004,systemic lupus erythematosus,treated,1,3.0,False
+b6fa3b09-f5e2-46d0-a42a-c15cb3089214,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,93,FLARE004,systemic lupus erythematosus,treated,1,3.0,False
+b6fa3b09-f5e2-46d0-a42a-c15cb3089214,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,92,FLARE004,systemic lupus erythematosus,treated,1,3.0,False
+b7c8655d-8d5e-4865-bc97-3c606cdaf5e9,2dbf699a-f6cd-446d-8dc4-0595319cfa99,82,IGTB143,normal,na,1,2.0,False
+b7c8655d-8d5e-4865-bc97-3c606cdaf5e9,39564abe-76f3-4a33-9f10-f574069834bc,98,IGTB143,normal,na,1,2.0,False
+b7c8655d-8d5e-4865-bc97-3c606cdaf5e9,78c34b8c-196b-4a31-b700-08882bfaf4ab,112,IGTB143,normal,na,1,2.0,False
+b7c8655d-8d5e-4865-bc97-3c606cdaf5e9,8321fef1-a067-4a62-a461-37e1f1b4f868,46,IGTB143,normal,na,1,2.0,False
+b7c8655d-8d5e-4865-bc97-3c606cdaf5e9,8627b3d4-c529-45b3-bf1e-0313791be91d,57,IGTB143,normal,na,1,2.0,False
+b7c8655d-8d5e-4865-bc97-3c606cdaf5e9,a5cedd63-caae-415f-b7e4-c7f660fc89c8,114,IGTB143,normal,na,1,1.0,False
+b7c8655d-8d5e-4865-bc97-3c606cdaf5e9,cd2306bc-106c-4506-b778-d184713c463a,127,IGTB143,normal,na,1,1.0,False
+b7c8655d-8d5e-4865-bc97-3c606cdaf5e9,cdf51e52-a49a-474f-a6ba-da5a14137d09,95,IGTB143,normal,na,1,2.0,False
+b7c8655d-8d5e-4865-bc97-3c606cdaf5e9,cfb525cf-987b-42c8-afca-8dd18f45b32d,55,IGTB143,normal,na,1,2.0,False
+b7c8655d-8d5e-4865-bc97-3c606cdaf5e9,d49aa545-2b96-409c-85e8-2bf8706475fb,49,IGTB143,normal,na,1,2.0,False
+b7c8655d-8d5e-4865-bc97-3c606cdaf5e9,d9278721-fad6-4eba-a1bb-4a26c0aea206,94,IGTB143,normal,na,1,1.0,False
+b7c8655d-8d5e-4865-bc97-3c606cdaf5e9,f1568b25-4a87-414f-8329-1a860a3a8aeb,101,IGTB143,normal,na,1,1.0,False
+b8196629-0482-415e-bc09-c1ce1cc49363,048cb921-e15f-47a6-a9e3-ed512574e5d7,226,1641,systemic lupus erythematosus,managed,1,2.0,False
+b8196629-0482-415e-bc09-c1ce1cc49363,c64fa002-95f9-4429-b65c-6f55c7f907d4,216,1641,systemic lupus erythematosus,managed,1,2.0,False
+b8196629-0482-415e-bc09-c1ce1cc49363,c7f79595-aa68-4139-9a87-094c761cc5ab,207,1641,systemic lupus erythematosus,managed,1,2.0,False
+b8196629-0482-415e-bc09-c1ce1cc49363,d641571e-6406-4309-ae61-acc6f2e0a50d,228,1641,systemic lupus erythematosus,managed,1,2.0,False
+b8dde0a0-6c13-429b-a5df-a0527c4fca14,4e57f7cc-1df2-467f-8bfe-cb19af5d7350,528,1586,systemic lupus erythematosus,flare,1,3.0,False
+b8dde0a0-6c13-429b-a5df-a0527c4fca14,ddb0a996-79fe-4eac-8760-76ee74c7c333,505,1586,systemic lupus erythematosus,flare,1,3.0,False
+b99cfca7-d0cc-427f-b4ec-373067995536,39093cbf-e0a9-480d-ab0b-e9e4cf95a9f8,195,HC-009,normal,na,1,4.0,False
+b99cfca7-d0cc-427f-b4ec-373067995536,64f6fec6-18a3-4563-b731-189faf6423f2,168,HC-009,normal,na,1,4.0,False
+b99cfca7-d0cc-427f-b4ec-373067995536,6fd714df-b88d-43a6-8f75-3d300278329d,190,HC-009,normal,na,1,4.0,False
+b99cfca7-d0cc-427f-b4ec-373067995536,c2641f62-eb23-4dad-9c22-b52e72b79df2,153,HC-009,normal,na,1,4.0,False
+ba126ef5-093b-4138-810c-def1fa61ac40,0c3a7808-800f-43b1-a57b-08c3b2bb9e5a,106,1279,systemic lupus erythematosus,managed,1,2.0,False
+ba126ef5-093b-4138-810c-def1fa61ac40,222b358b-71e7-4b0f-9f9b-47b4c67aaa27,119,1279,systemic lupus erythematosus,managed,1,2.0,False
+ba126ef5-093b-4138-810c-def1fa61ac40,2dbf699a-f6cd-446d-8dc4-0595319cfa99,99,1279,systemic lupus erythematosus,managed,1,2.0,False
+ba126ef5-093b-4138-810c-def1fa61ac40,39564abe-76f3-4a33-9f10-f574069834bc,88,1279,systemic lupus erythematosus,managed,1,2.0,False
+ba126ef5-093b-4138-810c-def1fa61ac40,585af22b-b80b-4a1d-8cc8-17d65b2639e1,120,1279,systemic lupus erythematosus,managed,1,2.0,False
+ba126ef5-093b-4138-810c-def1fa61ac40,78c34b8c-196b-4a31-b700-08882bfaf4ab,98,1279,systemic lupus erythematosus,managed,1,2.0,False
+ba126ef5-093b-4138-810c-def1fa61ac40,cdf51e52-a49a-474f-a6ba-da5a14137d09,107,1279,systemic lupus erythematosus,managed,1,2.0,False
+ba126ef5-093b-4138-810c-def1fa61ac40,d8a37460-32f2-4b61-b1d2-1f7f0ba92779,137,1279,systemic lupus erythematosus,managed,1,2.0,False
+bc16e1fe-cd25-4a6b-a329-2e2c7121ad8d,0955850b-157b-4396-a3da-83b8bcbed172,116,HC-540,normal,na,1,4.0,False
+bc16e1fe-cd25-4a6b-a329-2e2c7121ad8d,34585dab-86cd-40a1-9780-83204c304046,78,HC-540,normal,na,1,4.0,False
+bc16e1fe-cd25-4a6b-a329-2e2c7121ad8d,ddae4c77-2b07-4e3e-97f1-84a37cf04321,94,HC-540,normal,na,1,4.0,False
+bc16e1fe-cd25-4a6b-a329-2e2c7121ad8d,ecd9109f-7197-46df-b3a8-1ac2d9990185,101,HC-540,normal,na,1,4.0,False
+bca9c9c7-62f2-4427-a3aa-3dcd297ced84,16552c24-ef48-4e1f-aff5-319a1f739299,57,HC-558,normal,na,1,4.0,False
+bca9c9c7-62f2-4427-a3aa-3dcd297ced84,43b9b939-e389-4784-b4e0-ee9d12aa7ca1,42,HC-558,normal,na,1,4.0,False
+bca9c9c7-62f2-4427-a3aa-3dcd297ced84,91761416-a756-48e5-8768-fd169c7c564c,57,HC-558,normal,na,1,4.0,False
+bca9c9c7-62f2-4427-a3aa-3dcd297ced84,d9942805-5a63-4958-b714-7088c0428c65,54,HC-558,normal,na,1,4.0,False
+bd6c3fde-42cb-459e-8e81-b5ef2a90190f,1e3165e4-e0c0-4bf7-b803-7d8271b99fd5,163,HC-531,normal,na,1,4.0,False
+bd6c3fde-42cb-459e-8e81-b5ef2a90190f,60373b7d-7c45-428f-9622-aa4f854c4860,143,HC-531,normal,na,1,4.0,False
+bd6c3fde-42cb-459e-8e81-b5ef2a90190f,d4d2da4e-6580-479c-b5f6-77b109e72715,182,HC-531,normal,na,1,4.0,False
+bd6c3fde-42cb-459e-8e81-b5ef2a90190f,fb1e97d1-dd9c-4314-aae2-9c3745df1411,187,HC-531,normal,na,1,4.0,False
+bf5fe2a7-ee49-4304-a20a-01596de43619,1495b93b-a19f-4364-95a3-6d8ac531eac6,71,HC-551,normal,na,1,4.0,False
+bf5fe2a7-ee49-4304-a20a-01596de43619,3332f018-936e-4c4c-9105-99d9503db5a3,57,HC-551,normal,na,1,4.0,False
+bf5fe2a7-ee49-4304-a20a-01596de43619,70a004b7-4a17-4702-8910-4557aa0c4279,72,HC-551,normal,na,1,4.0,False
+bf5fe2a7-ee49-4304-a20a-01596de43619,cdab3145-edc9-4352-932c-1638e791bfc9,77,HC-551,normal,na,1,4.0,False
+bffca8a1-fc84-4f20-acae-3cf0d6313002,0be87f87-d01a-495e-9605-d89d36240908,130,IGTB1372,normal,na,1,2.0,False
+bffca8a1-fc84-4f20-acae-3cf0d6313002,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,122,IGTB1372,normal,na,1,3.0,False
+bffca8a1-fc84-4f20-acae-3cf0d6313002,54530f14-aadf-4c2a-8f92-9c22a69cc022,94,IGTB1372,normal,na,1,2.0,False
+bffca8a1-fc84-4f20-acae-3cf0d6313002,7a2abe44-abb7-4648-bb14-224625a6da0b,117,IGTB1372,normal,na,1,3.0,False
+bffca8a1-fc84-4f20-acae-3cf0d6313002,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,114,IGTB1372,normal,na,1,3.0,False
+bffca8a1-fc84-4f20-acae-3cf0d6313002,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,151,IGTB1372,normal,na,1,3.0,False
+bffca8a1-fc84-4f20-acae-3cf0d6313002,a5cedd63-caae-415f-b7e4-c7f660fc89c8,105,IGTB1372,normal,na,1,1.0,False
+bffca8a1-fc84-4f20-acae-3cf0d6313002,cd2306bc-106c-4506-b778-d184713c463a,140,IGTB1372,normal,na,1,1.0,False
+bffca8a1-fc84-4f20-acae-3cf0d6313002,d9278721-fad6-4eba-a1bb-4a26c0aea206,121,IGTB1372,normal,na,1,1.0,False
+bffca8a1-fc84-4f20-acae-3cf0d6313002,dac92812-557b-4abd-8fb0-4f823ae8ff59,95,IGTB1372,normal,na,1,2.0,False
+bffca8a1-fc84-4f20-acae-3cf0d6313002,e3629615-6d5c-4167-808f-996d53989dbf,82,IGTB1372,normal,na,1,2.0,False
+bffca8a1-fc84-4f20-acae-3cf0d6313002,f1568b25-4a87-414f-8329-1a860a3a8aeb,120,IGTB1372,normal,na,1,1.0,False
+c0d761e1-0ada-4c43-a6c3-260f3a01e78c,39093cbf-e0a9-480d-ab0b-e9e4cf95a9f8,69,1909,systemic lupus erythematosus,managed,1,4.0,False
+c0d761e1-0ada-4c43-a6c3-260f3a01e78c,64f6fec6-18a3-4563-b731-189faf6423f2,63,1909,systemic lupus erythematosus,managed,1,4.0,False
+c0d761e1-0ada-4c43-a6c3-260f3a01e78c,6fd714df-b88d-43a6-8f75-3d300278329d,82,1909,systemic lupus erythematosus,managed,1,4.0,False
+c0d761e1-0ada-4c43-a6c3-260f3a01e78c,c2641f62-eb23-4dad-9c22-b52e72b79df2,70,1909,systemic lupus erythematosus,managed,1,4.0,False
+c1ac7564-4e90-4bc9-ad66-24cecb27127f,10cec51f-a79f-4907-8745-b45df64f6946,58,HC-574,normal,na,1,4.0,False
+c1ac7564-4e90-4bc9-ad66-24cecb27127f,32436280-1ea6-4678-bb18-4632fe8c4933,74,HC-574,normal,na,1,4.0,False
+c1ac7564-4e90-4bc9-ad66-24cecb27127f,90e60bb7-e776-4dff-a8ba-6390acefdbee,79,HC-574,normal,na,1,4.0,False
+c1ac7564-4e90-4bc9-ad66-24cecb27127f,ca103ed6-7a7e-4450-9546-ac295532bced,87,HC-574,normal,na,1,4.0,False
+c1c68594-e342-485e-8c1b-6236ec9e107f,0c3a7808-800f-43b1-a57b-08c3b2bb9e5a,115,1262,systemic lupus erythematosus,managed,1,2.0,False
+c1c68594-e342-485e-8c1b-6236ec9e107f,222b358b-71e7-4b0f-9f9b-47b4c67aaa27,105,1262,systemic lupus erythematosus,managed,1,2.0,False
+c1c68594-e342-485e-8c1b-6236ec9e107f,2dbf699a-f6cd-446d-8dc4-0595319cfa99,102,1262,systemic lupus erythematosus,managed,1,2.0,False
+c1c68594-e342-485e-8c1b-6236ec9e107f,39564abe-76f3-4a33-9f10-f574069834bc,83,1262,systemic lupus erythematosus,managed,1,2.0,False
+c1c68594-e342-485e-8c1b-6236ec9e107f,585af22b-b80b-4a1d-8cc8-17d65b2639e1,132,1262,systemic lupus erythematosus,managed,1,2.0,False
+c1c68594-e342-485e-8c1b-6236ec9e107f,78c34b8c-196b-4a31-b700-08882bfaf4ab,122,1262,systemic lupus erythematosus,managed,1,2.0,False
+c1c68594-e342-485e-8c1b-6236ec9e107f,cdf51e52-a49a-474f-a6ba-da5a14137d09,112,1262,systemic lupus erythematosus,managed,1,2.0,False
+c1c68594-e342-485e-8c1b-6236ec9e107f,d8a37460-32f2-4b61-b1d2-1f7f0ba92779,127,1262,systemic lupus erythematosus,managed,1,2.0,False
+c21e0e54-2ea8-4fc7-9438-5d2d8d63899c,0955850b-157b-4396-a3da-83b8bcbed172,18,1014,systemic lupus erythematosus,managed,1,4.0,False
+c21e0e54-2ea8-4fc7-9438-5d2d8d63899c,0be87f87-d01a-495e-9605-d89d36240908,22,1014,systemic lupus erythematosus,managed,1,2.0,False
+c21e0e54-2ea8-4fc7-9438-5d2d8d63899c,34585dab-86cd-40a1-9780-83204c304046,14,1014,systemic lupus erythematosus,managed,1,4.0,False
+c21e0e54-2ea8-4fc7-9438-5d2d8d63899c,54530f14-aadf-4c2a-8f92-9c22a69cc022,31,1014,systemic lupus erythematosus,managed,1,2.0,False
+c21e0e54-2ea8-4fc7-9438-5d2d8d63899c,dac92812-557b-4abd-8fb0-4f823ae8ff59,28,1014,systemic lupus erythematosus,managed,1,2.0,False
+c21e0e54-2ea8-4fc7-9438-5d2d8d63899c,ddae4c77-2b07-4e3e-97f1-84a37cf04321,17,1014,systemic lupus erythematosus,managed,1,4.0,False
+c21e0e54-2ea8-4fc7-9438-5d2d8d63899c,e3629615-6d5c-4167-808f-996d53989dbf,28,1014,systemic lupus erythematosus,managed,1,2.0,False
+c21e0e54-2ea8-4fc7-9438-5d2d8d63899c,ecd9109f-7197-46df-b3a8-1ac2d9990185,16,1014,systemic lupus erythematosus,managed,1,4.0,False
+c3cd3b9e-6295-43ed-babc-46a5ab454773,152e2bfd-e9ea-4d70-a999-6f37fb3fb96c,99,HC-502,normal,na,1,3.0,False
+c3cd3b9e-6295-43ed-babc-46a5ab454773,30bbf8d6-bd6a-4b4f-8d3e-a54bf78f79d5,105,HC-502,normal,na,1,3.0,False
+c3cd3b9e-6295-43ed-babc-46a5ab454773,b816335c-8d84-4ecc-aa3e-2dea51795320,113,HC-502,normal,na,1,3.0,False
+c3cd3b9e-6295-43ed-babc-46a5ab454773,df159c28-05fb-4f35-83b8-8c14af793f2a,87,HC-502,normal,na,1,3.0,False
+c49441c0-0e2b-4e5b-b9ba-2d0477d92b88,1556abac-8f1a-404a-8a2f-402ac562143c,256,1087,systemic lupus erythematosus,managed,1,2.0,False
+c49441c0-0e2b-4e5b-b9ba-2d0477d92b88,3044f2b9-48b5-45ec-ac14-107f0d7372f0,280,1087,systemic lupus erythematosus,managed,1,2.0,False
+c49441c0-0e2b-4e5b-b9ba-2d0477d92b88,665a3535-8f40-4ae3-9260-cbce7060781f,256,1087,systemic lupus erythematosus,managed,1,2.0,False
+c49441c0-0e2b-4e5b-b9ba-2d0477d92b88,b795713b-ff23-4494-b6a3-1438b2baee3e,232,1087,systemic lupus erythematosus,managed,1,2.0,False
+c4f152fb-04b4-4f5d-b4e6-4a3a93da7881,0103e306-959a-46b0-896d-d8b9dee40157,121,IGTB1974,normal,na,1,1.0,False
+c4f152fb-04b4-4f5d-b4e6-4a3a93da7881,9586e7f4-5c57-452e-bb13-90ceef874118,104,IGTB1974,normal,na,1,1.0,False
+c4f152fb-04b4-4f5d-b4e6-4a3a93da7881,d461010c-38fd-414f-91bd-e1b3e7e2f8fb,104,IGTB1974,normal,na,1,1.0,False
+c4f152fb-04b4-4f5d-b4e6-4a3a93da7881,e7240495-f3e8-42a3-ac5c-4a9a7eebc341,115,IGTB1974,normal,na,1,1.0,False
+c5c840c6-6238-4b37-b165-22016be695d9,0c3a7808-800f-43b1-a57b-08c3b2bb9e5a,96,1281,systemic lupus erythematosus,managed,1,2.0,False
+c5c840c6-6238-4b37-b165-22016be695d9,222b358b-71e7-4b0f-9f9b-47b4c67aaa27,113,1281,systemic lupus erythematosus,managed,1,2.0,False
+c5c840c6-6238-4b37-b165-22016be695d9,2dbf699a-f6cd-446d-8dc4-0595319cfa99,77,1281,systemic lupus erythematosus,managed,1,2.0,False
+c5c840c6-6238-4b37-b165-22016be695d9,39564abe-76f3-4a33-9f10-f574069834bc,85,1281,systemic lupus erythematosus,managed,1,2.0,False
+c5c840c6-6238-4b37-b165-22016be695d9,585af22b-b80b-4a1d-8cc8-17d65b2639e1,113,1281,systemic lupus erythematosus,managed,1,2.0,False
+c5c840c6-6238-4b37-b165-22016be695d9,78c34b8c-196b-4a31-b700-08882bfaf4ab,119,1281,systemic lupus erythematosus,managed,1,2.0,False
+c5c840c6-6238-4b37-b165-22016be695d9,cdf51e52-a49a-474f-a6ba-da5a14137d09,94,1281,systemic lupus erythematosus,managed,1,2.0,False
+c5c840c6-6238-4b37-b165-22016be695d9,d8a37460-32f2-4b61-b1d2-1f7f0ba92779,109,1281,systemic lupus erythematosus,managed,1,2.0,False
+c62b2de1-6778-400f-86f6-b5c5ed0516b2,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,84,FLARE020,systemic lupus erythematosus,flare,1,3.0,False
+c62b2de1-6778-400f-86f6-b5c5ed0516b2,7a2abe44-abb7-4648-bb14-224625a6da0b,97,FLARE020,systemic lupus erythematosus,flare,1,3.0,False
+c62b2de1-6778-400f-86f6-b5c5ed0516b2,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,88,FLARE020,systemic lupus erythematosus,flare,1,3.0,False
+c62b2de1-6778-400f-86f6-b5c5ed0516b2,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,76,FLARE020,systemic lupus erythematosus,flare,1,3.0,False
+c789d30c-0578-48dc-967f-dad52600ab54,8321fef1-a067-4a62-a461-37e1f1b4f868,16,1216,systemic lupus erythematosus,managed,1,2.0,False
+c789d30c-0578-48dc-967f-dad52600ab54,8627b3d4-c529-45b3-bf1e-0313791be91d,15,1216,systemic lupus erythematosus,managed,1,2.0,False
+c789d30c-0578-48dc-967f-dad52600ab54,cfb525cf-987b-42c8-afca-8dd18f45b32d,18,1216,systemic lupus erythematosus,managed,1,2.0,False
+c789d30c-0578-48dc-967f-dad52600ab54,d49aa545-2b96-409c-85e8-2bf8706475fb,16,1216,systemic lupus erythematosus,managed,1,2.0,False
+c896fdae-1a67-4c5e-b3f8-f4671744e35f,3639058a-5dc3-49ad-82ff-cec405483912,139,IGTB1952,normal,na,1,1.0,False
+c896fdae-1a67-4c5e-b3f8-f4671744e35f,56b848af-d12b-4f9c-b605-947e296caa46,132,IGTB1952,normal,na,1,1.0,False
+c896fdae-1a67-4c5e-b3f8-f4671744e35f,8950207b-4940-4ef9-ad01-0ad0dace6f27,136,IGTB1952,normal,na,1,1.0,False
+c896fdae-1a67-4c5e-b3f8-f4671744e35f,b993ef60-52c8-41e2-83a2-bb44f1fb916f,117,IGTB1952,normal,na,1,1.0,False
+c8f4f3f5-e4ee-400f-b888-07d3508df6b5,39093cbf-e0a9-480d-ab0b-e9e4cf95a9f8,92,1452,systemic lupus erythematosus,managed,1,4.0,False
+c8f4f3f5-e4ee-400f-b888-07d3508df6b5,64f6fec6-18a3-4563-b731-189faf6423f2,112,1452,systemic lupus erythematosus,managed,1,4.0,False
+c8f4f3f5-e4ee-400f-b888-07d3508df6b5,6fd714df-b88d-43a6-8f75-3d300278329d,121,1452,systemic lupus erythematosus,managed,1,4.0,False
+c8f4f3f5-e4ee-400f-b888-07d3508df6b5,c2641f62-eb23-4dad-9c22-b52e72b79df2,98,1452,systemic lupus erythematosus,managed,1,4.0,False
+c926e690-4979-4c3f-b43e-2f66daa0c426,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,30,2132,systemic lupus erythematosus,flare,1,3.0,False
+c926e690-4979-4c3f-b43e-2f66daa0c426,7a2abe44-abb7-4648-bb14-224625a6da0b,27,2132,systemic lupus erythematosus,flare,1,3.0,False
+c926e690-4979-4c3f-b43e-2f66daa0c426,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,38,2132,systemic lupus erythematosus,flare,1,3.0,False
+c926e690-4979-4c3f-b43e-2f66daa0c426,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,29,2132,systemic lupus erythematosus,flare,1,3.0,False
+cb7c157f-9b39-46a5-8de9-15e26c5fa068,2dbf699a-f6cd-446d-8dc4-0595319cfa99,44,1337,systemic lupus erythematosus,managed,1,2.0,False
+cb7c157f-9b39-46a5-8de9-15e26c5fa068,39564abe-76f3-4a33-9f10-f574069834bc,41,1337,systemic lupus erythematosus,managed,1,2.0,False
+cb7c157f-9b39-46a5-8de9-15e26c5fa068,78c34b8c-196b-4a31-b700-08882bfaf4ab,48,1337,systemic lupus erythematosus,managed,1,2.0,False
+cb7c157f-9b39-46a5-8de9-15e26c5fa068,cdf51e52-a49a-474f-a6ba-da5a14137d09,38,1337,systemic lupus erythematosus,managed,1,2.0,False
+cb8f712a-5fad-4d3c-98ad-dc8307afd120,4e57f7cc-1df2-467f-8bfe-cb19af5d7350,80,1763,systemic lupus erythematosus,treated,1,3.0,False
+cb8f712a-5fad-4d3c-98ad-dc8307afd120,ddb0a996-79fe-4eac-8760-76ee74c7c333,80,1763,systemic lupus erythematosus,treated,1,3.0,False
+ccccc606-2c86-4d7a-bb4a-8354017807a6,048cb921-e15f-47a6-a9e3-ed512574e5d7,172,1667,systemic lupus erythematosus,managed,1,2.0,False
+ccccc606-2c86-4d7a-bb4a-8354017807a6,10cec51f-a79f-4907-8745-b45df64f6946,93,1667,systemic lupus erythematosus,managed,1,4.0,False
+ccccc606-2c86-4d7a-bb4a-8354017807a6,32436280-1ea6-4678-bb18-4632fe8c4933,153,1667,systemic lupus erythematosus,managed,1,4.0,False
+ccccc606-2c86-4d7a-bb4a-8354017807a6,90e60bb7-e776-4dff-a8ba-6390acefdbee,119,1667,systemic lupus erythematosus,managed,1,4.0,False
+ccccc606-2c86-4d7a-bb4a-8354017807a6,c64fa002-95f9-4429-b65c-6f55c7f907d4,173,1667,systemic lupus erythematosus,managed,1,2.0,False
+ccccc606-2c86-4d7a-bb4a-8354017807a6,c7f79595-aa68-4139-9a87-094c761cc5ab,198,1667,systemic lupus erythematosus,managed,1,2.0,False
+ccccc606-2c86-4d7a-bb4a-8354017807a6,ca103ed6-7a7e-4450-9546-ac295532bced,110,1667,systemic lupus erythematosus,managed,1,4.0,False
+ccccc606-2c86-4d7a-bb4a-8354017807a6,d641571e-6406-4309-ae61-acc6f2e0a50d,153,1667,systemic lupus erythematosus,managed,1,2.0,False
+cd2dc30f-074c-4881-b328-a35cefdc7c68,1e3165e4-e0c0-4bf7-b803-7d8271b99fd5,90,HC-533,normal,na,1,4.0,False
+cd2dc30f-074c-4881-b328-a35cefdc7c68,60373b7d-7c45-428f-9622-aa4f854c4860,90,HC-533,normal,na,1,4.0,False
+cd2dc30f-074c-4881-b328-a35cefdc7c68,d4d2da4e-6580-479c-b5f6-77b109e72715,93,HC-533,normal,na,1,4.0,False
+cd2dc30f-074c-4881-b328-a35cefdc7c68,fb1e97d1-dd9c-4314-aae2-9c3745df1411,77,HC-533,normal,na,1,4.0,False
+cdee1325-af49-45b8-856c-ec273c155411,0be87f87-d01a-495e-9605-d89d36240908,87,1051,systemic lupus erythematosus,managed,1,2.0,False
+cdee1325-af49-45b8-856c-ec273c155411,54530f14-aadf-4c2a-8f92-9c22a69cc022,93,1051,systemic lupus erythematosus,managed,1,2.0,False
+cdee1325-af49-45b8-856c-ec273c155411,dac92812-557b-4abd-8fb0-4f823ae8ff59,108,1051,systemic lupus erythematosus,managed,1,2.0,False
+cdee1325-af49-45b8-856c-ec273c155411,e3629615-6d5c-4167-808f-996d53989dbf,103,1051,systemic lupus erythematosus,managed,1,2.0,False
+cee05776-3518-495c-aac9-42e5b6eea2a8,152e2bfd-e9ea-4d70-a999-6f37fb3fb96c,92,FLARE001,systemic lupus erythematosus,flare,1,3.0,False
+cee05776-3518-495c-aac9-42e5b6eea2a8,30bbf8d6-bd6a-4b4f-8d3e-a54bf78f79d5,116,FLARE001,systemic lupus erythematosus,flare,1,3.0,False
+cee05776-3518-495c-aac9-42e5b6eea2a8,b816335c-8d84-4ecc-aa3e-2dea51795320,110,FLARE001,systemic lupus erythematosus,flare,1,3.0,False
+cee05776-3518-495c-aac9-42e5b6eea2a8,df159c28-05fb-4f35-83b8-8c14af793f2a,120,FLARE001,systemic lupus erythematosus,flare,1,3.0,False
+cf0f9104-fd3e-4cdd-ad08-69035510a32d,28401515-eca4-442a-85fc-f8c2793b1c26,48,IGTB1575,normal,na,1,2.0,False
+cf0f9104-fd3e-4cdd-ad08-69035510a32d,9184b09f-ca66-4623-a733-1f64bc1b424f,56,IGTB1575,normal,na,1,2.0,False
+cf0f9104-fd3e-4cdd-ad08-69035510a32d,a5cedd63-caae-415f-b7e4-c7f660fc89c8,83,IGTB1575,normal,na,1,1.0,False
+cf0f9104-fd3e-4cdd-ad08-69035510a32d,cd2306bc-106c-4506-b778-d184713c463a,102,IGTB1575,normal,na,1,1.0,False
+cf0f9104-fd3e-4cdd-ad08-69035510a32d,d9278721-fad6-4eba-a1bb-4a26c0aea206,86,IGTB1575,normal,na,1,1.0,False
+cf0f9104-fd3e-4cdd-ad08-69035510a32d,d9bf3113-086e-4165-ba13-e78a3d7b4138,46,IGTB1575,normal,na,1,2.0,False
+cf0f9104-fd3e-4cdd-ad08-69035510a32d,e16d2c39-bfd1-4fb1-8ed6-ad6b16f3652e,14,IGTB1575,normal,na,1,2.0,False
+cf0f9104-fd3e-4cdd-ad08-69035510a32d,f1568b25-4a87-414f-8329-1a860a3a8aeb,71,IGTB1575,normal,na,1,1.0,False
+d0660ae1-7bd5-4f68-9131-434571c29e96,048cb921-e15f-47a6-a9e3-ed512574e5d7,91,IGTB256,normal,na,1,2.0,False
+d0660ae1-7bd5-4f68-9131-434571c29e96,2236c52d-924b-415a-aae0-00fa08d12d1f,90,IGTB256,normal,na,1,2.0,False
+d0660ae1-7bd5-4f68-9131-434571c29e96,4e57f7cc-1df2-467f-8bfe-cb19af5d7350,296,IGTB256,normal,na,1,3.0,False
+d0660ae1-7bd5-4f68-9131-434571c29e96,894c6ccb-cb7a-4ea1-b032-b1d93b25247d,95,IGTB256,normal,na,1,2.0,False
+d0660ae1-7bd5-4f68-9131-434571c29e96,9850fb76-4155-4910-881f-b5d33ee0835c,91,IGTB256,normal,na,1,2.0,False
+d0660ae1-7bd5-4f68-9131-434571c29e96,c64fa002-95f9-4429-b65c-6f55c7f907d4,95,IGTB256,normal,na,1,2.0,False
+d0660ae1-7bd5-4f68-9131-434571c29e96,c7f79595-aa68-4139-9a87-094c761cc5ab,103,IGTB256,normal,na,1,2.0,False
+d0660ae1-7bd5-4f68-9131-434571c29e96,d641571e-6406-4309-ae61-acc6f2e0a50d,84,IGTB256,normal,na,1,2.0,False
+d0660ae1-7bd5-4f68-9131-434571c29e96,ddb0a996-79fe-4eac-8760-76ee74c7c333,300,IGTB256,normal,na,1,3.0,False
+d0660ae1-7bd5-4f68-9131-434571c29e96,f2380b81-e46f-430b-8fd2-e3897ddf7be9,108,IGTB256,normal,na,1,2.0,False
+d0bbdc84-7f92-4114-9759-59d158034879,1495b93b-a19f-4364-95a3-6d8ac531eac6,54,1545,systemic lupus erythematosus,managed,1,4.0,False
+d0bbdc84-7f92-4114-9759-59d158034879,15024b21-fb68-4bbe-92cf-0c9ab90f11a6,48,1545,systemic lupus erythematosus,managed,1,2.0,False
+d0bbdc84-7f92-4114-9759-59d158034879,3332f018-936e-4c4c-9105-99d9503db5a3,47,1545,systemic lupus erythematosus,managed,1,4.0,False
+d0bbdc84-7f92-4114-9759-59d158034879,683bd537-4ff4-4741-afe5-be328f499d4b,34,1545,systemic lupus erythematosus,managed,1,2.0,False
+d0bbdc84-7f92-4114-9759-59d158034879,68492085-4a2b-4551-9b12-75062c694069,60,1545,systemic lupus erythematosus,managed,1,2.0,False
+d0bbdc84-7f92-4114-9759-59d158034879,70a004b7-4a17-4702-8910-4557aa0c4279,53,1545,systemic lupus erythematosus,managed,1,4.0,False
+d0bbdc84-7f92-4114-9759-59d158034879,bdc30514-427c-403e-a0ee-61e7d04e407e,66,1545,systemic lupus erythematosus,managed,1,2.0,False
+d0bbdc84-7f92-4114-9759-59d158034879,cdab3145-edc9-4352-932c-1638e791bfc9,60,1545,systemic lupus erythematosus,managed,1,4.0,False
+d1272c4d-f68a-4d3d-bae3-715e337bd80b,0955850b-157b-4396-a3da-83b8bcbed172,57,1333,systemic lupus erythematosus,managed,1,4.0,False
+d1272c4d-f68a-4d3d-bae3-715e337bd80b,34585dab-86cd-40a1-9780-83204c304046,78,1333,systemic lupus erythematosus,managed,1,4.0,False
+d1272c4d-f68a-4d3d-bae3-715e337bd80b,ddae4c77-2b07-4e3e-97f1-84a37cf04321,76,1333,systemic lupus erythematosus,managed,1,4.0,False
+d1272c4d-f68a-4d3d-bae3-715e337bd80b,ecd9109f-7197-46df-b3a8-1ac2d9990185,77,1333,systemic lupus erythematosus,managed,1,4.0,False
+d2ec9dd4-2fbf-4dea-a274-4fd13d7395b8,1495b93b-a19f-4364-95a3-6d8ac531eac6,58,ICC_control,normal,na,1,4.0,False
+d2ec9dd4-2fbf-4dea-a274-4fd13d7395b8,3332f018-936e-4c4c-9105-99d9503db5a3,57,ICC_control,normal,na,1,4.0,False
+d2ec9dd4-2fbf-4dea-a274-4fd13d7395b8,70a004b7-4a17-4702-8910-4557aa0c4279,66,ICC_control,normal,na,1,4.0,False
+d2ec9dd4-2fbf-4dea-a274-4fd13d7395b8,cdab3145-edc9-4352-932c-1638e791bfc9,70,ICC_control,normal,na,1,4.0,False
+d3aef314-d83b-4ce7-ac01-5ab74ea0fa4f,0103e306-959a-46b0-896d-d8b9dee40157,245,IGTB1814,normal,na,1,1.0,False
+d3aef314-d83b-4ce7-ac01-5ab74ea0fa4f,9586e7f4-5c57-452e-bb13-90ceef874118,239,IGTB1814,normal,na,1,1.0,False
+d3aef314-d83b-4ce7-ac01-5ab74ea0fa4f,d461010c-38fd-414f-91bd-e1b3e7e2f8fb,204,IGTB1814,normal,na,1,1.0,False
+d3aef314-d83b-4ce7-ac01-5ab74ea0fa4f,e7240495-f3e8-42a3-ac5c-4a9a7eebc341,244,IGTB1814,normal,na,1,1.0,False
+d4486df4-6cee-4ff7-924a-98546d076135,0be87f87-d01a-495e-9605-d89d36240908,177,1054,systemic lupus erythematosus,managed,1,2.0,False
+d4486df4-6cee-4ff7-924a-98546d076135,54530f14-aadf-4c2a-8f92-9c22a69cc022,136,1054,systemic lupus erythematosus,managed,1,2.0,False
+d4486df4-6cee-4ff7-924a-98546d076135,dac92812-557b-4abd-8fb0-4f823ae8ff59,146,1054,systemic lupus erythematosus,managed,1,2.0,False
+d4486df4-6cee-4ff7-924a-98546d076135,e3629615-6d5c-4167-808f-996d53989dbf,164,1054,systemic lupus erythematosus,managed,1,2.0,False
+d6532240-c625-4943-a0e7-cba6977ba428,0c7c125d-46d6-40ba-8088-31fb2b526a78,28,1329,systemic lupus erythematosus,managed,1,2.0,False
+d6532240-c625-4943-a0e7-cba6977ba428,272dbb99-7929-46e2-8446-a19c21af05da,48,1329,systemic lupus erythematosus,managed,1,2.0,False
+d6532240-c625-4943-a0e7-cba6977ba428,6ab35eea-1bae-4ee8-8e5f-5f1505715ac3,47,1329,systemic lupus erythematosus,managed,1,2.0,False
+d6532240-c625-4943-a0e7-cba6977ba428,fc140c51-9b4f-427f-8e11-640bc7400007,38,1329,systemic lupus erythematosus,managed,1,2.0,False
+d65c2394-3eed-48b8-8a26-5f214003f312,0103e306-959a-46b0-896d-d8b9dee40157,88,IGTB1921,normal,na,1,1.0,False
+d65c2394-3eed-48b8-8a26-5f214003f312,2236c52d-924b-415a-aae0-00fa08d12d1f,51,IGTB1921,normal,na,1,2.0,False
+d65c2394-3eed-48b8-8a26-5f214003f312,4e57f7cc-1df2-467f-8bfe-cb19af5d7350,114,IGTB1921,normal,na,1,3.0,False
+d65c2394-3eed-48b8-8a26-5f214003f312,894c6ccb-cb7a-4ea1-b032-b1d93b25247d,43,IGTB1921,normal,na,1,2.0,False
+d65c2394-3eed-48b8-8a26-5f214003f312,9586e7f4-5c57-452e-bb13-90ceef874118,99,IGTB1921,normal,na,1,1.0,False
+d65c2394-3eed-48b8-8a26-5f214003f312,9850fb76-4155-4910-881f-b5d33ee0835c,61,IGTB1921,normal,na,1,2.0,False
+d65c2394-3eed-48b8-8a26-5f214003f312,d461010c-38fd-414f-91bd-e1b3e7e2f8fb,74,IGTB1921,normal,na,1,1.0,False
+d65c2394-3eed-48b8-8a26-5f214003f312,ddb0a996-79fe-4eac-8760-76ee74c7c333,120,IGTB1921,normal,na,1,3.0,False
+d65c2394-3eed-48b8-8a26-5f214003f312,e7240495-f3e8-42a3-ac5c-4a9a7eebc341,99,IGTB1921,normal,na,1,1.0,False
+d65c2394-3eed-48b8-8a26-5f214003f312,f2380b81-e46f-430b-8fd2-e3897ddf7be9,58,IGTB1921,normal,na,1,2.0,False
+d8d48d6c-7e19-4820-86e8-9174e400abbc,8321fef1-a067-4a62-a461-37e1f1b4f868,13,1250,systemic lupus erythematosus,managed,1,2.0,False
+d8d48d6c-7e19-4820-86e8-9174e400abbc,8627b3d4-c529-45b3-bf1e-0313791be91d,9,1250,systemic lupus erythematosus,managed,1,2.0,False
+d8d48d6c-7e19-4820-86e8-9174e400abbc,cfb525cf-987b-42c8-afca-8dd18f45b32d,14,1250,systemic lupus erythematosus,managed,1,2.0,False
+d8d48d6c-7e19-4820-86e8-9174e400abbc,d49aa545-2b96-409c-85e8-2bf8706475fb,10,1250,systemic lupus erythematosus,managed,1,2.0,False
+d9a71914-5a04-4393-9d41-c5f82cf2bd40,8321fef1-a067-4a62-a461-37e1f1b4f868,49,1221,systemic lupus erythematosus,managed,1,2.0,False
+d9a71914-5a04-4393-9d41-c5f82cf2bd40,8627b3d4-c529-45b3-bf1e-0313791be91d,37,1221,systemic lupus erythematosus,managed,1,2.0,False
+d9a71914-5a04-4393-9d41-c5f82cf2bd40,cfb525cf-987b-42c8-afca-8dd18f45b32d,46,1221,systemic lupus erythematosus,managed,1,2.0,False
+d9a71914-5a04-4393-9d41-c5f82cf2bd40,d49aa545-2b96-409c-85e8-2bf8706475fb,45,1221,systemic lupus erythematosus,managed,1,2.0,False
+d9afaa54-38e3-48a7-b173-e59346f87a06,0955850b-157b-4396-a3da-83b8bcbed172,63,HC-543,normal,na,1,4.0,False
+d9afaa54-38e3-48a7-b173-e59346f87a06,34585dab-86cd-40a1-9780-83204c304046,63,HC-543,normal,na,1,4.0,False
+d9afaa54-38e3-48a7-b173-e59346f87a06,ddae4c77-2b07-4e3e-97f1-84a37cf04321,45,HC-543,normal,na,1,4.0,False
+d9afaa54-38e3-48a7-b173-e59346f87a06,ecd9109f-7197-46df-b3a8-1ac2d9990185,58,HC-543,normal,na,1,4.0,False
+d9c476a6-93ff-4e35-bbe2-7a0ae0e32e87,8321fef1-a067-4a62-a461-37e1f1b4f868,76,1193,systemic lupus erythematosus,managed,1,2.0,False
+d9c476a6-93ff-4e35-bbe2-7a0ae0e32e87,8627b3d4-c529-45b3-bf1e-0313791be91d,69,1193,systemic lupus erythematosus,managed,1,2.0,False
+d9c476a6-93ff-4e35-bbe2-7a0ae0e32e87,cfb525cf-987b-42c8-afca-8dd18f45b32d,53,1193,systemic lupus erythematosus,managed,1,2.0,False
+d9c476a6-93ff-4e35-bbe2-7a0ae0e32e87,d49aa545-2b96-409c-85e8-2bf8706475fb,78,1193,systemic lupus erythematosus,managed,1,2.0,False
+d9e6e520-cf0c-45d6-ac51-fb3b7c5f0e99,152e2bfd-e9ea-4d70-a999-6f37fb3fb96c,7,FLARE010,systemic lupus erythematosus,treated,1,3.0,False
+d9e6e520-cf0c-45d6-ac51-fb3b7c5f0e99,30bbf8d6-bd6a-4b4f-8d3e-a54bf78f79d5,4,FLARE010,systemic lupus erythematosus,treated,1,3.0,False
+d9e6e520-cf0c-45d6-ac51-fb3b7c5f0e99,b816335c-8d84-4ecc-aa3e-2dea51795320,6,FLARE010,systemic lupus erythematosus,treated,1,3.0,False
+d9e6e520-cf0c-45d6-ac51-fb3b7c5f0e99,df159c28-05fb-4f35-83b8-8c14af793f2a,5,FLARE010,systemic lupus erythematosus,treated,1,3.0,False
+da8367c2-e07a-46e1-b4ff-d41fca972cbc,0c3a7808-800f-43b1-a57b-08c3b2bb9e5a,71,1726,systemic lupus erythematosus,managed,1,2.0,False
+da8367c2-e07a-46e1-b4ff-d41fca972cbc,222b358b-71e7-4b0f-9f9b-47b4c67aaa27,62,1726,systemic lupus erythematosus,managed,1,2.0,False
+da8367c2-e07a-46e1-b4ff-d41fca972cbc,585af22b-b80b-4a1d-8cc8-17d65b2639e1,81,1726,systemic lupus erythematosus,managed,1,2.0,False
+da8367c2-e07a-46e1-b4ff-d41fca972cbc,d8a37460-32f2-4b61-b1d2-1f7f0ba92779,82,1726,systemic lupus erythematosus,managed,1,2.0,False
+dfb86424-acd3-41a0-8656-97d24996fef4,15024b21-fb68-4bbe-92cf-0c9ab90f11a6,24,1543,systemic lupus erythematosus,managed,1,2.0,False
+dfb86424-acd3-41a0-8656-97d24996fef4,683bd537-4ff4-4741-afe5-be328f499d4b,22,1543,systemic lupus erythematosus,managed,1,2.0,False
+dfb86424-acd3-41a0-8656-97d24996fef4,68492085-4a2b-4551-9b12-75062c694069,34,1543,systemic lupus erythematosus,managed,1,2.0,False
+dfb86424-acd3-41a0-8656-97d24996fef4,bdc30514-427c-403e-a0ee-61e7d04e407e,27,1543,systemic lupus erythematosus,managed,1,2.0,False
+e0286325-9289-4765-af44-1bded6b1d3df,0103e306-959a-46b0-896d-d8b9dee40157,124,IGTB986,normal,na,1,1.0,False
+e0286325-9289-4765-af44-1bded6b1d3df,0c7c125d-46d6-40ba-8088-31fb2b526a78,62,IGTB986,normal,na,1,2.0,False
+e0286325-9289-4765-af44-1bded6b1d3df,272dbb99-7929-46e2-8446-a19c21af05da,67,IGTB986,normal,na,1,2.0,False
+e0286325-9289-4765-af44-1bded6b1d3df,2dbf699a-f6cd-446d-8dc4-0595319cfa99,60,IGTB986,normal,na,1,2.0,False
+e0286325-9289-4765-af44-1bded6b1d3df,39564abe-76f3-4a33-9f10-f574069834bc,66,IGTB986,normal,na,1,2.0,False
+e0286325-9289-4765-af44-1bded6b1d3df,6ab35eea-1bae-4ee8-8e5f-5f1505715ac3,94,IGTB986,normal,na,1,2.0,False
+e0286325-9289-4765-af44-1bded6b1d3df,78c34b8c-196b-4a31-b700-08882bfaf4ab,84,IGTB986,normal,na,1,2.0,False
+e0286325-9289-4765-af44-1bded6b1d3df,9586e7f4-5c57-452e-bb13-90ceef874118,118,IGTB986,normal,na,1,1.0,False
+e0286325-9289-4765-af44-1bded6b1d3df,cdf51e52-a49a-474f-a6ba-da5a14137d09,80,IGTB986,normal,na,1,2.0,False
+e0286325-9289-4765-af44-1bded6b1d3df,d461010c-38fd-414f-91bd-e1b3e7e2f8fb,105,IGTB986,normal,na,1,1.0,False
+e0286325-9289-4765-af44-1bded6b1d3df,e7240495-f3e8-42a3-ac5c-4a9a7eebc341,122,IGTB986,normal,na,1,1.0,False
+e0286325-9289-4765-af44-1bded6b1d3df,fc140c51-9b4f-427f-8e11-640bc7400007,72,IGTB986,normal,na,1,2.0,False
+e0d91e74-9836-43b7-b866-383398b2df70,3639058a-5dc3-49ad-82ff-cec405483912,212,IGTB1789,normal,na,1,1.0,False
+e0d91e74-9836-43b7-b866-383398b2df70,56b848af-d12b-4f9c-b605-947e296caa46,204,IGTB1789,normal,na,1,1.0,False
+e0d91e74-9836-43b7-b866-383398b2df70,8950207b-4940-4ef9-ad01-0ad0dace6f27,225,IGTB1789,normal,na,1,1.0,False
+e0d91e74-9836-43b7-b866-383398b2df70,b993ef60-52c8-41e2-83a2-bb44f1fb916f,193,IGTB1789,normal,na,1,1.0,False
+e0dba578-aa9e-44ef-b920-ef67ef41f01c,2dbf699a-f6cd-446d-8dc4-0595319cfa99,82,1297,systemic lupus erythematosus,managed,1,2.0,False
+e0dba578-aa9e-44ef-b920-ef67ef41f01c,39564abe-76f3-4a33-9f10-f574069834bc,96,1297,systemic lupus erythematosus,managed,1,2.0,False
+e0dba578-aa9e-44ef-b920-ef67ef41f01c,78c34b8c-196b-4a31-b700-08882bfaf4ab,147,1297,systemic lupus erythematosus,managed,1,2.0,False
+e0dba578-aa9e-44ef-b920-ef67ef41f01c,cdf51e52-a49a-474f-a6ba-da5a14137d09,116,1297,systemic lupus erythematosus,managed,1,2.0,False
+e140192f-3e5b-43bc-9ae0-36a28564a0b5,0c3a7808-800f-43b1-a57b-08c3b2bb9e5a,109,1472,systemic lupus erythematosus,managed,1,2.0,False
+e140192f-3e5b-43bc-9ae0-36a28564a0b5,222b358b-71e7-4b0f-9f9b-47b4c67aaa27,118,1472,systemic lupus erythematosus,managed,1,2.0,False
+e140192f-3e5b-43bc-9ae0-36a28564a0b5,585af22b-b80b-4a1d-8cc8-17d65b2639e1,122,1472,systemic lupus erythematosus,managed,1,2.0,False
+e140192f-3e5b-43bc-9ae0-36a28564a0b5,d8a37460-32f2-4b61-b1d2-1f7f0ba92779,125,1472,systemic lupus erythematosus,managed,1,2.0,False
+e2078f37-b612-476a-aa96-5f836cd94254,048cb921-e15f-47a6-a9e3-ed512574e5d7,39,1633,systemic lupus erythematosus,managed,1,2.0,False
+e2078f37-b612-476a-aa96-5f836cd94254,c64fa002-95f9-4429-b65c-6f55c7f907d4,43,1633,systemic lupus erythematosus,managed,1,2.0,False
+e2078f37-b612-476a-aa96-5f836cd94254,c7f79595-aa68-4139-9a87-094c761cc5ab,47,1633,systemic lupus erythematosus,managed,1,2.0,False
+e2078f37-b612-476a-aa96-5f836cd94254,d641571e-6406-4309-ae61-acc6f2e0a50d,31,1633,systemic lupus erythematosus,managed,1,2.0,False
+e237fb4b-e3eb-4365-b625-8e31534d7508,0103e306-959a-46b0-896d-d8b9dee40157,85,IGTB1768,normal,na,1,1.0,False
+e237fb4b-e3eb-4365-b625-8e31534d7508,9586e7f4-5c57-452e-bb13-90ceef874118,92,IGTB1768,normal,na,1,1.0,False
+e237fb4b-e3eb-4365-b625-8e31534d7508,d461010c-38fd-414f-91bd-e1b3e7e2f8fb,91,IGTB1768,normal,na,1,1.0,False
+e237fb4b-e3eb-4365-b625-8e31534d7508,e7240495-f3e8-42a3-ac5c-4a9a7eebc341,87,IGTB1768,normal,na,1,1.0,False
+e3ec6618-f5b9-42e2-846d-413e04f04308,39093cbf-e0a9-480d-ab0b-e9e4cf95a9f8,72,1881,systemic lupus erythematosus,managed,1,4.0,False
+e3ec6618-f5b9-42e2-846d-413e04f04308,64f6fec6-18a3-4563-b731-189faf6423f2,66,1881,systemic lupus erythematosus,managed,1,4.0,False
+e3ec6618-f5b9-42e2-846d-413e04f04308,6fd714df-b88d-43a6-8f75-3d300278329d,77,1881,systemic lupus erythematosus,managed,1,4.0,False
+e3ec6618-f5b9-42e2-846d-413e04f04308,c2641f62-eb23-4dad-9c22-b52e72b79df2,62,1881,systemic lupus erythematosus,managed,1,4.0,False
+e45ecf7e-1906-4d51-b79d-fec6aef8a844,1556abac-8f1a-404a-8a2f-402ac562143c,179,1130,systemic lupus erythematosus,managed,1,2.0,False
+e45ecf7e-1906-4d51-b79d-fec6aef8a844,3044f2b9-48b5-45ec-ac14-107f0d7372f0,168,1130,systemic lupus erythematosus,managed,1,2.0,False
+e45ecf7e-1906-4d51-b79d-fec6aef8a844,665a3535-8f40-4ae3-9260-cbce7060781f,187,1130,systemic lupus erythematosus,managed,1,2.0,False
+e45ecf7e-1906-4d51-b79d-fec6aef8a844,b795713b-ff23-4494-b6a3-1438b2baee3e,163,1130,systemic lupus erythematosus,managed,1,2.0,False
+e570dc6e-cb7c-4143-af57-699407e46480,1e3165e4-e0c0-4bf7-b803-7d8271b99fd5,246,1857,systemic lupus erythematosus,managed,1,4.0,False
+e570dc6e-cb7c-4143-af57-699407e46480,60373b7d-7c45-428f-9622-aa4f854c4860,273,1857,systemic lupus erythematosus,managed,1,4.0,False
+e570dc6e-cb7c-4143-af57-699407e46480,d4d2da4e-6580-479c-b5f6-77b109e72715,242,1857,systemic lupus erythematosus,managed,1,4.0,False
+e570dc6e-cb7c-4143-af57-699407e46480,fb1e97d1-dd9c-4314-aae2-9c3745df1411,294,1857,systemic lupus erythematosus,managed,1,4.0,False
+e6200840-e5b5-4bef-b341-f0f3e7425f5f,0955850b-157b-4396-a3da-83b8bcbed172,103,HC-545,normal,na,1,4.0,False
+e6200840-e5b5-4bef-b341-f0f3e7425f5f,34585dab-86cd-40a1-9780-83204c304046,92,HC-545,normal,na,1,4.0,False
+e6200840-e5b5-4bef-b341-f0f3e7425f5f,ddae4c77-2b07-4e3e-97f1-84a37cf04321,105,HC-545,normal,na,1,4.0,False
+e6200840-e5b5-4bef-b341-f0f3e7425f5f,ecd9109f-7197-46df-b3a8-1ac2d9990185,90,HC-545,normal,na,1,4.0,False
+e7fbd289-5415-44bc-9ebc-a4266773c298,152e2bfd-e9ea-4d70-a999-6f37fb3fb96c,1,FLARE013,systemic lupus erythematosus,treated,1,3.0,False
+e7fbd289-5415-44bc-9ebc-a4266773c298,b816335c-8d84-4ecc-aa3e-2dea51795320,1,FLARE013,systemic lupus erythematosus,treated,1,3.0,False
+e7fbd289-5415-44bc-9ebc-a4266773c298,df159c28-05fb-4f35-83b8-8c14af793f2a,2,FLARE013,systemic lupus erythematosus,treated,1,3.0,False
+e8295a2a-ebac-417e-858e-52cd294dd906,0103e306-959a-46b0-896d-d8b9dee40157,115,IGTB1987,normal,na,1,1.0,False
+e8295a2a-ebac-417e-858e-52cd294dd906,9586e7f4-5c57-452e-bb13-90ceef874118,109,IGTB1987,normal,na,1,1.0,False
+e8295a2a-ebac-417e-858e-52cd294dd906,d461010c-38fd-414f-91bd-e1b3e7e2f8fb,92,IGTB1987,normal,na,1,1.0,False
+e8295a2a-ebac-417e-858e-52cd294dd906,e7240495-f3e8-42a3-ac5c-4a9a7eebc341,111,IGTB1987,normal,na,1,1.0,False
+e869b441-83d5-44d3-abc7-1a970170e1e4,15024b21-fb68-4bbe-92cf-0c9ab90f11a6,116,1596,systemic lupus erythematosus,managed,1,2.0,False
+e869b441-83d5-44d3-abc7-1a970170e1e4,39093cbf-e0a9-480d-ab0b-e9e4cf95a9f8,108,1596,systemic lupus erythematosus,managed,1,4.0,False
+e869b441-83d5-44d3-abc7-1a970170e1e4,64f6fec6-18a3-4563-b731-189faf6423f2,109,1596,systemic lupus erythematosus,managed,1,4.0,False
+e869b441-83d5-44d3-abc7-1a970170e1e4,683bd537-4ff4-4741-afe5-be328f499d4b,109,1596,systemic lupus erythematosus,managed,1,2.0,False
+e869b441-83d5-44d3-abc7-1a970170e1e4,68492085-4a2b-4551-9b12-75062c694069,112,1596,systemic lupus erythematosus,managed,1,2.0,False
+e869b441-83d5-44d3-abc7-1a970170e1e4,6fd714df-b88d-43a6-8f75-3d300278329d,117,1596,systemic lupus erythematosus,managed,1,4.0,False
+e869b441-83d5-44d3-abc7-1a970170e1e4,bdc30514-427c-403e-a0ee-61e7d04e407e,107,1596,systemic lupus erythematosus,managed,1,2.0,False
+e869b441-83d5-44d3-abc7-1a970170e1e4,c2641f62-eb23-4dad-9c22-b52e72b79df2,104,1596,systemic lupus erythematosus,managed,1,4.0,False
+e93a00ac-77ef-4890-81e0-43382903cb0c,39093cbf-e0a9-480d-ab0b-e9e4cf95a9f8,39,HC-508,normal,na,1,4.0,False
+e93a00ac-77ef-4890-81e0-43382903cb0c,64f6fec6-18a3-4563-b731-189faf6423f2,44,HC-508,normal,na,1,4.0,False
+e93a00ac-77ef-4890-81e0-43382903cb0c,6fd714df-b88d-43a6-8f75-3d300278329d,41,HC-508,normal,na,1,4.0,False
+e93a00ac-77ef-4890-81e0-43382903cb0c,c2641f62-eb23-4dad-9c22-b52e72b79df2,39,HC-508,normal,na,1,4.0,False
+e9cf8f89-d60a-4584-951b-ae7df22cf6d7,2236c52d-924b-415a-aae0-00fa08d12d1f,22,1771,systemic lupus erythematosus,managed,1,2.0,False
+e9cf8f89-d60a-4584-951b-ae7df22cf6d7,3c722d55-1664-4996-8228-63504e862676,55,1771,systemic lupus erythematosus,managed,1,3.0,False
+e9cf8f89-d60a-4584-951b-ae7df22cf6d7,894c6ccb-cb7a-4ea1-b032-b1d93b25247d,20,1771,systemic lupus erythematosus,managed,1,2.0,False
+e9cf8f89-d60a-4584-951b-ae7df22cf6d7,9850fb76-4155-4910-881f-b5d33ee0835c,22,1771,systemic lupus erythematosus,managed,1,2.0,False
+e9cf8f89-d60a-4584-951b-ae7df22cf6d7,e9ebbe1e-ce77-4c97-a04e-4a64befe98c8,54,1771,systemic lupus erythematosus,managed,1,3.0,False
+e9cf8f89-d60a-4584-951b-ae7df22cf6d7,f2380b81-e46f-430b-8fd2-e3897ddf7be9,29,1771,systemic lupus erythematosus,managed,1,2.0,False
+ea4cbf47-9a3f-443a-821c-c33a2b7eb1b0,1e3165e4-e0c0-4bf7-b803-7d8271b99fd5,48,2135,systemic lupus erythematosus,managed,1,4.0,False
+ea4cbf47-9a3f-443a-821c-c33a2b7eb1b0,60373b7d-7c45-428f-9622-aa4f854c4860,44,2135,systemic lupus erythematosus,managed,1,4.0,False
+ea4cbf47-9a3f-443a-821c-c33a2b7eb1b0,d4d2da4e-6580-479c-b5f6-77b109e72715,41,2135,systemic lupus erythematosus,managed,1,4.0,False
+ea4cbf47-9a3f-443a-821c-c33a2b7eb1b0,fb1e97d1-dd9c-4314-aae2-9c3745df1411,56,2135,systemic lupus erythematosus,managed,1,4.0,False
+ebb5f4d9-b91c-4a11-b6a9-45e471f03bc3,152e2bfd-e9ea-4d70-a999-6f37fb3fb96c,161,FLARE009,systemic lupus erythematosus,flare,1,3.0,False
+ebb5f4d9-b91c-4a11-b6a9-45e471f03bc3,30bbf8d6-bd6a-4b4f-8d3e-a54bf78f79d5,160,FLARE009,systemic lupus erythematosus,flare,1,3.0,False
+ebb5f4d9-b91c-4a11-b6a9-45e471f03bc3,b816335c-8d84-4ecc-aa3e-2dea51795320,176,FLARE009,systemic lupus erythematosus,flare,1,3.0,False
+ebb5f4d9-b91c-4a11-b6a9-45e471f03bc3,df159c28-05fb-4f35-83b8-8c14af793f2a,152,FLARE009,systemic lupus erythematosus,flare,1,3.0,False
+ef44a56d-cc63-4bf0-a451-59e809f9c5b4,3c722d55-1664-4996-8228-63504e862676,227,1130,systemic lupus erythematosus,flare,1,3.0,False
+ef44a56d-cc63-4bf0-a451-59e809f9c5b4,e9ebbe1e-ce77-4c97-a04e-4a64befe98c8,280,1130,systemic lupus erythematosus,flare,1,3.0,False
+f08a943e-b63d-4b9f-b56b-010859a94367,0955850b-157b-4396-a3da-83b8bcbed172,98,2061,systemic lupus erythematosus,managed,1,4.0,False
+f08a943e-b63d-4b9f-b56b-010859a94367,34585dab-86cd-40a1-9780-83204c304046,88,2061,systemic lupus erythematosus,managed,1,4.0,False
+f08a943e-b63d-4b9f-b56b-010859a94367,ddae4c77-2b07-4e3e-97f1-84a37cf04321,101,2061,systemic lupus erythematosus,managed,1,4.0,False
+f08a943e-b63d-4b9f-b56b-010859a94367,ecd9109f-7197-46df-b3a8-1ac2d9990185,95,2061,systemic lupus erythematosus,managed,1,4.0,False
+f09bc3b1-4818-4240-bf10-415636180b4a,16552c24-ef48-4e1f-aff5-319a1f739299,7,HC-566,normal,na,1,4.0,False
+f09bc3b1-4818-4240-bf10-415636180b4a,43b9b939-e389-4784-b4e0-ee9d12aa7ca1,8,HC-566,normal,na,1,4.0,False
+f09bc3b1-4818-4240-bf10-415636180b4a,91761416-a756-48e5-8768-fd169c7c564c,13,HC-566,normal,na,1,4.0,False
+f09bc3b1-4818-4240-bf10-415636180b4a,d9942805-5a63-4958-b714-7088c0428c65,3,HC-566,normal,na,1,4.0,False
+f0a33a73-192b-4398-b8bc-05eb0c59ae54,152e2bfd-e9ea-4d70-a999-6f37fb3fb96c,96,IGTB195,normal,na,1,3.0,False
+f0a33a73-192b-4398-b8bc-05eb0c59ae54,1556abac-8f1a-404a-8a2f-402ac562143c,53,IGTB195,normal,na,1,2.0,False
+f0a33a73-192b-4398-b8bc-05eb0c59ae54,3044f2b9-48b5-45ec-ac14-107f0d7372f0,52,IGTB195,normal,na,1,2.0,False
+f0a33a73-192b-4398-b8bc-05eb0c59ae54,30bbf8d6-bd6a-4b4f-8d3e-a54bf78f79d5,95,IGTB195,normal,na,1,3.0,False
+f0a33a73-192b-4398-b8bc-05eb0c59ae54,665a3535-8f40-4ae3-9260-cbce7060781f,70,IGTB195,normal,na,1,2.0,False
+f0a33a73-192b-4398-b8bc-05eb0c59ae54,8321fef1-a067-4a62-a461-37e1f1b4f868,45,IGTB195,normal,na,1,2.0,False
+f0a33a73-192b-4398-b8bc-05eb0c59ae54,8627b3d4-c529-45b3-bf1e-0313791be91d,43,IGTB195,normal,na,1,2.0,False
+f0a33a73-192b-4398-b8bc-05eb0c59ae54,a5cedd63-caae-415f-b7e4-c7f660fc89c8,103,IGTB195,normal,na,1,1.0,False
+f0a33a73-192b-4398-b8bc-05eb0c59ae54,b795713b-ff23-4494-b6a3-1438b2baee3e,59,IGTB195,normal,na,1,2.0,False
+f0a33a73-192b-4398-b8bc-05eb0c59ae54,b816335c-8d84-4ecc-aa3e-2dea51795320,117,IGTB195,normal,na,1,3.0,False
+f0a33a73-192b-4398-b8bc-05eb0c59ae54,cd2306bc-106c-4506-b778-d184713c463a,123,IGTB195,normal,na,1,1.0,False
+f0a33a73-192b-4398-b8bc-05eb0c59ae54,cfb525cf-987b-42c8-afca-8dd18f45b32d,56,IGTB195,normal,na,1,2.0,False
+f0a33a73-192b-4398-b8bc-05eb0c59ae54,d49aa545-2b96-409c-85e8-2bf8706475fb,59,IGTB195,normal,na,1,2.0,False
+f0a33a73-192b-4398-b8bc-05eb0c59ae54,d9278721-fad6-4eba-a1bb-4a26c0aea206,83,IGTB195,normal,na,1,1.0,False
+f0a33a73-192b-4398-b8bc-05eb0c59ae54,df159c28-05fb-4f35-83b8-8c14af793f2a,95,IGTB195,normal,na,1,3.0,False
+f0a33a73-192b-4398-b8bc-05eb0c59ae54,f1568b25-4a87-414f-8329-1a860a3a8aeb,125,IGTB195,normal,na,1,1.0,False
+f0f0c7c0-c2dd-4f71-a15d-cc29ad1144b6,3639058a-5dc3-49ad-82ff-cec405483912,188,IGTB1996,normal,na,1,1.0,False
+f0f0c7c0-c2dd-4f71-a15d-cc29ad1144b6,56b848af-d12b-4f9c-b605-947e296caa46,152,IGTB1996,normal,na,1,1.0,False
+f0f0c7c0-c2dd-4f71-a15d-cc29ad1144b6,8950207b-4940-4ef9-ad01-0ad0dace6f27,170,IGTB1996,normal,na,1,1.0,False
+f0f0c7c0-c2dd-4f71-a15d-cc29ad1144b6,b993ef60-52c8-41e2-83a2-bb44f1fb916f,136,IGTB1996,normal,na,1,1.0,False
+f10971cb-edb4-461e-acaa-820d7ab15ef8,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,134,HC-020,normal,na,1,3.0,False
+f10971cb-edb4-461e-acaa-820d7ab15ef8,7a2abe44-abb7-4648-bb14-224625a6da0b,130,HC-020,normal,na,1,3.0,False
+f10971cb-edb4-461e-acaa-820d7ab15ef8,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,144,HC-020,normal,na,1,3.0,False
+f10971cb-edb4-461e-acaa-820d7ab15ef8,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,140,HC-020,normal,na,1,3.0,False
+f1d09f86-4d6a-435f-9b93-5ef0df73bce2,1556abac-8f1a-404a-8a2f-402ac562143c,186,1122,systemic lupus erythematosus,managed,1,2.0,False
+f1d09f86-4d6a-435f-9b93-5ef0df73bce2,3044f2b9-48b5-45ec-ac14-107f0d7372f0,201,1122,systemic lupus erythematosus,managed,1,2.0,False
+f1d09f86-4d6a-435f-9b93-5ef0df73bce2,665a3535-8f40-4ae3-9260-cbce7060781f,214,1122,systemic lupus erythematosus,managed,1,2.0,False
+f1d09f86-4d6a-435f-9b93-5ef0df73bce2,b795713b-ff23-4494-b6a3-1438b2baee3e,178,1122,systemic lupus erythematosus,managed,1,2.0,False
+f3091b7a-a59b-4bee-a4c4-c930424b63f3,0be87f87-d01a-495e-9605-d89d36240908,166,IGTB1540,normal,na,1,2.0,False
+f3091b7a-a59b-4bee-a4c4-c930424b63f3,1556abac-8f1a-404a-8a2f-402ac562143c,105,IGTB1540,normal,na,1,2.0,False
+f3091b7a-a59b-4bee-a4c4-c930424b63f3,3044f2b9-48b5-45ec-ac14-107f0d7372f0,77,IGTB1540,normal,na,1,2.0,False
+f3091b7a-a59b-4bee-a4c4-c930424b63f3,54530f14-aadf-4c2a-8f92-9c22a69cc022,131,IGTB1540,normal,na,1,2.0,False
+f3091b7a-a59b-4bee-a4c4-c930424b63f3,665a3535-8f40-4ae3-9260-cbce7060781f,101,IGTB1540,normal,na,1,2.0,False
+f3091b7a-a59b-4bee-a4c4-c930424b63f3,a5cedd63-caae-415f-b7e4-c7f660fc89c8,136,IGTB1540,normal,na,1,1.0,False
+f3091b7a-a59b-4bee-a4c4-c930424b63f3,b795713b-ff23-4494-b6a3-1438b2baee3e,97,IGTB1540,normal,na,1,2.0,False
+f3091b7a-a59b-4bee-a4c4-c930424b63f3,cd2306bc-106c-4506-b778-d184713c463a,177,IGTB1540,normal,na,1,1.0,False
+f3091b7a-a59b-4bee-a4c4-c930424b63f3,d9278721-fad6-4eba-a1bb-4a26c0aea206,125,IGTB1540,normal,na,1,1.0,False
+f3091b7a-a59b-4bee-a4c4-c930424b63f3,dac92812-557b-4abd-8fb0-4f823ae8ff59,152,IGTB1540,normal,na,1,2.0,False
+f3091b7a-a59b-4bee-a4c4-c930424b63f3,e3629615-6d5c-4167-808f-996d53989dbf,111,IGTB1540,normal,na,1,2.0,False
+f3091b7a-a59b-4bee-a4c4-c930424b63f3,f1568b25-4a87-414f-8329-1a860a3a8aeb,138,IGTB1540,normal,na,1,1.0,False
+f4222fc5-9db3-4d75-99fe-78f565b88648,2dbf699a-f6cd-446d-8dc4-0595319cfa99,121,1248,systemic lupus erythematosus,managed,1,2.0,False
+f4222fc5-9db3-4d75-99fe-78f565b88648,39564abe-76f3-4a33-9f10-f574069834bc,116,1248,systemic lupus erythematosus,managed,1,2.0,False
+f4222fc5-9db3-4d75-99fe-78f565b88648,78c34b8c-196b-4a31-b700-08882bfaf4ab,162,1248,systemic lupus erythematosus,managed,1,2.0,False
+f4222fc5-9db3-4d75-99fe-78f565b88648,cdf51e52-a49a-474f-a6ba-da5a14137d09,143,1248,systemic lupus erythematosus,managed,1,2.0,False
+f46fc513-1a40-4930-a9ee-c9c1da5de582,3639058a-5dc3-49ad-82ff-cec405483912,177,IGTB1982,normal,na,1,1.0,False
+f46fc513-1a40-4930-a9ee-c9c1da5de582,56b848af-d12b-4f9c-b605-947e296caa46,156,IGTB1982,normal,na,1,1.0,False
+f46fc513-1a40-4930-a9ee-c9c1da5de582,8950207b-4940-4ef9-ad01-0ad0dace6f27,187,IGTB1982,normal,na,1,1.0,False
+f46fc513-1a40-4930-a9ee-c9c1da5de582,b993ef60-52c8-41e2-83a2-bb44f1fb916f,139,IGTB1982,normal,na,1,1.0,False
+f54a5b5a-c5be-4220-b515-3e22c596b9fd,16552c24-ef48-4e1f-aff5-319a1f739299,107,1888,systemic lupus erythematosus,managed,1,4.0,False
+f54a5b5a-c5be-4220-b515-3e22c596b9fd,43b9b939-e389-4784-b4e0-ee9d12aa7ca1,96,1888,systemic lupus erythematosus,managed,1,4.0,False
+f54a5b5a-c5be-4220-b515-3e22c596b9fd,91761416-a756-48e5-8768-fd169c7c564c,101,1888,systemic lupus erythematosus,managed,1,4.0,False
+f54a5b5a-c5be-4220-b515-3e22c596b9fd,d9942805-5a63-4958-b714-7088c0428c65,108,1888,systemic lupus erythematosus,managed,1,4.0,False
+f5587137-c9aa-43ba-9cc1-60d0c26479be,2e65a160-ba6e-4001-b942-c2aa46cd2c5b,12,FLARE011,systemic lupus erythematosus,flare,1,3.0,False
+f5587137-c9aa-43ba-9cc1-60d0c26479be,7a2abe44-abb7-4648-bb14-224625a6da0b,9,FLARE011,systemic lupus erythematosus,flare,1,3.0,False
+f5587137-c9aa-43ba-9cc1-60d0c26479be,7c76a618-92ba-41fd-b0a7-306a1c1a6bf2,13,FLARE011,systemic lupus erythematosus,flare,1,3.0,False
+f5587137-c9aa-43ba-9cc1-60d0c26479be,a5750809-7c9f-409f-baa1-9bfbb22d2fcc,8,FLARE011,systemic lupus erythematosus,flare,1,3.0,False
+f6f39d84-6fb4-4519-9efa-f9ca4651e3c9,048cb921-e15f-47a6-a9e3-ed512574e5d7,65,IGTB1290,normal,na,1,2.0,False
+f6f39d84-6fb4-4519-9efa-f9ca4651e3c9,2236c52d-924b-415a-aae0-00fa08d12d1f,85,IGTB1290,normal,na,1,2.0,False
+f6f39d84-6fb4-4519-9efa-f9ca4651e3c9,3c722d55-1664-4996-8228-63504e862676,204,IGTB1290,normal,na,1,3.0,False
+f6f39d84-6fb4-4519-9efa-f9ca4651e3c9,894c6ccb-cb7a-4ea1-b032-b1d93b25247d,65,IGTB1290,normal,na,1,2.0,False
+f6f39d84-6fb4-4519-9efa-f9ca4651e3c9,9850fb76-4155-4910-881f-b5d33ee0835c,87,IGTB1290,normal,na,1,2.0,False
+f6f39d84-6fb4-4519-9efa-f9ca4651e3c9,c64fa002-95f9-4429-b65c-6f55c7f907d4,84,IGTB1290,normal,na,1,2.0,False
+f6f39d84-6fb4-4519-9efa-f9ca4651e3c9,c7f79595-aa68-4139-9a87-094c761cc5ab,72,IGTB1290,normal,na,1,2.0,False
+f6f39d84-6fb4-4519-9efa-f9ca4651e3c9,d641571e-6406-4309-ae61-acc6f2e0a50d,79,IGTB1290,normal,na,1,2.0,False
+f6f39d84-6fb4-4519-9efa-f9ca4651e3c9,e9ebbe1e-ce77-4c97-a04e-4a64befe98c8,191,IGTB1290,normal,na,1,3.0,False
+f6f39d84-6fb4-4519-9efa-f9ca4651e3c9,f2380b81-e46f-430b-8fd2-e3897ddf7be9,72,IGTB1290,normal,na,1,2.0,False
+f9330687-3035-4f1a-ab22-1f86de08b66a,39093cbf-e0a9-480d-ab0b-e9e4cf95a9f8,15,HC-008,normal,na,1,4.0,False
+f9330687-3035-4f1a-ab22-1f86de08b66a,64f6fec6-18a3-4563-b731-189faf6423f2,32,HC-008,normal,na,1,4.0,False
+f9330687-3035-4f1a-ab22-1f86de08b66a,6fd714df-b88d-43a6-8f75-3d300278329d,25,HC-008,normal,na,1,4.0,False
+f9330687-3035-4f1a-ab22-1f86de08b66a,c2641f62-eb23-4dad-9c22-b52e72b79df2,23,HC-008,normal,na,1,4.0,False
+f96e68d4-b9e9-4cd5-889d-9fb46f9cc389,28401515-eca4-442a-85fc-f8c2793b1c26,44,1760,systemic lupus erythematosus,managed,1,2.0,False
+f96e68d4-b9e9-4cd5-889d-9fb46f9cc389,9184b09f-ca66-4623-a733-1f64bc1b424f,30,1760,systemic lupus erythematosus,managed,1,2.0,False
+f96e68d4-b9e9-4cd5-889d-9fb46f9cc389,d9bf3113-086e-4165-ba13-e78a3d7b4138,40,1760,systemic lupus erythematosus,managed,1,2.0,False
+f96e68d4-b9e9-4cd5-889d-9fb46f9cc389,e16d2c39-bfd1-4fb1-8ed6-ad6b16f3652e,13,1760,systemic lupus erythematosus,managed,1,2.0,False
+fa40c3dd-a3a5-4ffd-9470-ab39682965df,0103e306-959a-46b0-896d-d8b9dee40157,104,IGTB1916,normal,na,1,1.0,False
+fa40c3dd-a3a5-4ffd-9470-ab39682965df,9586e7f4-5c57-452e-bb13-90ceef874118,93,IGTB1916,normal,na,1,1.0,False
+fa40c3dd-a3a5-4ffd-9470-ab39682965df,d461010c-38fd-414f-91bd-e1b3e7e2f8fb,110,IGTB1916,normal,na,1,1.0,False
+fa40c3dd-a3a5-4ffd-9470-ab39682965df,e7240495-f3e8-42a3-ac5c-4a9a7eebc341,102,IGTB1916,normal,na,1,1.0,False
+fc11ebf7-2767-4d92-96f9-a57af8f1be30,0c7c125d-46d6-40ba-8088-31fb2b526a78,291,1334,systemic lupus erythematosus,managed,1,2.0,False
+fc11ebf7-2767-4d92-96f9-a57af8f1be30,10cec51f-a79f-4907-8745-b45df64f6946,279,1334,systemic lupus erythematosus,managed,1,4.0,False
+fc11ebf7-2767-4d92-96f9-a57af8f1be30,272dbb99-7929-46e2-8446-a19c21af05da,393,1334,systemic lupus erythematosus,managed,1,2.0,False
+fc11ebf7-2767-4d92-96f9-a57af8f1be30,32436280-1ea6-4678-bb18-4632fe8c4933,319,1334,systemic lupus erythematosus,managed,1,4.0,False
+fc11ebf7-2767-4d92-96f9-a57af8f1be30,6ab35eea-1bae-4ee8-8e5f-5f1505715ac3,433,1334,systemic lupus erythematosus,managed,1,2.0,False
+fc11ebf7-2767-4d92-96f9-a57af8f1be30,90e60bb7-e776-4dff-a8ba-6390acefdbee,256,1334,systemic lupus erythematosus,managed,1,4.0,False
+fc11ebf7-2767-4d92-96f9-a57af8f1be30,ca103ed6-7a7e-4450-9546-ac295532bced,298,1334,systemic lupus erythematosus,managed,1,4.0,False
+fc11ebf7-2767-4d92-96f9-a57af8f1be30,fc140c51-9b4f-427f-8e11-640bc7400007,398,1334,systemic lupus erythematosus,managed,1,2.0,False
+fcadfde9-31cc-4f2d-bf5b-b7deec30439a,0103e306-959a-46b0-896d-d8b9dee40157,76,IGTB1827,normal,na,1,1.0,False
+fcadfde9-31cc-4f2d-bf5b-b7deec30439a,9586e7f4-5c57-452e-bb13-90ceef874118,79,IGTB1827,normal,na,1,1.0,False
+fcadfde9-31cc-4f2d-bf5b-b7deec30439a,d461010c-38fd-414f-91bd-e1b3e7e2f8fb,81,IGTB1827,normal,na,1,1.0,False
+fcadfde9-31cc-4f2d-bf5b-b7deec30439a,e7240495-f3e8-42a3-ac5c-4a9a7eebc341,87,IGTB1827,normal,na,1,1.0,False
+fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,0c7c125d-46d6-40ba-8088-31fb2b526a78,41,IGTB508,normal,na,1,2.0,False
+fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,15024b21-fb68-4bbe-92cf-0c9ab90f11a6,58,IGTB508,normal,na,1,2.0,False
+fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,152e2bfd-e9ea-4d70-a999-6f37fb3fb96c,66,IGTB508,normal,na,1,3.0,False
+fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,272dbb99-7929-46e2-8446-a19c21af05da,74,IGTB508,normal,na,1,2.0,False
+fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,30bbf8d6-bd6a-4b4f-8d3e-a54bf78f79d5,47,IGTB508,normal,na,1,3.0,False
+fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,683bd537-4ff4-4741-afe5-be328f499d4b,54,IGTB508,normal,na,1,2.0,False
+fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,68492085-4a2b-4551-9b12-75062c694069,53,IGTB508,normal,na,1,2.0,False
+fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,6ab35eea-1bae-4ee8-8e5f-5f1505715ac3,48,IGTB508,normal,na,1,2.0,False
+fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,a5cedd63-caae-415f-b7e4-c7f660fc89c8,104,IGTB508,normal,na,1,1.0,False
+fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,b816335c-8d84-4ecc-aa3e-2dea51795320,63,IGTB508,normal,na,1,3.0,False
+fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,bdc30514-427c-403e-a0ee-61e7d04e407e,70,IGTB508,normal,na,1,2.0,False
+fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,cd2306bc-106c-4506-b778-d184713c463a,112,IGTB508,normal,na,1,1.0,False
+fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,d9278721-fad6-4eba-a1bb-4a26c0aea206,96,IGTB508,normal,na,1,1.0,False
+fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,df159c28-05fb-4f35-83b8-8c14af793f2a,44,IGTB508,normal,na,1,3.0,False
+fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,f1568b25-4a87-414f-8329-1a860a3a8aeb,110,IGTB508,normal,na,1,1.0,False
+fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,fc140c51-9b4f-427f-8e11-640bc7400007,58,IGTB508,normal,na,1,2.0,False
+fe49ebfc-513a-4b74-8820-95c69298501e,0be87f87-d01a-495e-9605-d89d36240908,99,1019,systemic lupus erythematosus,managed,1,2.0,False
+fe49ebfc-513a-4b74-8820-95c69298501e,54530f14-aadf-4c2a-8f92-9c22a69cc022,101,1019,systemic lupus erythematosus,managed,1,2.0,False
+fe49ebfc-513a-4b74-8820-95c69298501e,dac92812-557b-4abd-8fb0-4f823ae8ff59,102,1019,systemic lupus erythematosus,managed,1,2.0,False
+fe49ebfc-513a-4b74-8820-95c69298501e,e3629615-6d5c-4167-808f-996d53989dbf,103,1019,systemic lupus erythematosus,managed,1,2.0,False
+fe517385-b033-4626-aa2c-70cfa0d1a74f,152e2bfd-e9ea-4d70-a999-6f37fb3fb96c,182,FLARE007,systemic lupus erythematosus,flare,1,3.0,False
+fe517385-b033-4626-aa2c-70cfa0d1a74f,30bbf8d6-bd6a-4b4f-8d3e-a54bf78f79d5,157,FLARE007,systemic lupus erythematosus,flare,1,3.0,False
+fe517385-b033-4626-aa2c-70cfa0d1a74f,b816335c-8d84-4ecc-aa3e-2dea51795320,167,FLARE007,systemic lupus erythematosus,flare,1,3.0,False
+fe517385-b033-4626-aa2c-70cfa0d1a74f,df159c28-05fb-4f35-83b8-8c14af793f2a,158,FLARE007,systemic lupus erythematosus,flare,1,3.0,False
+fefcf023-ec1f-44d7-88b6-bbc3a34815d5,1495b93b-a19f-4364-95a3-6d8ac531eac6,126,1680,systemic lupus erythematosus,managed,1,4.0,False
+fefcf023-ec1f-44d7-88b6-bbc3a34815d5,3332f018-936e-4c4c-9105-99d9503db5a3,110,1680,systemic lupus erythematosus,managed,1,4.0,False
+fefcf023-ec1f-44d7-88b6-bbc3a34815d5,70a004b7-4a17-4702-8910-4557aa0c4279,123,1680,systemic lupus erythematosus,managed,1,4.0,False
+fefcf023-ec1f-44d7-88b6-bbc3a34815d5,cdab3145-edc9-4352-932c-1638e791bfc9,125,1680,systemic lupus erythematosus,managed,1,4.0,False

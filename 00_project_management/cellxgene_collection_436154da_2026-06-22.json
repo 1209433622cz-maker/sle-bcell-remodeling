@@ -1,0 +1,813 @@
+﻿{
+    "collection_id":  "436154da-bcf1-4130-9c8b-120ff9a888f2",
+    "collection_url":  "https://cellxgene.cziscience.com/collections/436154da-bcf1-4130-9c8b-120ff9a888f2",
+    "collection_version_id":  "0340d8f6-a8ca-4ad8-8664-07338a8bf55f",
+    "consortia":  [
+                      "CZI Cell Science"
+                  ],
+    "contact_email":  "jimmie.ye@ucsf.edu",
+    "contact_name":  "Chun Jimmie Ye",
+    "created_at":  "2026-06-10T04:49:19+00:00",
+    "curator_name":  "Jennifer Yu-Sheng Chien",
+    "datasets":  [
+                     {
+                         "assay":  [
+                                       {
+                                           "label":  "10x 3\u0027 v2",
+                                           "ontology_term_id":  "EFO:0009899"
+                                       }
+                                   ],
+                         "assets":  [
+                                        {
+                                            "filesize":  12218105530,
+                                            "filetype":  "H5AD",
+                                            "url":  "https://datasets.cellxgene.cziscience.com/c55dc602-d168-4d15-acc1-5de4f2f5d551.h5ad"
+                                        }
+                                    ],
+                         "cell_count":  1263676,
+                         "cell_type":  [
+                                           {
+                                               "label":  "B cell",
+                                               "ontology_term_id":  "CL:0000236"
+                                           },
+                                           {
+                                               "label":  "CD4-positive, alpha-beta T cell",
+                                               "ontology_term_id":  "CL:0000624"
+                                           },
+                                           {
+                                               "label":  "CD8-positive, alpha-beta T cell",
+                                               "ontology_term_id":  "CL:0000625"
+                                           },
+                                           {
+                                               "label":  "classical monocyte",
+                                               "ontology_term_id":  "CL:0000860"
+                                           },
+                                           {
+                                               "label":  "conventional dendritic cell",
+                                               "ontology_term_id":  "CL:0000990"
+                                           },
+                                           {
+                                               "label":  "lymphocyte",
+                                               "ontology_term_id":  "CL:0000542"
+                                           },
+                                           {
+                                               "label":  "natural killer cell",
+                                               "ontology_term_id":  "CL:0000623"
+                                           },
+                                           {
+                                               "label":  "non-classical monocyte",
+                                               "ontology_term_id":  "CL:0000875"
+                                           },
+                                           {
+                                               "label":  "plasmablast",
+                                               "ontology_term_id":  "CL:0000980"
+                                           },
+                                           {
+                                               "label":  "plasmacytoid dendritic cell",
+                                               "ontology_term_id":  "CL:0000784"
+                                           },
+                                           {
+                                               "label":  "progenitor cell",
+                                               "ontology_term_id":  "CL:0011026"
+                                           }
+                                       ],
+                         "citation":  "Publication: https://doi.org/10.1126/science.abf1970 Dataset Version: https://datasets.cellxgene.cziscience.com/c55dc602-d168-4d15-acc1-5de4f2f5d551.h5ad curated and distributed by CZ CELLxGENE Discover in Collection: https://cellxgene.cziscience.com/collections/436154da-bcf1-4130-9c8b-120ff9a888f2",
+                         "dataset_id":  "218acb0f-9f2f-4f76-b90b-15a4b7c7f629",
+                         "dataset_version_id":  "c55dc602-d168-4d15-acc1-5de4f2f5d551",
+                         "default_embedding":  "X_umap",
+                         "development_stage":  [
+                                                   {
+                                                       "label":  "20-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000114"
+                                                   },
+                                                   {
+                                                       "label":  "21-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000115"
+                                                   },
+                                                   {
+                                                       "label":  "22-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000116"
+                                                   },
+                                                   {
+                                                       "label":  "23-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000117"
+                                                   },
+                                                   {
+                                                       "label":  "24-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000118"
+                                                   },
+                                                   {
+                                                       "label":  "25-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000119"
+                                                   },
+                                                   {
+                                                       "label":  "26-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000120"
+                                                   },
+                                                   {
+                                                       "label":  "27-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000121"
+                                                   },
+                                                   {
+                                                       "label":  "28-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000122"
+                                                   },
+                                                   {
+                                                       "label":  "29-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000123"
+                                                   },
+                                                   {
+                                                       "label":  "30-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000124"
+                                                   },
+                                                   {
+                                                       "label":  "31-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000125"
+                                                   },
+                                                   {
+                                                       "label":  "32-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000126"
+                                                   },
+                                                   {
+                                                       "label":  "33-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000127"
+                                                   },
+                                                   {
+                                                       "label":  "34-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000128"
+                                                   },
+                                                   {
+                                                       "label":  "35-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000129"
+                                                   },
+                                                   {
+                                                       "label":  "36-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000130"
+                                                   },
+                                                   {
+                                                       "label":  "37-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000131"
+                                                   },
+                                                   {
+                                                       "label":  "38-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000132"
+                                                   },
+                                                   {
+                                                       "label":  "39-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000133"
+                                                   },
+                                                   {
+                                                       "label":  "40-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000134"
+                                                   },
+                                                   {
+                                                       "label":  "41-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000135"
+                                                   },
+                                                   {
+                                                       "label":  "42-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000136"
+                                                   },
+                                                   {
+                                                       "label":  "43-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000137"
+                                                   },
+                                                   {
+                                                       "label":  "44-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000138"
+                                                   },
+                                                   {
+                                                       "label":  "45-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000139"
+                                                   },
+                                                   {
+                                                       "label":  "46-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000140"
+                                                   },
+                                                   {
+                                                       "label":  "47-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000141"
+                                                   },
+                                                   {
+                                                       "label":  "48-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000142"
+                                                   },
+                                                   {
+                                                       "label":  "49-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000143"
+                                                   },
+                                                   {
+                                                       "label":  "50-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000144"
+                                                   },
+                                                   {
+                                                       "label":  "51-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000145"
+                                                   },
+                                                   {
+                                                       "label":  "52-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000146"
+                                                   },
+                                                   {
+                                                       "label":  "53-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000147"
+                                                   },
+                                                   {
+                                                       "label":  "54-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000148"
+                                                   },
+                                                   {
+                                                       "label":  "55-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000149"
+                                                   },
+                                                   {
+                                                       "label":  "56-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000150"
+                                                   },
+                                                   {
+                                                       "label":  "57-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000151"
+                                                   },
+                                                   {
+                                                       "label":  "58-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000152"
+                                                   },
+                                                   {
+                                                       "label":  "59-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000153"
+                                                   },
+                                                   {
+                                                       "label":  "60-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000154"
+                                                   },
+                                                   {
+                                                       "label":  "61-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000155"
+                                                   },
+                                                   {
+                                                       "label":  "62-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000156"
+                                                   },
+                                                   {
+                                                       "label":  "63-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000157"
+                                                   },
+                                                   {
+                                                       "label":  "64-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000158"
+                                                   },
+                                                   {
+                                                       "label":  "65-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000159"
+                                                   },
+                                                   {
+                                                       "label":  "66-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000160"
+                                                   },
+                                                   {
+                                                       "label":  "68-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000162"
+                                                   },
+                                                   {
+                                                       "label":  "69-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000163"
+                                                   },
+                                                   {
+                                                       "label":  "70-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000164"
+                                                   },
+                                                   {
+                                                       "label":  "71-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000165"
+                                                   },
+                                                   {
+                                                       "label":  "73-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000167"
+                                                   },
+                                                   {
+                                                       "label":  "74-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000168"
+                                                   },
+                                                   {
+                                                       "label":  "75-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000169"
+                                                   },
+                                                   {
+                                                       "label":  "83-year-old stage",
+                                                       "ontology_term_id":  "HsapDv:0000209"
+                                                   }
+                                               ],
+                         "disease":  [
+                                         {
+                                             "label":  "normal",
+                                             "ontology_term_id":  "PATO:0000461"
+                                         },
+                                         {
+                                             "label":  "systemic lupus erythematosus",
+                                             "ontology_term_id":  "MONDO:0007915"
+                                         }
+                                     ],
+                         "donor_id":  [
+                                          "HC-546",
+                                          "1132",
+                                          "FLARE006",
+                                          "1110",
+                                          "1479",
+                                          "1334",
+                                          "1333",
+                                          "IGTB670",
+                                          "1368",
+                                          "IGTB1506",
+                                          "HC-540",
+                                          "HC-006",
+                                          "1197",
+                                          "1078",
+                                          "1248",
+                                          "FLARE004",
+                                          "HC-520",
+                                          "IGTB1372",
+                                          "1219",
+                                          "1285",
+                                          "IGTB1650",
+                                          "IGTB469",
+                                          "IGTB2065",
+                                          "1596",
+                                          "1743",
+                                          "1249",
+                                          "1340",
+                                          "1961",
+                                          "IGTB1826",
+                                          "1256",
+                                          "FLARE013",
+                                          "1341",
+                                          "1641",
+                                          "HC-526",
+                                          "HC-578",
+                                          "1414",
+                                          "HC-519",
+                                          "1492",
+                                          "1791",
+                                          "HC-585",
+                                          "HC-501",
+                                          "1068",
+                                          "1848",
+                                          "1543",
+                                          "1101",
+                                          "IGTB1844",
+                                          "IGTB1815",
+                                          "IGTB195",
+                                          "1615",
+                                          "IGTB1871",
+                                          "1545",
+                                          "1226",
+                                          "1569",
+                                          "IGTB645",
+                                          "1586",
+                                          "IGTB1996",
+                                          "IGTB508",
+                                          "IGTB514",
+                                          "1947",
+                                          "1772",
+                                          "IGTB498",
+                                          "FLARE015",
+                                          "1122",
+                                          "IGTB1540",
+                                          "IGTB1819",
+                                          "HC-572",
+                                          "1222",
+                                          "1928",
+                                          "IGTB826",
+                                          "HC-536",
+                                          "1240",
+                                          "IGTB1827",
+                                          "1510",
+                                          "HC-022",
+                                          "HC-015",
+                                          "1262",
+                                          "FLARE011",
+                                          "1771",
+                                          "1472",
+                                          "HC-573",
+                                          "1294",
+                                          "HC-002",
+                                          "IGTB143",
+                                          "1522",
+                                          "1857",
+                                          "IGTB884",
+                                          "1004",
+                                          "1054",
+                                          "1754",
+                                          "1621",
+                                          "HC-571",
+                                          "HC-580",
+                                          "IGTB1789",
+                                          "1250",
+                                          "IGTB1895",
+                                          "HC-552",
+                                          "1193",
+                                          "1270",
+                                          "1767",
+                                          "1420",
+                                          "1014",
+                                          "1127",
+                                          "IGTB1828",
+                                          "1737",
+                                          "IGTB1974",
+                                          "IGTB256",
+                                          "1056",
+                                          "HC-009",
+                                          "1015",
+                                          "IGTB1814",
+                                          "1130",
+                                          "1514",
+                                          "1682",
+                                          "1815",
+                                          "1886",
+                                          "IGTB1542",
+                                          "1763",
+                                          "IGTB1921",
+                                          "1281",
+                                          "1019",
+                                          "1480",
+                                          "1726",
+                                          "1203",
+                                          "IGTB2007",
+                                          "1827",
+                                          "IGTB1966",
+                                          "HC-504",
+                                          "HC-506",
+                                          "HC-574",
+                                          "1366",
+                                          "1730",
+                                          "1811",
+                                          "IGTB1768",
+                                          "1419",
+                                          "FLARE014",
+                                          "1022",
+                                          "FLARE017",
+                                          "HC-558",
+                                          "1326",
+                                          "IGTB1762",
+                                          "HC-516",
+                                          "1338",
+                                          "1234",
+                                          "FLARE016",
+                                          "1325",
+                                          "1760",
+                                          "IGTB1906",
+                                          "1243",
+                                          "IGTB1913",
+                                          "HC-531",
+                                          "1329",
+                                          "1279",
+                                          "HC-502",
+                                          "1891",
+                                          "1417",
+                                          "1087",
+                                          "1225",
+                                          "HC-500",
+                                          "1121",
+                                          "1909",
+                                          "IGTB1982",
+                                          "IGTB1731",
+                                          "1602",
+                                          "IGTB1952",
+                                          "1680",
+                                          "FLARE010",
+                                          "1031",
+                                          "1320",
+                                          "FLARE020",
+                                          "FLARE001",
+                                          "1741",
+                                          "1672",
+                                          "1941",
+                                          "1588",
+                                          "IGTB986",
+                                          "HC-524",
+                                          "HC-563",
+                                          "1721",
+                                          "1165",
+                                          "1297",
+                                          "IGTB1840",
+                                          "1051",
+                                          "1660",
+                                          "1881",
+                                          "1614",
+                                          "1496",
+                                          "1558",
+                                          "IGTB1793",
+                                          "1958",
+                                          "1799",
+                                          "ICC_control",
+                                          "FLARE007",
+                                          "1119",
+                                          "1535",
+                                          "1667",
+                                          "1731",
+                                          "1775",
+                                          "IGTB1290",
+                                          "HC-503",
+                                          "HC-532",
+                                          "2082",
+                                          "1039",
+                                          "2135",
+                                          "IGTB1575",
+                                          "1418",
+                                          "HC-538",
+                                          "IGTB1901",
+                                          "IGTB1916",
+                                          "1404",
+                                          "1196",
+                                          "1804",
+                                          "HC-014",
+                                          "2061",
+                                          "FLARE009",
+                                          "1633",
+                                          "IGTB1908",
+                                          "HC-011",
+                                          "1892",
+                                          "1046",
+                                          "1829",
+                                          "IGTB1539",
+                                          "HC-019",
+                                          "1259",
+                                          "HC-554",
+                                          "HC-008",
+                                          "1216",
+                                          "1623",
+                                          "HC-541",
+                                          "1584",
+                                          "1888",
+                                          "1716",
+                                          "IGTB1987",
+                                          "1324",
+                                          "2132",
+                                          "1768",
+                                          "HC-543",
+                                          "HC-567",
+                                          "1195",
+                                          "IGTB141",
+                                          "HC-512",
+                                          "1063",
+                                          "1452",
+                                          "1221",
+                                          "HC-545",
+                                          "1567",
+                                          "HC-020",
+                                          "1251",
+                                          "HC-556",
+                                          "HC-533",
+                                          "1785",
+                                          "1315",
+                                          "1582",
+                                          "1445",
+                                          "HC-551",
+                                          "1045",
+                                          "1337",
+                                          "FLARE005",
+                                          "1597",
+                                          "HC-508",
+                                          "1493",
+                                          "HC-566"
+                                      ],
+                         "embeddings":  [
+                                            "X_pca",
+                                            "X_umap"
+                                        ],
+                         "explorer_url":  "https://cellxgene.cziscience.com/e/218acb0f-9f2f-4f76-b90b-15a4b7c7f629.cxg/",
+                         "feature_biotype":  [
+                                                 "gene"
+                                             ],
+                         "feature_count":  30172,
+                         "feature_reference":  [
+                                                   "NCBITaxon:9606"
+                                               ],
+                         "genetic_perturbation_strategy":  null,
+                         "is_pre_analysis":  false,
+                         "is_primary_data":  [
+                                                 true
+                                             ],
+                         "mean_genes_per_cell":  791.8890071505671,
+                         "organism":  [
+                                          {
+                                              "label":  "Homo sapiens",
+                                              "ontology_term_id":  "NCBITaxon:9606"
+                                          }
+                                      ],
+                         "perturbation_types":  null,
+                         "primary_cell_count":  1263676,
+                         "published_at":  "2021-11-19T20:09:35+00:00",
+                         "raw_data_location":  "raw.X",
+                         "revised_at":  "2026-06-11T16:53:32+00:00",
+                         "schema_version":  "7.1.0",
+                         "self_reported_ethnicity":  [
+                                                         {
+                                                             "label":  "African American",
+                                                             "ontology_term_id":  "HANCESTRO:0568"
+                                                         },
+                                                         {
+                                                             "label":  "Asian",
+                                                             "ontology_term_id":  "HANCESTRO:0847"
+                                                         },
+                                                         {
+                                                             "label":  "European American",
+                                                             "ontology_term_id":  "HANCESTRO:0590"
+                                                         },
+                                                         {
+                                                             "label":  "Hispanic or Latin",
+                                                             "ontology_term_id":  "HANCESTRO:0612"
+                                                         }
+                                                     ],
+                         "sex":  [
+                                     {
+                                         "label":  "female",
+                                         "ontology_term_id":  "PATO:0000383"
+                                     },
+                                     {
+                                         "label":  "male",
+                                         "ontology_term_id":  "PATO:0000384"
+                                     }
+                                 ],
+                         "spatial":  null,
+                         "suspension_type":  [
+                                                 "cell"
+                                             ],
+                         "tissue":  [
+                                        {
+                                            "label":  "blood",
+                                            "ontology_term_id":  "UBERON:0000178",
+                                            "tissue_type":  "tissue"
+                                        }
+                                    ],
+                         "title":  "multiplexed scRNA-seq of 1.2 million PBMCs from adult lupus samples",
+                         "tombstone":  false,
+                         "x_approximate_distribution":  null
+                     }
+                 ],
+    "description":  "Systemic lupus erythematosus (SLE) is a heterogeneous autoimmune disease. Knowledge of circulating immune cell types and states associated with SLE remains incomplete. We profiled over 1.2 million PBMCs (162 cases, 99 controls) with multiplexed single-cell RNA-sequencing (mux-seq). Cases exhibited elevated expression of type-1 interferon-stimulated genes (ISG) in monocytes, reduction of naïve CD4+ T cells that correlated with monocyte ISG expression, and expansion of repertoire-restricted cytotoxic GZMH+ CD8+ T cells. Cell-type-specific expression features predicted case-control status and stratified patients into two molecular subtypes. We integrated dense genotyping data to map cell-type-specific cis-eQTLs and link SLE-associated variants to cell-type-specific expression. These results demonstrate mux-seq as a systematic approach to characterize cellular composition, identify transcriptional signatures, and annotate genetic variants associated with SLE.",
+    "doi":  "10.1126/science.abf1970",
+    "is_pre_analysis":  false,
+    "links":  [
+                  {
+                      "link_name":  "phs002812",
+                      "link_type":  "RAW_DATA",
+                      "link_url":  "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs002812"
+                  },
+                  {
+                      "link_name":  "GSE137029",
+                      "link_type":  "RAW_DATA",
+                      "link_url":  "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE137029"
+                  },
+                  {
+                      "link_name":  "",
+                      "link_type":  "RAW_DATA",
+                      "link_url":  "https://explore.data.humancellatlas.org/projects/9fc0064b-84ce-40a5-a768-e6eb3d364ee0"
+                  },
+                  {
+                      "link_name":  "Figure code",
+                      "link_type":  "OTHER",
+                      "link_url":  "https://zenodo.org/record/4724043#.YYQZDr3MKS5"
+                  },
+                  {
+                      "link_name":  "",
+                      "link_type":  "OTHER",
+                      "link_url":  "https://cells.ucsc.edu/?ds=lupus-pbmc"
+                  }
+              ],
+    "name":  "Single-cell RNA-seq reveals the cell-type-specific molecular and genetic associations to lupus",
+    "published_at":  "2021-11-19T20:09:35+00:00",
+    "publisher_metadata":  {
+                               "authors":  [
+                                               {
+                                                   "family":  "Perez",
+                                                   "given":  "Richard K."
+                                               },
+                                               {
+                                                   "family":  "Gordon",
+                                                   "given":  "M. Grace"
+                                               },
+                                               {
+                                                   "family":  "Subramaniam",
+                                                   "given":  "Meena"
+                                               },
+                                               {
+                                                   "family":  "Kim",
+                                                   "given":  "Min Cheol"
+                                               },
+                                               {
+                                                   "family":  "Hartoularos",
+                                                   "given":  "George C."
+                                               },
+                                               {
+                                                   "family":  "Targ",
+                                                   "given":  "Sasha"
+                                               },
+                                               {
+                                                   "family":  "Sun",
+                                                   "given":  "Yang"
+                                               },
+                                               {
+                                                   "family":  "Ogorodnikov",
+                                                   "given":  "Anton"
+                                               },
+                                               {
+                                                   "family":  "Bueno",
+                                                   "given":  "Raymund"
+                                               },
+                                               {
+                                                   "family":  "Lu",
+                                                   "given":  "Andrew"
+                                               },
+                                               {
+                                                   "family":  "Thompson",
+                                                   "given":  "Mike"
+                                               },
+                                               {
+                                                   "family":  "Rappoport",
+                                                   "given":  "Nadav"
+                                               },
+                                               {
+                                                   "family":  "Dahl",
+                                                   "given":  "Andrew"
+                                               },
+                                               {
+                                                   "family":  "Lanata",
+                                                   "given":  "Cristina M."
+                                               },
+                                               {
+                                                   "family":  "Matloubian",
+                                                   "given":  "Mehrdad"
+                                               },
+                                               {
+                                                   "family":  "Maliskova",
+                                                   "given":  "Lenka"
+                                               },
+                                               {
+                                                   "family":  "Kwek",
+                                                   "given":  "Serena S."
+                                               },
+                                               {
+                                                   "family":  "Li",
+                                                   "given":  "Tony"
+                                               },
+                                               {
+                                                   "family":  "Slyper",
+                                                   "given":  "Michal"
+                                               },
+                                               {
+                                                   "family":  "Waldman",
+                                                   "given":  "Julia"
+                                               },
+                                               {
+                                                   "family":  "Dionne",
+                                                   "given":  "Danielle"
+                                               },
+                                               {
+                                                   "family":  "Rozenblatt-Rosen",
+                                                   "given":  "Orit"
+                                               },
+                                               {
+                                                   "family":  "Fong",
+                                                   "given":  "Lawrence"
+                                               },
+                                               {
+                                                   "family":  "Dall’Era",
+                                                   "given":  "Maria"
+                                               },
+                                               {
+                                                   "family":  "Balliu",
+                                                   "given":  "Brunilda"
+                                               },
+                                               {
+                                                   "family":  "Regev",
+                                                   "given":  "Aviv"
+                                               },
+                                               {
+                                                   "family":  "Yazdany",
+                                                   "given":  "Jinoos"
+                                               },
+                                               {
+                                                   "family":  "Criswell",
+                                                   "given":  "Lindsey A."
+                                               },
+                                               {
+                                                   "family":  "Zaitlen",
+                                                   "given":  "Noah"
+                                               },
+                                               {
+                                                   "family":  "Ye",
+                                                   "given":  "Chun Jimmie"
+                                               }
+                                           ],
+                               "is_preprint":  false,
+                               "journal":  "Science",
+                               "published_at":  1649376000.0,
+                               "published_day":  8,
+                               "published_month":  4,
+                               "published_year":  2022
+                           },
+    "revised_at":  "2026-06-11T16:53:32+00:00",
+    "revising_in":  null,
+    "revision_of":  null,
+    "visibility":  "PUBLIC"
+}

@@ -1,0 +1,13 @@
+﻿relative_path,matrix,present,encoding_type,encoding_version,shape,dtype,sample_min,sample_max,sample_integer_fraction,sample_nonnegative,message
+03_results/first_pass_bcell_full/bcell_first_pass_labeled.h5ad,X,True,csr_matrix,0.1.0,152981x30172,float32,-1.872135877609253,10.0,0.0026,False,
+03_results/first_pass_bcell_full/bcell_first_pass_processed.h5ad,X,True,csr_matrix,0.1.0,152981x30172,float32,-1.872135877609253,10.0,0.0026,False,
+03_results/first_pass_bcell_smoke_20k/bcell_first_pass_processed.h5ad,X,True,csr_matrix,0.1.0,20000x30172,float32,-1.872135877609253,10.0,0.0026,False,
+Data/processed/GSE135779_nehar_validation/gse135779_b_subcluster_counts.h5ad,X,True,csr_matrix,0.1.0,32179x32738,float32,1.0,166.0,1.0,True,
+Data/processed/GSE163121_bcell_validation/gse163121_bcell_counts.h5ad,X,True,csr_matrix,0.1.0,25037x33694,float32,1.0,179.0,1.0,True,
+Data/processed/GSE174188_perez_cellxgene/bcell_subset_full.h5ad,X,True,csr_matrix,0.1.0,152981x30172,float32,-1.872135877609253,10.0,0.0026,False,
+Data/processed/GSE174188_perez_cellxgene/bcell_subset_full.h5ad,raw/X,True,csr_matrix,0.1.0,152981x30172,float32,1.0,238.0,1.0,True,
+Data/processed/GSE174188_perez_cellxgene/bcell_subset_smoke_20k.h5ad,X,True,csr_matrix,0.1.0,20000x30172,float32,-1.872135877609253,10.0,0.0026,False,
+Data/processed/GSE174188_perez_cellxgene/bcell_subset_smoke_20k.h5ad,raw/X,True,csr_matrix,0.1.0,20000x30172,float32,1.0,238.0,1.0,True,
+Data/processed/GSE174188_perez_cellxgene/perez_gse174188_cellxgene.h5ad,X,True,csr_matrix,0.1.0,1263676x30172,float32,-3.0862038135528564,10.0,0.0015,False,
+Data/processed/GSE174188_perez_cellxgene/perez_gse174188_cellxgene.h5ad,raw/X,True,csr_matrix,0.1.0,1263676x30172,float32,1.0,368.0,1.0,True,
+Data/processed/GSE196830_onek1k_cellxgene/source/onek1k_gse196830_cellxgene.h5ad,X,True,csr_matrix,0.1.0,1248980x35528,float32,1.0,365.0,1.0,True,

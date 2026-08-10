@@ -1,0 +1,123 @@
+{
+  "source_h5ad_exists": true,
+  "subset_h5ad_exists": true,
+  "processed_h5ad_exists": true,
+  "scores_csv_exists": true,
+  "source_shape": [
+    1263676,
+    30172
+  ],
+  "subset_shape": [
+    152981,
+    30172
+  ],
+  "processed_shape": [
+    152981,
+    30172
+  ],
+  "scores_rows": 152981,
+  "scores_columns": [
+    "cell_type",
+    "author_cell_type",
+    "cell_state",
+    "disease",
+    "disease_state",
+    "donor_id",
+    "sample_uuid",
+    "sex",
+    "Processing_Cohort",
+    "ct_cov",
+    "ind_cov",
+    "leiden",
+    "IFN_response_score",
+    "Antigen_presentation_score",
+    "ABC_DN2_axis_score",
+    "Plasmablast_score",
+    "Naive_B_score",
+    "Activation_score"
+  ],
+  "score_columns": [
+    "IFN_response_score",
+    "Antigen_presentation_score",
+    "ABC_DN2_axis_score",
+    "Plasmablast_score",
+    "Naive_B_score",
+    "Activation_score"
+  ],
+  "n_clusters": 8,
+  "cluster_counts": {
+    "0": 44608,
+    "1": 37335,
+    "2": 28466,
+    "3": 25070,
+    "4": 6550,
+    "5": 5502,
+    "6": 4037,
+    "7": 1413
+  },
+  "summary_counts": {
+    "0": 44608,
+    "1": 37335,
+    "2": 28466,
+    "3": 25070,
+    "4": 6550,
+    "5": 5502,
+    "6": 4037,
+    "7": 1413
+  },
+  "cluster_counts_match_summary": true,
+  "scores_rows_match_subset": true,
+  "processed_rows_match_subset": true,
+  "processed_vars_match_subset": true,
+  "missing_score_values": {
+    "IFN_response_score": 0,
+    "Antigen_presentation_score": 0,
+    "ABC_DN2_axis_score": 0,
+    "Plasmablast_score": 0,
+    "Naive_B_score": 0,
+    "Activation_score": 0
+  },
+  "metadata_missing_values": {
+    "cell_type": 0,
+    "author_cell_type": 0,
+    "disease": 0,
+    "disease_state": 0,
+    "donor_id": 0,
+    "ct_cov": 11021
+  },
+  "cell_type_counts": {
+    "B cell": 151570,
+    "plasmablast": 1411
+  },
+  "author_cell_type_counts": {
+    "B": 151570,
+    "PB": 1411
+  },
+  "disease_counts_cells": {
+    "systemic lupus erythematosus": 92756,
+    "normal": 60225
+  },
+  "disease_counts_donors": {
+    "systemic lupus erythematosus": 160,
+    "normal": 99
+  },
+  "disease_tests_rows": 8,
+  "best_disease_test": [
+    {
+      "leiden": 1,
+      "n_donors_normal": 99,
+      "n_donors_sle": 160,
+      "mean_fraction_normal": 0.1292339073299389,
+      "mean_fraction_sle": 0.274839226974595,
+      "median_fraction_normal": 0.12,
+      "median_fraction_sle": 0.2514129855215126,
+      "mean_difference_sle_minus_normal": 0.1456053196446561,
+      "mannwhitney_u": 12460.0,
+      "pvalue": 9.276395853443534e-15,
+      "fdr_bh": 7.421116682754827e-14
+    }
+  ],
+  "composition_rows": 156,
+  "composition_complete_variable_cluster_pairs": 64,
+  "composition_total_variable_cluster_pairs": 64
+}

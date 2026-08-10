@@ -1,0 +1,2 @@
+run_dir=H:\cuhk-2025fALL\6013RP-wyf\phase17_v7\gateC2B1\20260810_171000_full_library_doublets
+status=PREPARATION_COMPLETE_DOUBLET_SCORING_PENDING

@@ -1,0 +1,14 @@
+﻿Processing_Cohort,disease,n_samples,n_donor_cohort_records
+1.0,normal,28,47.0
+1.0 | 2.0,normal,11,0.0
+1.0 | 2.0 | 3.0,normal,8,0.0
+2.0,normal,1,22.0
+2.0,systemic lupus erythematosus,89,118.0
+2.0 | 3.0,normal,2,0.0
+2.0 | 3.0,systemic lupus erythematosus,4,0.0
+2.0 | 4.0,systemic lupus erythematosus,25,0.0
+3.0,normal,5,18.0
+3.0,systemic lupus erythematosus,28,23.0
+3.0 | 4.0,normal,3,0.0
+4.0,normal,41,44.0
+4.0,systemic lupus erythematosus,26,51.0

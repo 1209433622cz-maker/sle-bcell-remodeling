@@ -1,0 +1,31 @@
+﻿column,dtype,non_null,n_unique,examples
+library_uuid,category,1263676,88,3332f018-936e-4c4c-9105-99d9503db5a3 | 70a004b7-4a17-4702-8910-4557aa0c4279 | 152e2bfd-e9ea-4d70-a999-6f37fb3fb96c | c2641f62-eb23-4dad-9c22-b52e72b79df2 | 222b358b-71e7-4b0f-9f9b-47b4c67aaa27 | 0c7c125d-46d6-40ba-8088-31fb2b526a78 | 0955850b-157b-4396-a3da-83b8bcbed172 | dac92812-557b-4abd-8fb0-4f823ae8ff59 | 272dbb99-7929-46e2-8446-a19c21af05da | d49aa545-2b96-409c-85e8-2bf8706475fb | ddae4c77-2b07-4e3e-97f1-84a37cf04321 | 8627b3d4-c529-45b3-bf1e-0313791be91d
+assay_ontology_term_id,category,1263676,1,EFO:0009899
+mapped_reference_annotation,category,1263676,1,GENCODE 19
+is_primary_data,bool,1263676,1,True
+cell_type_ontology_term_id,category,1263676,11,CL:0000624 | CL:0000860 | CL:0000236 | CL:0000625 | CL:0000623 | CL:0000875 | CL:0000542 | CL:0000990 | CL:0000784 | CL:0000980 | CL:0011026
+author_cell_type,category,1263676,11,T4 | cM | B | T8 | NK | ncM | Prolif | cDC | pDC | PB | Progen
+cell_state,category,1263676,2,na | proliferating
+sample_uuid,category,1263676,274,0a1148dc-356f-4dc4-9c32-bf0823257d93 | 577bce84-8d37-4851-9fb4-53f9467699ba | 0f3a21f5-e7b9-4139-93fb-5407dbfde4fc | 5e0ed28c-a75a-4ecd-a0c7-49e71264690b | 982d60b4-5677-4e2d-8b58-79503863710d | fc11ebf7-2767-4d92-96f9-a57af8f1be30 | d1272c4d-f68a-4d3d-bae3-715e337bd80b | 98e974a9-c08e-4066-8930-d627b18f1a89 | 2512ead7-e6f3-4ceb-9894-46e1e71eb8df | a51ffc5a-e4cb-4b47-9154-4514e1dc9d65 | bc16e1fe-cd25-4a6b-a329-2e2c7121ad8d | 869da0bb-4487-493b-86ca-e601eee46196
+tissue_ontology_term_id,category,1263676,1,UBERON:0000178
+development_stage_ontology_term_id,category,1263676,55,HsapDv:0000122 | HsapDv:0000139 | HsapDv:0000128 | HsapDv:0000165 | HsapDv:0000146 | HsapDv:0000158 | HsapDv:0000127 | HsapDv:0000124 | HsapDv:0000162 | HsapDv:0000147 | HsapDv:0000136 | HsapDv:0000145
+disease_state,category,1263676,4,na | managed | flare | treated
+suspension_enriched_cell_types,category,1263676,1,peripheral blood mononuclear cell
+suspension_uuid,category,1263676,291,cc418a0a-d636-4eca-a44c-db537d30b486 | 3e67947f-bd15-4d41-910a-89488e72c50a | 9741923d-1aa6-4701-8382-34cc020e6027 | 9a1dccc2-dd02-40d1-a50a-81ac0c094edc | 8f3811f4-79dd-4522-bc30-157c28507dbd | fdd37bae-4fc7-4f63-a17d-79a299a61f12 | ddc58f41-035b-4f1b-beee-c4972417a41b | 5f3660e8-24b8-459f-9f2b-745c4db86e08 | 67cd0f78-05f2-4cea-94ec-9dacc2fed1ca | 3c567f49-1515-4323-9f7e-a77e2c4c904f | 30a5d45b-bea7-45d4-a31f-bb528147993e | 165fa92f-2ac7-4072-b465-1270a2bf3679
+suspension_type,category,1263676,1,cell
+donor_id,category,1263676,261,HC-546 | 1132 | FLARE006 | 1110 | 1479 | 1334 | 1333 | IGTB670 | 1368 | IGTB1506 | HC-540 | HC-006
+self_reported_ethnicity_ontology_term_id,category,1263676,4,HANCESTRO:0847 | HANCESTRO:0590 | HANCESTRO:0568 | HANCESTRO:0612
+disease_ontology_term_id,category,1263676,2,PATO:0000461 | MONDO:0007915
+sex_ontology_term_id,category,1263676,2,PATO:0000383 | PATO:0000384
+Processing_Cohort,category,1263676,4,4.0 | 3.0 | 2.0 | 1.0
+ct_cov,category,793873,14,T4_naive | B_naive | CytoT_GZMH+ | T4_em | NK_dim | CytoT_GZMK+ | T8_naive | B_mem | T4_reg | Progen | T_mait | B_plasma
+ind_cov,category,1263676,261,HC-546 | 1132_1132 | FLARE006 | 1110_1110 | 1479_1479 | 1334_1334 | 1333_1333 | IGTB670_IGTB670 | 1368_1368 | IGTB1506_IGTB1506 | HC-540 | HC-006
+tissue_type,category,1263676,1,tissue
+cell_type,category,1263676,11,"CD4-positive, alpha-beta T cell | classical monocyte | B cell | CD8-positive, alpha-beta T cell | natural killer cell | non-classical monocyte | lymphocyte | conventional dendritic cell | plasmacytoid dendritic cell | plasmablast | progenitor cell"
+assay,category,1263676,1,10x 3' v2
+disease,category,1263676,2,normal | systemic lupus erythematosus
+sex,category,1263676,2,female | male
+tissue,category,1263676,1,blood
+self_reported_ethnicity,category,1263676,4,Asian | European American | African American | Hispanic or Latin
+development_stage,category,1263676,55,28-year-old stage | 45-year-old stage | 34-year-old stage | 71-year-old stage | 52-year-old stage | 64-year-old stage | 33-year-old stage | 30-year-old stage | 68-year-old stage | 53-year-old stage | 42-year-old stage | 51-year-old stage
+observation_joinid,object,1263676,1263676,a}Gz~P&pl& | tTQmA6ZGf` | E-U&KcyH)S | voUnoU!Ylu | _{EUND}(tY | *~kgkezy2y | =IyHf`>)^- | g?cKEA7YpG | 7r`J&>}{<r | 3&8~>azs5T | =BdTGzxxR8 | V!rNzVHC3V

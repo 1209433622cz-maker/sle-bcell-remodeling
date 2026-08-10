@@ -1,0 +1,8 @@
+﻿Processing_Cohort,disease,n_sample_cohort_records,n_unique_samples,n_unique_donors,n_bcells,n_sample_library_records,n_unique_samples_from_libraries,n_unique_libraries,n_bcells_from_libraries
+1.0,normal,47,47,47,23763,188,47,12,23763
+2.0,normal,22,22,22,10203,144,22,36,10203
+2.0,systemic lupus erythematosus,118,118,118,60224,488,118,40,60224
+3.0,normal,18,18,18,7730,64,18,12,7730
+3.0,systemic lupus erythematosus,32,32,23,10991,109,32,12,10991
+4.0,normal,44,44,44,18529,176,44,24,18529
+4.0,systemic lupus erythematosus,51,51,51,21541,204,51,24,21541

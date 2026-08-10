@@ -1,0 +1,29 @@
+name: sle-bcell-v7
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - "libblas=*=*openblas"
+  - scanpy
+  - anndata
+  - pandas
+  - numpy
+  - scipy
+  - matplotlib
+  - scikit-learn
+  - statsmodels
+  - python-igraph
+  - leidenalg
+  - harmonypy
+  - scrublet
+  - h5py=3.16
+  # h5py 3.16 Windows build is linked against HDF5 2.1; pinning avoids
+  # the runtime ABI warning observed with HDF5 2.2.
+  - hdf5=2.1
+  - pytables
+  - zstandard
+  - psutil
+  - pip
+  - pip:
+      - session-info
