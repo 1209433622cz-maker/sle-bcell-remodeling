@@ -52,6 +52,7 @@ science.abf1970.pdf
 # Recomputable cell-level exports and transient run pointers.
 phase17_v7/gateC2A/*/10_ranked_markers_*.csv
 phase17_v7/**/_RUNNING_*.txt
+phase17_v7/**/doublet_score_checkpoints/
 
 # Runtime, editor and Office artifacts.
 **/__pycache__/

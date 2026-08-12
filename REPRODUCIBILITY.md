@@ -35,25 +35,46 @@ The resolved environment export is available at
 `audit_tools/environment_phase17_v7_resolved_2026-08-10.yml`. The explicit
 Windows spec is preferred for exact local reconstruction.
 
+## Completed cell-policy gate
+
+Gate C2B1 completed 88/88 complete-library residual-risk runs and reconciled
+150,402/150,402 hard-QC cells. Its frozen decision is:
+
+- primary: all 150,402 hard-QC cells;
+- sensitivity: exclude the 1,972 automatic residual-risk calls;
+- automatic second-round deletion: not authorized before state-graph localization.
+
+The binding report is
+`phase17_v7/gateC2B1/20260810_171000_full_library_doublets/16_GATE_C2B1_DECISION.md`.
+
 ## Active gate
 
-The current analysis gate is complete-library residual doublet-risk review:
+The current analysis gate is full disease-blind representation learning:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\audit_tools\run_6013RP_phase17_gateC2B1_full_doublets.ps1 `
-  -ResumeRunDir ".\phase17_v7\gateC2B1\20260810_171000_full_library_doublets"
+powershell -ExecutionPolicy Bypass -File .\audit_tools\run_6013RP_phase17_gateC2B2_full_representation.ps1 `
+  -ResumeRunDir ".\phase17_v7\gateC2B2\20260812_full_representation"
 ```
 
-This run does not automatically exclude predicted cells. It preserves paired
-per-library score/threshold checkpoints and produces a multimetric residual-risk
-review. The primary branch remains all hard-QC cells; a high-confidence-singlet
-branch is sensitivity only.
+The run freezes library-aware recurrent HVGs before fitting three independently
+checkpointed branches: all-hard-QC primary, residual-risk-negative and strong-
+ISG-excluded. The primary branch retains both an
+unintegrated graph and a Harmony graph adjusted by technical library. Formal
+review must include technical mixing, cross-cohort bridge samples, marker
+conservation, branch concordance and residual-risk localization.
 
-The full-PBMC B-lineage completeness audit is prepared separately:
+An immunoglobulin-dominance representation sensitivity is explicitly non-evaluable:
+the source raw feature space lacks canonical immunoglobulin constant genes and
+contains only three bona fide IG-prefix V/OR loci. Proxy genes are not substituted.
+
+The full-PBMC B-lineage completeness audit can be reconstructed separately:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\audit_tools\run_6013RP_phase17_blineage_extraction_audit.ps1
 ```
+
+Its binding decision retains source B-lineage labels as the primary input and
+uses refined outside-label candidates for mapping sensitivity only.
 
 ## Outcome lock
 

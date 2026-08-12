@@ -51,7 +51,7 @@ New-Item -ItemType Directory -Force -Path $RunDir | Out-Null
 
 $FullRaw = Join-Path $RunDir "04_full_raw_counts.h5ad"
 if (-not (Test-Path -LiteralPath $FullRaw)) {
-    Write-Host "[1/3] Extracting all hard-QC-passing raw counts..." -ForegroundColor Cyan
+    Write-Host "[1/4] Extracting all hard-QC-passing raw counts..." -ForegroundColor Cyan
     & $PythonExe (Join-Path $ToolDir "phase17_c2b_01_prepare_full.py") `
         --project-root $ProjectRoot `
         --gatec1-dir $GateC1Dir `
@@ -60,10 +60,10 @@ if (-not (Test-Path -LiteralPath $FullRaw)) {
         throw "Gate C2B-01 failed with exit code $LASTEXITCODE"
     }
 } else {
-    Write-Host "[1/3] Reusing existing full raw object: $FullRaw" -ForegroundColor Yellow
+    Write-Host "[1/4] Reusing existing full raw object: $FullRaw" -ForegroundColor Yellow
 }
 
-Write-Host "[2/3] Running resumable residual Scrublet diagnostics on complete libraries..." -ForegroundColor Cyan
+Write-Host "[2/4] Running resumable residual Scrublet diagnostics on complete libraries..." -ForegroundColor Cyan
 & $PythonExe (Join-Path $ToolDir "phase17_c2b_02_full_library_doublets.py") `
     --input-h5ad $FullRaw `
     --output-dir $RunDir
@@ -71,7 +71,7 @@ if ($LASTEXITCODE -ne 0) {
     throw "Gate C2B-02 failed with exit code $LASTEXITCODE"
 }
 
-Write-Host "[3/3] Building multimetric residual doublet review..." -ForegroundColor Cyan
+Write-Host "[3/4] Building multimetric residual doublet review..." -ForegroundColor Cyan
 & $PythonExe (Join-Path $ToolDir "phase17_c2b_03_review_residual_doublets.py") `
     --input-h5ad $FullRaw `
     --output-dir $RunDir
@@ -79,10 +79,18 @@ if ($LASTEXITCODE -ne 0) {
     throw "Gate C2B-03 review failed with exit code $LASTEXITCODE"
 }
 
+Write-Host "[4/4] Applying the programmatic Gate C2B1 decision contract..." -ForegroundColor Cyan
+& $PythonExe (Join-Path $ToolDir "phase17_c2b_05_finalize_gatec2b1.py") `
+    --run-dir $RunDir
+if ($LASTEXITCODE -ne 0) {
+    throw "Gate C2B1 finalization failed with exit code $LASTEXITCODE"
+}
+
 $PointerDir = Join-Path $ProjectRoot "phase17_v7\gateC2B1"
 New-Item -ItemType Directory -Force -Path $PointerDir | Out-Null
+$PortableRunDir = "phase17_v7\gateC2B1\" + (Split-Path -Leaf $RunDir)
 Set-Content -LiteralPath (Join-Path $PointerDir "_LATEST_GATE_C2B1.txt") `
-    -Value "run_dir=$RunDir" -Encoding UTF8
+    -Value "run_dir=$PortableRunDir" -Encoding UTF8
 
-Write-Host "Gate C2B1 completed. Review required before doublet exclusion:" -ForegroundColor Green
-Write-Host (Join-Path $RunDir "15_GATE_C2B1_RESIDUAL_DOUBLET_ASSESSMENT.md")
+Write-Host "Gate C2B1 completed with a programmatic cell-policy decision:" -ForegroundColor Green
+Write-Host (Join-Path $RunDir "16_GATE_C2B1_DECISION.md")

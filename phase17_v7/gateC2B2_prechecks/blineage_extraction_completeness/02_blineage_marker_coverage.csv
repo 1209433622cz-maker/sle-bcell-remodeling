@@ -1,0 +1,5 @@
+module,requested_genes,found_genes,found,missing
+b_specific,7,7,CD79A | CD79B | MS4A1 | CD19 | CD22 | CD37 | BANK1,
+b_apc,3,3,CD74 | HLA-DRA | CD40,
+plasma,7,7,MZB1 | JCHAIN | SDC1 | DERL3 | TNFRSF17 | SEC11C | CD38,
+non_b,14,12,CD3D | CD3E | NKG7 | GNLY | LST1 | TYROBP | FCER1G | S100A8 | S100A9 | FCGR3A | PPBP | PF4,TRBC1 | TRBC2

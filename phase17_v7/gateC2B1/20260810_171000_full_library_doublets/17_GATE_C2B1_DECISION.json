@@ -1,0 +1,68 @@
+{
+  "created_at": "2026-08-12T16:18:37+08:00",
+  "run_dir": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\gateC2B1\\20260810_171000_full_library_doublets",
+  "decision": "PASS_TO_C2B2_WITH_DUAL_BRANCH",
+  "all_checks_passed": true,
+  "cells": 150402,
+  "libraries": 88,
+  "automatic_residual_risk_calls": 1972,
+  "automatic_residual_risk_fraction": 0.01311152777223707,
+  "maximum_library_fraction": 0.0649087221095334,
+  "maximum_library_uuid": "e16d2c39-bfd1-4fb1-8ed6-ad6b16f3652e",
+  "checks": {
+    "all_library_runs_ok": {
+      "pass": true,
+      "detail": "88/88 libraries have status=ok"
+    },
+    "score_rows_complete": {
+      "pass": true,
+      "detail": "150,402 score rows for 150,402 H5AD cells"
+    },
+    "score_cell_ids_unique": {
+      "pass": true,
+      "detail": "unique score cell IDs: 150,402"
+    },
+    "score_cell_ids_match_h5ad": {
+      "pass": true,
+      "detail": "score and H5AD cell-ID sets compared exactly"
+    },
+    "source_indices_match_h5ad": {
+      "pass": true,
+      "detail": "unique score indices match the retained H5AD source-index set; range 0-152,980"
+    },
+    "predicted_totals_reconcile": {
+      "pass": true,
+      "detail": "cell table=1,972; library table=1,972"
+    },
+    "checkpoint_pairs_complete": {
+      "pass": true,
+      "detail": "score/summary checkpoint pairs=88/88"
+    },
+    "no_protected_outcomes": {
+      "pass": true,
+      "detail": "protected-like columns=none"
+    },
+    "no_extreme_library_rate": {
+      "pass": true,
+      "detail": "libraries above 20%=0"
+    },
+    "weak_key_metric_correlations": {
+      "pass": true,
+      "detail": "maximum absolute key Spearman rho=0.046"
+    },
+    "modest_rna_content_shift": {
+      "pass": true,
+      "detail": "median UMI fold=1.104; gene fold=1.078"
+    },
+    "no_mixed_lineage_enrichment": {
+      "pass": true,
+      "detail": "median max non-B fraction delta=-0.000004"
+    }
+  },
+  "binding_policy": {
+    "primary_branch": "all-hard-QC",
+    "sensitivity_branch": "automatic residual-risk negatives",
+    "automatic_exclusion_authorized": false,
+    "final_exclusion_requires": "disease-blind state-graph localization at Gate C2B3"
+  }
+}

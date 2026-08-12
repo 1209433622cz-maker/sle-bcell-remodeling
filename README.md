@@ -29,10 +29,13 @@ Active advisor decision:
 
 - v6 is frozen for provenance and is not submission-ready.
 - v7/Phase 17 is the active analysis generation.
-- Gate C2A supports full representation learning but its smoke-stage doublet
-  calls are not freezable.
-- Gate C2B-01 passed: 150,402 hard-QC cells by 30,172 genes were extracted from
-  `raw/X` with protected outcomes removed from the working object.
+- Gate C2B1 passed programmatically after complete-library residual-risk scoring:
+  150,402/150,402 cells and 88/88 libraries reconciled exactly.
+- The 1,972 automatic residual-risk calls (1.31%) are sensitivity-only; no
+  second-round automatic deletion is authorized before disease-blind graph review.
+- Full-PBMC audit supports source `B cell` plus `plasmablast` labels as the
+  primary input; 768 core-BCR-supported external candidates are mapping-only.
+- Gate C2B2 full disease-blind representation is the active compute gate.
 
 ## Research Proposal (RP)
 
@@ -71,10 +74,10 @@ tracked manifests and `REPRODUCIBILITY.md`.
 
 ## Near-Term Priorities
 
-1. Complete Gate C2B1 Scrublet scoring on all complete technical libraries.
-2. Review library-level rates, score distributions and mixed-lineage enrichment;
-   freeze the doublet policy only after that review.
-3. Rebuild full unintegrated and Harmony B-cell representations.
+1. Complete Gate C2B2 full recurrent-HVG, unintegrated and Harmony representations.
+2. Compare all-hard-QC, residual-risk-negative and ISG-excluded branches; document
+   the source-feature limitation that makes IG-dominance sensitivity non-evaluable.
+3. Audit technical mixing, bridge-sample concordance and biological marker conservation.
 4. Freeze neutral states using markers, biological coverage and resampling
    stability before disease outcomes are unlocked.
 5. Run cohort 4 primary composition and sample-by-state pseudobulk analyses;
@@ -85,22 +88,26 @@ tracked manifests and `REPRODUCIBILITY.md`.
 ## Local Compute Handoff
 
 The discovery and validation datasets are already local. The next long run is
-resumable complete-library doublet scoring. From the project root:
+the resumable Gate C2B2 representation workflow. From the project root:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\audit_tools\run_6013RP_phase17_gateC2B1_full_doublets.ps1 `
-  -ResumeRunDir ".\phase17_v7\gateC2B1\20260810_171000_full_library_doublets"
+powershell -ExecutionPolicy Bypass -File .\audit_tools\run_6013RP_phase17_gateC2B2_full_representation.ps1 `
+  -ResumeRunDir ".\phase17_v7\gateC2B2\20260812_full_representation"
 ```
 
-The runner reuses the validated 258.1 MB full raw object and checkpoints every
-completed library. Completion does not authorize automatic doublet exclusion;
-the generated review report is the next decision gate.
+The runner first freezes disease-blind recurrent-HVG inputs and then checkpoints
+each of three representation branches independently. Repeating the same command
+reuses every valid checkpoint. Formal full-data review, not software-test output,
+determines whether Gate C2B2 passes to neutral state freezing.
+If the review reports Harmony non-convergence at 20 iterations, rerun the same
+directory with `-HarmonyMaxIter 40`; lower-limit checkpoints are then recomputed.
 
 ## Active design documents
 
 - `00_project_management/advisor_full_project_reassessment_2026-08-10.md`
 - `00_project_management/external_audit_action_crosswalk_2026-08-10.md`
-- `00_project_management/next_stage_decision_2026-08-10.md`
+- `00_project_management/next_stage_decision_2026-08-12.md`
+- `00_project_management/phase17_integrity_audit_2026-08-12.md`
 - `01_manuscript/manuscript_v7_scientific_blueprint_2026-08-10.md`
 - `01_manuscript/figure1_v7_legend_draft_2026-08-10.md`
 - `04_submission/figure_architecture_v7_nature_style_2026-08-10.md`
@@ -108,7 +115,8 @@ the generated review report is the next decision gate.
 - `03_results/phase17_v7_figure1_study_design_2026-08-10/FIGURE1_TECHNICAL_QC.md`
 - `phase17_v7/gateC2A/20260810_164012_smoke/16_GATE_C2A_DECISION.md`
 - `phase17_v7/gateC1/20260806_134213_hotfix_v1_1/16_STRICT_COMMON_SUPPORT_ERRATUM.md`
-- `phase17_v7/gateC2B1/20260810_171000_full_library_doublets/09_GATE_C2B1_PREPARATION_STATUS.md`
+- `phase17_v7/gateC2B1/20260810_171000_full_library_doublets/16_GATE_C2B1_DECISION.md`
+- `phase17_v7/gateC2B2_prechecks/blineage_extraction_completeness/10_BLINEAGE_INPUT_DECISION.md`
 
 ## Reproducibility locks
 

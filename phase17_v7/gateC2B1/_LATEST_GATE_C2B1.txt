@@ -1,0 +1,1 @@
+run_dir=phase17_v7\gateC2B1\20260810_171000_full_library_doublets

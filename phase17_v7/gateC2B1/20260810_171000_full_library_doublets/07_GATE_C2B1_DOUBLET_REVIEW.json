@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-08-10T19:59:32+08:00",
+  "input_h5ad": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\gateC2B1\\20260810_171000_full_library_doublets\\04_full_raw_counts.h5ad",
+  "input_cells": 150402,
+  "scored_cells": 150402,
+  "predicted_doublets": 1972,
+  "predicted_doublet_fraction": 0.01311152777223707,
+  "successful_or_resumed_libraries": 88,
+  "skipped_libraries": 0,
+  "error_libraries": 0,
+  "median_library_fraction": 0.012155616779239247,
+  "maximum_library_fraction": 0.06490872210953347,
+  "libraries_above_0_20": 0,
+  "freeze_status": "REVIEW_REQUIRED_DO_NOT_EXCLUDE_YET",
+  "diagnostic_role": "RESIDUAL_DOUBLET_RISK_AFTER_SOURCE_PIPELINE",
+  "branch_policy": [
+    "all-hard-QC",
+    "high-confidence-singlet sensitivity"
+  ],
+  "disease_blind": true
+}

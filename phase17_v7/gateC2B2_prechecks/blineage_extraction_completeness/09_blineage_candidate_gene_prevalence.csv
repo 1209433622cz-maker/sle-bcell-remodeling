@@ -1,0 +1,233 @@
+cell_type,gene,candidate_cells,detected_cells,detected_fraction,median_umi_among_detected
+"CD4-positive, alpha-beta T cell",CD79A,705,274,0.38865248226950355,1.0
+"CD4-positive, alpha-beta T cell",CD79B,705,312,0.4425531914893617,1.0
+"CD4-positive, alpha-beta T cell",MS4A1,705,160,0.22695035460992907,1.0
+"CD4-positive, alpha-beta T cell",CD19,705,18,0.02553191489361702,1.0
+"CD4-positive, alpha-beta T cell",CD22,705,38,0.05390070921985816,1.0
+"CD4-positive, alpha-beta T cell",CD37,705,673,0.9546099290780142,1.0
+"CD4-positive, alpha-beta T cell",BANK1,705,49,0.06950354609929078,1.0
+"CD4-positive, alpha-beta T cell",CD74,705,515,0.7304964539007093,2.0
+"CD4-positive, alpha-beta T cell",HLA-DRA,705,330,0.46808510638297873,1.0
+"CD4-positive, alpha-beta T cell",CD40,705,17,0.024113475177304965,1.0
+"CD4-positive, alpha-beta T cell",MZB1,705,13,0.018439716312056736,1.0
+"CD4-positive, alpha-beta T cell",JCHAIN,705,42,0.059574468085106386,1.0
+"CD4-positive, alpha-beta T cell",SDC1,705,0,0.0,
+"CD4-positive, alpha-beta T cell",DERL3,705,1,0.0014184397163120568,1.0
+"CD4-positive, alpha-beta T cell",TNFRSF17,705,3,0.00425531914893617,1.0
+"CD4-positive, alpha-beta T cell",SEC11C,705,153,0.2170212765957447,1.0
+"CD4-positive, alpha-beta T cell",CD38,705,15,0.02127659574468085,1.0
+"CD4-positive, alpha-beta T cell",CD3D,705,264,0.37446808510638296,1.0
+"CD4-positive, alpha-beta T cell",CD3E,705,156,0.22127659574468084,1.0
+"CD4-positive, alpha-beta T cell",NKG7,705,37,0.0524822695035461,1.0
+"CD4-positive, alpha-beta T cell",GNLY,705,41,0.05815602836879433,1.0
+"CD4-positive, alpha-beta T cell",LST1,705,33,0.04680851063829787,1.0
+"CD4-positive, alpha-beta T cell",TYROBP,705,48,0.06808510638297872,1.0
+"CD4-positive, alpha-beta T cell",FCER1G,705,38,0.05390070921985816,1.0
+"CD4-positive, alpha-beta T cell",S100A8,705,108,0.15319148936170213,1.0
+"CD4-positive, alpha-beta T cell",S100A9,705,162,0.2297872340425532,1.0
+"CD4-positive, alpha-beta T cell",FCGR3A,705,3,0.00425531914893617,1.0
+"CD4-positive, alpha-beta T cell",PPBP,705,18,0.02553191489361702,1.0
+"CD4-positive, alpha-beta T cell",PF4,705,20,0.028368794326241134,1.0
+"CD8-positive, alpha-beta T cell",CD79A,153,71,0.46405228758169936,1.0
+"CD8-positive, alpha-beta T cell",CD79B,153,53,0.3464052287581699,1.0
+"CD8-positive, alpha-beta T cell",MS4A1,153,46,0.3006535947712418,1.0
+"CD8-positive, alpha-beta T cell",CD19,153,3,0.0196078431372549,1.0
+"CD8-positive, alpha-beta T cell",CD22,153,3,0.0196078431372549,1.0
+"CD8-positive, alpha-beta T cell",CD37,153,146,0.954248366013072,1.0
+"CD8-positive, alpha-beta T cell",BANK1,153,7,0.0457516339869281,1.0
+"CD8-positive, alpha-beta T cell",CD74,153,120,0.7843137254901961,2.0
+"CD8-positive, alpha-beta T cell",HLA-DRA,153,86,0.5620915032679739,1.0
+"CD8-positive, alpha-beta T cell",CD40,153,0,0.0,
+"CD8-positive, alpha-beta T cell",MZB1,153,6,0.0392156862745098,1.0
+"CD8-positive, alpha-beta T cell",JCHAIN,153,9,0.058823529411764705,1.0
+"CD8-positive, alpha-beta T cell",SDC1,153,0,0.0,
+"CD8-positive, alpha-beta T cell",DERL3,153,0,0.0,
+"CD8-positive, alpha-beta T cell",TNFRSF17,153,2,0.013071895424836602,1.0
+"CD8-positive, alpha-beta T cell",SEC11C,153,20,0.13071895424836602,1.0
+"CD8-positive, alpha-beta T cell",CD38,153,1,0.006535947712418301,1.0
+"CD8-positive, alpha-beta T cell",CD3D,153,65,0.42483660130718953,1.0
+"CD8-positive, alpha-beta T cell",CD3E,153,34,0.2222222222222222,1.0
+"CD8-positive, alpha-beta T cell",NKG7,153,18,0.11764705882352941,1.0
+"CD8-positive, alpha-beta T cell",GNLY,153,10,0.06535947712418301,1.0
+"CD8-positive, alpha-beta T cell",LST1,153,11,0.0718954248366013,1.0
+"CD8-positive, alpha-beta T cell",TYROBP,153,12,0.0784313725490196,1.0
+"CD8-positive, alpha-beta T cell",FCER1G,153,5,0.032679738562091505,1.0
+"CD8-positive, alpha-beta T cell",S100A8,153,25,0.16339869281045752,1.0
+"CD8-positive, alpha-beta T cell",S100A9,153,37,0.24183006535947713,1.0
+"CD8-positive, alpha-beta T cell",FCGR3A,153,0,0.0,
+"CD8-positive, alpha-beta T cell",PPBP,153,4,0.026143790849673203,1.0
+"CD8-positive, alpha-beta T cell",PF4,153,0,0.0,
+classical monocyte,CD79A,24,7,0.2916666666666667,1.0
+classical monocyte,CD79B,24,10,0.4166666666666667,1.0
+classical monocyte,MS4A1,24,4,0.16666666666666666,1.0
+classical monocyte,CD19,24,3,0.125,1.0
+classical monocyte,CD22,24,3,0.125,1.0
+classical monocyte,CD37,24,23,0.9583333333333334,2.0
+classical monocyte,BANK1,24,5,0.20833333333333334,1.0
+classical monocyte,CD74,24,24,1.0,51.5
+classical monocyte,HLA-DRA,24,24,1.0,74.5
+classical monocyte,CD40,24,2,0.08333333333333333,1.5
+classical monocyte,MZB1,24,0,0.0,
+classical monocyte,JCHAIN,24,1,0.041666666666666664,1.0
+classical monocyte,SDC1,24,0,0.0,
+classical monocyte,DERL3,24,0,0.0,
+classical monocyte,TNFRSF17,24,0,0.0,
+classical monocyte,SEC11C,24,9,0.375,1.0
+classical monocyte,CD38,24,2,0.08333333333333333,1.0
+classical monocyte,CD3D,24,1,0.041666666666666664,1.0
+classical monocyte,CD3E,24,1,0.041666666666666664,1.0
+classical monocyte,NKG7,24,8,0.3333333333333333,1.0
+classical monocyte,GNLY,24,7,0.2916666666666667,1.0
+classical monocyte,LST1,24,23,0.9583333333333334,7.0
+classical monocyte,TYROBP,24,23,0.9583333333333334,14.0
+classical monocyte,FCER1G,24,21,0.875,6.0
+classical monocyte,S100A8,24,16,0.6666666666666666,2.0
+classical monocyte,S100A9,24,22,0.9166666666666666,4.0
+classical monocyte,FCGR3A,24,4,0.16666666666666666,2.5
+classical monocyte,PPBP,24,1,0.041666666666666664,1.0
+classical monocyte,PF4,24,0,0.0,
+conventional dendritic cell,CD79A,2744,683,0.2489067055393586,1.0
+conventional dendritic cell,CD79B,2744,1048,0.3819241982507289,1.0
+conventional dendritic cell,MS4A1,2744,514,0.18731778425655976,1.0
+conventional dendritic cell,CD19,2744,128,0.04664723032069971,1.0
+conventional dendritic cell,CD22,2744,489,0.1782069970845481,1.0
+conventional dendritic cell,CD37,2744,2714,0.989067055393586,3.0
+conventional dendritic cell,BANK1,2744,1083,0.3946793002915452,1.0
+conventional dendritic cell,CD74,2744,2744,1.0,92.0
+conventional dendritic cell,HLA-DRA,2744,2744,1.0,95.5
+conventional dendritic cell,CD40,2744,279,0.10167638483965015,1.0
+conventional dendritic cell,MZB1,2744,84,0.030612244897959183,1.0
+conventional dendritic cell,JCHAIN,2744,209,0.0761661807580175,1.0
+conventional dendritic cell,SDC1,2744,0,0.0,
+conventional dendritic cell,DERL3,2744,40,0.014577259475218658,1.0
+conventional dendritic cell,TNFRSF17,2744,6,0.002186588921282799,1.0
+conventional dendritic cell,SEC11C,2744,799,0.2911807580174927,1.0
+conventional dendritic cell,CD38,2744,375,0.13666180758017493,1.0
+conventional dendritic cell,CD3D,2744,652,0.23760932944606414,1.0
+conventional dendritic cell,CD3E,2744,510,0.1858600583090379,1.0
+conventional dendritic cell,NKG7,2744,1120,0.40816326530612246,1.0
+conventional dendritic cell,GNLY,2744,1185,0.43185131195335275,1.0
+conventional dendritic cell,LST1,2744,2677,0.9755830903790087,7.0
+conventional dendritic cell,TYROBP,2744,2613,0.952259475218659,10.0
+conventional dendritic cell,FCER1G,2744,2689,0.9799562682215743,8.0
+conventional dendritic cell,S100A8,2744,2165,0.7889941690962099,2.0
+conventional dendritic cell,S100A9,2744,2531,0.9223760932944607,4.0
+conventional dendritic cell,FCGR3A,2744,180,0.06559766763848396,1.0
+conventional dendritic cell,PPBP,2744,509,0.18549562682215742,1.0
+conventional dendritic cell,PF4,2744,385,0.14030612244897958,1.0
+lymphocyte,CD79A,21,11,0.5238095238095238,4.0
+lymphocyte,CD79B,21,17,0.8095238095238095,2.0
+lymphocyte,MS4A1,21,12,0.5714285714285714,2.0
+lymphocyte,CD19,21,2,0.09523809523809523,1.0
+lymphocyte,CD22,21,7,0.3333333333333333,1.0
+lymphocyte,CD37,21,21,1.0,3.0
+lymphocyte,BANK1,21,9,0.42857142857142855,2.0
+lymphocyte,CD74,21,21,1.0,26.0
+lymphocyte,HLA-DRA,21,19,0.9047619047619048,13.0
+lymphocyte,CD40,21,3,0.14285714285714285,1.0
+lymphocyte,MZB1,21,2,0.09523809523809523,1.5
+lymphocyte,JCHAIN,21,4,0.19047619047619047,1.0
+lymphocyte,SDC1,21,0,0.0,
+lymphocyte,DERL3,21,2,0.09523809523809523,1.5
+lymphocyte,TNFRSF17,21,1,0.047619047619047616,1.0
+lymphocyte,SEC11C,21,11,0.5238095238095238,1.0
+lymphocyte,CD38,21,3,0.14285714285714285,1.0
+lymphocyte,CD3D,21,20,0.9523809523809523,4.0
+lymphocyte,CD3E,21,14,0.6666666666666666,3.0
+lymphocyte,NKG7,21,9,0.42857142857142855,1.0
+lymphocyte,GNLY,21,4,0.19047619047619047,1.5
+lymphocyte,LST1,21,4,0.19047619047619047,1.0
+lymphocyte,TYROBP,21,6,0.2857142857142857,1.0
+lymphocyte,FCER1G,21,2,0.09523809523809523,1.0
+lymphocyte,S100A8,21,13,0.6190476190476191,2.0
+lymphocyte,S100A9,21,14,0.6666666666666666,2.5
+lymphocyte,FCGR3A,21,1,0.047619047619047616,1.0
+lymphocyte,PPBP,21,3,0.14285714285714285,1.0
+lymphocyte,PF4,21,0,0.0,
+non-classical monocyte,CD79A,4,1,0.25,4.0
+non-classical monocyte,CD79B,4,4,1.0,1.0
+non-classical monocyte,MS4A1,4,0,0.0,
+non-classical monocyte,CD19,4,1,0.25,1.0
+non-classical monocyte,CD22,4,0,0.0,
+non-classical monocyte,CD37,4,4,1.0,2.0
+non-classical monocyte,BANK1,4,0,0.0,
+non-classical monocyte,CD74,4,4,1.0,67.5
+non-classical monocyte,HLA-DRA,4,4,1.0,88.0
+non-classical monocyte,CD40,4,0,0.0,
+non-classical monocyte,MZB1,4,0,0.0,
+non-classical monocyte,JCHAIN,4,0,0.0,
+non-classical monocyte,SDC1,4,0,0.0,
+non-classical monocyte,DERL3,4,0,0.0,
+non-classical monocyte,TNFRSF17,4,0,0.0,
+non-classical monocyte,SEC11C,4,0,0.0,
+non-classical monocyte,CD38,4,0,0.0,
+non-classical monocyte,CD3D,4,0,0.0,
+non-classical monocyte,CD3E,4,0,0.0,
+non-classical monocyte,NKG7,4,1,0.25,1.0
+non-classical monocyte,GNLY,4,1,0.25,1.0
+non-classical monocyte,LST1,4,4,1.0,7.5
+non-classical monocyte,TYROBP,4,4,1.0,18.5
+non-classical monocyte,FCER1G,4,4,1.0,11.5
+non-classical monocyte,S100A8,4,3,0.75,1.0
+non-classical monocyte,S100A9,4,2,0.5,4.0
+non-classical monocyte,FCGR3A,4,4,1.0,3.0
+non-classical monocyte,PPBP,4,0,0.0,
+non-classical monocyte,PF4,4,1,0.25,1.0
+plasmacytoid dendritic cell,CD79A,990,496,0.501010101010101,1.0
+plasmacytoid dendritic cell,CD79B,990,178,0.1797979797979798,1.0
+plasmacytoid dendritic cell,MS4A1,990,153,0.15454545454545454,1.0
+plasmacytoid dendritic cell,CD19,990,39,0.03939393939393939,1.0
+plasmacytoid dendritic cell,CD22,990,75,0.07575757575757576,1.0
+plasmacytoid dendritic cell,CD37,990,977,0.9868686868686869,2.0
+plasmacytoid dendritic cell,BANK1,990,291,0.29393939393939394,1.0
+plasmacytoid dendritic cell,CD74,990,990,1.0,38.0
+plasmacytoid dendritic cell,HLA-DRA,990,990,1.0,16.0
+plasmacytoid dendritic cell,CD40,990,22,0.022222222222222223,1.0
+plasmacytoid dendritic cell,MZB1,990,873,0.8818181818181818,3.0
+plasmacytoid dendritic cell,JCHAIN,990,986,0.9959595959595959,13.0
+plasmacytoid dendritic cell,SDC1,990,0,0.0,
+plasmacytoid dendritic cell,DERL3,990,759,0.7666666666666667,2.0
+plasmacytoid dendritic cell,TNFRSF17,990,81,0.08181818181818182,1.0
+plasmacytoid dendritic cell,SEC11C,990,535,0.5404040404040404,1.0
+plasmacytoid dendritic cell,CD38,990,85,0.08585858585858586,1.0
+plasmacytoid dendritic cell,CD3D,990,153,0.15454545454545454,1.0
+plasmacytoid dendritic cell,CD3E,990,155,0.15656565656565657,1.0
+plasmacytoid dendritic cell,NKG7,990,352,0.35555555555555557,1.0
+plasmacytoid dendritic cell,GNLY,990,341,0.34444444444444444,1.0
+plasmacytoid dendritic cell,LST1,990,432,0.43636363636363634,1.0
+plasmacytoid dendritic cell,TYROBP,990,958,0.9676767676767677,5.0
+plasmacytoid dendritic cell,FCER1G,990,968,0.9777777777777777,6.0
+plasmacytoid dendritic cell,S100A8,990,653,0.6595959595959596,1.0
+plasmacytoid dendritic cell,S100A9,990,759,0.7666666666666667,2.0
+plasmacytoid dendritic cell,FCGR3A,990,40,0.04040404040404041,1.0
+plasmacytoid dendritic cell,PPBP,990,139,0.1404040404040404,1.0
+plasmacytoid dendritic cell,PF4,990,96,0.09696969696969697,1.0
+progenitor cell,CD79A,70,21,0.3,1.0
+progenitor cell,CD79B,70,26,0.37142857142857144,1.0
+progenitor cell,MS4A1,70,14,0.2,1.0
+progenitor cell,CD19,70,0,0.0,
+progenitor cell,CD22,70,4,0.05714285714285714,1.0
+progenitor cell,CD37,70,69,0.9857142857142858,3.0
+progenitor cell,BANK1,70,16,0.22857142857142856,1.0
+progenitor cell,CD74,70,70,1.0,8.0
+progenitor cell,HLA-DRA,70,67,0.9571428571428572,8.0
+progenitor cell,CD40,70,1,0.014285714285714285,1.0
+progenitor cell,MZB1,70,15,0.21428571428571427,1.0
+progenitor cell,JCHAIN,70,5,0.07142857142857142,2.0
+progenitor cell,SDC1,70,0,0.0,
+progenitor cell,DERL3,70,2,0.02857142857142857,1.0
+progenitor cell,TNFRSF17,70,0,0.0,
+progenitor cell,SEC11C,70,21,0.3,1.0
+progenitor cell,CD38,70,22,0.3142857142857143,1.0
+progenitor cell,CD3D,70,8,0.11428571428571428,1.0
+progenitor cell,CD3E,70,8,0.11428571428571428,1.0
+progenitor cell,NKG7,70,20,0.2857142857142857,1.0
+progenitor cell,GNLY,70,18,0.2571428571428571,1.0
+progenitor cell,LST1,70,38,0.5428571428571428,1.0
+progenitor cell,TYROBP,70,33,0.4714285714285714,1.0
+progenitor cell,FCER1G,70,21,0.3,1.0
+progenitor cell,S100A8,70,39,0.5571428571428572,1.0
+progenitor cell,S100A9,70,53,0.7571428571428571,2.0
+progenitor cell,FCGR3A,70,1,0.014285714285714285,1.0
+progenitor cell,PPBP,70,7,0.1,1.0
+progenitor cell,PF4,70,4,0.05714285714285714,1.0

@@ -31,11 +31,20 @@ if ([string]::IsNullOrWhiteSpace($PythonExe) -or -not (Test-Path -LiteralPath $P
 if (-not (Test-Path -LiteralPath $InputH5ad)) { throw "Full PBMC H5AD not found: $InputH5ad" }
 
 New-Item -ItemType Directory -Force -Path $OutputDir | Out-Null
+Write-Host "[1/2] Auditing full-PBMC B-lineage extraction completeness..." -ForegroundColor Cyan
 & $PythonExe (Join-Path $ProjectRoot "audit_tools\phase17_c2b_04_blineage_extraction_audit.py") `
     --input-h5ad $InputH5ad `
     --output-dir $OutputDir `
     --chunk-size $ChunkSize
 if ($LASTEXITCODE -ne 0) { throw "B-lineage extraction audit failed with exit code $LASTEXITCODE" }
 
-Write-Host "B-lineage extraction audit completed; review required:" -ForegroundColor Green
-Write-Host (Join-Path $OutputDir "06_BLINEAGE_EXTRACTION_AUDIT.md")
+Write-Host "[2/2] Refining candidates with gene-level identity evidence..." -ForegroundColor Cyan
+& $PythonExe (Join-Path $ProjectRoot "audit_tools\phase17_c2b_06_refine_blineage_candidates.py") `
+    --input-h5ad $InputH5ad `
+    --candidates (Join-Path $OutputDir "04_blineage_strict_candidates.csv.gz") `
+    --output-dir $OutputDir `
+    --chunk-size $ChunkSize
+if ($LASTEXITCODE -ne 0) { throw "B-lineage candidate refinement failed with exit code $LASTEXITCODE" }
+
+Write-Host "B-lineage extraction audit and input decision completed:" -ForegroundColor Green
+Write-Host (Join-Path $OutputDir "10_BLINEAGE_INPUT_DECISION.md")

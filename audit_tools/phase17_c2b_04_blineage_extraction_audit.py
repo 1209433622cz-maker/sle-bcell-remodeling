@@ -79,7 +79,11 @@ def main() -> int:
     chunks = []
     for start in range(0, adata.n_obs, args.chunk_size):
         stop = min(start + args.chunk_size, adata.n_obs)
-        block = matrix[start:stop, indices]
+        # Backed CSR performs poorly when row and non-contiguous column indexing
+        # are combined. Read contiguous rows first, then select the small marker
+        # panel from the in-memory sparse block.
+        block = matrix[start:stop]
+        block = block[:, indices]
         values = block.toarray() if sparse.issparse(block) else np.asarray(block)
         row = {"cell_id": safe_obs.index[start:stop].to_numpy()}
         for name, genes in found.items():
@@ -88,7 +92,7 @@ def main() -> int:
             row[f"{name}_detected"] = np.count_nonzero(module, axis=1)
             row[f"{name}_umi"] = module.sum(axis=1)
         chunks.append(pd.DataFrame(row))
-        print(f"[B-LINEAGE] {stop:,}/{adata.n_obs:,} cells")
+        print(f"[B-LINEAGE] {stop:,}/{adata.n_obs:,} cells", flush=True)
 
     scores = pd.concat(chunks, ignore_index=True).set_index("cell_id")
     diagnostics = safe_obs.join(scores, how="left", validate="one_to_one")

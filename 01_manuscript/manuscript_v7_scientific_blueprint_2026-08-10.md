@@ -6,6 +6,12 @@ This is the active writing scaffold for the raw-count reanalysis. It is not a
 results manuscript and must not inherit unsupported v6 effect sizes, P values,
 state names or validation claims.
 
+As of 12 August 2026, Gate C2B1 has passed with all 150,402 hard-QC cells in the
+primary branch and 1,972 residual-risk calls reserved for sensitivity analysis.
+The full-PBMC B-lineage audit retains source B-lineage labels as primary and
+outside-label candidates as mapping-only. Gate C2B2 representation fitting is
+active; disease outcomes remain locked and no neutral state names are frozen.
+
 ## Working title
 
 **Donor- and cohort-resolved single-cell analysis separates compositional and

@@ -1,0 +1,9 @@
+cell_type,strict_candidates,core_b_identity,plasma_like_program,core_b_identity_low_non_b,median_core_b_detected,median_shared_apc_detected,median_non_b_detected,core_b_identity_fraction
+"CD4-positive, alpha-beta T cell",705,98,9,47,1.0,1.0,1.0,0.13900709219858157
+"CD8-positive, alpha-beta T cell",153,22,3,8,1.0,1.0,1.0,0.1437908496732026
+classical monocyte,24,4,0,0,1.0,2.0,5.0,0.16666666666666666
+conventional dendritic cell,2744,516,108,0,1.0,2.0,6.0,0.1880466472303207
+lymphocyte,21,13,5,1,2.0,2.0,4.0,0.6190476190476191
+non-classical monocyte,4,1,0,0,1.0,2.0,5.5,0.25
+plasmacytoid dendritic cell,990,105,965,0,1.0,2.0,5.0,0.10606060606060606
+progenitor cell,70,9,6,1,1.0,2.0,3.0,0.12857142857142856

@@ -1,0 +1,12 @@
+cell_type,source_cells,candidate_cells,donors,samples,libraries,median_b_specific_detected,median_b_panel_purity,candidate_fraction_within_source_label
+"CD4-positive, alpha-beta T cell",380477,705,214,219,86,2.0,0.8,0.0018529372340509414
+classical monocyte,307429,24,23,23,18,2.0,0.77809346,7.80668056689512e-05
+"CD8-positive, alpha-beta T cell",248927,153,100,101,69,2.0,0.8,0.0006146380264093489
+B cell,151570,0,0,0,0,0.0,0.0,0.0
+natural killer cell,92554,0,0,0,0,0.0,0.0,0.0
+non-classical monocyte,48800,4,4,4,4,2.0,0.77042925,8.19672131147541e-05
+conventional dendritic cell,18203,2744,248,258,88,2.0,0.84150946,0.15074438279404495
+lymphocyte,8265,21,19,20,19,4.0,0.7980769,0.002540834845735027
+plasmacytoid dendritic cell,5233,990,196,202,86,2.0,0.8238994,0.1891840244601567
+plasmablast,1411,0,0,0,0,0.0,0.0,0.0
+progenitor cell,807,70,59,60,47,2.0,0.8110119,0.08674101610904585
