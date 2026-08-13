@@ -7,6 +7,7 @@ param(
     [int]$MaxCells = 0,
     [int]$NHvg = 3000,
     [int]$HarmonyMaxIter = 20,
+    [double]$PrimaryResolution = 0.4,
     [switch]$PreparationOnly
 )
 
@@ -125,7 +126,8 @@ if ($LASTEXITCODE -ne 0) { throw "Gate C2B2 representation fit failed with exit 
 
 Write-Host "[3/3] Reviewing mixing, bridge consistency, markers and branch stability..." -ForegroundColor Cyan
 & $PythonExe (Join-Path $ProjectRoot "audit_tools\phase17_c2b_09_review_representation.py") `
-    --run-dir $RunDir
+    --run-dir $RunDir `
+    --primary-resolution $PrimaryResolution
 if ($LASTEXITCODE -ne 0) { throw "Gate C2B2 review failed with exit code $LASTEXITCODE" }
 
 if ($MaxCells -eq 0) {

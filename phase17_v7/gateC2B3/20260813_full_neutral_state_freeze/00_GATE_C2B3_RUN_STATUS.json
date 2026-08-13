@@ -1,0 +1,11 @@
+{
+  "status": "FULL_RESAMPLING_PENDING",
+  "disease_blind": true,
+  "full_candidate_mapping_complete": true,
+  "full_marker_ranking_complete": true,
+  "full_resampling_complete": false,
+  "neutral_state_freeze_authorized": false,
+  "outcome_unlock_authorized": false,
+  "required_replicates": 20,
+  "resample_fraction": 0.8
+}

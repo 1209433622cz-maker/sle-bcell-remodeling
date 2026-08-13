@@ -1,0 +1,46 @@
+{
+  "schema_version": 2,
+  "created_at": "2026-08-12T18:21:23+08:00",
+  "status": "PASS_TO_REPRESENTATION_FIT",
+  "disease_blind": true,
+  "full_input_cells": 150402,
+  "working_cells": 150402,
+  "working_libraries": 88,
+  "residual_doublet_auto_calls": 1972,
+  "genes_after_min_cells": 16357,
+  "hvg_union": 3023,
+  "branches": [
+    {
+      "branch": "primary_ig_excluded",
+      "n_hvg": 3000,
+      "median_hvg_nbatches": 66.0,
+      "minimum_hvg_nbatches": 57,
+      "maximum_hvg_nbatches": 88,
+      "n_strong_isg": 23,
+      "n_immunoglobulin": 0,
+      "n_technical_nuisance": 0
+    },
+    {
+      "branch": "isg_excluded",
+      "n_hvg": 3000,
+      "median_hvg_nbatches": 66.0,
+      "minimum_hvg_nbatches": 57,
+      "maximum_hvg_nbatches": 88,
+      "n_strong_isg": 0,
+      "n_immunoglobulin": 0,
+      "n_technical_nuisance": 0
+    }
+  ],
+  "ig_dominance_sensitivity": {
+    "sensitivity": "immunoglobulin_dominance",
+    "status": "NOT_EVALUABLE_SOURCE_FEATURE_SPACE",
+    "canonical_ig_loci_in_source": 3,
+    "canonical_constant_genes_present": 0,
+    "canonical_constant_genes_expected": 13,
+    "present_constant_gene_symbols": "",
+    "canonical_ig_locus_symbols": "IGKV1OR2-118;IGKV3D-7;IGHV3OR16-17",
+    "reason": "The source raw feature space lacks canonical IG constant genes and contains fewer than 10 bona fide IG loci; an IG-dominance representation stress test would not be interpretable."
+  },
+  "protected_outcome_columns": [],
+  "test_mode": false
+}

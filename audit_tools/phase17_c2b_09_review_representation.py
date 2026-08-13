@@ -358,6 +358,26 @@ def main() -> int:
     gene_summary.to_csv(run_dir / "19_marker_gene_by_cluster.csv", index=False, encoding="utf-8-sig")
     module_summary.to_csv(run_dir / "20_marker_module_by_cluster.csv", index=False, encoding="utf-8-sig")
 
+    all_gene_summaries = []
+    all_module_summaries = []
+    for resolution in fit["resolutions"]:
+        key = resolution_key(float(resolution))
+        if key not in primary.obs:
+            continue
+        genes_at_resolution, modules_at_resolution = summarize_markers(
+            primary.obs, key, symbols, expression, detected
+        )
+        genes_at_resolution.insert(0, "resolution", float(resolution))
+        modules_at_resolution.insert(0, "resolution", float(resolution))
+        all_gene_summaries.append(genes_at_resolution)
+        all_module_summaries.append(modules_at_resolution)
+    pd.concat(all_gene_summaries, ignore_index=True).to_csv(
+        run_dir / "23_marker_gene_all_resolutions.csv", index=False, encoding="utf-8-sig"
+    )
+    pd.concat(all_module_summaries, ignore_index=True).to_csv(
+        run_dir / "24_marker_module_all_resolutions.csv", index=False, encoding="utf-8-sig"
+    )
+
     plot_representation(primary, cluster_key, figures)
     plot_marker_modules(module_summary, figures)
     plot_branch_concordance(concordance, figures)
@@ -387,6 +407,20 @@ def main() -> int:
     )
     primary_coverage = coverage[np.isclose(coverage["resolution"], args.primary_resolution)]
     primary_risk = risk[np.isclose(risk["resolution"], args.primary_resolution)]
+    branch_at_primary = concordance[
+        np.isclose(pd.to_numeric(concordance["resolution"], errors="coerce"), args.primary_resolution)
+        & concordance["comparison"].str.startswith("primary_all_cells_vs_")
+    ].set_index("comparison")
+    singlet_ari = float(
+        branch_at_primary.loc[
+            "primary_all_cells_vs_singlet_sensitivity", "adjusted_rand_index"
+        ]
+    )
+    isg_ari = float(
+        branch_at_primary.loc[
+            "primary_all_cells_vs_isg_excluded", "adjusted_rand_index"
+        ]
+    )
     expected_hvg = int(hvg["n_hvg"].iloc[0])
     test_mode = bool(preparation.get("test_mode"))
     ig_row = feature_sensitivity.loc[
@@ -419,6 +453,8 @@ def main() -> int:
             check("cluster_technical_coverage", bool((primary_coverage["max_library_fraction"] <= 0.50).all()), f"maximum library fraction={primary_coverage['max_library_fraction'].max():.3f}"),
             check("cluster_biological_coverage", bool((primary_coverage["n_samples"] >= 3).all()), f"minimum samples={int(primary_coverage['n_samples'].min())}"),
             check("residual_risk_not_dominant", bool((primary_risk["residual_auto_call_fraction"] <= 0.25).all()), f"maximum={primary_risk['residual_auto_call_fraction'].max():.3f}"),
+            check("singlet_branch_stability", singlet_ari >= 0.70, f"ARI={singlet_ari:.3f}; threshold=0.700"),
+            check("isg_excluded_branch_stability", isg_ari >= 0.70, f"ARI={isg_ari:.3f}; threshold=0.700"),
             check("marker_coverage", bool(marker_coverage.groupby("module")["present"].sum().ge(2).all()), "at least two genes present per marker module"),
             check("harmony_diagnostics_captured", harmony_diagnostics_captured, "convergence fields stored for all branches"),
             check("harmony_all_converged", harmony_all_converged, "all representation branches converged within the configured limit"),
@@ -430,6 +466,7 @@ def main() -> int:
         "hvg_counts", "technical_nuisance_excluded", "primary_ig_excluded",
         "isg_branch_excluded", "ig_dominance_sensitivity_documented",
         "mixing_improved", "bridge_consistency",
+        "singlet_branch_stability", "isg_excluded_branch_stability",
         "marker_coverage",
     }
     structural_pass = all(checks[name]["pass"] for name in structural_names)
@@ -479,18 +516,19 @@ def main() -> int:
     for name, result in checks.items():
         status = "PASS" if result["pass"] else "FAIL"
         lines.append(f"- [{status}] {name}: {result['detail']}")
-    lines.extend(
-        [
-            "",
-            "## Binding interpretation",
-            "",
-            "Software-test output verifies execution and file contracts only. Full-data",
-            "state names, cell exclusions and biological claims remain unauthorized until",
-            "marker coherence, coverage, branch concordance, residual-risk localization and",
-            "outside-label candidate mapping pass advisor review at Gate C2B3.",
-            "",
+    if test_mode:
+        interpretation = [
+            "Software-test output verifies execution and file contracts only. It does not",
+            "authorize full-data state names, cell exclusions or biological claims.",
         ]
-    )
+    else:
+        interpretation = [
+            "This full-data output verifies the representation and diagnostic contracts at",
+            "the selected backbone resolution. State names, cell exclusions and biological",
+            "claims remain unauthorized until resampling stability, ranked markers and",
+            "outside-label candidate mapping pass advisor review at Gate C2B3.",
+        ]
+    lines.extend(["", "## Binding interpretation", "", *interpretation, ""])
     (run_dir / "21_GATE_C2B2_REVIEW.md").write_text("\n".join(lines), encoding="utf-8")
     print(json.dumps(review, ensure_ascii=False, indent=2), flush=True)
     return 0 if not decision.endswith("FAIL") else 1

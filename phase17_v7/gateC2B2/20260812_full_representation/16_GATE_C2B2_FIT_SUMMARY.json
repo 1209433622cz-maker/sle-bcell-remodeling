@@ -1,0 +1,67 @@
+{
+  "created_at": "2026-08-13T03:26:59+08:00",
+  "status": "REPRESENTATION_FIT_COMPLETE_REVIEW_REQUIRED",
+  "disease_blind": true,
+  "prepared_h5ad": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\gateC2B2\\20260812_full_representation\\03_prepared_log_union_hvg.h5ad",
+  "cells_primary": 150402,
+  "cells_singlet_sensitivity": 148430,
+  "resolutions": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0,
+    1.2
+  ],
+  "harmony_max_iter": 20,
+  "branches": {
+    "primary_all_cells": {
+      "cells": 150402,
+      "genes": 3000,
+      "harmony_iterations": 2,
+      "harmony_converged": true,
+      "harmony_final_relative_objective_change": -0.04403863537623284,
+      "clusters": {
+        "0.2": 2,
+        "0.4": 5,
+        "0.6": 6,
+        "0.8": 7,
+        "1.0": 9,
+        "1.2": 11
+      }
+    },
+    "singlet_sensitivity": {
+      "cells": 148430,
+      "genes": 3000,
+      "harmony_iterations": 2,
+      "harmony_converged": true,
+      "harmony_final_relative_objective_change": -0.04451799746830231,
+      "clusters": {
+        "0.2": 3,
+        "0.4": 5,
+        "0.6": 6,
+        "0.8": 7,
+        "1.0": 11,
+        "1.2": 20
+      }
+    },
+    "isg_excluded": {
+      "cells": 150402,
+      "genes": 3000,
+      "harmony_iterations": 2,
+      "harmony_converged": true,
+      "harmony_final_relative_objective_change": -0.046682331034436454,
+      "clusters": {
+        "0.2": 3,
+        "0.4": 5,
+        "0.6": 7,
+        "0.8": 7,
+        "1.0": 10,
+        "1.2": 10
+      }
+    }
+  },
+  "maximum_cluster_residual_auto_call_fraction": 0.019177627942964518,
+  "maximum_cluster_library_fraction": 0.3333333333333333,
+  "bridge_samples": 53
+}

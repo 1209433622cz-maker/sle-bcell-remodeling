@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-08-13T13:38:50+08:00",
+  "decision": "READY_FOR_C2B3_ADVISOR_REVIEW",
+  "disease_blind": true,
+  "test_mode": false,
+  "primary_resolution": 0.4,
+  "checks": {
+    "fit_complete": {
+      "pass": true,
+      "detail": "REPRESENTATION_FIT_COMPLETE_REVIEW_REQUIRED"
+    },
+    "outcome_lock": {
+      "pass": true,
+      "detail": "protected columns=none"
+    },
+    "primary_cells": {
+      "pass": true,
+      "detail": "150,402/150,402"
+    },
+    "singlet_branch_exact": {
+      "pass": true,
+      "detail": "148,430 = 150,402 - 1,972"
+    },
+    "hvg_counts": {
+      "pass": true,
+      "detail": "all branches=3,000"
+    },
+    "technical_nuisance_excluded": {
+      "pass": true,
+      "detail": "maximum=0"
+    },
+    "primary_ig_excluded": {
+      "pass": true,
+      "detail": "primary immunoglobulin HVGs=0"
+    },
+    "isg_branch_excluded": {
+      "pass": true,
+      "detail": "ISG-excluded strong ISG HVGs=0"
+    },
+    "ig_dominance_sensitivity_documented": {
+      "pass": true,
+      "detail": "status=NOT_EVALUABLE_SOURCE_FEATURE_SPACE; canonical IG loci=3; constant genes=0"
+    },
+    "mixing_improved": {
+      "pass": true,
+      "detail": "library 0.083->0.014; cohort 0.693->0.365"
+    },
+    "bridge_consistency": {
+      "pass": true,
+      "detail": "Harmony median bridge-pair cosine distance did not increase"
+    },
+    "cluster_technical_coverage": {
+      "pass": true,
+      "detail": "maximum library fraction=0.031"
+    },
+    "cluster_biological_coverage": {
+      "pass": true,
+      "detail": "minimum samples=225"
+    },
+    "residual_risk_not_dominant": {
+      "pass": true,
+      "detail": "maximum=0.017"
+    },
+    "singlet_branch_stability": {
+      "pass": true,
+      "detail": "ARI=0.793; threshold=0.700"
+    },
+    "isg_excluded_branch_stability": {
+      "pass": true,
+      "detail": "ARI=0.772; threshold=0.700"
+    },
+    "marker_coverage": {
+      "pass": true,
+      "detail": "at least two genes present per marker module"
+    },
+    "harmony_diagnostics_captured": {
+      "pass": true,
+      "detail": "convergence fields stored for all branches"
+    },
+    "harmony_all_converged": {
+      "pass": true,
+      "detail": "all representation branches converged within the configured limit"
+    }
+  },
+  "manual_review_still_required": [
+    "marker coherence and contaminant localization",
+    "rare-state biological and technical coverage",
+    "branch discordance interpretation",
+    "B-lineage outside-label candidate mapping"
+  ]
+}

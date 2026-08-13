@@ -1,0 +1,2 @@
+﻿sensitivity,status,canonical_ig_loci_in_source,canonical_constant_genes_present,canonical_constant_genes_expected,present_constant_gene_symbols,canonical_ig_locus_symbols,reason
+immunoglobulin_dominance,NOT_EVALUABLE_SOURCE_FEATURE_SPACE,3,0,13,,IGKV1OR2-118;IGKV3D-7;IGHV3OR16-17,The source raw feature space lacks canonical IG constant genes and contains fewer than 10 bona fide IG loci; an IG-dominance representation stress test would not be interpretable.

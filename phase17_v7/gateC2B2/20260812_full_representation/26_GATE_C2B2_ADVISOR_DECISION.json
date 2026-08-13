@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-08-13T13:38:59+08:00",
+  "decision": "PASS_TO_C2B3_WITH_R04_IDENTITY_BACKBONE",
+  "disease_blind": true,
+  "outcome_unlock_authorized": false,
+  "identity_backbone_resolution": 0.4,
+  "identity_backbone_selection_rule": "Among resolutions 0.4-0.8 meeting cell/sample/library/residual-risk coverage, maximize the lower of singlet-removal and ISG-exclusion ARI; break ties toward the coarser resolution.",
+  "checks": {
+    "complete_full_run": {
+      "pass": true,
+      "detail": "150,402/150,402 cells; test_mode=False"
+    },
+    "outcome_lock": {
+      "pass": true,
+      "detail": "protected columns=none"
+    },
+    "review_contract": {
+      "pass": true,
+      "detail": "READY_FOR_C2B3_ADVISOR_REVIEW"
+    },
+    "harmony_converged": {
+      "pass": true,
+      "detail": "primary_all_cells=2 iterations, singlet_sensitivity=2 iterations, isg_excluded=2 iterations"
+    },
+    "identity_backbone_selected": {
+      "pass": true,
+      "detail": "r=0.4; minimum sensitivity ARI=0.772"
+    },
+    "marker_panel_complete": {
+      "pass": true,
+      "detail": "5 clusters x 10 modules"
+    }
+  },
+  "provisional_structures": [
+    {
+      "resolution": 0.6,
+      "cluster": "5",
+      "module": "plasmablast",
+      "interpretation": "plasmablast-enriched structure; provisional until Gate C2B3"
+    },
+    {
+      "resolution": 0.6,
+      "cluster": "3",
+      "module": "platelet",
+      "interpretation": "platelet-enriched structure; provisional until Gate C2B3"
+    }
+  ],
+  "substate_candidate_resolutions": [
+    0.6,
+    0.8
+  ],
+  "binding_limits": [
+    "r0.4 is an identity backbone, not a final named-state solution",
+    "r0.6 and r0.8 may be used only for constrained substate evaluation",
+    "residual-risk calls remain sensitivity-only rather than automatic exclusions",
+    "outside-label candidates remain mapping-only rather than primary input",
+    "disease and outcome metadata remain locked through Gate C2B3"
+  ],
+  "next_required_gate": "C2B3 disease-blind neutral-state stability and marker freeze"
+}

@@ -1,0 +1,3 @@
+﻿branch,n_hvg,median_hvg_nbatches,minimum_hvg_nbatches,maximum_hvg_nbatches,n_strong_isg,n_immunoglobulin,n_technical_nuisance
+primary_ig_excluded,3000,66.0,57,88,23,0,0
+isg_excluded,3000,66.0,57,88,0,0,0
