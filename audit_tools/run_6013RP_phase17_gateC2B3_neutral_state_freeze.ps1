@@ -66,7 +66,11 @@ if ([string]::IsNullOrWhiteSpace($ResumeRunDir)) {
         $RunDir = Join-Path $ProjectRoot "phase17_v7\gateC2B3\${Stamp}_neutral_state_freeze"
     }
 } else {
-    $RunDir = [System.IO.Path]::GetFullPath($ResumeRunDir)
+    if ([System.IO.Path]::IsPathRooted($ResumeRunDir)) {
+        $RunDir = [System.IO.Path]::GetFullPath($ResumeRunDir)
+    } else {
+        $RunDir = [System.IO.Path]::GetFullPath((Join-Path $ProjectRoot $ResumeRunDir))
+    }
 }
 New-Item -ItemType Directory -Force -Path $RunDir | Out-Null
 
