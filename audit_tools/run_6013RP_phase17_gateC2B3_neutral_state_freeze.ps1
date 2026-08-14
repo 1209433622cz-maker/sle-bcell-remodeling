@@ -84,16 +84,23 @@ foreach ($RequiredFile in @($PrimaryH5ad, $RawH5ad, $SourceH5ad, $CandidateProfi
 
 $ExpectedAnalysisCells = if ($MaxCells -gt 0) { $MaxCells } else { 150402 }
 $ExpectedTestMode = $MaxCells -gt 0
+$ExpectedResamplingSchema = 2
+$ExpectedHarmonyDimensions = 50
 $ResamplingReusable = $false
 $ResamplingStatusPath = Join-Path $RunDir "06_RESAMPLING_STATUS.json"
 if (Test-Path -LiteralPath $ResamplingStatusPath) {
     try {
         $Status = Get-Content -LiteralPath $ResamplingStatusPath -Raw | ConvertFrom-Json
         $ResamplingReusable = (
+            [int]$Status.schema_version -eq $ExpectedResamplingSchema -and
             [bool]$Status.test_mode -eq $ExpectedTestMode -and
             [int]$Status.analysis_cells -eq $ExpectedAnalysisCells -and
             [int]$Status.replicates -eq $Replicates -and
-            [Math]::Abs([double]$Status.fraction - $ResampleFraction) -lt 0.000001
+            [Math]::Abs([double]$Status.fraction - $ResampleFraction) -lt 0.000001 -and
+            [int]$Status.n_neighbors -eq 15 -and
+            [int]$Status.n_pcs -eq $ExpectedHarmonyDimensions -and
+            [int]$Status.source_representation_dimensions -eq $ExpectedHarmonyDimensions -and
+            [bool]$Status.representation_dimension_match
         )
     } catch { $ResamplingReusable = $false }
 }
@@ -106,6 +113,8 @@ if ($ResamplingReusable) {
         --output-dir $RunDir `
         --replicates $Replicates `
         --fraction $ResampleFraction `
+        --n-neighbors 15 `
+        --n-pcs 0 `
         --max-cells $MaxCells
     if ($LASTEXITCODE -ne 0) { throw "C2B3 resampling failed with exit code $LASTEXITCODE" }
 }

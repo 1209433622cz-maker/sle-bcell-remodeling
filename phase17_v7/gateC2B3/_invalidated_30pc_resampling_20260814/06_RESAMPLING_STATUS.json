@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-08-14T10:43:35+08:00",
+  "status": "FULL_RESAMPLING_COMPLETE_REVIEW_REQUIRED",
+  "disease_blind": true,
+  "test_mode": false,
+  "source_cells": 150402,
+  "analysis_cells": 150402,
+  "replicates": 20,
+  "fraction": 0.8,
+  "n_neighbors": 15,
+  "n_pcs": 30,
+  "resolutions": [
+    0.4,
+    0.6,
+    0.8
+  ],
+  "seed": 20260806
+}

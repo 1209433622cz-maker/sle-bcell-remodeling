@@ -9,6 +9,12 @@ import json
 from pathlib import Path
 
 SEED = 20260806
+SCHEMA_VERSION = 2
+R04_POLICIES = {
+    "five_state": {},
+    "four_state_platelet_overlay_merged": {"2": "0"},
+    "three_state_identity_core": {"2": "0", "4": "0"},
+}
 PROTECTED_COLUMNS = {
     "disease", "disease_state", "diagnosis", "case_control", "case_status",
     "clinical_status", "sle_status", "activity", "disease_activity",
@@ -62,7 +68,10 @@ def main() -> int:
     parser.add_argument("--replicates", type=int, default=20)
     parser.add_argument("--fraction", type=float, default=0.8)
     parser.add_argument("--n-neighbors", type=int, default=15)
-    parser.add_argument("--n-pcs", type=int, default=30)
+    parser.add_argument(
+        "--n-pcs", type=int, default=0,
+        help="Harmony dimensions to use; 0 uses all dimensions and matches the source graph.",
+    )
     parser.add_argument("--max-cells", type=int, default=0)
     args = parser.parse_args()
 
@@ -92,10 +101,17 @@ def main() -> int:
     rng = np.random.default_rng(SEED)
     analysis_positions = balanced_cap(primary.obs["library_uuid"], args.max_cells, rng)
     obs = primary.obs.iloc[analysis_positions].copy()
-    embedding = np.asarray(primary.obsm["X_pca_harmony"])[analysis_positions, : args.n_pcs].astype(np.float32)
+    source_dimensions = int(primary.obsm["X_pca_harmony"].shape[1])
+    use_dimensions = source_dimensions if args.n_pcs <= 0 else min(args.n_pcs, source_dimensions)
+    embedding = np.asarray(primary.obsm["X_pca_harmony"])[
+        analysis_positions, :use_dimensions
+    ].astype(np.float32)
     test_mode = bool(args.max_cells > 0)
     replicate_rows = []
     cluster_rows = []
+    transition_rows = []
+    policy_rows = []
+    policy_cluster_rows = []
     cell_counts = {resolution: np.zeros(len(obs), dtype=np.int16) for resolution in resolutions}
     cell_agreement = {resolution: np.zeros(len(obs), dtype=np.int16) for resolution in resolutions}
 
@@ -118,6 +134,7 @@ def main() -> int:
                 resolution=resolution,
                 key_added=replicate_key,
                 random_state=SEED + replicate,
+                flavor="leidenalg",
             )
             reference = work.obs[full_key].astype(str).to_numpy()
             observed = work.obs[replicate_key].astype(str).to_numpy()
@@ -157,12 +174,72 @@ def main() -> int:
                         "recall": float(np.logical_and(expected, recovered).sum() / expected.sum()),
                     }
                 )
+                destinations, destination_counts = np.unique(mapped[expected], return_counts=True)
+                for destination, destination_count in zip(destinations, destination_counts):
+                    transition_rows.append(
+                        {
+                            "replicate": replicate + 1,
+                            "resolution": resolution,
+                            "reference_cluster": cluster,
+                            "mapped_reference_cluster": destination,
+                            "n_cells": int(destination_count),
+                            "fraction_of_reference_cluster": float(destination_count / expected.sum()),
+                        }
+                    )
+            if np.isclose(resolution, 0.4):
+                for policy, collapse in R04_POLICIES.items():
+                    consolidated = np.asarray([collapse.get(value, value) for value in reference])
+                    policy_contingency = pd.crosstab(
+                        pd.Series(observed, name="observed"),
+                        pd.Series(consolidated, name="reference"),
+                    )
+                    policy_mapping = policy_contingency.idxmax(axis=1).to_dict()
+                    policy_mapped = np.asarray([policy_mapping[value] for value in observed])
+                    policy_agreement = policy_mapped == consolidated
+                    policy_rows.append(
+                        {
+                            "replicate": replicate + 1,
+                            "policy": policy,
+                            "n_states": int(len(set(consolidated))),
+                            "n_cells": int(len(selected)),
+                            "resampled_clusters": int(len(set(observed))),
+                            "adjusted_rand_index": float(adjusted_rand_score(consolidated, observed)),
+                            "adjusted_mutual_information": float(
+                                adjusted_mutual_info_score(consolidated, observed)
+                            ),
+                            "majority_mapping_agreement": float(policy_agreement.mean()),
+                        }
+                    )
+                    for state in sorted(set(consolidated), key=lambda value: (len(value), value)):
+                        expected = consolidated == state
+                        recovered = policy_mapped == state
+                        union = np.logical_or(expected, recovered).sum()
+                        policy_cluster_rows.append(
+                            {
+                                "replicate": replicate + 1,
+                                "policy": policy,
+                                "reference_state": state,
+                                "reference_cells": int(expected.sum()),
+                                "mapped_cells": int(recovered.sum()),
+                                "jaccard": float(
+                                    np.logical_and(expected, recovered).sum() / union
+                                ) if union else 0.0,
+                                "recall": float(
+                                    np.logical_and(expected, recovered).sum() / expected.sum()
+                                ),
+                            }
+                        )
         print(f"[STABILITY] replicate {replicate + 1}/{args.replicates}: {len(selected):,} cells", flush=True)
 
     replicate_table = pd.DataFrame(replicate_rows)
     cluster_table = pd.DataFrame(cluster_rows)
+    transition_table = pd.DataFrame(transition_rows)
+    policy_table = pd.DataFrame(policy_rows)
+    policy_cluster_table = pd.DataFrame(policy_cluster_rows)
     replicate_table.to_csv(output / "01_resampling_replicate_metrics.csv", index=False, encoding="utf-8-sig")
+    policy_table.to_csv(output / "01b_resampling_r04_policy_metrics.csv", index=False, encoding="utf-8-sig")
     cluster_table.to_csv(output / "02_resampling_cluster_metrics.csv", index=False, encoding="utf-8-sig")
+    transition_table.to_csv(output / "02b_resampling_reference_transitions.csv", index=False, encoding="utf-8-sig")
     summary = (
         replicate_table.groupby("resolution", observed=True)
         .agg(
@@ -189,6 +266,48 @@ def main() -> int:
     )
     summary.to_csv(output / "03_resampling_resolution_summary.csv", index=False, encoding="utf-8-sig")
     cluster_summary.to_csv(output / "04_resampling_cluster_summary.csv", index=False, encoding="utf-8-sig")
+    policy_cluster_summary = (
+        policy_cluster_table.groupby(["policy", "reference_state"], observed=True)
+        .agg(
+            median_jaccard=("jaccard", "median"),
+            minimum_jaccard=("jaccard", "min"),
+            median_recall=("recall", "median"),
+        )
+        .reset_index()
+    )
+    policy_summary = (
+        policy_table.groupby("policy", observed=True)
+        .agg(
+            replicates=("replicate", "nunique"),
+            n_states=("n_states", "first"),
+            median_ari=("adjusted_rand_index", "median"),
+            minimum_ari=("adjusted_rand_index", "min"),
+            median_ami=("adjusted_mutual_information", "median"),
+            median_mapping_agreement=("majority_mapping_agreement", "median"),
+            minimum_mapping_agreement=("majority_mapping_agreement", "min"),
+        )
+        .reset_index()
+        .merge(
+            policy_cluster_summary.groupby("policy", observed=True)
+            .agg(
+                minimum_cluster_median_jaccard=("median_jaccard", "min"),
+                minimum_cluster_median_recall=("median_recall", "min"),
+            )
+            .reset_index(),
+            on="policy",
+            how="left",
+        )
+    )
+    policy_cluster_summary.to_csv(
+        output / "04b_resampling_r04_policy_cluster_summary.csv",
+        index=False,
+        encoding="utf-8-sig",
+    )
+    policy_summary.to_csv(
+        output / "04c_resampling_r04_policy_summary.csv",
+        index=False,
+        encoding="utf-8-sig",
+    )
 
     cell_frames = []
     for resolution in resolutions:
@@ -212,6 +331,7 @@ def main() -> int:
         output / "05_resampling_cell_stability.csv.gz", index=False, compression="gzip"
     )
     status = {
+        "schema_version": SCHEMA_VERSION,
         "created_at": dt.datetime.now().astimezone().isoformat(timespec="seconds"),
         "status": "SOFTWARE_TEST_COMPLETE" if test_mode else "FULL_RESAMPLING_COMPLETE_REVIEW_REQUIRED",
         "disease_blind": True,
@@ -221,8 +341,12 @@ def main() -> int:
         "replicates": args.replicates,
         "fraction": args.fraction,
         "n_neighbors": args.n_neighbors,
-        "n_pcs": args.n_pcs,
+        "requested_n_pcs": args.n_pcs,
+        "n_pcs": use_dimensions,
+        "source_representation_dimensions": source_dimensions,
+        "representation_dimension_match": use_dimensions == source_dimensions,
         "resolutions": list(resolutions),
+        "r04_policy_order": list(R04_POLICIES),
         "seed": SEED,
     }
     (output / "06_RESAMPLING_STATUS.json").write_text(

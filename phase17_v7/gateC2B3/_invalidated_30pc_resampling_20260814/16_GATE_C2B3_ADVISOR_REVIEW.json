@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-08-14T10:43:50+08:00",
+  "decision": "HOLD_GATE_C2B3_REVIEW_REQUIRED",
+  "disease_blind": true,
+  "test_mode": false,
+  "identity_resolution": 0.4,
+  "neutral_ids": [
+    "B0",
+    "B1",
+    "B2",
+    "B3",
+    "B4"
+  ],
+  "outcome_unlock_authorized": false,
+  "publication_labels_authorized": false,
+  "checks": {
+    "resampling_complete": {
+      "pass": true,
+      "detail": "20 replicates; 150,402 cells"
+    },
+    "identity_median_ari": {
+      "pass": false,
+      "detail": "0.603 >= 0.750"
+    },
+    "identity_minimum_ari": {
+      "pass": false,
+      "detail": "0.305 >= 0.650"
+    },
+    "identity_mapping_agreement": {
+      "pass": true,
+      "detail": "median=0.954 >= 0.800"
+    },
+    "identity_cluster_jaccard": {
+      "pass": false,
+      "detail": "minimum cluster median=0.000 >= 0.600"
+    },
+    "marker_dictionary_complete": {
+      "pass": true,
+      "detail": "5/5 clusters; minimum markers=20"
+    },
+    "marker_sample_support": {
+      "pass": true,
+      "detail": "minimum cluster median=0.874"
+    },
+    "candidate_mapping_complete": {
+      "pass": true,
+      "detail": "768 candidates; automatic append=False"
+    },
+    "disease_blind_contract": {
+      "pass": true,
+      "detail": "all three C2B3 components are disease blind"
+    }
+  },
+  "candidate_policy": "mapping sensitivity only; source-label primary unchanged",
+  "next_if_pass": "join protected metadata and begin Gate C3 sample-level composition",
+  "next_if_hold": "repair unstable identity clusters before any outcome unlock"
+}

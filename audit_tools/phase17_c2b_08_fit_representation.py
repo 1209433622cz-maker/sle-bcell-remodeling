@@ -308,6 +308,7 @@ def fit_branch(
             neighbors_key="harmony",
             key_added=key,
             random_state=SEED,
+            flavor="leidenalg",
         )
         print(f"[LEIDEN] {branch['name']} r={resolution:g}: {work.obs[key].nunique()} clusters", flush=True)
 

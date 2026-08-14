@@ -1,0 +1,12 @@
+{
+  "status": "INVALIDATED_REPRESENTATION_DIMENSION_MISMATCH",
+  "invalidated_at": "2026-08-14",
+  "disease_blind": true,
+  "source_graph_dimensions": 50,
+  "invalidated_resampling_dimensions": 30,
+  "scientific_interpretation_authorized": false,
+  "neutral_state_freeze_authorized": false,
+  "outcome_unlock_authorized": false,
+  "archive": "phase17_v7/gateC2B3/_invalidated_30pc_resampling_20260814",
+  "required_action": "rerun schema-v2 resampling with all 50 Harmony dimensions"
+}

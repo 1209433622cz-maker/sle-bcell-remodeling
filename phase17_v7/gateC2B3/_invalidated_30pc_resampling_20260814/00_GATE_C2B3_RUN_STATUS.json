@@ -1,0 +1,9 @@
+{
+  "status": "HOLD_GATE_C2B3_REVIEW_REQUIRED",
+  "disease_blind": true,
+  "full_candidate_mapping_complete": true,
+  "full_marker_ranking_complete": true,
+  "full_resampling_complete": true,
+  "neutral_state_freeze_authorized": false,
+  "outcome_unlock_authorized": false
+}
