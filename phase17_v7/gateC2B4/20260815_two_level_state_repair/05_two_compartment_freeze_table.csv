@@ -1,0 +1,6 @@
+﻿source_r04_cluster,frozen_neutral_id,identity_compartment,within_compartment_role,freeze_authorized,hard_naive_memory_labels_authorized
+0,B_CONV,conventional_B,naive-enriched anchor; model as continuous program,True,False
+1,B_CONV,conventional_B,memory-enriched anchor; model as continuous program,True,False
+2,B_CONV,conventional_B,platelet-associated overlay; sensitivity/program only,True,False
+3,B_ASC,antibody_secreting_B,ASC identity compartment,True,False
+4,B_CONV,conventional_B,unresolved boundary; no hard subtype claim,True,False

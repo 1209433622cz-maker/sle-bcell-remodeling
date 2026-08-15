@@ -1,0 +1,8 @@
+{
+  "status": "PASS_C2B4_TWO_COMPARTMENT_FREEZE_OUTCOME_UNLOCK_AUTHORIZED",
+  "disease_blind": true,
+  "source_c2b3_hold_preserved": true,
+  "two_compartment_freeze_authorized": true,
+  "hard_naive_memory_labels_authorized": false,
+  "outcome_unlock_authorized": true
+}
