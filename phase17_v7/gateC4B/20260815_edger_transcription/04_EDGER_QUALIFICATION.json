@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-08-15T15:51:42+0800",
+  "status": "PASS_C4B_EDGER_QUALIFICATION",
+  "real_effect_estimates_inspected": false,
+  "r_version": "R version 4.6.0 (2026-04-24 ucrt)",
+  "bioconductor_version": "3.23",
+  "package_versions": {
+    "edgeR": "4.10.1",
+    "limma": "3.68.4",
+    "Matrix": "1.7.5",
+    "statmod": "1.5.2",
+    "jsonlite": "2.0.0"
+  },
+  "imported_primary_shape": [30172, 89],
+  "checks": {
+    "matrix_dimensions": {
+      "pass": true,
+      "detail": "30172 x 89"
+    },
+    "matrix_column_sums": {
+      "pass": true,
+      "detail": "R import versus frozen sample libraries"
+    },
+    "matrix_gene_sums": {
+      "pass": true,
+      "detail": "R import versus Python-exported per-gene sums"
+    },
+    "matrix_integer_nonnegative": {
+      "pass": true,
+      "detail": "911,010 nonzero entries"
+    },
+    "null_type1": {
+      "pass": true,
+      "detail": "P<0.05 fraction 0.0553 <= 0.0800"
+    },
+    "null_bias": {
+      "pass": true,
+      "detail": "median log2FC 0.0011; |value| <= 0.10"
+    },
+    "signal_effect_recovery": {
+      "pass": true,
+      "detail": "median recovered log2FC 1.1967 >= 0.80"
+    },
+    "signal_direction": {
+      "pass": true,
+      "detail": "sign concordance 1.0000 >= 0.95"
+    },
+    "signal_sensitivity": {
+      "pass": true,
+      "detail": "BH sensitivity 1.0000 >= 0.80"
+    },
+    "signal_empirical_fdr": {
+      "pass": true,
+      "detail": "empirical FDR 0.0654 <= 0.10"
+    }
+  },
+  "synthetic_metrics": {
+    "null_type1_fraction": 0.05530417,
+    "null_median_log2fc": 0.00107381,
+    "signal_median_log2fc": 1.19673465,
+    "signal_sign_concordance": 1,
+    "signal_bh_sensitivity": 1,
+    "signal_empirical_fdr": 0.06542056
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-08-15T15:54:33+08:00",
+  "checks": {
+    "qualification_gate": {
+      "pass": true,
+      "detail": "PASS_C4B_EDGER_QUALIFICATION"
+    },
+    "matrix_export_gate": {
+      "pass": true,
+      "detail": "PASS_C4B_FROZEN_MATRIX_EXPORT"
+    },
+    "seven_frozen_models_complete": {
+      "pass": true,
+      "detail": "7/7 model summaries"
+    },
+    "gene_table_integrity": {
+      "pass": true,
+      "detail": "7 complete 30,172-row tables; BH recomputed independently"
+    },
+    "program_table_integrity": {
+      "pass": true,
+      "detail": "63 rows; four-program BH independently recomputed"
+    },
+    "qc_families_not_dominant": {
+      "pass": true,
+      "detail": "platelet p=0.88; ASC/UPR p=0.651; top-50 technical fractions <=0.10"
+    },
+    "gate_c4b_central_acceptance": {
+      "pass": true,
+      "detail": "eligible=['NAIVE_TO_MEMORY_AXIS', 'APC_HLA', 'IFN_ISG']; anchor=IFN_ISG"
+    }
+  },
+  "gene_table_audits": [
+    {
+      "analysis_name": "primary_base",
+      "rows": 30172,
+      "tested_genes": 4414,
+      "unique_ensembl": true,
+      "bh_exact": true,
+      "pass": true
+    },
+    {
+      "analysis_name": "primary_min20",
+      "rows": 30172,
+      "tested_genes": 4098,
+      "unique_ensembl": true,
+      "bh_exact": true,
+      "pass": true
+    },
+    {
+      "analysis_name": "primary_min100",
+      "rows": 30172,
+      "tested_genes": 4524,
+      "unique_ensembl": true,
+      "bh_exact": true,
+      "pass": true
+    },
+    {
+      "analysis_name": "primary_residual_risk_negative",
+      "rows": 30172,
+      "tested_genes": 4432,
+      "unique_ensembl": true,
+      "bh_exact": true,
+      "pass": true
+    },
+    {
+      "analysis_name": "validation_full",
+      "rows": 30172,
+      "tested_genes": 6099,
+      "unique_ensembl": true,
+      "bh_exact": true,
+      "pass": true
+    },
+    {
+      "analysis_name": "validation_nonoverlap",
+      "rows": 30172,
+      "tested_genes": 6077,
+      "unique_ensembl": true,
+      "bh_exact": true,
+      "pass": true
+    },
+    {
+      "analysis_name": "flare_full",
+      "rows": 30172,
+      "tested_genes": 7761,
+      "unique_ensembl": true,
+      "bh_exact": true,
+      "pass": true
+    }
+  ]
+}

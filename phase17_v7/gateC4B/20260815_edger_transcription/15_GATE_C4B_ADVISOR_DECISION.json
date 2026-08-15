@@ -1,0 +1,210 @@
+{
+  "created_at": "2026-08-15T15:54:33+08:00",
+  "decision": "PASS_GATE_C4B_TO_INDEPENDENT_SLE_VALIDATION",
+  "central_anchor": "IFN_ISG",
+  "central_claim_authorized": true,
+  "independent_validation_required": true,
+  "basc_gene_level_authorized": false,
+  "checks": {
+    "qualification_gate": {
+      "pass": true,
+      "detail": "PASS_C4B_EDGER_QUALIFICATION"
+    },
+    "matrix_export_gate": {
+      "pass": true,
+      "detail": "PASS_C4B_FROZEN_MATRIX_EXPORT"
+    },
+    "seven_frozen_models_complete": {
+      "pass": true,
+      "detail": "7/7 model summaries"
+    },
+    "gene_table_integrity": {
+      "pass": true,
+      "detail": "7 complete 30,172-row tables; BH recomputed independently"
+    },
+    "program_table_integrity": {
+      "pass": true,
+      "detail": "63 rows; four-program BH independently recomputed"
+    },
+    "qc_families_not_dominant": {
+      "pass": true,
+      "detail": "platelet p=0.88; ASC/UPR p=0.651; top-50 technical fractions <=0.10"
+    },
+    "gate_c4b_central_acceptance": {
+      "pass": true,
+      "detail": "eligible=['NAIVE_TO_MEMORY_AXIS', 'APC_HLA', 'IFN_ISG']; anchor=IFN_ISG"
+    }
+  },
+  "gene_table_audits": [
+    {
+      "analysis_name": "primary_base",
+      "rows": 30172,
+      "tested_genes": 4414,
+      "unique_ensembl": true,
+      "bh_exact": true,
+      "pass": true
+    },
+    {
+      "analysis_name": "primary_min20",
+      "rows": 30172,
+      "tested_genes": 4098,
+      "unique_ensembl": true,
+      "bh_exact": true,
+      "pass": true
+    },
+    {
+      "analysis_name": "primary_min100",
+      "rows": 30172,
+      "tested_genes": 4524,
+      "unique_ensembl": true,
+      "bh_exact": true,
+      "pass": true
+    },
+    {
+      "analysis_name": "primary_residual_risk_negative",
+      "rows": 30172,
+      "tested_genes": 4432,
+      "unique_ensembl": true,
+      "bh_exact": true,
+      "pass": true
+    },
+    {
+      "analysis_name": "validation_full",
+      "rows": 30172,
+      "tested_genes": 6099,
+      "unique_ensembl": true,
+      "bh_exact": true,
+      "pass": true
+    },
+    {
+      "analysis_name": "validation_nonoverlap",
+      "rows": 30172,
+      "tested_genes": 6077,
+      "unique_ensembl": true,
+      "bh_exact": true,
+      "pass": true
+    },
+    {
+      "analysis_name": "flare_full",
+      "rows": 30172,
+      "tested_genes": 7761,
+      "unique_ensembl": true,
+      "bh_exact": true,
+      "pass": true
+    }
+  ],
+  "confirmatory_programs": [
+    {
+      "program_id": "NAIVE_TO_MEMORY_AXIS",
+      "program_label": "Naive-to-memory axis",
+      "primary_effect": -0.54071793846408,
+      "primary_ci": [
+        -0.978099389858302,
+        -0.103336487069858
+      ],
+      "primary_q": 0.0213347669535336,
+      "validation_full_effect": -0.580694618439021,
+      "validation_full_q": 0.167365382005406,
+      "validation_nonoverlap_effect": -0.442854136623369,
+      "validation_nonoverlap_q": 0.414848982722358,
+      "directional_checks": {
+        "validation_full": true,
+        "validation_nonoverlap": true,
+        "primary_min20": true,
+        "primary_min100": true,
+        "primary_residual_risk_negative": true
+      },
+      "loo_pass": true,
+      "coherence_pass": true,
+      "central_eligibility": true
+    },
+    {
+      "program_id": "ATYPICAL_LOW_NAIVE_AXIS",
+      "program_label": "Atypical/ABC with low-naive context",
+      "primary_effect": -0.0568095515021531,
+      "primary_ci": [
+        -0.40716550064672,
+        0.293546397642414
+      ],
+      "primary_q": 0.747945959835198,
+      "validation_full_effect": -0.119818513511622,
+      "validation_full_q": 0.73888720727184,
+      "validation_nonoverlap_effect": 0.184346889903375,
+      "validation_nonoverlap_q": 0.654618432925824,
+      "directional_checks": {
+        "validation_full": true,
+        "validation_nonoverlap": false,
+        "primary_min20": false,
+        "primary_min100": true,
+        "primary_residual_risk_negative": true
+      },
+      "loo_pass": true,
+      "coherence_pass": false,
+      "central_eligibility": false
+    },
+    {
+      "program_id": "APC_HLA",
+      "program_label": "Antigen-presentation program",
+      "primary_effect": 0.267679688655413,
+      "primary_ci": [
+        0.052241647921395,
+        0.48311772938943
+      ],
+      "primary_q": 0.0213347669535336,
+      "validation_full_effect": 0.361427156296962,
+      "validation_full_q": 0.167365382005406,
+      "validation_nonoverlap_effect": 0.339781498647276,
+      "validation_nonoverlap_q": 0.414848982722358,
+      "directional_checks": {
+        "validation_full": true,
+        "validation_nonoverlap": true,
+        "primary_min20": true,
+        "primary_min100": true,
+        "primary_residual_risk_negative": true
+      },
+      "loo_pass": true,
+      "coherence_pass": true,
+      "central_eligibility": true
+    },
+    {
+      "program_id": "IFN_ISG",
+      "program_label": "Type I interferon response",
+      "primary_effect": 0.836556476435973,
+      "primary_ci": [
+        0.525430264711135,
+        1.14768268816081
+      ],
+      "primary_q": 2.9770041796839e-06,
+      "validation_full_effect": 0.856126196501275,
+      "validation_full_q": 0.0046151737404247,
+      "validation_nonoverlap_effect": 1.08624050109214,
+      "validation_nonoverlap_q": 0.0003605276358094,
+      "directional_checks": {
+        "validation_full": true,
+        "validation_nonoverlap": true,
+        "primary_min20": true,
+        "primary_min100": true,
+        "primary_residual_risk_negative": true
+      },
+      "loo_pass": true,
+      "coherence_pass": true,
+      "central_eligibility": true
+    }
+  ],
+  "contextual_findings": {
+    "primary_fdr_genes": 282,
+    "validation_fdr_genes": 157,
+    "nonoverlap_gene_rho": 0.161906198378981,
+    "nonoverlap_top500_direction_concordance": 0.69,
+    "pan_b_identity_effect": 0.408920593284872,
+    "pan_b_identity_p": 0.0062411928664448
+  },
+  "interpretation_limits": [
+    "Cohort-2 validation is internal to GSE174188 and is not independent SLE replication.",
+    "Managed-state treatment exposure and clinical covariates remain potential residual confounders.",
+    "Flare is secondary and cannot replace the managed-state primary contrast.",
+    "B_ASC gene-level disease inference remains prohibited by the C4A support gate.",
+    "PAN_B identity shift is a sensitivity flag for external validation, not evidence against the IFN result by itself."
+  ],
+  "next_stage": "Gate C5: independent SLE validation led by GSE135779, with GSE163121 directional support and OneK1K healthy context."
+}
