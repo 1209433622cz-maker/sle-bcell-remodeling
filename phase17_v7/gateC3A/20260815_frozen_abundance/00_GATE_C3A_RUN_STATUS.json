@@ -1,0 +1,7 @@
+{
+  "status": "NO_GO_C3A_COMPOSITION_AS_CENTRAL_CLAIM",
+  "models_complete": true,
+  "composition_central_claim_authorized": false,
+  "continuous_program_analysis_authorized": true,
+  "external_validation_still_required": true
+}

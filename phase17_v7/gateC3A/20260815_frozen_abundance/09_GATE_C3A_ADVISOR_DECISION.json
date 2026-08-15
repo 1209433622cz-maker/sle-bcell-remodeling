@@ -1,0 +1,79 @@
+{
+  "created_at": "2026-08-15T14:36:59+08:00",
+  "decision": "NO_GO_C3A_COMPOSITION_AS_CENTRAL_CLAIM",
+  "composition_central_claim_authorized": false,
+  "sample_level_inference": true,
+  "hard_naive_memory_labels_authorized": false,
+  "primary": {
+    "n": 90,
+    "odds_ratio": 0.9466531606629469,
+    "ci_low": 0.6357046974785294,
+    "ci_high": 1.40969889029869,
+    "p_value": 0.7872791209333905,
+    "hc1_sandwich_ci_low": 0.6511642901582742,
+    "hc1_sandwich_ci_high": 1.3762305767340612,
+    "hc1_sandwich_p_value": 0.7739791305681175,
+    "adjusted_reference_fraction": 0.016094214186894683,
+    "adjusted_exposed_fraction": 0.015249281389894273
+  },
+  "internal_validation": {
+    "frozen_n": 64,
+    "frozen_odds_ratio": 0.772368473554135,
+    "frozen_p_value": 0.4878350614190351,
+    "nonoverlap_n": 53,
+    "nonoverlap_odds_ratio": 0.5911993811789237,
+    "nonoverlap_p_value": 0.18707299435279556,
+    "interpretation": "internal directional replication, not an independent external cohort"
+  },
+  "secondary_flare": {
+    "odds_ratio": 2.3028656858960335,
+    "model_ci_low": 1.0933623772780412,
+    "model_ci_high": 4.850350146929202,
+    "model_p_value": 0.028173769780472015,
+    "hc1_sandwich_ci_low": 1.3563985763696247,
+    "hc1_sandwich_ci_high": 3.9097581342729644,
+    "hc1_sandwich_p_value": 0.002009985615829341,
+    "bh_q_across_three_frozen_contrasts": 0.08452130934141605,
+    "interpretation": "secondary hypothesis-generating signal; not FDR-significant across the three frozen contrasts"
+  },
+  "checks": {
+    "gate_c3_integrity": {
+      "pass": true,
+      "detail": "21/21 Gate C3 rows verified"
+    },
+    "frozen_base_models_complete": {
+      "pass": true,
+      "detail": "primary, internal validation and flare models fitted"
+    },
+    "base_model_diagnostics": {
+      "pass": true,
+      "detail": "all frozen models converged with positive-definite numerical Hessians"
+    },
+    "primary_prespecified_support": {
+      "pass": false,
+      "detail": "OR=0.947; model 95% CI 0.636-1.410, P=0.787; HC1 95% CI 0.651-1.376, P=0.774"
+    },
+    "primary_mandatory_sensitivity_direction": {
+      "pass": true,
+      "detail": "4/4 variants match frozen direction"
+    },
+    "primary_leave_one_out_direction": {
+      "pass": true,
+      "detail": "90/90 leave-one-out fits match frozen direction"
+    },
+    "validation_nonoverlap_support": {
+      "pass": true,
+      "detail": "nonoverlap n=53; reference=21; exposed=32"
+    },
+    "validation_directional_replication": {
+      "pass": true,
+      "detail": "frozen OR=0.772; nonoverlap OR=0.591; primary direction matched=True"
+    },
+    "prohibited_inference_guard": {
+      "pass": true,
+      "detail": "sample-level two-compartment inference only; no hard naive-memory or cell-level test"
+    }
+  },
+  "binding_interpretation": "Two-compartment B_ASC composition must not be a central manuscript claim; retain as exploratory or secondary and prioritize continuous programs and pseudobulk replication.",
+  "next_stage": "Gate C4 prespecified continuous B_CONV programs plus sample-level pseudobulk differential expression; then independent external validation"
+}
