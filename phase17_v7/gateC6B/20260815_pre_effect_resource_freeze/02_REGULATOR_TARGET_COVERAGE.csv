@@ -1,0 +1,9 @@
+regulator,family,exact_interaction_rows,exact_unique_targets,consensus_positive_targets,consensus_negative_targets,ambiguous_or_unsigned_targets,signed_unique_targets,complex_interaction_rows,pre_effect_coverage_pass
+STAT1,IFN_confirmatory,303,303,261,30,12,291,0,True
+STAT2,IFN_confirmatory,50,50,46,4,0,50,0,True
+IRF7,IFN_confirmatory,34,34,31,1,2,32,0,True
+IRF9,IFN_confirmatory,27,27,22,3,2,25,0,True
+E2F1,proliferation_negative_control,318,314,257,42,15,299,0,True
+FOXM1,proliferation_negative_control,97,96,82,11,3,93,0,True
+MYC,proliferation_negative_control,891,886,670,117,99,787,0,True
+MYBL2,proliferation_negative_control,53,52,36,7,9,43,0,True

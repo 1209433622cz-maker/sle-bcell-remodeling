@@ -20,6 +20,7 @@ _phase17_review_pack/
 *.bai
 *.mtx.gz
 *.csv.gz
+*.tsv.gz
 
 # Legacy generated results; retain the active v7 Figure 1 bundle.
 03_results/*
@@ -28,6 +29,7 @@ _phase17_review_pack/
 # Legacy submission builds; retain only the active design and final RP QC note.
 04_submission/*
 !04_submission/figure_architecture_v7_nature_style_2026-08-10.md
+!04_submission/figure_architecture_v8_gateC6A_2026-08-15.md
 !04_submission/document_qc/
 04_submission/document_qc/*
 !04_submission/document_qc/research_proposal_v14_2026-08-10_external_audit_integrated_qc_r2/

@@ -1,0 +1,12 @@
+check_id,check_type,phrase,pass,detail
+broad_conventional_boundary,required,broad conventional-b,True,present
+association_boundary,required,association rather than causation,True,present
+program_specific_boundary,required,program-specific,True,present
+adult_boundary,required,adult,True,present
+pseudobulk_unit,required,pseudobulk,True,present
+genomewide_rho,required,0.026,True,present
+prohibited_global_transcriptomic_concordance,prohibited,global transcriptomic concordance,True,absent
+prohibited_novel_pathogenic_b-cell_subtype,prohibited,novel pathogenic b-cell subtype,True,absent
+prohibited_adult_replication_was_confirmed,prohibited,adult replication was confirmed,True,absent
+prohibited_replicated_atypical/abc_program,prohibited,replicated atypical/abc program,True,absent
+prohibited_mechanistically_drives_sle,prohibited,mechanistically drives sle,True,absent

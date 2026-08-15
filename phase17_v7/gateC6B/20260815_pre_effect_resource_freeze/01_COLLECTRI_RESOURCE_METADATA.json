@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-08-15T17:46:54+08:00",
+  "status": "PRE_EFFECT_RESOURCE_INVENTORY_COMPLETE",
+  "regulatory_effects_inspected": false,
+  "source_mode": "reused_frozen_local_copy",
+  "collectri": {
+    "url": "https://omnipathdb.org/interactions?datasets=collectri&format=tsv&genesymbols=1",
+    "organism": "human",
+    "retrieval_date": "2026-08-15",
+    "raw_size_bytes": 4061567,
+    "raw_sha256": "98EF1163146D2E28EE413E7C909174998CD9D742EA93D97CCFE93F3A14C160C1",
+    "compressed_project_relative_path": "phase17_v7/gateC6B/20260815_pre_effect_resource_freeze/resources/collectri_human_omnipath_20260815.tsv.gz",
+    "compressed_size_bytes": 648943,
+    "compressed_sha256": "C99EC03032009F935610C1808D75BD6FE7DCA25C8B7EA80786242BB6EE457F40",
+    "interaction_rows": 64516,
+    "columns": [
+      "source",
+      "target",
+      "source_genesymbol",
+      "target_genesymbol",
+      "is_directed",
+      "is_stimulation",
+      "is_inhibition",
+      "consensus_direction",
+      "consensus_stimulation",
+      "consensus_inhibition"
+    ],
+    "complex_policy_at_inventory": "observed but not split; final scoring policy pending contract"
+  },
+  "candidate_regulators": {
+    "IFN_confirmatory": [
+      "STAT1",
+      "STAT2",
+      "IRF7",
+      "IRF9"
+    ],
+    "proliferation_negative_control": [
+      "E2F1",
+      "FOXM1",
+      "MYC",
+      "MYBL2"
+    ]
+  },
+  "all_exact_regulators_meet_10_target_inventory_floor": true,
+  "confirmatory_contrast_coverage": {
+    "contrasts": [
+      "gse174188_primary",
+      "gse174188_internal_nonoverlap",
+      "gse135779_childhood"
+    ],
+    "minimum_matched_signed_targets": 5,
+    "all_regulator_contrasts_meet_10_target_floor": false
+  }
+}

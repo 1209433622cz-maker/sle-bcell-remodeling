@@ -1,0 +1,38 @@
+{
+  "created_at": "2026-08-15T17:53:09+08:00",
+  "decision": "PASS_GATE_C6A_CLAIM_AND_MANUSCRIPT_FREEZE",
+  "central_claim": "A disease-blind broad conventional-B-cell compartment exhibits reproducible SLE-associated type I interferon transcriptional remodeling across GSE174188 and independent GSE135779.",
+  "checks": {
+    "frozen_source_decisions": {
+      "pass": true,
+      "detail": "4/4 expected decisions"
+    },
+    "claim_matrix_complete": {
+      "pass": true,
+      "detail": "11 claims; 2 central; 3 boundaries"
+    },
+    "numeric_source_complete": {
+      "pass": true,
+      "detail": "10 manuscript-critical metrics"
+    },
+    "document_set_complete": {
+      "pass": true,
+      "detail": "all seven C6A governance documents present"
+    },
+    "text_claim_boundaries": {
+      "pass": true,
+      "detail": "11/11 checks"
+    },
+    "regulatory_effect_lock": {
+      "pass": true,
+      "detail": "C6A performs no regulator-activity or perturbation-effect calculation"
+    }
+  },
+  "claim_counts": {
+    "total": 11,
+    "central": 2,
+    "boundary_or_negative": 3
+  },
+  "regulatory_effects_inspected": false,
+  "next_stage": "Gate C6B pre-effect regulatory resource qualification and frozen analysis."
+}
