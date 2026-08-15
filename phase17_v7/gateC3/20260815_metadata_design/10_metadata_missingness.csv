@@ -1,0 +1,13 @@
+﻿level,field,rows,missing,missing_fraction
+cell,library_uuid,150402,0,0.0
+cell,sample_uuid,150402,0,0.0
+cell,donor_id,150402,0,0.0
+cell,Processing_Cohort,150402,0,0.0
+cell,disease,150402,0,0.0
+cell,disease_state,150402,0,0.0
+cell,sex,150402,0,0.0
+cell,ct_cov,150402,10890,0.07240595204851
+cell,ind_cov,150402,0,0.0
+cell,development_stage,150402,0,0.0
+cell,development_stage_ontology_term_id,150402,0,0.0
+cell,self_reported_ethnicity,150402,0,0.0

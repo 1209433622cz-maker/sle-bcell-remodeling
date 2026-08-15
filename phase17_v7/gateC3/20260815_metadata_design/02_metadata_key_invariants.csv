@@ -1,0 +1,13 @@
+﻿level,field,groups,conflicting_groups,maximum_values_per_group
+sample_uuid,donor_id,271,0,1
+sample_uuid,disease,271,0,1
+sample_uuid,disease_state,271,0,1
+sample_uuid,sex,271,0,1
+sample_uuid,ind_cov,271,0,1
+sample_uuid,development_stage,271,0,1
+sample_uuid,development_stage_ontology_term_id,271,0,1
+sample_uuid,self_reported_ethnicity,271,0,1
+library_uuid,Processing_Cohort,88,0,1
+donor_id,disease,259,0,1
+donor_id,sex,259,0,1
+donor_id,ind_cov,259,0,1

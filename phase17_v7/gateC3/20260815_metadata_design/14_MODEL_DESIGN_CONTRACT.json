@@ -1,0 +1,88 @@
+{
+  "created_at": "2026-08-15T14:15:21+08:00",
+  "status": "FROZEN",
+  "minimum_b_cells": 50,
+  "biological_replicate": "sample_uuid",
+  "technical_stratum": "sample_uuid x Processing_Cohort",
+  "canonical_individual_key": "donor_id",
+  "ind_cov_policy": "audit alias only; verified one-to-one with donor_id",
+  "cell_identity": {
+    "B_CONV": "source r0.4 clusters 0,1,2,4",
+    "B_ASC": "source r0.4 cluster 3"
+  },
+  "primary": {
+    "analysis_id": "C3A_PRIMARY_C4_MANAGED_VS_NORMAL",
+    "cohort": "4.0",
+    "states": [
+      "na",
+      "managed"
+    ],
+    "n": 90,
+    "counts": {
+      "managed": 47,
+      "na": 43
+    },
+    "fixed_effects": [
+      "managed",
+      "age_centered",
+      "ethnicity_asian"
+    ],
+    "sex_policy": "not included; all eligible cohort-4 strata are female",
+    "response": "asc_cells of total_cells"
+  },
+  "validation": {
+    "analysis_id": "C3A_VALIDATION_C2_EUROPEAN_FEMALE",
+    "cohort": "2.0",
+    "states": [
+      "na",
+      "managed"
+    ],
+    "restriction": "European American and female",
+    "n": 64,
+    "counts": {
+      "managed": 43,
+      "na": 21
+    },
+    "fixed_effects": [
+      "managed",
+      "age_centered"
+    ],
+    "interpretation": "directional internal replication; age imbalance requires caution"
+  },
+  "secondary_flare": {
+    "analysis_id": "C3A_SECONDARY_C3_FLARE_VS_NORMAL",
+    "cohort": "3.0",
+    "states": [
+      "na",
+      "flare"
+    ],
+    "n": 34,
+    "counts": {
+      "na": 18,
+      "flare": 16
+    },
+    "fixed_effects": [
+      "flare",
+      "age_centered",
+      "ethnicity_european"
+    ],
+    "interpretation": "secondary, not a substitute for managed-state replication"
+  },
+  "treated_policy": "descriptive only; five eligible cohort-3 strata",
+  "abundance_model": "sample-stratum beta-binomial or equivalent overdispersed count model",
+  "uncertainty": "donor-clustered or donor-random-effect uncertainty if repeated donors enter a contrast",
+  "zero_policy": "retain zero ASC counts; no pseudocount for the primary count likelihood",
+  "sensitivity": [
+    "minimum B-cell thresholds 20 and 100",
+    "exclude explicit non-B ct_cov cells only",
+    "exclude residual_doublet_auto_call cells",
+    "two-part ASC presence and positive-abundance analysis"
+  ],
+  "prohibited": [
+    "cell-level inferential tests",
+    "hard naive-versus-memory composition",
+    "platelet-associated B-cell identity",
+    "source cluster-4 publication subtype",
+    "cohort or covariate selection after viewing effect estimates"
+  ]
+}

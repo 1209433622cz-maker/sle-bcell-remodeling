@@ -1,0 +1,8 @@
+{
+  "status": "PASS_GATE_C3_METADATA_JOIN_AND_MODEL_DESIGN_FREEZE",
+  "protected_metadata_join_complete": true,
+  "model_design_contract_frozen": true,
+  "effect_estimation_authorized": true,
+  "effect_estimates_inspected": false,
+  "hard_naive_memory_labels_authorized": false
+}

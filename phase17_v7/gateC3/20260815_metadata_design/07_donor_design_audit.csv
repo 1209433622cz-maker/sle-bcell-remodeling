@@ -1,0 +1,260 @@
+﻿donor_id,total_cells,asc_cells,samples,libraries,cohorts,disease,disease_states,sex,ind_cov,asc_fraction
+1004,49,0,1,4,1,systemic lupus erythematosus,managed,female,1004_1004,0.0
+1014,160,41,1,8,2,systemic lupus erythematosus,managed,female,1014_1014,0.25625
+1015,532,3,1,4,1,systemic lupus erythematosus,managed,female,1015_1015,0.005639097744360902
+1019,402,1,1,4,1,systemic lupus erythematosus,managed,female,1019_1019,0.0024875621890547263
+1022,1035,3,1,4,1,systemic lupus erythematosus,managed,female,1022_1022,0.002898550724637681
+1031,169,15,1,4,1,systemic lupus erythematosus,managed,female,1031_1031,0.08875739644970414
+1039,166,21,1,4,1,systemic lupus erythematosus,managed,female,1039_1039,0.12650602409638553
+1045,387,5,1,4,1,systemic lupus erythematosus,managed,female,1045_1045,0.012919896640826873
+1046,1100,5,1,4,1,systemic lupus erythematosus,managed,female,1046_1046,0.004545454545454545
+1051,390,2,1,4,1,systemic lupus erythematosus,managed,male,1051_1051,0.005128205128205128
+1054,620,2,1,4,1,systemic lupus erythematosus,managed,female,1054_1054,0.0032258064516129032
+1056,517,5,1,4,1,systemic lupus erythematosus,managed,female,1056_1056,0.009671179883945842
+1063,390,0,1,4,1,systemic lupus erythematosus,managed,female,1063_1063,0.0
+1068,89,1,1,4,1,systemic lupus erythematosus,managed,female,1068_1068,0.011235955056179775
+1078,1008,0,1,8,2,systemic lupus erythematosus,managed,female,1078_1078,0.0
+1087,1018,8,1,4,1,systemic lupus erythematosus,managed,female,1087_1087,0.007858546168958742
+1101,115,19,1,8,2,systemic lupus erythematosus,managed,female,1101_1101,0.16521739130434782
+1110,455,1,1,8,2,systemic lupus erythematosus,managed,female,1110_1110,0.002197802197802198
+1119,278,14,1,4,1,systemic lupus erythematosus,managed,female,1119_1119,0.050359712230215826
+1121,117,1,1,4,1,systemic lupus erythematosus,managed,female,1121_1121,0.008547008547008548
+1122,777,2,1,4,1,systemic lupus erythematosus,managed,female,1122_1122,0.002574002574002574
+1127,618,2,1,4,1,systemic lupus erythematosus,managed,female,1127_1127,0.003236245954692557
+1130,1194,4,2,6,2,systemic lupus erythematosus,flare|managed,female,1130_1130,0.0033500837520938024
+1132,803,1,1,8,2,systemic lupus erythematosus,managed,female,1132_1132,0.0012453300124533001
+1165,331,11,1,4,1,systemic lupus erythematosus,managed,male,1165_1165,0.03323262839879154
+1193,274,3,1,4,1,systemic lupus erythematosus,managed,female,1193_1193,0.010948905109489052
+1195,97,9,1,4,1,systemic lupus erythematosus,managed,male,1195_1195,0.09278350515463918
+1196,450,1,1,4,1,systemic lupus erythematosus,managed,male,1196_1196,0.0022222222222222222
+1197,1781,0,1,4,1,systemic lupus erythematosus,managed,female,1197_1197,0.0
+1203,170,5,1,4,1,systemic lupus erythematosus,managed,female,1203_1203,0.029411764705882353
+1216,65,0,1,4,1,systemic lupus erythematosus,managed,female,1216_1216,0.0
+1219,403,0,1,4,1,systemic lupus erythematosus,managed,female,1219_1219,0.0
+1221,175,0,1,4,1,systemic lupus erythematosus,managed,male,1221_1221,0.0
+1222,761,2,1,8,2,systemic lupus erythematosus,managed,female,1222_1222,0.002628120893561104
+1225,45,0,1,4,1,systemic lupus erythematosus,managed,female,1225_1225,0.0
+1226,1563,1,1,4,1,systemic lupus erythematosus,managed,female,1226_1226,0.0006397952655150352
+1234,498,6,1,4,1,systemic lupus erythematosus,managed,female,1234_1234,0.012048192771084338
+1240,957,3,1,4,1,systemic lupus erythematosus,managed,female,1240_1240,0.003134796238244514
+1243,79,2,1,8,2,systemic lupus erythematosus,managed,female,1243_1243,0.02531645569620253
+1248,531,3,1,4,1,systemic lupus erythematosus,managed,male,1248_1248,0.005649717514124294
+1249,335,1,1,4,1,systemic lupus erythematosus,managed,female,1249_1249,0.0029850746268656717
+1250,46,1,1,4,1,systemic lupus erythematosus,managed,female,1250_1250,0.021739130434782608
+1251,867,5,1,4,1,systemic lupus erythematosus,managed,female,1251_1251,0.0057670126874279125
+1256,432,3,1,4,1,systemic lupus erythematosus,managed,female,1256_1256,0.006944444444444444
+1259,738,3,1,8,2,systemic lupus erythematosus,managed,female,1259_1259,0.0040650406504065045
+1262,890,2,1,8,1,systemic lupus erythematosus,managed,female,1262_1262,0.0022471910112359553
+1270,198,0,1,8,1,systemic lupus erythematosus,managed,female,1270_1270,0.0
+1279,857,2,1,8,1,systemic lupus erythematosus,managed,female,1279_1279,0.002333722287047841
+1281,796,5,1,8,1,systemic lupus erythematosus,managed,female,1281_1281,0.00628140703517588
+1285,297,11,1,4,1,systemic lupus erythematosus,managed,female,1285_1285,0.037037037037037035
+1294,1197,1,1,4,1,systemic lupus erythematosus,managed,male,1294_1294,0.000835421888053467
+1297,430,1,1,4,1,systemic lupus erythematosus,managed,female,1297_1297,0.002325581395348837
+1315,576,2,1,4,1,systemic lupus erythematosus,managed,female,1315_1315,0.003472222222222222
+1320,13,3,1,4,1,systemic lupus erythematosus,managed,female,1320_1320,0.23076923076923078
+1324,294,5,1,4,1,systemic lupus erythematosus,managed,female,1324_1324,0.017006802721088437
+1325,1793,13,1,4,1,systemic lupus erythematosus,managed,female,1325_1325,0.007250418293363078
+1326,306,2,1,8,2,systemic lupus erythematosus,managed,female,1326_1326,0.006535947712418301
+1329,160,1,1,4,1,systemic lupus erythematosus,managed,female,1329_1329,0.00625
+1333,285,4,1,4,1,systemic lupus erythematosus,managed,female,1333_1333,0.014035087719298246
+1334,2631,3,1,8,2,systemic lupus erythematosus,managed,female,1334_1334,0.0011402508551881414
+1337,168,0,1,4,1,systemic lupus erythematosus,managed,female,1337_1337,0.0
+1338,599,1,1,4,1,systemic lupus erythematosus,managed,female,1338_1338,0.001669449081803005
+1341,360,0,1,4,1,systemic lupus erythematosus,managed,female,1341_1341,0.0
+1366,612,4,1,4,1,systemic lupus erythematosus,managed,female,1366_1366,0.006535947712418301
+1368,404,3,1,4,1,systemic lupus erythematosus,managed,male,1368_1368,0.007425742574257425
+1404,414,4,1,4,1,systemic lupus erythematosus,managed,female,1404_1404,0.00966183574879227
+1414,196,0,1,4,1,systemic lupus erythematosus,managed,male,1414_1414,0.0
+1417,1068,20,1,4,1,systemic lupus erythematosus,managed,female,1417_1417,0.018726591760299626
+1418,844,9,1,4,1,systemic lupus erythematosus,managed,female,1418_1418,0.01066350710900474
+1419,2612,15,1,8,2,systemic lupus erythematosus,managed,female,1419_1419,0.005742725880551302
+1420,1199,16,1,8,2,systemic lupus erythematosus,managed,female,1420_1420,0.013344453711426188
+1445,327,3,1,4,1,systemic lupus erythematosus,managed,female,1445_1445,0.009174311926605505
+1452,419,5,1,4,1,systemic lupus erythematosus,managed,female,1452_1452,0.011933174224343675
+1472,472,0,1,4,1,systemic lupus erythematosus,managed,female,1472_1472,0.0
+1479,314,2,1,4,1,systemic lupus erythematosus,managed,female,1479_1479,0.006369426751592357
+1480,1331,9,1,4,1,systemic lupus erythematosus,managed,female,1480_1480,0.0067618332081141996
+1492,745,6,1,4,1,systemic lupus erythematosus,managed,female,1492_1492,0.008053691275167786
+1493,909,3,1,4,1,systemic lupus erythematosus,managed,female,1493_1493,0.0033003300330033004
+1496,930,1,1,8,2,systemic lupus erythematosus,managed,female,1496_1496,0.001075268817204301
+1510,778,5,1,8,2,systemic lupus erythematosus,managed,female,1510_1510,0.006426735218508998
+1514,781,3,1,8,2,systemic lupus erythematosus,managed,female,1514_1514,0.0038412291933418692
+1522,550,2,1,4,1,systemic lupus erythematosus,managed,male,1522_1522,0.0036363636363636364
+1535,736,4,1,4,1,systemic lupus erythematosus,managed,female,1535_1535,0.005434782608695652
+1543,107,0,1,4,1,systemic lupus erythematosus,managed,female,1543_1543,0.0
+1545,416,5,1,8,2,systemic lupus erythematosus,managed,female,1545_1545,0.01201923076923077
+1558,145,1,1,4,1,systemic lupus erythematosus,managed,male,1558_1558,0.006896551724137931
+1567,64,2,1,4,1,systemic lupus erythematosus,managed,female,1567_1567,0.03125
+1569,329,0,1,4,1,systemic lupus erythematosus,managed,female,1569_1569,0.0
+1582,322,1,1,4,1,systemic lupus erythematosus,managed,female,1582_1582,0.003105590062111801
+1584,865,1,1,4,1,systemic lupus erythematosus,managed,female,1584_1584,0.0011560693641618498
+1586,1026,3,2,4,1,systemic lupus erythematosus,flare|treated,female,1586_1586,0.0029239766081871343
+1588,195,0,1,4,1,systemic lupus erythematosus,managed,male,1588_1588,0.0
+1596,873,6,1,8,2,systemic lupus erythematosus,managed,female,1596_1596,0.006872852233676976
+1597,81,0,1,4,1,systemic lupus erythematosus,managed,female,1597_1597,0.0
+1602,343,0,1,4,1,systemic lupus erythematosus,managed,female,1602_1602,0.0
+1614,955,0,1,8,2,systemic lupus erythematosus,managed,female,1614_1614,0.0
+1615,338,7,1,4,1,systemic lupus erythematosus,managed,male,1615_1615,0.020710059171597635
+1621,1567,5,1,4,1,systemic lupus erythematosus,managed,male,1621_1621,0.003190810465858328
+1623,857,3,1,4,1,systemic lupus erythematosus,managed,female,1623_1623,0.003500583430571762
+1633,158,1,1,4,1,systemic lupus erythematosus,managed,female,1633_1633,0.006329113924050633
+1641,865,7,1,4,1,systemic lupus erythematosus,managed,female,1641_1641,0.008092485549132947
+1660,454,3,1,8,2,systemic lupus erythematosus,managed,female,1660_1660,0.006607929515418502
+1667,1097,6,1,8,2,systemic lupus erythematosus,managed,female,1667_1667,0.0054694621695533276
+1672,31,0,1,4,1,systemic lupus erythematosus,managed,female,1672_1672,0.0
+1680,483,1,1,4,1,systemic lupus erythematosus,managed,female,1680_1680,0.002070393374741201
+1682,1069,35,1,8,2,systemic lupus erythematosus,managed,female,1682_1682,0.03274087932647334
+1716,1478,7,1,8,2,systemic lupus erythematosus,managed,female,1716_1716,0.004736129905277402
+1721,235,0,1,4,1,systemic lupus erythematosus,managed,female,1721_1721,0.0
+1726,291,0,1,4,1,systemic lupus erythematosus,managed,female,1726_1726,0.0
+1730,1166,8,1,8,2,systemic lupus erythematosus,managed,female,1730_1730,0.00686106346483705
+1731,265,0,1,4,1,systemic lupus erythematosus,managed,female,1731_1731,0.0
+1737,185,6,1,4,1,systemic lupus erythematosus,managed,female,1737_1737,0.032432432432432434
+1741,1099,10,1,4,1,systemic lupus erythematosus,managed,female,1741_1741,0.009099181073703366
+1743,963,18,1,8,2,systemic lupus erythematosus,managed,female,1743_1743,0.018691588785046728
+1754,1699,14,1,6,2,systemic lupus erythematosus,managed,female,1754_1754,0.00824014125956445
+1760,126,4,1,4,1,systemic lupus erythematosus,managed,female,1760_1760,0.031746031746031744
+1763,366,19,3,8,2,systemic lupus erythematosus,flare|managed|treated,female,1763_1763,0.05191256830601093
+1767,485,1,1,4,1,systemic lupus erythematosus,managed,female,1767_1767,0.002061855670103093
+1768,644,3,1,8,2,systemic lupus erythematosus,managed,female,1768_1768,0.004658385093167702
+1771,202,2,1,6,2,systemic lupus erythematosus,managed,female,1771_1771,0.009900990099009901
+1772,1159,44,2,8,2,systemic lupus erythematosus,flare|managed,female,1772_1772,0.03796376186367558
+1775,406,3,1,4,1,systemic lupus erythematosus,managed,female,1775_1775,0.007389162561576354
+1785,435,1,1,4,1,systemic lupus erythematosus,managed,female,1785_1785,0.0022988505747126436
+1791,652,19,1,6,2,systemic lupus erythematosus,managed,female,1791_1791,0.029141104294478526
+1799,187,2,1,4,1,systemic lupus erythematosus,managed,female,1799_1799,0.0106951871657754
+1804,869,2,1,6,2,systemic lupus erythematosus,managed,female,1804_1804,0.0023014959723820483
+1815,871,1,1,4,1,systemic lupus erythematosus,managed,female,1815_1815,0.001148105625717566
+1827,438,0,1,4,1,systemic lupus erythematosus,managed,female,1827_1827,0.0
+1829,23,0,1,4,1,systemic lupus erythematosus,managed,female,1829_1829,0.0
+1848,577,1,1,4,1,systemic lupus erythematosus,managed,female,1848_1848,0.0017331022530329288
+1857,1051,4,1,4,1,systemic lupus erythematosus,managed,female,1857_1857,0.003805899143672693
+1881,273,5,1,4,1,systemic lupus erythematosus,managed,female,1881_1881,0.018315018315018316
+1886,294,2,1,4,1,systemic lupus erythematosus,managed,female,1886_1886,0.006802721088435374
+1888,377,10,1,4,1,systemic lupus erythematosus,managed,female,1888_1888,0.026525198938992044
+1891,746,0,1,4,1,systemic lupus erythematosus,managed,female,1891_1891,0.0
+1892,444,2,1,4,1,systemic lupus erythematosus,managed,female,1892_1892,0.0045045045045045045
+1909,282,0,1,4,1,systemic lupus erythematosus,managed,female,1909_1909,0.0
+1928,195,0,1,4,1,systemic lupus erythematosus,managed,female,1928_1928,0.0
+1941,218,25,1,4,1,systemic lupus erythematosus,managed,female,1941_1941,0.11467889908256881
+1947,605,1,1,4,1,systemic lupus erythematosus,managed,female,1947_1947,0.001652892561983471
+1958,305,0,1,4,1,systemic lupus erythematosus,managed,female,1958_1958,0.0
+1961,442,5,1,4,1,systemic lupus erythematosus,managed,female,1961_1961,0.011312217194570135
+2061,380,3,1,4,1,systemic lupus erythematosus,managed,female,2061_2061,0.007894736842105263
+2082,538,4,1,4,1,systemic lupus erythematosus,managed,female,2082_2082,0.007434944237918215
+2132,124,7,1,4,1,systemic lupus erythematosus,flare,male,2132_2132,0.056451612903225805
+2135,188,3,1,4,1,systemic lupus erythematosus,managed,female,2135_2135,0.015957446808510637
+FLARE001,1082,13,2,8,1,systemic lupus erythematosus,flare|treated,female,FLARE001,0.012014787430683918
+FLARE004,721,21,2,8,1,systemic lupus erythematosus,flare|treated,female,FLARE004,0.02912621359223301
+FLARE005,880,7,1,4,1,systemic lupus erythematosus,flare,female,FLARE005,0.007954545454545454
+FLARE006,416,6,1,4,1,systemic lupus erythematosus,flare,female,FLARE006,0.014423076923076924
+FLARE007,662,6,1,4,1,systemic lupus erythematosus,flare,female,FLARE007,0.00906344410876133
+FLARE009,795,22,2,8,1,systemic lupus erythematosus,flare|treated,female,FLARE009,0.027672955974842768
+FLARE010,53,5,2,8,1,systemic lupus erythematosus,flare|treated,female,FLARE010,0.09433962264150944
+FLARE011,68,2,2,8,1,systemic lupus erythematosus,flare|treated,female,FLARE011,0.029411764705882353
+FLARE013,517,5,2,7,1,systemic lupus erythematosus,flare|treated,female,FLARE013,0.009671179883945842
+FLARE014,158,2,1,4,1,systemic lupus erythematosus,flare,female,FLARE014,0.012658227848101266
+FLARE015,614,4,1,4,1,systemic lupus erythematosus,flare,female,FLARE015,0.006514657980456026
+FLARE016,545,2,2,8,1,systemic lupus erythematosus,flare|treated,female,FLARE016,0.003669724770642202
+FLARE017,26,1,1,4,1,systemic lupus erythematosus,flare,female,FLARE017,0.038461538461538464
+FLARE020,345,2,1,4,1,systemic lupus erythematosus,flare,female,FLARE020,0.005797101449275362
+HC-002,353,1,1,4,1,normal,na,male,HC-002,0.0028328611898017
+HC-006,257,8,1,4,1,normal,na,female,HC-006,0.0311284046692607
+HC-008,94,1,1,4,1,normal,na,female,HC-008,0.010638297872340425
+HC-009,700,15,1,4,1,normal,na,female,HC-009,0.02142857142857143
+HC-011,381,6,1,4,1,normal,na,female,HC-011,0.015748031496062992
+HC-014,816,11,1,8,2,normal,na,female,HC-014,0.013480392156862746
+HC-015,309,0,1,4,1,normal,na,female,HC-015,0.0
+HC-019,280,4,1,4,1,normal,na,female,HC-019,0.014285714285714285
+HC-020,543,1,1,4,1,normal,na,female,HC-020,0.001841620626151013
+HC-022,572,18,1,4,1,normal,na,female,HC-022,0.03146853146853147
+HC-500,156,11,1,4,1,normal,na,female,HC-500,0.07051282051282051
+HC-501,406,1,1,4,1,normal,na,female,HC-501,0.0024630541871921183
+HC-502,402,0,1,4,1,normal,na,female,HC-502,0.0
+HC-503,238,3,1,4,1,normal,na,female,HC-503,0.012605042016806723
+HC-504,1018,41,1,8,2,normal,na,female,HC-504,0.04027504911591356
+HC-506,880,3,1,8,2,normal,na,female,HC-506,0.003409090909090909
+HC-508,162,0,1,4,1,normal,na,female,HC-508,0.0
+HC-512,177,0,1,4,1,normal,na,female,HC-512,0.0
+HC-516,335,6,1,4,1,normal,na,female,HC-516,0.01791044776119403
+HC-519,676,8,1,4,1,normal,na,female,HC-519,0.011834319526627219
+HC-520,428,3,1,4,1,normal,na,female,HC-520,0.007009345794392523
+HC-524,1797,2,1,4,1,normal,na,female,HC-524,0.0011129660545353367
+HC-526,635,2,1,4,1,normal,na,female,HC-526,0.0031496062992125984
+HC-531,672,3,1,4,1,normal,na,female,HC-531,0.004464285714285714
+HC-532,450,5,1,4,1,normal,na,female,HC-532,0.011111111111111112
+HC-533,348,3,1,4,1,normal,na,female,HC-533,0.008620689655172414
+HC-536,401,1,1,4,1,normal,na,female,HC-536,0.0024937655860349127
+HC-538,687,5,1,4,1,normal,na,female,HC-538,0.00727802037845706
+HC-540,387,1,1,4,1,normal,na,female,HC-540,0.002583979328165375
+HC-541,455,3,1,4,1,normal,na,female,HC-541,0.006593406593406593
+HC-543,228,0,1,4,1,normal,na,female,HC-543,0.0
+HC-545,388,5,1,4,1,normal,na,female,HC-545,0.01288659793814433
+HC-546,577,5,1,4,1,normal,na,female,HC-546,0.008665511265164644
+HC-551,276,1,1,4,1,normal,na,female,HC-551,0.0036231884057971015
+HC-552,375,2,1,4,1,normal,na,female,HC-552,0.005333333333333333
+HC-554,428,4,1,4,1,normal,na,female,HC-554,0.009345794392523364
+HC-556,99,0,1,4,1,normal,na,female,HC-556,0.0
+HC-558,195,4,1,4,1,normal,na,female,HC-558,0.020512820512820513
+HC-563,449,13,1,4,1,normal,na,female,HC-563,0.028953229398663696
+HC-566,28,0,1,4,1,normal,na,female,HC-566,0.0
+HC-567,529,7,1,4,1,normal,na,female,HC-567,0.013232514177693762
+HC-571,129,5,1,4,1,normal,na,female,HC-571,0.03875968992248062
+HC-572,629,4,1,4,1,normal,na,female,HC-572,0.006359300476947536
+HC-573,328,11,1,4,1,normal,na,female,HC-573,0.03353658536585366
+HC-574,283,2,1,4,1,normal,na,female,HC-574,0.007067137809187279
+HC-578,416,4,1,4,1,normal,na,female,HC-578,0.009615384615384616
+HC-580,509,2,1,4,1,normal,na,female,HC-580,0.003929273084479371
+HC-585,461,12,1,4,1,normal,na,female,HC-585,0.026030368763557483
+ICC_control,245,0,1,4,1,normal,na,female,ICC_control,0.0
+IGTB1290,991,4,1,10,2,normal,na,female,IGTB1290_IGTB1290,0.004036326942482341
+IGTB1372,1378,15,1,12,3,normal,na,female,IGTB1372_IGTB1372,0.01088534107402032
+IGTB141,711,6,1,8,2,normal,na,female,IGTB141_IGTB141,0.008438818565400843
+IGTB143,1018,3,1,12,2,normal,na,female,IGTB143_IGTB143,0.0029469548133595285
+IGTB1506,1243,10,1,16,3,normal,na,female,IGTB1506_IGTB1506,0.008045052292839904
+IGTB1539,940,3,1,8,2,normal,na,female,IGTB1539_IGTB1539,0.0031914893617021275
+IGTB1540,1507,9,1,12,2,normal,na,female,IGTB1540_IGTB1540,0.005972130059721301
+IGTB1542,243,1,1,4,1,normal,na,female,IGTB1542_IGTB1542,0.00411522633744856
+IGTB1575,500,1,1,8,2,normal,na,female,IGTB1575_IGTB1575,0.002
+IGTB1650,1156,2,1,12,2,normal,na,female,IGTB1650_IGTB1650,0.0017301038062283738
+IGTB1731,324,2,1,4,1,normal,na,female,IGTB1731_IGTB1731,0.006172839506172839
+IGTB1762,362,1,1,4,1,normal,na,female,IGTB1762_IGTB1762,0.0027624309392265192
+IGTB1768,349,2,1,4,1,normal,na,female,IGTB1768_IGTB1768,0.0057306590257879654
+IGTB1789,810,1,1,4,1,normal,na,female,IGTB1789_IGTB1789,0.0012345679012345679
+IGTB1793,315,3,1,4,1,normal,na,female,IGTB1793_IGTB1793,0.009523809523809525
+IGTB1814,930,2,1,4,1,normal,na,female,IGTB1814_IGTB1814,0.002150537634408602
+IGTB1815,704,2,1,4,1,normal,na,female,IGTB1815_IGTB1815,0.002840909090909091
+IGTB1819,485,2,1,4,1,normal,na,male,IGTB1819_IGTB1819,0.004123711340206186
+IGTB1826,478,7,1,4,1,normal,na,female,IGTB1826_IGTB1826,0.014644351464435146
+IGTB1827,320,3,1,4,1,normal,na,female,IGTB1827_IGTB1827,0.009375
+IGTB1828,689,2,1,4,1,normal,na,female,IGTB1828_IGTB1828,0.002902757619738752
+IGTB1840,888,0,1,4,1,normal,na,female,IGTB1840_IGTB1840,0.0
+IGTB1844,608,3,1,4,1,normal,na,female,IGTB1844_IGTB1844,0.004934210526315789
+IGTB1871,474,5,1,4,1,normal,na,female,IGTB1871_IGTB1871,0.010548523206751054
+IGTB1895,573,0,1,4,1,normal,na,female,IGTB1895_IGTB1895,0.0
+IGTB1901,520,3,1,4,1,normal,na,female,IGTB1901_IGTB1901,0.0057692307692307696
+IGTB1906,484,5,1,4,1,normal,na,female,IGTB1906_IGTB1906,0.010330578512396695
+IGTB1908,262,0,1,4,1,normal,na,female,IGTB1908_IGTB1908,0.0
+IGTB1913,276,3,1,4,1,normal,na,female,IGTB1913_IGTB1913,0.010869565217391304
+IGTB1916,406,4,1,4,1,normal,na,female,IGTB1916_IGTB1916,0.009852216748768473
+IGTB1921,794,10,1,10,3,normal,na,female,IGTB1921_IGTB1921,0.012594458438287154
+IGTB195,1254,5,1,16,3,normal,na,female,IGTB195_IGTB195,0.003987240829346092
+IGTB1952,510,2,1,4,1,normal,na,female,IGTB1952_IGTB1952,0.00392156862745098
+IGTB1966,912,0,1,4,1,normal,na,female,IGTB1966_IGTB1966,0.0
+IGTB1974,437,4,1,4,1,normal,na,female,IGTB1974_IGTB1974,0.009153318077803204
+IGTB1982,628,1,1,4,1,normal,na,female,IGTB1982_IGTB1982,0.0015923566878980893
+IGTB1987,426,4,1,4,1,normal,na,female,IGTB1987_IGTB1987,0.009389671361502348
+IGTB1996,625,1,1,4,1,normal,na,female,IGTB1996_IGTB1996,0.0016
+IGTB2007,386,2,1,4,1,normal,na,female,IGTB2007_IGTB2007,0.0051813471502590676
+IGTB2065,330,3,1,4,1,normal,na,female,IGTB2065_IGTB2065,0.00909090909090909
+IGTB256,1317,6,1,10,2,normal,na,female,IGTB256_IGTB256,0.004555808656036446
+IGTB469,1039,20,1,16,3,normal,na,female,IGTB469_IGTB469,0.019249278152069296
+IGTB498,983,7,1,12,2,normal,na,female,IGTB498_IGTB498,0.007121057985757884
+IGTB508,1089,9,1,16,3,normal,na,female,IGTB508_IGTB508,0.008264462809917356
+IGTB514,1671,8,1,14,3,normal,na,female,IGTB514_IGTB514,0.0047875523638539795
+IGTB645,508,3,1,12,2,normal,na,female,IGTB645_IGTB645,0.005905511811023622
+IGTB670,918,9,1,8,2,normal,na,female,IGTB670_IGTB670,0.00980392156862745
+IGTB826,1872,16,1,12,3,normal,na,female,IGTB826_IGTB826,0.008547008547008548
+IGTB884,852,17,1,12,2,normal,na,female,IGTB884_IGTB884,0.01995305164319249
+IGTB986,1037,16,1,12,2,normal,na,female,IGTB986_IGTB986,0.015429122468659595

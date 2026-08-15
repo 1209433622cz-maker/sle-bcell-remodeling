@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-08-15T14:15:22+08:00",
+  "decision": "PASS_GATE_C3_METADATA_JOIN_AND_MODEL_DESIGN_FREEZE",
+  "join_method": "exact cell_id reindex into source CELLxGENE obs",
+  "source_cell_index_policy": "intermediate B-lineage index only; prohibited as full-source row position",
+  "cells": 150402,
+  "samples": 271,
+  "sample_cohort_strata": 332,
+  "libraries": 88,
+  "donors": 259,
+  "ct_cov_missing_cells": 10890,
+  "ct_cov_missing_fraction": 0.07240595204851,
+  "explicit_non_b_ct_cov_cells": 30,
+  "checks": {
+    "gate_c2b4_integrity": {
+      "pass": true,
+      "detail": "11/11 rows verified"
+    },
+    "gate_c2b4_scope": {
+      "pass": true,
+      "detail": "two-compartment composition and prespecified continuous within-conventional programs"
+    },
+    "cell_id_join_complete": {
+      "pass": true,
+      "detail": "150402/150402 cell IDs joined; all-null rows=0"
+    },
+    "cell_ids_unique": {
+      "pass": true,
+      "detail": "primary=True; source=True"
+    },
+    "key_concordance": {
+      "pass": true,
+      "detail": "library_uuid mismatches=0; sample_uuid mismatches=0; donor_id mismatches=0; Processing_Cohort mismatches=0"
+    },
+    "join_method_guard": {
+      "pass": true,
+      "detail": "cell-ID join required; positional source_cell_index library match=0.011"
+    },
+    "two_compartment_assignment_complete": {
+      "pass": true,
+      "detail": "assigned=150,402/150,402"
+    },
+    "sample_metadata_invariants": {
+      "pass": true,
+      "detail": "conflicting sample-field groups=0"
+    },
+    "library_cohort_invariant": {
+      "pass": true,
+      "detail": "libraries with multiple cohorts=0"
+    },
+    "donor_metadata_invariants": {
+      "pass": true,
+      "detail": "conflicting donor-field groups=0"
+    },
+    "donor_ind_cov_bijection": {
+      "pass": true,
+      "detail": "donor->multiple ind_cov=0; ind_cov->multiple donor=0"
+    },
+    "age_complete": {
+      "pass": true,
+      "detail": "age range=20-83"
+    },
+    "explicit_non_b_localized": {
+      "pass": true,
+      "detail": "explicit non-B ct_cov labels=30/150402; sensitivity only"
+    },
+    "primary_design_support": {
+      "pass": true,
+      "detail": "cohort 4 normal=43; managed=47"
+    },
+    "primary_design_full_rank": {
+      "pass": true,
+      "detail": "rank=4/4; n=90"
+    },
+    "validation_design_support": {
+      "pass": true,
+      "detail": "cohort 2 European-female normal=21; managed=43"
+    },
+    "validation_design_full_rank": {
+      "pass": true,
+      "detail": "rank=3/3; n=64"
+    },
+    "flare_design_support": {
+      "pass": true,
+      "detail": "cohort 3 normal=18; flare=16"
+    },
+    "flare_design_full_rank": {
+      "pass": true,
+      "detail": "rank=4/4; n=34"
+    }
+  },
+  "model_contract_frozen": true,
+  "effect_estimates_inspected": false,
+  "next_if_pass": "fit Gate C3A frozen abundance models and prespecified sensitivities",
+  "next_if_hold": "repair metadata keys or unsupported model strata before effect estimation"
+}

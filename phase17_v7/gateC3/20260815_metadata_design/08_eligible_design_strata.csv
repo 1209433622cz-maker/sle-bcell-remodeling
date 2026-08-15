@@ -1,0 +1,10 @@
+﻿Processing_Cohort,disease,disease_state,strata,unique_samples,unique_donors,median_cells,minimum_cells,zero_asc_strata
+1.0,normal,na,47,47,47,464.0,262,5
+2.0,normal,na,22,22,22,458.5,161,2
+2.0,systemic lupus erythematosus,managed,113,113,113,435.0,64,27
+3.0,normal,na,18,18,18,419.0,219,3
+3.0,systemic lupus erythematosus,flare,16,16,16,438.5,95,0
+3.0,systemic lupus erythematosus,managed,4,4,4,317.5,109,0
+3.0,systemic lupus erythematosus,treated,5,5,5,292.0,150,2
+4.0,normal,na,43,43,43,387.0,94,6
+4.0,systemic lupus erythematosus,managed,47,47,47,361.0,55,7
