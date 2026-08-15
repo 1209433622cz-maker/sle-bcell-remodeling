@@ -59,7 +59,7 @@ a direct score replication without a predeclared fallback.
 
 ### Primary external endpoint
 
-The central endpoint is the exact 13-gene `IFN_ISG` program in conventional B-cell
+The central endpoint is the exact 12-gene `IFN_ISG` program in conventional B-cell
 pseudobulks. Use donor/sample as the inferential unit, TMM logCPM, within-contrast
 gene z scores and HC3 uncertainty, matching C4B.
 

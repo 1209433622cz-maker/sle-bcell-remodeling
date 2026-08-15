@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-08-15T16:27:21+08:00",
+  "status": "C5A_SOURCE_MAPPING_FREEZE_COMPLETE_REVIEW_REQUIRED",
+  "external_disease_effects_inspected": false,
+  "source": {
+    "accession": "GSE135779",
+    "metadata_donors": 58,
+    "matrix_samples": 56,
+    "missing_matrix_samples": [
+      "JB19002",
+      "JB19016"
+    ],
+    "missing_matrix_donors": [
+      "aHD2",
+      "aSLE8"
+    ],
+    "missingness_balance": {
+      "HC": 1,
+      "SLE": 1
+    },
+    "gene_features": 32738,
+    "ensembl_unique": true,
+    "authoritative_metadata": "Meta_caSLE_processed_08092021_small.csv",
+    "childhood_metadata_version_jaccard": 0.9751263253891527,
+    "metadata_versions_are_identical": false,
+    "matched_metadata_cells": 321106,
+    "unmatched_metadata_cells": 4,
+    "unannotated_matrix_barcodes": 41977
+  },
+  "identity_mapping": {
+    "B_CONV_ANALOG": "all source labels with B- prefix in extended metadata",
+    "B_ASC_CONTROL": "all source labels with PC- prefix; identity/QC only",
+    "mapping_uses_disease": false,
+    "hard_subtype_claims_authorized": false
+  },
+  "pseudobulk": {
+    "shape": [
+      672,
+      32738
+    ],
+    "dtype": "int64",
+    "row_sum_conserved": true,
+    "inferential_unit": "one matrix sample / one donor"
+  },
+  "minimum_bconv_cells": 50,
+  "threshold_sensitivities": [
+    20,
+    100
+  ],
+  "designs": [
+    {
+      "analysis_name": "combined_min50",
+      "minimum_bconv_cells": 50,
+      "n_samples": 54,
+      "n_hc": 16,
+      "n_sle": 38,
+      "design_columns": "intercept;is_sle;is_adult",
+      "design_rank": 3,
+      "required_rank": 3
+    },
+    {
+      "analysis_name": "childhood_min50",
+      "minimum_bconv_cells": 50,
+      "n_samples": 43,
+      "n_hc": 11,
+      "n_sle": 32,
+      "design_columns": "intercept;is_sle",
+      "design_rank": 2,
+      "required_rank": 2
+    },
+    {
+      "analysis_name": "adult_min50",
+      "minimum_bconv_cells": 50,
+      "n_samples": 11,
+      "n_hc": 5,
+      "n_sle": 6,
+      "design_columns": "intercept;is_sle",
+      "design_rank": 2,
+      "required_rank": 2
+    },
+    {
+      "analysis_name": "combined_min20",
+      "minimum_bconv_cells": 20,
+      "n_samples": 56,
+      "n_hc": 16,
+      "n_sle": 40,
+      "design_columns": "intercept;is_sle;is_adult",
+      "design_rank": 3,
+      "required_rank": 3
+    },
+    {
+      "analysis_name": "combined_min100",
+      "minimum_bconv_cells": 100,
+      "n_samples": 51,
+      "n_hc": 16,
+      "n_sle": 35,
+      "design_columns": "intercept;is_sle;is_adult",
+      "design_rank": 3,
+      "required_rank": 3
+    }
+  ],
+  "program_policy": {
+    "source": "exact Gate C4A frozen dictionary",
+    "confirmatory_family": [
+      "NAIVE_TO_MEMORY_AXIS",
+      "ATYPICAL_LOW_NAIVE_AXIS",
+      "APC_HLA",
+      "IFN_ISG"
+    ],
+    "primary_multiplicity": "BH across four external coefficients",
+    "minimum_availability_per_signed_arm": 0.8,
+    "all_arms_pass": true,
+    "ifn_isg_frozen_gene_count": 12,
+    "ifn_isg_available_gene_count": 12
+  },
+  "frozen_primary_external_analysis": "childhood_min50",
+  "frozen_combined_analysis": "combined_min50 with is_adult adjustment",
+  "frozen_secondary_analysis": "adult_min50",
+  "prohibited": [
+    "cell-level disease testing",
+    "reuse of legacy external effect estimates as confirmatory evidence",
+    "outcome-adaptive source-label inclusion",
+    "program membership changes after external effect inspection",
+    "B_ASC_CONTROL as a conventional-B disease endpoint"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "created_at": "2026-08-15T16:27:30+08:00",
+  "decision": "PASS_GATE_C5A_TO_FROZEN_EXTERNAL_EFFECT_MODELING",
+  "external_effect_unlock_authorized": true,
+  "external_disease_effects_inspected": false,
+  "checks": {
+    "pre_effect_contract": {
+      "pass": true,
+      "detail": "both run status and freeze contract report no external effect inspection"
+    },
+    "source_file_integrity": {
+      "pass": true,
+      "detail": "6 source files independently rehashed; failures=[]"
+    },
+    "tar_member_integrity": {
+      "pass": true,
+      "detail": "112/112 members independently rehashed; failures=0"
+    },
+    "sample_matrix_and_barcode_audit": {
+      "pass": true,
+      "detail": "56 unique samples; 32,738 genes; 321,106 matched metadata cells; 4 explicit exceptions"
+    },
+    "metadata_matrix_sample_gap_explained": {
+      "pass": true,
+      "detail": "58 metadata donors versus 56 matrices: JB19002/aHD2 and JB19016/aSLE8 absent, one per group"
+    },
+    "metadata_version_policy": {
+      "pass": true,
+      "detail": "44 childhood samples; aggregate Jaccard=0.9751; extended metadata frozen as authoritative"
+    },
+    "pseudobulk_count_integrity": {
+      "pass": true,
+      "detail": "matrix=(672, 32738); dtype=int64; row sums and Ensembl uniqueness exact"
+    },
+    "label_to_compartment_conservation": {
+      "pass": true,
+      "detail": "all sample-level B/PC source-label rows sum exactly to their compartment pseudobulk"
+    },
+    "disease_blind_identity_mapping": {
+      "pass": true,
+      "detail": "8 B-caSC labels -> B_CONV_ANALOG; 2 PC-caSC labels -> identity control; disease unused"
+    },
+    "frozen_program_contract": {
+      "pass": true,
+      "detail": "exact C4A dictionary; all signed arms >=80%; IFN/ISG 12/12 genes available"
+    },
+    "external_design_identifiability": {
+      "pass": true,
+      "detail": "five frozen designs match expected group sizes and are full rank"
+    }
+  },
+  "frozen_primary": "GSE135779 childhood B_CONV-analog pseudobulk, >=50 cells, SLE versus HC",
+  "frozen_combined": "GSE135779 combined B_CONV-analog pseudobulk, >=50 cells, is_adult adjustment",
+  "frozen_secondary": "GSE135779 adult B_CONV-analog pseudobulk, >=50 cells",
+  "threshold_sensitivities": [
+    20,
+    100
+  ],
+  "principal_program": "IFN_ISG; exact 12-gene Gate C4A dictionary; 12/12 available",
+  "limitations": [
+    "Two adult metadata donors lack matrix files: aHD2 and aSLE8.",
+    "The childhood-only and extended metadata versions are not cell-identical; extended metadata is authoritative.",
+    "42,977 source-matrix barcodes lack rows in the processed extended metadata and are excluded from label-based analysis.",
+    "Adult >=50 analysis contains 5 HC and 6 SLE donors and is secondary.",
+    "Sex and treatment covariates are not present in the local processed metadata.",
+    "Source B-caSC labels authorize a broad conventional-B analog, not hard naive/memory identities."
+  ],
+  "next_if_pass": "Gate C5B edgeR/HC3 external disease modeling using only frozen C5A objects."
+}

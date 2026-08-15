@@ -1,0 +1,5 @@
+sample_id,donor_name,barcode,barcode_core,source_label,issue
+JB17015,cSLE10,CAGTAACTCGCATGGC-11,CAGTAACTCGCATGGC,Mono-caSC1,metadata barcode absent from source matrix barcode list
+JB17016,cSLE11,CGACTTCCACGGTTTA-12,CGACTTCCACGGTTTA,Mono-caSC0,metadata barcode absent from source matrix barcode list
+JB17019,cSLE12,CGACTTCCAGATGGGT-15,CGACTTCCAGATGGGT,Mono-caSC5,metadata barcode absent from source matrix barcode list
+JB18064,cSLE19,GCTGCTTTCGGTCTAA-22,GCTGCTTTCGGTCTAA,Mono-caSC0,metadata barcode absent from source matrix barcode list
