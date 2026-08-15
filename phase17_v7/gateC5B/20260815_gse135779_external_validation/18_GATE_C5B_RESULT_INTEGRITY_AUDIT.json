@@ -1,0 +1,115 @@
+{
+  "created_at": "2026-08-15T17:24:37+08:00",
+  "decision": "PASS_GATE_C5B_INDEPENDENT_IFN_REPLICATION",
+  "checks": {
+    "frozen_input_and_effect_unlock": {
+      "pass": true,
+      "detail": "C5A manifest verified; matrix export was pre-effect; qualification passed"
+    },
+    "statistical_engine_qualification": {
+      "pass": true,
+      "detail": "7/7 checks"
+    },
+    "frozen_model_completeness": {
+      "pass": true,
+      "detail": "five models with frozen sample/group sizes"
+    },
+    "gene_result_integrity": {
+      "pass": true,
+      "detail": "five complete 32,738-row Ensembl tables; tested counts and BH independently reproduced"
+    },
+    "program_result_integrity": {
+      "pass": true,
+      "detail": "four-program BH and availability reproduced for all five analyses"
+    },
+    "ifn_confirmatory_significance": {
+      "pass": true,
+      "detail": "childhood effect=1.042, q=2.98e-06; combined effect=0.996, q=1.31e-06"
+    },
+    "childhood_combined_direction": {
+      "pass": true,
+      "detail": "childhood and combined IFN/ISG effects are both positive"
+    },
+    "adult_no_persuasive_reversal": {
+      "pass": true,
+      "detail": "adult effect=0.968, 95% CI -0.123 to 2.060"
+    },
+    "support_threshold_direction": {
+      "pass": true,
+      "detail": ">=20 effect=0.965; >=100 effect=0.939"
+    },
+    "ifn_donor_influence": {
+      "pass": true,
+      "detail": "43 deletions; range 0.987 to 1.094; max |delta| 0.055"
+    },
+    "ifn_source_label_direction": {
+      "pass": true,
+      "detail": "eight omissions; effect range 1.019 to 1.051"
+    },
+    "ifn_no_single_label_dependence": {
+      "pass": true,
+      "detail": "minimum omission effect 1.019 versus 50% full-effect floor 0.521"
+    },
+    "ifn_ranked_gene_coherence": {
+      "pass": true,
+      "detail": "childhood expected fraction=1.000, camera FDR=1.85e-07; combined fraction=1.000, FDR=1.59e-07"
+    },
+    "cross_dataset_ifn_gene_direction_descriptive": {
+      "pass": true,
+      "detail": "10 shared tested IFN genes; positive in both datasets fraction=1.000"
+    },
+    "technical_and_identity_specificity": {
+      "pass": true,
+      "detail": "IFN=1.042; platelet=0.049; ASC/UPR=0.221; pan-B=-0.232; top-50 fractions <=0.10=True"
+    },
+    "gate_c5b_external_acceptance": {
+      "pass": true,
+      "detail": "decision=PASS_GATE_C5B_INDEPENDENT_IFN_REPLICATION"
+    }
+  },
+  "gene_table_audits": [
+    {
+      "analysis_name": "childhood_min50",
+      "rows": 32738,
+      "tested_genes": 8469,
+      "unique_ensembl": true,
+      "bh_reproduced": true,
+      "pass": true
+    },
+    {
+      "analysis_name": "combined_min50",
+      "rows": 32738,
+      "tested_genes": 8601,
+      "unique_ensembl": true,
+      "bh_reproduced": true,
+      "pass": true
+    },
+    {
+      "analysis_name": "adult_min50",
+      "rows": 32738,
+      "tested_genes": 6277,
+      "unique_ensembl": true,
+      "bh_reproduced": true,
+      "pass": true
+    },
+    {
+      "analysis_name": "combined_min20",
+      "rows": 32738,
+      "tested_genes": 8458,
+      "unique_ensembl": true,
+      "bh_reproduced": true,
+      "pass": true
+    },
+    {
+      "analysis_name": "combined_min100",
+      "rows": 32738,
+      "tested_genes": 8754,
+      "unique_ensembl": true,
+      "bh_reproduced": true,
+      "pass": true
+    }
+  ],
+  "program_bh_reproduced": true,
+  "figure_png_sha256": "C36F6DD8AB10687D0473FFFB7B4E6A93DA13CED16DD4DDB2E7FEBD4ECC5CA065",
+  "figure_pdf_sha256": "2B3BFE2FF6B9179C79E70BBA7B102C516F2DDBFCCB69BD7B56C4321AEA483E6D"
+}

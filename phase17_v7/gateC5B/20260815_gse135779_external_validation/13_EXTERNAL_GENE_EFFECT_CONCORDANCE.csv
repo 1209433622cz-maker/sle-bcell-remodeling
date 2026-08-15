@@ -1,0 +1,4 @@
+"comparison","shared_tested_genes","spearman_rho","spearman_bootstrap_ci_low","spearman_bootstrap_ci_high","leading_primary_n","leading_direction_concordance","leading_concordance_ci_low","leading_concordance_ci_high"
+"childhood_vs_combined",8436,0.945130897460805,0.942109865040162,0.947973676523788,500,1,0.992649389948092,1
+"childhood_vs_adult",6275,0.140473799632364,0.116521082269677,0.167135831714364,500,0.654,0.610488556970951,0.695677910524546
+"combined_vs_adult",6277,0.426284652493229,0.404402872974977,0.445098131674408,500,0.896,0.865859251577519,0.921348064725366
