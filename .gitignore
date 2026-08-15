@@ -58,6 +58,7 @@ phase17_v7/**/doublet_score_checkpoints/
 phase17_v7/gateC4A/**/checkpoints/
 phase17_v7/gateC4A/**/*pseudobulk_counts*.npz
 phase17_v7/gateC5A/**/*pseudobulk_counts*.npz
+phase17_v7/gateC6B/**/resources/
 
 # Runtime, editor and Office artifacts.
 **/__pycache__/

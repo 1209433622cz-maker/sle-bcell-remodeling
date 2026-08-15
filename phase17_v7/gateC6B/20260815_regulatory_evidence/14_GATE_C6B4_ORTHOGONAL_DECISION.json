@@ -1,0 +1,85 @@
+{
+  "created_at": "2026-08-15T18:19:39+08:00",
+  "decision": "PASS_GATE_C6B4_ORTHOGONAL_EVIDENCE_PENDING_INDEPENDENT_AUDIT",
+  "gse23307_expression_effects_inspected": true,
+  "msigdb_enrichment_effects_inspected": true,
+  "permutations_per_contrast": 10000,
+  "checks": {
+    "gse23307_two_donors_positive": true,
+    "gse23307_no_powered_p_value": true,
+    "msigdb_positive_all_three": true,
+    "msigdb_no_material_contradiction": true,
+    "frozen_mapping_and_method_used": true
+  },
+  "gse23307_donor_results": [
+    {
+      "donor_id": "HI1",
+      "genes": 12,
+      "mean_paired_log2_effect": 4603.57465,
+      "median_paired_log2_effect": 3967.4438325,
+      "positive_genes": 12,
+      "positive_gene_fraction": 1.0,
+      "program_direction": "positive",
+      "inferential_p_value": "not_calculated_n_equals_2"
+    },
+    {
+      "donor_id": "HI2",
+      "genes": 12,
+      "mean_paired_log2_effect": 7689.786234583332,
+      "median_paired_log2_effect": 6389.039795,
+      "positive_genes": 12,
+      "positive_gene_fraction": 1.0,
+      "program_direction": "positive",
+      "inferential_p_value": "not_calculated_n_equals_2"
+    }
+  ],
+  "msigdb_results": [
+    {
+      "contrast": "gse174188_primary",
+      "ranked_genes": 4414,
+      "matched_genes": 54,
+      "enrichment_score": 0.8576919719796087,
+      "normalized_enrichment_score": 3.186802649601297,
+      "permutation_p_value": 0.00016801075268817206,
+      "permutations": 10000,
+      "positive_null_permutations": 5951,
+      "negative_null_permutations": 4049,
+      "peak_rank_one_based": 121,
+      "leading_edge_genes": "USP18;IFI44L;EPSTI1;IFIT3;MX1;SAMD9L;EIF2AK2;PARP9;IFI44;SAMD9;PLSCR1;IFI27;ISG15;OAS1;PSME2;IRF7;ISG20;BST2;PSMB9;IFITM1;NMI;LY6E;IFITM2;SP110;IRF9;LAP3;PSMB8;GBP4;IFI35;STAT2;UBE2L6;PARP14;ADAR;PSME1;IFIH1",
+      "leading_edge_count": 35,
+      "q_value_descriptive_three_contrasts": 0.00017241379310344824
+    },
+    {
+      "contrast": "gse174188_internal_nonoverlap",
+      "ranked_genes": 6077,
+      "matched_genes": 68,
+      "enrichment_score": 0.8056056557179284,
+      "normalized_enrichment_score": 3.0498612816254838,
+      "permutation_p_value": 0.00014979029358897544,
+      "permutations": 10000,
+      "positive_null_permutations": 6675,
+      "negative_null_permutations": 3325,
+      "peak_rank_one_based": 400,
+      "leading_edge_genes": "USP18;IFI44L;ISG15;SAMD9L;IFI44;EIF2AK2;IFIT3;IRF7;BST2;MX1;IFI27;OAS1;UBE2L6;PARP9;IFIH1;LY6E;IFITM1;NMI;ADAR;IRF9;STAT2;IFI35;TAP1;PSME2;PLSCR1;EPSTI1;PSME1;ISG20;IFITM2;LAP3;DDX60;HLA-C;GBP4;ELF1;HELZ2;PSMB8;SP110;GBP2;IFI30;CASP1;PSMB9",
+      "leading_edge_count": 41,
+      "q_value_descriptive_three_contrasts": 0.00017241379310344824
+    },
+    {
+      "contrast": "gse135779_childhood",
+      "ranked_genes": 8468,
+      "matched_genes": 81,
+      "enrichment_score": 0.8523922656378746,
+      "normalized_enrichment_score": 3.5271419267951707,
+      "permutation_p_value": 0.00017241379310344826,
+      "permutations": 10000,
+      "positive_null_permutations": 5799,
+      "negative_null_permutations": 4201,
+      "peak_rank_one_based": 701,
+      "leading_edge_genes": "IFI27;LGALS3BP;USP18;IFI44;IFI44L;PARP9;HELZ2;RSAD2;EIF2AK2;CMPK2;OASL;EPSTI1;PLSCR1;DDX60;IFITM1;DHX58;HERC6;PSME2;ISG15;IFIT3;MX1;CMTR1;IFITM3;LY6E;IRF7;TRIM14;IFI35;IFIT2;IFIH1;SAMD9L;PARP12;ADAR;OAS1;BST2;LAP3;MOV10;IRF9;PARP14;GBP4;IFITM2;IL15;UBA7;ISG20;UBE2L6;STAT2;CASP1;TRIM25;TAP1;PNPT1;TXNIP;NCOA7;B2M;GBP2;PSMB9;PSME1;TMEM140;RIPK2;TRAFD1;CNP;TRIM5;SAMD9;SP110",
+      "leading_edge_count": 62,
+      "q_value_descriptive_three_contrasts": 0.00017241379310344824
+    }
+  ],
+  "next_if_pass": "perform independent Gate C6B audit and conditionally render Figure 5",
+  "next_if_hold": "retain regulator results as qualified observational support without central framing"
+}

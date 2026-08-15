@@ -1,0 +1,49 @@
+{
+  "created_at": "2026-08-15T18:17:42+08:00",
+  "decision": "PASS_GATE_C6B3_ORTHOGONAL_METHOD_FREEZE",
+  "gse23307_expression_effects_inspected": false,
+  "msigdb_enrichment_effects_inspected": false,
+  "gse23307_method": {
+    "samples": [
+      "GSM571899",
+      "GSM571900",
+      "GSM571903",
+      "GSM571904"
+    ],
+    "genes": [
+      "ISG15",
+      "IFIT1",
+      "IFIT2",
+      "IFIT3",
+      "MX1",
+      "MX2",
+      "OAS1",
+      "OAS2",
+      "IFI44L",
+      "IFI6",
+      "LY6E",
+      "IRF7"
+    ],
+    "mapped_probes": 21,
+    "probe_aggregation": "median submitted log2-normalized intensity within gene and sample",
+    "gene_effect": "IFN-beta minus matched untreated control within donor",
+    "program_effect": "arithmetic mean of 12 frozen gene effects within donor",
+    "acceptance": "program effect positive in HI1 and HI2; no powered P value"
+  },
+  "msigdb_method": {
+    "gene_set": "M5911 HALLMARK_INTERFERON_ALPHA_RESPONSE (97 genes)",
+    "rank_metric": "frozen symbol-collapsed sign(logFC)*sqrt(F)",
+    "algorithm": "weighted preranked GSEA, exponent 1",
+    "null": "10000 deterministic gene-label permutations per confirmatory contrast",
+    "multiplicity": "descriptive BH across three M5911 contrasts; outside global 24-test family"
+  },
+  "checks": {
+    "all_12_genes_mapped": true,
+    "mapping_has_21_probes": true,
+    "matrix_header_has_six_samples": true,
+    "four_paired_bcell_samples_present": true,
+    "external_freeze_expression_blind": true
+  },
+  "next_if_pass": "calculate GSE23307 paired effects and M5911 ranked enrichment",
+  "next_if_hold": "repair mappings without reading orthogonal effects"
+}

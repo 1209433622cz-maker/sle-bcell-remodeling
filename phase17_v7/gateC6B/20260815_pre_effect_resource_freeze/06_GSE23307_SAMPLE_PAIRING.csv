@@ -1,0 +1,7 @@
+sample_order,geo_accession,title,cell_type,donor_id,condition,include_paired_bcell
+1,GSM571899,B cells 3 hrs IFN-beta HI No.1,B_cell,HI1,IFN_beta,True
+2,GSM571900,B cells 3 hrs control HI No.1,B_cell,HI1,control,True
+3,GSM571901,Monos 3 hrs IFN-beta HI No.1,monocyte,HI1,IFN_beta,False
+4,GSM571902,Monos 3 hrs control HI No.1,monocyte,HI1,control,False
+5,GSM571903,B cells 3 hrs IFN-beta HI No.2,B_cell,HI2,IFN_beta,True
+6,GSM571904,B cells 3 hrs control HI No.2,B_cell,HI2,control,True

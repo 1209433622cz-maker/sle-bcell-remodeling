@@ -1,0 +1,35 @@
+{
+  "created_at": "2026-08-15T18:09:13+08:00",
+  "status": "PRE_EFFECT_EXTERNAL_RESOURCES_FROZEN",
+  "regulatory_effects_inspected": false,
+  "expression_effects_inspected": false,
+  "msigdb": {
+    "version": "2026.1.Hs",
+    "systematic_id": "M5911",
+    "standard_name": "HALLMARK_INTERFERON_ALPHA_RESPONSE",
+    "description_url": "https://www.gsea-msigdb.org/gsea/msigdb/human/geneset/HALLMARK_INTERFERON_ALPHA_RESPONSE",
+    "genes": 97,
+    "frozen_12_gene_overlap": 8
+  },
+  "gse23307": {
+    "samples": 6,
+    "paired_bcell_samples": 4,
+    "paired_donors": [
+      "HI1",
+      "HI2"
+    ],
+    "matrix_columns": 7,
+    "platform": "GPL6104",
+    "platform_annotation_rows": 22185,
+    "symbol_column_candidates": [
+      "Gene symbol",
+      "UniGene symbol"
+    ]
+  },
+  "resource_checks": {
+    "msigdb_exact_97_unique": true,
+    "frozen_ifn_exact_12_unique": true,
+    "gse23307_two_complete_pairs": true,
+    "platform_annotation_present": true
+  }
+}

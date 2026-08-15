@@ -1,0 +1,64 @@
+{
+  "created_at": "2026-08-15T18:11:27+08:00",
+  "decision": "PASS_GATE_C6B1_NO_EFFECT_QUALIFICATION",
+  "regulatory_effects_inspected": false,
+  "gse23307_expression_effects_inspected": false,
+  "seed": 20260815,
+  "checks": {
+    "resource_hashes": {
+      "pass": true,
+      "detail": "3/3 frozen external resources"
+    },
+    "collectri_hash_and_parser": {
+      "pass": true,
+      "detail": "STAT1=291, STAT2=50, IRF7=32, IRF9=25, E2F1=299, FOXM1=93, MYC=787, MYBL2=43"
+    },
+    "real_input_coverage": {
+      "pass": true,
+      "detail": "24/24 >=5; core minimum=14"
+    },
+    "independent_ulm_reproduction": {
+      "pass": true,
+      "detail": "max delta=2.220e-15"
+    },
+    "null_calibration": {
+      "pass": true,
+      "detail": "P<0.05 fraction=0.0505 across 2000 tests"
+    },
+    "signal_recovery": {
+      "pass": true,
+      "detail": "median slope=0.719; direction=1.000"
+    },
+    "global_bh_recovery": {
+      "pass": true,
+      "detail": "sensitivity=1.000; empirical FDR=0.000"
+    },
+    "bh_independent_reproduction": {
+      "pass": true,
+      "detail": "max delta=5.551e-17"
+    },
+    "no_real_effect_inspection": {
+      "pass": true,
+      "detail": "real imports used only tested flags, symbols and target coverage"
+    }
+  },
+  "resource_hash_checks": {
+    "MSIGDB_HALLMARK_2026_1": true,
+    "GSE23307_SERIES_MATRIX": true,
+    "GPL6104_ANNOTATION": true
+  },
+  "synthetic_metrics": {
+    "implementation_max_delta": 2.220446049250313e-15,
+    "null_p_lt_0_05_fraction": 0.0505,
+    "signal_median_slope": 0.7193540445010145,
+    "signal_direction_fraction": 1.0,
+    "signal_global_bh_sensitivity": 1.0,
+    "signal_empirical_fdr": 0.0,
+    "bh_max_delta_vs_statsmodels": 5.551115123125783e-17,
+    "null_tests": 2000,
+    "signal_tests": 24
+  },
+  "real_coverage_rows": 24,
+  "next_if_pass": "unlock the frozen 24-test Gate C6B2 regulator analysis",
+  "next_if_hold": "repair qualification without inspecting real effects"
+}

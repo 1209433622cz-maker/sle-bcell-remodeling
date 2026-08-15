@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-08-15T18:20:00+08:00",
+  "decision": "PASS_C6B3A_OBJECTIVE_SCALE_REPAIR_RERUN_REQUIRED",
+  "reason": "The submitted GSE23307 matrix was quantile normalized on a linear intensity scale, not log2 transformed as assumed in the initial method label.",
+  "observed_frozen_probe_range": {
+    "minimum": 37.65039,
+    "maximum": 24966.73
+  },
+  "source_processing_statement": "Illumina BeadStudio quantile normalization; no log transformation stated",
+  "repair_rule": "Apply log2(x + 1) to every frozen probe-sample value before median probe aggregation.",
+  "adaptivity_assessment": "Scale repair is triggered by units and source metadata, not by response direction or significance.",
+  "superseded_outputs": [
+    "10_GSE23307_GENE_SAMPLE_EXPRESSION.csv",
+    "11_GSE23307_PAIRED_GENE_EFFECTS.csv",
+    "12_GSE23307_DONOR_PROGRAM_EFFECTS.csv",
+    "13_MSIGDB_M5911_PRERANKED_GSEA.csv",
+    "14_GATE_C6B4_ORTHOGONAL_DECISION.json",
+    "14_GATE_C6B4_ORTHOGONAL_DECISION.md"
+  ],
+  "superseded_status": "INVALID_SCALE_LABEL_NOT_FOR_SCIENTIFIC_USE_RETAINED_FOR_AUDIT",
+  "authorized_outputs": "new files numbered 16 through 20",
+  "powered_gse23307_inference_authorized": false
+}

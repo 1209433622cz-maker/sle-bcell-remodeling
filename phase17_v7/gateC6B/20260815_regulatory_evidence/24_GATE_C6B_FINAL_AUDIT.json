@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-08-15T18:29:02+08:00",
+  "decision": "PASS_GATE_C6B_UPPER_Q1_REGULATORY_FRAMING_AUTHORIZED_NONCAUSAL",
+  "checks": {
+    "c6b1_qualification_pass": true,
+    "confirmatory_exact_24_unique": true,
+    "independent_ulm_reproduction": true,
+    "independent_global_bh_reproduction": true,
+    "c6b2_all_frozen_checks_pass": true,
+    "influence_row_counts_reconcile": true,
+    "resampling_row_counts_reconcile": true,
+    "core_influence_pass": true,
+    "sensitivity_exact_72": true,
+    "gse23307_gene_effect_exact_24": true,
+    "gse23307_donor_summary_reproduced": true,
+    "scale_repaired_orthogonal_pass": true,
+    "msigdb_exact_three_positive": true,
+    "external_resource_hashes": true,
+    "all_gene_input_hashes": true,
+    "superseded_scale_outputs_preserved": true
+  },
+  "independent_reproduction": {
+    "maximum_ulm_field_delta": 1.7763568394002505e-15,
+    "maximum_global_bh_delta": 1.1102230246251565e-16,
+    "gse23307_donor_mean_delta": 4.440892098500626e-16
+  },
+  "claim_boundary": "convergent observational IFN-centred regulatory evidence; not causal and not a unique upstream stimulus",
+  "authorized_figure": "22_FIGURE5_REGULATORY_EVIDENCE.pdf",
+  "next_stage": "Gate C7 manuscript and full-figure integration with claim-language reconciliation"
+}

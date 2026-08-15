@@ -1,0 +1,22 @@
+{
+  "created_at": "2026-08-15T18:15:39+08:00",
+  "decision": "PASS_GATE_C6B2_REGULATOR_LAYER_PENDING_ORTHOGONAL_REVIEW",
+  "regulatory_effects_inspected": true,
+  "confirmatory_tests": 24,
+  "global_bh_family": "8 frozen regulators x 3 frozen confirmatory contrasts",
+  "seed": 20260815,
+  "target_resamples": 100,
+  "target_resample_fraction": 0.8,
+  "checks": {
+    "core_positive_all_three": true,
+    "core_global_q_each_contrast": true,
+    "ifn_family_direction_and_no_reversal": true,
+    "proliferation_control_specificity": true,
+    "core_leave_one_out_and_resampling": true,
+    "confirmatory_family_exactly_24": true,
+    "qualification_unlock_verified": true
+  },
+  "collectri_compressed_sha256": "C99EC03032009F935610C1808D75BD6FE7DCA25C8B7EA80786242BB6EE457F40",
+  "next_if_pass": "run frozen MSigDB and GSE23307 orthogonal response analyses",
+  "next_if_hold": "retain replicated IFN/ISG program and remove a central regulator claim"
+}
