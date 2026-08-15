@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-08-15T15:12:00+08:00",
+  "audit_method": "independent direct raw-X column sums versus final pseudobulk branch column sums",
+  "genes": 30172,
+  "all_hard_qc": {
+    "exact_equal": true,
+    "mismatched_genes": 0,
+    "maximum_absolute_difference": 0
+  },
+  "residual_risk_negative": {
+    "exact_equal": true,
+    "mismatched_genes": 0,
+    "maximum_absolute_difference": 0
+  }
+}

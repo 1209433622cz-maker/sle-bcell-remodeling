@@ -1,0 +1,90 @@
+﻿program_id,program_label,analysis_family,publication_role,sign,gene_symbol,ordinal,provenance
+NAIVE_TO_MEMORY_AXIS,Naive-to-memory axis,primary_confirmatory,continuous B_CONV program; no hard subtype,1,CD27,1,disease-blind C2A anchors plus pre-existing citation audit controls
+NAIVE_TO_MEMORY_AXIS,Naive-to-memory axis,primary_confirmatory,continuous B_CONV program; no hard subtype,1,TNFRSF13B,2,disease-blind C2A anchors plus pre-existing citation audit controls
+NAIVE_TO_MEMORY_AXIS,Naive-to-memory axis,primary_confirmatory,continuous B_CONV program; no hard subtype,1,AIM2,3,disease-blind C2A anchors plus pre-existing citation audit controls
+NAIVE_TO_MEMORY_AXIS,Naive-to-memory axis,primary_confirmatory,continuous B_CONV program; no hard subtype,1,BANK1,4,disease-blind C2A anchors plus pre-existing citation audit controls
+NAIVE_TO_MEMORY_AXIS,Naive-to-memory axis,primary_confirmatory,continuous B_CONV program; no hard subtype,1,CD40,5,disease-blind C2A anchors plus pre-existing citation audit controls
+NAIVE_TO_MEMORY_AXIS,Naive-to-memory axis,primary_confirmatory,continuous B_CONV program; no hard subtype,1,LTB,6,disease-blind C2A anchors plus pre-existing citation audit controls
+NAIVE_TO_MEMORY_AXIS,Naive-to-memory axis,primary_confirmatory,continuous B_CONV program; no hard subtype,1,GPR183,7,disease-blind C2A anchors plus pre-existing citation audit controls
+NAIVE_TO_MEMORY_AXIS,Naive-to-memory axis,primary_confirmatory,continuous B_CONV program; no hard subtype,-1,TCL1A,8,disease-blind C2A anchors plus pre-existing citation audit controls
+NAIVE_TO_MEMORY_AXIS,Naive-to-memory axis,primary_confirmatory,continuous B_CONV program; no hard subtype,-1,IL4R,9,disease-blind C2A anchors plus pre-existing citation audit controls
+NAIVE_TO_MEMORY_AXIS,Naive-to-memory axis,primary_confirmatory,continuous B_CONV program; no hard subtype,-1,FCER2,10,disease-blind C2A anchors plus pre-existing citation audit controls
+NAIVE_TO_MEMORY_AXIS,Naive-to-memory axis,primary_confirmatory,continuous B_CONV program; no hard subtype,-1,CCR7,11,disease-blind C2A anchors plus pre-existing citation audit controls
+NAIVE_TO_MEMORY_AXIS,Naive-to-memory axis,primary_confirmatory,continuous B_CONV program; no hard subtype,-1,SELL,12,disease-blind C2A anchors plus pre-existing citation audit controls
+NAIVE_TO_MEMORY_AXIS,Naive-to-memory axis,primary_confirmatory,continuous B_CONV program; no hard subtype,-1,CXCR4,13,disease-blind C2A anchors plus pre-existing citation audit controls
+NAIVE_TO_MEMORY_AXIS,Naive-to-memory axis,primary_confirmatory,continuous B_CONV program; no hard subtype,-1,VPREB3,14,disease-blind C2A anchors plus pre-existing citation audit controls
+ATYPICAL_LOW_NAIVE_AXIS,Atypical/ABC with low-naive context,primary_confirmatory,continuous B_CONV program; no ABC hard identity,1,TBX21,1,pre-existing literature-signature and citation audit
+ATYPICAL_LOW_NAIVE_AXIS,Atypical/ABC with low-naive context,primary_confirmatory,continuous B_CONV program; no ABC hard identity,1,ITGAX,2,pre-existing literature-signature and citation audit
+ATYPICAL_LOW_NAIVE_AXIS,Atypical/ABC with low-naive context,primary_confirmatory,continuous B_CONV program; no ABC hard identity,1,FCRL5,3,pre-existing literature-signature and citation audit
+ATYPICAL_LOW_NAIVE_AXIS,Atypical/ABC with low-naive context,primary_confirmatory,continuous B_CONV program; no ABC hard identity,1,FCRL3,4,pre-existing literature-signature and citation audit
+ATYPICAL_LOW_NAIVE_AXIS,Atypical/ABC with low-naive context,primary_confirmatory,continuous B_CONV program; no ABC hard identity,1,ZEB2,5,pre-existing literature-signature and citation audit
+ATYPICAL_LOW_NAIVE_AXIS,Atypical/ABC with low-naive context,primary_confirmatory,continuous B_CONV program; no ABC hard identity,1,CXCR3,6,pre-existing literature-signature and citation audit
+ATYPICAL_LOW_NAIVE_AXIS,Atypical/ABC with low-naive context,primary_confirmatory,continuous B_CONV program; no ABC hard identity,1,TLR7,7,pre-existing literature-signature and citation audit
+ATYPICAL_LOW_NAIVE_AXIS,Atypical/ABC with low-naive context,primary_confirmatory,continuous B_CONV program; no ABC hard identity,-1,CR2,8,pre-existing literature-signature and citation audit
+ATYPICAL_LOW_NAIVE_AXIS,Atypical/ABC with low-naive context,primary_confirmatory,continuous B_CONV program; no ABC hard identity,-1,FCER2,9,pre-existing literature-signature and citation audit
+ATYPICAL_LOW_NAIVE_AXIS,Atypical/ABC with low-naive context,primary_confirmatory,continuous B_CONV program; no ABC hard identity,-1,TCL1A,10,pre-existing literature-signature and citation audit
+APC_HLA,Antigen-presentation program,primary_confirmatory,continuous B_CONV program,1,CD74,1,pre-existing literature-signature and citation audit
+APC_HLA,Antigen-presentation program,primary_confirmatory,continuous B_CONV program,1,HLA-DRA,2,pre-existing literature-signature and citation audit
+APC_HLA,Antigen-presentation program,primary_confirmatory,continuous B_CONV program,1,HLA-DRB1,3,pre-existing literature-signature and citation audit
+APC_HLA,Antigen-presentation program,primary_confirmatory,continuous B_CONV program,1,HLA-DPA1,4,pre-existing literature-signature and citation audit
+APC_HLA,Antigen-presentation program,primary_confirmatory,continuous B_CONV program,1,HLA-DPB1,5,pre-existing literature-signature and citation audit
+APC_HLA,Antigen-presentation program,primary_confirmatory,continuous B_CONV program,1,HLA-DQA1,6,pre-existing literature-signature and citation audit
+APC_HLA,Antigen-presentation program,primary_confirmatory,continuous B_CONV program,1,HLA-DQB1,7,pre-existing literature-signature and citation audit
+APC_HLA,Antigen-presentation program,primary_confirmatory,continuous B_CONV program,1,B2M,8,pre-existing literature-signature and citation audit
+APC_HLA,Antigen-presentation program,primary_confirmatory,continuous B_CONV program,1,CIITA,9,pre-existing literature-signature and citation audit
+APC_HLA,Antigen-presentation program,primary_confirmatory,continuous B_CONV program,1,CD86,10,pre-existing literature-signature and citation audit
+IFN_ISG,Type I interferon response,primary_confirmatory,continuous B_CONV program,1,ISG15,1,Perez context plus pre-existing citation audit
+IFN_ISG,Type I interferon response,primary_confirmatory,continuous B_CONV program,1,IFIT1,2,Perez context plus pre-existing citation audit
+IFN_ISG,Type I interferon response,primary_confirmatory,continuous B_CONV program,1,IFIT2,3,Perez context plus pre-existing citation audit
+IFN_ISG,Type I interferon response,primary_confirmatory,continuous B_CONV program,1,IFIT3,4,Perez context plus pre-existing citation audit
+IFN_ISG,Type I interferon response,primary_confirmatory,continuous B_CONV program,1,MX1,5,Perez context plus pre-existing citation audit
+IFN_ISG,Type I interferon response,primary_confirmatory,continuous B_CONV program,1,MX2,6,Perez context plus pre-existing citation audit
+IFN_ISG,Type I interferon response,primary_confirmatory,continuous B_CONV program,1,OAS1,7,Perez context plus pre-existing citation audit
+IFN_ISG,Type I interferon response,primary_confirmatory,continuous B_CONV program,1,OAS2,8,Perez context plus pre-existing citation audit
+IFN_ISG,Type I interferon response,primary_confirmatory,continuous B_CONV program,1,IFI44L,9,Perez context plus pre-existing citation audit
+IFN_ISG,Type I interferon response,primary_confirmatory,continuous B_CONV program,1,IFI6,10,Perez context plus pre-existing citation audit
+IFN_ISG,Type I interferon response,primary_confirmatory,continuous B_CONV program,1,LY6E,11,Perez context plus pre-existing citation audit
+IFN_ISG,Type I interferon response,primary_confirmatory,continuous B_CONV program,1,IRF7,12,Perez context plus pre-existing citation audit
+ACTIVATION_STRESS,Activation/immediate-early response,secondary_contextual,context and technical-stress sensitivity,1,CD69,1,pre-existing disease-blind marker program
+ACTIVATION_STRESS,Activation/immediate-early response,secondary_contextual,context and technical-stress sensitivity,1,CD83,2,pre-existing disease-blind marker program
+ACTIVATION_STRESS,Activation/immediate-early response,secondary_contextual,context and technical-stress sensitivity,1,CD86,3,pre-existing disease-blind marker program
+ACTIVATION_STRESS,Activation/immediate-early response,secondary_contextual,context and technical-stress sensitivity,1,NFKBIA,4,pre-existing disease-blind marker program
+ACTIVATION_STRESS,Activation/immediate-early response,secondary_contextual,context and technical-stress sensitivity,1,JUNB,5,pre-existing disease-blind marker program
+ACTIVATION_STRESS,Activation/immediate-early response,secondary_contextual,context and technical-stress sensitivity,1,FOS,6,pre-existing disease-blind marker program
+ACTIVATION_STRESS,Activation/immediate-early response,secondary_contextual,context and technical-stress sensitivity,1,FOSB,7,pre-existing disease-blind marker program
+ACTIVATION_STRESS,Activation/immediate-early response,secondary_contextual,context and technical-stress sensitivity,1,DUSP1,8,pre-existing disease-blind marker program
+ACTIVATION_STRESS,Activation/immediate-early response,secondary_contextual,context and technical-stress sensitivity,1,NR4A2,9,pre-existing disease-blind marker program
+TLR7_INNATE,TLR7/innate-sensing context,secondary_contextual,mechanistic context only,1,TLR7,1,pre-existing citation audit; boundary context
+TLR7_INNATE,TLR7/innate-sensing context,secondary_contextual,mechanistic context only,1,MYD88,2,pre-existing citation audit; boundary context
+TLR7_INNATE,TLR7/innate-sensing context,secondary_contextual,mechanistic context only,1,IRAK1,3,pre-existing citation audit; boundary context
+TLR7_INNATE,TLR7/innate-sensing context,secondary_contextual,mechanistic context only,1,IRF7,4,pre-existing citation audit; boundary context
+TLR7_INNATE,TLR7/innate-sensing context,secondary_contextual,mechanistic context only,1,NFKB1,5,pre-existing citation audit; boundary context
+TLR7_INNATE,TLR7/innate-sensing context,secondary_contextual,mechanistic context only,1,RELA,6,pre-existing citation audit; boundary context
+TLR7_INNATE,TLR7/innate-sensing context,secondary_contextual,mechanistic context only,1,IFIH1,7,pre-existing citation audit; boundary context
+TLR7_INNATE,TLR7/innate-sensing context,secondary_contextual,mechanistic context only,1,FTO,8,pre-existing citation audit; boundary context
+TLR7_INNATE,TLR7/innate-sensing context,secondary_contextual,mechanistic context only,1,ATP6V1G1,9,pre-existing citation audit; boundary context
+PLATELET_AMBIENT_QC,Platelet/ambient overlay,qc_only,sensitivity/QC only; never a B-cell identity,1,PPBP,1,disease-blind dataset-specific ranked-marker QC
+PLATELET_AMBIENT_QC,Platelet/ambient overlay,qc_only,sensitivity/QC only; never a B-cell identity,1,PF4,2,disease-blind dataset-specific ranked-marker QC
+PLATELET_AMBIENT_QC,Platelet/ambient overlay,qc_only,sensitivity/QC only; never a B-cell identity,1,NRGN,3,disease-blind dataset-specific ranked-marker QC
+PLATELET_AMBIENT_QC,Platelet/ambient overlay,qc_only,sensitivity/QC only; never a B-cell identity,1,TUBB1,4,disease-blind dataset-specific ranked-marker QC
+PLATELET_AMBIENT_QC,Platelet/ambient overlay,qc_only,sensitivity/QC only; never a B-cell identity,1,RGS18,5,disease-blind dataset-specific ranked-marker QC
+PLATELET_AMBIENT_QC,Platelet/ambient overlay,qc_only,sensitivity/QC only; never a B-cell identity,1,CAVIN2,6,disease-blind dataset-specific ranked-marker QC
+PLATELET_AMBIENT_QC,Platelet/ambient overlay,qc_only,sensitivity/QC only; never a B-cell identity,1,GNG11,7,disease-blind dataset-specific ranked-marker QC
+PLATELET_AMBIENT_QC,Platelet/ambient overlay,qc_only,sensitivity/QC only; never a B-cell identity,1,SPARC,8,disease-blind dataset-specific ranked-marker QC
+PLATELET_AMBIENT_QC,Platelet/ambient overlay,qc_only,sensitivity/QC only; never a B-cell identity,1,MYL9,9,disease-blind dataset-specific ranked-marker QC
+PLATELET_AMBIENT_QC,Platelet/ambient overlay,qc_only,sensitivity/QC only; never a B-cell identity,1,CLU,10,disease-blind dataset-specific ranked-marker QC
+ASC_UPR_IDENTITY_QC,ASC/UPR identity control,identity_qc_only,B_ASC identity QC; not a new outcome-informed state,1,MZB1,1,C2B4 required ASC panel plus pre-existing control signature
+ASC_UPR_IDENTITY_QC,ASC/UPR identity control,identity_qc_only,B_ASC identity QC; not a new outcome-informed state,1,XBP1,2,C2B4 required ASC panel plus pre-existing control signature
+ASC_UPR_IDENTITY_QC,ASC/UPR identity control,identity_qc_only,B_ASC identity QC; not a new outcome-informed state,1,PRDM1,3,C2B4 required ASC panel plus pre-existing control signature
+ASC_UPR_IDENTITY_QC,ASC/UPR identity control,identity_qc_only,B_ASC identity QC; not a new outcome-informed state,1,JCHAIN,4,C2B4 required ASC panel plus pre-existing control signature
+ASC_UPR_IDENTITY_QC,ASC/UPR identity control,identity_qc_only,B_ASC identity QC; not a new outcome-informed state,1,SDC1,5,C2B4 required ASC panel plus pre-existing control signature
+ASC_UPR_IDENTITY_QC,ASC/UPR identity control,identity_qc_only,B_ASC identity QC; not a new outcome-informed state,1,IRF4,6,C2B4 required ASC panel plus pre-existing control signature
+ASC_UPR_IDENTITY_QC,ASC/UPR identity control,identity_qc_only,B_ASC identity QC; not a new outcome-informed state,1,TNFRSF17,7,C2B4 required ASC panel plus pre-existing control signature
+ASC_UPR_IDENTITY_QC,ASC/UPR identity control,identity_qc_only,B_ASC identity QC; not a new outcome-informed state,1,DERL3,8,C2B4 required ASC panel plus pre-existing control signature
+ASC_UPR_IDENTITY_QC,ASC/UPR identity control,identity_qc_only,B_ASC identity QC; not a new outcome-informed state,1,FKBP11,9,C2B4 required ASC panel plus pre-existing control signature
+ASC_UPR_IDENTITY_QC,ASC/UPR identity control,identity_qc_only,B_ASC identity QC; not a new outcome-informed state,1,HSP90B1,10,C2B4 required ASC panel plus pre-existing control signature
+PAN_B_IDENTITY_QC,Pan-B identity control,identity_qc_only,B-lineage extraction QC only,1,MS4A1,1,pre-existing B-lineage extraction QC
+PAN_B_IDENTITY_QC,Pan-B identity control,identity_qc_only,B-lineage extraction QC only,1,CD79A,2,pre-existing B-lineage extraction QC
+PAN_B_IDENTITY_QC,Pan-B identity control,identity_qc_only,B-lineage extraction QC only,1,CD79B,3,pre-existing B-lineage extraction QC
+PAN_B_IDENTITY_QC,Pan-B identity control,identity_qc_only,B-lineage extraction QC only,1,CD74,4,pre-existing B-lineage extraction QC
+PAN_B_IDENTITY_QC,Pan-B identity control,identity_qc_only,B-lineage extraction QC only,1,CD19,5,pre-existing B-lineage extraction QC

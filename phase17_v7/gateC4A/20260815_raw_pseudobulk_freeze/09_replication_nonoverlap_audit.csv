@@ -1,0 +1,3 @@
+﻿analysis,frozen_n,shared_samples_with_primary,shared_donors_with_primary,nonoverlap_n,nonoverlap_reference_n,nonoverlap_exposed_n
+validation,64,10,10,54,21,33
+flare,34,3,4,30,15,15

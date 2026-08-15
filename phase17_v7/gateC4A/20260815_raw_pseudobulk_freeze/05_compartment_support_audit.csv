@@ -1,0 +1,665 @@
+﻿branch,stratum_index,stratum_id,sample_uuid,Processing_Cohort,donor_id,disease,disease_state,sex,ethnicity,age_years,basc_cells,bconv_cells,basc_detected_genes,bconv_detected_genes,basc_library_size_umi,bconv_library_size_umi
+all_hard_qc,0,0a4bb8a3-0abf-46eb-a33c-c14a23d44387__C1,0a4bb8a3-0abf-46eb-a33c-c14a23d44387,1.0,IGTB1762,normal,na,female,European American,28.0,1,361,1304,13026,5307,1265662
+all_hard_qc,1,11c6a06c-f0e0-45bc-b5ec-1b14445548d4__C1,11c6a06c-f0e0-45bc-b5ec-1b14445548d4,1.0,IGTB1539,normal,na,female,European American,34.0,3,619,3193,13024,15816,1411375
+all_hard_qc,2,13ec931d-a536-4679-ad6c-39d7bbaa8d5d__C1,13ec931d-a536-4679-ad6c-39d7bbaa8d5d,1.0,IGTB1650,normal,na,female,European American,37.0,0,529,0,13570,0,1737583
+all_hard_qc,3,27978e88-cfed-4b90-b622-fd572e5ea40d__C1,27978e88-cfed-4b90-b622-fd572e5ea40d,1.0,IGTB1966,normal,na,female,European American,29.0,0,912,0,14725,0,3224665
+all_hard_qc,4,3672d82d-f24c-4536-b75a-0627889e1426__C1,3672d82d-f24c-4536-b75a-0627889e1426,1.0,IGTB498,normal,na,female,European American,33.0,6,485,3476,12709,19606,1126038
+all_hard_qc,5,3876bd23-e063-4b96-89ae-eec693743c86__C1,3876bd23-e063-4b96-89ae-eec693743c86,1.0,IGTB645,normal,na,female,European American,31.0,1,263,731,11418,2922,649383
+all_hard_qc,6,39824ee5-7478-4dc4-baad-9a90e3ca30ff__C1,39824ee5-7478-4dc4-baad-9a90e3ca30ff,1.0,IGTB1815,normal,na,female,European American,26.0,2,702,1693,14295,6471,2166619
+all_hard_qc,7,3be3bf0e-065c-4451-bdff-100e1f88b8d9__C1,3be3bf0e-065c-4451-bdff-100e1f88b8d9,1.0,IGTB2065,normal,na,female,European American,27.0,3,327,3778,12931,18834,1167358
+all_hard_qc,8,3caa3c5a-9c12-464a-a794-8b7ca2cfaace__C1,3caa3c5a-9c12-464a-a794-8b7ca2cfaace,1.0,IGTB1844,normal,na,female,European American,26.0,3,605,3415,13775,16919,1888405
+all_hard_qc,9,3e17b93b-6d64-4b05-adf1-bee9b370788c__C1,3e17b93b-6d64-4b05-adf1-bee9b370788c,1.0,IGTB1793,normal,na,female,European American,25.0,3,312,6399,12773,64364,1046234
+all_hard_qc,10,43f3d10e-a47a-4f63-965c-a8fe58d5861f__C1,43f3d10e-a47a-4f63-965c-a8fe58d5861f,1.0,IGTB1913,normal,na,female,European American,24.0,3,273,4706,12524,32881,1067951
+all_hard_qc,11,4752a18e-a3a0-4699-99e8-18c7fee59072__C1,4752a18e-a3a0-4699-99e8-18c7fee59072,1.0,IGTB826,normal,na,female,European American,34.0,12,864,4913,13831,40489,2034555
+all_hard_qc,12,55e1ebfb-4571-4e95-9c84-8f81d3335fd9__C1,55e1ebfb-4571-4e95-9c84-8f81d3335fd9,1.0,IGTB1731,normal,na,female,European American,75.0,2,322,4081,12960,25394,1231487
+all_hard_qc,13,5d0826b4-fa43-4e32-8426-4ee9b3950e0f__C1,5d0826b4-fa43-4e32-8426-4ee9b3950e0f,1.0,IGTB1871,normal,na,female,European American,27.0,5,469,4378,13573,28156,1707882
+all_hard_qc,14,5f31d290-7101-4ef4-9510-f3692aba34de__C1,5f31d290-7101-4ef4-9510-f3692aba34de,1.0,IGTB469,normal,na,female,European American,37.0,4,335,4356,12018,30218,797607
+all_hard_qc,15,6d32f89c-b5b9-4486-94f8-5368115f0408__C1,6d32f89c-b5b9-4486-94f8-5368115f0408,1.0,IGTB1895,normal,na,female,European American,27.0,0,573,0,13912,0,1964374
+all_hard_qc,16,6d8ca891-26ad-487f-b162-a32a835fd534__C1,6d8ca891-26ad-487f-b162-a32a835fd534,1.0,IGTB1908,normal,na,female,European American,32.0,0,262,0,12509,0,980065
+all_hard_qc,17,77712740-d29f-4bb0-9b90-2aa3db72f3ba__C1,77712740-d29f-4bb0-9b90-2aa3db72f3ba,1.0,IGTB141,normal,na,female,European American,34.0,2,452,1006,12491,3553,1026175
+all_hard_qc,18,7eebe697-187f-4cce-b10d-9f71235d3a4f__C1,7eebe697-187f-4cce-b10d-9f71235d3a4f,1.0,IGTB1906,normal,na,female,European American,30.0,5,479,3217,12583,18427,1096716
+all_hard_qc,19,803fece6-2b2d-4ba2-8370-49385734ab3b__C1,803fece6-2b2d-4ba2-8370-49385734ab3b,1.0,IGTB1819,normal,na,male,European American,41.0,2,483,4643,13392,36827,1447314
+all_hard_qc,20,83a38413-11d1-494e-81d3-56f594148b71__C1,83a38413-11d1-494e-81d3-56f594148b71,1.0,IGTB2007,normal,na,female,European American,27.0,2,384,2250,13074,8115,1194983
+all_hard_qc,21,886dc81a-06f7-47dc-bdf6-da1524e86d7d__C1,886dc81a-06f7-47dc-bdf6-da1524e86d7d,1.0,IGTB884,normal,na,female,European American,34.0,8,371,7330,12952,97317,1231893
+all_hard_qc,22,9245fdfa-904c-4421-ba87-60da990f40ed__C1,9245fdfa-904c-4421-ba87-60da990f40ed,1.0,IGTB514,normal,na,female,European American,34.0,4,545,4984,12929,32056,1394708
+all_hard_qc,23,98e974a9-c08e-4066-8930-d627b18f1a89__C1,98e974a9-c08e-4066-8930-d627b18f1a89,1.0,IGTB670,normal,na,female,European American,33.0,4,449,4713,12368,33424,943249
+all_hard_qc,24,9c889cb3-c0ae-400b-b27d-e52241a7d342__C1,9c889cb3-c0ae-400b-b27d-e52241a7d342,1.0,IGTB1826,normal,na,female,European American,30.0,7,471,6401,13249,55609,1446070
+all_hard_qc,25,a3ef43c2-caad-4ca3-86d0-3c362e778877__C1,a3ef43c2-caad-4ca3-86d0-3c362e778877,1.0,IGTB1901,normal,na,female,European American,23.0,3,517,2287,13467,11265,1532756
+all_hard_qc,26,a51ffc5a-e4cb-4b47-9154-4514e1dc9d65__C1,a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,1.0,IGTB1506,normal,na,female,European American,30.0,5,406,3959,12059,22563,850739
+all_hard_qc,27,b0c3cf74-58cf-43e7-b4df-61ef0b3a9fdc__C1,b0c3cf74-58cf-43e7-b4df-61ef0b3a9fdc,1.0,IGTB1840,normal,na,female,European American,26.0,0,888,0,14511,0,2879690
+all_hard_qc,28,b25deecf-dab2-4c86-ae98-047ee79ce320__C1,b25deecf-dab2-4c86-ae98-047ee79ce320,1.0,IGTB1828,normal,na,female,European American,25.0,2,687,1655,14141,6807,2306227
+all_hard_qc,29,b7c8655d-8d5e-4865-bc97-3c606cdaf5e9__C1,b7c8655d-8d5e-4865-bc97-3c606cdaf5e9,1.0,IGTB143,normal,na,female,European American,33.0,2,427,958,12228,3518,943535
+all_hard_qc,30,bffca8a1-fc84-4f20-acae-3cf0d6313002__C1,bffca8a1-fc84-4f20-acae-3cf0d6313002,1.0,IGTB1372,normal,na,female,European American,25.0,6,477,3055,12433,16570,992956
+all_hard_qc,31,c4f152fb-04b4-4f5d-b4e6-4a3a93da7881__C1,c4f152fb-04b4-4f5d-b4e6-4a3a93da7881,1.0,IGTB1974,normal,na,female,European American,23.0,4,433,5374,13177,34934,1436984
+all_hard_qc,32,c896fdae-1a67-4c5e-b3f8-f4671744e35f__C1,c896fdae-1a67-4c5e-b3f8-f4671744e35f,1.0,IGTB1952,normal,na,female,European American,26.0,2,508,1395,13556,4664,1479307
+all_hard_qc,33,cf0f9104-fd3e-4cdd-ad08-69035510a32d__C1,cf0f9104-fd3e-4cdd-ad08-69035510a32d,1.0,IGTB1575,normal,na,female,European American,32.0,1,338,909,12192,2955,855057
+all_hard_qc,34,d3aef314-d83b-4ce7-ac01-5ab74ea0fa4f__C1,d3aef314-d83b-4ce7-ac01-5ab74ea0fa4f,1.0,IGTB1814,normal,na,female,European American,32.0,2,928,1779,14829,9102,3463162
+all_hard_qc,35,d65c2394-3eed-48b8-8a26-5f214003f312__C1,d65c2394-3eed-48b8-8a26-5f214003f312,1.0,IGTB1921,normal,na,female,European American,25.0,4,351,6047,12951,48491,1283647
+all_hard_qc,36,e0286325-9289-4765-af44-1bded6b1d3df__C1,e0286325-9289-4765-af44-1bded6b1d3df,1.0,IGTB986,normal,na,female,European American,34.0,7,457,6888,13417,76602,1540309
+all_hard_qc,37,e0d91e74-9836-43b7-b866-383398b2df70__C1,e0d91e74-9836-43b7-b866-383398b2df70,1.0,IGTB1789,normal,na,female,European American,31.0,1,809,818,14615,2744,2866742
+all_hard_qc,38,e237fb4b-e3eb-4365-b625-8e31534d7508__C1,e237fb4b-e3eb-4365-b625-8e31534d7508,1.0,IGTB1768,normal,na,female,European American,29.0,2,347,3308,12701,16679,1087827
+all_hard_qc,39,e8295a2a-ebac-417e-858e-52cd294dd906__C1,e8295a2a-ebac-417e-858e-52cd294dd906,1.0,IGTB1987,normal,na,female,European American,23.0,4,422,3234,13190,17413,1380323
+all_hard_qc,40,f0a33a73-192b-4398-b8bc-05eb0c59ae54__C1,f0a33a73-192b-4398-b8bc-05eb0c59ae54,1.0,IGTB195,normal,na,female,European American,34.0,3,423,1753,12227,7931,978990
+all_hard_qc,41,f0f0c7c0-c2dd-4f71-a15d-cc29ad1144b6__C1,f0f0c7c0-c2dd-4f71-a15d-cc29ad1144b6,1.0,IGTB1996,normal,na,female,European American,27.0,1,624,994,13738,2955,1788877
+all_hard_qc,42,f3091b7a-a59b-4bee-a4c4-c930424b63f3__C1,f3091b7a-a59b-4bee-a4c4-c930424b63f3,1.0,IGTB1540,normal,na,female,Asian,31.0,5,568,3856,12843,24284,1295207
+all_hard_qc,43,f46fc513-1a40-4930-a9ee-c9c1da5de582__C1,f46fc513-1a40-4930-a9ee-c9c1da5de582,1.0,IGTB1982,normal,na,female,European American,28.0,1,627,2609,13852,9896,1958408
+all_hard_qc,44,fa40c3dd-a3a5-4ffd-9470-ab39682965df__C1,fa40c3dd-a3a5-4ffd-9470-ab39682965df,1.0,IGTB1916,normal,na,female,European American,23.0,4,402,4724,13047,34495,1347349
+all_hard_qc,45,fcadfde9-31cc-4f2d-bf5b-b7deec30439a__C1,fcadfde9-31cc-4f2d-bf5b-b7deec30439a,1.0,IGTB1827,normal,na,female,European American,33.0,3,317,4427,12435,31402,1029692
+all_hard_qc,46,fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e__C1,fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,1.0,IGTB508,normal,na,female,European American,33.0,2,416,2217,12452,10319,1084707
+all_hard_qc,47,025b6b04-0e79-4c4b-bbb5-15042ca0474e__C2,025b6b04-0e79-4c4b-bbb5-15042ca0474e,2.0,1785,systemic lupus erythematosus,managed,female,European American,56.0,1,434,1171,11733,3037,798785
+all_hard_qc,48,0332dc59-e2c0-4b55-9921-3e0d0f565e5e__C2,0332dc59-e2c0-4b55-9921-3e0d0f565e5e,2.0,IGTB1542,normal,na,female,European American,28.0,1,242,1026,9774,2529,322735
+all_hard_qc,49,0426d045-1567-4897-8407-e7925395251c__C2,0426d045-1567-4897-8407-e7925395251c,2.0,1615,systemic lupus erythematosus,managed,male,European American,41.0,7,331,5498,11444,53712,849502
+all_hard_qc,50,09e143b6-bb61-40d5-99d8-bcf32ae0a20a__C2,09e143b6-bb61-40d5-99d8-bcf32ae0a20a,2.0,1567,systemic lupus erythematosus,managed,female,Asian,59.0,2,62,3036,7952,18091,159320
+all_hard_qc,51,0b078cad-b547-43a9-a401-35cab69549b4__C2,0b078cad-b547-43a9-a401-35cab69549b4,2.0,1338,systemic lupus erythematosus,managed,female,European American,42.0,1,598,2289,12733,8408,1759823
+all_hard_qc,52,0e4725c3-8e87-420e-bbf1-15781f6bbf5c__C2,0e4725c3-8e87-420e-bbf1-15781f6bbf5c,2.0,1294,systemic lupus erythematosus,managed,male,Asian,33.0,1,1196,625,13125,1389,1946553
+all_hard_qc,53,11c6a06c-f0e0-45bc-b5ec-1b14445548d4__C2,11c6a06c-f0e0-45bc-b5ec-1b14445548d4,2.0,IGTB1539,normal,na,female,European American,34.0,0,318,0,11370,0,667260
+all_hard_qc,54,13ec931d-a536-4679-ad6c-39d7bbaa8d5d__C2,13ec931d-a536-4679-ad6c-39d7bbaa8d5d,2.0,IGTB1650,normal,na,female,European American,37.0,2,625,4047,12567,21599,1519226
+all_hard_qc,55,150f491b-4af3-4972-853f-5d39e7ea824a__C2,150f491b-4af3-4972-853f-5d39e7ea824a,2.0,1414,systemic lupus erythematosus,managed,male,European American,41.0,0,196,0,9505,0,306625
+all_hard_qc,56,168bc7ce-f2e2-46f4-8b35-43f4ddf39693__C2,168bc7ce-f2e2-46f4-8b35-43f4ddf39693,2.0,1584,systemic lupus erythematosus,managed,female,Asian,62.0,1,864,2375,12879,9032,1685698
+all_hard_qc,57,1990a6b9-ef47-4b7d-ac77-421031dec003__C2,1990a6b9-ef47-4b7d-ac77-421031dec003,2.0,1827,systemic lupus erythematosus,managed,female,European American,35.0,0,438,0,11578,0,790794
+all_hard_qc,58,1d10643b-90b7-4d0c-ad8d-534e5bd1ae8a__C2,1d10643b-90b7-4d0c-ad8d-534e5bd1ae8a,2.0,1226,systemic lupus erythematosus,managed,female,Asian,37.0,1,1562,1630,13114,4719,1941176
+all_hard_qc,59,1f4f30c3-dbfc-4478-be7e-e047b7ad642a__C2,1f4f30c3-dbfc-4478-be7e-e047b7ad642a,2.0,1366,systemic lupus erythematosus,managed,female,Asian,55.0,4,608,5477,12370,46092,1208638
+all_hard_qc,60,1fccdc9f-3051-4556-bea4-57412a092eb8__C2,1fccdc9f-3051-4556-bea4-57412a092eb8,2.0,1588,systemic lupus erythematosus,managed,male,European American,35.0,0,195,0,9869,0,409938
+all_hard_qc,61,20e15d59-e68c-4af0-873f-199998c6ee3b__C2,20e15d59-e68c-4af0-873f-199998c6ee3b,2.0,1958,systemic lupus erythematosus,managed,female,European American,38.0,0,305,0,10192,0,383776
+all_hard_qc,62,23373939-b15c-4982-bc28-48770bad82e2__C2,23373939-b15c-4982-bc28-48770bad82e2,2.0,1324,systemic lupus erythematosus,managed,female,Asian,57.0,5,289,4123,10729,30580,504911
+all_hard_qc,63,2512ead7-e6f3-4ceb-9894-46e1e71eb8df__C2,2512ead7-e6f3-4ceb-9894-46e1e71eb8df,2.0,1368,systemic lupus erythematosus,managed,male,European American,45.0,3,401,1353,11215,5450,682188
+all_hard_qc,64,2688f505-eb1a-4f9f-af54-e30b3da7dff3__C2,2688f505-eb1a-4f9f-af54-e30b3da7dff3,2.0,1682,systemic lupus erythematosus,managed,female,Asian,25.0,10,590,7172,12453,89908,1065653
+all_hard_qc,65,27b03089-9abd-4025-b745-1a4d42f729a3__C2,27b03089-9abd-4025-b745-1a4d42f729a3,2.0,1754,systemic lupus erythematosus,managed,female,Asian,45.0,3,793,4565,12130,28599,1015074
+all_hard_qc,66,2899cc75-6bcb-4c24-9375-81a37c2a62f5__C2,2899cc75-6bcb-4c24-9375-81a37c2a62f5,2.0,1602,systemic lupus erythematosus,managed,female,European American,64.0,0,343,0,11338,0,761837
+all_hard_qc,67,2c6239f0-efd3-469e-86aa-554f62dfb4f8__C2,2c6239f0-efd3-469e-86aa-554f62dfb4f8,2.0,1791,systemic lupus erythematosus,managed,female,Asian,66.0,10,323,4546,10517,31851,428808
+all_hard_qc,68,2d3d3f42-1bf4-4177-9be3-0f70a79f9d49__C2,2d3d3f42-1bf4-4177-9be3-0f70a79f9d49,2.0,1848,systemic lupus erythematosus,managed,female,European American,63.0,1,576,1894,12349,6775,1106289
+all_hard_qc,69,2de24ffa-ba31-4218-a87f-7176c9b8f67c__C2,2de24ffa-ba31-4218-a87f-7176c9b8f67c,2.0,1829,systemic lupus erythematosus,managed,female,European American,51.0,0,23,0,5334,0,49739
+all_hard_qc,70,2f17ecfd-2b2e-4603-bf0e-4105f13870b5__C2,2f17ecfd-2b2e-4603-bf0e-4105f13870b5,2.0,1558,systemic lupus erythematosus,managed,male,European American,83.0,1,144,1925,10162,6391,414020
+all_hard_qc,71,3098a146-f3f2-4994-b7d1-770425e1f8b8__C2,3098a146-f3f2-4994-b7d1-770425e1f8b8,2.0,1731,systemic lupus erythematosus,managed,female,European American,45.0,0,265,0,11017,0,542706
+all_hard_qc,72,342b5092-67e5-4a0e-a437-8b735f2a863c__C2,342b5092-67e5-4a0e-a437-8b735f2a863c,2.0,1768,systemic lupus erythematosus,managed,female,Asian,27.0,2,402,2432,10821,9707,508701
+all_hard_qc,73,3434bd39-04ed-4492-97b1-7410192739e8__C2,3434bd39-04ed-4492-97b1-7410192739e8,2.0,1961,systemic lupus erythematosus,managed,female,European American,43.0,5,437,5159,11413,37011,655280
+all_hard_qc,74,34fcf40d-5976-44a6-8f49-1fe0e3b1c064__C2,34fcf40d-5976-44a6-8f49-1fe0e3b1c064,2.0,1165,systemic lupus erythematosus,managed,male,Asian,29.0,11,320,5024,10274,37710,394431
+all_hard_qc,75,3672d82d-f24c-4536-b75a-0627889e1426__C2,3672d82d-f24c-4536-b75a-0627889e1426,2.0,IGTB498,normal,na,female,European American,33.0,1,491,2112,11889,9617,1035236
+all_hard_qc,76,385a6725-3504-4717-af12-cfed4adc3e9b__C2,385a6725-3504-4717-af12-cfed4adc3e9b,2.0,1672,systemic lupus erythematosus,managed,female,Asian,47.0,0,31,0,5222,0,43216
+all_hard_qc,77,3876bd23-e063-4b96-89ae-eec693743c86__C2,3876bd23-e063-4b96-89ae-eec693743c86,2.0,IGTB645,normal,na,female,European American,31.0,2,242,3648,10690,22995,495825
+all_hard_qc,78,38c6ab44-8cf8-4bcf-93da-5c8b0c104bbc__C2,38c6ab44-8cf8-4bcf-93da-5c8b0c104bbc,2.0,1270,systemic lupus erythematosus,managed,female,European American,51.0,0,198,0,10846,0,580183
+all_hard_qc,79,39b05a41-41b3-4146-896b-017b0443556d__C2,39b05a41-41b3-4146-896b-017b0443556d,2.0,1404,systemic lupus erythematosus,managed,female,Asian,20.0,4,410,4094,11638,24166,780017
+all_hard_qc,80,3acf43ac-421f-48ad-9363-a51cce15e119__C2,3acf43ac-421f-48ad-9363-a51cce15e119,2.0,1341,systemic lupus erythematosus,managed,female,Asian,41.0,0,360,0,10928,0,598699
+all_hard_qc,81,3b0f67b7-7799-4746-8435-9ccb71ccacec__C2,3b0f67b7-7799-4746-8435-9ccb71ccacec,2.0,1251,systemic lupus erythematosus,managed,female,Asian,32.0,5,862,6173,13346,63520,2422506
+all_hard_qc,82,3ecf5ad3-4ae3-4152-a1d2-4c9c548c5551__C2,3ecf5ad3-4ae3-4152-a1d2-4c9c548c5551,2.0,1420,systemic lupus erythematosus,managed,female,Asian,31.0,8,789,6008,12451,66781,1426721
+all_hard_qc,83,3f068829-713e-4b6a-a79a-754b7d9eef46__C2,3f068829-713e-4b6a-a79a-754b7d9eef46,2.0,1419,systemic lupus erythematosus,managed,female,Asian,37.0,7,1301,5009,13509,45917,2557170
+all_hard_qc,84,3f29e4ef-952a-4a98-9659-d26028f71319__C2,3f29e4ef-952a-4a98-9659-d26028f71319,2.0,1492,systemic lupus erythematosus,managed,female,Asian,36.0,6,739,4373,12763,30068,1711070
+all_hard_qc,85,3f7db560-4400-424a-87a7-45e712c31264__C2,3f7db560-4400-424a-87a7-45e712c31264,2.0,1196,systemic lupus erythematosus,managed,male,European American,29.0,1,449,2552,12016,11348,1279328
+all_hard_qc,86,3ff8915f-d4b6-418d-89ec-61fffb366646__C2,3ff8915f-d4b6-418d-89ec-61fffb366646,2.0,1730,systemic lupus erythematosus,managed,female,European American,36.0,4,648,3723,12390,24042,1365063
+all_hard_qc,87,4227d4ba-c467-4e19-8f48-5181a811a565__C2,4227d4ba-c467-4e19-8f48-5181a811a565,2.0,1315,systemic lupus erythematosus,managed,female,European American,54.0,2,574,3558,12446,18076,1411925
+all_hard_qc,88,42e0623b-6872-409f-bd76-1c2cb5e3b5c0__C2,42e0623b-6872-409f-bd76-1c2cb5e3b5c0,2.0,1004,systemic lupus erythematosus,managed,female,European American,39.0,0,49,0,7622,0,123379
+all_hard_qc,89,44c75170-6dfa-485f-99eb-275a1d77620b__C2,44c75170-6dfa-485f-99eb-275a1d77620b,2.0,1892,systemic lupus erythematosus,managed,female,European American,55.0,2,442,2479,11815,10949,875677
+all_hard_qc,90,45abcda8-4f12-4496-983b-9c712250dc3c__C2,45abcda8-4f12-4496-983b-9c712250dc3c,2.0,1582,systemic lupus erythematosus,managed,female,Asian,51.0,1,321,1752,10910,6393,573338
+all_hard_qc,91,46e6ff98-de92-4b09-98ae-ff683d6ed775__C2,46e6ff98-de92-4b09-98ae-ff683d6ed775,2.0,1743,systemic lupus erythematosus,managed,female,Asian,48.0,5,626,3927,11774,20828,800745
+all_hard_qc,92,4752a18e-a3a0-4699-99e8-18c7fee59072__C2,4752a18e-a3a0-4699-99e8-18c7fee59072,2.0,IGTB826,normal,na,female,European American,34.0,2,537,1926,12099,8239,1139447
+all_hard_qc,93,4a555a89-3c4e-4e35-91ed-eed175492e5d__C2,4a555a89-3c4e-4e35-91ed-eed175492e5d,2.0,1259,systemic lupus erythematosus,managed,female,Asian,41.0,1,335,2306,11571,8874,882223
+all_hard_qc,94,4be5b6e5-f225-4892-9ac0-9233bf04dbb9__C2,4be5b6e5-f225-4892-9ac0-9233bf04dbb9,2.0,1621,systemic lupus erythematosus,managed,male,European American,58.0,5,1562,3783,13966,22235,3478548
+all_hard_qc,95,4e63511b-e07c-4fe2-af13-d535b769bbbd__C2,4e63511b-e07c-4fe2-af13-d535b769bbbd,2.0,1804,systemic lupus erythematosus,managed,female,Asian,54.0,0,553,0,11321,0,670066
+all_hard_qc,96,52c33723-f3ef-430c-a3f2-dd9ddfe0a0dd__C2,52c33723-f3ef-430c-a3f2-dd9ddfe0a0dd,2.0,1418,systemic lupus erythematosus,managed,female,Asian,39.0,9,835,6884,12494,78883,1570819
+all_hard_qc,97,53003f7f-f631-4dd0-ac73-543dcf566b81__C2,53003f7f-f631-4dd0-ac73-543dcf566b81,2.0,1046,systemic lupus erythematosus,managed,female,Asian,58.0,5,1095,3972,13474,23148,2256854
+all_hard_qc,98,577bce84-8d37-4851-9fb4-53f9467699ba__C2,577bce84-8d37-4851-9fb4-53f9467699ba,2.0,1132,systemic lupus erythematosus,managed,female,European American,45.0,1,526,1728,12255,6605,1333627
+all_hard_qc,99,57f0790a-15ce-4b6a-aae1-b45763b8d226__C2,57f0790a-15ce-4b6a-aae1-b45763b8d226,2.0,1480,systemic lupus erythematosus,managed,female,Asian,57.0,9,1322,4592,13700,32367,2815254
+all_hard_qc,100,5a4d2669-4967-4de5-853b-13c224029d30__C2,5a4d2669-4967-4de5-853b-13c224029d30,2.0,1496,systemic lupus erythematosus,managed,female,European American,59.0,0,560,0,11899,0,977891
+all_hard_qc,101,5d55e840-0d9f-48df-bc26-6f4466c02eb6__C2,5d55e840-0d9f-48df-bc26-6f4466c02eb6,2.0,1891,systemic lupus erythematosus,managed,female,European American,58.0,0,746,0,12592,0,1306250
+all_hard_qc,102,5e0ed28c-a75a-4ecd-a0c7-49e71264690b__C2,5e0ed28c-a75a-4ecd-a0c7-49e71264690b,2.0,1110,systemic lupus erythematosus,managed,female,European American,71.0,0,232,0,11116,0,765638
+all_hard_qc,103,5f31d290-7101-4ef4-9510-f3692aba34de__C2,5f31d290-7101-4ef4-9510-f3692aba34de,2.0,IGTB469,normal,na,female,European American,37.0,15,347,7511,11291,113781,682728
+all_hard_qc,104,612207b0-dca1-4ac5-80c1-65a495c1a99d__C2,612207b0-dca1-4ac5-80c1-65a495c1a99d,2.0,1031,systemic lupus erythematosus,managed,female,Asian,32.0,15,154,8154,10979,133510,487410
+all_hard_qc,105,6242534a-ef16-4237-b53e-9dc823087738__C2,6242534a-ef16-4237-b53e-9dc823087738,2.0,1799,systemic lupus erythematosus,managed,female,European American,68.0,2,185,2005,10234,8340,379708
+all_hard_qc,106,66e0d3ad-e8b3-4bae-a700-2626841e8d16__C2,66e0d3ad-e8b3-4bae-a700-2626841e8d16,2.0,1767,systemic lupus erythematosus,managed,female,Asian,29.0,1,484,1430,11307,4410,659819
+all_hard_qc,107,670c5ac9-5e1c-4834-8087-2dd39d87d04b__C2,670c5ac9-5e1c-4834-8087-2dd39d87d04b,2.0,1326,systemic lupus erythematosus,managed,female,Asian,51.0,1,180,768,9502,2204,304281
+all_hard_qc,108,6779676d-7bac-4431-bbb0-0b7c773b55da__C2,6779676d-7bac-4431-bbb0-0b7c773b55da,2.0,1514,systemic lupus erythematosus,managed,female,European American,38.0,2,442,1061,11159,3970,688231
+all_hard_qc,109,678d2b37-30f0-4771-9702-7e74c70f1d12__C2,678d2b37-30f0-4771-9702-7e74c70f1d12,2.0,1045,systemic lupus erythematosus,managed,female,Asian,31.0,5,382,5850,11884,53468,908261
+all_hard_qc,110,69b3abaf-0498-44c8-867f-086ccc8dce13__C2,69b3abaf-0498-44c8-867f-086ccc8dce13,2.0,1660,systemic lupus erythematosus,managed,female,Asian,21.0,1,199,1866,10352,6077,408699
+all_hard_qc,111,6a84e718-fd28-4df4-be57-5d3a0b9b06a4__C2,6a84e718-fd28-4df4-be57-5d3a0b9b06a4,2.0,1068,systemic lupus erythematosus,managed,female,European American,45.0,1,88,3525,9000,16560,240992
+all_hard_qc,112,6c925f38-0ae8-4db8-ba05-b5e2a2563511__C2,6c925f38-0ae8-4db8-ba05-b5e2a2563511,2.0,1195,systemic lupus erythematosus,managed,male,Asian,69.0,9,88,4976,7487,35622,116937
+all_hard_qc,113,6f092ad4-41e1-4b4f-b492-64496cf82fcb__C2,6f092ad4-41e1-4b4f-b492-64496cf82fcb,2.0,1815,systemic lupus erythematosus,managed,female,European American,60.0,1,870,2052,12939,6691,1527859
+all_hard_qc,114,74489391-0e1a-40c9-9ac8-2691e7e42cf1__C2,74489391-0e1a-40c9-9ac8-2691e7e42cf1,2.0,1775,systemic lupus erythematosus,managed,female,European American,37.0,3,403,4228,11618,26263,758967
+all_hard_qc,115,77712740-d29f-4bb0-9b90-2aa3db72f3ba__C2,77712740-d29f-4bb0-9b90-2aa3db72f3ba,2.0,IGTB141,normal,na,female,European American,34.0,4,253,4349,10532,24739,508682
+all_hard_qc,116,7b7167c1-bc81-4fa8-b322-18bab1ea6269__C2,7b7167c1-bc81-4fa8-b322-18bab1ea6269,2.0,1716,systemic lupus erythematosus,managed,female,European American,68.0,4,916,1728,12892,8482,2039667
+all_hard_qc,117,7bbdb647-9288-4863-b66b-be24f9413e7b__C2,7bbdb647-9288-4863-b66b-be24f9413e7b,2.0,1203,systemic lupus erythematosus,managed,female,European American,39.0,5,165,5371,10411,56991,583100
+all_hard_qc,118,7eff9450-2afd-4265-a1f4-4c53580b47bc__C2,7eff9450-2afd-4265-a1f4-4c53580b47bc,2.0,1222,systemic lupus erythematosus,managed,female,Asian,55.0,0,421,0,10828,0,542463
+all_hard_qc,119,8037ce3c-a2dd-415b-b3d1-9116744c77e5__C2,8037ce3c-a2dd-415b-b3d1-9116744c77e5,2.0,1763,systemic lupus erythematosus,managed,female,Asian,34.0,2,113,1748,8228,5495,147021
+all_hard_qc,120,81d6439e-3bb2-4356-8a46-380b6620a895__C2,81d6439e-3bb2-4356-8a46-380b6620a895,2.0,1569,systemic lupus erythematosus,managed,female,European American,38.0,0,329,0,11363,0,702358
+all_hard_qc,121,8252bf55-2aa7-411f-b276-fbc747265666__C2,8252bf55-2aa7-411f-b276-fbc747265666,2.0,1522,systemic lupus erythematosus,managed,male,Asian,56.0,2,548,2621,12159,15723,1245523
+all_hard_qc,122,846608fe-7084-4723-8ed0-55e36de70877__C2,846608fe-7084-4723-8ed0-55e36de70877,2.0,1234,systemic lupus erythematosus,managed,female,European American,37.0,6,492,4153,11236,28397,620975
+all_hard_qc,123,886dc81a-06f7-47dc-bdf6-da1524e86d7d__C2,886dc81a-06f7-47dc-bdf6-da1524e86d7d,2.0,IGTB884,normal,na,female,European American,34.0,9,464,6249,11847,60667,1068173
+all_hard_qc,124,8a1f4cc3-6e34-4cd2-aba9-0f4d266e7dd9__C2,8a1f4cc3-6e34-4cd2-aba9-0f4d266e7dd9,2.0,1101,systemic lupus erythematosus,managed,female,Asian,61.0,11,64,7094,8729,103016,219782
+all_hard_qc,125,8ac7e282-b60a-4595-9904-8a46773e2c31__C2,8ac7e282-b60a-4595-9904-8a46773e2c31,2.0,1197,systemic lupus erythematosus,managed,female,Asian,42.0,0,1781,0,13266,0,1720988
+all_hard_qc,126,8c16622f-c4c5-4c77-bb15-c5cf74910184__C2,8c16622f-c4c5-4c77-bb15-c5cf74910184,2.0,1597,systemic lupus erythematosus,managed,female,Asian,36.0,0,81,0,8559,0,218447
+all_hard_qc,127,9198675e-be82-472f-b352-a98629c9876a__C2,9198675e-be82-472f-b352-a98629c9876a,2.0,1056,systemic lupus erythematosus,managed,female,Asian,29.0,5,512,5147,12386,44105,1436360
+all_hard_qc,128,9245fdfa-904c-4421-ba87-60da990f40ed__C2,9245fdfa-904c-4421-ba87-60da990f40ed,2.0,IGTB514,normal,na,female,European American,34.0,3,555,3544,12292,21117,1135519
+all_hard_qc,129,9258d552-bade-4414-ad62-96fea54df354__C2,9258d552-bade-4414-ad62-96fea54df354,2.0,1614,systemic lupus erythematosus,managed,female,Asian,39.0,0,419,0,11773,0,821692
+all_hard_qc,130,92d39096-b1d1-4746-9812-474db1f5f049__C2,92d39096-b1d1-4746-9812-474db1f5f049,2.0,1510,systemic lupus erythematosus,managed,female,European American,35.0,1,416,866,11300,2743,698935
+all_hard_qc,131,9304bd33-e67a-46ba-96c5-954e5358db76__C2,9304bd33-e67a-46ba-96c5-954e5358db76,2.0,1063,systemic lupus erythematosus,managed,female,European American,70.0,0,390,0,11583,0,893865
+all_hard_qc,132,982d60b4-5677-4e2d-8b58-79503863710d__C2,982d60b4-5677-4e2d-8b58-79503863710d,2.0,1479,systemic lupus erythematosus,managed,female,Asian,28.0,2,312,2323,11384,10938,835717
+all_hard_qc,133,98e974a9-c08e-4066-8930-d627b18f1a89__C2,98e974a9-c08e-4066-8930-d627b18f1a89,2.0,IGTB670,normal,na,female,European American,33.0,5,460,6490,11888,68689,903342
+all_hard_qc,134,9a3e6aa1-13a1-462d-996b-6499cc31a81c__C2,9a3e6aa1-13a1-462d-996b-6499cc31a81c,2.0,1119,systemic lupus erythematosus,managed,female,Asian,33.0,14,264,7354,11615,97918,909342
+all_hard_qc,135,9ce1287e-217d-4812-a293-ced526e1b6a2__C2,9ce1287e-217d-4812-a293-ced526e1b6a2,2.0,1022,systemic lupus erythematosus,managed,female,Asian,56.0,3,1032,3974,13274,23655,2125282
+all_hard_qc,136,9e51b938-f3a9-4d97-8802-b820ed2a6b96__C2,9e51b938-f3a9-4d97-8802-b820ed2a6b96,2.0,1078,systemic lupus erythematosus,managed,female,European American,51.0,0,395,0,11478,0,902054
+all_hard_qc,137,9ec7931d-1e6f-48eb-b455-4161dc116c2d__C2,9ec7931d-1e6f-48eb-b455-4161dc116c2d,2.0,1741,systemic lupus erythematosus,managed,female,Asian,27.0,10,1089,7099,12566,85715,1309402
+all_hard_qc,138,9fb00ed6-2678-41f8-8e8e-c3ea1350b61b__C2,9fb00ed6-2678-41f8-8e8e-c3ea1350b61b,2.0,1127,systemic lupus erythematosus,managed,female,European American,53.0,2,616,3939,12456,23352,1695375
+all_hard_qc,139,a51ffc5a-e4cb-4b47-9154-4514e1dc9d65__C2,a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,2.0,IGTB1506,normal,na,female,European American,30.0,4,396,3199,11181,17524,697258
+all_hard_qc,140,a66eb64a-2485-4539-9244-f1e1b7bb5d1b__C2,a66eb64a-2485-4539-9244-f1e1b7bb5d1b,2.0,1121,systemic lupus erythematosus,managed,female,Asian,28.0,1,116,1575,9699,4793,367126
+all_hard_qc,141,a6ac0788-1205-4bfa-bc0d-bdedd7f77542__C2,a6ac0788-1205-4bfa-bc0d-bdedd7f77542,2.0,1535,systemic lupus erythematosus,managed,female,Asian,46.0,4,732,2999,12859,13257,1732365
+all_hard_qc,142,a6c08d83-0500-4219-920e-e25d334a6409__C2,a6c08d83-0500-4219-920e-e25d334a6409,2.0,1240,systemic lupus erythematosus,managed,female,Asian,23.0,3,954,4460,13221,38590,2405535
+all_hard_qc,143,a7044233-6fb9-4b71-96bb-62aa3b6062ea__C2,a7044233-6fb9-4b71-96bb-62aa3b6062ea,2.0,1623,systemic lupus erythematosus,managed,female,Asian,69.0,3,854,3528,12814,17704,1530383
+all_hard_qc,144,a84b33db-a349-489f-af0b-22d57fb9bd69__C2,a84b33db-a349-489f-af0b-22d57fb9bd69,2.0,1219,systemic lupus erythematosus,managed,female,European American,50.0,0,403,0,10668,0,468039
+all_hard_qc,145,a95f8d98-ff4e-45fc-8ede-1687c1495833__C2,a95f8d98-ff4e-45fc-8ede-1687c1495833,2.0,1947,systemic lupus erythematosus,managed,female,European American,55.0,1,604,972,11886,2597,844114
+all_hard_qc,146,b27b5052-47f3-4c7d-b9a3-4a3b2934e78c__C2,b27b5052-47f3-4c7d-b9a3-4a3b2934e78c,2.0,1417,systemic lupus erythematosus,managed,female,Asian,45.0,20,1048,7747,13598,135602,2483068
+all_hard_qc,147,b4cbfe6a-acdc-48e8-a9f1-6f0ae959301f__C2,b4cbfe6a-acdc-48e8-a9f1-6f0ae959301f,2.0,1243,systemic lupus erythematosus,managed,female,European American,37.0,0,37,0,5471,0,53158
+all_hard_qc,148,b7c8655d-8d5e-4865-bc97-3c606cdaf5e9__C2,b7c8655d-8d5e-4865-bc97-3c606cdaf5e9,2.0,IGTB143,normal,na,female,European American,33.0,1,588,2306,12224,10669,1273674
+all_hard_qc,149,b8196629-0482-415e-bc09-c1ce1cc49363__C2,b8196629-0482-415e-bc09-c1ce1cc49363,2.0,1641,systemic lupus erythematosus,managed,female,Asian,27.0,7,858,6399,12824,67548,1505962
+all_hard_qc,150,ba126ef5-093b-4138-810c-def1fa61ac40__C2,ba126ef5-093b-4138-810c-def1fa61ac40,2.0,1279,systemic lupus erythematosus,managed,female,Asian,31.0,2,855,2553,13109,9489,1987992
+all_hard_qc,151,bffca8a1-fc84-4f20-acae-3cf0d6313002__C2,bffca8a1-fc84-4f20-acae-3cf0d6313002,2.0,IGTB1372,normal,na,female,European American,25.0,6,393,5500,11574,46845,809100
+all_hard_qc,152,c1c68594-e342-485e-8c1b-6236ec9e107f__C2,c1c68594-e342-485e-8c1b-6236ec9e107f,2.0,1262,systemic lupus erythematosus,managed,female,Asian,27.0,2,888,1163,13270,4706,2395901
+all_hard_qc,153,c21e0e54-2ea8-4fc7-9438-5d2d8d63899c__C2,c21e0e54-2ea8-4fc7-9438-5d2d8d63899c,2.0,1014,systemic lupus erythematosus,managed,female,European American,40.0,30,75,9795,8922,318699,207080
+all_hard_qc,154,c49441c0-0e2b-4e5b-b9ba-2d0477d92b88__C2,c49441c0-0e2b-4e5b-b9ba-2d0477d92b88,2.0,1087,systemic lupus erythematosus,managed,female,Asian,66.0,8,1010,5882,13412,75449,2890426
+all_hard_qc,155,c5c840c6-6238-4b37-b165-22016be695d9__C2,c5c840c6-6238-4b37-b165-22016be695d9,2.0,1281,systemic lupus erythematosus,managed,female,European American,32.0,5,791,2546,12989,11801,2040773
+all_hard_qc,156,c789d30c-0578-48dc-967f-dad52600ab54__C2,c789d30c-0578-48dc-967f-dad52600ab54,2.0,1216,systemic lupus erythematosus,managed,female,European American,48.0,0,65,0,6498,0,86029
+all_hard_qc,157,cb7c157f-9b39-46a5-8de9-15e26c5fa068__C2,cb7c157f-9b39-46a5-8de9-15e26c5fa068,2.0,1337,systemic lupus erythematosus,managed,female,European American,60.0,0,168,0,10506,0,521327
+all_hard_qc,158,ccccc606-2c86-4d7a-bb4a-8354017807a6__C2,ccccc606-2c86-4d7a-bb4a-8354017807a6,2.0,1667,systemic lupus erythematosus,managed,female,Asian,53.0,4,668,5773,12294,51689,1083060
+all_hard_qc,159,cdee1325-af49-45b8-856c-ec273c155411__C2,cdee1325-af49-45b8-856c-ec273c155411,2.0,1051,systemic lupus erythematosus,managed,male,Asian,45.0,2,388,2526,11686,12268,946978
+all_hard_qc,160,cf0f9104-fd3e-4cdd-ad08-69035510a32d__C2,cf0f9104-fd3e-4cdd-ad08-69035510a32d,2.0,IGTB1575,normal,na,female,European American,32.0,0,161,0,9875,0,335396
+all_hard_qc,161,d0660ae1-7bd5-4f68-9131-434571c29e96__C2,d0660ae1-7bd5-4f68-9131-434571c29e96,2.0,IGTB256,normal,na,female,European American,28.0,3,735,3482,12261,18528,1111636
+all_hard_qc,162,d0bbdc84-7f92-4114-9759-59d158034879__C2,d0bbdc84-7f92-4114-9759-59d158034879,2.0,1545,systemic lupus erythematosus,managed,female,European American,38.0,3,201,3307,10002,20514,427767
+all_hard_qc,163,d4486df4-6cee-4ff7-924a-98546d076135__C2,d4486df4-6cee-4ff7-924a-98546d076135,2.0,1054,systemic lupus erythematosus,managed,female,Asian,21.0,2,618,3336,12568,22340,1400308
+all_hard_qc,164,d6532240-c625-4943-a0e7-cba6977ba428__C2,d6532240-c625-4943-a0e7-cba6977ba428,2.0,1329,systemic lupus erythematosus,managed,female,Asian,47.0,1,159,1524,9289,5015,282782
+all_hard_qc,165,d65c2394-3eed-48b8-8a26-5f214003f312__C2,d65c2394-3eed-48b8-8a26-5f214003f312,2.0,IGTB1921,normal,na,female,European American,25.0,2,208,2105,9685,7820,297212
+all_hard_qc,166,d8d48d6c-7e19-4820-86e8-9174e400abbc__C2,d8d48d6c-7e19-4820-86e8-9174e400abbc,2.0,1250,systemic lupus erythematosus,managed,female,European American,30.0,1,45,1721,5728,6260,53580
+all_hard_qc,167,d9a71914-5a04-4393-9d41-c5f82cf2bd40__C2,d9a71914-5a04-4393-9d41-c5f82cf2bd40,2.0,1221,systemic lupus erythematosus,managed,male,European American,43.0,0,175,0,8838,0,219656
+all_hard_qc,168,d9c476a6-93ff-4e35-bbe2-7a0ae0e32e87__C2,d9c476a6-93ff-4e35-bbe2-7a0ae0e32e87,2.0,1193,systemic lupus erythematosus,managed,female,Asian,33.0,3,271,2702,9989,13587,323173
+all_hard_qc,169,da8367c2-e07a-46e1-b4ff-d41fca972cbc__C2,da8367c2-e07a-46e1-b4ff-d41fca972cbc,2.0,1726,systemic lupus erythematosus,managed,female,European American,65.0,0,291,0,11215,0,749961
+all_hard_qc,170,dfb86424-acd3-41a0-8656-97d24996fef4__C2,dfb86424-acd3-41a0-8656-97d24996fef4,2.0,1543,systemic lupus erythematosus,managed,female,European American,29.0,0,107,0,8331,0,219104
+all_hard_qc,171,e0286325-9289-4765-af44-1bded6b1d3df__C2,e0286325-9289-4765-af44-1bded6b1d3df,2.0,IGTB986,normal,na,female,European American,34.0,9,564,5452,12478,43267,1316768
+all_hard_qc,172,e0dba578-aa9e-44ef-b920-ef67ef41f01c__C2,e0dba578-aa9e-44ef-b920-ef67ef41f01c,2.0,1297,systemic lupus erythematosus,managed,female,European American,57.0,1,429,2160,12252,7308,1281885
+all_hard_qc,173,e140192f-3e5b-43bc-9ae0-36a28564a0b5__C2,e140192f-3e5b-43bc-9ae0-36a28564a0b5,2.0,1472,systemic lupus erythematosus,managed,female,Asian,45.0,0,472,0,12044,0,1041122
+all_hard_qc,174,e2078f37-b612-476a-aa96-5f836cd94254__C2,e2078f37-b612-476a-aa96-5f836cd94254,2.0,1633,systemic lupus erythematosus,managed,female,Asian,74.0,1,157,1363,9741,4122,299366
+all_hard_qc,175,e45ecf7e-1906-4d51-b79d-fec6aef8a844__C2,e45ecf7e-1906-4d51-b79d-fec6aef8a844,2.0,1130,systemic lupus erythematosus,managed,female,European American,27.0,0,694,0,12768,0,1974205
+all_hard_qc,176,e869b441-83d5-44d3-abc7-1a970170e1e4__C2,e869b441-83d5-44d3-abc7-1a970170e1e4,2.0,1596,systemic lupus erythematosus,managed,female,European American,66.0,1,437,2341,11536,7793,859066
+all_hard_qc,177,e9cf8f89-d60a-4584-951b-ae7df22cf6d7__C2,e9cf8f89-d60a-4584-951b-ae7df22cf6d7,2.0,1771,systemic lupus erythematosus,managed,female,Asian,49.0,1,92,2074,7686,7695,137426
+all_hard_qc,178,f0a33a73-192b-4398-b8bc-05eb0c59ae54__C2,f0a33a73-192b-4398-b8bc-05eb0c59ae54,2.0,IGTB195,normal,na,female,European American,34.0,1,432,2081,11608,8361,952748
+all_hard_qc,179,f1d09f86-4d6a-435f-9b93-5ef0df73bce2__C2,f1d09f86-4d6a-435f-9b93-5ef0df73bce2,2.0,1122,systemic lupus erythematosus,managed,female,Asian,31.0,2,775,3415,13020,16142,2081934
+all_hard_qc,180,f3091b7a-a59b-4bee-a4c4-c930424b63f3__C2,f3091b7a-a59b-4bee-a4c4-c930424b63f3,2.0,IGTB1540,normal,na,female,Asian,31.0,4,930,3958,13284,30226,2301590
+all_hard_qc,181,f4222fc5-9db3-4d75-99fe-78f565b88648__C2,f4222fc5-9db3-4d75-99fe-78f565b88648,2.0,1248,systemic lupus erythematosus,managed,male,Asian,28.0,3,528,4223,12456,26823,1379851
+all_hard_qc,182,f6f39d84-6fb4-4519-9efa-f9ca4651e3c9__C2,f6f39d84-6fb4-4519-9efa-f9ca4651e3c9,2.0,IGTB1290,normal,na,female,European American,27.0,4,601,3916,11925,20792,951700
+all_hard_qc,183,f96e68d4-b9e9-4cd5-889d-9fb46f9cc389__C2,f96e68d4-b9e9-4cd5-889d-9fb46f9cc389,2.0,1760,systemic lupus erythematosus,managed,female,European American,30.0,4,122,5532,9463,52904,272956
+all_hard_qc,184,fc11ebf7-2767-4d92-96f9-a57af8f1be30__C2,fc11ebf7-2767-4d92-96f9-a57af8f1be30,2.0,1334,systemic lupus erythematosus,managed,female,Asian,52.0,3,1502,2346,13625,10084,2920823
+all_hard_qc,185,fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e__C2,fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,2.0,IGTB508,normal,na,female,European American,33.0,7,445,5058,11717,38125,978649
+all_hard_qc,186,fe49ebfc-513a-4b74-8820-95c69298501e__C2,fe49ebfc-513a-4b74-8820-95c69298501e,2.0,1019,systemic lupus erythematosus,managed,female,European American,64.0,1,401,2093,11765,7460,912678
+all_hard_qc,187,0f3a21f5-e7b9-4139-93fb-5407dbfde4fc__C3,0f3a21f5-e7b9-4139-93fb-5407dbfde4fc,3.0,FLARE006,systemic lupus erythematosus,flare,female,European American,34.0,6,410,6177,12027,54617,937411
+all_hard_qc,188,11e9756a-d4e3-4024-8167-81f1c9013e09__C3,11e9756a-d4e3-4024-8167-81f1c9013e09,3.0,HC-002,normal,na,male,European American,27.0,1,352,2548,11801,11335,793566
+all_hard_qc,189,18773af4-60a6-4a6a-9249-429ddf7f5a89__C3,18773af4-60a6-4a6a-9249-429ddf7f5a89,3.0,FLARE004,systemic lupus erythematosus,flare,female,Asian,26.0,21,336,8683,11790,177369,720746
+all_hard_qc,190,27ae3b51-85d4-49fe-bcc3-89b0cbd59e23__C3,27ae3b51-85d4-49fe-bcc3-89b0cbd59e23,3.0,HC-506,normal,na,female,European American,33.0,2,541,4149,12488,23190,1184898
+all_hard_qc,191,27b03089-9abd-4025-b745-1a4d42f729a3__C3,27b03089-9abd-4025-b745-1a4d42f729a3,3.0,1754,systemic lupus erythematosus,managed,female,Asian,45.0,11,892,7117,13662,88231,2497438
+all_hard_qc,192,2c6239f0-efd3-469e-86aa-554f62dfb4f8__C3,2c6239f0-efd3-469e-86aa-554f62dfb4f8,3.0,1791,systemic lupus erythematosus,managed,female,Asian,66.0,9,310,7361,12005,96078,928193
+all_hard_qc,193,2e90178e-8c6e-44a4-8d5a-82dab547abcf__C3,2e90178e-8c6e-44a4-8d5a-82dab547abcf,3.0,FLARE005,systemic lupus erythematosus,flare,female,European American,26.0,7,873,5828,13014,54519,1585895
+all_hard_qc,194,32207039-fb11-4f7f-8113-13538664ea08__C3,32207039-fb11-4f7f-8113-13538664ea08,3.0,FLARE014,systemic lupus erythematosus,flare,female,African American,39.0,2,156,3920,10319,26866,389431
+all_hard_qc,195,4334dd89-25d8-4a14-a25a-dd3c14318ff2__C3,4334dd89-25d8-4a14-a25a-dd3c14318ff2,3.0,1763,systemic lupus erythematosus,flare,female,Asian,34.0,14,81,8597,10119,148405,288524
+all_hard_qc,196,4752a18e-a3a0-4699-99e8-18c7fee59072__C3,4752a18e-a3a0-4699-99e8-18c7fee59072,3.0,IGTB826,normal,na,female,European American,34.0,2,455,1782,12170,5963,986007
+all_hard_qc,197,4cb8f7e8-d13c-46e6-b86a-ee6dcb42db1a__C3,4cb8f7e8-d13c-46e6-b86a-ee6dcb42db1a,3.0,FLARE016,systemic lupus erythematosus,flare,female,Asian,23.0,2,251,3384,11557,15732,606838
+all_hard_qc,198,4d63229d-5cc2-4b05-a3f4-28040827bd13__C3,4d63229d-5cc2-4b05-a3f4-28040827bd13,3.0,FLARE017,systemic lupus erythematosus,flare,female,African American,30.0,1,25,1988,6425,8080,65316
+all_hard_qc,199,4e63511b-e07c-4fe2-af13-d535b769bbbd__C3,4e63511b-e07c-4fe2-af13-d535b769bbbd,3.0,1804,systemic lupus erythematosus,managed,female,Asian,54.0,2,314,1265,11777,4729,832028
+all_hard_qc,200,4f96324f-0403-4ba1-b110-02c96a5cba84__C3,4f96324f-0403-4ba1-b110-02c96a5cba84,3.0,HC-014,normal,na,female,Asian,65.0,5,486,5231,12320,39490,1040979
+all_hard_qc,201,58491584-2df2-4f81-829b-6f930c4d8649__C3,58491584-2df2-4f81-829b-6f930c4d8649,3.0,HC-504,normal,na,female,European American,35.0,13,539,8235,12648,130279,1372429
+all_hard_qc,202,5f31d290-7101-4ef4-9510-f3692aba34de__C3,5f31d290-7101-4ef4-9510-f3692aba34de,3.0,IGTB469,normal,na,female,European American,37.0,1,337,3076,11946,14295,818702
+all_hard_qc,203,69f01d3d-94dc-44e1-a463-74beabeb022f__C3,69f01d3d-94dc-44e1-a463-74beabeb022f,3.0,FLARE010,systemic lupus erythematosus,flare,female,Asian,37.0,4,27,5784,7845,42205,100415
+all_hard_qc,204,6e8c12a9-b87c-4eb7-9587-70b0174e3f60__C3,6e8c12a9-b87c-4eb7-9587-70b0174e3f60,3.0,HC-503,normal,na,female,Hispanic or Latin,35.0,3,235,4960,11172,31924,539421
+all_hard_qc,205,7075f840-56e5-4fef-89af-7797d3becf4d__C3,7075f840-56e5-4fef-89af-7797d3becf4d,3.0,FLARE009,systemic lupus erythematosus,treated,female,Hispanic or Latin,24.0,15,135,8528,10579,145714,373964
+all_hard_qc,206,7bedd5b4-8835-4825-ba08-502811d18911__C3,7bedd5b4-8835-4825-ba08-502811d18911,3.0,FLARE001,systemic lupus erythematosus,treated,female,European American,22.0,3,649,3206,12970,18611,1461498
+all_hard_qc,207,8273e790-4f85-4d7a-8863-6a7674ae9659__C3,8273e790-4f85-4d7a-8863-6a7674ae9659,3.0,FLARE016,systemic lupus erythematosus,treated,female,Asian,23.0,0,292,0,11162,0,559983
+all_hard_qc,208,8e5ccbdf-00ee-4cd5-9007-ff2ab414bbbf__C3,8e5ccbdf-00ee-4cd5-9007-ff2ab414bbbf,3.0,FLARE013,systemic lupus erythematosus,flare,female,African American,27.0,3,510,5334,12875,39785,1349620
+all_hard_qc,209,9245fdfa-904c-4421-ba87-60da990f40ed__C3,9245fdfa-904c-4421-ba87-60da990f40ed,3.0,IGTB514,normal,na,female,European American,34.0,1,563,1725,12999,6359,1804101
+all_hard_qc,210,9b194366-b70d-40d8-8a9b-7157a95d6c13__C3,9b194366-b70d-40d8-8a9b-7157a95d6c13,3.0,FLARE011,systemic lupus erythematosus,treated,female,Asian,31.0,2,25,3871,6696,21165,75504
+all_hard_qc,211,a17b2b7f-ab2c-47b0-bb6f-257e8d2fa4c9__C3,a17b2b7f-ab2c-47b0-bb6f-257e8d2fa4c9,3.0,1772,systemic lupus erythematosus,flare,female,Asian,21.0,10,437,7024,12898,80595,1295190
+all_hard_qc,212,a3a3384a-3f4b-45ef-b48e-a4631cd99699__C3,a3a3384a-3f4b-45ef-b48e-a4631cd99699,3.0,1586,systemic lupus erythematosus,treated,female,Asian,27.0,0,6,0,3036,0,18788
+all_hard_qc,213,a51ffc5a-e4cb-4b47-9154-4514e1dc9d65__C3,a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,3.0,IGTB1506,normal,na,female,European American,30.0,1,431,1382,12033,4191,883138
+all_hard_qc,214,a8a25630-19f3-4fc6-811b-62332dee7b86__C3,a8a25630-19f3-4fc6-811b-62332dee7b86,3.0,HC-501,normal,na,female,Asian,26.0,1,405,885,11654,2124,809970
+all_hard_qc,215,b5b93cb0-7248-4b48-ad21-5ea028207cac__C3,b5b93cb0-7248-4b48-ad21-5ea028207cac,3.0,FLARE015,systemic lupus erythematosus,flare,female,Asian,24.0,4,610,5923,12626,45874,1333882
+all_hard_qc,216,b6fa3b09-f5e2-46d0-a42a-c15cb3089214__C3,b6fa3b09-f5e2-46d0-a42a-c15cb3089214,3.0,FLARE004,systemic lupus erythematosus,treated,female,Asian,26.0,0,364,0,11771,0,820215
+all_hard_qc,217,b8dde0a0-6c13-429b-a5df-a0527c4fca14__C3,b8dde0a0-6c13-429b-a5df-a0527c4fca14,3.0,1586,systemic lupus erythematosus,flare,female,Asian,27.0,3,1017,2563,13720,10695,2696823
+all_hard_qc,218,bffca8a1-fc84-4f20-acae-3cf0d6313002__C3,bffca8a1-fc84-4f20-acae-3cf0d6313002,3.0,IGTB1372,normal,na,female,European American,25.0,3,493,4163,12322,24967,1030200
+all_hard_qc,219,c3cd3b9e-6295-43ed-babc-46a5ab454773__C3,c3cd3b9e-6295-43ed-babc-46a5ab454773,3.0,HC-502,normal,na,female,European American,64.0,0,402,0,11881,0,915372
+all_hard_qc,220,c62b2de1-6778-400f-86f6-b5c5ed0516b2__C3,c62b2de1-6778-400f-86f6-b5c5ed0516b2,3.0,FLARE020,systemic lupus erythematosus,flare,female,European American,35.0,2,343,3053,11874,12847,788721
+all_hard_qc,221,c926e690-4979-4c3f-b43e-2f66daa0c426__C3,c926e690-4979-4c3f-b43e-2f66daa0c426,3.0,2132,systemic lupus erythematosus,flare,male,European American,35.0,7,117,6878,10207,67722,291032
+all_hard_qc,222,cb8f712a-5fad-4d3c-98ad-dc8307afd120__C3,cb8f712a-5fad-4d3c-98ad-dc8307afd120,3.0,1763,systemic lupus erythematosus,treated,female,Asian,34.0,3,153,2269,11087,9040,519795
+all_hard_qc,223,cee05776-3518-495c-aac9-42e5b6eea2a8__C3,cee05776-3518-495c-aac9-42e5b6eea2a8,3.0,FLARE001,systemic lupus erythematosus,flare,female,European American,22.0,10,420,7951,12265,124670,987252
+all_hard_qc,224,d0660ae1-7bd5-4f68-9131-434571c29e96__C3,d0660ae1-7bd5-4f68-9131-434571c29e96,3.0,IGTB256,normal,na,female,European American,28.0,3,576,1839,12881,7996,1642003
+all_hard_qc,225,d65c2394-3eed-48b8-8a26-5f214003f312__C3,d65c2394-3eed-48b8-8a26-5f214003f312,3.0,IGTB1921,normal,na,female,European American,25.0,4,225,3510,11610,19837,734941
+all_hard_qc,226,d9e6e520-cf0c-45d6-ac51-fb3b7c5f0e99__C3,d9e6e520-cf0c-45d6-ac51-fb3b7c5f0e99,3.0,FLARE010,systemic lupus erythematosus,treated,female,Asian,37.0,1,21,1972,6565,6241,66324
+all_hard_qc,227,e7fbd289-5415-44bc-9ebc-a4266773c298__C3,e7fbd289-5415-44bc-9ebc-a4266773c298,3.0,FLARE013,systemic lupus erythematosus,treated,female,African American,27.0,2,2,3947,1294,20350,3688
+all_hard_qc,228,e9cf8f89-d60a-4584-951b-ae7df22cf6d7__C3,e9cf8f89-d60a-4584-951b-ae7df22cf6d7,3.0,1771,systemic lupus erythematosus,managed,female,Asian,49.0,1,108,1781,10112,6197,367491
+all_hard_qc,229,ebb5f4d9-b91c-4a11-b6a9-45e471f03bc3__C3,ebb5f4d9-b91c-4a11-b6a9-45e471f03bc3,3.0,FLARE009,systemic lupus erythematosus,flare,female,Hispanic or Latin,24.0,7,638,5416,12790,39576,1377098
+all_hard_qc,230,ef44a56d-cc63-4bf0-a451-59e809f9c5b4__C3,ef44a56d-cc63-4bf0-a451-59e809f9c5b4,3.0,1130,systemic lupus erythematosus,flare,female,European American,29.0,4,496,5669,12721,48039,1439123
+all_hard_qc,231,f0a33a73-192b-4398-b8bc-05eb0c59ae54__C3,f0a33a73-192b-4398-b8bc-05eb0c59ae54,3.0,IGTB195,normal,na,female,European American,34.0,1,394,1360,11628,4103,824364
+all_hard_qc,232,f10971cb-edb4-461e-acaa-820d7ab15ef8__C3,f10971cb-edb4-461e-acaa-820d7ab15ef8,3.0,HC-020,normal,na,female,European American,35.0,1,542,1609,12536,5390,1171542
+all_hard_qc,233,f5587137-c9aa-43ba-9cc1-60d0c26479be__C3,f5587137-c9aa-43ba-9cc1-60d0c26479be,3.0,FLARE011,systemic lupus erythematosus,flare,female,Asian,31.0,0,41,0,7826,0,111561
+all_hard_qc,234,f6f39d84-6fb4-4519-9efa-f9ca4651e3c9__C3,f6f39d84-6fb4-4519-9efa-f9ca4651e3c9,3.0,IGTB1290,normal,na,female,European American,27.0,0,386,0,12136,0,1113475
+all_hard_qc,235,fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e__C3,fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,3.0,IGTB508,normal,na,female,European American,33.0,0,219,0,10932,0,542736
+all_hard_qc,236,fe517385-b033-4626-aa2c-70cfa0d1a74f__C3,fe517385-b033-4626-aa2c-70cfa0d1a74f,3.0,FLARE007,systemic lupus erythematosus,flare,female,Asian,40.0,6,656,6081,13012,55522,1582346
+all_hard_qc,237,00d8685c-548c-4e5f-b151-47d678b31cd6__C4,00d8685c-548c-4e5f-b151-47d678b31cd6,4.0,2082,systemic lupus erythematosus,managed,female,European American,55.0,4,534,4731,11625,41401,975998
+all_hard_qc,238,02404cf5-4210-43b8-b998-797422f7b1a8__C4,02404cf5-4210-43b8-b998-797422f7b1a8,4.0,HC-585,normal,na,female,European American,24.0,12,449,5700,11013,55097,882757
+all_hard_qc,239,037d2b66-6091-42f8-b0ff-07c9130dea62__C4,037d2b66-6091-42f8-b0ff-07c9130dea62,4.0,HC-563,normal,na,female,Asian,27.0,13,436,4103,9403,31489,330431
+all_hard_qc,240,09fc2399-2a9e-47ec-a0f4-f0c83ee59b98__C4,09fc2399-2a9e-47ec-a0f4-f0c83ee59b98,4.0,HC-536,normal,na,female,European American,71.0,1,400,2231,11072,9167,767354
+all_hard_qc,241,0a1148dc-356f-4dc4-9c32-bf0823257d93__C4,0a1148dc-356f-4dc4-9c32-bf0823257d93,4.0,HC-546,normal,na,female,Asian,28.0,5,572,3502,11105,23253,837151
+all_hard_qc,242,0e59aacb-7550-45ed-8510-b29b63163539__C4,0e59aacb-7550-45ed-8510-b29b63163539,4.0,1256,systemic lupus erythematosus,managed,female,European American,29.0,3,429,1902,9499,9761,319213
+all_hard_qc,243,0eebb9c2-8cf2-4e46-abcb-0525a9507033__C4,0eebb9c2-8cf2-4e46-abcb-0525a9507033,4.0,1325,systemic lupus erythematosus,managed,female,Asian,43.0,13,1780,7571,13525,113152,3016652
+all_hard_qc,244,1046eed3-a68a-4d02-b26c-4f8054029760__C4,1046eed3-a68a-4d02-b26c-4f8054029760,4.0,HC-526,normal,na,female,European American,58.0,2,633,2004,11835,8281,1180638
+all_hard_qc,245,145e48d0-e1f3-48cd-a198-d4c62e1f8ba0__C4,145e48d0-e1f3-48cd-a198-d4c62e1f8ba0,4.0,HC-556,normal,na,female,Asian,24.0,0,99,0,7749,0,190330
+all_hard_qc,246,1d38192e-5e0c-43e5-a813-835461e099ae__C4,1d38192e-5e0c-43e5-a813-835461e099ae,4.0,HC-519,normal,na,female,Asian,21.0,8,668,3747,10376,27859,532138
+all_hard_qc,247,2261aca1-82ee-4276-9eaa-1d61688bd2f8__C4,2261aca1-82ee-4276-9eaa-1d61688bd2f8,4.0,HC-516,normal,na,female,European American,24.0,6,329,4121,10759,32611,700840
+all_hard_qc,248,261c08e0-fa34-4086-950f-1d8425f2476b__C4,261c08e0-fa34-4086-950f-1d8425f2476b,4.0,1941,systemic lupus erythematosus,managed,female,European American,32.0,25,193,6068,7975,70678,149946
+all_hard_qc,249,2688f505-eb1a-4f9f-af54-e30b3da7dff3__C4,2688f505-eb1a-4f9f-af54-e30b3da7dff3,4.0,1682,systemic lupus erythematosus,managed,female,Asian,25.0,25,444,6225,9872,75082,352424
+all_hard_qc,250,279d06b2-a656-413d-8805-b07615ea48ee__C4,279d06b2-a656-413d-8805-b07615ea48ee,4.0,HC-580,normal,na,female,Asian,34.0,2,507,2872,11352,16743,963256
+all_hard_qc,251,27ae3b51-85d4-49fe-bcc3-89b0cbd59e23__C4,27ae3b51-85d4-49fe-bcc3-89b0cbd59e23,4.0,HC-506,normal,na,female,European American,33.0,1,336,765,8790,1841,254505
+all_hard_qc,252,2ed3aef8-6c08-4c7c-9d7c-8aa618321841__C4,2ed3aef8-6c08-4c7c-9d7c-8aa618321841,4.0,HC-538,normal,na,female,Asian,32.0,5,682,4469,11866,31250,1083173
+all_hard_qc,253,3178b123-e965-4449-8944-c88b17d0d082__C4,3178b123-e965-4449-8944-c88b17d0d082,4.0,1772,systemic lupus erythematosus,managed,female,Asian,20.0,34,678,8858,12220,236845,1339898
+all_hard_qc,254,3382e6de-ead1-467c-9d88-972e44e867bf__C4,3382e6de-ead1-467c-9d88-972e44e867bf,4.0,1225,systemic lupus erythematosus,managed,female,European American,49.0,0,45,0,5991,0,78515
+all_hard_qc,255,342b5092-67e5-4a0e-a437-8b735f2a863c__C4,342b5092-67e5-4a0e-a437-8b735f2a863c,4.0,1768,systemic lupus erythematosus,managed,female,Asian,27.0,1,239,552,8092,1160,174238
+all_hard_qc,256,37214563-4102-451e-a546-a1833db3aedd__C4,37214563-4102-451e-a546-a1833db3aedd,4.0,HC-011,normal,na,female,Asian,61.0,6,375,4984,11097,43161,674501
+all_hard_qc,257,37d3daeb-c0f5-414a-8b98-0517e7464535__C4,37d3daeb-c0f5-414a-8b98-0517e7464535,4.0,HC-578,normal,na,female,European American,33.0,4,412,2828,9199,17123,310611
+all_hard_qc,258,39006dbe-f7a7-4f05-aeac-0ca1876a7a3f__C4,39006dbe-f7a7-4f05-aeac-0ca1876a7a3f,4.0,HC-572,normal,na,female,European American,48.0,4,625,4626,11633,36489,1179444
+all_hard_qc,259,3ecf5ad3-4ae3-4152-a1d2-4c9c548c5551__C4,3ecf5ad3-4ae3-4152-a1d2-4c9c548c5551,4.0,1420,systemic lupus erythematosus,managed,female,Asian,31.0,8,394,3238,9182,19440,286965
+all_hard_qc,260,3f068829-713e-4b6a-a79a-754b7d9eef46__C4,3f068829-713e-4b6a-a79a-754b7d9eef46,4.0,1419,systemic lupus erythematosus,managed,female,Asian,37.0,8,1296,5271,12614,51776,2078236
+all_hard_qc,261,3ff8915f-d4b6-418d-89ec-61fffb366646__C4,3ff8915f-d4b6-418d-89ec-61fffb366646,4.0,1730,systemic lupus erythematosus,managed,female,European American,36.0,4,510,2782,10007,13166,437579
+all_hard_qc,262,43af3cab-af35-45c0-82f6-304ca64e9f0d__C4,43af3cab-af35-45c0-82f6-304ca64e9f0d,4.0,HC-532,normal,na,female,Asian,51.0,5,445,2960,9551,18907,390228
+all_hard_qc,263,4452abfd-aa95-4982-b2c8-ac779e0cc76e__C4,4452abfd-aa95-4982-b2c8-ac779e0cc76e,4.0,HC-524,normal,na,female,European American,73.0,2,1795,2361,13746,14573,4101571
+all_hard_qc,264,45eb2bf7-4993-46ea-9055-645ad7d29a5e__C4,45eb2bf7-4993-46ea-9055-645ad7d29a5e,4.0,HC-512,normal,na,female,European American,74.0,0,177,0,9500,0,375396
+all_hard_qc,265,46e0206c-f34e-4e58-a099-c5de09a89bdb__C4,46e0206c-f34e-4e58-a099-c5de09a89bdb,4.0,HC-571,normal,na,female,Asian,52.0,5,124,3100,6851,16558,119871
+all_hard_qc,266,46e6ff98-de92-4b09-98ae-ff683d6ed775__C4,46e6ff98-de92-4b09-98ae-ff683d6ed775,4.0,1743,systemic lupus erythematosus,managed,female,Asian,48.0,13,319,4792,9164,41902,299859
+all_hard_qc,267,486df2f6-0fc3-4c16-a895-ed987f19d081__C4,486df2f6-0fc3-4c16-a895-ed987f19d081,4.0,1039,systemic lupus erythematosus,managed,female,European American,42.0,21,145,7745,9115,132621,274008
+all_hard_qc,268,4a555a89-3c4e-4e35-91ed-eed175492e5d__C4,4a555a89-3c4e-4e35-91ed-eed175492e5d,4.0,1259,systemic lupus erythematosus,managed,female,Asian,41.0,2,400,2221,10492,10041,618790
+all_hard_qc,269,4f96324f-0403-4ba1-b110-02c96a5cba84__C4,4f96324f-0403-4ba1-b110-02c96a5cba84,4.0,HC-014,normal,na,female,Asian,65.0,6,319,5423,10675,49659,560915
+all_hard_qc,270,503f2d5f-e904-46f9-99c6-c89dec37be2d__C4,503f2d5f-e904-46f9-99c6-c89dec37be2d,4.0,HC-541,normal,na,female,European American,24.0,3,452,2982,11381,14247,872574
+all_hard_qc,271,5178b16a-a577-456e-b53c-6ab4be7bed85__C4,5178b16a-a577-456e-b53c-6ab4be7bed85,4.0,1445,systemic lupus erythematosus,managed,female,Asian,62.0,3,324,3133,10454,21617,561555
+all_hard_qc,272,553053e8-aa00-41be-a991-04eacc015380__C4,553053e8-aa00-41be-a991-04eacc015380,4.0,1285,systemic lupus erythematosus,managed,female,European American,39.0,11,286,6725,10495,80565,484249
+all_hard_qc,273,55555033-33d9-49bc-b378-c20c8ed2fb1b__C4,55555033-33d9-49bc-b378-c20c8ed2fb1b,4.0,HC-554,normal,na,female,European American,49.0,4,424,4069,10759,34236,673119
+all_hard_qc,274,5699f1b6-492f-4e2a-8e10-54f25a6cae68__C4,5699f1b6-492f-4e2a-8e10-54f25a6cae68,4.0,1320,systemic lupus erythematosus,managed,female,Asian,29.0,3,10,3775,2868,24142,15983
+all_hard_qc,275,577bce84-8d37-4851-9fb4-53f9467699ba__C4,577bce84-8d37-4851-9fb4-53f9467699ba,4.0,1132,systemic lupus erythematosus,managed,female,European American,45.0,0,276,0,9782,0,347937
+all_hard_qc,276,58491584-2df2-4f81-829b-6f930c4d8649__C4,58491584-2df2-4f81-829b-6f930c4d8649,4.0,HC-504,normal,na,female,European American,35.0,28,438,6823,10121,107799,485584
+all_hard_qc,277,58d745d1-10b8-4195-9cc0-7d5aadf9a791__C4,58d745d1-10b8-4195-9cc0-7d5aadf9a791,4.0,1493,systemic lupus erythematosus,managed,female,European American,34.0,3,906,2352,11203,11316,804880
+all_hard_qc,278,5a4d2669-4967-4de5-853b-13c224029d30__C4,5a4d2669-4967-4de5-853b-13c224029d30,4.0,1496,systemic lupus erythematosus,managed,female,European American,59.0,1,369,2102,10846,9298,712947
+all_hard_qc,279,5e0ed28c-a75a-4ecd-a0c7-49e71264690b__C4,5e0ed28c-a75a-4ecd-a0c7-49e71264690b,4.0,1110,systemic lupus erythematosus,managed,female,European American,71.0,1,222,1615,9980,5471,474205
+all_hard_qc,280,6307a65a-3edb-45f0-bc18-27a090661e19__C4,6307a65a-3edb-45f0-bc18-27a090661e19,4.0,1928,systemic lupus erythematosus,managed,female,European American,63.0,0,195,0,10145,0,561061
+all_hard_qc,281,63c521a1-5a88-4a39-8d65-a0999cb2cfa6__C4,63c521a1-5a88-4a39-8d65-a0999cb2cfa6,4.0,HC-015,normal,na,female,Asian,59.0,0,309,0,10449,0,616718
+all_hard_qc,282,64c3201b-c402-4c5a-a7a5-ee67e5dc4351__C4,64c3201b-c402-4c5a-a7a5-ee67e5dc4351,4.0,1721,systemic lupus erythematosus,managed,female,Asian,40.0,0,235,0,9876,0,436459
+all_hard_qc,283,64d258d2-f11a-4c9b-8206-614aef9d5a38__C4,64d258d2-f11a-4c9b-8206-614aef9d5a38,4.0,HC-022,normal,na,female,Asian,74.0,18,554,7303,11732,110408,997579
+all_hard_qc,284,670c5ac9-5e1c-4834-8087-2dd39d87d04b__C4,670c5ac9-5e1c-4834-8087-2dd39d87d04b,4.0,1326,systemic lupus erythematosus,managed,female,Asian,51.0,1,124,521,6638,1215,110670
+all_hard_qc,285,6779676d-7bac-4431-bbb0-0b7c773b55da__C4,6779676d-7bac-4431-bbb0-0b7c773b55da,4.0,1514,systemic lupus erythematosus,managed,female,European American,38.0,1,336,808,10090,2335,520621
+all_hard_qc,286,68a0c04e-d86a-4f1b-a557-ec0331c4f71f__C4,68a0c04e-d86a-4f1b-a557-ec0331c4f71f,4.0,HC-552,normal,na,female,European American,35.0,2,373,1966,9649,7559,381334
+all_hard_qc,287,69b3abaf-0498-44c8-867f-086ccc8dce13__C4,69b3abaf-0498-44c8-867f-086ccc8dce13,4.0,1660,systemic lupus erythematosus,managed,female,Asian,21.0,2,252,1911,8411,8167,210957
+all_hard_qc,288,71ddcc80-c234-4f27-aa06-b49ae5a28784__C4,71ddcc80-c234-4f27-aa06-b49ae5a28784,4.0,HC-573,normal,na,female,Asian,31.0,11,317,3829,9059,28391,283127
+all_hard_qc,289,72cad246-b111-4616-88b5-8d1373736f54__C4,72cad246-b111-4616-88b5-8d1373736f54,4.0,1015,systemic lupus erythematosus,managed,female,European American,54.0,3,529,3495,11688,21288,1023006
+all_hard_qc,290,76337712-cfcd-4760-a462-1269a5ff215c__C4,76337712-cfcd-4760-a462-1269a5ff215c,4.0,HC-500,normal,na,female,Asian,48.0,11,145,5355,7342,54838,139809
+all_hard_qc,291,7b7167c1-bc81-4fa8-b322-18bab1ea6269__C4,7b7167c1-bc81-4fa8-b322-18bab1ea6269,4.0,1716,systemic lupus erythematosus,managed,female,European American,68.0,3,555,3726,11386,23119,985132
+all_hard_qc,292,7ded846e-1cc6-405e-b17f-6e99856f39e4__C4,7ded846e-1cc6-405e-b17f-6e99856f39e4,4.0,HC-019,normal,na,female,Asian,61.0,4,276,1786,8650,7075,259995
+all_hard_qc,293,7eff9450-2afd-4265-a1f4-4c53580b47bc__C4,7eff9450-2afd-4265-a1f4-4c53580b47bc,4.0,1222,systemic lupus erythematosus,managed,female,Asian,55.0,2,338,2784,10666,14874,685129
+all_hard_qc,294,869da0bb-4487-493b-86ca-e601eee46196__C4,869da0bb-4487-493b-86ca-e601eee46196,4.0,HC-006,normal,na,female,European American,53.0,8,249,5554,10385,62590,561614
+all_hard_qc,295,8a1f4cc3-6e34-4cd2-aba9-0f4d266e7dd9__C4,8a1f4cc3-6e34-4cd2-aba9-0f4d266e7dd9,4.0,1101,systemic lupus erythematosus,managed,female,Asian,61.0,8,32,3395,4009,24749,31021
+all_hard_qc,296,910e95f1-f837-41c6-bcb3-683780852c38__C4,910e95f1-f837-41c6-bcb3-683780852c38,4.0,HC-520,normal,na,female,Asian,22.0,3,425,3416,11215,22826,835217
+all_hard_qc,297,9258d552-bade-4414-ad62-96fea54df354__C4,9258d552-bade-4414-ad62-96fea54df354,4.0,1614,systemic lupus erythematosus,managed,female,Asian,39.0,0,536,0,11641,0,946721
+all_hard_qc,298,92d39096-b1d1-4746-9812-474db1f5f049__C4,92d39096-b1d1-4746-9812-474db1f5f049,4.0,1510,systemic lupus erythematosus,managed,female,European American,35.0,4,357,2683,9379,14948,331580
+all_hard_qc,299,99893daf-e8a9-4266-b669-73ef48ebc383__C4,99893daf-e8a9-4266-b669-73ef48ebc383,4.0,1886,systemic lupus erythematosus,managed,female,Asian,23.0,2,292,2420,10348,11128,517853
+all_hard_qc,300,9e51b938-f3a9-4d97-8802-b820ed2a6b96__C4,9e51b938-f3a9-4d97-8802-b820ed2a6b96,4.0,1078,systemic lupus erythematosus,managed,female,European American,51.0,0,613,0,11842,0,1265607
+all_hard_qc,301,9e6a490c-24a3-41fa-a5e3-2879e75b45ff__C4,9e6a490c-24a3-41fa-a5e3-2879e75b45ff,4.0,HC-567,normal,na,female,Asian,33.0,7,522,3000,9818,16453,411348
+all_hard_qc,302,a42d987e-b022-41a5-ba50-a831d04c3a5e__C4,a42d987e-b022-41a5-ba50-a831d04c3a5e,4.0,1737,systemic lupus erythematosus,managed,female,Asian,36.0,6,179,5189,9263,46376,301328
+all_hard_qc,303,ae1510fa-1501-4ddd-8291-9ccd1917369e__C4,ae1510fa-1501-4ddd-8291-9ccd1917369e,4.0,1249,systemic lupus erythematosus,managed,female,European American,31.0,1,334,398,8884,994,262022
+all_hard_qc,304,b4cbfe6a-acdc-48e8-a9f1-6f0ae959301f__C4,b4cbfe6a-acdc-48e8-a9f1-6f0ae959301f,4.0,1243,systemic lupus erythematosus,managed,female,European American,37.0,2,40,1134,4419,3834,42749
+all_hard_qc,305,b99cfca7-d0cc-427f-b4ec-373067995536__C4,b99cfca7-d0cc-427f-b4ec-373067995536,4.0,HC-009,normal,na,female,European American,27.0,15,685,7793,12094,134709,1415371
+all_hard_qc,306,bc16e1fe-cd25-4a6b-a329-2e2c7121ad8d__C4,bc16e1fe-cd25-4a6b-a329-2e2c7121ad8d,4.0,HC-540,normal,na,female,European American,68.0,1,386,2136,11227,8771,774563
+all_hard_qc,307,bca9c9c7-62f2-4427-a3aa-3dcd297ced84__C4,bca9c9c7-62f2-4427-a3aa-3dcd297ced84,4.0,HC-558,normal,na,female,Asian,25.0,4,191,2324,7502,10053,161263
+all_hard_qc,308,bd6c3fde-42cb-459e-8e81-b5ef2a90190f__C4,bd6c3fde-42cb-459e-8e81-b5ef2a90190f,4.0,HC-531,normal,na,female,European American,54.0,3,669,4668,11895,33977,1194467
+all_hard_qc,309,bf5fe2a7-ee49-4304-a20a-01596de43619__C4,bf5fe2a7-ee49-4304-a20a-01596de43619,4.0,HC-551,normal,na,female,Asian,30.0,1,275,2189,10006,10768,476223
+all_hard_qc,310,c0d761e1-0ada-4c43-a6c3-260f3a01e78c__C4,c0d761e1-0ada-4c43-a6c3-260f3a01e78c,4.0,1909,systemic lupus erythematosus,managed,female,European American,60.0,0,282,0,10389,0,551386
+all_hard_qc,311,c1ac7564-4e90-4bc9-ad66-24cecb27127f__C4,c1ac7564-4e90-4bc9-ad66-24cecb27127f,4.0,HC-574,normal,na,female,Asian,53.0,2,281,2628,8496,12372,237764
+all_hard_qc,312,c21e0e54-2ea8-4fc7-9438-5d2d8d63899c__C4,c21e0e54-2ea8-4fc7-9438-5d2d8d63899c,4.0,1014,systemic lupus erythematosus,managed,female,European American,40.0,11,44,5229,6629,51698,96802
+all_hard_qc,313,c8f4f3f5-e4ee-400f-b888-07d3508df6b5__C4,c8f4f3f5-e4ee-400f-b888-07d3508df6b5,4.0,1452,systemic lupus erythematosus,managed,female,Asian,59.0,5,414,3829,11129,24785,799247
+all_hard_qc,314,ccccc606-2c86-4d7a-bb4a-8354017807a6__C4,ccccc606-2c86-4d7a-bb4a-8354017807a6,4.0,1667,systemic lupus erythematosus,managed,female,Asian,53.0,2,423,1887,9648,7487,386352
+all_hard_qc,315,cd2dc30f-074c-4881-b328-a35cefdc7c68__C4,cd2dc30f-074c-4881-b328-a35cefdc7c68,4.0,HC-533,normal,na,female,European American,64.0,3,345,3864,10538,26273,643750
+all_hard_qc,316,d0bbdc84-7f92-4114-9759-59d158034879__C4,d0bbdc84-7f92-4114-9759-59d158034879,4.0,1545,systemic lupus erythematosus,managed,female,European American,38.0,2,210,2004,9313,9029,392165
+all_hard_qc,317,d1272c4d-f68a-4d3d-bae3-715e337bd80b__C4,d1272c4d-f68a-4d3d-bae3-715e337bd80b,4.0,1333,systemic lupus erythematosus,managed,female,Asian,64.0,4,281,3965,10086,25064,478975
+all_hard_qc,318,d2ec9dd4-2fbf-4dea-a274-4fd13d7395b8__C4,d2ec9dd4-2fbf-4dea-a274-4fd13d7395b8,4.0,ICC_control,normal,na,female,European American,26.0,0,245,0,9655,0,415659
+all_hard_qc,319,d9afaa54-38e3-48a7-b173-e59346f87a06__C4,d9afaa54-38e3-48a7-b173-e59346f87a06,4.0,HC-543,normal,na,female,European American,44.0,0,228,0,9939,0,465869
+all_hard_qc,320,e3ec6618-f5b9-42e2-846d-413e04f04308__C4,e3ec6618-f5b9-42e2-846d-413e04f04308,4.0,1881,systemic lupus erythematosus,managed,female,Asian,58.0,5,268,5204,10255,51912,495876
+all_hard_qc,321,e570dc6e-cb7c-4143-af57-699407e46480__C4,e570dc6e-cb7c-4143-af57-699407e46480,4.0,1857,systemic lupus erythematosus,managed,female,European American,46.0,4,1047,4432,12865,29245,1917532
+all_hard_qc,322,e6200840-e5b5-4bef-b341-f0f3e7425f5f__C4,e6200840-e5b5-4bef-b341-f0f3e7425f5f,4.0,HC-545,normal,na,female,Asian,64.0,5,383,3474,10718,21181,619074
+all_hard_qc,323,e869b441-83d5-44d3-abc7-1a970170e1e4__C4,e869b441-83d5-44d3-abc7-1a970170e1e4,4.0,1596,systemic lupus erythematosus,managed,female,European American,66.0,5,430,4537,11151,31029,797588
+all_hard_qc,324,e93a00ac-77ef-4890-81e0-43382903cb0c__C4,e93a00ac-77ef-4890-81e0-43382903cb0c,4.0,HC-508,normal,na,female,European American,60.0,0,162,0,9281,0,338163
+all_hard_qc,325,ea4cbf47-9a3f-443a-821c-c33a2b7eb1b0__C4,ea4cbf47-9a3f-443a-821c-c33a2b7eb1b0,4.0,2135,systemic lupus erythematosus,managed,female,European American,58.0,3,185,3268,9804,26255,393247
+all_hard_qc,326,f08a943e-b63d-4b9f-b56b-010859a94367__C4,f08a943e-b63d-4b9f-b56b-010859a94367,4.0,2061,systemic lupus erythematosus,managed,female,Asian,71.0,3,377,2898,11018,15098,669977
+all_hard_qc,327,f09bc3b1-4818-4240-bf10-415636180b4a__C4,f09bc3b1-4818-4240-bf10-415636180b4a,4.0,HC-566,normal,na,female,Asian,49.0,0,28,0,3098,0,21213
+all_hard_qc,328,f54a5b5a-c5be-4220-b515-3e22c596b9fd__C4,f54a5b5a-c5be-4220-b515-3e22c596b9fd,4.0,1888,systemic lupus erythematosus,managed,female,Asian,33.0,10,367,3419,8967,21809,272855
+all_hard_qc,329,f9330687-3035-4f1a-ab22-1f86de08b66a__C4,f9330687-3035-4f1a-ab22-1f86de08b66a,4.0,HC-008,normal,na,female,European American,48.0,1,93,2178,7747,9997,189458
+all_hard_qc,330,fc11ebf7-2767-4d92-96f9-a57af8f1be30__C4,fc11ebf7-2767-4d92-96f9-a57af8f1be30,4.0,1334,systemic lupus erythematosus,managed,female,Asian,52.0,0,1126,0,11624,0,1201040
+all_hard_qc,331,fefcf023-ec1f-44d7-88b6-bbc3a34815d5__C4,fefcf023-ec1f-44d7-88b6-bbc3a34815d5,4.0,1680,systemic lupus erythematosus,managed,female,Asian,46.0,1,482,1210,11132,3703,764668
+residual_risk_negative,0,0a4bb8a3-0abf-46eb-a33c-c14a23d44387__C1,0a4bb8a3-0abf-46eb-a33c-c14a23d44387,1.0,IGTB1762,normal,na,female,European American,28.0,1,359,1304,12997,5307,1251769
+residual_risk_negative,1,11c6a06c-f0e0-45bc-b5ec-1b14445548d4__C1,11c6a06c-f0e0-45bc-b5ec-1b14445548d4,1.0,IGTB1539,normal,na,female,European American,34.0,3,614,3193,13012,15816,1397330
+residual_risk_negative,2,13ec931d-a536-4679-ad6c-39d7bbaa8d5d__C1,13ec931d-a536-4679-ad6c-39d7bbaa8d5d,1.0,IGTB1650,normal,na,female,European American,37.0,0,519,0,13538,0,1703776
+residual_risk_negative,3,27978e88-cfed-4b90-b622-fd572e5ea40d__C1,27978e88-cfed-4b90-b622-fd572e5ea40d,1.0,IGTB1966,normal,na,female,European American,29.0,0,906,0,14707,0,3200598
+residual_risk_negative,4,3672d82d-f24c-4536-b75a-0627889e1426__C1,3672d82d-f24c-4536-b75a-0627889e1426,1.0,IGTB498,normal,na,female,European American,33.0,6,480,3476,12687,19606,1110578
+residual_risk_negative,5,3876bd23-e063-4b96-89ae-eec693743c86__C1,3876bd23-e063-4b96-89ae-eec693743c86,1.0,IGTB645,normal,na,female,European American,31.0,1,262,731,11407,2922,646231
+residual_risk_negative,6,39824ee5-7478-4dc4-baad-9a90e3ca30ff__C1,39824ee5-7478-4dc4-baad-9a90e3ca30ff,1.0,IGTB1815,normal,na,female,European American,26.0,2,700,1693,14287,6471,2159040
+residual_risk_negative,7,3be3bf0e-065c-4451-bdff-100e1f88b8d9__C1,3be3bf0e-065c-4451-bdff-100e1f88b8d9,1.0,IGTB2065,normal,na,female,European American,27.0,3,326,3778,12926,18834,1164447
+residual_risk_negative,8,3caa3c5a-9c12-464a-a794-8b7ca2cfaace__C1,3caa3c5a-9c12-464a-a794-8b7ca2cfaace,1.0,IGTB1844,normal,na,female,European American,26.0,3,594,3415,13750,16919,1853018
+residual_risk_negative,9,3e17b93b-6d64-4b05-adf1-bee9b370788c__C1,3e17b93b-6d64-4b05-adf1-bee9b370788c,1.0,IGTB1793,normal,na,female,European American,25.0,3,308,6399,12756,64364,1033049
+residual_risk_negative,10,43f3d10e-a47a-4f63-965c-a8fe58d5861f__C1,43f3d10e-a47a-4f63-965c-a8fe58d5861f,1.0,IGTB1913,normal,na,female,European American,24.0,3,269,4706,12500,32881,1053661
+residual_risk_negative,11,4752a18e-a3a0-4699-99e8-18c7fee59072__C1,4752a18e-a3a0-4699-99e8-18c7fee59072,1.0,IGTB826,normal,na,female,European American,34.0,12,863,4913,13826,40489,2029179
+residual_risk_negative,12,55e1ebfb-4571-4e95-9c84-8f81d3335fd9__C1,55e1ebfb-4571-4e95-9c84-8f81d3335fd9,1.0,IGTB1731,normal,na,female,European American,75.0,2,319,4081,12942,25394,1221514
+residual_risk_negative,13,5d0826b4-fa43-4e32-8426-4ee9b3950e0f__C1,5d0826b4-fa43-4e32-8426-4ee9b3950e0f,1.0,IGTB1871,normal,na,female,European American,27.0,5,458,4378,13529,28156,1669817
+residual_risk_negative,14,5f31d290-7101-4ef4-9510-f3692aba34de__C1,5f31d290-7101-4ef4-9510-f3692aba34de,1.0,IGTB469,normal,na,female,European American,37.0,4,330,4356,11964,30218,780920
+residual_risk_negative,15,6d32f89c-b5b9-4486-94f8-5368115f0408__C1,6d32f89c-b5b9-4486-94f8-5368115f0408,1.0,IGTB1895,normal,na,female,European American,27.0,0,563,0,13876,0,1912515
+residual_risk_negative,16,6d8ca891-26ad-487f-b162-a32a835fd534__C1,6d8ca891-26ad-487f-b162-a32a835fd534,1.0,IGTB1908,normal,na,female,European American,32.0,0,261,0,12504,0,976952
+residual_risk_negative,17,77712740-d29f-4bb0-9b90-2aa3db72f3ba__C1,77712740-d29f-4bb0-9b90-2aa3db72f3ba,1.0,IGTB141,normal,na,female,European American,34.0,2,446,1006,12467,3553,1012055
+residual_risk_negative,18,7eebe697-187f-4cce-b10d-9f71235d3a4f__C1,7eebe697-187f-4cce-b10d-9f71235d3a4f,1.0,IGTB1906,normal,na,female,European American,30.0,4,477,2878,12577,15454,1091250
+residual_risk_negative,19,803fece6-2b2d-4ba2-8370-49385734ab3b__C1,803fece6-2b2d-4ba2-8370-49385734ab3b,1.0,IGTB1819,normal,na,male,European American,41.0,2,477,4643,13369,36827,1429153
+residual_risk_negative,20,83a38413-11d1-494e-81d3-56f594148b71__C1,83a38413-11d1-494e-81d3-56f594148b71,1.0,IGTB2007,normal,na,female,European American,27.0,2,382,2250,13068,8115,1190252
+residual_risk_negative,21,886dc81a-06f7-47dc-bdf6-da1524e86d7d__C1,886dc81a-06f7-47dc-bdf6-da1524e86d7d,1.0,IGTB884,normal,na,female,European American,34.0,8,364,7330,12920,97317,1209232
+residual_risk_negative,22,9245fdfa-904c-4421-ba87-60da990f40ed__C1,9245fdfa-904c-4421-ba87-60da990f40ed,1.0,IGTB514,normal,na,female,European American,34.0,4,544,4984,12927,32056,1391467
+residual_risk_negative,23,98e974a9-c08e-4066-8930-d627b18f1a89__C1,98e974a9-c08e-4066-8930-d627b18f1a89,1.0,IGTB670,normal,na,female,European American,33.0,4,447,4713,12355,33424,937000
+residual_risk_negative,24,9c889cb3-c0ae-400b-b27d-e52241a7d342__C1,9c889cb3-c0ae-400b-b27d-e52241a7d342,1.0,IGTB1826,normal,na,female,European American,30.0,7,460,6401,13194,55609,1408318
+residual_risk_negative,25,a3ef43c2-caad-4ca3-86d0-3c362e778877__C1,a3ef43c2-caad-4ca3-86d0-3c362e778877,1.0,IGTB1901,normal,na,female,European American,23.0,3,509,2287,13431,11265,1501177
+residual_risk_negative,26,a51ffc5a-e4cb-4b47-9154-4514e1dc9d65__C1,a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,1.0,IGTB1506,normal,na,female,European American,30.0,5,404,3959,12041,22563,845702
+residual_risk_negative,27,b0c3cf74-58cf-43e7-b4df-61ef0b3a9fdc__C1,b0c3cf74-58cf-43e7-b4df-61ef0b3a9fdc,1.0,IGTB1840,normal,na,female,European American,26.0,0,883,0,14498,0,2861417
+residual_risk_negative,28,b25deecf-dab2-4c86-ae98-047ee79ce320__C1,b25deecf-dab2-4c86-ae98-047ee79ce320,1.0,IGTB1828,normal,na,female,European American,25.0,2,682,1655,14128,6807,2288155
+residual_risk_negative,29,b7c8655d-8d5e-4865-bc97-3c606cdaf5e9__C1,b7c8655d-8d5e-4865-bc97-3c606cdaf5e9,1.0,IGTB143,normal,na,female,European American,33.0,2,422,958,12202,3518,930874
+residual_risk_negative,30,bffca8a1-fc84-4f20-acae-3cf0d6313002__C1,bffca8a1-fc84-4f20-acae-3cf0d6313002,1.0,IGTB1372,normal,na,female,European American,25.0,6,473,3055,12416,16570,983023
+residual_risk_negative,31,c4f152fb-04b4-4f5d-b4e6-4a3a93da7881__C1,c4f152fb-04b4-4f5d-b4e6-4a3a93da7881,1.0,IGTB1974,normal,na,female,European American,23.0,4,427,5374,13153,34934,1416095
+residual_risk_negative,32,c896fdae-1a67-4c5e-b3f8-f4671744e35f__C1,c896fdae-1a67-4c5e-b3f8-f4671744e35f,1.0,IGTB1952,normal,na,female,European American,26.0,2,506,1395,13547,4664,1472878
+residual_risk_negative,33,cf0f9104-fd3e-4cdd-ad08-69035510a32d__C1,cf0f9104-fd3e-4cdd-ad08-69035510a32d,1.0,IGTB1575,normal,na,female,European American,32.0,1,336,909,12172,2955,848760
+residual_risk_negative,34,d3aef314-d83b-4ce7-ac01-5ab74ea0fa4f__C1,d3aef314-d83b-4ce7-ac01-5ab74ea0fa4f,1.0,IGTB1814,normal,na,female,European American,32.0,2,913,1779,14800,9102,3413682
+residual_risk_negative,35,d65c2394-3eed-48b8-8a26-5f214003f312__C1,d65c2394-3eed-48b8-8a26-5f214003f312,1.0,IGTB1921,normal,na,female,European American,25.0,4,342,6047,12902,48491,1254707
+residual_risk_negative,36,e0286325-9289-4765-af44-1bded6b1d3df__C1,e0286325-9289-4765-af44-1bded6b1d3df,1.0,IGTB986,normal,na,female,European American,34.0,7,446,6888,13378,76602,1506940
+residual_risk_negative,37,e0d91e74-9836-43b7-b866-383398b2df70__C1,e0d91e74-9836-43b7-b866-383398b2df70,1.0,IGTB1789,normal,na,female,European American,31.0,1,801,818,14596,2744,2840519
+residual_risk_negative,38,e237fb4b-e3eb-4365-b625-8e31534d7508__C1,e237fb4b-e3eb-4365-b625-8e31534d7508,1.0,IGTB1768,normal,na,female,European American,29.0,2,343,3308,12671,16679,1076843
+residual_risk_negative,39,e8295a2a-ebac-417e-858e-52cd294dd906__C1,e8295a2a-ebac-417e-858e-52cd294dd906,1.0,IGTB1987,normal,na,female,European American,23.0,4,414,3234,13154,17413,1351932
+residual_risk_negative,40,f0a33a73-192b-4398-b8bc-05eb0c59ae54__C1,f0a33a73-192b-4398-b8bc-05eb0c59ae54,1.0,IGTB195,normal,na,female,European American,34.0,3,421,1753,12215,7931,974223
+residual_risk_negative,41,f0f0c7c0-c2dd-4f71-a15d-cc29ad1144b6__C1,f0f0c7c0-c2dd-4f71-a15d-cc29ad1144b6,1.0,IGTB1996,normal,na,female,European American,27.0,1,618,994,13722,2955,1770509
+residual_risk_negative,42,f3091b7a-a59b-4bee-a4c4-c930424b63f3__C1,f3091b7a-a59b-4bee-a4c4-c930424b63f3,1.0,IGTB1540,normal,na,female,Asian,31.0,5,564,3856,12829,24284,1285079
+residual_risk_negative,43,f46fc513-1a40-4930-a9ee-c9c1da5de582__C1,f46fc513-1a40-4930-a9ee-c9c1da5de582,1.0,IGTB1982,normal,na,female,European American,28.0,1,622,2609,13826,9896,1935990
+residual_risk_negative,44,fa40c3dd-a3a5-4ffd-9470-ab39682965df__C1,fa40c3dd-a3a5-4ffd-9470-ab39682965df,1.0,IGTB1916,normal,na,female,European American,23.0,4,391,4724,12996,34495,1309187
+residual_risk_negative,45,fcadfde9-31cc-4f2d-bf5b-b7deec30439a__C1,fcadfde9-31cc-4f2d-bf5b-b7deec30439a,1.0,IGTB1827,normal,na,female,European American,33.0,3,313,4427,12400,31402,1015430
+residual_risk_negative,46,fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e__C1,fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,1.0,IGTB508,normal,na,female,European American,33.0,2,416,2217,12452,10319,1084707
+residual_risk_negative,47,025b6b04-0e79-4c4b-bbb5-15042ca0474e__C2,025b6b04-0e79-4c4b-bbb5-15042ca0474e,2.0,1785,systemic lupus erythematosus,managed,female,European American,56.0,1,423,1171,11672,3037,775497
+residual_risk_negative,48,0332dc59-e2c0-4b55-9921-3e0d0f565e5e__C2,0332dc59-e2c0-4b55-9921-3e0d0f565e5e,2.0,IGTB1542,normal,na,female,European American,28.0,1,242,1026,9774,2529,322735
+residual_risk_negative,49,0426d045-1567-4897-8407-e7925395251c__C2,0426d045-1567-4897-8407-e7925395251c,2.0,1615,systemic lupus erythematosus,managed,male,European American,41.0,7,329,5498,11427,53712,843295
+residual_risk_negative,50,09e143b6-bb61-40d5-99d8-bcf32ae0a20a__C2,09e143b6-bb61-40d5-99d8-bcf32ae0a20a,2.0,1567,systemic lupus erythematosus,managed,female,Asian,59.0,2,62,3036,7952,18091,159320
+residual_risk_negative,51,0b078cad-b547-43a9-a401-35cab69549b4__C2,0b078cad-b547-43a9-a401-35cab69549b4,2.0,1338,systemic lupus erythematosus,managed,female,European American,42.0,1,592,2289,12716,8408,1742404
+residual_risk_negative,52,0e4725c3-8e87-420e-bbf1-15781f6bbf5c__C2,0e4725c3-8e87-420e-bbf1-15781f6bbf5c,2.0,1294,systemic lupus erythematosus,managed,male,Asian,33.0,1,1179,625,13091,1389,1912323
+residual_risk_negative,53,11c6a06c-f0e0-45bc-b5ec-1b14445548d4__C2,11c6a06c-f0e0-45bc-b5ec-1b14445548d4,2.0,IGTB1539,normal,na,female,European American,34.0,0,315,0,11358,0,661159
+residual_risk_negative,54,13ec931d-a536-4679-ad6c-39d7bbaa8d5d__C2,13ec931d-a536-4679-ad6c-39d7bbaa8d5d,2.0,IGTB1650,normal,na,female,European American,37.0,2,617,4047,12543,21599,1501440
+residual_risk_negative,55,150f491b-4af3-4972-853f-5d39e7ea824a__C2,150f491b-4af3-4972-853f-5d39e7ea824a,2.0,1414,systemic lupus erythematosus,managed,male,European American,41.0,0,192,0,9458,0,299907
+residual_risk_negative,56,168bc7ce-f2e2-46f4-8b35-43f4ddf39693__C2,168bc7ce-f2e2-46f4-8b35-43f4ddf39693,2.0,1584,systemic lupus erythematosus,managed,female,Asian,62.0,1,842,2375,12801,9032,1629084
+residual_risk_negative,57,1990a6b9-ef47-4b7d-ac77-421031dec003__C2,1990a6b9-ef47-4b7d-ac77-421031dec003,2.0,1827,systemic lupus erythematosus,managed,female,European American,35.0,0,432,0,11547,0,776727
+residual_risk_negative,58,1d10643b-90b7-4d0c-ad8d-534e5bd1ae8a__C2,1d10643b-90b7-4d0c-ad8d-534e5bd1ae8a,2.0,1226,systemic lupus erythematosus,managed,female,Asian,37.0,1,1543,1630,13096,4719,1914434
+residual_risk_negative,59,1f4f30c3-dbfc-4478-be7e-e047b7ad642a__C2,1f4f30c3-dbfc-4478-be7e-e047b7ad642a,2.0,1366,systemic lupus erythematosus,managed,female,Asian,55.0,4,595,5477,12326,46092,1181199
+residual_risk_negative,60,1fccdc9f-3051-4556-bea4-57412a092eb8__C2,1fccdc9f-3051-4556-bea4-57412a092eb8,2.0,1588,systemic lupus erythematosus,managed,male,European American,35.0,0,194,0,9856,0,407572
+residual_risk_negative,61,20e15d59-e68c-4af0-873f-199998c6ee3b__C2,20e15d59-e68c-4af0-873f-199998c6ee3b,2.0,1958,systemic lupus erythematosus,managed,female,European American,38.0,0,304,0,10189,0,382742
+residual_risk_negative,62,23373939-b15c-4982-bc28-48770bad82e2__C2,23373939-b15c-4982-bc28-48770bad82e2,2.0,1324,systemic lupus erythematosus,managed,female,Asian,57.0,5,282,4123,10666,30580,492634
+residual_risk_negative,63,2512ead7-e6f3-4ceb-9894-46e1e71eb8df__C2,2512ead7-e6f3-4ceb-9894-46e1e71eb8df,2.0,1368,systemic lupus erythematosus,managed,male,European American,45.0,3,394,1353,11170,5450,666734
+residual_risk_negative,64,2688f505-eb1a-4f9f-af54-e30b3da7dff3__C2,2688f505-eb1a-4f9f-af54-e30b3da7dff3,2.0,1682,systemic lupus erythematosus,managed,female,Asian,25.0,10,584,7172,12421,89908,1054107
+residual_risk_negative,65,27b03089-9abd-4025-b745-1a4d42f729a3__C2,27b03089-9abd-4025-b745-1a4d42f729a3,2.0,1754,systemic lupus erythematosus,managed,female,Asian,45.0,3,785,4565,12109,28599,1002447
+residual_risk_negative,66,2899cc75-6bcb-4c24-9375-81a37c2a62f5__C2,2899cc75-6bcb-4c24-9375-81a37c2a62f5,2.0,1602,systemic lupus erythematosus,managed,female,European American,64.0,0,340,0,11326,0,756238
+residual_risk_negative,67,2c6239f0-efd3-469e-86aa-554f62dfb4f8__C2,2c6239f0-efd3-469e-86aa-554f62dfb4f8,2.0,1791,systemic lupus erythematosus,managed,female,Asian,66.0,10,320,4546,10500,31851,424932
+residual_risk_negative,68,2d3d3f42-1bf4-4177-9be3-0f70a79f9d49__C2,2d3d3f42-1bf4-4177-9be3-0f70a79f9d49,2.0,1848,systemic lupus erythematosus,managed,female,European American,63.0,1,566,1894,12329,6775,1085039
+residual_risk_negative,69,2de24ffa-ba31-4218-a87f-7176c9b8f67c__C2,2de24ffa-ba31-4218-a87f-7176c9b8f67c,2.0,1829,systemic lupus erythematosus,managed,female,European American,51.0,0,22,0,5185,0,46809
+residual_risk_negative,70,2f17ecfd-2b2e-4603-bf0e-4105f13870b5__C2,2f17ecfd-2b2e-4603-bf0e-4105f13870b5,2.0,1558,systemic lupus erythematosus,managed,male,European American,83.0,1,144,1925,10162,6391,414020
+residual_risk_negative,71,3098a146-f3f2-4994-b7d1-770425e1f8b8__C2,3098a146-f3f2-4994-b7d1-770425e1f8b8,2.0,1731,systemic lupus erythematosus,managed,female,European American,45.0,0,255,0,10945,0,522552
+residual_risk_negative,72,342b5092-67e5-4a0e-a437-8b735f2a863c__C2,342b5092-67e5-4a0e-a437-8b735f2a863c,2.0,1768,systemic lupus erythematosus,managed,female,Asian,27.0,2,394,2432,10779,9707,496892
+residual_risk_negative,73,3434bd39-04ed-4492-97b1-7410192739e8__C2,3434bd39-04ed-4492-97b1-7410192739e8,2.0,1961,systemic lupus erythematosus,managed,female,European American,43.0,5,435,5159,11401,37011,652306
+residual_risk_negative,74,34fcf40d-5976-44a6-8f49-1fe0e3b1c064__C2,34fcf40d-5976-44a6-8f49-1fe0e3b1c064,2.0,1165,systemic lupus erythematosus,managed,male,Asian,29.0,11,313,5024,10223,37710,384037
+residual_risk_negative,75,3672d82d-f24c-4536-b75a-0627889e1426__C2,3672d82d-f24c-4536-b75a-0627889e1426,2.0,IGTB498,normal,na,female,European American,33.0,1,489,2112,11874,9617,1030629
+residual_risk_negative,76,385a6725-3504-4717-af12-cfed4adc3e9b__C2,385a6725-3504-4717-af12-cfed4adc3e9b,2.0,1672,systemic lupus erythematosus,managed,female,Asian,47.0,0,31,0,5222,0,43216
+residual_risk_negative,77,3876bd23-e063-4b96-89ae-eec693743c86__C2,3876bd23-e063-4b96-89ae-eec693743c86,2.0,IGTB645,normal,na,female,European American,31.0,2,238,3648,10643,22995,485527
+residual_risk_negative,78,38c6ab44-8cf8-4bcf-93da-5c8b0c104bbc__C2,38c6ab44-8cf8-4bcf-93da-5c8b0c104bbc,2.0,1270,systemic lupus erythematosus,managed,female,European American,51.0,0,185,0,10706,0,537136
+residual_risk_negative,79,39b05a41-41b3-4146-896b-017b0443556d__C2,39b05a41-41b3-4146-896b-017b0443556d,2.0,1404,systemic lupus erythematosus,managed,female,Asian,20.0,4,407,4094,11620,24166,771720
+residual_risk_negative,80,3acf43ac-421f-48ad-9363-a51cce15e119__C2,3acf43ac-421f-48ad-9363-a51cce15e119,2.0,1341,systemic lupus erythematosus,managed,female,Asian,41.0,0,351,0,10866,0,581222
+residual_risk_negative,81,3b0f67b7-7799-4746-8435-9ccb71ccacec__C2,3b0f67b7-7799-4746-8435-9ccb71ccacec,2.0,1251,systemic lupus erythematosus,managed,female,Asian,32.0,5,845,6173,13318,63520,2376949
+residual_risk_negative,82,3ecf5ad3-4ae3-4152-a1d2-4c9c548c5551__C2,3ecf5ad3-4ae3-4152-a1d2-4c9c548c5551,2.0,1420,systemic lupus erythematosus,managed,female,Asian,31.0,8,782,6008,12436,66781,1414072
+residual_risk_negative,83,3f068829-713e-4b6a-a79a-754b7d9eef46__C2,3f068829-713e-4b6a-a79a-754b7d9eef46,2.0,1419,systemic lupus erythematosus,managed,female,Asian,37.0,7,1284,5009,13496,45917,2522356
+residual_risk_negative,84,3f29e4ef-952a-4a98-9659-d26028f71319__C2,3f29e4ef-952a-4a98-9659-d26028f71319,2.0,1492,systemic lupus erythematosus,managed,female,Asian,36.0,6,735,4373,12754,30068,1701891
+residual_risk_negative,85,3f7db560-4400-424a-87a7-45e712c31264__C2,3f7db560-4400-424a-87a7-45e712c31264,2.0,1196,systemic lupus erythematosus,managed,male,European American,29.0,1,442,2552,11991,11348,1261472
+residual_risk_negative,86,3ff8915f-d4b6-418d-89ec-61fffb366646__C2,3ff8915f-d4b6-418d-89ec-61fffb366646,2.0,1730,systemic lupus erythematosus,managed,female,European American,36.0,4,641,3723,12363,24042,1345916
+residual_risk_negative,87,4227d4ba-c467-4e19-8f48-5181a811a565__C2,4227d4ba-c467-4e19-8f48-5181a811a565,2.0,1315,systemic lupus erythematosus,managed,female,European American,54.0,2,567,3558,12429,18076,1388435
+residual_risk_negative,88,42e0623b-6872-409f-bd76-1c2cb5e3b5c0__C2,42e0623b-6872-409f-bd76-1c2cb5e3b5c0,2.0,1004,systemic lupus erythematosus,managed,female,European American,39.0,0,48,0,7585,0,120678
+residual_risk_negative,89,44c75170-6dfa-485f-99eb-275a1d77620b__C2,44c75170-6dfa-485f-99eb-275a1d77620b,2.0,1892,systemic lupus erythematosus,managed,female,European American,55.0,2,436,2479,11790,10949,863521
+residual_risk_negative,90,45abcda8-4f12-4496-983b-9c712250dc3c__C2,45abcda8-4f12-4496-983b-9c712250dc3c,2.0,1582,systemic lupus erythematosus,managed,female,Asian,51.0,1,313,1752,10855,6393,557583
+residual_risk_negative,91,46e6ff98-de92-4b09-98ae-ff683d6ed775__C2,46e6ff98-de92-4b09-98ae-ff683d6ed775,2.0,1743,systemic lupus erythematosus,managed,female,Asian,48.0,5,619,3927,11745,20828,789463
+residual_risk_negative,92,4752a18e-a3a0-4699-99e8-18c7fee59072__C2,4752a18e-a3a0-4699-99e8-18c7fee59072,2.0,IGTB826,normal,na,female,European American,34.0,2,536,1926,12096,8239,1137568
+residual_risk_negative,93,4a555a89-3c4e-4e35-91ed-eed175492e5d__C2,4a555a89-3c4e-4e35-91ed-eed175492e5d,2.0,1259,systemic lupus erythematosus,managed,female,Asian,41.0,1,331,2306,11542,8874,870885
+residual_risk_negative,94,4be5b6e5-f225-4892-9ac0-9233bf04dbb9__C2,4be5b6e5-f225-4892-9ac0-9233bf04dbb9,2.0,1621,systemic lupus erythematosus,managed,male,European American,58.0,5,1554,3783,13956,22235,3458861
+residual_risk_negative,95,4e63511b-e07c-4fe2-af13-d535b769bbbd__C2,4e63511b-e07c-4fe2-af13-d535b769bbbd,2.0,1804,systemic lupus erythematosus,managed,female,Asian,54.0,0,545,0,11282,0,658145
+residual_risk_negative,96,52c33723-f3ef-430c-a3f2-dd9ddfe0a0dd__C2,52c33723-f3ef-430c-a3f2-dd9ddfe0a0dd,2.0,1418,systemic lupus erythematosus,managed,female,Asian,39.0,9,821,6884,12462,78883,1540380
+residual_risk_negative,97,53003f7f-f631-4dd0-ac73-543dcf566b81__C2,53003f7f-f631-4dd0-ac73-543dcf566b81,2.0,1046,systemic lupus erythematosus,managed,female,Asian,58.0,5,1071,3972,13421,23148,2203144
+residual_risk_negative,98,577bce84-8d37-4851-9fb4-53f9467699ba__C2,577bce84-8d37-4851-9fb4-53f9467699ba,2.0,1132,systemic lupus erythematosus,managed,female,European American,45.0,1,512,1728,12204,6605,1291615
+residual_risk_negative,99,57f0790a-15ce-4b6a-aae1-b45763b8d226__C2,57f0790a-15ce-4b6a-aae1-b45763b8d226,2.0,1480,systemic lupus erythematosus,managed,female,Asian,57.0,9,1311,4592,13687,32367,2791385
+residual_risk_negative,100,5a4d2669-4967-4de5-853b-13c224029d30__C2,5a4d2669-4967-4de5-853b-13c224029d30,2.0,1496,systemic lupus erythematosus,managed,female,European American,59.0,0,542,0,11823,0,943177
+residual_risk_negative,101,5d55e840-0d9f-48df-bc26-6f4466c02eb6__C2,5d55e840-0d9f-48df-bc26-6f4466c02eb6,2.0,1891,systemic lupus erythematosus,managed,female,European American,58.0,0,727,0,12546,0,1272528
+residual_risk_negative,102,5e0ed28c-a75a-4ecd-a0c7-49e71264690b__C2,5e0ed28c-a75a-4ecd-a0c7-49e71264690b,2.0,1110,systemic lupus erythematosus,managed,female,European American,71.0,0,229,0,11096,0,756515
+residual_risk_negative,103,5f31d290-7101-4ef4-9510-f3692aba34de__C2,5f31d290-7101-4ef4-9510-f3692aba34de,2.0,IGTB469,normal,na,female,European American,37.0,15,341,7511,11261,113781,671226
+residual_risk_negative,104,612207b0-dca1-4ac5-80c1-65a495c1a99d__C2,612207b0-dca1-4ac5-80c1-65a495c1a99d,2.0,1031,systemic lupus erythematosus,managed,female,Asian,32.0,15,154,8154,10979,133510,487410
+residual_risk_negative,105,6242534a-ef16-4237-b53e-9dc823087738__C2,6242534a-ef16-4237-b53e-9dc823087738,2.0,1799,systemic lupus erythematosus,managed,female,European American,68.0,2,176,2005,10110,8340,358844
+residual_risk_negative,106,66e0d3ad-e8b3-4bae-a700-2626841e8d16__C2,66e0d3ad-e8b3-4bae-a700-2626841e8d16,2.0,1767,systemic lupus erythematosus,managed,female,Asian,29.0,1,473,1430,11250,4410,642159
+residual_risk_negative,107,670c5ac9-5e1c-4834-8087-2dd39d87d04b__C2,670c5ac9-5e1c-4834-8087-2dd39d87d04b,2.0,1326,systemic lupus erythematosus,managed,female,Asian,51.0,1,175,768,9444,2204,295805
+residual_risk_negative,108,6779676d-7bac-4431-bbb0-0b7c773b55da__C2,6779676d-7bac-4431-bbb0-0b7c773b55da,2.0,1514,systemic lupus erythematosus,managed,female,European American,38.0,2,436,1061,11128,3970,679104
+residual_risk_negative,109,678d2b37-30f0-4771-9702-7e74c70f1d12__C2,678d2b37-30f0-4771-9702-7e74c70f1d12,2.0,1045,systemic lupus erythematosus,managed,female,Asian,31.0,5,379,5850,11872,53468,900794
+residual_risk_negative,110,69b3abaf-0498-44c8-867f-086ccc8dce13__C2,69b3abaf-0498-44c8-867f-086ccc8dce13,2.0,1660,systemic lupus erythematosus,managed,female,Asian,21.0,1,195,1866,10316,6077,402007
+residual_risk_negative,111,6a84e718-fd28-4df4-be57-5d3a0b9b06a4__C2,6a84e718-fd28-4df4-be57-5d3a0b9b06a4,2.0,1068,systemic lupus erythematosus,managed,female,European American,45.0,1,87,3525,8981,16560,238726
+residual_risk_negative,112,6c925f38-0ae8-4db8-ba05-b5e2a2563511__C2,6c925f38-0ae8-4db8-ba05-b5e2a2563511,2.0,1195,systemic lupus erythematosus,managed,male,Asian,69.0,9,87,4976,7463,35622,115615
+residual_risk_negative,113,6f092ad4-41e1-4b4f-b492-64496cf82fcb__C2,6f092ad4-41e1-4b4f-b492-64496cf82fcb,2.0,1815,systemic lupus erythematosus,managed,female,European American,60.0,1,847,2052,12880,6691,1487270
+residual_risk_negative,114,74489391-0e1a-40c9-9ac8-2691e7e42cf1__C2,74489391-0e1a-40c9-9ac8-2691e7e42cf1,2.0,1775,systemic lupus erythematosus,managed,female,European American,37.0,3,384,4228,11537,26263,717093
+residual_risk_negative,115,77712740-d29f-4bb0-9b90-2aa3db72f3ba__C2,77712740-d29f-4bb0-9b90-2aa3db72f3ba,2.0,IGTB141,normal,na,female,European American,34.0,4,251,4349,10504,24739,504433
+residual_risk_negative,116,7b7167c1-bc81-4fa8-b322-18bab1ea6269__C2,7b7167c1-bc81-4fa8-b322-18bab1ea6269,2.0,1716,systemic lupus erythematosus,managed,female,European American,68.0,4,907,1728,12874,8482,2015688
+residual_risk_negative,117,7bbdb647-9288-4863-b66b-be24f9413e7b__C2,7bbdb647-9288-4863-b66b-be24f9413e7b,2.0,1203,systemic lupus erythematosus,managed,female,European American,39.0,5,164,5371,10401,56991,580915
+residual_risk_negative,118,7eff9450-2afd-4265-a1f4-4c53580b47bc__C2,7eff9450-2afd-4265-a1f4-4c53580b47bc,2.0,1222,systemic lupus erythematosus,managed,female,Asian,55.0,0,408,0,10763,0,524143
+residual_risk_negative,119,8037ce3c-a2dd-415b-b3d1-9116744c77e5__C2,8037ce3c-a2dd-415b-b3d1-9116744c77e5,2.0,1763,systemic lupus erythematosus,managed,female,Asian,34.0,2,111,1748,8175,5495,144484
+residual_risk_negative,120,81d6439e-3bb2-4356-8a46-380b6620a895__C2,81d6439e-3bb2-4356-8a46-380b6620a895,2.0,1569,systemic lupus erythematosus,managed,female,European American,38.0,0,325,0,11323,0,691276
+residual_risk_negative,121,8252bf55-2aa7-411f-b276-fbc747265666__C2,8252bf55-2aa7-411f-b276-fbc747265666,2.0,1522,systemic lupus erythematosus,managed,male,Asian,56.0,2,545,2621,12151,15723,1238793
+residual_risk_negative,122,846608fe-7084-4723-8ed0-55e36de70877__C2,846608fe-7084-4723-8ed0-55e36de70877,2.0,1234,systemic lupus erythematosus,managed,female,European American,37.0,6,472,4153,11149,28397,591330
+residual_risk_negative,123,886dc81a-06f7-47dc-bdf6-da1524e86d7d__C2,886dc81a-06f7-47dc-bdf6-da1524e86d7d,2.0,IGTB884,normal,na,female,European American,34.0,9,460,6249,11826,60667,1058170
+residual_risk_negative,124,8a1f4cc3-6e34-4cd2-aba9-0f4d266e7dd9__C2,8a1f4cc3-6e34-4cd2-aba9-0f4d266e7dd9,2.0,1101,systemic lupus erythematosus,managed,female,Asian,61.0,11,64,7094,8729,103016,219782
+residual_risk_negative,125,8ac7e282-b60a-4595-9904-8a46773e2c31__C2,8ac7e282-b60a-4595-9904-8a46773e2c31,2.0,1197,systemic lupus erythematosus,managed,female,Asian,42.0,0,1747,0,13214,0,1676252
+residual_risk_negative,126,8c16622f-c4c5-4c77-bb15-c5cf74910184__C2,8c16622f-c4c5-4c77-bb15-c5cf74910184,2.0,1597,systemic lupus erythematosus,managed,female,Asian,36.0,0,80,0,8523,0,215340
+residual_risk_negative,127,9198675e-be82-472f-b352-a98629c9876a__C2,9198675e-be82-472f-b352-a98629c9876a,2.0,1056,systemic lupus erythematosus,managed,female,Asian,29.0,5,503,5147,12354,44105,1410326
+residual_risk_negative,128,9245fdfa-904c-4421-ba87-60da990f40ed__C2,9245fdfa-904c-4421-ba87-60da990f40ed,2.0,IGTB514,normal,na,female,European American,34.0,3,549,3544,12264,21117,1122931
+residual_risk_negative,129,9258d552-bade-4414-ad62-96fea54df354__C2,9258d552-bade-4414-ad62-96fea54df354,2.0,1614,systemic lupus erythematosus,managed,female,Asian,39.0,0,410,0,11734,0,802016
+residual_risk_negative,130,92d39096-b1d1-4746-9812-474db1f5f049__C2,92d39096-b1d1-4746-9812-474db1f5f049,2.0,1510,systemic lupus erythematosus,managed,female,European American,35.0,1,411,866,11274,2743,689900
+residual_risk_negative,131,9304bd33-e67a-46ba-96c5-954e5358db76__C2,9304bd33-e67a-46ba-96c5-954e5358db76,2.0,1063,systemic lupus erythematosus,managed,female,European American,70.0,0,385,0,11553,0,881349
+residual_risk_negative,132,982d60b4-5677-4e2d-8b58-79503863710d__C2,982d60b4-5677-4e2d-8b58-79503863710d,2.0,1479,systemic lupus erythematosus,managed,female,Asian,28.0,2,310,2323,11372,10938,831048
+residual_risk_negative,133,98e974a9-c08e-4066-8930-d627b18f1a89__C2,98e974a9-c08e-4066-8930-d627b18f1a89,2.0,IGTB670,normal,na,female,European American,33.0,5,457,6490,11867,68689,896266
+residual_risk_negative,134,9a3e6aa1-13a1-462d-996b-6499cc31a81c__C2,9a3e6aa1-13a1-462d-996b-6499cc31a81c,2.0,1119,systemic lupus erythematosus,managed,female,Asian,33.0,14,260,7354,11596,97918,897621
+residual_risk_negative,135,9ce1287e-217d-4812-a293-ced526e1b6a2__C2,9ce1287e-217d-4812-a293-ced526e1b6a2,2.0,1022,systemic lupus erythematosus,managed,female,Asian,56.0,3,1004,3974,13216,23655,2057511
+residual_risk_negative,136,9e51b938-f3a9-4d97-8802-b820ed2a6b96__C2,9e51b938-f3a9-4d97-8802-b820ed2a6b96,2.0,1078,systemic lupus erythematosus,managed,female,European American,51.0,0,390,0,11458,0,889289
+residual_risk_negative,137,9ec7931d-1e6f-48eb-b455-4161dc116c2d__C2,9ec7931d-1e6f-48eb-b455-4161dc116c2d,2.0,1741,systemic lupus erythematosus,managed,female,Asian,27.0,10,1081,7099,12552,85715,1297865
+residual_risk_negative,138,9fb00ed6-2678-41f8-8e8e-c3ea1350b61b__C2,9fb00ed6-2678-41f8-8e8e-c3ea1350b61b,2.0,1127,systemic lupus erythematosus,managed,female,European American,53.0,2,606,3939,12422,23352,1666291
+residual_risk_negative,139,a51ffc5a-e4cb-4b47-9154-4514e1dc9d65__C2,a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,2.0,IGTB1506,normal,na,female,European American,30.0,4,390,3199,11159,17524,688342
+residual_risk_negative,140,a66eb64a-2485-4539-9244-f1e1b7bb5d1b__C2,a66eb64a-2485-4539-9244-f1e1b7bb5d1b,2.0,1121,systemic lupus erythematosus,managed,female,Asian,28.0,1,112,1575,9615,4793,353406
+residual_risk_negative,141,a6ac0788-1205-4bfa-bc0d-bdedd7f77542__C2,a6ac0788-1205-4bfa-bc0d-bdedd7f77542,2.0,1535,systemic lupus erythematosus,managed,female,Asian,46.0,4,728,2999,12848,13257,1723341
+residual_risk_negative,142,a6c08d83-0500-4219-920e-e25d334a6409__C2,a6c08d83-0500-4219-920e-e25d334a6409,2.0,1240,systemic lupus erythematosus,managed,female,Asian,23.0,3,942,4460,13204,38590,2372481
+residual_risk_negative,143,a7044233-6fb9-4b71-96bb-62aa3b6062ea__C2,a7044233-6fb9-4b71-96bb-62aa3b6062ea,2.0,1623,systemic lupus erythematosus,managed,female,Asian,69.0,3,825,3528,12758,17704,1472377
+residual_risk_negative,144,a84b33db-a349-489f-af0b-22d57fb9bd69__C2,a84b33db-a349-489f-af0b-22d57fb9bd69,2.0,1219,systemic lupus erythematosus,managed,female,European American,50.0,0,402,0,10659,0,466473
+residual_risk_negative,145,a95f8d98-ff4e-45fc-8ede-1687c1495833__C2,a95f8d98-ff4e-45fc-8ede-1687c1495833,2.0,1947,systemic lupus erythematosus,managed,female,European American,55.0,1,597,972,11853,2597,832235
+residual_risk_negative,146,b27b5052-47f3-4c7d-b9a3-4a3b2934e78c__C2,b27b5052-47f3-4c7d-b9a3-4a3b2934e78c,2.0,1417,systemic lupus erythematosus,managed,female,Asian,45.0,20,1041,7747,13581,135602,2463775
+residual_risk_negative,147,b4cbfe6a-acdc-48e8-a9f1-6f0ae959301f__C2,b4cbfe6a-acdc-48e8-a9f1-6f0ae959301f,2.0,1243,systemic lupus erythematosus,managed,female,European American,37.0,0,37,0,5471,0,53158
+residual_risk_negative,148,b7c8655d-8d5e-4865-bc97-3c606cdaf5e9__C2,b7c8655d-8d5e-4865-bc97-3c606cdaf5e9,2.0,IGTB143,normal,na,female,European American,33.0,1,585,2306,12217,10669,1265580
+residual_risk_negative,149,b8196629-0482-415e-bc09-c1ce1cc49363__C2,b8196629-0482-415e-bc09-c1ce1cc49363,2.0,1641,systemic lupus erythematosus,managed,female,Asian,27.0,7,851,6399,12808,67548,1491429
+residual_risk_negative,150,ba126ef5-093b-4138-810c-def1fa61ac40__C2,ba126ef5-093b-4138-810c-def1fa61ac40,2.0,1279,systemic lupus erythematosus,managed,female,Asian,31.0,2,842,2553,13084,9489,1953308
+residual_risk_negative,151,bffca8a1-fc84-4f20-acae-3cf0d6313002__C2,bffca8a1-fc84-4f20-acae-3cf0d6313002,2.0,IGTB1372,normal,na,female,European American,25.0,6,390,5500,11560,46845,803677
+residual_risk_negative,152,c1c68594-e342-485e-8c1b-6236ec9e107f__C2,c1c68594-e342-485e-8c1b-6236ec9e107f,2.0,1262,systemic lupus erythematosus,managed,female,Asian,27.0,2,873,1163,13238,4706,2356797
+residual_risk_negative,153,c21e0e54-2ea8-4fc7-9438-5d2d8d63899c__C2,c21e0e54-2ea8-4fc7-9438-5d2d8d63899c,2.0,1014,systemic lupus erythematosus,managed,female,European American,40.0,30,73,9795,8843,318699,200230
+residual_risk_negative,154,c49441c0-0e2b-4e5b-b9ba-2d0477d92b88__C2,c49441c0-0e2b-4e5b-b9ba-2d0477d92b88,2.0,1087,systemic lupus erythematosus,managed,female,Asian,66.0,8,993,5882,13388,75449,2844542
+residual_risk_negative,155,c5c840c6-6238-4b37-b165-22016be695d9__C2,c5c840c6-6238-4b37-b165-22016be695d9,2.0,1281,systemic lupus erythematosus,managed,female,European American,32.0,4,775,2244,12933,9526,1990485
+residual_risk_negative,156,c789d30c-0578-48dc-967f-dad52600ab54__C2,c789d30c-0578-48dc-967f-dad52600ab54,2.0,1216,systemic lupus erythematosus,managed,female,European American,48.0,0,63,0,6411,0,83272
+residual_risk_negative,157,cb7c157f-9b39-46a5-8de9-15e26c5fa068__C2,cb7c157f-9b39-46a5-8de9-15e26c5fa068,2.0,1337,systemic lupus erythematosus,managed,female,European American,60.0,0,166,0,10481,0,514606
+residual_risk_negative,158,ccccc606-2c86-4d7a-bb4a-8354017807a6__C2,ccccc606-2c86-4d7a-bb4a-8354017807a6,2.0,1667,systemic lupus erythematosus,managed,female,Asian,53.0,4,660,5773,12267,51689,1070104
+residual_risk_negative,159,cdee1325-af49-45b8-856c-ec273c155411__C2,cdee1325-af49-45b8-856c-ec273c155411,2.0,1051,systemic lupus erythematosus,managed,male,Asian,45.0,2,384,2526,11678,12268,937694
+residual_risk_negative,160,cf0f9104-fd3e-4cdd-ad08-69035510a32d__C2,cf0f9104-fd3e-4cdd-ad08-69035510a32d,2.0,IGTB1575,normal,na,female,European American,32.0,0,158,0,9807,0,326526
+residual_risk_negative,161,d0660ae1-7bd5-4f68-9131-434571c29e96__C2,d0660ae1-7bd5-4f68-9131-434571c29e96,2.0,IGTB256,normal,na,female,European American,28.0,3,732,3482,12253,18528,1105778
+residual_risk_negative,162,d0bbdc84-7f92-4114-9759-59d158034879__C2,d0bbdc84-7f92-4114-9759-59d158034879,2.0,1545,systemic lupus erythematosus,managed,female,European American,38.0,3,200,3307,9993,20514,426323
+residual_risk_negative,163,d4486df4-6cee-4ff7-924a-98546d076135__C2,d4486df4-6cee-4ff7-924a-98546d076135,2.0,1054,systemic lupus erythematosus,managed,female,Asian,21.0,2,609,3336,12538,22340,1376455
+residual_risk_negative,164,d6532240-c625-4943-a0e7-cba6977ba428__C2,d6532240-c625-4943-a0e7-cba6977ba428,2.0,1329,systemic lupus erythematosus,managed,female,Asian,47.0,1,156,1524,9240,5015,276309
+residual_risk_negative,165,d65c2394-3eed-48b8-8a26-5f214003f312__C2,d65c2394-3eed-48b8-8a26-5f214003f312,2.0,IGTB1921,normal,na,female,European American,25.0,2,207,2105,9678,7820,296230
+residual_risk_negative,166,d8d48d6c-7e19-4820-86e8-9174e400abbc__C2,d8d48d6c-7e19-4820-86e8-9174e400abbc,2.0,1250,systemic lupus erythematosus,managed,female,European American,30.0,1,45,1721,5728,6260,53580
+residual_risk_negative,167,d9a71914-5a04-4393-9d41-c5f82cf2bd40__C2,d9a71914-5a04-4393-9d41-c5f82cf2bd40,2.0,1221,systemic lupus erythematosus,managed,male,European American,43.0,0,172,0,8770,0,213902
+residual_risk_negative,168,d9c476a6-93ff-4e35-bbe2-7a0ae0e32e87__C2,d9c476a6-93ff-4e35-bbe2-7a0ae0e32e87,2.0,1193,systemic lupus erythematosus,managed,female,Asian,33.0,3,267,2702,9952,13587,317323
+residual_risk_negative,169,da8367c2-e07a-46e1-b4ff-d41fca972cbc__C2,da8367c2-e07a-46e1-b4ff-d41fca972cbc,2.0,1726,systemic lupus erythematosus,managed,female,European American,65.0,0,287,0,11194,0,739702
+residual_risk_negative,170,dfb86424-acd3-41a0-8656-97d24996fef4__C2,dfb86424-acd3-41a0-8656-97d24996fef4,2.0,1543,systemic lupus erythematosus,managed,female,European American,29.0,0,106,0,8310,0,217455
+residual_risk_negative,171,e0286325-9289-4765-af44-1bded6b1d3df__C2,e0286325-9289-4765-af44-1bded6b1d3df,2.0,IGTB986,normal,na,female,European American,34.0,9,554,5452,12444,43267,1287234
+residual_risk_negative,172,e0dba578-aa9e-44ef-b920-ef67ef41f01c__C2,e0dba578-aa9e-44ef-b920-ef67ef41f01c,2.0,1297,systemic lupus erythematosus,managed,female,European American,57.0,1,426,2160,12228,7308,1268100
+residual_risk_negative,173,e140192f-3e5b-43bc-9ae0-36a28564a0b5__C2,e140192f-3e5b-43bc-9ae0-36a28564a0b5,2.0,1472,systemic lupus erythematosus,managed,female,Asian,45.0,0,467,0,12024,0,1027833
+residual_risk_negative,174,e2078f37-b612-476a-aa96-5f836cd94254__C2,e2078f37-b612-476a-aa96-5f836cd94254,2.0,1633,systemic lupus erythematosus,managed,female,Asian,74.0,1,156,1363,9731,4122,297753
+residual_risk_negative,175,e45ecf7e-1906-4d51-b79d-fec6aef8a844__C2,e45ecf7e-1906-4d51-b79d-fec6aef8a844,2.0,1130,systemic lupus erythematosus,managed,female,European American,27.0,0,683,0,12743,0,1940902
+residual_risk_negative,176,e869b441-83d5-44d3-abc7-1a970170e1e4__C2,e869b441-83d5-44d3-abc7-1a970170e1e4,2.0,1596,systemic lupus erythematosus,managed,female,European American,66.0,1,436,2341,11531,7793,856694
+residual_risk_negative,177,e9cf8f89-d60a-4584-951b-ae7df22cf6d7__C2,e9cf8f89-d60a-4584-951b-ae7df22cf6d7,2.0,1771,systemic lupus erythematosus,managed,female,Asian,49.0,1,89,2074,7618,7695,133030
+residual_risk_negative,178,f0a33a73-192b-4398-b8bc-05eb0c59ae54__C2,f0a33a73-192b-4398-b8bc-05eb0c59ae54,2.0,IGTB195,normal,na,female,European American,34.0,1,430,2081,11599,8361,947575
+residual_risk_negative,179,f1d09f86-4d6a-435f-9b93-5ef0df73bce2__C2,f1d09f86-4d6a-435f-9b93-5ef0df73bce2,2.0,1122,systemic lupus erythematosus,managed,female,Asian,31.0,2,758,3415,12987,16142,2033144
+residual_risk_negative,180,f3091b7a-a59b-4bee-a4c4-c930424b63f3__C2,f3091b7a-a59b-4bee-a4c4-c930424b63f3,2.0,IGTB1540,normal,na,female,Asian,31.0,4,920,3958,13263,30226,2273124
+residual_risk_negative,181,f4222fc5-9db3-4d75-99fe-78f565b88648__C2,f4222fc5-9db3-4d75-99fe-78f565b88648,2.0,1248,systemic lupus erythematosus,managed,male,Asian,28.0,3,524,4223,12446,26823,1367746
+residual_risk_negative,182,f6f39d84-6fb4-4519-9efa-f9ca4651e3c9__C2,f6f39d84-6fb4-4519-9efa-f9ca4651e3c9,2.0,IGTB1290,normal,na,female,European American,27.0,4,600,3916,11924,20792,950411
+residual_risk_negative,183,f96e68d4-b9e9-4cd5-889d-9fb46f9cc389__C2,f96e68d4-b9e9-4cd5-889d-9fb46f9cc389,2.0,1760,systemic lupus erythematosus,managed,female,European American,30.0,4,114,5532,9269,52904,251239
+residual_risk_negative,184,fc11ebf7-2767-4d92-96f9-a57af8f1be30__C2,fc11ebf7-2767-4d92-96f9-a57af8f1be30,2.0,1334,systemic lupus erythematosus,managed,female,Asian,52.0,3,1494,2346,13612,10084,2903902
+residual_risk_negative,185,fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e__C2,fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,2.0,IGTB508,normal,na,female,European American,33.0,7,441,5058,11708,38125,972321
+residual_risk_negative,186,fe49ebfc-513a-4b74-8820-95c69298501e__C2,fe49ebfc-513a-4b74-8820-95c69298501e,2.0,1019,systemic lupus erythematosus,managed,female,European American,64.0,1,390,2093,11724,7460,887592
+residual_risk_negative,187,0f3a21f5-e7b9-4139-93fb-5407dbfde4fc__C3,0f3a21f5-e7b9-4139-93fb-5407dbfde4fc,3.0,FLARE006,systemic lupus erythematosus,flare,female,European American,34.0,6,410,6177,12027,54617,937411
+residual_risk_negative,188,11e9756a-d4e3-4024-8167-81f1c9013e09__C3,11e9756a-d4e3-4024-8167-81f1c9013e09,3.0,HC-002,normal,na,male,European American,27.0,1,347,2548,11780,11335,783010
+residual_risk_negative,189,18773af4-60a6-4a6a-9249-429ddf7f5a89__C3,18773af4-60a6-4a6a-9249-429ddf7f5a89,3.0,FLARE004,systemic lupus erythematosus,flare,female,Asian,26.0,21,333,8683,11776,177369,715460
+residual_risk_negative,190,27ae3b51-85d4-49fe-bcc3-89b0cbd59e23__C3,27ae3b51-85d4-49fe-bcc3-89b0cbd59e23,3.0,HC-506,normal,na,female,European American,33.0,2,533,4149,12460,23190,1166989
+residual_risk_negative,191,27b03089-9abd-4025-b745-1a4d42f729a3__C3,27b03089-9abd-4025-b745-1a4d42f729a3,3.0,1754,systemic lupus erythematosus,managed,female,Asian,45.0,10,877,7035,13628,84801,2451626
+residual_risk_negative,192,2c6239f0-efd3-469e-86aa-554f62dfb4f8__C3,2c6239f0-efd3-469e-86aa-554f62dfb4f8,3.0,1791,systemic lupus erythematosus,managed,female,Asian,66.0,9,298,7361,11945,96078,894224
+residual_risk_negative,193,2e90178e-8c6e-44a4-8d5a-82dab547abcf__C3,2e90178e-8c6e-44a4-8d5a-82dab547abcf,3.0,FLARE005,systemic lupus erythematosus,flare,female,European American,26.0,7,866,5828,12992,54519,1566442
+residual_risk_negative,194,32207039-fb11-4f7f-8113-13538664ea08__C3,32207039-fb11-4f7f-8113-13538664ea08,3.0,FLARE014,systemic lupus erythematosus,flare,female,African American,39.0,2,155,3920,10307,26866,386836
+residual_risk_negative,195,4334dd89-25d8-4a14-a25a-dd3c14318ff2__C3,4334dd89-25d8-4a14-a25a-dd3c14318ff2,3.0,1763,systemic lupus erythematosus,flare,female,Asian,34.0,14,80,8597,10095,148405,285835
+residual_risk_negative,196,4752a18e-a3a0-4699-99e8-18c7fee59072__C3,4752a18e-a3a0-4699-99e8-18c7fee59072,3.0,IGTB826,normal,na,female,European American,34.0,2,454,1782,12166,5963,984177
+residual_risk_negative,197,4cb8f7e8-d13c-46e6-b86a-ee6dcb42db1a__C3,4cb8f7e8-d13c-46e6-b86a-ee6dcb42db1a,3.0,FLARE016,systemic lupus erythematosus,flare,female,Asian,23.0,2,247,3384,11516,15732,593104
+residual_risk_negative,198,4d63229d-5cc2-4b05-a3f4-28040827bd13__C3,4d63229d-5cc2-4b05-a3f4-28040827bd13,3.0,FLARE017,systemic lupus erythematosus,flare,female,African American,30.0,1,25,1988,6425,8080,65316
+residual_risk_negative,199,4e63511b-e07c-4fe2-af13-d535b769bbbd__C3,4e63511b-e07c-4fe2-af13-d535b769bbbd,3.0,1804,systemic lupus erythematosus,managed,female,Asian,54.0,2,306,1265,11732,4729,811019
+residual_risk_negative,200,4f96324f-0403-4ba1-b110-02c96a5cba84__C3,4f96324f-0403-4ba1-b110-02c96a5cba84,3.0,HC-014,normal,na,female,Asian,65.0,5,481,5231,12298,39490,1027843
+residual_risk_negative,201,58491584-2df2-4f81-829b-6f930c4d8649__C3,58491584-2df2-4f81-829b-6f930c4d8649,3.0,HC-504,normal,na,female,European American,35.0,13,534,8235,12635,130279,1362188
+residual_risk_negative,202,5f31d290-7101-4ef4-9510-f3692aba34de__C3,5f31d290-7101-4ef4-9510-f3692aba34de,3.0,IGTB469,normal,na,female,European American,37.0,1,334,3076,11925,14295,811640
+residual_risk_negative,203,69f01d3d-94dc-44e1-a463-74beabeb022f__C3,69f01d3d-94dc-44e1-a463-74beabeb022f,3.0,FLARE010,systemic lupus erythematosus,flare,female,Asian,37.0,4,27,5784,7845,42205,100415
+residual_risk_negative,204,6e8c12a9-b87c-4eb7-9587-70b0174e3f60__C3,6e8c12a9-b87c-4eb7-9587-70b0174e3f60,3.0,HC-503,normal,na,female,Hispanic or Latin,35.0,3,228,4960,11126,31924,522399
+residual_risk_negative,205,7075f840-56e5-4fef-89af-7797d3becf4d__C3,7075f840-56e5-4fef-89af-7797d3becf4d,3.0,FLARE009,systemic lupus erythematosus,treated,female,Hispanic or Latin,24.0,15,134,8528,10566,145714,371705
+residual_risk_negative,206,7bedd5b4-8835-4825-ba08-502811d18911__C3,7bedd5b4-8835-4825-ba08-502811d18911,3.0,FLARE001,systemic lupus erythematosus,treated,female,European American,22.0,3,637,3206,12946,18611,1437095
+residual_risk_negative,207,8273e790-4f85-4d7a-8863-6a7674ae9659__C3,8273e790-4f85-4d7a-8863-6a7674ae9659,3.0,FLARE016,systemic lupus erythematosus,treated,female,Asian,23.0,0,286,0,11132,0,548138
+residual_risk_negative,208,8e5ccbdf-00ee-4cd5-9007-ff2ab414bbbf__C3,8e5ccbdf-00ee-4cd5-9007-ff2ab414bbbf,3.0,FLARE013,systemic lupus erythematosus,flare,female,African American,27.0,3,499,5334,12831,39785,1318338
+residual_risk_negative,209,9245fdfa-904c-4421-ba87-60da990f40ed__C3,9245fdfa-904c-4421-ba87-60da990f40ed,3.0,IGTB514,normal,na,female,European American,34.0,1,555,1725,12970,6359,1779708
+residual_risk_negative,210,9b194366-b70d-40d8-8a9b-7157a95d6c13__C3,9b194366-b70d-40d8-8a9b-7157a95d6c13,3.0,FLARE011,systemic lupus erythematosus,treated,female,Asian,31.0,2,25,3871,6696,21165,75504
+residual_risk_negative,211,a17b2b7f-ab2c-47b0-bb6f-257e8d2fa4c9__C3,a17b2b7f-ab2c-47b0-bb6f-257e8d2fa4c9,3.0,1772,systemic lupus erythematosus,flare,female,Asian,21.0,10,436,7024,12895,80595,1292403
+residual_risk_negative,212,a3a3384a-3f4b-45ef-b48e-a4631cd99699__C3,a3a3384a-3f4b-45ef-b48e-a4631cd99699,3.0,1586,systemic lupus erythematosus,treated,female,Asian,27.0,0,6,0,3036,0,18788
+residual_risk_negative,213,a51ffc5a-e4cb-4b47-9154-4514e1dc9d65__C3,a51ffc5a-e4cb-4b47-9154-4514e1dc9d65,3.0,IGTB1506,normal,na,female,European American,30.0,1,431,1382,12033,4191,883138
+residual_risk_negative,214,a8a25630-19f3-4fc6-811b-62332dee7b86__C3,a8a25630-19f3-4fc6-811b-62332dee7b86,3.0,HC-501,normal,na,female,Asian,26.0,1,402,885,11641,2124,802984
+residual_risk_negative,215,b5b93cb0-7248-4b48-ad21-5ea028207cac__C3,b5b93cb0-7248-4b48-ad21-5ea028207cac,3.0,FLARE015,systemic lupus erythematosus,flare,female,Asian,24.0,4,605,5923,12611,45874,1320635
+residual_risk_negative,216,b6fa3b09-f5e2-46d0-a42a-c15cb3089214__C3,b6fa3b09-f5e2-46d0-a42a-c15cb3089214,3.0,FLARE004,systemic lupus erythematosus,treated,female,Asian,26.0,0,364,0,11771,0,820215
+residual_risk_negative,217,b8dde0a0-6c13-429b-a5df-a0527c4fca14__C3,b8dde0a0-6c13-429b-a5df-a0527c4fca14,3.0,1586,systemic lupus erythematosus,flare,female,Asian,27.0,3,1002,2563,13693,10695,2648230
+residual_risk_negative,218,bffca8a1-fc84-4f20-acae-3cf0d6313002__C3,bffca8a1-fc84-4f20-acae-3cf0d6313002,3.0,IGTB1372,normal,na,female,European American,25.0,3,485,4163,12301,24967,1011535
+residual_risk_negative,219,c3cd3b9e-6295-43ed-babc-46a5ab454773__C3,c3cd3b9e-6295-43ed-babc-46a5ab454773,3.0,HC-502,normal,na,female,European American,64.0,0,397,0,11842,0,899826
+residual_risk_negative,220,c62b2de1-6778-400f-86f6-b5c5ed0516b2__C3,c62b2de1-6778-400f-86f6-b5c5ed0516b2,3.0,FLARE020,systemic lupus erythematosus,flare,female,European American,35.0,2,332,3053,11813,12847,761995
+residual_risk_negative,221,c926e690-4979-4c3f-b43e-2f66daa0c426__C3,c926e690-4979-4c3f-b43e-2f66daa0c426,3.0,2132,systemic lupus erythematosus,flare,male,European American,35.0,7,116,6878,10193,67722,288906
+residual_risk_negative,222,cb8f712a-5fad-4d3c-98ad-dc8307afd120__C3,cb8f712a-5fad-4d3c-98ad-dc8307afd120,3.0,1763,systemic lupus erythematosus,treated,female,Asian,34.0,3,148,2269,11042,9040,506949
+residual_risk_negative,223,cee05776-3518-495c-aac9-42e5b6eea2a8__C3,cee05776-3518-495c-aac9-42e5b6eea2a8,3.0,FLARE001,systemic lupus erythematosus,flare,female,European American,22.0,10,417,7951,12245,124670,979875
+residual_risk_negative,224,d0660ae1-7bd5-4f68-9131-434571c29e96__C3,d0660ae1-7bd5-4f68-9131-434571c29e96,3.0,IGTB256,normal,na,female,European American,28.0,3,569,1839,12857,7996,1620797
+residual_risk_negative,225,d65c2394-3eed-48b8-8a26-5f214003f312__C3,d65c2394-3eed-48b8-8a26-5f214003f312,3.0,IGTB1921,normal,na,female,European American,25.0,4,222,3510,11591,19837,726173
+residual_risk_negative,226,d9e6e520-cf0c-45d6-ac51-fb3b7c5f0e99__C3,d9e6e520-cf0c-45d6-ac51-fb3b7c5f0e99,3.0,FLARE010,systemic lupus erythematosus,treated,female,Asian,37.0,1,20,1972,6475,6241,64225
+residual_risk_negative,227,e7fbd289-5415-44bc-9ebc-a4266773c298__C3,e7fbd289-5415-44bc-9ebc-a4266773c298,3.0,FLARE013,systemic lupus erythematosus,treated,female,African American,27.0,2,2,3947,1294,20350,3688
+residual_risk_negative,228,e9cf8f89-d60a-4584-951b-ae7df22cf6d7__C3,e9cf8f89-d60a-4584-951b-ae7df22cf6d7,3.0,1771,systemic lupus erythematosus,managed,female,Asian,49.0,1,103,1781,9976,6197,348035
+residual_risk_negative,229,ebb5f4d9-b91c-4a11-b6a9-45e471f03bc3__C3,ebb5f4d9-b91c-4a11-b6a9-45e471f03bc3,3.0,FLARE009,systemic lupus erythematosus,flare,female,Hispanic or Latin,24.0,7,629,5416,12760,39576,1354462
+residual_risk_negative,230,ef44a56d-cc63-4bf0-a451-59e809f9c5b4__C3,ef44a56d-cc63-4bf0-a451-59e809f9c5b4,3.0,1130,systemic lupus erythematosus,flare,female,European American,29.0,4,485,5669,12686,48039,1404090
+residual_risk_negative,231,f0a33a73-192b-4398-b8bc-05eb0c59ae54__C3,f0a33a73-192b-4398-b8bc-05eb0c59ae54,3.0,IGTB195,normal,na,female,European American,34.0,1,393,1360,11621,4103,822384
+residual_risk_negative,232,f10971cb-edb4-461e-acaa-820d7ab15ef8__C3,f10971cb-edb4-461e-acaa-820d7ab15ef8,3.0,HC-020,normal,na,female,European American,35.0,1,538,1609,12507,5390,1155638
+residual_risk_negative,233,f5587137-c9aa-43ba-9cc1-60d0c26479be__C3,f5587137-c9aa-43ba-9cc1-60d0c26479be,3.0,FLARE011,systemic lupus erythematosus,flare,female,Asian,31.0,0,40,0,7775,0,108913
+residual_risk_negative,234,f6f39d84-6fb4-4519-9efa-f9ca4651e3c9__C3,f6f39d84-6fb4-4519-9efa-f9ca4651e3c9,3.0,IGTB1290,normal,na,female,European American,27.0,0,376,0,12087,0,1080166
+residual_risk_negative,235,fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e__C3,fd256bdb-e6dd-47ef-a4e4-ac0a7d2dcd1e,3.0,IGTB508,normal,na,female,European American,33.0,0,217,0,10923,0,538913
+residual_risk_negative,236,fe517385-b033-4626-aa2c-70cfa0d1a74f__C3,fe517385-b033-4626-aa2c-70cfa0d1a74f,3.0,FLARE007,systemic lupus erythematosus,flare,female,Asian,40.0,6,651,6081,12990,55522,1565827
+residual_risk_negative,237,00d8685c-548c-4e5f-b151-47d678b31cd6__C4,00d8685c-548c-4e5f-b151-47d678b31cd6,4.0,2082,systemic lupus erythematosus,managed,female,European American,55.0,4,528,4731,11601,41401,966352
+residual_risk_negative,238,02404cf5-4210-43b8-b998-797422f7b1a8__C4,02404cf5-4210-43b8-b998-797422f7b1a8,4.0,HC-585,normal,na,female,European American,24.0,12,443,5700,10989,55097,873323
+residual_risk_negative,239,037d2b66-6091-42f8-b0ff-07c9130dea62__C4,037d2b66-6091-42f8-b0ff-07c9130dea62,4.0,HC-563,normal,na,female,Asian,27.0,13,433,4103,9381,31489,328138
+residual_risk_negative,240,09fc2399-2a9e-47ec-a0f4-f0c83ee59b98__C4,09fc2399-2a9e-47ec-a0f4-f0c83ee59b98,4.0,HC-536,normal,na,female,European American,71.0,1,394,2231,11040,9167,752740
+residual_risk_negative,241,0a1148dc-356f-4dc4-9c32-bf0823257d93__C4,0a1148dc-356f-4dc4-9c32-bf0823257d93,4.0,HC-546,normal,na,female,Asian,28.0,5,561,3502,11057,23253,818531
+residual_risk_negative,242,0e59aacb-7550-45ed-8510-b29b63163539__C4,0e59aacb-7550-45ed-8510-b29b63163539,4.0,1256,systemic lupus erythematosus,managed,female,European American,29.0,3,424,1902,9479,9761,315729
+residual_risk_negative,243,0eebb9c2-8cf2-4e46-abcb-0525a9507033__C4,0eebb9c2-8cf2-4e46-abcb-0525a9507033,4.0,1325,systemic lupus erythematosus,managed,female,Asian,43.0,13,1754,7571,13489,113152,2967696
+residual_risk_negative,244,1046eed3-a68a-4d02-b26c-4f8054029760__C4,1046eed3-a68a-4d02-b26c-4f8054029760,4.0,HC-526,normal,na,female,European American,58.0,2,629,2004,11826,8281,1172126
+residual_risk_negative,245,145e48d0-e1f3-48cd-a198-d4c62e1f8ba0__C4,145e48d0-e1f3-48cd-a198-d4c62e1f8ba0,4.0,HC-556,normal,na,female,Asian,24.0,0,98,0,7721,0,188641
+residual_risk_negative,246,1d38192e-5e0c-43e5-a813-835461e099ae__C4,1d38192e-5e0c-43e5-a813-835461e099ae,4.0,HC-519,normal,na,female,Asian,21.0,8,665,3747,10370,27859,529795
+residual_risk_negative,247,2261aca1-82ee-4276-9eaa-1d61688bd2f8__C4,2261aca1-82ee-4276-9eaa-1d61688bd2f8,4.0,HC-516,normal,na,female,European American,24.0,6,326,4121,10734,32611,694222
+residual_risk_negative,248,261c08e0-fa34-4086-950f-1d8425f2476b__C4,261c08e0-fa34-4086-950f-1d8425f2476b,4.0,1941,systemic lupus erythematosus,managed,female,European American,32.0,25,189,6068,7929,70678,147374
+residual_risk_negative,249,2688f505-eb1a-4f9f-af54-e30b3da7dff3__C4,2688f505-eb1a-4f9f-af54-e30b3da7dff3,4.0,1682,systemic lupus erythematosus,managed,female,Asian,25.0,25,437,6225,9839,75082,345620
+residual_risk_negative,250,279d06b2-a656-413d-8805-b07615ea48ee__C4,279d06b2-a656-413d-8805-b07615ea48ee,4.0,HC-580,normal,na,female,Asian,34.0,2,497,2872,11309,16743,943246
+residual_risk_negative,251,27ae3b51-85d4-49fe-bcc3-89b0cbd59e23__C4,27ae3b51-85d4-49fe-bcc3-89b0cbd59e23,4.0,HC-506,normal,na,female,European American,33.0,1,335,765,8784,1841,253880
+residual_risk_negative,252,2ed3aef8-6c08-4c7c-9d7c-8aa618321841__C4,2ed3aef8-6c08-4c7c-9d7c-8aa618321841,4.0,HC-538,normal,na,female,Asian,32.0,5,678,4469,11854,31250,1075591
+residual_risk_negative,253,3178b123-e965-4449-8944-c88b17d0d082__C4,3178b123-e965-4449-8944-c88b17d0d082,4.0,1772,systemic lupus erythematosus,managed,female,Asian,20.0,34,667,8858,12179,236845,1310638
+residual_risk_negative,254,3382e6de-ead1-467c-9d88-972e44e867bf__C4,3382e6de-ead1-467c-9d88-972e44e867bf,4.0,1225,systemic lupus erythematosus,managed,female,European American,49.0,0,42,0,5775,0,72008
+residual_risk_negative,255,342b5092-67e5-4a0e-a437-8b735f2a863c__C4,342b5092-67e5-4a0e-a437-8b735f2a863c,4.0,1768,systemic lupus erythematosus,managed,female,Asian,27.0,1,237,552,8045,1160,170366
+residual_risk_negative,256,37214563-4102-451e-a546-a1833db3aedd__C4,37214563-4102-451e-a546-a1833db3aedd,4.0,HC-011,normal,na,female,Asian,61.0,6,368,4984,11053,43161,659403
+residual_risk_negative,257,37d3daeb-c0f5-414a-8b98-0517e7464535__C4,37d3daeb-c0f5-414a-8b98-0517e7464535,4.0,HC-578,normal,na,female,European American,33.0,4,410,2828,9186,17123,307887
+residual_risk_negative,258,39006dbe-f7a7-4f05-aeac-0ca1876a7a3f__C4,39006dbe-f7a7-4f05-aeac-0ca1876a7a3f,4.0,HC-572,normal,na,female,European American,48.0,4,619,4626,11614,36489,1165837
+residual_risk_negative,259,3ecf5ad3-4ae3-4152-a1d2-4c9c548c5551__C4,3ecf5ad3-4ae3-4152-a1d2-4c9c548c5551,4.0,1420,systemic lupus erythematosus,managed,female,Asian,31.0,8,387,3238,9136,19440,282255
+residual_risk_negative,260,3f068829-713e-4b6a-a79a-754b7d9eef46__C4,3f068829-713e-4b6a-a79a-754b7d9eef46,4.0,1419,systemic lupus erythematosus,managed,female,Asian,37.0,8,1269,5271,12578,51776,2028867
+residual_risk_negative,261,3ff8915f-d4b6-418d-89ec-61fffb366646__C4,3ff8915f-d4b6-418d-89ec-61fffb366646,4.0,1730,systemic lupus erythematosus,managed,female,European American,36.0,4,507,2782,9994,13166,434059
+residual_risk_negative,262,43af3cab-af35-45c0-82f6-304ca64e9f0d__C4,43af3cab-af35-45c0-82f6-304ca64e9f0d,4.0,HC-532,normal,na,female,Asian,51.0,5,444,2960,9550,18907,389595
+residual_risk_negative,263,4452abfd-aa95-4982-b2c8-ac779e0cc76e__C4,4452abfd-aa95-4982-b2c8-ac779e0cc76e,4.0,HC-524,normal,na,female,European American,73.0,2,1788,2361,13739,14573,4088736
+residual_risk_negative,264,45eb2bf7-4993-46ea-9055-645ad7d29a5e__C4,45eb2bf7-4993-46ea-9055-645ad7d29a5e,4.0,HC-512,normal,na,female,European American,74.0,0,173,0,9451,0,367282
+residual_risk_negative,265,46e0206c-f34e-4e58-a099-c5de09a89bdb__C4,46e0206c-f34e-4e58-a099-c5de09a89bdb,4.0,HC-571,normal,na,female,Asian,52.0,5,122,3100,6787,16558,117181
+residual_risk_negative,266,46e6ff98-de92-4b09-98ae-ff683d6ed775__C4,46e6ff98-de92-4b09-98ae-ff683d6ed775,4.0,1743,systemic lupus erythematosus,managed,female,Asian,48.0,13,315,4792,9134,41902,295402
+residual_risk_negative,267,486df2f6-0fc3-4c16-a895-ed987f19d081__C4,486df2f6-0fc3-4c16-a895-ed987f19d081,4.0,1039,systemic lupus erythematosus,managed,female,European American,42.0,21,143,7745,9089,132621,271075
+residual_risk_negative,268,4a555a89-3c4e-4e35-91ed-eed175492e5d__C4,4a555a89-3c4e-4e35-91ed-eed175492e5d,4.0,1259,systemic lupus erythematosus,managed,female,Asian,41.0,2,392,2221,10454,10041,605608
+residual_risk_negative,269,4f96324f-0403-4ba1-b110-02c96a5cba84__C4,4f96324f-0403-4ba1-b110-02c96a5cba84,4.0,HC-014,normal,na,female,Asian,65.0,6,315,5423,10646,49659,551722
+residual_risk_negative,270,503f2d5f-e904-46f9-99c6-c89dec37be2d__C4,503f2d5f-e904-46f9-99c6-c89dec37be2d,4.0,HC-541,normal,na,female,European American,24.0,3,447,2982,11359,14247,863569
+residual_risk_negative,271,5178b16a-a577-456e-b53c-6ab4be7bed85__C4,5178b16a-a577-456e-b53c-6ab4be7bed85,4.0,1445,systemic lupus erythematosus,managed,female,Asian,62.0,3,322,3133,10443,21617,557940
+residual_risk_negative,272,553053e8-aa00-41be-a991-04eacc015380__C4,553053e8-aa00-41be-a991-04eacc015380,4.0,1285,systemic lupus erythematosus,managed,female,European American,39.0,11,280,6725,10464,80565,474956
+residual_risk_negative,273,55555033-33d9-49bc-b378-c20c8ed2fb1b__C4,55555033-33d9-49bc-b378-c20c8ed2fb1b,4.0,HC-554,normal,na,female,European American,49.0,4,416,4069,10732,34236,660331
+residual_risk_negative,274,5699f1b6-492f-4e2a-8e10-54f25a6cae68__C4,5699f1b6-492f-4e2a-8e10-54f25a6cae68,4.0,1320,systemic lupus erythematosus,managed,female,Asian,29.0,3,10,3775,2868,24142,15983
+residual_risk_negative,275,577bce84-8d37-4851-9fb4-53f9467699ba__C4,577bce84-8d37-4851-9fb4-53f9467699ba,4.0,1132,systemic lupus erythematosus,managed,female,European American,45.0,0,272,0,9739,0,340511
+residual_risk_negative,276,58491584-2df2-4f81-829b-6f930c4d8649__C4,58491584-2df2-4f81-829b-6f930c4d8649,4.0,HC-504,normal,na,female,European American,35.0,28,436,6823,10115,107799,483676
+residual_risk_negative,277,58d745d1-10b8-4195-9cc0-7d5aadf9a791__C4,58d745d1-10b8-4195-9cc0-7d5aadf9a791,4.0,1493,systemic lupus erythematosus,managed,female,European American,34.0,3,899,2352,11189,11316,798860
+residual_risk_negative,278,5a4d2669-4967-4de5-853b-13c224029d30__C4,5a4d2669-4967-4de5-853b-13c224029d30,4.0,1496,systemic lupus erythematosus,managed,female,European American,59.0,1,365,2102,10821,9298,705131
+residual_risk_negative,279,5e0ed28c-a75a-4ecd-a0c7-49e71264690b__C4,5e0ed28c-a75a-4ecd-a0c7-49e71264690b,4.0,1110,systemic lupus erythematosus,managed,female,European American,71.0,1,212,1615,9853,5471,451612
+residual_risk_negative,280,6307a65a-3edb-45f0-bc18-27a090661e19__C4,6307a65a-3edb-45f0-bc18-27a090661e19,4.0,1928,systemic lupus erythematosus,managed,female,European American,63.0,0,193,0,10130,0,555340
+residual_risk_negative,281,63c521a1-5a88-4a39-8d65-a0999cb2cfa6__C4,63c521a1-5a88-4a39-8d65-a0999cb2cfa6,4.0,HC-015,normal,na,female,Asian,59.0,0,306,0,10433,0,610179
+residual_risk_negative,282,64c3201b-c402-4c5a-a7a5-ee67e5dc4351__C4,64c3201b-c402-4c5a-a7a5-ee67e5dc4351,4.0,1721,systemic lupus erythematosus,managed,female,Asian,40.0,0,232,0,9811,0,424862
+residual_risk_negative,283,64d258d2-f11a-4c9b-8206-614aef9d5a38__C4,64d258d2-f11a-4c9b-8206-614aef9d5a38,4.0,HC-022,normal,na,female,Asian,74.0,18,548,7303,11709,110408,982081
+residual_risk_negative,284,670c5ac9-5e1c-4834-8087-2dd39d87d04b__C4,670c5ac9-5e1c-4834-8087-2dd39d87d04b,4.0,1326,systemic lupus erythematosus,managed,female,Asian,51.0,1,124,521,6638,1215,110670
+residual_risk_negative,285,6779676d-7bac-4431-bbb0-0b7c773b55da__C4,6779676d-7bac-4431-bbb0-0b7c773b55da,4.0,1514,systemic lupus erythematosus,managed,female,European American,38.0,1,334,808,10077,2335,517784
+residual_risk_negative,286,68a0c04e-d86a-4f1b-a557-ec0331c4f71f__C4,68a0c04e-d86a-4f1b-a557-ec0331c4f71f,4.0,HC-552,normal,na,female,European American,35.0,2,369,1966,9627,7559,375641
+residual_risk_negative,287,69b3abaf-0498-44c8-867f-086ccc8dce13__C4,69b3abaf-0498-44c8-867f-086ccc8dce13,4.0,1660,systemic lupus erythematosus,managed,female,Asian,21.0,2,248,1911,8377,8167,207728
+residual_risk_negative,288,71ddcc80-c234-4f27-aa06-b49ae5a28784__C4,71ddcc80-c234-4f27-aa06-b49ae5a28784,4.0,HC-573,normal,na,female,Asian,31.0,11,314,3829,9003,28391,278933
+residual_risk_negative,289,72cad246-b111-4616-88b5-8d1373736f54__C4,72cad246-b111-4616-88b5-8d1373736f54,4.0,1015,systemic lupus erythematosus,managed,female,European American,54.0,3,517,3495,11625,21288,993384
+residual_risk_negative,290,76337712-cfcd-4760-a462-1269a5ff215c__C4,76337712-cfcd-4760-a462-1269a5ff215c,4.0,HC-500,normal,na,female,Asian,48.0,11,143,5355,7311,54838,137497
+residual_risk_negative,291,7b7167c1-bc81-4fa8-b322-18bab1ea6269__C4,7b7167c1-bc81-4fa8-b322-18bab1ea6269,4.0,1716,systemic lupus erythematosus,managed,female,European American,68.0,3,538,3726,11312,23119,949092
+residual_risk_negative,292,7ded846e-1cc6-405e-b17f-6e99856f39e4__C4,7ded846e-1cc6-405e-b17f-6e99856f39e4,4.0,HC-019,normal,na,female,Asian,61.0,4,273,1786,8628,7075,257285
+residual_risk_negative,293,7eff9450-2afd-4265-a1f4-4c53580b47bc__C4,7eff9450-2afd-4265-a1f4-4c53580b47bc,4.0,1222,systemic lupus erythematosus,managed,female,Asian,55.0,2,331,2784,10623,14874,671602
+residual_risk_negative,294,869da0bb-4487-493b-86ca-e601eee46196__C4,869da0bb-4487-493b-86ca-e601eee46196,4.0,HC-006,normal,na,female,European American,53.0,8,243,5554,10344,62590,548169
+residual_risk_negative,295,8a1f4cc3-6e34-4cd2-aba9-0f4d266e7dd9__C4,8a1f4cc3-6e34-4cd2-aba9-0f4d266e7dd9,4.0,1101,systemic lupus erythematosus,managed,female,Asian,61.0,8,32,3395,4009,24749,31021
+residual_risk_negative,296,910e95f1-f837-41c6-bcb3-683780852c38__C4,910e95f1-f837-41c6-bcb3-683780852c38,4.0,HC-520,normal,na,female,Asian,22.0,3,421,3416,11187,22826,826399
+residual_risk_negative,297,9258d552-bade-4414-ad62-96fea54df354__C4,9258d552-bade-4414-ad62-96fea54df354,4.0,1614,systemic lupus erythematosus,managed,female,Asian,39.0,0,532,0,11624,0,936120
+residual_risk_negative,298,92d39096-b1d1-4746-9812-474db1f5f049__C4,92d39096-b1d1-4746-9812-474db1f5f049,4.0,1510,systemic lupus erythematosus,managed,female,European American,35.0,4,355,2683,9359,14948,329539
+residual_risk_negative,299,99893daf-e8a9-4266-b669-73ef48ebc383__C4,99893daf-e8a9-4266-b669-73ef48ebc383,4.0,1886,systemic lupus erythematosus,managed,female,Asian,23.0,2,286,2420,10306,11128,507587
+residual_risk_negative,300,9e51b938-f3a9-4d97-8802-b820ed2a6b96__C4,9e51b938-f3a9-4d97-8802-b820ed2a6b96,4.0,1078,systemic lupus erythematosus,managed,female,European American,51.0,0,608,0,11829,0,1253268
+residual_risk_negative,301,9e6a490c-24a3-41fa-a5e3-2879e75b45ff__C4,9e6a490c-24a3-41fa-a5e3-2879e75b45ff,4.0,HC-567,normal,na,female,Asian,33.0,7,516,3000,9790,16453,406389
+residual_risk_negative,302,a42d987e-b022-41a5-ba50-a831d04c3a5e__C4,a42d987e-b022-41a5-ba50-a831d04c3a5e,4.0,1737,systemic lupus erythematosus,managed,female,Asian,36.0,6,177,5189,9232,46376,298046
+residual_risk_negative,303,ae1510fa-1501-4ddd-8291-9ccd1917369e__C4,ae1510fa-1501-4ddd-8291-9ccd1917369e,4.0,1249,systemic lupus erythematosus,managed,female,European American,31.0,1,329,398,8854,994,258417
+residual_risk_negative,304,b4cbfe6a-acdc-48e8-a9f1-6f0ae959301f__C4,b4cbfe6a-acdc-48e8-a9f1-6f0ae959301f,4.0,1243,systemic lupus erythematosus,managed,female,European American,37.0,2,40,1134,4419,3834,42749
+residual_risk_negative,305,b99cfca7-d0cc-427f-b4ec-373067995536__C4,b99cfca7-d0cc-427f-b4ec-373067995536,4.0,HC-009,normal,na,female,European American,27.0,15,659,7793,12022,134709,1357988
+residual_risk_negative,306,bc16e1fe-cd25-4a6b-a329-2e2c7121ad8d__C4,bc16e1fe-cd25-4a6b-a329-2e2c7121ad8d,4.0,HC-540,normal,na,female,European American,68.0,1,384,2136,11220,8771,769835
+residual_risk_negative,307,bca9c9c7-62f2-4427-a3aa-3dcd297ced84__C4,bca9c9c7-62f2-4427-a3aa-3dcd297ced84,4.0,HC-558,normal,na,female,Asian,25.0,4,191,2324,7502,10053,161263
+residual_risk_negative,308,bd6c3fde-42cb-459e-8e81-b5ef2a90190f__C4,bd6c3fde-42cb-459e-8e81-b5ef2a90190f,4.0,HC-531,normal,na,female,European American,54.0,3,658,4668,11863,33977,1174714
+residual_risk_negative,309,bf5fe2a7-ee49-4304-a20a-01596de43619__C4,bf5fe2a7-ee49-4304-a20a-01596de43619,4.0,HC-551,normal,na,female,Asian,30.0,1,268,2189,9955,10768,463722
+residual_risk_negative,310,c0d761e1-0ada-4c43-a6c3-260f3a01e78c__C4,c0d761e1-0ada-4c43-a6c3-260f3a01e78c,4.0,1909,systemic lupus erythematosus,managed,female,European American,60.0,0,272,0,10316,0,531118
+residual_risk_negative,311,c1ac7564-4e90-4bc9-ad66-24cecb27127f__C4,c1ac7564-4e90-4bc9-ad66-24cecb27127f,4.0,HC-574,normal,na,female,Asian,53.0,2,278,2628,8480,12372,235988
+residual_risk_negative,312,c21e0e54-2ea8-4fc7-9438-5d2d8d63899c__C4,c21e0e54-2ea8-4fc7-9438-5d2d8d63899c,4.0,1014,systemic lupus erythematosus,managed,female,European American,40.0,11,44,5229,6629,51698,96802
+residual_risk_negative,313,c8f4f3f5-e4ee-400f-b888-07d3508df6b5__C4,c8f4f3f5-e4ee-400f-b888-07d3508df6b5,4.0,1452,systemic lupus erythematosus,managed,female,Asian,59.0,5,401,3829,11061,24785,771000
+residual_risk_negative,314,ccccc606-2c86-4d7a-bb4a-8354017807a6__C4,ccccc606-2c86-4d7a-bb4a-8354017807a6,4.0,1667,systemic lupus erythematosus,managed,female,Asian,53.0,2,418,1887,9611,7487,379752
+residual_risk_negative,315,cd2dc30f-074c-4881-b328-a35cefdc7c68__C4,cd2dc30f-074c-4881-b328-a35cefdc7c68,4.0,HC-533,normal,na,female,European American,64.0,3,343,3864,10530,26273,639956
+residual_risk_negative,316,d0bbdc84-7f92-4114-9759-59d158034879__C4,d0bbdc84-7f92-4114-9759-59d158034879,4.0,1545,systemic lupus erythematosus,managed,female,European American,38.0,2,208,2004,9291,9029,388108
+residual_risk_negative,317,d1272c4d-f68a-4d3d-bae3-715e337bd80b__C4,d1272c4d-f68a-4d3d-bae3-715e337bd80b,4.0,1333,systemic lupus erythematosus,managed,female,Asian,64.0,4,279,3965,10072,25064,475562
+residual_risk_negative,318,d2ec9dd4-2fbf-4dea-a274-4fd13d7395b8__C4,d2ec9dd4-2fbf-4dea-a274-4fd13d7395b8,4.0,ICC_control,normal,na,female,European American,26.0,0,243,0,9646,0,412406
+residual_risk_negative,319,d9afaa54-38e3-48a7-b173-e59346f87a06__C4,d9afaa54-38e3-48a7-b173-e59346f87a06,4.0,HC-543,normal,na,female,European American,44.0,0,225,0,9909,0,460581
+residual_risk_negative,320,e3ec6618-f5b9-42e2-846d-413e04f04308__C4,e3ec6618-f5b9-42e2-846d-413e04f04308,4.0,1881,systemic lupus erythematosus,managed,female,Asian,58.0,5,267,5204,10241,51912,492212
+residual_risk_negative,321,e570dc6e-cb7c-4143-af57-699407e46480__C4,e570dc6e-cb7c-4143-af57-699407e46480,4.0,1857,systemic lupus erythematosus,managed,female,European American,46.0,4,1034,4432,12851,29245,1890990
+residual_risk_negative,322,e6200840-e5b5-4bef-b341-f0f3e7425f5f__C4,e6200840-e5b5-4bef-b341-f0f3e7425f5f,4.0,HC-545,normal,na,female,Asian,64.0,5,378,3474,10673,21181,607589
+residual_risk_negative,323,e869b441-83d5-44d3-abc7-1a970170e1e4__C4,e869b441-83d5-44d3-abc7-1a970170e1e4,4.0,1596,systemic lupus erythematosus,managed,female,European American,66.0,5,423,4537,11123,31029,784785
+residual_risk_negative,324,e93a00ac-77ef-4890-81e0-43382903cb0c__C4,e93a00ac-77ef-4890-81e0-43382903cb0c,4.0,HC-508,normal,na,female,European American,60.0,0,160,0,9258,0,333213
+residual_risk_negative,325,ea4cbf47-9a3f-443a-821c-c33a2b7eb1b0__C4,ea4cbf47-9a3f-443a-821c-c33a2b7eb1b0,4.0,2135,systemic lupus erythematosus,managed,female,European American,58.0,3,184,3268,9792,26255,391527
+residual_risk_negative,326,f08a943e-b63d-4b9f-b56b-010859a94367__C4,f08a943e-b63d-4b9f-b56b-010859a94367,4.0,2061,systemic lupus erythematosus,managed,female,Asian,71.0,3,373,2898,10996,15098,662509
+residual_risk_negative,327,f09bc3b1-4818-4240-bf10-415636180b4a__C4,f09bc3b1-4818-4240-bf10-415636180b4a,4.0,HC-566,normal,na,female,Asian,49.0,0,28,0,3098,0,21213
+residual_risk_negative,328,f54a5b5a-c5be-4220-b515-3e22c596b9fd__C4,f54a5b5a-c5be-4220-b515-3e22c596b9fd,4.0,1888,systemic lupus erythematosus,managed,female,Asian,33.0,10,365,3419,8950,21809,271246
+residual_risk_negative,329,f9330687-3035-4f1a-ab22-1f86de08b66a__C4,f9330687-3035-4f1a-ab22-1f86de08b66a,4.0,HC-008,normal,na,female,European American,48.0,1,93,2178,7747,9997,189458
+residual_risk_negative,330,fc11ebf7-2767-4d92-96f9-a57af8f1be30__C4,fc11ebf7-2767-4d92-96f9-a57af8f1be30,4.0,1334,systemic lupus erythematosus,managed,female,Asian,52.0,0,1119,0,11615,0,1194031
+residual_risk_negative,331,fefcf023-ec1f-44d7-88b6-bbc3a34815d5__C4,fefcf023-ec1f-44d7-88b6-bbc3a34815d5,4.0,1680,systemic lupus erythematosus,managed,female,Asian,46.0,1,479,1210,11118,3703,758551

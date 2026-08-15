@@ -1,0 +1,41 @@
+{
+  "created_at": "2026-08-15T15:11:46+08:00",
+  "status": "EXTRACTION_COMPLETE_REVIEW_REQUIRED",
+  "effect_estimates_inspected": false,
+  "upstream_integrity": {
+    "gate_c3": "21/21",
+    "gate_c3a": "14/14"
+  },
+  "raw_h5ad": {
+    "sha256": "DC3E96BCC53B52D5C53CC0515EE352DC414AE81340032108830408E06F244AD5",
+    "size_bytes": 270671628,
+    "shape": [
+      150402,
+      30172
+    ],
+    "nonzero_values": 103783938,
+    "minimum_nonzero": 1,
+    "maximum_nonzero": 7836,
+    "raw_umi_total": 323179379
+  },
+  "cell_id_exact_set": true,
+  "cell_id_exact_order": true,
+  "key_mismatches": {
+    "sample_uuid": 0,
+    "donor_id": 0,
+    "Processing_Cohort": 0
+  },
+  "cells": 150402,
+  "strata": 332,
+  "residual_risk_calls": 1972,
+  "primary_branch_umi_total": 323179379,
+  "sensitivity_branch_umi_total": 318588065,
+  "pseudobulk_shape": [
+    1328,
+    30172
+  ],
+  "pseudobulk_nnz": 9384987,
+  "checkpoint_chunks": 31,
+  "count_conservation_pass": true,
+  "next": "independent Gate C4A support, program-availability and integrity review"
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS_GATE_C4A_BCONV_RAW_PSEUDOBULK_AND_PROGRAM_FREEZE",
+  "raw_pseudobulk_complete": true,
+  "effect_estimates_inspected": false,
+  "bconv_gene_level_pseudobulk_authorized": true,
+  "bconv_continuous_program_models_authorized": true,
+  "basc_gene_level_pseudobulk_authorized": false
+}

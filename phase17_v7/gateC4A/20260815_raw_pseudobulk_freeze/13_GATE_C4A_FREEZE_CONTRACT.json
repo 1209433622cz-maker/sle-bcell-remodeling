@@ -1,0 +1,94 @@
+{
+  "created_at": "2026-08-15T15:11:46+08:00",
+  "status": "PRE_EFFECT_FROZEN",
+  "effect_estimates_inspected": false,
+  "raw_count_source": {
+    "path_role": "Gate C2B1 all-hard-QC raw-count H5AD",
+    "sha256": "DC3E96BCC53B52D5C53CC0515EE352DC414AE81340032108830408E06F244AD5",
+    "shape": [
+      150402,
+      30172
+    ],
+    "matrix": "X; non-negative integer raw counts",
+    "cell_join": "exact cell ID; exact row order verified"
+  },
+  "branches": {
+    "primary": "all_hard_qc",
+    "sensitivity": "residual_risk_negative"
+  },
+  "identity": {
+    "B_CONV": "source r0.4 clusters 0,1,2,4",
+    "B_ASC": "source r0.4 cluster 3",
+    "hard_naive_memory_authorized": false
+  },
+  "bconv_minimum_cells": 50,
+  "bconv_threshold_sensitivities": [
+    20,
+    100
+  ],
+  "primary": {
+    "analysis_id": "C4B_PRIMARY_C4_BCONV_MANAGED_VS_NORMAL",
+    "n": 89,
+    "counts": {
+      "managed": 46,
+      "na": 43
+    },
+    "fixed_effects": [
+      "is_managed",
+      "age_centered",
+      "ethnicity_asian"
+    ],
+    "rank": 4
+  },
+  "validation": {
+    "analysis_id": "C4B_VALIDATION_C2_BCONV_EUROPEAN_FEMALE",
+    "n": 64,
+    "counts": {
+      "managed": 43,
+      "na": 21
+    },
+    "fixed_effects": [
+      "is_managed",
+      "age_centered"
+    ],
+    "rank": 3,
+    "interpretation": "internal directional replication plus nonoverlap sensitivity"
+  },
+  "secondary_flare": {
+    "analysis_id": "C4B_SECONDARY_C3_BCONV_FLARE_VS_NORMAL",
+    "n": 34,
+    "counts": {
+      "na": 18,
+      "flare": 16
+    },
+    "fixed_effects": [
+      "is_flare",
+      "age_centered",
+      "ethnicity_european"
+    ],
+    "rank": 4
+  },
+  "program_score": {
+    "input": "B_CONV pseudobulk raw counts",
+    "normalization": "TMM logCPM from the frozen negative-binomial engine",
+    "gene_scaling": "z-score each available gene across eligible strata within each frozen contrast",
+    "formula": "mean positive-gene z scores minus mean negative-gene z scores",
+    "duplicate_symbol_policy": "sum all matching Ensembl features before normalization",
+    "minimum_gene_availability_per_sign": 0.8,
+    "primary_multiplicity": "BH across four primary_confirmatory program coefficients"
+  },
+  "gene_level_pseudobulk": {
+    "preferred_engine": "edgeR TMM robust quasi-likelihood",
+    "filter": "filterByExpr frozen per contrast before coefficient inspection",
+    "multiplicity": "genome-wide BH within contrast",
+    "inferential_unit": "sample_uuid x Processing_Cohort B_CONV pseudobulk"
+  },
+  "prohibited": [
+    "cell-level differential expression",
+    "scaled source X for count modeling",
+    "source_cell_index as a full-source row position",
+    "hard naive-memory composition",
+    "outcome-adaptive program membership",
+    "B_ASC gene-level disease inference without support-gate authorization"
+  ]
+}

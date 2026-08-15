@@ -1,0 +1,98 @@
+{
+  "created_at": "2026-08-15T15:12:01+08:00",
+  "decision": "PASS_GATE_C4A_BCONV_RAW_PSEUDOBULK_AND_PROGRAM_FREEZE",
+  "effect_estimates_inspected": false,
+  "bconv_gene_level_pseudobulk_authorized": true,
+  "bconv_continuous_program_models_authorized": true,
+  "basc_gene_level_pseudobulk_authorized": false,
+  "basc_minimum_group_support_at_20_cells": {
+    "flare_c3": 0,
+    "primary_c4": 1,
+    "validation_c2_european_female": 0
+  },
+  "checks": {
+    "extraction_status": {
+      "pass": true,
+      "detail": "EXTRACTION_COMPLETE_REVIEW_REQUIRED"
+    },
+    "effect_blind_contract": {
+      "pass": true,
+      "detail": "no disease expression coefficient inspected"
+    },
+    "raw_checksum": {
+      "pass": true,
+      "detail": "DC3E96BCC53B52D5C53CC0515EE352DC414AE81340032108830408E06F244AD5"
+    },
+    "exact_cell_ids": {
+      "pass": true,
+      "detail": "set=True; order=True"
+    },
+    "raw_keys_concordant": {
+      "pass": true,
+      "detail": "{\"Processing_Cohort\": 0, \"donor_id\": 0, \"sample_uuid\": 0}"
+    },
+    "raw_integer_nonnegative": {
+      "pass": true,
+      "detail": "source range=1-7836; final integer=True"
+    },
+    "pseudobulk_shape": {
+      "pass": true,
+      "detail": "matrix=(1328, 30172); rows=1328; genes=30172"
+    },
+    "pseudobulk_library_sizes": {
+      "pass": true,
+      "detail": "matrix row sums equal row metadata"
+    },
+    "raw_count_conservation": {
+      "pass": true,
+      "detail": "raw=323179379; all-hard-QC=323179379"
+    },
+    "per_gene_count_conservation": {
+      "pass": true,
+      "detail": "all-hard-QC mismatches=0; sensitivity mismatches=0"
+    },
+    "dual_branch_cell_counts": {
+      "pass": true,
+      "detail": "all=150402; sensitivity=148430"
+    },
+    "gene_ids_unique": {
+      "pass": true,
+      "detail": "unique=30172; total=30172"
+    },
+    "primary_bconv_support": {
+      "pass": true,
+      "detail": "n=89; normal=43; managed=46"
+    },
+    "validation_bconv_support": {
+      "pass": true,
+      "detail": "n=64; normal=21; managed=43"
+    },
+    "flare_bconv_support": {
+      "pass": true,
+      "detail": "n=34; normal=18; flare=16"
+    },
+    "design_ranks": {
+      "pass": true,
+      "detail": "primary=4/4; validation=3/3; flare=4/4"
+    },
+    "replication_nonoverlap_support": {
+      "pass": true,
+      "detail": "[{\"analysis\":\"validation\",\"frozen_n\":64,\"shared_samples_with_primary\":10,\"shared_donors_with_primary\":10,\"nonoverlap_n\":54,\"nonoverlap_reference_n\":21,\"nonoverlap_exposed_n\":33},{\"analysis\":\"flare\",\"frozen_n\":34,\"shared_samples_with_primary\":3,\"shared_donors_with_primary\":4,\"nonoverlap_n\":30,\"nonoverlap_reference_n\":15,\"nonoverlap_exposed_n\":15}]"
+    },
+    "program_dictionary_frozen": {
+      "pass": true,
+      "detail": "programs=9; primary=4"
+    },
+    "program_gene_availability": {
+      "pass": true,
+      "detail": "minimum=1.000"
+    },
+    "hard_label_guard": {
+      "pass": true,
+      "detail": "continuous within-B_CONV programs only"
+    }
+  },
+  "next_if_pass": "install and validate a negative-binomial pseudobulk engine, then fit Gate C4B exactly from the frozen B_CONV matrices and programs",
+  "next_if_hold": "repair raw-count conservation, design support or program availability before any expression coefficient",
+  "binding_interpretation": "B_CONV raw-count pseudobulk and continuous-program analysis may proceed. B_ASC gene-level disease pseudobulk is not authorized because per-group sample support is inadequate."
+}
