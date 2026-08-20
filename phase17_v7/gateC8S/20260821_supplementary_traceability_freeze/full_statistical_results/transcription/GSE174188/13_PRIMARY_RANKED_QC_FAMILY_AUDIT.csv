@@ -1,0 +1,4 @@
+"rank_cutoff","mitochondrial_fraction","ribosomal_fraction","hemoglobin_fraction","immunoglobulin_fraction"
+50,0,0,0,0
+100,0,0.02,0,0
+500,0.004,0.078,0,0

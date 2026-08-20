@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-08-21",
+  "status": "C8S_MAIN_FIGURES_BUILT_WITH_ASSERTIONS",
+  "figures": 5,
+  "formats": [
+    "PDF",
+    "PNG_600_DPI"
+  ],
+  "source_data_files": 5,
+  "source_policy": "frozen Gate C2B4-C6B outputs only",
+  "panel_data_assertions": 46,
+  "panel_data_assertions_passed": true
+}

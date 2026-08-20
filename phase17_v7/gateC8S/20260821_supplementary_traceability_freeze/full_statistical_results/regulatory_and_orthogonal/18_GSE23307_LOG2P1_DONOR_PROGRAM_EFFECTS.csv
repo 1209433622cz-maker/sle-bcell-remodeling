@@ -1,0 +1,3 @@
+donor_id,genes,mean_paired_log2p1_effect,median_paired_log2p1_effect,positive_genes,positive_gene_fraction,program_direction,inferential_p_value
+HI1,12,3.293570512080079,2.727152132464831,12,1.0,positive,not_calculated_n_equals_2
+HI2,12,3.665668905432541,3.4017873767235787,12,1.0,positive,not_calculated_n_equals_2

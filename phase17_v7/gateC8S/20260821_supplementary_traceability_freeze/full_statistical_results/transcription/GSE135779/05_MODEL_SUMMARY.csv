@@ -1,0 +1,6 @@
+"analysis_name","analysis_role","n_samples","reference_n","exposed_n","design_rank","design_columns","tested_genes","fdr_0_05_genes","up_fdr_0_05","down_fdr_0_05","common_dispersion","median_tagwise_dispersion"
+"childhood_min50","primary",43,11,32,2,"intercept;is_sle",8469,240,165,75,0.0645042617485556,0.0408485919922206
+"combined_min50","combined",54,16,38,3,"intercept;is_sle;is_adult",8601,259,161,98,0.0617528861479584,0.039291969080934
+"adult_min50","secondary",11,5,6,2,"intercept;is_sle",6277,0,0,0,0.0346027562894379,0.0251739901384025
+"combined_min20","threshold",56,16,40,3,"intercept;is_sle;is_adult",8458,274,169,105,0.061791716161833,0.0390845143953105
+"combined_min100","threshold",51,16,35,3,"intercept;is_sle;is_adult",8754,202,134,68,0.0622872021171561,0.0399496304440231

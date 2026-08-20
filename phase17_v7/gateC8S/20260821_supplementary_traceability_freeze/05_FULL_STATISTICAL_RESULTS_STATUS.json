@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-08-21",
+  "status": "PASS_GATE_C8S_FULL_STATISTICAL_ARCHIVE_BUILT",
+  "complete_gene_result_files": 12,
+  "sanitized_design_matrices": 12,
+  "payload_files": 63,
+  "payload_bytes": 8566938,
+  "archive": "phase17_v7/gateC8S/20260821_supplementary_traceability_freeze/Additional_file_4_Full_Statistical_Results_GateC8S.zip",
+  "archive_bytes": 8314122,
+  "archive_sha256": "AE903A53A19D7935464C601E2693192910EB4B59F5804D43DCA6ACA965D0B1F5",
+  "deterministic_rebuild_match": true,
+  "direct_identifiers_in_design_matrices": false
+}

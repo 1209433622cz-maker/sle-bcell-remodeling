@@ -1,0 +1,56 @@
+"analysis_name","program_id","program_label","analysis_family","arm","n_genes","camera_direction","camera_p_value","expected_direction_fraction","median_expected_logFC","camera_fdr_within_analysis"
+"childhood_min50","NAIVE_TO_MEMORY_AXIS","Naive-to-memory axis","primary_confirmatory","positive",7,"Down",0.587092348851189,0.428571428571429,-0.0175909936365578,0.587092348851189
+"childhood_min50","NAIVE_TO_MEMORY_AXIS","Naive-to-memory axis","primary_confirmatory","negative",7,"Down",0.0123759655699543,0.857142857142857,0.17718962412694,0.0296244985847614
+"childhood_min50","ATYPICAL_LOW_NAIVE_AXIS","Atypical/ABC with low-naive context","primary_confirmatory","positive",7,"Up",0.000206577442572455,1,0.68731590227157,0.0011361759341485
+"childhood_min50","ATYPICAL_LOW_NAIVE_AXIS","Atypical/ABC with low-naive context","primary_confirmatory","negative",3,"Down",0.0134656811748916,1,0.386508332515481,0.0296244985847614
+"childhood_min50","APC_HLA","Antigen-presentation program","primary_confirmatory","positive",10,"Up",0.0690954586239131,0.7,0.0736115215093194,0.108578577837578
+"childhood_min50","IFN_ISG","Type I interferon response","primary_confirmatory","positive",12,"Up",1.67786911204529e-08,1,1.6398472517594,1.84565602324982e-07
+"childhood_min50","ACTIVATION_STRESS","Activation/immediate-early response","secondary_contextual","positive",9,"Up",0.00554621781363988,0.888888888888889,0.215281018998508,0.0203361319833462
+"childhood_min50","TLR7_INNATE","TLR7/innate-sensing context","secondary_contextual","positive",8,"Up",0.0316613411271432,0.75,0.200568163467031,0.0580457920664292
+"childhood_min50","PLATELET_AMBIENT_QC","Platelet/ambient overlay","qc_only","positive",2,"Down",0.475535395204659,0.5,-0.269176460339735,0.581209927472361
+"childhood_min50","ASC_UPR_IDENTITY_QC","ASC/UPR identity control","identity_qc_only","positive",7,"Up",0.21955225545843,0.714285714285714,0.0942287251927431,0.301884351255342
+"childhood_min50","PAN_B_IDENTITY_QC","Pan-B identity control","identity_qc_only","positive",5,"Down",0.560508289802798,0.4,-0.0245408523722048,0.587092348851189
+"combined_min50","NAIVE_TO_MEMORY_AXIS","Naive-to-memory axis","primary_confirmatory","positive",7,"Down",0.760581807366202,0.428571428571429,-0.000847830639150855,0.760581807366202
+"combined_min50","NAIVE_TO_MEMORY_AXIS","Naive-to-memory axis","primary_confirmatory","negative",7,"Down",0.0253164006511807,1,0.183652228064263,0.0662513061449181
+"combined_min50","ATYPICAL_LOW_NAIVE_AXIS","Atypical/ABC with low-naive context","primary_confirmatory","positive",7,"Up",0.000161529861019705,1,0.550380573684322,0.000888414235608375
+"combined_min50","ATYPICAL_LOW_NAIVE_AXIS","Atypical/ABC with low-naive context","primary_confirmatory","negative",3,"Down",0.0301142300658719,1,0.269955266615172,0.0662513061449181
+"combined_min50","APC_HLA","Antigen-presentation program","primary_confirmatory","positive",10,"Up",0.273822506627573,0.5,0.00890672740619552,0.376505946612912
+"combined_min50","IFN_ISG","Type I interferon response","primary_confirmatory","positive",12,"Up",1.44200413910847e-08,1,1.65171625172443,1.58620455301932e-07
+"combined_min50","ACTIVATION_STRESS","Activation/immediate-early response","secondary_contextual","positive",9,"Up",0.00782758844311469,0.888888888888889,0.128969788856242,0.0287011576247539
+"combined_min50","TLR7_INNATE","TLR7/innate-sensing context","secondary_contextual","positive",8,"Up",0.0532967873198296,0.625,0.188206846070591,0.097710776753021
+"combined_min50","PLATELET_AMBIENT_QC","Platelet/ambient overlay","qc_only","positive",4,"Up",0.371347012914342,0.75,0.385685306522707,0.453868571339751
+"combined_min50","ASC_UPR_IDENTITY_QC","ASC/UPR identity control","identity_qc_only","positive",8,"Up",0.097281240194683,0.75,0.0848417016801741,0.15287052030593
+"combined_min50","PAN_B_IDENTITY_QC","Pan-B identity control","identity_qc_only","positive",5,"Down",0.564509020989619,0.4,-0.0620372293770163,0.620959923088581
+"adult_min50","NAIVE_TO_MEMORY_AXIS","Naive-to-memory axis","primary_confirmatory","positive",7,"Up",0.185698999245257,0.714285714285714,0.0937320403524291,0.827209119609285
+"adult_min50","NAIVE_TO_MEMORY_AXIS","Naive-to-memory axis","primary_confirmatory","negative",7,"Down",0.489704225331855,0.571428571428571,0.153867695002103,0.827209119609285
+"adult_min50","ATYPICAL_LOW_NAIVE_AXIS","Atypical/ABC with low-naive context","primary_confirmatory","positive",3,"Up",0.330674908547114,0.666666666666667,0.0159262613875179,0.827209119609285
+"adult_min50","ATYPICAL_LOW_NAIVE_AXIS","Atypical/ABC with low-naive context","primary_confirmatory","negative",3,"Down",0.84347126713653,0.666666666666667,0.070809546759483,0.927818393850183
+"adult_min50","APC_HLA","Antigen-presentation program","primary_confirmatory","positive",10,"Down",0.319591669178448,0.4,-0.131844978109616,0.827209119609285
+"adult_min50","IFN_ISG","Type I interferon response","primary_confirmatory","positive",9,"Up",8.30362619012351e-07,1,1.53910036067398,9.13398880913586e-06
+"adult_min50","ACTIVATION_STRESS","Activation/immediate-early response","secondary_contextual","positive",9,"Up",0.826618781120376,0.444444444444444,-0.0479642190936526,0.927818393850183
+"adult_min50","TLR7_INNATE","TLR7/innate-sensing context","secondary_contextual","positive",7,"Up",0.482968395177146,0.571428571428571,0.0598225463403532,0.827209119609285
+"adult_min50","PLATELET_AMBIENT_QC","Platelet/ambient overlay","qc_only","positive",2,"Down",0.945343734369159,0.5,0.207379203116572,0.945343734369159
+"adult_min50","ASC_UPR_IDENTITY_QC","ASC/UPR identity control","identity_qc_only","positive",6,"Down",0.638499292976129,0.5,-0.0865169653165009,0.877936527842177
+"adult_min50","PAN_B_IDENTITY_QC","Pan-B identity control","identity_qc_only","positive",5,"Up",0.526405803387727,0.6,0.0370568412008946,0.827209119609285
+"combined_min20","NAIVE_TO_MEMORY_AXIS","Naive-to-memory axis","primary_confirmatory","positive",7,"Down",0.712701522597979,0.428571428571429,-0.00833548536993319,0.737095789868834
+"combined_min20","NAIVE_TO_MEMORY_AXIS","Naive-to-memory axis","primary_confirmatory","negative",7,"Down",0.0139525317928425,1,0.196755484510579,0.0383694624303169
+"combined_min20","ATYPICAL_LOW_NAIVE_AXIS","Atypical/ABC with low-naive context","primary_confirmatory","positive",7,"Up",0.000170620346664273,1,0.57868667458864,0.000938411906653499
+"combined_min20","ATYPICAL_LOW_NAIVE_AXIS","Atypical/ABC with low-naive context","primary_confirmatory","negative",3,"Down",0.0241458460812396,1,0.288784267701894,0.0531208613787271
+"combined_min20","APC_HLA","Antigen-presentation program","primary_confirmatory","positive",10,"Up",0.439187074588616,0.5,0.00970155705967931,0.536784202274975
+"combined_min20","IFN_ISG","Type I interferon response","primary_confirmatory","positive",12,"Up",1.44098161828913e-08,1,1.65954389573966,1.58507978011805e-07
+"combined_min20","ACTIVATION_STRESS","Activation/immediate-early response","secondary_contextual","positive",9,"Up",0.00955560477151896,0.888888888888889,0.142237998088393,0.0350372174955695
+"combined_min20","TLR7_INNATE","TLR7/innate-sensing context","secondary_contextual","positive",8,"Up",0.0499294843317226,0.625,0.19408825183294,0.0915373879414915
+"combined_min20","PLATELET_AMBIENT_QC","Platelet/ambient overlay","qc_only","positive",3,"Up",0.737095789868834,0.666666666666667,0.411839933708249,0.737095789868834
+"combined_min20","ASC_UPR_IDENTITY_QC","ASC/UPR identity control","identity_qc_only","positive",8,"Up",0.119858401743713,0.625,0.0909375566077705,0.188348917025835
+"combined_min20","PAN_B_IDENTITY_QC","Pan-B identity control","identity_qc_only","positive",5,"Down",0.407460898280134,0.4,-0.0783061308017393,0.536784202274975
+"combined_min100","NAIVE_TO_MEMORY_AXIS","Naive-to-memory axis","primary_confirmatory","positive",7,"Down",0.727356092373449,0.571428571428571,0.00229916006746545,0.800091701610794
+"combined_min100","NAIVE_TO_MEMORY_AXIS","Naive-to-memory axis","primary_confirmatory","negative",7,"Down",0.0269122836241227,1,0.198785847676659,0.05920702397307
+"combined_min100","ATYPICAL_LOW_NAIVE_AXIS","Atypical/ABC with low-naive context","primary_confirmatory","positive",7,"Up",0.000170403043525178,1,0.545394215422325,0.000937216739388481
+"combined_min100","ATYPICAL_LOW_NAIVE_AXIS","Atypical/ABC with low-naive context","primary_confirmatory","negative",3,"Down",0.0258424269670574,1,0.278987591269785,0.05920702397307
+"combined_min100","APC_HLA","Antigen-presentation program","primary_confirmatory","positive",10,"Up",0.0924669998937544,0.5,0.0140065134927357,0.127142124853912
+"combined_min100","IFN_ISG","Type I interferon response","primary_confirmatory","positive",12,"Up",1.49571792342385e-08,1,1.55663339589749,1.64528971576623e-07
+"combined_min100","ACTIVATION_STRESS","Activation/immediate-early response","secondary_contextual","positive",9,"Up",0.00718209545619235,0.888888888888889,0.157897348202117,0.0263343500060386
+"combined_min100","TLR7_INNATE","TLR7/innate-sensing context","secondary_contextual","positive",9,"Up",0.0682180620995335,0.666666666666667,0.0613620156677743,0.125066447182478
+"combined_min100","PLATELET_AMBIENT_QC","Platelet/ambient overlay","qc_only","positive",4,"Up",0.814647372819248,0.75,0.162379647636325,0.814647372819248
+"combined_min100","ASC_UPR_IDENTITY_QC","ASC/UPR identity control","identity_qc_only","positive",8,"Up",0.0834839926661357,0.75,0.100424269039529,0.127142124853912
+"combined_min100","PAN_B_IDENTITY_QC","Pan-B identity control","identity_qc_only","positive",5,"Down",0.620762210499089,0.4,-0.032993443037928,0.758709368387776

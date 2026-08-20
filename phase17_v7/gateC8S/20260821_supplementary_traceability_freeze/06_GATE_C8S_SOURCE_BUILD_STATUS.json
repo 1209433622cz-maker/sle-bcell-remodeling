@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-08-21",
+  "status": "PASS_C8S_SUBMISSION_SOURCES_BUILT",
+  "manuscript": "01_manuscript/manuscript_v12_genome_medicine_gateC8S_2026-08-21.md",
+  "supplement": "01_manuscript/supplementary_information_v3_gateC8S_2026-08-21.md",
+  "auxiliary_sources": {
+    "cover": "04_submission/cover_letter_genome_medicine_gateC8S_AUTHOR_COMPLETION_REQUIRED_2026-08-21.md",
+    "author_form": "04_submission/author_completion_form_gateC8S_2026-08-21.md",
+    "target": "04_submission/journal_target_decision_gateC8S_2026-08-21.md",
+    "checklist": "04_submission/reporting_checklist_gateC8S_2026-08-21.md"
+  },
+  "abstract_words": 314,
+  "manuscript_words": 6715,
+  "reference_count": 30,
+  "main_figures": 5,
+  "supplementary_figures": 7,
+  "supplementary_tables": 8,
+  "author_controlled_placeholders": 8,
+  "full_statistical_archive_declared": true,
+  "figure5_source_panel_mapping": {
+    "d": "M5911",
+    "e": "GSE23307"
+  }
+}

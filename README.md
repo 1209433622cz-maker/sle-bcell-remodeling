@@ -10,16 +10,16 @@ checksum-managed outside Git.
 
 ## Current status
 
-Gate C8R is the active freeze. The scientific, figure, reference and document
-repair is complete; portal submission remains blocked only by author-controlled
+Gate C8S is the active freeze. The scientific analysis, main and supplementary
+figures, statistical traceability, references and WPS-rendered documents are
+complete. Portal submission remains blocked only by author-controlled
 declarations, institutional confirmation, repository licensing and an immutable
 archive DOI.
 
 Working title:
 
-**Disease-blind single-cell reconstruction identifies replicated interferon
-remodeling and convergent regulatory evidence in systemic lupus erythematosus
-B cells**
+**Disease-blind single-cell reconstruction separates unstable B-cell states
+from reproducible interferon remodeling in systemic lupus erythematosus**
 
 The frozen evidence chain is:
 
@@ -44,16 +44,19 @@ The frozen evidence chain is:
 
 ## Active deliverables
 
-- Manuscript source: `01_manuscript/manuscript_v11_genome_medicine_gateC8R_2026-08-20.md`
-- Supplement source: `01_manuscript/supplementary_information_v2_gateC8R_2026-08-20.md`
-- Five final figures and source data: `phase17_v7/gateC8R/20260820_pre_submission_repair/`
-- Final audit: `phase17_v7/gateC8R/20260820_pre_submission_repair/07_GATE_C8R_FINAL_AUDIT.md`
-- Local submission handoff: `04_submission/package_genome_medicine_gateC8R_2026-08-20/`
-- Deterministic local archive: `04_submission/package_genome_medicine_gateC8R_2026-08-20.zip`
+- Manuscript source: `01_manuscript/manuscript_v12_genome_medicine_gateC8S_2026-08-21.md`
+- Supplement source: `01_manuscript/supplementary_information_v3_gateC8S_2026-08-21.md`
+- Five main figures, seven supplementary figures and source data:
+  `phase17_v7/gateC8S/20260821_supplementary_traceability_freeze/`
+- Full statistical-results archive: 12 complete gene-level branches and 12
+  sanitized design matrices, with deterministic SHA-256 verification.
+- Final audit: `phase17_v7/gateC8S/20260821_supplementary_traceability_freeze/08_GATE_C8S_FINAL_AUDIT.md`
+- Local submission handoff: `04_submission/package_genome_medicine_gateC8S_2026-08-21/`
+- Deterministic local archive: `04_submission/package_genome_medicine_gateC8S_2026-08-21.zip`
 
 The `04_submission/` handoff is intentionally excluded from Git because it
 contains generated upload files and WPS page-review artifacts. Its SHA-256
-manifest and package status are recorded in the tracked Gate C8R output.
+manifest and package status are recorded in the tracked Gate C8S output.
 
 ## Rebuild
 
@@ -61,14 +64,14 @@ From the repository root on the tested Windows workstation:
 
 ```powershell
 powershell -ExecutionPolicy Bypass `
-  -File .\audit_tools\run_6013RP_phase17_gateC8R_submission_package.ps1
+  -File .\audit_tools\run_6013RP_phase17_gateC8S_submission_package.ps1
 ```
 
-The runner rebuilds figures, correlation-aware regulator sensitivity,
-references, manuscript sources, editable DOCX files, WPS PDFs, page PNGs,
-accessibility reports, integrity manifests and the deterministic archive. Use
-the skip switches only when the corresponding frozen products have already
-been verified.
+The runner rebuilds five main figures, seven supplementary figures, the full
+statistical archive, manuscript sources, editable DOCX files, WPS PDFs, every
+page PNG, accessibility reports, integrity manifests and the deterministic
+submission archive. The Gate C8R correlation-aware sensitivity and reference
+verification are reused as frozen inputs.
 
 ## Repository layout
 
@@ -82,11 +85,12 @@ been verified.
 
 ## Research proposal
 
-The active methodologically revised RP remains
-`01_manuscript/research_proposal_v14_methodologically_revised_2026-08-10.md`,
-with DOCX/PDF renderings retained beside it. The manuscript supersedes the RP
-where later frozen analyses are more specific, but the proposal remains the
-study-design provenance document.
+The active completed RP is
+`01_manuscript/research_proposal_v16_gateC7_completed_2026-08-20.md`. The earlier
+`research_proposal_v14_methodologically_revised_2026-08-10.md` and its DOCX/PDF
+renderings remain the pre-outcome methodological provenance. Later manuscripts
+supersede both RP versions only where frozen analyses and reporting details are
+more specific; they do not overwrite the RP history.
 
 ## Next gate
 

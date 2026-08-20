@@ -1,0 +1,12 @@
+dataset,analysis_name,analysis_sample_index,cohort,metadata_cells,metadata_labels,bconv_cells,bconv_library_size_umi,bconv_detected_genes,matrix_library_size_umi,intercept,is_sle,is_adult,design_columns,design_rank,minimum_bconv_cells
+GSE135779,adult_min50,1,adult,6586,39,338,1065298,12593,1065298,1.0,0,1,intercept;is_sle,2,50
+GSE135779,adult_min50,2,adult,6807,34,404,1369764,13009,1369764,1.0,0,1,intercept;is_sle,2,50
+GSE135779,adult_min50,3,adult,6103,34,580,1798011,13539,1798011,1.0,0,1,intercept;is_sle,2,50
+GSE135779,adult_min50,4,adult,7501,38,490,1423831,12883,1423831,1.0,0,1,intercept;is_sle,2,50
+GSE135779,adult_min50,5,adult,10907,39,414,1059778,12341,1059778,1.0,0,1,intercept;is_sle,2,50
+GSE135779,adult_min50,6,adult,3855,36,64,286719,10301,286719,1.0,1,1,intercept;is_sle,2,50
+GSE135779,adult_min50,7,adult,3846,29,53,212169,9483,212169,1.0,1,1,intercept;is_sle,2,50
+GSE135779,adult_min50,8,adult,6825,39,270,1054849,12464,1054849,1.0,1,1,intercept;is_sle,2,50
+GSE135779,adult_min50,9,adult,5692,39,89,327436,10318,327436,1.0,1,1,intercept;is_sle,2,50
+GSE135779,adult_min50,10,adult,4316,35,132,455045,10770,455045,1.0,1,1,intercept;is_sle,2,50
+GSE135779,adult_min50,11,adult,2964,34,128,410896,10447,410896,1.0,1,1,intercept;is_sle,2,50

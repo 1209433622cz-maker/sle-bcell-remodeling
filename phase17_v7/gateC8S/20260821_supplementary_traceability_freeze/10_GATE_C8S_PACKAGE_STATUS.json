@@ -1,0 +1,92 @@
+{
+  "created_at": "2026-08-21",
+  "decision": "PASS_GATE_C8S_SUPPLEMENTARY_EVIDENCE_TRACEABILITY_FREEZE_AUTHOR_ACTION_REQUIRED",
+  "primary_target": "Genome Medicine",
+  "scientific_technical_package_pass": true,
+  "portal_submission_authorized": false,
+  "checks": {
+    "main_figure_assertions": {
+      "pass": true,
+      "detail": "passed=46/46; Figure5={'Figure5.panel_d.source_rows': 3, 'Figure5.panel_e.source_rows': 2, 'Figure5.panel_e.donors_with_12_positive_genes': 2}"
+    },
+    "supplementary_figure_assertions": {
+      "pass": true,
+      "detail": "passed=29/29; figures=7"
+    },
+    "publication_figure_files": {
+      "pass": true,
+      "detail": "pairs=12; all >=4000x3000 and non-empty"
+    },
+    "figure_source_data": {
+      "pass": true,
+      "detail": "csv=12; hashes=12; Figure5 panels={'B': 12, 'C': 12, 'D': 3, 'E': 2}"
+    },
+    "full_statistical_archive": {
+      "pass": true,
+      "detail": "entries=63; sha256=AE903A53A19D7935464C601E2693192910EB4B59F5804D43DCA6ACA965D0B1F5"
+    },
+    "manuscript_scope_and_statistics": {
+      "pass": true,
+      "detail": "abstract=314; references=30; missing=none; stale=none"
+    },
+    "supplementary_source_contract": {
+      "pass": true,
+      "detail": "7 figure markers; 8 tables; active C8S source status PASS"
+    },
+    "author_identity": {
+      "pass": true,
+      "detail": "first author and corresponding-author identity, emails, ORCIDs and affiliation present"
+    },
+    "journal_target": {
+      "pass": true,
+      "detail": "Genome Medicine primary without a frozen quartile assertion"
+    },
+    "document_build_status": {
+      "pass": true,
+      "detail": "{'Genome_Medicine_Manuscript_GateC8S_AUTHOR_COMPLETION_REQUIRED.docx': 59072, 'Additional_file_1_Supplementary_Information_GateC8S.docx': 2775025, 'Genome_Medicine_Cover_Letter_GateC8S_AUTHOR_CONFIRMATION_REQUIRED.docx': 40165}"
+    },
+    "main_docx_ooxml": {
+      "pass": true,
+      "detail": "line_numbers=True; page_field=True; even_odd=True; double_spacing=True"
+    },
+    "supplement_docx_structure": {
+      "pass": true,
+      "detail": "tables=8; explicit_geometry=8; inline_figures=7"
+    },
+    "docx_accessibility": {
+      "pass": true,
+      "detail": "[{'file': 'main_text_a11y.json', 'high': 0, 'medium': 0, 'low': 0}, {'file': 'supplement_a11y.json', 'high': 0, 'medium': 0, 'low': 0}, {'file': 'cover_letter_a11y.json', 'high': 0, 'medium': 0, 'low': 0}]"
+    },
+    "wps_render_and_visual_review": {
+      "pass": true,
+      "detail": "[{'document': 'main', 'pages': 27, 'page_pngs': 27, 'bytes': 246934}, {'document': 'supplement', 'pages': 12, 'page_pngs': 12, 'bytes': 3286530}, {'document': 'cover', 'pages': 1, 'page_pngs': 1, 'bytes': 84312}]; S8 page=5; S1-S7 pages=6-12; visual_review=PASS_ALL_40_PAGES"
+    },
+    "reference_verification": {
+      "pass": true,
+      "detail": "Crossref PASS=26/26; manuscript references=30"
+    },
+    "attachment_integrity": {
+      "pass": true,
+      "detail": "source entries=13; regulator entries=3; statistical entries=63"
+    },
+    "hard_stops_visible": {
+      "pass": true,
+      "detail": "manuscript placeholders=6; cover placeholders=2; unresolved hard stops=7"
+    }
+  },
+  "hard_stops": [
+    "institutional ethics determination",
+    "competing interests",
+    "funding",
+    "final CRediT contributions and all-author approval",
+    "acknowledgements",
+    "all-author originality/submission confirmation",
+    "open-source licence and immutable archive DOI"
+  ],
+  "next_stage": "Gate C8B author declarations, institutional ethics determination, repository licence and immutable archive DOI; then rebuild once and complete portal preflight without changing frozen scientific results",
+  "deterministic_archive_rebuild_match": true,
+  "package_files_manifested": 106,
+  "package_zip": "04_submission/package_genome_medicine_gateC8S_2026-08-21.zip",
+  "package_zip_bytes": 31631792,
+  "package_zip_sha256": "91D9DA265956544C2751540E065B58568E4E05A0013E4DEB47DDEA48BCEEA3D2"
+}

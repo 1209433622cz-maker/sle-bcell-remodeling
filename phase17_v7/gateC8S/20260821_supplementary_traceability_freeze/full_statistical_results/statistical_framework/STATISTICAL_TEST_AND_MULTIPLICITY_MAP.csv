@@ -1,0 +1,12 @@
+result_family,biological_unit,test_or_estimator,sidedness,multiplicity_control,evidentiary_role
+B_ASC composition,sample-cohort stratum,beta-binomial Wald,two-sided,BH across three frozen base contrasts,primary plus frozen replication/secondary
+B_ASC composition sensitivity,sample-cohort stratum,beta-binomial Wald; observed-information and HC1 covariance,two-sided,nominal sensitivity estimates,robustness only
+Two-part ASC presence,sample-cohort stratum,Firth logistic Wald,two-sided,nominal sensitivity estimates,robustness only
+Two-part positive abundance,ASC-positive sample-cohort stratum,OLS with HC3 covariance,two-sided,nominal sensitivity estimates,robustness only
+Gene-level differential expression,donor/sample pseudobulk,edgeR robust quasi-likelihood F test,two-sided,BH across filterByExpr-tested genes within each contrast,gene-level inference
+Four frozen program scores,donor/sample pseudobulk,OLS with HC3 covariance,two-sided,BH across four programs within each analysis,program-level inference
+Ranked program arms,ranked gene statistics,CAMERA competitive test,directional,BH across frozen program arms within each analysis,ranked-list coherence
+TF-target activity,ranked gene statistics,signed-target slope t test,two-sided,global BH across 8 regulators x 3 confirmatory contrasts,confirmatory regulatory evidence
+STAT1/STAT2 correlation sensitivity,ranked gene statistics,CAMERA and FRY,positive-direction,separate BH families of six tests per method,correlation-aware sensitivity
+MSigDB M5911,ranked gene statistics,"weighted preranked permutation test (10,000)",positive-direction,descriptive BH across three contrasts,orthogonal support
+GSE23307 IFNB1 perturbation,paired donor,log2(x+1) paired difference,not tested,none; n=2,descriptive perturbational support

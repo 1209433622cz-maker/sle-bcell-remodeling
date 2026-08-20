@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-08-21",
+  "status": "PASS_GATE_C8S_SUPPLEMENTARY_FIGURES_BUILT",
+  "figures": 7,
+  "formats": [
+    "PDF",
+    "PNG_600_DPI"
+  ],
+  "source_data_files": 7,
+  "source_policy": "reviewer-facing redraws of frozen Gate C2B1-C8R outputs; no exploratory biology",
+  "panel_data_assertions": 29,
+  "panel_data_assertions_passed": true
+}

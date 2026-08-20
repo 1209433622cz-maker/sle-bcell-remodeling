@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-08-20",
+  "status": "COMPLETE_C8R_CORRELATION_AWARE_STAT1_STAT2_SENSITIVITY_QUALIFIED",
+  "decision": "SUPPORTS_CONVERGENCE_WITH_DISCOVERY_STAT2_CAMERA_LIMITATION",
+  "policy": "Frozen STAT1/STAT2 regulators, CollecTRI target signs, three C6B contrasts, filterByExpr backgrounds and design matrices were reused without reselection.",
+  "methods": ["voom plus CAMERA with residual-estimated inter-gene correlation", "FRY rotation test"],
+  "tests": 6,
+  "strict_dual_method_tests_supporting": 5,
+  "target_counts_match": true,
+  "camera_up": 6,
+  "camera_bh_significant": 5,
+  "fry_up": 6,
+  "fry_bh_significant": 6,
+  "explicit_exception": {
+    "contrast": "gse174188_primary",
+    "regulator": "STAT2",
+    "target_count": 14,
+    "estimated_intergene_correlation": 0.12250272751,
+    "camera_q_core6": 0.1354722163,
+    "fry_q_core6": 4.9091836489e-05,
+    "interpretation": "Direction was concordant under CAMERA and FRY, but CAMERA did not pass the six-test BH threshold for discovery STAT2; no universal CAMERA significance is claimed."
+  },
+  "minimum_camera_q": 0.026301135979,
+  "maximum_camera_q": 0.1354722163,
+  "minimum_fry_q": 4.2773936468e-07,
+  "maximum_fry_q": 4.9091836489e-05,
+  "software": {
+    "R": "R version 4.6.0 (2026-04-24 ucrt)",
+    "edgeR": "4.10.1",
+    "limma": "3.68.4",
+    "Matrix": "1.7.5"
+  }
+}

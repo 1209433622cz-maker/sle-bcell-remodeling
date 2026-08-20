@@ -1,0 +1,180 @@
+{
+  "created_at": "2026-08-21",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "S1.hard_qc_cells",
+      "actual": 150402,
+      "expected": 150402,
+      "pass": true
+    },
+    {
+      "check": "S1.library_runs",
+      "actual": 88,
+      "expected": 88,
+      "pass": true
+    },
+    {
+      "check": "S1.library_runs_ok",
+      "actual": 88,
+      "expected": 88,
+      "pass": true
+    },
+    {
+      "check": "S1.residual_risk_calls",
+      "actual": 1972,
+      "expected": 1972,
+      "pass": true
+    },
+    {
+      "check": "Supplementary_Figure_S1_source_integrity_qc.minimum_visible_font_pt",
+      "actual": "5.50 pt",
+      "expected": "true",
+      "pass": true
+    },
+    {
+      "check": "S2.mixing_rows",
+      "actual": 6,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "check": "S2.bridge_rows",
+      "actual": 138,
+      "expected": 138,
+      "pass": true
+    },
+    {
+      "check": "S2.primary_cells",
+      "actual": 150402,
+      "expected": 150402,
+      "pass": true
+    },
+    {
+      "check": "Supplementary_Figure_S2_representation_diagnostics.minimum_visible_font_pt",
+      "actual": "6.00 pt",
+      "expected": "true",
+      "pass": true
+    },
+    {
+      "check": "S3.resampling_policies",
+      "actual": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "check": "S3.two_compartment_states",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "check": "S3.two_compartment_minimum_ari",
+      "actual": "minimum mapped ARI >= 0.99",
+      "expected": "true",
+      "pass": true
+    },
+    {
+      "check": "Supplementary_Figure_S3_identity_adjudication.minimum_visible_font_pt",
+      "actual": "6.00 pt",
+      "expected": "true",
+      "pass": true
+    },
+    {
+      "check": "S4.frozen_composition_contrasts",
+      "actual": 5,
+      "expected": 5,
+      "pass": true
+    },
+    {
+      "check": "S4.primary_raw_points",
+      "actual": 90,
+      "expected": 90,
+      "pass": true
+    },
+    {
+      "check": "S4.two_part_rows",
+      "actual": 6,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "check": "Supplementary_Figure_S4_composition_diagnostics.minimum_visible_font_pt",
+      "actual": "6.00 pt",
+      "expected": "true",
+      "pass": true
+    },
+    {
+      "check": "S5.model_runs",
+      "actual": 7,
+      "expected": 7,
+      "pass": true
+    },
+    {
+      "check": "S5.primary_tested_genes",
+      "actual": 4414,
+      "expected": 4414,
+      "pass": true
+    },
+    {
+      "check": "Supplementary_Figure_S5_pseudobulk_diagnostics.minimum_visible_font_pt",
+      "actual": "6.00 pt",
+      "expected": "true",
+      "pass": true
+    },
+    {
+      "check": "S6.external_model_runs",
+      "actual": 5,
+      "expected": 5,
+      "pass": true
+    },
+    {
+      "check": "S6.childhood_donors",
+      "actual": 43,
+      "expected": 43,
+      "pass": true
+    },
+    {
+      "check": "S6.source_label_omissions",
+      "actual": 8,
+      "expected": 8,
+      "pass": true
+    },
+    {
+      "check": "Supplementary_Figure_S6_external_validation_diagnostics.minimum_visible_font_pt",
+      "actual": "6.00 pt",
+      "expected": "true",
+      "pass": true
+    },
+    {
+      "check": "S7.core_tests",
+      "actual": 6,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "check": "S7.camera_bh_significant",
+      "actual": 5,
+      "expected": 5,
+      "pass": true
+    },
+    {
+      "check": "S7.fry_bh_significant",
+      "actual": 6,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "check": "S7.target_counts",
+      "actual": "98/14/129/19/161/20",
+      "expected": "98/14/129/19/161/20",
+      "pass": true
+    },
+    {
+      "check": "Supplementary_Figure_S7_regulator_correlation_sensitivity.minimum_visible_font_pt",
+      "actual": "5.10 pt",
+      "expected": "true",
+      "pass": true
+    }
+  ]
+}

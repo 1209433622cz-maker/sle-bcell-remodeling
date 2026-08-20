@@ -1,0 +1,8 @@
+"analysis_name","n_samples","reference_n","exposed_n","design_rank","design_columns","tested_genes","fdr_0_05_genes","up_fdr_0_05","down_fdr_0_05","common_dispersion","median_tagwise_dispersion"
+"primary_base",89,43,46,4,"intercept;is_managed;age_centered;ethnicity_asian",4414,282,158,124,0.0460360285110282,0.0338195922708582
+"primary_min20",94,44,50,4,"intercept;is_managed;age_centered;ethnicity_asian",4098,252,126,126,0.0474305603941241,0.0338642278010116
+"primary_min100",87,41,46,4,"intercept;is_managed;age_centered;ethnicity_asian",4524,260,139,121,0.0456210371727421,0.0336416385975845
+"primary_residual_risk_negative",89,43,46,4,"intercept;is_managed;age_centered;ethnicity_asian",4432,289,155,134,0.0462353743608245,0.0341966332447168
+"validation_full",64,21,43,3,"intercept;is_managed;age_centered",6099,157,134,23,0.0476859507333436,0.0364459922266838
+"validation_nonoverlap",54,21,33,3,"intercept;is_managed;age_centered",6077,189,156,33,0.0460060871926438,0.0356567335401363
+"flare_full",34,18,16,4,"intercept;is_flare;age_centered;ethnicity_european",7761,289,177,112,0.0339424206352114,0.0261747376781166

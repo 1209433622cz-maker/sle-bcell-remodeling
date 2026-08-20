@@ -417,7 +417,15 @@ def build_figure1(root: Path, figure_dir: Path, source_dir: Path) -> None:
     axis.set_yticks(y, states["state_label"])
     axis.set_xlim(0.94, 1.001)
     axis.set_xlabel("State Jaccard (minimum to median)")
-    axis.text(0.02, 0.94, "ASC markers: DERL3, JCHAIN, MZB1, TNFRSF17, XBP1\nminimum sample support = 1.00", transform=axis.transAxes, fontsize=6, va="top")
+    axis.text(
+        0.9408,
+        0.34,
+        "B_ASC markers: DERL3, JCHAIN, MZB1,\nTNFRSF17, XBP1; sample support = 1.00",
+        fontsize=5.8,
+        va="center",
+        ha="left",
+        color="#444444",
+    )
     axis.set_title("Broad identities meet the frozen scope", loc="left", pad=4)
     style_axis(axis)
     panel_label(axis, "d")
@@ -713,10 +721,16 @@ def build_figure3(root: Path, figure_dir: Path, source_dir: Path) -> None:
     axis.set_yticks(y, gene_labels)
     axis.set_xlabel("Gene-level log2 fold change")
     axis.legend(frameon=False, fontsize=6, loc="lower right")
-    axis.set_title(
-        "Frozen IFN positive-arm genes\n† filtered in both models; ‡ primary only",
-        loc="left",
-        pad=4,
+    axis.set_title("Frozen IFN positive-arm genes", loc="left", pad=10)
+    axis.text(
+        0.0,
+        1.01,
+        "† untested in both contrasts; ‡ untested in primary",
+        transform=axis.transAxes,
+        ha="left",
+        va="bottom",
+        fontsize=5.2,
+        color="#444444",
     )
     style_axis(axis)
     panel_label(axis, "c")
@@ -920,12 +934,52 @@ def build_figure5(root: Path, figure_dir: Path, source_dir: Path) -> None:
     regulators = read_csv(c6_dir / "01_CONFIRMATORY_REGULATOR_RESULTS.csv")
     donor = read_csv(c6_dir / "18_GSE23307_LOG2P1_DONOR_PROGRAM_EFFECTS.csv")
     gsea = read_csv(c6_dir / "19_MSIGDB_M5911_PRERANKED_GSEA.csv")
-    source = read_csv(c6_dir / "21_FIGURE5_SOURCE_DATA.csv")
     assert_equal("Figure5.confirmatory_regulator_tests", len(regulators), 24)
     assert_equal("Figure5.ifn_regulator_tests", int(regulators["family"].eq("IFN_confirmatory").sum()), 12)
     assert_equal("Figure5.proliferation_control_tests", int(regulators["family"].eq("proliferation_control").sum()), 12)
     assert_equal("Figure5.orthogonal_gsea_contrasts", len(gsea), 3)
     assert_equal("Figure5.gse23307_descriptive_donors", len(donor), 2)
+    assert_equal("Figure5.panel_d.source_rows", len(gsea), 3)
+    assert_equal("Figure5.panel_e.source_rows", len(donor), 2)
+    assert_equal("Figure5.panel_e.donors_with_12_positive_genes", int(donor["positive_genes"].eq(12).sum()), 2)
+
+    regulator_source = regulators.assign(
+        panel=np.where(regulators["family"].eq("IFN_confirmatory"), "B", "C"),
+        series="regulator_activity",
+        category=regulators["contrast"].astype(str) + "|" + regulators["regulator"].astype(str),
+        estimate=regulators["slope"],
+        q_value=regulators["q_value_global24"],
+        n_or_targets=regulators["matched_targets"],
+    )[
+        ["panel", "series", "category", "estimate", "ci_low", "ci_high", "p_value", "q_value", "n_or_targets"]
+    ]
+    gsea_source = pd.DataFrame(
+        {
+            "panel": "D",
+            "series": "MSigDB_M5911_NES",
+            "category": gsea["contrast"],
+            "estimate": gsea["normalized_enrichment_score"],
+            "ci_low": np.nan,
+            "ci_high": np.nan,
+            "p_value": gsea["permutation_p_value"],
+            "q_value": gsea["q_value_descriptive_three_contrasts"],
+            "n_or_targets": gsea["matched_genes"],
+        }
+    )
+    donor_source = pd.DataFrame(
+        {
+            "panel": "E",
+            "series": "GSE23307_mean_paired_log2p1_effect",
+            "category": donor["donor_id"],
+            "estimate": donor["mean_paired_log2p1_effect"],
+            "ci_low": np.nan,
+            "ci_high": np.nan,
+            "p_value": donor["inferential_p_value"],
+            "q_value": np.nan,
+            "n_or_targets": donor["positive_genes"],
+        }
+    )
+    source = pd.concat([regulator_source, gsea_source, donor_source], ignore_index=True)
     write_source(source_dir / "Figure5_source_data.csv", source)
 
     figure = plt.figure(figsize=(7.09, 6.2), constrained_layout=True)
@@ -1032,9 +1086,10 @@ def main() -> None:
     build_figure3(root, figure_dir, source_dir)
     build_figure4(root, figure_dir, source_dir)
     build_figure5(root, figure_dir, source_dir)
+    gate_label = "C8S" if any(part.lower() == "gatec8s" for part in output_dir.parts) else "C8R"
     payload = {
-        "created_at": "2026-08-20",
-        "status": "C8R_MAIN_FIGURES_BUILT_WITH_ASSERTIONS",
+        "created_at": "2026-08-21",
+        "status": f"{gate_label}_MAIN_FIGURES_BUILT_WITH_ASSERTIONS",
         "figures": 5,
         "formats": ["PDF", "PNG_600_DPI"],
         "source_data_files": 5,
@@ -1045,7 +1100,7 @@ def main() -> None:
     (output_dir / "02_PANEL_DATA_ASSERTIONS.json").write_text(
         json.dumps(
             {
-                "created_at": "2026-08-20",
+                "created_at": "2026-08-21",
                 "status": "PASS" if all(item["pass"] for item in ASSERTIONS) else "FAIL",
                 "checks": ASSERTIONS,
             },

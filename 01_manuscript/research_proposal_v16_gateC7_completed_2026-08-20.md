@@ -7,6 +7,16 @@
 **Study type:** secondary analysis of public human transcriptomic data
 **Governance status:** Gates C1-C7 scientific integration completed; all central claims remain noncausal
 
+## Version provenance
+
+This outcome-integrated RP is a completed-study record, not a prospective
+preregistration. The frozen pre-outcome methodological provenance remains
+`research_proposal_v14_methodologically_revised_2026-08-10.md` and its dated
+DOCX/PDF renderings. Gate C8S manuscript v12 is the canonical submission report
+for final numerical, supplementary and statistical-traceability details. These
+documents have distinct roles and should remain versioned rather than merged or
+silently overwritten.
+
 ## Project summary
 
 This project separates B-cell identity, relative abundance and within-compartment

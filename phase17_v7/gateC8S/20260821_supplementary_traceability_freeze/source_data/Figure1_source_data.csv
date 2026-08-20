@@ -1,0 +1,58 @@
+panel,series,category,estimate,secondary_value,detail
+a,study_design,GSE174188 source B lineage,152981.0,30172.0,cells before hard QC; genes
+a,study_design,GSE174188 hard-QC retained,150402.0,259.0,cells; donors
+a,study_design,metadata hierarchy,271.0,332.0,samples; sample-cohort strata; 88 libraries
+a,gate_decision,fine-state identity,,,HOLD_GATE_C2B3_REVIEW_REQUIRED
+a,gate_decision,two-compartment identity,,,PASS_C2B4_TWO_COMPARTMENT_FREEZE_OUTCOME_UNLOCK_AUTHORIZED
+b,median mapped ARI,5-state,0.88025846129991,0.9633103390957448,20 disease-blind resamples
+b,minimum mapped ARI,5-state,0.3515652858292529,0.7840342420212766,20 disease-blind resamples
+b,median mapped ARI,4-state,0.8998827476719911,0.9731798537234042,20 disease-blind resamples
+b,minimum mapped ARI,4-state,0.3376965588701118,0.7935339095744681,20 disease-blind resamples
+b,median mapped ARI,3-state,0.9002473450764503,0.9743475731382978,20 disease-blind resamples
+b,minimum mapped ARI,3-state,0.3248987221875242,0.7948886303191489,20 disease-blind resamples
+b,median mapped ARI,2-compartment,0.9955532945978536,0.9999251994680852,20 disease-blind resamples
+b,minimum mapped ARI,2-compartment,0.9902066569784328,0.9998337765957448,20 disease-blind resamples
+c,mapped ARI,1,0.9950054093867816,,2-compartment
+c,mapping agreement,1,0.9999168882978724,,2-compartment
+c,mapped ARI,2,0.9970806400318056,,2-compartment
+c,mapping agreement,2,0.9999501329787234,,2-compartment
+c,mapped ARI,3,0.9902066569784328,,2-compartment
+c,mapping agreement,3,0.9998337765957448,,2-compartment
+c,mapped ARI,4,0.9936191323373584,,2-compartment
+c,mapping agreement,4,0.999891954787234,,2-compartment
+c,mapped ARI,5,0.9975132160534872,,2-compartment
+c,mapping agreement,5,0.9999584441489362,,2-compartment
+c,mapped ARI,6,0.99507546153433,,2-compartment
+c,mapping agreement,6,0.9999168882978724,,2-compartment
+c,mapped ARI,7,0.9955407822662524,,2-compartment
+c,mapping agreement,7,0.9999251994680852,,2-compartment
+c,mapped ARI,8,0.9951390482629268,,2-compartment
+c,mapping agreement,8,0.9999168882978724,,2-compartment
+c,mapped ARI,9,0.9925473075262832,,2-compartment
+c,mapping agreement,9,0.9998753324468084,,2-compartment
+c,mapped ARI,10,0.9964987164730232,,2-compartment
+c,mapping agreement,10,0.9999418218085108,,2-compartment
+c,mapped ARI,11,0.9980465157299568,,2-compartment
+c,mapping agreement,11,0.9999667553191488,,2-compartment
+c,mapped ARI,12,0.996093161350154,,2-compartment
+c,mapping agreement,12,0.9999335106382978,,2-compartment
+c,mapped ARI,13,0.9959813824022506,,2-compartment
+c,mapping agreement,13,0.9999335106382978,,2-compartment
+c,mapped ARI,14,0.993553058421784,,2-compartment
+c,mapping agreement,14,0.999891954787234,,2-compartment
+c,mapped ARI,15,0.995582329288908,,2-compartment
+c,mapping agreement,15,0.9999251994680852,,2-compartment
+c,mapped ARI,16,0.99548985361246,,2-compartment
+c,mapping agreement,16,0.9999251994680852,,2-compartment
+c,mapped ARI,17,0.99614669074934,,2-compartment
+c,mapping agreement,17,0.9999335106382978,,2-compartment
+c,mapped ARI,18,0.9960967775093812,,2-compartment
+c,mapping agreement,18,0.9999335106382978,,2-compartment
+c,mapped ARI,19,0.9955658069294548,,2-compartment
+c,mapping agreement,19,0.9999251994680852,,2-compartment
+c,mapped ARI,20,0.994118137575234,,2-compartment
+c,mapping agreement,20,0.9999002659574469,,2-compartment
+d,median Jaccard,B_CONV,0.999924551078872,0.9999580786611884,state stability
+d,minimum Jaccard,B_CONV,0.9998323301084824,0.9998994056550788,state stability
+d,median Jaccard,B_ASC,0.9913709736725989,0.9971125414082128,state stability
+d,minimum Jaccard,B_ASC,0.9810964083175804,0.9866920152091256,state stability
