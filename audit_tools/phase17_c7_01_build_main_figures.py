@@ -71,6 +71,11 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         default=Path("phase17_v7/gateC7/20260820_manuscript_figure_integration"),
     )
+    parser.add_argument(
+        "--proliferation-specificity-comparators",
+        action="store_true",
+        help="Use the Gate C8B specificity-comparator wording for Figure 5c.",
+    )
     return parser.parse_args()
 
 
@@ -929,7 +934,13 @@ def build_figure4(root: Path, figure_dir: Path, source_dir: Path) -> None:
     save_figure(figure, figure_dir, "Figure4_independent_ifn_replication")
 
 
-def build_figure5(root: Path, figure_dir: Path, source_dir: Path) -> None:
+def build_figure5(
+    root: Path,
+    figure_dir: Path,
+    source_dir: Path,
+    *,
+    proliferation_specificity_comparators: bool = False,
+) -> None:
     c6_dir = root / "phase17_v7/gateC6B/20260815_regulatory_evidence"
     regulators = read_csv(c6_dir / "01_CONFIRMATORY_REGULATOR_RESULTS.csv")
     donor = read_csv(c6_dir / "18_GSE23307_LOG2P1_DONOR_PROGRAM_EFFECTS.csv")
@@ -1042,7 +1053,12 @@ def build_figure5(root: Path, figure_dir: Path, source_dir: Path) -> None:
         panel_label(axis, label)
 
     regulator_forest(ifn_axis, ["STAT1", "STAT2", "IRF7", "IRF9"], "b", "Core and extended IFN regulators")
-    regulator_forest(control_axis, ["E2F1", "FOXM1", "MYC", "MYBL2"], "c", "Prespecified proliferation controls")
+    comparator_title = (
+        "Prespecified proliferation\nspecificity comparators"
+        if proliferation_specificity_comparators
+        else "Prespecified proliferation controls"
+    )
+    regulator_forest(control_axis, ["E2F1", "FOXM1", "MYC", "MYBL2"], "c", comparator_title)
 
     gsea_labels = [
         {"Discovery": "Discovery", "Nonoverlap": "Nonoverlap", "Childhood": "Childhood"}[
@@ -1085,8 +1101,16 @@ def main() -> None:
     build_figure2(root, figure_dir, source_dir)
     build_figure3(root, figure_dir, source_dir)
     build_figure4(root, figure_dir, source_dir)
-    build_figure5(root, figure_dir, source_dir)
-    gate_label = "C8S" if any(part.lower() == "gatec8s" for part in output_dir.parts) else "C8R"
+    build_figure5(
+        root,
+        figure_dir,
+        source_dir,
+        proliferation_specificity_comparators=args.proliferation_specificity_comparators,
+    )
+    gate_label = next(
+        (part[4:].upper() for part in output_dir.parts if part.lower().startswith("gatec")),
+        "C8R",
+    )
     payload = {
         "created_at": "2026-08-21",
         "status": f"{gate_label}_MAIN_FIGURES_BUILT_WITH_ASSERTIONS",

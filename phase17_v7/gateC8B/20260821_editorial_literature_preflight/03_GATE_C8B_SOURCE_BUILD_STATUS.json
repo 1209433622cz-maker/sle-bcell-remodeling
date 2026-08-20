@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-08-21",
+  "status": "PASS_GATE_C8B_EDITORIAL_LITERATURE_SOURCES_BUILT",
+  "source_gate": "C8S frozen scientific state",
+  "scientific_estimates_changed": false,
+  "abstract_words": 314,
+  "references": 31,
+  "author_controlled_placeholders": 6,
+  "authors_information_section_present": false,
+  "new_reference": {
+    "doi": "10.1016/j.jaut.2026.103575",
+    "pmid": "42119160",
+    "role": "context only"
+  },
+  "figure5c_wording": "Prespecified proliferation specificity comparators",
+  "outputs": {
+    "manuscript": "01_manuscript/manuscript_v13_genome_medicine_gateC8B_editorial_preflight_2026-08-21.md",
+    "supplement": "01_manuscript/supplementary_information_v4_gateC8B_editorial_preflight_2026-08-21.md",
+    "cover": "04_submission/cover_letter_genome_medicine_gateC8B_AUTHOR_COMPLETION_REQUIRED_2026-08-21.md",
+    "author_completion_form": "04_submission/author_completion_form_gateC8B_2026-08-21.md",
+    "journal_target_decision": "04_submission/journal_target_decision_gateC8B_2026-08-21.md",
+    "reporting_checklist": "04_submission/reporting_checklist_gateC8B_2026-08-21.md"
+  }
+}
