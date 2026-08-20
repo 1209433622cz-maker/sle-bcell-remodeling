@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-08-20",
+  "status": "PASS_C8R_SUBMISSION_SOURCES_BUILT",
+  "manuscript": "01_manuscript/manuscript_v11_genome_medicine_gateC8R_2026-08-20.md",
+  "supplement": "01_manuscript/supplementary_information_v2_gateC8R_2026-08-20.md",
+  "auxiliary_sources": {
+    "cover": "04_submission/cover_letter_genome_medicine_gateC8R_AUTHOR_COMPLETION_REQUIRED_2026-08-20.md",
+    "author_form": "04_submission/author_completion_form_gateC8R_2026-08-20.md",
+    "target": "04_submission/journal_target_decision_gateC8R_2026-08-20.md",
+    "checklist": "04_submission/reporting_checklist_gateC8R_2026-08-20.md"
+  },
+  "abstract_words": 314,
+  "manuscript_words": 6353,
+  "reference_count": 30,
+  "doi_records_verified": 26,
+  "author_controlled_placeholders": 8,
+  "correlation_aware_summary": {
+    "camera_positive": 6,
+    "camera_bh_significant": 5,
+    "fry_positive": 6,
+    "fry_bh_significant": 6,
+    "explicit_exception": "GSE174188 primary STAT2 CAMERA q=0.1355"
+  }
+}

@@ -1,125 +1,97 @@
-# 6013RP-wyf Active Workspace
+# SLE B-cell remodeling study
 
-This is the active workspace for a raw-count, hierarchy-aware single-cell study
-of B-cell remodeling in systemic lupus erythematosus (SLE).
+This repository contains the auditable analysis and manuscript sources for a
+raw-count, hierarchy-aware single-cell study of B-cell remodeling in systemic
+lupus erythematosus (SLE).
 
-Private working repository:
-[`1209433622cz-maker/sle-bcell-remodeling-v7`](https://github.com/1209433622cz-maker/sle-bcell-remodeling-v7).
-Raw matrices, archives and cell-level exports are accession/checksum managed
-outside Git.
+Repository: [`1209433622cz-maker/sle-bcell-remodeling`](https://github.com/1209433622cz-maker/sle-bcell-remodeling).
+Large public matrices and cell-level intermediates are accession- and
+checksum-managed outside Git.
 
-## Active Direction
+## Current status
+
+Gate C8R is the active freeze. The scientific, figure, reference and document
+repair is complete; portal submission remains blocked only by author-controlled
+declarations, institutional confirmation, repository licensing and an immutable
+archive DOI.
 
 Working title:
 
-**Donor- and cohort-resolved single-cell analysis separates compositional and
-transcriptional B-cell remodeling in systemic lupus erythematosus**
+**Disease-blind single-cell reconstruction identifies replicated interferon
+remodeling and convergent regulatory evidence in systemic lupus erythematosus
+B cells**
 
-Current scientific center:
+The frozen evidence chain is:
 
-- Reconstruct neutral B-cell states from authoritative raw counts without
-  disease labels.
-- Separate sample-level state abundance changes from within-state SLE
-  transcription using cohort-supported contrasts.
-- Freeze discovery states and signatures before independent validation.
-- Treat interferon, ZEB2/TBX21, TLR7/FTO and APC programs as candidate
-  interpretation unless direct perturbational or causal evidence exists.
+- 150,402 quality-controlled GSE174188 B-lineage cells, 259 donors, 271 samples
+  and 88 libraries.
+- Disease-blind identity supports broad conventional-B (`B_CONV`) and
+  antibody-secreting-cell (`B_ASC`) compartments, not stable hard
+  naive-memory outcome subtypes.
+- Primary B_ASC relative abundance is null: odds ratio 0.947, 95% CI
+  0.636-1.410, P=0.787.
+- The frozen IFN/ISG program replicates in GSE174188 discovery, a
+  donor-nonoverlap internal contrast and independent GSE135779 childhood donors.
+- Genome-wide cross-dataset agreement is low (Spearman rho=0.026); the claim is
+  program-specific replication, not a globally shared disease transcriptome.
+- Frozen STAT1/STAT2 ULM results are supported by a correlation-aware
+  sensitivity: CAMERA is positive in 6/6 tests and BH-significant in 5/6; FRY
+  is positive and BH-significant in 6/6. Discovery STAT2 is the explicit CAMERA
+  exception (q=0.1355).
+- M5911 enrichment and paired GSE23307 IFN-beta response provide orthogonal
+  response evidence; neither establishes causality, direct TF binding or a
+  unique upstream ligand.
 
-Active advisor decision:
+## Active deliverables
 
-- v6 is frozen for provenance and is not submission-ready.
-- v7/Phase 17 is the active analysis generation.
-- Gate C2B1 passed programmatically after complete-library residual-risk scoring:
-  150,402/150,402 cells and 88/88 libraries reconciled exactly.
-- The 1,972 automatic residual-risk calls (1.31%) are sensitivity-only; no
-  second-round automatic deletion is authorized before disease-blind graph review.
-- Full-PBMC audit supports source `B cell` plus `plasmablast` labels as the
-  primary input; 768 core-BCR-supported external candidates are mapping-only.
-- Gate C2B2 full disease-blind representation is the active compute gate.
+- Manuscript source: `01_manuscript/manuscript_v11_genome_medicine_gateC8R_2026-08-20.md`
+- Supplement source: `01_manuscript/supplementary_information_v2_gateC8R_2026-08-20.md`
+- Five final figures and source data: `phase17_v7/gateC8R/20260820_pre_submission_repair/`
+- Final audit: `phase17_v7/gateC8R/20260820_pre_submission_repair/07_GATE_C8R_FINAL_AUDIT.md`
+- Local submission handoff: `04_submission/package_genome_medicine_gateC8R_2026-08-20/`
+- Deterministic local archive: `04_submission/package_genome_medicine_gateC8R_2026-08-20.zip`
 
-## Research Proposal (RP)
+The `04_submission/` handoff is intentionally excluded from Git because it
+contains generated upload files and WPS page-review artifacts. Its SHA-256
+manifest and package status are recorded in the tracked Gate C8R output.
 
-The active proposal files are:
+## Rebuild
 
-- `01_manuscript/research_proposal_v14_methodologically_revised_2026-08-10.docx`:
-  active methodologically revised proposal.
-- `01_manuscript/research_proposal_v14_methodologically_revised_2026-08-10.pdf`:
-  rendered and visually checked 10-page proposal.
-- `01_manuscript/research_proposal_v14_methodologically_revised_2026-08-10.md`:
-  version-controlled proposal source.
-- `04_submission/document_qc/research_proposal_v14_2026-08-10_external_audit_integrated_qc_r2/RESEARCH_PROPOSAL_V14_QC.md`:
-  final render, content-consistency and accessibility audit.
-
-Selected proposal sources retained for provenance:
-
-- `01_manuscript/proposal_basis_final_v4.docx`
-- `01_manuscript/proposal_basis_humanized_v13.docx`
-- `01_manuscript/proposal_latex_source/main.tex`: editable LaTeX proposal source.
-
-## Repository Layout
-
-- `00_project_management/`: scientific audits, evidence tables and gate decisions.
-- `01_manuscript/`: active RP, v7 blueprint and frozen manuscript provenance.
-- `02_analysis/`: analysis scripts, environments, data inventory and runbooks.
-- `03_results/`: the active v7 Figure 1 bundle and its source tables.
-- `04_submission/`: current figure architecture and RP quality-control records.
-- `audit_tools/`: active Phase 17 gate scripts and scientific decision reports.
-- `phase17_v7/`: compact gate summaries and diagnostic figures required to audit
-  the v7 rerun.
-
-Raw and processed matrices, source literature, local administration files,
-large per-cell exports and software-test artifacts remain outside Git. Their
-accessions, checksums and reconstruction instructions are recorded in the
-tracked manifests and `REPRODUCIBILITY.md`.
-
-## Near-Term Priorities
-
-1. Complete Gate C2B2 full recurrent-HVG, unintegrated and Harmony representations.
-2. Compare all-hard-QC, residual-risk-negative and ISG-excluded branches; document
-   the source-feature limitation that makes IG-dominance sensitivity non-evaluable.
-3. Audit technical mixing, bridge-sample concordance and biological marker conservation.
-4. Freeze neutral states using markers, biological coverage and resampling
-   stability before disease outcomes are unlocked.
-5. Run cohort 4 primary composition and sample-by-state pseudobulk analyses;
-   keep cohort 3 exploratory.
-6. Apply a discovery-frozen mapper/signature to GSE135779 and finalize journal
-   targeting only after Figures 3-5 are known.
-
-## Local Compute Handoff
-
-The discovery and validation datasets are already local. The next long run is
-the resumable Gate C2B2 representation workflow. From the project root:
+From the repository root on the tested Windows workstation:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\audit_tools\run_6013RP_phase17_gateC2B2_full_representation.ps1 `
-  -ResumeRunDir ".\phase17_v7\gateC2B2\20260812_full_representation"
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_6013RP_phase17_gateC8R_submission_package.ps1
 ```
 
-The runner first freezes disease-blind recurrent-HVG inputs and then checkpoints
-each of three representation branches independently. Repeating the same command
-reuses every valid checkpoint. Formal full-data review, not software-test output,
-determines whether Gate C2B2 passes to neutral state freezing.
-If the review reports Harmony non-convergence at 20 iterations, rerun the same
-directory with `-HarmonyMaxIter 40`; lower-limit checkpoints are then recomputed.
+The runner rebuilds figures, correlation-aware regulator sensitivity,
+references, manuscript sources, editable DOCX files, WPS PDFs, page PNGs,
+accessibility reports, integrity manifests and the deterministic archive. Use
+the skip switches only when the corresponding frozen products have already
+been verified.
 
-## Active design documents
+## Repository layout
 
-- `00_project_management/advisor_full_project_reassessment_2026-08-10.md`
-- `00_project_management/external_audit_action_crosswalk_2026-08-10.md`
-- `00_project_management/next_stage_decision_2026-08-12.md`
-- `00_project_management/phase17_integrity_audit_2026-08-12.md`
-- `01_manuscript/manuscript_v7_scientific_blueprint_2026-08-10.md`
-- `01_manuscript/figure1_v7_legend_draft_2026-08-10.md`
-- `04_submission/figure_architecture_v7_nature_style_2026-08-10.md`
-- `03_results/phase17_v7_figure1_study_design_2026-08-10/figures/figure1_v7_study_design.pdf`
-- `03_results/phase17_v7_figure1_study_design_2026-08-10/FIGURE1_TECHNICAL_QC.md`
-- `phase17_v7/gateC2A/20260810_164012_smoke/16_GATE_C2A_DECISION.md`
-- `phase17_v7/gateC1/20260806_134213_hotfix_v1_1/16_STRICT_COMMON_SUPPORT_ERRATUM.md`
-- `phase17_v7/gateC2B1/20260810_171000_full_library_doublets/16_GATE_C2B1_DECISION.md`
-- `phase17_v7/gateC2B2_prechecks/blineage_extraction_completeness/10_BLINEAGE_INPUT_DECISION.md`
+- `00_project_management/`: advisor audits, action records and gate decisions.
+- `01_manuscript/`: research proposal, manuscript and supplement sources.
+- `02_analysis/`: environments, acquisition scripts, inventories and runbooks.
+- `03_results/`: retained result bundles and earlier figure provenance.
+- `audit_tools/`: executable analysis, build and audit scripts.
+- `phase17_v7/`: compact machine-readable gate outputs and publication figures.
+- `04_submission/`: generated local submission package, excluded from Git.
 
-## Reproducibility locks
+## Research proposal
 
-- `audit_tools/environment_phase17_v7_resolved_2026-08-10.yml`: resolved cross-platform-style environment export.
-- `audit_tools/environment_phase17_v7_explicit_win64_2026-08-10.txt`: exact Windows conda package URLs.
-- `audit_tools/environment_phase17_v7_pip_freeze_2026-08-10.txt`: four pip-channel overrides required after the explicit conda install.
+The active methodologically revised RP remains
+`01_manuscript/research_proposal_v14_methodologically_revised_2026-08-10.md`,
+with DOCX/PDF renderings retained beside it. The manuscript supersedes the RP
+where later frozen analyses are more specific, but the proposal remains the
+study-design provenance document.
+
+## Next gate
+
+Gate C8B is author-controlled completion: ethics determination, competing
+interests, funding, CRediT contributions, acknowledgements, all-author approval
+and originality confirmation, repository licence, and an immutable Zenodo or
+equivalent DOI. After these are supplied, rebuild once and perform the final
+portal preflight without changing frozen scientific results.

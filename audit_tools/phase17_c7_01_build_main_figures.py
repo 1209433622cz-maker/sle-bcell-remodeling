@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Gate C7 five-figure main-text package from frozen results."""
+"""Build the audited five-figure main-text package from frozen results."""
 
 from __future__ import annotations
 
@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from matplotlib.lines import Line2D
+from matplotlib.ticker import NullFormatter
 
 
 COLORS = {
@@ -41,6 +42,25 @@ PROGRAM_LABELS = {
     "ASC_UPR_IDENTITY_QC": "ASC/UPR",
     "PAN_B_IDENTITY_QC": "Pan-B",
 }
+ASSERTIONS: list[dict[str, Any]] = []
+
+
+def assert_equal(name: str, actual: Any, expected: Any) -> None:
+    passed = actual == expected
+    ASSERTIONS.append(
+        {"check": name, "actual": actual, "expected": expected, "pass": passed}
+    )
+    if not passed:
+        raise AssertionError(f"{name}: expected {expected!r}, got {actual!r}")
+
+
+def assert_true(name: str, condition: bool, detail: str) -> None:
+    passed = bool(condition)
+    ASSERTIONS.append(
+        {"check": name, "actual": detail, "expected": "true", "pass": passed}
+    )
+    if not passed:
+        raise AssertionError(f"{name}: {detail}")
 
 
 def parse_args() -> argparse.Namespace:
@@ -99,7 +119,7 @@ def panel_label(axis: plt.Axes, label: str, x: float = -0.16, y: float = 1.08) -
         y,
         label,
         transform=axis.transAxes,
-        fontsize=11,
+        fontsize=8,
         fontweight="bold",
         va="top",
         ha="left",
@@ -107,6 +127,18 @@ def panel_label(axis: plt.Axes, label: str, x: float = -0.16, y: float = 1.08) -
 
 
 def save_figure(figure: plt.Figure, figure_dir: Path, stem: str) -> None:
+    figure.canvas.draw()
+    visible_text = [
+        artist
+        for artist in figure.findobj(matplotlib.text.Text)
+        if artist.get_visible() and artist.get_text().strip()
+    ]
+    minimum_font = min(float(artist.get_fontsize()) for artist in visible_text)
+    assert_true(
+        f"{stem}.minimum_visible_font_pt",
+        minimum_font >= 5.0,
+        f"{minimum_font:.2f} pt",
+    )
     figure.savefig(figure_dir / f"{stem}.pdf")
     figure.savefig(figure_dir / f"{stem}.png", dpi=600)
     plt.close(figure)
@@ -168,6 +200,14 @@ def build_figure1(root: Path, figure_dir: Path, source_dir: Path) -> None:
     states = read_csv(c2b4_dir / "04_two_compartment_state_summary.csv")
     state_names = {"0": "B_CONV", "3": "B_ASC"}
     states["state_label"] = states["reference_state"].astype(str).map(state_names)
+    assert_equal("Figure1.panel_b.policy_count", len(policy), 4)
+    assert_equal("Figure1.panel_c.resampling_replicates", len(replicate), 20)
+    assert_equal("Figure1.panel_d.frozen_state_count", len(states), 2)
+    assert_equal("Figure1.hard_qc_cells", int(c3["cells"]), 150402)
+    assert_equal("Figure1.donors", int(c3["donors"]), 259)
+    assert_equal("Figure1.samples", int(c3["samples"]), 271)
+    assert_equal("Figure1.sample_cohort_strata", int(c3["sample_cohort_strata"]), 332)
+    assert_equal("Figure1.libraries", int(c3["libraries"]), 88)
 
     source_rows: list[dict[str, Any]] = [
         {
@@ -287,9 +327,9 @@ def build_figure1(root: Path, figure_dir: Path, source_dir: Path) -> None:
     axis.set_axis_off()
     panel_label(axis, "a", x=-0.06, y=1.03)
     nodes = [
-        (0.03, "GSE174188\n152,981 B-lineage cells", COLORS["internal"]),
-        (0.36, "Disease-blind identity\n150,402 hard-QC cells", COLORS["teal"]),
-        (0.69, "Outcome inference\nsample/pseudobulk units", COLORS["sle"]),
+        (0.02, "GSE174188\nB-lineage cells", COLORS["internal"]),
+        (0.36, "Disease-blind\nB_CONV / B_ASC", COLORS["teal"]),
+        (0.70, "Composition +\nB_CONV pseudobulk", COLORS["sle"]),
     ]
     for x, text, color in nodes:
         axis.text(
@@ -314,11 +354,11 @@ def build_figure1(root: Path, figure_dir: Path, source_dir: Path) -> None:
     axis.text(
         0.5,
         0.29,
-        "Fine states: HOLD  ->  B_CONV / B_ASC: PASS",
+        "Frozen signatures  ->  GSE135779 validation  ->  regulatory convergence",
         transform=axis.transAxes,
         ha="center",
         va="center",
-        fontsize=7.2,
+        fontsize=6.2,
         fontweight="bold",
     )
     axis.text(
@@ -331,13 +371,21 @@ def build_figure1(root: Path, figure_dir: Path, source_dir: Path) -> None:
         fontsize=6.3,
         color="#444444",
     )
-    axis.set_title("Audited study hierarchy", loc="left", pad=4)
+    axis.set_title("Disease-blind discovery and frozen validation", loc="left", pad=4)
 
     axis = axes[0, 1]
     x = np.arange(len(policy))
-    axis.plot(x, policy["median_mapped_ari"], "o-", color=COLORS["internal"], lw=0.9, ms=3.7, label="Median ARI")
-    axis.plot(x, policy["minimum_mapped_ari"], "D-", color=COLORS["secondary"], lw=0.9, ms=3.2, label="Minimum ARI")
     axis.axhline(0.90, color="#666666", lw=0.7, ls="--")
+    for x_value, (_, row) in zip(x, policy.iterrows(), strict=True):
+        axis.plot(
+            [float(x_value), float(x_value)],
+            [float(row["minimum_mapped_ari"]), float(row["median_mapped_ari"])],
+            color=COLORS["light"],
+            lw=1.0,
+            zorder=1,
+        )
+    axis.scatter(x, policy["median_mapped_ari"], marker="o", color=COLORS["internal"], s=14, label="Median ARI", zorder=3)
+    axis.scatter(x, policy["minimum_mapped_ari"], marker="D", color=COLORS["secondary"], s=12, label="Minimum ARI", zorder=3)
     axis.set_xticks(x, [policy_labels[value] for value in policy["policy"]], rotation=25, ha="right")
     axis.set_ylabel("Mapped adjusted Rand index")
     axis.set_ylim(0.28, 1.03)
@@ -369,7 +417,7 @@ def build_figure1(root: Path, figure_dir: Path, source_dir: Path) -> None:
     axis.set_yticks(y, states["state_label"])
     axis.set_xlim(0.94, 1.001)
     axis.set_xlabel("State Jaccard (minimum to median)")
-    axis.text(0.02, 0.03, "ASC markers: DERL3, JCHAIN, MZB1, TNFRSF17, XBP1\nminimum sample support = 1.00", transform=axis.transAxes, fontsize=6, va="bottom")
+    axis.text(0.02, 0.94, "ASC markers: DERL3, JCHAIN, MZB1, TNFRSF17, XBP1\nminimum sample support = 1.00", transform=axis.transAxes, fontsize=6, va="top")
     axis.set_title("Broad identities meet the frozen scope", loc="left", pad=4)
     style_axis(axis)
     panel_label(axis, "d")
@@ -384,6 +432,22 @@ def build_figure2(root: Path, figure_dir: Path, source_dir: Path) -> None:
     predictions = read_csv(c3a_dir / "03_adjusted_predictions.csv")
     sensitivity = read_csv(c3a_dir / "04_mandatory_sensitivity_contrasts.csv")
     loo = read_csv(c3a_dir / "06_primary_leave_one_out.csv")
+    group_counts = samples["disease_state"].value_counts().to_dict()
+    assert_equal("Figure2.panel_a.control_raw_points", int(group_counts.get("na", 0)), 43)
+    assert_equal("Figure2.panel_a.managed_sle_raw_points", int(group_counts.get("managed", 0)), 47)
+    assert_equal("Figure2.panel_a.total_raw_points", len(samples), 90)
+    assert_equal(
+        "Figure2.panel_a.adjusted_predictions",
+        len(predictions.loc[predictions["analysis_id"].eq("C3A_PRIMARY_C4_MANAGED_VS_NORMAL")]),
+        2,
+    )
+    assert_equal("Figure2.panel_b.frozen_contrasts", len(contrasts), 5)
+    assert_equal(
+        "Figure2.panel_c.mandatory_sensitivities",
+        len(sensitivity.loc[sensitivity["analysis_id"].eq("C3A_PRIMARY_C4_MANAGED_VS_NORMAL")]),
+        4,
+    )
+    assert_equal("Figure2.panel_d.leave_one_out_deletions", len(loo), 90)
 
     source_rows: list[pd.DataFrame] = []
     sample_source = samples[
@@ -416,9 +480,14 @@ def build_figure2(root: Path, figure_dir: Path, source_dir: Path) -> None:
 
     figure, axes = plt.subplots(2, 2, figsize=(7.09, 5.6), constrained_layout=True)
     axis = axes[0, 0]
-    groups = [("normal", 0, COLORS["hc"]), ("managed", 1, COLORS["sle"])]
-    for group, x_center, color in groups:
-        subset = samples.loc[samples["disease_state"].eq(group)].sort_values("asc_fraction")
+    groups = [
+        ("na", "reference", 0, COLORS["hc"]),
+        ("managed", "exposed", 1, COLORS["sle"]),
+    ]
+    plotted_raw_points = 0
+    for disease_state, prediction_group, x_center, color in groups:
+        subset = samples.loc[samples["disease_state"].eq(disease_state)].sort_values("asc_fraction")
+        plotted_raw_points += len(subset)
         jitter = np.linspace(-0.17, 0.17, len(subset))
         axis.scatter(
             x_center + jitter,
@@ -431,7 +500,7 @@ def build_figure2(root: Path, figure_dir: Path, source_dir: Path) -> None:
         )
         prediction = predictions.loc[
             predictions["analysis_id"].eq("C3A_PRIMARY_C4_MANAGED_VS_NORMAL")
-            & predictions["group"].eq("reference" if group == "normal" else "exposed")
+            & predictions["group"].eq(prediction_group)
         ].iloc[0]
         axis.errorbar(
             x_center,
@@ -447,6 +516,7 @@ def build_figure2(root: Path, figure_dir: Path, source_dir: Path) -> None:
             lw=1.0,
             zorder=4,
         )
+    assert_equal("Figure2.panel_a.raw_points_sent_to_scatter", plotted_raw_points, 90)
     axis.set_xticks([0, 1], ["Control\n(n=43)", "Managed SLE\n(n=47)"])
     axis.set_ylabel("B_ASC fraction per sample-cohort (%)")
     axis.set_title("Observed strata and adjusted means", loc="left", pad=4)
@@ -467,6 +537,8 @@ def build_figure2(root: Path, figure_dir: Path, source_dir: Path) -> None:
         for label in plot_rows["label"]
     ]
     forest(axes[0, 1], plot_rows, "label", "odds_ratio", "ci_low", "ci_high", "color", reference=1.0, log_scale=True)
+    axes[0, 1].set_xticks([0.5, 1.0, 2.0, 4.0], ["0.5", "1", "2", "4"])
+    axes[0, 1].xaxis.set_minor_formatter(NullFormatter())
     axes[0, 1].set_xlabel("Conditional odds ratio for B_ASC abundance")
     axes[0, 1].set_title("No primary B_ASC enrichment", loc="left", pad=4)
     axes[0, 1].text(0.98, 0.04, "Flare q=0.0845", transform=axes[0, 1].transAxes, ha="right", va="bottom", fontsize=6, color=COLORS["secondary"])
@@ -490,6 +562,8 @@ def build_figure2(root: Path, figure_dir: Path, source_dir: Path) -> None:
     sensitivity_primary["color"] = COLORS["teal"]
     sensitivity_plot = pd.concat([primary, sensitivity_primary], ignore_index=True)
     forest(axes[1, 0], sensitivity_plot, "label", "odds_ratio", "ci_low", "ci_high", "color", reference=1.0, log_scale=True)
+    axes[1, 0].set_xticks([0.6, 0.8, 1.0, 1.2], ["0.6", "0.8", "1", "1.2"])
+    axes[1, 0].xaxis.set_minor_formatter(NullFormatter())
     axes[1, 0].set_xlabel("Primary conditional odds ratio")
     axes[1, 0].set_title("Mandatory sensitivity analyses", loc="left", pad=4)
     panel_label(axes[1, 0], "c")
@@ -561,6 +635,24 @@ def build_figure3(root: Path, figure_dir: Path, source_dir: Path) -> None:
         programs["analysis_name"].isin(["primary_base", "validation_nonoverlap"])
         & programs["program_id"].isin(control_ids)
     ].copy()
+    primary_tested = cross_ifn["gse174188_primary_tested"].astype(str).str.lower().eq("true")
+    nonoverlap_tested = cross_ifn["gse174188_nonoverlap_tested"].astype(str).str.lower().eq("true")
+    assert_equal("Figure3.panel_a.frozen_programs", len(primary_programs), 4)
+    assert_equal("Figure3.panel_b.ifn_analyses", len(ifn), 7)
+    assert_equal("Figure3.panel_c.frozen_ifn_genes", len(cross_ifn), 12)
+    assert_equal("Figure3.panel_c.primary_gene_level_tested", int(primary_tested.sum()), 10)
+    assert_equal("Figure3.panel_c.nonoverlap_gene_level_tested", int(nonoverlap_tested.sum()), 11)
+    assert_equal(
+        "Figure3.panel_c.primary_filtered_genes",
+        sorted(cross_ifn.loc[~primary_tested, "gene_symbol"].tolist()),
+        ["IFIT1", "IFIT2"],
+    )
+    assert_equal(
+        "Figure3.panel_c.nonoverlap_filtered_genes",
+        sorted(cross_ifn.loc[~nonoverlap_tested, "gene_symbol"].tolist()),
+        ["IFIT1"],
+    )
+    assert_equal("Figure3.panel_d.program_control_estimates", len(controls), 8)
 
     source_rows: list[pd.DataFrame] = []
     a_source = primary_programs.copy()
@@ -596,6 +688,12 @@ def build_figure3(root: Path, figure_dir: Path, source_dir: Path) -> None:
 
     axis = axes[1, 0]
     genes = cross_ifn["gene_symbol"].tolist()
+    gene_labels = []
+    for row in cross_ifn.itertuples():
+        primary_ok = str(row.gse174188_primary_tested).lower() == "true"
+        nonoverlap_ok = str(row.gse174188_nonoverlap_tested).lower() == "true"
+        suffix = "†" if not primary_ok and not nonoverlap_ok else "‡" if not primary_ok else ""
+        gene_labels.append(f"{row.gene_symbol}{suffix}")
     y = np.arange(len(genes))[::-1]
     for prefix, label, color, offset in [
         ("gse174188_primary", "Primary C4", COLORS["internal"], 0.10),
@@ -612,10 +710,14 @@ def build_figure3(root: Path, figure_dir: Path, source_dir: Path) -> None:
             zorder=3,
         )
     axis.axvline(0, color="#666666", lw=0.7, ls="--")
-    axis.set_yticks(y, genes)
+    axis.set_yticks(y, gene_labels)
     axis.set_xlabel("Gene-level log2 fold change")
     axis.legend(frameon=False, fontsize=6, loc="lower right")
-    axis.set_title("Frozen IFN positive-arm genes", loc="left", pad=4)
+    axis.set_title(
+        "Frozen IFN positive-arm genes\n† filtered in both models; ‡ primary only",
+        loc="left",
+        pad=4,
+    )
     style_axis(axis)
     panel_label(axis, "c")
 
@@ -649,9 +751,9 @@ def build_figure3(root: Path, figure_dir: Path, source_dir: Path) -> None:
         ],
         frameon=False,
         fontsize=6,
-        loc="lower right",
+        loc="upper left",
     )
-    axis.set_title("Technical and identity specificity", loc="left", pad=4)
+    axis.set_title("Technical controls and pan-B sensitivity", loc="left", pad=4)
     style_axis(axis)
     panel_label(axis, "d")
     save_figure(figure, figure_dir, "Figure3_gse174188_bconv_transcription")
@@ -680,6 +782,7 @@ def build_figure4(root: Path, figure_dir: Path, source_dir: Path) -> None:
     cross_program = read_csv(c5_dir / "16_CROSS_DATASET_IFN_PROGRAM_EFFECTS.csv")
     cross_ifn = read_csv(c5_dir / "16_CROSS_DATASET_IFN_GENE_EFFECTS.csv")
     donor_loo = read_csv(c5_dir / "10_PRIMARY_PROGRAM_DONOR_LOO.csv")
+    program_scores = read_csv(c5_dir / "08_PROGRAM_SAMPLE_SCORES.csv.gz")
     source_loo = read_csv(c5_dir / "12_SOURCE_LABEL_LOO_PROGRAM_RESULTS.csv")
     external_order = ["childhood_min50", "combined_min50", "adult_min50", "combined_min20", "combined_min100"]
     external_labels = {
@@ -730,6 +833,7 @@ def build_figure4(root: Path, figure_dir: Path, source_dir: Path) -> None:
     rho = float(merged[["gse174188_logFC", "gse135779_logFC"]].corr(method="spearman").iloc[0, 1])
     ifn_genes = set(cross_ifn["gene_symbol"])
     merged["is_frozen_ifn_gene"] = merged["gene_symbol"].isin(ifn_genes)
+    highlighted = merged.loc[merged["is_frozen_ifn_gene"]].copy()
 
     childhood = external.loc[external["analysis_name"].eq("childhood_min50")].iloc[0]
     donor_ifn = donor_loo.loc[donor_loo["program_id"].eq("IFN_ISG")].copy()
@@ -738,6 +842,23 @@ def build_figure4(root: Path, figure_dir: Path, source_dir: Path) -> None:
         & source_loo["analysis_name"].str.startswith("childhood_min50_without_")
     ].copy()
     source_ifn = source_ifn.sort_values("omitted_source_label")
+    assert_equal("Figure4.panel_a.external_ifn_analyses", len(external), 5)
+    assert_equal("Figure4.panel_b.cross_dataset_analyses", len(cross_program), 6)
+    assert_equal("Figure4.panel_c.shared_tested_genes", len(merged), 4410)
+    assert_equal("Figure4.panel_c.frozen_ifn_genes", len(cross_ifn), 12)
+    assert_equal("Figure4.panel_c.shared_testable_frozen_ifn_genes", len(highlighted), 10)
+    assert_equal(
+        "Figure4.panel_c.positive_frozen_ifn_genes",
+        int((highlighted["gse174188_logFC"].gt(0) & highlighted["gse135779_logFC"].gt(0)).sum()),
+        10,
+    )
+    assert_equal("Figure4.panel_d.donor_loo_summary_rows", len(donor_ifn), 1)
+    donor_deletions = program_scores.loc[
+        program_scores["analysis_name"].eq("childhood_min50")
+        & program_scores["program_id"].eq("IFN_ISG")
+    ]
+    assert_equal("Figure4.panel_d.donor_deletions", len(donor_deletions), 43)
+    assert_equal("Figure4.panel_d.source_label_omissions", len(source_ifn), 8)
 
     source_rows: list[pd.DataFrame] = []
     for panel, frame in (("a", external), ("b", cross_program), ("c", merged), ("d_donor", donor_ifn), ("d_source", source_ifn)):
@@ -748,19 +869,18 @@ def build_figure4(root: Path, figure_dir: Path, source_dir: Path) -> None:
 
     figure, axes = plt.subplots(2, 2, figsize=(7.09, 5.75), constrained_layout=True)
     forest(axes[0, 0], external, "label", "effect", "ci_low", "ci_high", "color")
-    axes[0, 0].set_xlabel("IFN/ISG score difference")
+    axes[0, 0].set_xlabel("Standardized IFN/ISG effect")
     axes[0, 0].set_title("Independent GSE135779 validation", loc="left", pad=4)
     axes[0, 0].text(0.98, 0.03, "Adult: directional only", transform=axes[0, 0].transAxes, ha="right", fontsize=6, color=COLORS["neutral"])
     panel_label(axes[0, 0], "a")
 
     forest(axes[0, 1], cross_program, "label", "effect", "ci_low", "ci_high", "color")
-    axes[0, 1].set_xlabel("IFN/ISG score difference")
+    axes[0, 1].set_xlabel("Standardized IFN/ISG effect")
     axes[0, 1].set_title("Discovery-to-external comparison", loc="left", pad=4)
     panel_label(axes[0, 1], "b")
 
     axis = axes[1, 0]
     non_ifn = merged.loc[~merged["is_frozen_ifn_gene"]]
-    highlighted = merged.loc[merged["is_frozen_ifn_gene"]]
     axis.scatter(non_ifn["gse174188_logFC"], non_ifn["gse135779_logFC"], s=4, color=COLORS["light"], alpha=0.38, linewidths=0, rasterized=True)
     axis.scatter(highlighted["gse174188_logFC"], highlighted["gse135779_logFC"], s=18, color=COLORS["sle"], edgecolor="white", linewidth=0.35, zorder=3)
     labels = highlighted.nlargest(6, "gse135779_logFC")
@@ -801,19 +921,28 @@ def build_figure5(root: Path, figure_dir: Path, source_dir: Path) -> None:
     donor = read_csv(c6_dir / "18_GSE23307_LOG2P1_DONOR_PROGRAM_EFFECTS.csv")
     gsea = read_csv(c6_dir / "19_MSIGDB_M5911_PRERANKED_GSEA.csv")
     source = read_csv(c6_dir / "21_FIGURE5_SOURCE_DATA.csv")
+    assert_equal("Figure5.confirmatory_regulator_tests", len(regulators), 24)
+    assert_equal("Figure5.ifn_regulator_tests", int(regulators["family"].eq("IFN_confirmatory").sum()), 12)
+    assert_equal("Figure5.proliferation_control_tests", int(regulators["family"].eq("proliferation_control").sum()), 12)
+    assert_equal("Figure5.orthogonal_gsea_contrasts", len(gsea), 3)
+    assert_equal("Figure5.gse23307_descriptive_donors", len(donor), 2)
     write_source(source_dir / "Figure5_source_data.csv", source)
 
-    figure = plt.figure(figsize=(7.09, 5.85), constrained_layout=True)
-    grid = figure.add_gridspec(2, 2, height_ratios=[0.72, 1.55])
-    design_axis = figure.add_subplot(grid[0, 0])
-    orthogonal_grid = grid[0, 1].subgridspec(1, 2, wspace=0.52)
-    gsea_axis = figure.add_subplot(orthogonal_grid[0, 0])
-    donor_axis = figure.add_subplot(orthogonal_grid[0, 1])
-    ifn_axis = figure.add_subplot(grid[1, 0])
-    control_axis = figure.add_subplot(grid[1, 1])
+    figure = plt.figure(figsize=(7.09, 6.2), constrained_layout=True)
+    grid = figure.add_gridspec(
+        2,
+        4,
+        height_ratios=[0.70, 1.65],
+        width_ratios=[1.05, 1.05, 0.82, 0.82],
+    )
+    design_axis = figure.add_subplot(grid[0, 0:2])
+    gsea_axis = figure.add_subplot(grid[0, 2])
+    donor_axis = figure.add_subplot(grid[0, 3])
+    ifn_axis = figure.add_subplot(grid[1, 0:2])
+    control_axis = figure.add_subplot(grid[1, 2:4])
 
     design_axis.set_axis_off()
-    panel_label(design_axis, "a", x=-0.06, y=1.03)
+    panel_label(design_axis, "a", x=-0.09, y=1.08)
     nodes = [
         (0.04, "3 frozen SLE\ncontrasts", COLORS["internal"]),
         (0.37, "8 frozen\nregulators", COLORS["external"]),
@@ -838,11 +967,18 @@ def build_figure5(root: Path, figure_dir: Path, source_dir: Path) -> None:
         selected["contrast_order"] = selected["contrast"].map({key: index for index, key in enumerate(contrast_short)})
         selected["regulator_order"] = selected["regulator"].map({name: index for index, name in enumerate(names)})
         selected = selected.sort_values(["contrast_order", "regulator_order"])
-        selected["label"] = [f"{contrast_short[c]}  {r}" for c, r in zip(selected["contrast"], selected["regulator"], strict=True)]
+        role = {"STAT1": "core", "STAT2": "core", "IRF7": "extended", "IRF9": "extended"}
+        selected["label"] = [
+            f"{contrast_short[c]}  {r}{f' ({role[r]})' if r in role else ''}"
+            for c, r in zip(selected["contrast"], selected["regulator"], strict=True)
+        ]
         selected["color"] = selected["regulator"].map(regulator_colors)
         forest(axis, selected, "label", "slope", "ci_low", "ci_high", "color")
         for separator in (3.5, 7.5):
             axis.axhline(separator, color="#DDDDDD", lw=0.55, zorder=0)
+        if names == ["STAT1", "STAT2", "IRF7", "IRF9"]:
+            for separator in (1.5, 5.5, 9.5):
+                axis.axhline(separator, color="#E8E8E8", lw=0.45, ls=":", zorder=0)
         y_values = np.arange(len(selected))[::-1]
         for y_value, (_, row) in zip(y_values, selected.iterrows(), strict=True):
             if row["q_value_global24"] < 0.05:
@@ -851,27 +987,32 @@ def build_figure5(root: Path, figure_dir: Path, source_dir: Path) -> None:
         axis.set_title(title, loc="left", pad=4)
         panel_label(axis, label)
 
-    regulator_forest(ifn_axis, ["STAT1", "STAT2", "IRF7", "IRF9"], "b", "IFN-centred regulator activity")
+    regulator_forest(ifn_axis, ["STAT1", "STAT2", "IRF7", "IRF9"], "b", "Core and extended IFN regulators")
     regulator_forest(control_axis, ["E2F1", "FOXM1", "MYC", "MYBL2"], "c", "Prespecified proliferation controls")
 
-    gsea_labels = [contrast_short[value] for value in gsea["contrast"]]
+    gsea_labels = [
+        {"Discovery": "Discovery", "Nonoverlap": "Nonoverlap", "Childhood": "Childhood"}[
+            contrast_short[value]
+        ]
+        for value in gsea["contrast"]
+    ]
     gsea_axis.bar(np.arange(3), gsea["normalized_enrichment_score"], width=0.62, color=[COLORS["internal"], COLORS["external"], COLORS["ifn"]], edgecolor="none")
     gsea_axis.set_xticks(np.arange(3), gsea_labels, rotation=35, ha="right")
     gsea_axis.set_ylabel("M5911 NES")
     gsea_axis.set_ylim(0, gsea["normalized_enrichment_score"].max() * 1.22)
     gsea_axis.set_title("IFN enrichment", loc="left", pad=4)
     style_axis(gsea_axis)
-    panel_label(gsea_axis, "d", x=-0.25, y=1.14)
+    panel_label(gsea_axis, "d", x=-0.20, y=1.10)
 
     donor_axis.bar(np.arange(2), donor["mean_paired_log2p1_effect"], width=0.58, color=["#CC6666", COLORS["purple"]], edgecolor="none")
     donor_axis.set_xticks(np.arange(2), donor["donor_id"])
     donor_axis.set_ylabel("Mean paired Δlog2(x+1)")
     donor_axis.set_ylim(0, donor["mean_paired_log2p1_effect"].max() * 1.25)
-    donor_axis.set_title("IFN-beta B cells", loc="left", pad=4)
+    donor_axis.set_title("IFN-beta response\n(n=2; descriptive)", loc="left", pad=4)
     for index, row in donor.iterrows():
         donor_axis.text(index, row["mean_paired_log2p1_effect"] + 0.10, f"{int(row['positive_genes'])}/12", ha="center", fontsize=6)
     style_axis(donor_axis)
-    panel_label(donor_axis, "e", x=-0.32, y=1.14)
+    panel_label(donor_axis, "e", x=-0.20, y=1.10)
     control_axis.text(0.98, 0.015, "* global 24-test BH q<0.05", transform=control_axis.transAxes, ha="right", va="bottom", fontsize=5.8, color="#444444")
     save_figure(figure, figure_dir, "Figure5_regulatory_evidence")
 
@@ -884,6 +1025,7 @@ def main() -> None:
     source_dir = output_dir / "source_data"
     figure_dir.mkdir(parents=True, exist_ok=True)
     source_dir.mkdir(parents=True, exist_ok=True)
+    ASSERTIONS.clear()
     configure_style()
     build_figure1(root, figure_dir, source_dir)
     build_figure2(root, figure_dir, source_dir)
@@ -892,12 +1034,27 @@ def main() -> None:
     build_figure5(root, figure_dir, source_dir)
     payload = {
         "created_at": "2026-08-20",
-        "status": "C7_MAIN_FIGURES_BUILT_REVIEW_REQUIRED",
+        "status": "C8R_MAIN_FIGURES_BUILT_WITH_ASSERTIONS",
         "figures": 5,
         "formats": ["PDF", "PNG_600_DPI"],
         "source_data_files": 5,
         "source_policy": "frozen Gate C2B4-C6B outputs only",
+        "panel_data_assertions": len(ASSERTIONS),
+        "panel_data_assertions_passed": all(item["pass"] for item in ASSERTIONS),
     }
+    (output_dir / "02_PANEL_DATA_ASSERTIONS.json").write_text(
+        json.dumps(
+            {
+                "created_at": "2026-08-20",
+                "status": "PASS" if all(item["pass"] for item in ASSERTIONS) else "FAIL",
+                "checks": ASSERTIONS,
+            },
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     (output_dir / "01_FIGURE_BUILD_STATUS.json").write_text(
         json.dumps(payload, indent=2) + "\n", encoding="utf-8", newline="\n"
     )

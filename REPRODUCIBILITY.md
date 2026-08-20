@@ -2,88 +2,128 @@
 
 ## Repository boundary
 
-This repository contains analysis code, active scientific-design documents,
-environment locks and lightweight audit outputs. Raw/processed H5AD objects,
-per-cell exports, public-dataset archives, literature PDFs, course documents and
-legacy submission builds are intentionally excluded from Git.
+This repository contains analysis code, study-design documents, environment
+locks, machine-readable gate decisions, compact source data and publication
+figures. Raw or processed H5AD objects, original public archives, per-cell
+exports, literature PDFs and generated submission packages are intentionally
+excluded from Git.
 
-No repository checkout alone is sufficient to reproduce numerical results. The
-required public data must be retrieved from their original accessions and
-validated against the local provenance/checksum records before analysis.
+A checkout alone is therefore not sufficient to recompute the study. Public
+data must be retrieved from the cited accessions and reconciled against the
+tracked provenance and checksum records before analysis. No patient-level
+outcome is used during disease-blind identity learning.
 
-## Public data resources
+## Frozen data resources
 
-- GSE174188: discovery PBMC/B-lineage source.
-- GSE135779: main external SLE validation, analysed as childhood and adult strata.
-- GSE163121: small directional validation only.
-- GSE196830 / OneK1K: healthy reference context only.
+- `GSE174188`: discovery PBMC/B-lineage source and donor-nonoverlap internal
+  validation.
+- `GSE135779`: independent SLE validation, with childhood donors as the primary
+  confirmatory stratum and adult donors treated as directional context.
+- `GSE23307`: two-donor paired primary B-cell IFN-beta perturbation used only as
+  descriptive orthogonal response evidence.
 
-## Environment reconstruction
+The final manuscript does not treat the GSE174188 internal donor split as an
+independent cohort and does not assign an inferential P value to the two-donor
+GSE23307 experiment.
 
-The tested Windows environment is `sle-bcell-v7` with Python 3.11 and OpenBLAS.
+## Environments
 
-Exact Windows conda packages:
+The single-cell and figure workflow was tested in `sle-bcell-v7` with Python
+3.11. The correlation-aware sensitivity was tested with R 4.6.0, edgeR 4.10.1
+and limma 3.68.4. Document generation and audit use the bundled Codex Python
+runtime; WPS Office is the authoritative DOCX rendering backend on this
+workstation.
+
+Exact Windows conda reconstruction:
 
 ```powershell
-conda create -n sle-bcell-v7-repro --file .\audit_tools\environment_phase17_v7_explicit_win64_2026-08-10.txt
+conda create -n sle-bcell-v7-repro `
+  --file .\audit_tools\environment_phase17_v7_explicit_win64_2026-08-10.txt
 conda activate sle-bcell-v7-repro
-python -m pip install -r .\audit_tools\environment_phase17_v7_pip_freeze_2026-08-10.txt
+python -m pip install `
+  -r .\audit_tools\environment_phase17_v7_pip_freeze_2026-08-10.txt
 python .\02_analysis\scripts\01_check_scanpy_env.py
 ```
 
-The resolved environment export is available at
+The resolved environment is
 `audit_tools/environment_phase17_v7_resolved_2026-08-10.yml`. The explicit
-Windows spec is preferred for exact local reconstruction.
+Windows package specification is the exact local reconstruction path.
 
-## Completed cell-policy gate
+## Frozen inferential sequence
 
-Gate C2B1 completed 88/88 complete-library residual-risk runs and reconciled
-150,402/150,402 hard-QC cells. Its frozen decision is:
+1. Hard-QC and library reconciliation retained 150,402/150,402 cells across
+   88/88 libraries. The 1,972 residual-risk calls remained sensitivity-only.
+2. Disease-blind recurrent-HVG representations were reviewed before outcomes
+   were unlocked.
+3. Resampling did not support the original five fine states as hard inferential
+   identities. The permissible frozen scope was reduced to broad `B_CONV` and
+   `B_ASC` compartments.
+4. Protected metadata were joined only after identity freeze. Composition was
+   analysed at sample level and transcription with raw-count pseudobulk at the
+   biological-sample or donor level.
+5. The discovery IFN/ISG program was frozen before donor-nonoverlap and
+   GSE135779 tests.
+6. STAT1/STAT2 regulators, signed CollecTRI targets, contrasts, backgrounds and
+   designs were frozen before CAMERA and FRY sensitivity analyses.
+7. Figures, manuscript numbers and legends were regenerated from frozen tables
+   and guarded by exact panel-data assertions.
 
-- primary: all 150,402 hard-QC cells;
-- sensitivity: exclude the 1,972 automatic residual-risk calls;
-- automatic second-round deletion: not authorized before state-graph localization.
+## Gate C8R rebuild
 
-The binding report is
-`phase17_v7/gateC2B1/20260810_171000_full_library_doublets/16_GATE_C2B1_DECISION.md`.
-
-## Active gate
-
-The current analysis gate is full disease-blind representation learning:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\audit_tools\run_6013RP_phase17_gateC2B2_full_representation.ps1 `
-  -ResumeRunDir ".\phase17_v7\gateC2B2\20260812_full_representation"
-```
-
-The run freezes library-aware recurrent HVGs before fitting three independently
-checkpointed branches: all-hard-QC primary, residual-risk-negative and strong-
-ISG-excluded. The primary branch retains both an
-unintegrated graph and a Harmony graph adjusted by technical library. Formal
-review must include technical mixing, cross-cohort bridge samples, marker
-conservation, branch concordance and residual-risk localization.
-
-An immunoglobulin-dominance representation sensitivity is explicitly non-evaluable:
-the source raw feature space lacks canonical immunoglobulin constant genes and
-contains only three bona fide IG-prefix V/OR loci. Proxy genes are not substituted.
-
-The full-PBMC B-lineage completeness audit can be reconstructed separately:
+The complete local rebuild is:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\audit_tools\run_6013RP_phase17_blineage_extraction_audit.ps1
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_6013RP_phase17_gateC8R_submission_package.ps1
 ```
 
-Its binding decision retains source B-lineage labels as the primary input and
-uses refined outside-label candidates for mapping sensitivity only.
+The runner executes these tracked components in order:
 
-## Outcome lock
+- `audit_tools/phase17_c7_01_build_main_figures.py`
+- `audit_tools/phase17_c8r_01_correlation_aware_regulator_sensitivity.R`
+- `audit_tools/phase17_c8r_02_verify_references.py`
+- `audit_tools/phase17_c8r_03_build_submission_sources.py`
+- `audit_tools/phase17_c8r_04_build_documents.py`
+- `audit_tools/render_docx_with_wps.ps1`
+- bundled `a11y_audit.py`
+- `audit_tools/phase17_c8r_05_final_submission_audit.py`
 
-Disease, disease state and `ct_cov` are excluded from working objects used for
-representation learning and state definition. Protected outcomes are joined
-only after cells, representation and neutral states pass their freeze gates.
+For a quick package-only rebuild from already verified scientific outputs:
+
+```powershell
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_6013RP_phase17_gateC8R_submission_package.ps1 `
+  -SkipFigureBuild `
+  -SkipCorrelationSensitivity `
+  -SkipReferenceRefresh
+```
+
+## Automated locks
+
+- Figure assertions: 43/43 must pass. Figure 2a must contain exactly 43 control,
+  47 managed-SLE and 90 total raw observations.
+- Figures: exactly five PDF and five 600-dpi PNG composites, each below 10 MB;
+  visible figure text must be at least 5 pt.
+- Correlation-aware core family: six tests with exact target counts
+  `98/14/129/19/161/20`; CAMERA direction 6/6 and BH significance 5/6; FRY
+  direction and BH significance 6/6.
+- References: 26 DOI records must pass metadata verification; the manuscript
+  contains 30 references in total.
+- Main DOCX: double spacing, continuous line numbers, page numbering and
+  odd/even running headers.
+- Supplement: six tables with explicit OOXML table width, grid, cell-width and
+  indent geometry.
+- WPS page review: 26 manuscript pages, 4 supplementary pages and 1 cover page.
+- Accessibility: zero high-, medium- or low-severity findings in all three DOCX
+  reports.
+- Packaging: every package file is listed in `MANIFEST_SHA256.csv`; the final
+  ZIP is rebuilt twice from the same frozen package tree with fixed entry order,
+  timestamps and permissions, and the two SHA-256 hashes must match.
 
 ## Release policy
 
-The GitHub repository is a private working repository during analysis. A public
-release, source-data package and archival DOI should be created only after
-manuscript freeze, data-license review and removal of non-shareable metadata.
+The repository may be made public only after data-license review, removal of
+non-shareable metadata, addition of an open-source licence and creation of an
+immutable Zenodo or equivalent DOI. The DOI and final release commit must then
+replace the visible manuscript and cover-letter placeholders before portal
+submission.

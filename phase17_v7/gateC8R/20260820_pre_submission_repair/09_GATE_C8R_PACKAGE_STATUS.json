@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-08-20",
+  "decision": "PASS_GATE_C8R_SCIENTIFIC_FIGURE_REPRODUCIBILITY_REPAIR_AUTHOR_ACTION_REQUIRED",
+  "primary_target": "Genome Medicine",
+  "scientific_technical_package_pass": true,
+  "portal_submission_authorized": false,
+  "checks": {
+    "figure_build_freeze": {
+      "pass": true,
+      "detail": "status=C8R_MAIN_FIGURES_BUILT_WITH_ASSERTIONS; figures=5"
+    },
+    "panel_data_assertions": {
+      "pass": true,
+      "detail": "passed=43/43; Figure2a={'Figure2.panel_a.control_raw_points': 43, 'Figure2.panel_a.managed_sle_raw_points': 47, 'Figure2.panel_a.total_raw_points': 90}"
+    },
+    "journal_target": {
+      "pass": true,
+      "detail": "Genome Medicine primary; transfer routes frozen without quartile assertion"
+    },
+    "author_identity": {
+      "pass": true,
+      "detail": "missing=none"
+    },
+    "structured_abstract": {
+      "pass": true,
+      "detail": "computed_words=314; frozen_words=314; labels=4/4"
+    },
+    "keywords": {
+      "pass": true,
+      "detail": "keywords=8; allowed=3-10"
+    },
+    "required_sections": {
+      "pass": true,
+      "detail": "missing=none"
+    },
+    "declaration_structure": {
+      "pass": true,
+      "detail": "missing=none"
+    },
+    "figure_legends": {
+      "pass": true,
+      "detail": "count=5; details=[{'figure': 1, 'title_words': 7, 'legend_words': 85}, {'figure': 2, 'title_words': 9, 'legend_words': 83}, {'figure': 3, 'title_words': 8, 'legend_words': 109}, {'figure': 4, 'title_words': 8, 'legend_words': 89}, {'figure': 5, 'title_words': 6, 'legend_words': 109}]"
+    },
+    "figure_files": {
+      "pass": true,
+      "detail": "[{'figure': 1, 'png_bytes': 524199, 'pdf_bytes': 60738, 'pixels': (4254, 3270)}, {'figure': 2, 'png_bytes': 454608, 'pdf_bytes': 49848, 'pixels': (4254, 3360)}, {'figure': 3, 'png_bytes': 454067, 'pdf_bytes': 55055, 'pixels': (4254, 3450)}, {'figure': 4, 'png_bytes': 628446, 'pdf_bytes': 56820, 'pixels': (4254, 3450)}, {'figure': 5, 'png_bytes': 579776, 'pdf_bytes': 54763, 'pixels': (4254, 3720)}]"
+    },
+    "correlation_aware_sensitivity": {
+      "pass": true,
+      "detail": "targets=98/14/129/19/161/20; CAMERA Up=6/6, BH=5/6; FRY Up=6/6, BH=6/6; exception=discovery STAT2 CAMERA q=0.1355"
+    },
+    "reference_verification": {
+      "pass": true,
+      "detail": "Crossref PASS=26/26; total manuscript references=30"
+    },
+    "frozen_numeric_anchors": {
+      "pass": true,
+      "detail": "missing=none"
+    },
+    "no_stale_claim_language": {
+      "pass": true,
+      "detail": "hits=none"
+    },
+    "noncausal_boundaries": {
+      "pass": true,
+      "detail": "present=4/4"
+    },
+    "editable_documents": {
+      "pass": true,
+      "detail": "{'Genome_Medicine_Manuscript_GateC8R_AUTHOR_COMPLETION_REQUIRED.docx': 58157, 'Additional_file_1_Supplementary_Information_GateC8R.docx': 44632, 'Genome_Medicine_Cover_Letter_GateC8R_AUTHOR_CONFIRMATION_REQUIRED.docx': 40061}"
+    },
+    "document_build_status": {
+      "pass": true,
+      "detail": "outputs=3; figure_assets=10"
+    },
+    "main_docx_ooxml": {
+      "pass": true,
+      "detail": "line_numbers=True; page_field=True; even_odd=True; headers=2; double_spacing=True; title_border_absent=True"
+    },
+    "supplement_table_geometry": {
+      "pass": true,
+      "detail": "tables=6; explicit_geometry=6/6"
+    },
+    "docx_accessibility": {
+      "pass": true,
+      "detail": "[{'file': 'main_text_a11y.json', 'high': 0, 'medium': 0, 'low': 0}, {'file': 'supplement_a11y.json', 'high': 0, 'medium': 0, 'low': 0}, {'file': 'cover_letter_a11y.json', 'high': 0, 'medium': 0, 'low': 0}]"
+    },
+    "figure_source_data": {
+      "pass": true,
+      "detail": "csv=5; checksums=5; zip_entries=6"
+    },
+    "regulator_sensitivity_attachment": {
+      "pass": true,
+      "detail": "checksums=2; zip_entries=3"
+    },
+    "wps_render_outputs": {
+      "pass": true,
+      "detail": "[{'document': 'main', 'pdf_bytes': 240343, 'pdf_pages': 26, 'png_pages': 26}, {'document': 'supplement', 'pdf_bytes': 127749, 'pdf_pages': 4, 'png_pages': 4}, {'document': 'cover', 'pdf_bytes': 83963, 'pdf_pages': 1, 'png_pages': 1}]; visual_review=PASS_ALL_31_PAGES"
+    },
+    "hard_stops_visible": {
+      "pass": true,
+      "detail": "manuscript placeholders=6; cover placeholders=2; unresolved hard stops=7"
+    }
+  },
+  "hard_stops": [
+    "institutional ethics determination",
+    "competing interests",
+    "funding",
+    "final CRediT contributions and all-author approval",
+    "acknowledgements",
+    "all-author originality/submission confirmation",
+    "open-source licence and immutable archive DOI"
+  ],
+  "next_stage": "Gate C8B author declarations, institutional ethics determination, repository licence and immutable archive DOI; then final portal preflight and submission",
+  "deterministic_archive_rebuild_match": true,
+  "package_files_manifested": 75,
+  "package_zip": "04_submission/package_genome_medicine_gateC8R_2026-08-20.zip",
+  "package_zip_bytes": 12198352,
+  "package_zip_sha256": "89d3f4139dd5c94bb216142351f6b425e8326f518efbdc0f0114652583f3c872"
+}
