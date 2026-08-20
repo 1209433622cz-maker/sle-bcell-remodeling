@@ -1,0 +1,6 @@
+figure,panels,inference,frozen_gate_sources,gateC7_source_data,claim_ids
+Figure1,a-d,identity scope and stability,gateC2B4; gateC3 metadata,Figure1_source_data.csv,C7-01;C7-02
+Figure2,a-d,sample-level B_ASC composition,gateC3A,Figure2_source_data.csv,C7-03
+Figure3,a-d,GSE174188 B_CONV transcription,gateC4B; gateC5B cross-gene table,Figure3_source_data.csv,C7-04;C7-05;C7-09
+Figure4,a-d,independent GSE135779 IFN replication,gateC5B,Figure4_source_data.csv,C7-06;C7-07;C7-08;C7-10
+Figure5,a-e,noncausal regulatory convergence,gateC6B corrected active outputs,Figure5_source_data.csv,C7-11;C7-12;C7-13;C7-14

@@ -1,0 +1,97 @@
+{
+  "created_at": "2026-08-20",
+  "decision": "PASS_GATE_C7_MANUSCRIPT_AND_FIVE_FIGURE_SCIENTIFIC_FREEZE",
+  "checks": {
+    "frozen_gate_chain": {
+      "pass": true,
+      "detail": "C2B4=PASS_C2B4_TWO_COMPARTMENT_FREEZE_OUTCOME_UNLOCK_AUTHORIZED; C3A=NO_GO_C3A_COMPOSITION_AS_CENTRAL_CLAIM; C4B=PASS_GATE_C4B_TO_INDEPENDENT_SLE_VALIDATION; C5B=PASS_GATE_C5B_INDEPENDENT_IFN_REPLICATION; C6B=PASS_GATE_C6B_UPPER_Q1_REGULATORY_FRAMING_AUTHORIZED_NONCAUSAL"
+    },
+    "five_result_sections": {
+      "pass": true,
+      "detail": "found 5 Results subsections"
+    },
+    "five_figure_legends": {
+      "pass": true,
+      "detail": "five legends in standalone file and manuscript"
+    },
+    "no_stale_c6b_language": {
+      "pass": true,
+      "detail": "hits=[]"
+    },
+    "noncausal_boundaries_explicit": {
+      "pass": true,
+      "detail": "required boundary passages=3/3"
+    },
+    "gene_label_permutation_wording": {
+      "pass": true,
+      "detail": "M5911 null described as gene-label permutations"
+    },
+    "no_superseded_gse23307_citation": {
+      "pass": true,
+      "detail": "active manuscript/legends hits=[]"
+    },
+    "core_regulator_claim": {
+      "pass": true,
+      "detail": "positive and global-q<0.05 rows=6/6"
+    },
+    "core_target_robustness": {
+      "pass": true,
+      "detail": "leave-one-target and 100x80% resampling audited by Gate C6B"
+    },
+    "m5911_values": {
+      "pass": true,
+      "detail": "NES=3.187,3.050,3.527; permutations=10000"
+    },
+    "gse23307_corrected_values": {
+      "pass": true,
+      "detail": "HI1=3.294 and HI2=3.666; 12/12 genes positive in each"
+    },
+    "claim_crosswalk": {
+      "pass": true,
+      "detail": "14 unique claims"
+    },
+    "figure_crosswalk": {
+      "pass": true,
+      "detail": "Figures 1-5 map to frozen gates and source data"
+    },
+    "numeric_source_crosswalk": {
+      "pass": true,
+      "detail": "16 unique numeric sources"
+    },
+    "figure_files_and_dimensions": {
+      "pass": true,
+      "detail": "5/5 have PDF>20KB, PNG>300KB and at least 4000x3000 pixels"
+    },
+    "figure_source_data": {
+      "pass": true,
+      "detail": "5/5 nonempty source-data files"
+    },
+    "figure4_interface": {
+      "pass": true,
+      "detail": "4,410 shared genes, 8 source-label omissions and one donor-LOO summary"
+    },
+    "figure5_active_source": {
+      "pass": true,
+      "detail": "Gate C7 Figure 5 source values equal corrected active Gate C6B source within serialization tolerance"
+    },
+    "proposal_all_aims_completed": {
+      "pass": true,
+      "detail": "Aims 1-4 are recorded as completed"
+    },
+    "gse23307_reference_verified": {
+      "pass": true,
+      "detail": "PMID 20956346 journal citation represented"
+    }
+  },
+  "active_manuscript": "01_manuscript/manuscript_v9_gateC7_submission_scientific_draft_2026-08-20.md",
+  "active_research_proposal": "01_manuscript/research_proposal_v16_gateC7_completed_2026-08-20.md",
+  "active_figures": [
+    "phase17_v7/gateC7/20260820_manuscript_figure_integration/figures/Figure1_disease_blind_identity_scope.pdf",
+    "phase17_v7/gateC7/20260820_manuscript_figure_integration/figures/Figure2_sample_level_composition.pdf",
+    "phase17_v7/gateC7/20260820_manuscript_figure_integration/figures/Figure3_gse174188_bconv_transcription.pdf",
+    "phase17_v7/gateC7/20260820_manuscript_figure_integration/figures/Figure4_independent_ifn_replication.pdf",
+    "phase17_v7/gateC7/20260820_manuscript_figure_integration/figures/Figure5_regulatory_evidence.pdf"
+  ],
+  "claim_boundary": "convergent observational IFN-centred regulatory evidence; not causal and not a unique upstream stimulus",
+  "next_stage": "Gate C8 journal-specific submission package, reference verification, authorship/declarations and rendered document QA"
+}
