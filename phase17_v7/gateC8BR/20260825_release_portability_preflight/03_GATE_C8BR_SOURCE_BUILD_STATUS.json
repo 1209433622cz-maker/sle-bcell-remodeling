@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-08-25",
+  "status": "PASS_GATE_C8BR_RELEASE_PREFLIGHT_SOURCES_BUILT",
+  "source_gate": "C8S frozen scientific state",
+  "scientific_estimates_changed": false,
+  "abstract_words": 314,
+  "references": 32,
+  "author_controlled_placeholders": 6,
+  "authors_information_section_present": false,
+  "new_reference": {
+    "doi": "10.1136/lupus-2026-002042",
+    "pmid": "42373139",
+    "role": "functional context only"
+  },
+  "figure5a_semantics": "parallel evidence branches",
+  "figure5c_wording": "Prespecified proliferation specificity comparators",
+  "pseudobulk_reconciliation": "90 composition strata; one managed stratum had 44 B_CONV cells; 89 transcription pseudobulks",
+  "outputs": {
+    "manuscript": "01_manuscript/manuscript_v14_genome_medicine_release_preflight_2026-08-25.md",
+    "supplement": "01_manuscript/supplementary_information_v5_release_preflight_2026-08-25.md",
+    "cover": "04_submission/cover_letter_genome_medicine_gateC8BR_AUTHOR_COMPLETION_REQUIRED_2026-08-25.md",
+    "author_completion_matrix": "04_submission/author_completion_matrix_gateC8BR_2026-08-25.md",
+    "journal_target_decision": "04_submission/journal_target_decision_gateC8BR_2026-08-25.md",
+    "reporting_checklist": "04_submission/reporting_checklist_gateC8BR_2026-08-25.md"
+  }
+}

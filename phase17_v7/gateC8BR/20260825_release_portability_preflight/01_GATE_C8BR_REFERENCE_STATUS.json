@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-08-25",
+  "decision": "PASS",
+  "doi_records": 28,
+  "manuscript_references": 32,
+  "context_references": [
+    {
+      "doi": "10.1016/j.jaut.2026.103575",
+      "pmid": "42119160",
+      "role": "context only"
+    },
+    {
+      "doi": "10.1136/lupus-2026-002042",
+      "pmid": "42373139",
+      "role": "functional DN2/IFN context only"
+    }
+  ],
+  "claim_boundary": "neither 2026 study is independent replication of the frozen B_CONV program"
+}

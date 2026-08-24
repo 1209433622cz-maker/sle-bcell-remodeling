@@ -1,0 +1,292 @@
+{
+  "created_at": "2026-08-25",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "Figure1.panel_b.policy_count",
+      "actual": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "check": "Figure1.panel_c.resampling_replicates",
+      "actual": 20,
+      "expected": 20,
+      "pass": true
+    },
+    {
+      "check": "Figure1.panel_d.frozen_state_count",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "check": "Figure1.hard_qc_cells",
+      "actual": 150402,
+      "expected": 150402,
+      "pass": true
+    },
+    {
+      "check": "Figure1.donors",
+      "actual": 259,
+      "expected": 259,
+      "pass": true
+    },
+    {
+      "check": "Figure1.samples",
+      "actual": 271,
+      "expected": 271,
+      "pass": true
+    },
+    {
+      "check": "Figure1.sample_cohort_strata",
+      "actual": 332,
+      "expected": 332,
+      "pass": true
+    },
+    {
+      "check": "Figure1.libraries",
+      "actual": 88,
+      "expected": 88,
+      "pass": true
+    },
+    {
+      "check": "Figure1_disease_blind_identity_scope.minimum_visible_font_pt",
+      "actual": "5.80 pt",
+      "expected": "true",
+      "pass": true
+    },
+    {
+      "check": "Figure2.panel_a.control_raw_points",
+      "actual": 43,
+      "expected": 43,
+      "pass": true
+    },
+    {
+      "check": "Figure2.panel_a.managed_sle_raw_points",
+      "actual": 47,
+      "expected": 47,
+      "pass": true
+    },
+    {
+      "check": "Figure2.panel_a.total_raw_points",
+      "actual": 90,
+      "expected": 90,
+      "pass": true
+    },
+    {
+      "check": "Figure2.panel_a.adjusted_predictions",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "check": "Figure2.panel_b.frozen_contrasts",
+      "actual": 5,
+      "expected": 5,
+      "pass": true
+    },
+    {
+      "check": "Figure2.panel_c.mandatory_sensitivities",
+      "actual": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "check": "Figure2.panel_d.leave_one_out_deletions",
+      "actual": 90,
+      "expected": 90,
+      "pass": true
+    },
+    {
+      "check": "Figure2.panel_a.raw_points_sent_to_scatter",
+      "actual": 90,
+      "expected": 90,
+      "pass": true
+    },
+    {
+      "check": "Figure2_sample_level_composition.minimum_visible_font_pt",
+      "actual": "6.00 pt",
+      "expected": "true",
+      "pass": true
+    },
+    {
+      "check": "Figure3.panel_a.frozen_programs",
+      "actual": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "check": "Figure3.panel_b.ifn_analyses",
+      "actual": 7,
+      "expected": 7,
+      "pass": true
+    },
+    {
+      "check": "Figure3.panel_c.frozen_ifn_genes",
+      "actual": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "check": "Figure3.panel_c.primary_gene_level_tested",
+      "actual": 10,
+      "expected": 10,
+      "pass": true
+    },
+    {
+      "check": "Figure3.panel_c.nonoverlap_gene_level_tested",
+      "actual": 11,
+      "expected": 11,
+      "pass": true
+    },
+    {
+      "check": "Figure3.panel_c.primary_filtered_genes",
+      "actual": [
+        "IFIT1",
+        "IFIT2"
+      ],
+      "expected": [
+        "IFIT1",
+        "IFIT2"
+      ],
+      "pass": true
+    },
+    {
+      "check": "Figure3.panel_c.nonoverlap_filtered_genes",
+      "actual": [
+        "IFIT1"
+      ],
+      "expected": [
+        "IFIT1"
+      ],
+      "pass": true
+    },
+    {
+      "check": "Figure3.panel_d.program_control_estimates",
+      "actual": 8,
+      "expected": 8,
+      "pass": true
+    },
+    {
+      "check": "Figure3_gse174188_bconv_transcription.minimum_visible_font_pt",
+      "actual": "5.20 pt",
+      "expected": "true",
+      "pass": true
+    },
+    {
+      "check": "Figure4.panel_a.external_ifn_analyses",
+      "actual": 5,
+      "expected": 5,
+      "pass": true
+    },
+    {
+      "check": "Figure4.panel_b.cross_dataset_analyses",
+      "actual": 6,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "check": "Figure4.panel_c.shared_tested_genes",
+      "actual": 4410,
+      "expected": 4410,
+      "pass": true
+    },
+    {
+      "check": "Figure4.panel_c.frozen_ifn_genes",
+      "actual": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "check": "Figure4.panel_c.shared_testable_frozen_ifn_genes",
+      "actual": 10,
+      "expected": 10,
+      "pass": true
+    },
+    {
+      "check": "Figure4.panel_c.positive_frozen_ifn_genes",
+      "actual": 10,
+      "expected": 10,
+      "pass": true
+    },
+    {
+      "check": "Figure4.panel_d.donor_loo_summary_rows",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "check": "Figure4.panel_d.donor_deletions",
+      "actual": 43,
+      "expected": 43,
+      "pass": true
+    },
+    {
+      "check": "Figure4.panel_d.source_label_omissions",
+      "actual": 8,
+      "expected": 8,
+      "pass": true
+    },
+    {
+      "check": "Figure4_independent_ifn_replication.minimum_visible_font_pt",
+      "actual": "5.50 pt",
+      "expected": "true",
+      "pass": true
+    },
+    {
+      "check": "Figure5.confirmatory_regulator_tests",
+      "actual": 24,
+      "expected": 24,
+      "pass": true
+    },
+    {
+      "check": "Figure5.ifn_regulator_tests",
+      "actual": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "check": "Figure5.proliferation_control_tests",
+      "actual": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "check": "Figure5.orthogonal_gsea_contrasts",
+      "actual": 3,
+      "expected": 3,
+      "pass": true
+    },
+    {
+      "check": "Figure5.gse23307_descriptive_donors",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "check": "Figure5.panel_d.source_rows",
+      "actual": 3,
+      "expected": 3,
+      "pass": true
+    },
+    {
+      "check": "Figure5.panel_e.source_rows",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "check": "Figure5.panel_e.donors_with_12_positive_genes",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "check": "Figure5_regulatory_evidence.minimum_visible_font_pt",
+      "actual": "5.30 pt",
+      "expected": "true",
+      "pass": true
+    }
+  ]
+}

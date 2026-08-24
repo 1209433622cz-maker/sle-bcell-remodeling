@@ -76,6 +76,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Use the Gate C8B specificity-comparator wording for Figure 5c.",
     )
+    parser.add_argument(
+        "--parallel-evidence-branches",
+        action="store_true",
+        help="Draw Figure 5a as parallel regulatory and response-evidence branches.",
+    )
     return parser.parse_args()
 
 
@@ -940,6 +945,7 @@ def build_figure5(
     source_dir: Path,
     *,
     proliferation_specificity_comparators: bool = False,
+    parallel_evidence_branches: bool = False,
 ) -> None:
     c6_dir = root / "phase17_v7/gateC6B/20260815_regulatory_evidence"
     regulators = read_csv(c6_dir / "01_CONFIRMATORY_REGULATOR_RESULTS.csv")
@@ -1008,17 +1014,73 @@ def build_figure5(
 
     design_axis.set_axis_off()
     panel_label(design_axis, "a", x=-0.09, y=1.08)
-    nodes = [
-        (0.04, "3 frozen SLE\ncontrasts", COLORS["internal"]),
-        (0.37, "8 frozen\nregulators", COLORS["external"]),
-        (0.70, "Orthogonal\nIFN response", COLORS["ifn"]),
-    ]
-    for x, text, color in nodes:
-        design_axis.text(x, 0.61, text, transform=design_axis.transAxes, ha="left", va="center", fontsize=7, bbox={"boxstyle": "round,pad=0.35", "facecolor": "white", "edgecolor": color, "linewidth": 1.0})
-    for start, end in ((0.27, 0.36), (0.60, 0.69)):
-        design_axis.annotate("", xy=(end, 0.61), xytext=(start, 0.61), xycoords=design_axis.transAxes, arrowprops={"arrowstyle": "-|>", "lw": 0.8, "color": COLORS["dark"]})
-    design_axis.text(0.5, 0.18, "Global BH: 24 tests | target deletion | 100 x 80% resampling", transform=design_axis.transAxes, ha="center", fontsize=6.1)
-    design_axis.set_title("Prespecified regulatory design", loc="left", pad=4)
+    if parallel_evidence_branches:
+        design_axis.text(
+            0.50,
+            0.80,
+            "Replicated IFN/ISG remodeling",
+            transform=design_axis.transAxes,
+            ha="center",
+            va="center",
+            fontsize=7.2,
+            bbox={"boxstyle": "round,pad=0.34", "facecolor": "white", "edgecolor": COLORS["ifn"], "linewidth": 1.0},
+        )
+        branches = [
+            (0.24, "Regulatory branch\n3 contrasts x 8 regulators", COLORS["external"]),
+            (0.76, "Response branch\nM5911 + IFN-beta", COLORS["internal"]),
+        ]
+        for x, text, color in branches:
+            design_axis.text(
+                x,
+                0.40,
+                text,
+                transform=design_axis.transAxes,
+                ha="center",
+                va="center",
+                fontsize=6.6,
+                linespacing=1.25,
+                bbox={"boxstyle": "round,pad=0.32", "facecolor": "white", "edgecolor": color, "linewidth": 1.0},
+            )
+            design_axis.annotate(
+                "",
+                xy=(x, 0.53),
+                xytext=(0.50, 0.70),
+                xycoords=design_axis.transAxes,
+                arrowprops={"arrowstyle": "-|>", "lw": 0.8, "color": COLORS["dark"]},
+            )
+        design_axis.text(
+            0.24,
+            0.07,
+            "Global BH: 24 tests\ntarget deletion + 100 x 80% resampling",
+            transform=design_axis.transAxes,
+            ha="center",
+            va="center",
+            fontsize=5.3,
+            linespacing=1.2,
+        )
+        design_axis.text(
+            0.76,
+            0.07,
+            "3 enrichment contrasts\nn=2 perturbation descriptive",
+            transform=design_axis.transAxes,
+            ha="center",
+            va="center",
+            fontsize=5.3,
+            linespacing=1.2,
+        )
+        design_axis.set_title("Parallel evidence architecture", loc="left", pad=4)
+    else:
+        nodes = [
+            (0.04, "3 frozen SLE\ncontrasts", COLORS["internal"]),
+            (0.37, "8 frozen\nregulators", COLORS["external"]),
+            (0.70, "Orthogonal\nIFN response", COLORS["ifn"]),
+        ]
+        for x, text, color in nodes:
+            design_axis.text(x, 0.61, text, transform=design_axis.transAxes, ha="left", va="center", fontsize=7, bbox={"boxstyle": "round,pad=0.35", "facecolor": "white", "edgecolor": color, "linewidth": 1.0})
+        for start, end in ((0.27, 0.36), (0.60, 0.69)):
+            design_axis.annotate("", xy=(end, 0.61), xytext=(start, 0.61), xycoords=design_axis.transAxes, arrowprops={"arrowstyle": "-|>", "lw": 0.8, "color": COLORS["dark"]})
+        design_axis.text(0.5, 0.18, "Global BH: 24 tests | target deletion | 100 x 80% resampling", transform=design_axis.transAxes, ha="center", fontsize=6.1)
+        design_axis.set_title("Prespecified regulatory design", loc="left", pad=4)
 
     contrast_short = {
         "gse174188_primary": "Discovery",
@@ -1078,7 +1140,12 @@ def build_figure5(
     donor_axis.set_xticks(np.arange(2), donor["donor_id"])
     donor_axis.set_ylabel("Mean paired Δlog2(x+1)")
     donor_axis.set_ylim(0, donor["mean_paired_log2p1_effect"].max() * 1.25)
-    donor_axis.set_title("IFN-beta response\n(n=2; descriptive)", loc="left", pad=4)
+    donor_title = (
+        "IFN-beta\nresponse\n(n=2; descriptive)"
+        if parallel_evidence_branches
+        else "IFN-beta response\n(n=2; descriptive)"
+    )
+    donor_axis.set_title(donor_title, loc="left", pad=4, fontsize=6.5 if parallel_evidence_branches else None)
     for index, row in donor.iterrows():
         donor_axis.text(index, row["mean_paired_log2p1_effect"] + 0.10, f"{int(row['positive_genes'])}/12", ha="center", fontsize=6)
     style_axis(donor_axis)
@@ -1106,6 +1173,7 @@ def main() -> None:
         figure_dir,
         source_dir,
         proliferation_specificity_comparators=args.proliferation_specificity_comparators,
+        parallel_evidence_branches=args.parallel_evidence_branches,
     )
     gate_label = next(
         (part[4:].upper() for part in output_dir.parts if part.lower().startswith("gatec")),

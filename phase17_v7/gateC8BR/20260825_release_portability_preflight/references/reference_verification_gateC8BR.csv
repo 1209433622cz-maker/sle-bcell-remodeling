@@ -1,0 +1,29 @@
+order,doi,expected_title_token,crossref_title,first_author,journal,year,volume,issue,pages,status
+1,10.1126/science.abf1970,Single-cell RNA-seq,Single-cell RNA-seq reveals cell type–specific molecular and genetic associations to lupus,Perez,Science,2022,376,6589,eabf1970,PASS
+2,10.1038/s41590-020-0743-0,Mapping systemic lupus,Mapping systemic lupus erythematosus heterogeneity at the single-cell level,Nehar-Belaid,Nature Immunology,2020,21,9,1094-1106,PASS
+3,10.1038/s41467-020-19894-4,muscat detects,muscat detects subpopulation-specific state transitions from multi-sample multi-condition single-cell transcriptomics data,Crowell,Nature Communications,2020,11,1,6077,PASS
+4,10.1038/s41467-021-25960-2,Confronting false discoveries,Confronting false discoveries in single-cell differential expression,Squair,Nature Communications,2021,12,1,5692,PASS
+5,10.1038/s41467-021-27150-6,scCODA,scCODA is a Bayesian model for compositional single-cell data analysis,Büttner,Nature Communications,2021,12,1,6876,PASS
+6,10.1186/s13059-017-1382-0,SCANPY,SCANPY: large-scale single-cell gene expression data analysis,Wolf,Genome Biology,2018,19,1,15,PASS
+7,10.1038/s41592-019-0619-0,"Fast, sensitive and accurate integration","Fast, sensitive and accurate integration of single-cell data with Harmony",Korsunsky,Nature Methods,2019,16,12,1289-1296,PASS
+8,10.1038/s41598-019-41695-z,From Louvain to Leiden,From Louvain to Leiden: guaranteeing well-connected communities,Traag,Scientific Reports,2019,9,1,5233,PASS
+9,10.1093/bioinformatics/btp616,edgeR,edgeR : a Bioconductor package for differential expression analysis of digital gene expression data,Robinson,Bioinformatics,2010,26,1,139-140,PASS
+10,10.1093/bioadv/vbac016,decoupleR,decoupleR: ensemble of computational methods to infer biological activities from omics data,Badia-i-Mompel,Bioinformatics Advances,2022,2,1,vbac016,PASS
+11,10.1093/nar/gkad841,Expanding the coverage,Expanding the coverage of regulons from high-confidence prior knowledge for accurate estimation of transcription factor activities,Müller-Dott,Nucleic Acids Research,2023,51,20,10934-10949,PASS
+12,10.1016/j.cels.2015.12.004,Molecular Signatures Database,The Molecular Signatures Database Hallmark Gene Set Collection,Liberzon,Cell Systems,2015,1,6,417-425,PASS
+13,10.4049/jimmunol.0902314,Major differences,Major Differences in the Responses of Primary Human Leukocyte Subsets to IFN-β,van Boxel-Dezaire,The Journal of Immunology,2010,185,10,5888-5899,PASS
+18,10.1186/s13073-023-01237-9,molecular endotypes of SLE,Analysis of transcriptomic features reveals molecular endotypes of SLE with clinical implications,Hubbard,Genome Medicine,2023,15,1,84,PASS
+19,10.1016/j.jaut.2025.103438,Interferon signatures fuel,Interferon signatures fuel B cell hyperactivity and plasmablast expansion in systemic lupus erythematosus,van Dooren,Journal of Autoimmunity,2025,154,,103438,PASS
+20,10.1016/j.cell.2016.03.008,Personalized Immunomonitoring,Personalized Immunomonitoring Uncovers Molecular Networks that Stratify Lupus Patients,Banchereau,Cell,2016,165,3,551-565,PASS
+21,10.1038/s41590-019-0398-x,immune cell landscape,The immune cell landscape in kidneys of patients with lupus nephritis,Arazi,Nature Immunology,2019,20,7,902-914,PASS
+22,10.1016/j.immuni.2018.08.015,Distinct Effector B Cells,Distinct Effector B Cells Induced by Unregulated Toll-like Receptor 7 Contribute to Pathogenic Responses in Systemic Lupus Erythematosus,Jenks,Immunity,2018,49,4,725-739.e6,PASS
+23,10.1002/art.38628,Modular Transcriptional Repertoire,Modular Transcriptional Repertoire Analyses of Adults With Systemic Lupus Erythematosus Reveal Distinct Type I and Type II Interferon Signatures,Chiche,Arthritis & Rheumatology,2014,66,6,1583-1595,PASS
+24,10.1002/art.42157,Phenotype Among Antigen,Plasmablast‐like Phenotype Among Antigen‐Experienced CXCR5 – CD19 low B Cells in Systemic Lupus Erythematosus,Szelinski,Arthritis & Rheumatology,2022,74,9,1556-1568,PASS
+25,10.3389/fimmu.2020.498703,FOXM1 Induction,Interferon α Enhances B Cell Activation Associated With FOXM1 Induction: Potential Novel Therapeutic Strategy for Targeting the Plasmablasts of Systemic Lupus Erythematosus,Akita,Frontiers in Immunology,2021,11,,498703,PASS
+26,10.1093/nar/gks461,competitive gene set test,Camera: a competitive gene set test accounting for inter-gene correlation,Wu,Nucleic Acids Research,2012,40,17,e133-e133,PASS
+27,10.1093/bioinformatics/btq401,ROAST,ROAST: rotation gene set tests for complex microarray experiments,Wu,Bioinformatics,2010,26,17,2176-2182,PASS
+28,10.1093/nar/gkv007,limma powers,limma powers differential expression analyses for RNA-sequencing and microarray studies,Ritchie,Nucleic Acids Research,2015,43,7,e47-e47,PASS
+29,10.1186/gb-2014-15-2-r29,voom,voom: precision weights unlock linear model analysis tools for RNA-seq read counts,Law,Genome Biology,2014,15,2,R29,PASS
+30,10.4049/jimmunol.2100339,Plasma Cell Differentiation,B Cell Activation and Plasma Cell Differentiation Are Promoted by IFN-λ in Systemic Lupus Erythematosus,Barnas,The Journal of Immunology,2021,207,11,2660-2672,PASS
+31,10.1016/j.jaut.2026.103575,persistent interferon signature,Single-cell RNA-seq reveals a persistent interferon signature in immune cells from systemic lupus erythematosus patients with high versus low polygenic risk scores despite antimalarial treatment,Sayadi,Journal of Autoimmunity,2026,161,,103575,PASS
+32,10.1136/lupus-2026-002042,promote differentiation of double negative 2 cells,Type I interferons enhance B cell activation and promote differentiation of double negative 2 cells in SLE,Faheem,Lupus Science & Medicine,2026,13,1,e002042,PASS

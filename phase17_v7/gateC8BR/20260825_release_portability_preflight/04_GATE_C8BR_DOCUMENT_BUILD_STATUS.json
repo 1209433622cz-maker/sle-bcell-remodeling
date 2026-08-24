@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-08-25",
+  "status": "PASS_GATE_C8BR_DOCUMENTS_BUILT",
+  "design_preset": "standard_business_brief",
+  "named_override": "Genome Medicine scientific submission: Times New Roman, black hierarchy, manuscript double spacing and continuous line numbering",
+  "outputs": [
+    {
+      "source": "01_manuscript/manuscript_v14_genome_medicine_release_preflight_2026-08-25.md",
+      "output": "04_submission/package_genome_medicine_gateC8BR_release_portability_preflight_2026-08-25/main_text/Genome_Medicine_Manuscript_GateC8BR_AUTHOR_COMPLETION_REQUIRED.docx",
+      "paragraphs": 156,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 6,
+      "bytes": 59720
+    },
+    {
+      "source": "01_manuscript/supplementary_information_v5_release_preflight_2026-08-25.md",
+      "output": "04_submission/package_genome_medicine_gateC8BR_release_portability_preflight_2026-08-25/additional_files/Additional_file_1_Supplementary_Information_GateC8BR.docx",
+      "paragraphs": 64,
+      "tables": 8,
+      "inline_shapes": 7,
+      "placeholders": 0,
+      "bytes": 2775076
+    },
+    {
+      "source": "04_submission/cover_letter_genome_medicine_gateC8BR_AUTHOR_COMPLETION_REQUIRED_2026-08-25.md",
+      "output": "04_submission/package_genome_medicine_gateC8BR_release_portability_preflight_2026-08-25/submission_docs/Genome_Medicine_Cover_Letter_GateC8BR_AUTHOR_CONFIRMATION_REQUIRED.docx",
+      "paragraphs": 17,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 2,
+      "bytes": 40181
+    }
+  ],
+  "assets": {
+    "main_figure_files": 10,
+    "supplementary_figure_files": 14,
+    "source_files": 12,
+    "source_zip": "04_submission/package_genome_medicine_gateC8BR_release_portability_preflight_2026-08-25/additional_files/Additional_file_2_Figure_Source_Data_GateC8BR.zip",
+    "source_zip_bytes": 178665,
+    "sensitivity_zip": "04_submission/package_genome_medicine_gateC8BR_release_portability_preflight_2026-08-25/additional_files/Additional_file_3_Regulator_Sensitivity_GateC8BR.zip",
+    "sensitivity_zip_bytes": 2336,
+    "full_statistical_zip": "04_submission/package_genome_medicine_gateC8BR_release_portability_preflight_2026-08-25/additional_files/Additional_file_4_Full_Statistical_Results_GateC8S_FROZEN.zip",
+    "full_statistical_zip_bytes": 8314122,
+    "full_statistical_zip_sha256": "AE903A53A19D7935464C601E2693192910EB4B59F5804D43DCA6ACA965D0B1F5",
+    "reproducibility_files": 5
+  }
+}

@@ -10,12 +10,13 @@ checksum-managed outside Git.
 
 ## Current status
 
-Gate C8S remains the canonical scientific freeze. Gate C8B editorial and
-literature preflight is the active submission-facing state: the Figure 5c
-specificity wording, current 2026 literature context, reference verification and
-WPS-rendered documents are complete without changing scientific estimates.
-Portal submission remains blocked only by author-controlled declarations,
-institutional confirmation, repository licensing and an immutable archive DOI.
+Gate C8S remains the canonical scientific freeze. Gate C8BR is the active
+submission-facing state: release portability, reader-facing copyediting,
+Figure 5a evidence semantics, current 2026 literature context, reference
+verification and WPS-rendered documents are complete without changing
+scientific estimates. Portal submission remains blocked only by
+author-controlled declarations, institutional confirmation, repository
+licensing and an immutable archive DOI.
 
 Working title:
 
@@ -45,37 +46,50 @@ The frozen evidence chain is:
 
 ## Active deliverables
 
-- Manuscript source: `01_manuscript/manuscript_v13_genome_medicine_gateC8B_editorial_preflight_2026-08-21.md`
-- Supplement source: `01_manuscript/supplementary_information_v4_gateC8B_editorial_preflight_2026-08-21.md`
+- Manuscript source: `01_manuscript/manuscript_v14_genome_medicine_release_preflight_2026-08-25.md`
+- Supplement source: `01_manuscript/supplementary_information_v5_release_preflight_2026-08-25.md`
 - Five main figures, seven supplementary figures and source data:
-  `phase17_v7/gateC8B/20260821_editorial_literature_preflight/` and the frozen
+  `phase17_v7/gateC8BR/20260825_release_portability_preflight/` and the frozen
   Gate C8S supplementary-figure source.
 - Full statistical-results archive: 12 complete gene-level branches and 12
   sanitized design matrices, with deterministic SHA-256 verification.
-- Final audit: `phase17_v7/gateC8B/20260821_editorial_literature_preflight/05_GATE_C8B_FINAL_AUDIT.md`
-- Local submission handoff: `04_submission/package_genome_medicine_gateC8B_editorial_preflight_2026-08-21/`
-- Deterministic local archive: `04_submission/package_genome_medicine_gateC8B_editorial_preflight_2026-08-21.zip`
+- Final audit: `phase17_v7/gateC8BR/20260825_release_portability_preflight/05_GATE_C8BR_FINAL_AUDIT.md`
+- Local submission handoff: `04_submission/package_genome_medicine_gateC8BR_release_portability_preflight_2026-08-25/`
+- Deterministic local archive: `04_submission/package_genome_medicine_gateC8BR_release_portability_preflight_2026-08-25.zip`
 
 Generated `04_submission/` binaries, upload packages and WPS page-review
-artifacts are intentionally excluded from Git. Four small Gate C8B Markdown
-sources (cover letter, author form, target decision and reporting checklist) are
-tracked explicitly so a fresh clone can rebuild the active package. Its SHA-256
-manifest and package status are recorded in the tracked Gate C8B output.
+artifacts are intentionally excluded from Git. Four small Gate C8BR Markdown
+sources (cover letter, author matrix, target decision and reporting checklist)
+are tracked explicitly so a fresh clone can rebuild the active package. Its
+SHA-256 manifest and package status are recorded in the tracked Gate C8BR
+output.
 
 ## Rebuild
 
-From the repository root on the tested Windows workstation:
+Create or refresh the pinned release environment from the repository root:
 
 ```powershell
 powershell -ExecutionPolicy Bypass `
-  -File .\audit_tools\run_6013RP_phase17_gateC8B_editorial_preflight.ps1
+  -File .\audit_tools\00_create_gateC8BR_release_env.ps1
 ```
 
-The runner rerenders Figure 5 from frozen Gate C6B data, carries forward
-byte-identical Figures 1-4 and frozen Gate C8S supplementary/statistical assets,
-verifies 27 DOI records, rebuilds manuscript sources and editable DOCX files,
-renders WPS PDFs and page PNGs, runs accessibility checks, and creates integrity
-manifests plus a deterministic submission archive.
+Then run the full Windows/WPS preflight:
+
+```powershell
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_6013RP_phase17_gateC8BR_release_portability_preflight.ps1
+```
+
+The runner discovers Python through an explicit argument, environment variable,
+named conda environment, repository-local environment or `PATH`. It qualifies
+imports and PNG/PDF/DOCX output, rerenders Figure 5 from frozen Gate C6B data,
+carries forward byte-identical Figures 1-4 and frozen Gate C8S
+supplementary/statistical assets, verifies 28 DOI records, rebuilds manuscript
+sources and editable DOCX files, renders WPS PDFs and all page PNGs, runs
+accessibility checks, and creates integrity manifests plus a deterministic
+submission archive. `-Mode PortableCore` builds the portable source/DOCX layer
+when WPS or `pdftoppm` is unavailable; a later `-Mode Full` run remains required
+before submission.
 
 ## Repository layout
 
@@ -98,8 +112,9 @@ more specific; they do not overwrite the RP history.
 
 ## Next gate
 
-Gate C8B is author-controlled completion: ethics determination, competing
-interests, funding, CRediT contributions, acknowledgements, all-author approval
-and originality confirmation, repository licence, and an immutable Zenodo or
-equivalent DOI. After these are supplied, rebuild once and perform the final
-portal preflight without changing frozen scientific results.
+Gate C8BR now moves to author-controlled completion: ethics determination,
+competing interests, funding, CRediT contributions, acknowledgements,
+all-author approval and originality confirmation, repository licence, and an
+immutable Zenodo or equivalent DOI. After these are supplied, replace every
+placeholder, rebuild once, and perform the zero-placeholder WPS and portal
+preflight without reopening frozen scientific analysis.
