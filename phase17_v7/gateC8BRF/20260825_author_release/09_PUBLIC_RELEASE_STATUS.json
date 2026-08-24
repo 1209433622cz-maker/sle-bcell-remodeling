@@ -1,0 +1,76 @@
+{
+  "created_at": "2026-08-25T05:15:04+08:00",
+  "decision": "PASS_GATE_C8BRF_PUBLIC_RELEASE_INTEGRITY_AND_DOI_ACTIVATION",
+  "scientific_freeze_source": "Gate C8S",
+  "scientific_estimates_changed": false,
+  "release": {
+    "repository": "https://github.com/1209433622cz-maker/sle-bcell-remodeling",
+    "release_url": "https://github.com/1209433622cz-maker/sle-bcell-remodeling/releases/tag/v1.0.0",
+    "tag": "v1.0.0",
+    "tag_object": "7e2786127bffc53dfc8b09c6e65f4527dba0ea73",
+    "frozen_commit": "e23d863fc06ca6c065b7ea63cd201846d215bbc8",
+    "draft": false,
+    "prerelease": false,
+    "published_at_utc": "2026-08-24T21:08:02Z",
+    "assets": [
+      {
+        "name": "package_genome_medicine_gateC8BRF_author_release_2026-08-25.zip",
+        "bytes": 46055879,
+        "sha256": "1FB1170B68E399EDBCF95400611FDF733BDCB3B64BA64640AF0958494CC7904A"
+      },
+      {
+        "name": "sle-bcell-remodeling-v1.0.0-source.zip",
+        "bytes": 41764089,
+        "sha256": "94FBE198A0EEAAA2D6A491EC1C10F5C4020D1D5A82985DAF19799ACDD73F6999"
+      },
+      {
+        "name": "SHA256SUMS_v1.0.0.txt",
+        "bytes": 235,
+        "sha256": "EA45AE5A2EF565E05DFFC96AD952E56E14D192916D678F3AD46A5AF15C3372D5"
+      }
+    ]
+  },
+  "zenodo": {
+    "record_id": 22086892,
+    "record_url": "https://zenodo.org/records/22086892",
+    "doi": "10.5281/zenodo.22086892",
+    "doi_url": "https://doi.org/10.5281/zenodo.22086892",
+    "status": "published",
+    "resource_type": "Software",
+    "version": "1.0.0",
+    "publication_date": "2026-08-25",
+    "files": [
+      {
+        "name": "package_genome_medicine_gateC8BRF_author_release_2026-08-25.zip",
+        "bytes": 46055879,
+        "md5": "21C301DCE8EA9A3C97CB2BED8DDD27EF"
+      },
+      {
+        "name": "sle-bcell-remodeling-v1.0.0-source.zip",
+        "bytes": 41764089,
+        "md5": "203A320A9EB6D3F1ECDBE82923156638"
+      },
+      {
+        "name": "SHA256SUMS_v1.0.0.txt",
+        "bytes": 235,
+        "md5": "CDC4376D9A1D7D3F2A8C2CD2B51C6DA0"
+      }
+    ]
+  },
+  "checks": {
+    "github_release_public": true,
+    "github_tag_resolves_to_frozen_commit": true,
+    "github_asset_count": 3,
+    "github_asset_sizes_match_local": true,
+    "github_sha256_matches_local": true,
+    "zenodo_record_published": true,
+    "zenodo_file_count": 3,
+    "zenodo_file_sizes_match_local": true,
+    "zenodo_md5_matches_local": true,
+    "doi_resolution_pass": true,
+    "cross_platform_filenames_match": true,
+    "licence_metadata_present": true,
+    "creator_orcid_metadata_present": true
+  },
+  "next_stage": "GENOME_MEDICINE_PORTAL_ENTRY_AND_SUBMISSION_RECEIPT_FREEZE"
+}
