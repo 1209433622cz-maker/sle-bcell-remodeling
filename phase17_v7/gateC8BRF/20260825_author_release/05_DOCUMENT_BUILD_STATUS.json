@@ -6,26 +6,26 @@
   "supplement_s7_pagination": "forced page break before S7 title",
   "outputs": [
     {
-      "source": "01_manuscript/manuscript_v16_genome_medicine_final_2026-08-25.md",
-      "output": "04_submission/package_genome_medicine_gateC8BRF_author_release_2026-08-25/main_text/Genome_Medicine_Manuscript.docx",
-      "paragraphs": 158,
+      "source": "01_manuscript/Manuscript.md",
+      "output": "04_submission/journal_submission/main_text/Manuscript.docx",
+      "paragraphs": 156,
       "tables": 0,
       "inline_shapes": 0,
       "placeholders": 0,
-      "bytes": 60005
+      "bytes": 59920
     },
     {
-      "source": "01_manuscript/supplementary_information_v7_final_2026-08-25.md",
-      "output": "04_submission/package_genome_medicine_gateC8BRF_author_release_2026-08-25/additional_files/Supplementary_Information.docx",
-      "paragraphs": 65,
+      "source": "01_manuscript/Supplementary_Information.md",
+      "output": "04_submission/journal_submission/additional_files/Supplementary_Information.docx",
+      "paragraphs": 64,
       "tables": 8,
       "inline_shapes": 7,
       "placeholders": 0,
-      "bytes": 2775576
+      "bytes": 2775511
     },
     {
-      "source": "04_submission/cover_letter_genome_medicine_final_2026-08-25.md",
-      "output": "04_submission/package_genome_medicine_gateC8BRF_author_release_2026-08-25/submission_docs/Cover_Letter.docx",
+      "source": "04_submission/Cover_Letter.md",
+      "output": "04_submission/journal_submission/submission_docs/Cover_Letter.docx",
       "paragraphs": 17,
       "tables": 0,
       "inline_shapes": 0,
@@ -37,11 +37,11 @@
     "main_figure_files": 10,
     "supplementary_figure_files": 14,
     "source_files": 12,
-    "source_zip": "04_submission/package_genome_medicine_gateC8BRF_author_release_2026-08-25/additional_files/Figure_Source_Data.zip",
+    "source_zip": "04_submission/journal_submission/additional_files/Figure_Source_Data.zip",
     "source_zip_sha256": "A3030E0639B3BABC50C9C49DD317C643DE12B1FCC0559834E9A4E7A499AD20E5",
-    "sensitivity_zip": "04_submission/package_genome_medicine_gateC8BRF_author_release_2026-08-25/additional_files/Regulator_Sensitivity.zip",
+    "sensitivity_zip": "04_submission/journal_submission/additional_files/Regulator_Sensitivity.zip",
     "sensitivity_zip_sha256": "C5731726E1D152B316C6CDBA977F70C56018624DC8ADD36505E277095C47A04D",
-    "full_statistical_zip": "04_submission/package_genome_medicine_gateC8BRF_author_release_2026-08-25/additional_files/Full_Statistical_Results.zip",
+    "full_statistical_zip": "04_submission/journal_submission/additional_files/Full_Statistical_Results.zip",
     "full_statistical_zip_sha256": "AE903A53A19D7935464C601E2693192910EB4B59F5804D43DCA6ACA965D0B1F5",
     "reproducibility_files": 15,
     "portal": {

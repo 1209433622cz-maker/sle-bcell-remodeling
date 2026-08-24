@@ -2,7 +2,6 @@
   "created_at": "2026-08-25",
   "status": "PASS_GATE_C8BRF_AUTHOR_APPROVED_ZERO_PLACEHOLDER_SOURCES_BUILT",
   "doi": "10.5281/zenodo.22086892",
-  "release_tag": "v1.0.0",
   "abstract_words": 318,
   "references": 32,
   "manuscript_placeholders": 0,
@@ -21,12 +20,12 @@
   ],
   "third_party_data_relicensed": false,
   "outputs": [
-    "01_manuscript/manuscript_v16_genome_medicine_final_2026-08-25.md",
-    "01_manuscript/supplementary_information_v7_final_2026-08-25.md",
-    "04_submission/cover_letter_genome_medicine_final_2026-08-25.md",
-    "04_submission/author_release_confirmation_gateC8BRF_2026-08-25.md",
-    "04_submission/reporting_checklist_gateC8BRF_2026-08-25.md",
-    "04_submission/zenodo_metadata_gateC8BRF_2026-08-25.json",
+    "01_manuscript/Manuscript.md",
+    "01_manuscript/Supplementary_Information.md",
+    "04_submission/Cover_Letter.md",
+    "04_submission/Author_Confirmation.md",
+    "04_submission/Reporting_Checklist.md",
+    "04_submission/Zenodo_Metadata.json",
     "CITATION.cff"
   ]
 }

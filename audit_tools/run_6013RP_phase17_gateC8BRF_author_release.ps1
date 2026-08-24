@@ -13,7 +13,7 @@ param(
 $ErrorActionPreference = "Stop"
 $Root = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 $RunDir = Join-Path $Root "phase17_v7\gateC8BRF\20260825_author_release"
-$Package = Join-Path $Root "04_submission\package_genome_medicine_gateC8BRF_author_release_2026-08-25"
+$Package = Join-Path $Root "04_submission\journal_submission"
 $RenderScript = Join-Path $PSScriptRoot "render_docx_with_wps.ps1"
 $A11yAudit = Join-Path $PSScriptRoot "docx_a11y_audit.py"
 $ContactSheets = Join-Path $PSScriptRoot "build_page_contact_sheets.py"
@@ -28,6 +28,8 @@ function Resolve-ReleasePython {
     $candidates = @()
     if ($ReleasePython) { $candidates += $ReleasePython }
     if ($env:SLE_BCELL_RELEASE_PYTHON) { $candidates += $env:SLE_BCELL_RELEASE_PYTHON }
+    $candidates += (Join-Path $env:ProgramData "miniforge3\envs\sle-bcell-submission\python.exe")
+    $candidates += (Join-Path $Root ".conda\envs\sle-bcell-submission\python.exe")
     $candidates += (Join-Path $env:ProgramData "miniforge3\envs\sle-bcell-c8br-release\python.exe")
     $candidates += (Join-Path $Root ".conda\envs\sle-bcell-c8br-release\python.exe")
     $candidates += (Get-Command python -All -ErrorAction SilentlyContinue | ForEach-Object { $_.Source })
@@ -36,7 +38,7 @@ function Resolve-ReleasePython {
             return (Resolve-Path -LiteralPath $candidate).Path
         }
     }
-    throw "No qualified sle-bcell-c8br-release Python was found. Run audit_tools\00_create_gateC8BR_release_env.ps1 or pass -ReleasePython."
+    throw "No qualified submission Python was found. Run audit_tools\create_submission_environment.ps1 or pass -ReleasePython."
 }
 
 function Resolve-PdfToPpm {
@@ -118,8 +120,8 @@ $PdfRasterizer = Resolve-PdfToPpm
 $Jobs = @(
     @{
         Name = "main"
-        Input = Join-Path $Package "main_text\Genome_Medicine_Manuscript.docx"
-        Output = Join-Path $Package "internal_qc\wps_render_main\Genome_Medicine_Manuscript_WPS.pdf"
+        Input = Join-Path $Package "main_text\Manuscript.docx"
+        Output = Join-Path $Package "internal_qc\wps_render_main\Manuscript_WPS.pdf"
         A11y = Join-Path $Package "internal_qc\main_text_a11y.json"
     },
     @{
@@ -173,4 +175,4 @@ Write-Host "[9/9] Running final author-release and deterministic-package audit..
 if ($LASTEXITCODE -ne 0) { throw "Final Gate C8BRF audit failed." }
 
 Write-Host "Gate C8BRF author release rebuilt successfully:"
-Write-Host (Join-Path $Root "04_submission\package_genome_medicine_gateC8BRF_author_release_2026-08-25.zip")
+Write-Host (Join-Path $Root "04_submission\journal_submission.zip")

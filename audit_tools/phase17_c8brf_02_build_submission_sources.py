@@ -12,17 +12,16 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RUN_DIR = ROOT / "phase17_v7" / "gateC8BRF" / "20260825_author_release"
 SOURCE_MANUSCRIPT = ROOT / "01_manuscript" / "manuscript_v15_genome_medicine_journal_facing_prefreeze_2026-08-25.md"
-MANUSCRIPT = ROOT / "01_manuscript" / "manuscript_v16_genome_medicine_final_2026-08-25.md"
+MANUSCRIPT = ROOT / "01_manuscript" / "Manuscript.md"
 SOURCE_SUPPLEMENT = ROOT / "01_manuscript" / "supplementary_information_v6_journal_facing_2026-08-25.md"
-SUPPLEMENT = ROOT / "01_manuscript" / "supplementary_information_v7_final_2026-08-25.md"
+SUPPLEMENT = ROOT / "01_manuscript" / "Supplementary_Information.md"
 SOURCE_COVER = ROOT / "04_submission" / "cover_letter_genome_medicine_gateC8BRP_AUTHOR_COMPLETION_REQUIRED_2026-08-25.md"
-COVER = ROOT / "04_submission" / "cover_letter_genome_medicine_final_2026-08-25.md"
-AUTHOR_RECORD = ROOT / "04_submission" / "author_release_confirmation_gateC8BRF_2026-08-25.md"
-CHECKLIST = ROOT / "04_submission" / "reporting_checklist_gateC8BRF_2026-08-25.md"
-ZENODO_METADATA = ROOT / "04_submission" / "zenodo_metadata_gateC8BRF_2026-08-25.json"
+COVER = ROOT / "04_submission" / "Cover_Letter.md"
+AUTHOR_RECORD = ROOT / "04_submission" / "Author_Confirmation.md"
+CHECKLIST = ROOT / "04_submission" / "Reporting_Checklist.md"
+ZENODO_METADATA = ROOT / "04_submission" / "Zenodo_Metadata.json"
 README = ROOT / "README.md"
 CITATION = ROOT / "CITATION.cff"
-RELEASE_TAG = "v1.0.0"
 
 
 def parse_args() -> argparse.Namespace:
@@ -61,9 +60,9 @@ def build_manuscript(doi: str) -> tuple[str, int]:
     text = SOURCE_MANUSCRIPT.read_text(encoding="utf-8-sig")
     text = replace_once(
         text,
-        "**Version:** Journal-facing author-completion draft v15, 25 August 2026",
-        "**Version:** Final author-approved submission v16, 25 August 2026",
-        "version",
+        "**Version:** Journal-facing author-completion draft v15, 25 August 2026\n\n**Date:** 25 August 2026\n\n",
+        "",
+        "manuscript drafting metadata",
     )
     text = replace_section(
         text,
@@ -78,7 +77,7 @@ This secondary study used only publicly available, de-identified human transcrip
         "### Availability of data and materials",
         "### Competing interests",
         f"""
-The datasets analysed are publicly available through NCBI GEO under GSE174188, GSE135779 and GSE23307 [14-16]. Version-controlled analysis code, machine-readable decisions, derived source-data tables and SHA-256 provenance records are available at https://github.com/1209433622cz-maker/sle-bcell-remodeling and in the immutable release archived under doi:{doi} [17]. The cited software release is tagged `{RELEASE_TAG}`. Original project code is licensed under the MIT License; original manuscript text, composite figures, project documentation and project-generated derived source-data tables are licensed under CC BY 4.0. These licences do not relicense GEO, CELLxGENE or other third-party source material. Large recomputable matrices are not duplicated from their source repositories.
+The datasets analysed are publicly available through NCBI GEO under GSE174188, GSE135779 and GSE23307 [14-16]. Version-controlled analysis code, machine-readable decisions, derived source-data tables and SHA-256 provenance records are available at https://github.com/1209433622cz-maker/sle-bcell-remodeling and in the immutable archive at doi:{doi} [17]. Original project code is licensed under the MIT License; original manuscript text, composite figures, project documentation and project-generated derived source-data tables are licensed under CC BY 4.0. These licences do not relicense GEO, CELLxGENE or other third-party source material. Large recomputable matrices are not duplicated from their source repositories.
 """,
     )
     text = replace_section(
@@ -142,14 +141,14 @@ def build_supplement(doi: str) -> str:
     text = SOURCE_SUPPLEMENT.read_text(encoding="utf-8-sig")
     text = replace_once(
         text,
-        "**Version:** Submission draft, 25 August 2026",
-        "**Version:** Final author-approved submission v7, 25 August 2026",
-        "supplement version",
+        "**Version:** Submission draft, 25 August 2026\n\n",
+        "",
+        "supplement drafting metadata",
     )
     text = replace_once(
         text,
         "| Immutable release | Final archive DOI will be inserted in the main manuscript availability statement after author approval |",
-        f"| Immutable release | Zenodo doi:{doi}; GitHub release `{RELEASE_TAG}` |",
+        f"| Immutable archive | Zenodo doi:{doi} |",
         "supplement release record",
     )
     if text.count("[[") != 7 or text.count("[[SUPPLEMENTARY_FIGURE:S") != 7:
@@ -208,7 +207,6 @@ def author_record(doi: str) -> str:
 - [x] Original text, composite figures, documentation and project-generated derived source-data tables: CC BY 4.0.
 - [x] GEO, CELLxGENE and other third-party source material is explicitly excluded from project relicensing.
 - [x] Public source UUID provenance and privacy audit passed.
-- [x] Release tag: `{RELEASE_TAG}`.
 - [x] Persistent DOI: `https://doi.org/{doi}`.
 
 ## APC handling
@@ -222,7 +220,7 @@ def reporting_checklist(doi: str) -> str:
 
 ## Scientific freeze
 
-- [x] Gate C8S remains the canonical scientific freeze.
+- [x] The scientific analysis is frozen and unchanged during publication engineering.
 - [x] Main panel-data assertions pass 46/46.
 - [x] Supplementary-figure panel-data assertions pass 29/29.
 - [x] No new cohort, cluster, threshold, gene, regulator or signature was added.
@@ -245,72 +243,21 @@ def reporting_checklist(doi: str) -> str:
 - [x] Both authors approved every submission component and confirmed originality and exclusive submission.
 - [x] Repository licence scope excludes third-party public data.
 - [x] Release DOI: `https://doi.org/{doi}`.
-- [x] Canonical release tag: `{RELEASE_TAG}`.
 - [x] Deterministic ZIP rebuild, WPS all-page review and accessibility audit are required to pass before journal upload.
-
-**Decision target:** `PASS_GATE_C8BR_RELEASE_PORTABILITY_AUTHOR_COMPLETION_AND_PORTAL_PREFLIGHT`.
 """
 
 
-def build_readme(doi: str) -> str:
+def validate_readme(doi: str) -> None:
     text = README.read_text(encoding="utf-8-sig")
-    text = replace_section(
-        text,
-        "## Current status",
-        "Working title:",
-        f"""
-Gate C8S remains the canonical scientific freeze. Gate C8BRF is the author-approved release state: all declarations are complete, the five main figures are rendered at 170 mm, Figure 1 publication Source Data is sanitized through its builder, Figure 2 public UUID governance has passed, and the release is citable under doi:{doi}. Scientific estimates remain unchanged.
-""",
+    required = (
+        "01_manuscript/Manuscript.md",
+        "01_manuscript/Supplementary_Information.md",
+        "04_submission/journal_submission/",
+        doi,
     )
-    text = replace_section(
-        text,
-        "## Active deliverables",
-        "## Rebuild",
-        f"""
-- Manuscript source: `01_manuscript/manuscript_v16_genome_medicine_final_2026-08-25.md`
-- Supplement source: `01_manuscript/supplementary_information_v7_final_2026-08-25.md`
-- Final main figures and Source Data: `phase17_v7/gateC8BRF/20260825_author_release/`
-- Canonical scientific freeze and supplementary figures: `phase17_v7/gateC8S/20260821_supplementary_traceability_freeze/`
-- Final local submission package: `04_submission/package_genome_medicine_gateC8BRF_author_release_2026-08-25/`
-- Deterministic local archive: `04_submission/package_genome_medicine_gateC8BRF_author_release_2026-08-25.zip`
-- Release tag: `{RELEASE_TAG}`
-- DOI: `https://doi.org/{doi}`
-
-Generated package binaries and WPS page-review artifacts remain excluded from Git; tracked status, provenance and audit records are sufficient to reconstruct and verify them.
-
-## Licence and citation
-
-Original repository code is MIT-licensed. Original manuscript text, composite figures, project documentation and project-generated derived source-data tables are CC BY 4.0. Public GEO/CELLxGENE data and other third-party material are excluded from these project licences; see `LICENSE_SCOPE.md`.
-""",
-    )
-    text = replace_section(
-        text,
-        "## Rebuild",
-        "## Repository layout",
-        f"""
-Create or refresh the pinned release environment, then run the final workflow:
-
-```powershell
-powershell -ExecutionPolicy Bypass `
-  -File .\\audit_tools\\00_create_gateC8BR_release_env.ps1
-
-powershell -ExecutionPolicy Bypass `
-  -File .\\audit_tools\\run_6013RP_phase17_gateC8BRF_author_release.ps1 `
-  -Doi "{doi}"
-```
-
-The workflow rebuilds the author-approved sources, 170-mm figures, editable DOCX files, REQUIRED/OPTIONAL portal maps, WPS review PDFs, all page PNGs, accessibility reports, manifests and the canonical deterministic ZIP.
-""",
-    )
-    text = replace_section(
-        text,
-        "## Next gate",
-        None,
-        """
-Scientific analysis is closed. The next stage is journal operations: confirm APC eligibility with the submission account or institutional library, enter the final metadata and declarations into the Genome Medicine portal, upload only the REQUIRED file map by default, compare every portal field against the final manuscript, and submit. New analyses should be opened only in response to a decision-changing reviewer request.
-""",
-    )
-    return text
+    missing = [token for token in required if token not in text]
+    if missing:
+        raise RuntimeError(f"README is missing current submission pointers: {missing}")
 
 
 def citation_cff(doi: str) -> str:
@@ -408,14 +355,13 @@ def main() -> None:
     ZENODO_METADATA.write_text(
         json.dumps(metadata, indent=2) + "\n", encoding="utf-8", newline="\n"
     )
-    README.write_text(build_readme(doi), encoding="utf-8", newline="\n")
+    validate_readme(doi)
     CITATION.write_text(citation_cff(doi), encoding="utf-8", newline="\n")
 
     status = {
         "created_at": "2026-08-25",
         "status": "PASS_GATE_C8BRF_AUTHOR_APPROVED_ZERO_PLACEHOLDER_SOURCES_BUILT",
         "doi": doi,
-        "release_tag": RELEASE_TAG,
         "abstract_words": abstract_words,
         "references": 32,
         "manuscript_placeholders": manuscript.count("[["),

@@ -14,7 +14,7 @@
 - WPS pages: 29 manuscript, 13 supplement, 1 cover.
 - Accessibility findings: 0 high, 0 medium, 0 low for all three DOCX files.
 - Portal maps: 11 REQUIRED, 7 OPTIONAL.
-- Deterministic ZIP: 46,055,879 bytes; SHA-256 `1FB1170B68E399EDBCF95400611FDF733BDCB3B64BA64640AF0958494CC7904A`.
+- Deterministic ZIP: 45,995,822 bytes; SHA-256 `C6FA38AEEFDCD8BD077283EFF3E3586DF2A7F2AC534F8E69656A421C2EB1044F`.
 
 ## Check matrix
 
@@ -38,4 +38,4 @@
 
 ## Next stage
 
-Publish the exact GitHub v1.0.0 release and Zenodo record, verify DOI resolution, then complete field-by-field Genome Medicine portal entry and submit.
+Complete field-by-field Genome Medicine portal entry, verify the generated submission PDF, submit, and freeze the receipt and manuscript number.

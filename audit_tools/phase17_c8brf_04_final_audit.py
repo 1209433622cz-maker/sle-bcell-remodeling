@@ -20,16 +20,16 @@ from pypdf import PdfReader
 ROOT = Path(__file__).resolve().parents[1]
 RUN_DIR = ROOT / "phase17_v7" / "gateC8BRF" / "20260825_author_release"
 C8S_RUN = ROOT / "phase17_v7" / "gateC8S" / "20260821_supplementary_traceability_freeze"
-PACKAGE = ROOT / "04_submission" / "package_genome_medicine_gateC8BRF_author_release_2026-08-25"
-PACKAGE_ZIP = ROOT / "04_submission" / "package_genome_medicine_gateC8BRF_author_release_2026-08-25.zip"
-MANUSCRIPT = ROOT / "01_manuscript" / "manuscript_v16_genome_medicine_final_2026-08-25.md"
-SUPPLEMENT = ROOT / "01_manuscript" / "supplementary_information_v7_final_2026-08-25.md"
-COVER = ROOT / "04_submission" / "cover_letter_genome_medicine_final_2026-08-25.md"
-METADATA = ROOT / "04_submission" / "zenodo_metadata_gateC8BRF_2026-08-25.json"
-MAIN_DOCX = PACKAGE / "main_text" / "Genome_Medicine_Manuscript.docx"
+PACKAGE = ROOT / "04_submission" / "journal_submission"
+PACKAGE_ZIP = ROOT / "04_submission" / "journal_submission.zip"
+MANUSCRIPT = ROOT / "01_manuscript" / "Manuscript.md"
+SUPPLEMENT = ROOT / "01_manuscript" / "Supplementary_Information.md"
+COVER = ROOT / "04_submission" / "Cover_Letter.md"
+METADATA = ROOT / "04_submission" / "Zenodo_Metadata.json"
+MAIN_DOCX = PACKAGE / "main_text" / "Manuscript.docx"
 SUPP_DOCX = PACKAGE / "additional_files" / "Supplementary_Information.docx"
 COVER_DOCX = PACKAGE / "submission_docs" / "Cover_Letter.docx"
-MAIN_PDF = PACKAGE / "internal_qc" / "wps_render_main" / "Genome_Medicine_Manuscript_WPS.pdf"
+MAIN_PDF = PACKAGE / "internal_qc" / "wps_render_main" / "Manuscript_WPS.pdf"
 SUPP_PDF = PACKAGE / "internal_qc" / "wps_render_supplement" / "Supplementary_Information_WPS.pdf"
 COVER_PDF = PACKAGE / "internal_qc" / "wps_render_cover_letter" / "Cover_Letter_WPS.pdf"
 FIXED_ZIP_TIME = (2026, 8, 25, 0, 0, 0)
@@ -109,7 +109,7 @@ def write_deterministic_zip(output: Path) -> None:
 
 
 def build_deterministic_archive() -> tuple[int, str]:
-    with tempfile.TemporaryDirectory(prefix="gateC8BRF_zip_") as temp_dir:
+    with tempfile.TemporaryDirectory(prefix="journal_submission_zip_") as temp_dir:
         first = Path(temp_dir) / "first.zip"
         second = Path(temp_dir) / "second.zip"
         write_deterministic_zip(first)
@@ -121,15 +121,16 @@ def build_deterministic_archive() -> tuple[int, str]:
 
 
 def package_readme(doi: str) -> str:
-    return f"""# Genome Medicine final author-approved package
+    return f"""# Journal submission package
 
-This package was generated reproducibly from the Gate C8S scientific freeze and Gate C8BRF publication builders.
+This directory is the current author-approved, journal-facing submission set.
+Internal build identifiers and draft numbers are intentionally excluded from
+submission filenames.
 
-## Release
+## Scientific and release status
 
 - DOI: https://doi.org/{doi}
-- GitHub release tag: `v1.0.0`
-- Scientific estimates changed during final publication engineering: NO
+- Scientific estimates changed during final publication engineering: no
 - Main panel-data assertions: PASS 46/46
 - Supplementary-figure panel-data assertions: PASS 29/29
 - Main figures: vector PDF at 170 mm plus 600-dpi PNG
@@ -140,7 +141,10 @@ This package was generated reproducibly from the Gate C8S scientific freeze and 
 
 ## Portal policy
 
-Use `portal_upload_required/` as the default 11-file upload set. The seven PDFs in `portal_upload_optional/` duplicate figures embedded in Supplementary Information and should be used only if the journal portal explicitly requires standalone supplementary figures.
+Use `portal_upload_required/` as the default 11-file upload set. The seven PDFs
+in `portal_upload_optional/` duplicate figures embedded in Supplementary
+Information and should be used only if the journal portal explicitly requires
+standalone supplementary figures.
 
 ## Verification
 
@@ -278,13 +282,30 @@ def main() -> None:
     )
     required_aliases = {row["portal_alias"] for row in required_rows}
     optional_aliases = {row["portal_alias"] for row in optional_rows}
+    required_disk_files = {
+        path.relative_to(PACKAGE).as_posix()
+        for path in (PACKAGE / "portal_upload_required").iterdir()
+        if path.is_file()
+    }
+    optional_disk_files = {
+        path.relative_to(PACKAGE).as_posix()
+        for path in (PACKAGE / "portal_upload_optional").iterdir()
+        if path.is_file()
+    }
     check(
         "portal_required_optional_policy",
         len(required_rows) == 11
         and len(optional_rows) == 7
+        and required_disk_files == required_aliases
+        and optional_disk_files == optional_aliases
         and not required_aliases.intersection(optional_aliases)
         and not any("Supplementary_Figure_S" in value for value in required_aliases),
-        {"required": len(required_rows), "optional": len(optional_rows)},
+        {
+            "required_manifest": len(required_rows),
+            "required_on_disk": len(required_disk_files),
+            "optional_manifest": len(optional_rows),
+            "optional_on_disk": len(optional_disk_files),
+        },
     )
 
     docx_values = {
@@ -397,21 +418,20 @@ def main() -> None:
         "created_at": "2026-08-25",
         "decision": decision,
         "primary_target": "Genome Medicine",
-        "source_scientific_freeze": "Gate C8S",
+        "source_scientific_freeze": "frozen disease-blind analysis",
         "scientific_estimates_changed": False,
         "author_completion_pass": True,
         "technical_package_pass": True,
         "portal_upload_set_authorized": True,
         "journal_submission_performed": False,
         "doi": doi,
-        "release_tag": "v1.0.0",
         "page_counts": page_counts,
         "manifest_payload_files": len(manifest),
         "package_zip": PACKAGE_ZIP.relative_to(ROOT).as_posix(),
         "package_zip_bytes": package_bytes,
         "package_zip_sha256": package_sha,
         "checks": checks,
-        "next_stage": "Publish the exact GitHub v1.0.0 release and Zenodo record, verify DOI resolution, then complete field-by-field Genome Medicine portal entry and submit.",
+        "next_stage": "Complete field-by-field Genome Medicine portal entry, verify the generated submission PDF, submit, and freeze the receipt and manuscript number.",
     }
     (RUN_DIR / "06_GATE_C8BRF_FINAL_AUDIT.json").write_text(
         json.dumps(audit, indent=2) + "\n", encoding="utf-8", newline="\n"
@@ -463,7 +483,6 @@ def main() -> None:
                 "created_at": "2026-08-25",
                 "status": decision,
                 "doi": doi,
-                "release_tag": "v1.0.0",
                 "package_zip_bytes": package_bytes,
                 "package_zip_sha256": package_sha,
                 "canonical_builder_output": True,

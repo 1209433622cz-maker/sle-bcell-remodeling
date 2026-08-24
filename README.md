@@ -1,4 +1,4 @@
-# SLE B-cell remodeling study
+# Disease-blind single-cell analysis of B-cell remodeling in SLE
 
 This repository contains the auditable analysis and manuscript sources for a
 raw-count, hierarchy-aware single-cell study of B-cell remodeling in systemic
@@ -8,9 +8,13 @@ Repository: [`1209433622cz-maker/sle-bcell-remodeling`](https://github.com/12094
 Large public matrices and cell-level intermediates are accession- and
 checksum-managed outside Git.
 
-## Current status
+## Study status
 
-Gate C8S remains the canonical scientific freeze. Gate C8BRF is the author-approved release state: all declarations are complete, the five main figures are rendered at 170 mm, Figure 1 publication Source Data is sanitized through its builder, Figure 2 public UUID governance has passed, and the release is citable under doi:10.5281/zenodo.22086892. Scientific estimates remain unchanged.
+The scientific analysis is frozen and the manuscript, supplementary information,
+figures, source data and declarations have completed final author and technical
+review. The citable archive is available at
+[doi:10.5281/zenodo.22086892](https://doi.org/10.5281/zenodo.22086892).
+The next operational step is journal-portal entry and submission receipt freeze.
 
 Working title:
 
@@ -38,18 +42,21 @@ The frozen evidence chain is:
   response evidence; neither establishes causality, direct TF binding or a
   unique upstream ligand.
 
-## Active deliverables
+## Current manuscript and submission files
 
-- Manuscript source: `01_manuscript/manuscript_v16_genome_medicine_final_2026-08-25.md`
-- Supplement source: `01_manuscript/supplementary_information_v7_final_2026-08-25.md`
-- Final main figures and Source Data: `phase17_v7/gateC8BRF/20260825_author_release/`
-- Canonical scientific freeze and supplementary figures: `phase17_v7/gateC8S/20260821_supplementary_traceability_freeze/`
-- Final local submission package: `04_submission/package_genome_medicine_gateC8BRF_author_release_2026-08-25/`
-- Deterministic local archive: `04_submission/package_genome_medicine_gateC8BRF_author_release_2026-08-25.zip`
-- Release tag: `v1.0.0`
-- DOI: `https://doi.org/10.5281/zenodo.22086892`
+- [Manuscript source](01_manuscript/Manuscript.md)
+- [Supplementary information source](01_manuscript/Supplementary_Information.md)
+- [Research proposal](01_manuscript/Research_Proposal.md)
+- [Cover letter source](04_submission/Cover_Letter.md)
+- [Author confirmation](04_submission/Author_Confirmation.md)
+- [Reporting checklist](04_submission/Reporting_Checklist.md)
+- [Portal upload guide](04_submission/Portal_Upload_Guide.md)
+- [Journal submission package](04_submission/journal_submission/)
 
-Generated package binaries and WPS page-review artifacts remain excluded from Git; tracked status, provenance and audit records are sufficient to reconstruct and verify them.
+Git history and the immutable public release preserve superseded submission
+drafts. The stable filenames above are the only current author-facing entry
+points. Submission filenames do not contain internal gate labels, build dates
+or draft numbers.
 
 ## Licence and citation
 
@@ -57,38 +64,45 @@ Original repository code is MIT-licensed. Original manuscript text, composite fi
 
 ## Rebuild
 
-Create or refresh the pinned release environment, then run the final workflow:
+Create or refresh the pinned document environment, then run the submission build:
 
 ```powershell
 powershell -ExecutionPolicy Bypass `
-  -File .\audit_tools\00_create_gateC8BR_release_env.ps1
+  -File .\audit_tools\create_submission_environment.ps1
 
 powershell -ExecutionPolicy Bypass `
-  -File .\audit_tools\run_6013RP_phase17_gateC8BRF_author_release.ps1 `
+  -File .\audit_tools\build_submission_package.ps1 `
   -Doi "10.5281/zenodo.22086892"
 ```
 
-The workflow rebuilds the author-approved sources, 170-mm figures, editable DOCX files, REQUIRED/OPTIONAL portal maps, WPS review PDFs, all page PNGs, accessibility reports, manifests and the canonical deterministic ZIP.
+The workflow rebuilds the author-approved sources, 170-mm figures, editable
+DOCX files, required and optional portal maps, WPS review PDFs, page images,
+accessibility reports, manifests and a deterministic local archive. Internal
+audit identifiers remain inside the provenance layer and are not used in
+journal-facing filenames.
 
 ## Repository layout
 
-- `00_project_management/`: advisor audits, action records and gate decisions.
-- `01_manuscript/`: research proposal, manuscript and supplement sources.
+- `00_project_management/`: advisor audits, action records and formal decisions.
+- `01_manuscript/`: current manuscript sources and historical drafting provenance.
 - `02_analysis/`: environments, acquisition scripts, inventories and runbooks.
 - `03_results/`: retained result bundles and earlier figure provenance.
 - `audit_tools/`: executable analysis, build and audit scripts.
-- `phase17_v7/`: compact machine-readable gate outputs and publication figures.
-- `04_submission/`: generated local submission package, excluded from Git.
+- The analysis run tree contains machine-readable audit outputs and publication figures.
+- `04_submission/`: current portal guide, author records and journal-facing package.
 
 ## Research proposal
 
-The active completed RP is
-`01_manuscript/research_proposal_v16_gateC7_completed_2026-08-20.md`. The earlier
-`research_proposal_v14_methodologically_revised_2026-08-10.md` and its DOCX/PDF
-renderings remain the pre-outcome methodological provenance. Later manuscripts
-supersede both RP versions only where frozen analyses and reporting details are
-more specific; they do not overwrite the RP history.
+The active completed RP is [Research_Proposal.md](01_manuscript/Research_Proposal.md).
+Earlier proposal files remain as pre-outcome methodological provenance. The
+current manuscript is more specific where completed analyses require it, but it
+does not overwrite the proposal history.
 
-## Next gate
+## Next stage
 
-Scientific analysis is closed. The next stage is journal operations: confirm APC eligibility with the submission account or institutional library, enter the final metadata and declarations into the Genome Medicine portal, upload only the REQUIRED file map by default, compare every portal field against the final manuscript, and submit. New analyses should be opened only in response to a decision-changing reviewer request.
+Scientific analysis is closed. The next stage is journal operations: confirm
+APC eligibility with the submission account or institutional library, enter the
+final metadata and declarations into the Genome Medicine portal, upload the
+required file set, compare every portal field and generated PDF against the
+manuscript, and submit. New analyses should be opened only in response to a
+decision-changing reviewer request.

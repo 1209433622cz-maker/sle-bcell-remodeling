@@ -26,23 +26,26 @@ _phase17_review_pack/
 03_results/*
 !03_results/phase17_v7_figure1_study_design_2026-08-10/
 
-# Legacy submission builds; retain only the active design and final RP QC note.
+# Legacy submission builds are local; retain only stable author-facing files.
 04_submission/*
-!04_submission/figure_architecture_v7_nature_style_2026-08-10.md
-!04_submission/figure_architecture_v8_gateC6A_2026-08-15.md
-!04_submission/cover_letter_genome_medicine_gateC8BR_AUTHOR_COMPLETION_REQUIRED_2026-08-25.md
-!04_submission/author_completion_matrix_gateC8BR_2026-08-25.md
-!04_submission/journal_target_decision_gateC8BR_2026-08-25.md
-!04_submission/reporting_checklist_gateC8BR_2026-08-25.md
-!04_submission/cover_letter_genome_medicine_gateC8BRP_AUTHOR_COMPLETION_REQUIRED_2026-08-25.md
-!04_submission/author_completion_matrix_gateC8BRP_2026-08-25.md
-!04_submission/journal_target_decision_gateC8BRP_2026-08-25.md
-!04_submission/reporting_checklist_gateC8BRP_2026-08-25.md
-!04_submission/document_qc/
-04_submission/document_qc/*
-!04_submission/document_qc/research_proposal_v14_2026-08-10_external_audit_integrated_qc_r2/
-04_submission/document_qc/research_proposal_v14_2026-08-10_external_audit_integrated_qc_r2/*
-!04_submission/document_qc/research_proposal_v14_2026-08-10_external_audit_integrated_qc_r2/RESEARCH_PROPOSAL_V14_QC.md
+!04_submission/README.md
+!04_submission/Cover_Letter.md
+!04_submission/Author_Confirmation.md
+!04_submission/Reporting_Checklist.md
+!04_submission/Portal_Upload_Guide.md
+!04_submission/Zenodo_Metadata.json
+!04_submission/journal_submission/
+04_submission/journal_submission/*
+!04_submission/journal_submission/README.md
+!04_submission/journal_submission/MANIFEST_SHA256.csv
+!04_submission/journal_submission/portal_upload_required/
+!04_submission/journal_submission/portal_upload_required/*
+!04_submission/journal_submission/submission_docs/
+04_submission/journal_submission/submission_docs/*
+!04_submission/journal_submission/submission_docs/PORTAL_UPLOAD_FILENAME_MAP.csv
+!04_submission/journal_submission/submission_docs/PORTAL_UPLOAD_REQUIRED.csv
+!04_submission/journal_submission/submission_docs/PORTAL_UPLOAD_OPTIONAL.csv
+!04_submission/journal_submission/submission_docs/PORTAL_UPLOAD_POLICY.txt
 phase17_v7/gateC8BRP/**/visual_qa/
 
 # Local software-test matrices and generated diagnostics.

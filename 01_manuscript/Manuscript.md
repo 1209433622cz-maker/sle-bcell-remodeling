@@ -14,10 +14,6 @@
 
 **Running title:** Replicated IFN remodeling in SLE B cells
 
-**Version:** Final author-approved submission v16, 25 August 2026
-
-**Date:** 25 August 2026
-
 ## Abstract
 
 **Background:** SLE alters both the abundance and transcriptional state of peripheral B cells, but these layers can be conflated by outcome-informed annotation, cell-level inference and technically imbalanced cohorts.
@@ -194,7 +190,7 @@ Not applicable; the manuscript contains no identifiable individual participant i
 
 ### Availability of data and materials
 
-The datasets analysed are publicly available through NCBI GEO under GSE174188, GSE135779 and GSE23307 [14-16]. Version-controlled analysis code, machine-readable decisions, derived source-data tables and SHA-256 provenance records are available at https://github.com/1209433622cz-maker/sle-bcell-remodeling and in the immutable release archived under doi:10.5281/zenodo.22086892 [17]. The cited software release is tagged `v1.0.0`. Original project code is licensed under the MIT License; original manuscript text, composite figures, project documentation and project-generated derived source-data tables are licensed under CC BY 4.0. These licences do not relicense GEO, CELLxGENE or other third-party source material. Large recomputable matrices are not duplicated from their source repositories.
+The datasets analysed are publicly available through NCBI GEO under GSE174188, GSE135779 and GSE23307 [14-16]. Version-controlled analysis code, machine-readable decisions, derived source-data tables and SHA-256 provenance records are available at https://github.com/1209433622cz-maker/sle-bcell-remodeling and in the immutable archive at doi:10.5281/zenodo.22086892 [17]. Original project code is licensed under the MIT License; original manuscript text, composite figures, project documentation and project-generated derived source-data tables are licensed under CC BY 4.0. These licences do not relicense GEO, CELLxGENE or other third-party source material. Large recomputable matrices are not duplicated from their source repositories.
 
 ### Competing interests
 

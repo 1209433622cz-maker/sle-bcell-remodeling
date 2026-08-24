@@ -1,4 +1,4 @@
-# SLE B-cell remodeling analysis v1.0.0
+# SLE B-cell remodeling analysis public release
 
 This is the author-approved reproducible release supporting the manuscript:
 

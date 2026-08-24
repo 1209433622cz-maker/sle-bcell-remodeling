@@ -2,8 +2,6 @@
 
 ## Disease-blind single-cell reconstruction separates unstable B-cell states from reproducible interferon remodeling in systemic lupus erythematosus
 
-**Version:** Final author-approved submission v7, 25 August 2026
-
 **Authors:** Zhi Chen and Teng Qi
 
 ## Supplementary overview
@@ -99,7 +97,7 @@ CAMERA and FRY directions were positive in all six tests. CAMERA passed BH corre
 | Correlation-aware sensitivity | Regulator Sensitivity additional file |
 | Analysis code and decisions | `https://github.com/1209433622cz-maker/sle-bcell-remodeling` |
 | Environment reconstruction | Pinned scientific and release environments documented in `REPRODUCIBILITY.md` |
-| Immutable release | Zenodo doi:10.5281/zenodo.22086892; GitHub release `v1.0.0` |
+| Immutable archive | Zenodo doi:10.5281/zenodo.22086892 |
 
 ## Supplementary Table S7 | Statistical tests and multiplicity families
 

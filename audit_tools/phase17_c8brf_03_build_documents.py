@@ -16,10 +16,10 @@ RUN_DIR = ROOT / "phase17_v7" / "gateC8BRF" / "20260825_author_release"
 C8S_RUN = ROOT / "phase17_v7" / "gateC8S" / "20260821_supplementary_traceability_freeze"
 C8BR_RUN = ROOT / "phase17_v7" / "gateC8BR" / "20260825_release_portability_preflight"
 SENSITIVITY_SOURCE = ROOT / "phase17_v7" / "gateC8R" / "20260820_pre_submission_repair"
-PACKAGE = ROOT / "04_submission" / "package_genome_medicine_gateC8BRF_author_release_2026-08-25"
-MANUSCRIPT_MD = ROOT / "01_manuscript" / "manuscript_v16_genome_medicine_final_2026-08-25.md"
-SUPPLEMENT_MD = ROOT / "01_manuscript" / "supplementary_information_v7_final_2026-08-25.md"
-COVER_MD = ROOT / "04_submission" / "cover_letter_genome_medicine_final_2026-08-25.md"
+PACKAGE = ROOT / "04_submission" / "journal_submission"
+MANUSCRIPT_MD = ROOT / "01_manuscript" / "Manuscript.md"
+SUPPLEMENT_MD = ROOT / "01_manuscript" / "Supplementary_Information.md"
+COVER_MD = ROOT / "04_submission" / "Cover_Letter.md"
 
 
 def copy_file(source: Path, target: Path) -> Path:
@@ -58,7 +58,7 @@ def build_portal_maps(
     required_dir = PACKAGE / "portal_upload_required"
     optional_dir = PACKAGE / "portal_upload_optional"
     required: list[tuple[Path, Path, str]] = [
-        (main_docx, required_dir / "Genome_Medicine_Manuscript.docx", "main manuscript"),
+        (main_docx, required_dir / "Manuscript.docx", "main manuscript"),
         (supplement_docx, required_dir / "Supplementary_Information.docx", "additional file 1"),
         (cover_docx, required_dir / "Cover_Letter.docx", "cover letter"),
         (source_zip, required_dir / "Figure_Source_Data.zip", "additional file 2"),
@@ -109,14 +109,10 @@ def build_portal_maps(
     write_map(docs_dir / "PORTAL_UPLOAD_FILENAME_MAP.csv", rows)
     write_map(docs_dir / "PORTAL_UPLOAD_REQUIRED.csv", required_rows)
     write_map(docs_dir / "PORTAL_UPLOAD_OPTIONAL.csv", optional_rows)
-    (required_dir / "UPLOAD_POLICY.txt").write_text(
+    (docs_dir / "PORTAL_UPLOAD_POLICY.txt").write_text(
         "Default portal set: upload these 11 files.\n"
         "Do not also upload standalone Supplementary Figures S1-S7 when "
-        "Supplementary_Information.docx is accepted as Additional file 1.\n",
-        encoding="utf-8",
-        newline="\n",
-    )
-    (optional_dir / "UPLOAD_ONLY_IF_PORTAL_REQUIRES_STANDALONE_SUPPLEMENTARY_FIGURES.txt").write_text(
+        "Supplementary_Information.docx is accepted as Additional file 1.\n\n"
         "These seven PDFs duplicate figures already embedded in Supplementary_Information.docx.\n"
         "Upload them only if the journal portal explicitly requires separate supplementary figures.\n",
         encoding="utf-8",
@@ -219,9 +215,9 @@ def prepare_package_assets(
             copy_file(path, refs_dir / path.name)
 
     for path in (
-        ROOT / "04_submission" / "author_release_confirmation_gateC8BRF_2026-08-25.md",
-        ROOT / "04_submission" / "reporting_checklist_gateC8BRF_2026-08-25.md",
-        ROOT / "04_submission" / "zenodo_metadata_gateC8BRF_2026-08-25.json",
+        ROOT / "04_submission" / "Author_Confirmation.md",
+        ROOT / "04_submission" / "Reporting_Checklist.md",
+        ROOT / "04_submission" / "Zenodo_Metadata.json",
         COVER_MD,
         MANUSCRIPT_MD,
         SUPPLEMENT_MD,
@@ -235,15 +231,15 @@ def prepare_package_assets(
         ROOT / "LICENSE_SCOPE.md",
         ROOT / "LICENSE_CONTENT_CC_BY_4.0.md",
         ROOT / "CITATION.cff",
-        ROOT / "audit_tools" / "environment_phase17_v7_explicit_win64_2026-08-10.txt",
-        ROOT / "audit_tools" / "environment_phase17_v7_pip_freeze_2026-08-10.txt",
-        ROOT / "audit_tools" / "environment_phase17_v7_resolved_2026-08-10.yml",
-        ROOT / "audit_tools" / "environment_gateC8BR_release_2026-08-25.yml",
-        ROOT / "audit_tools" / "environment_gateC8BR_release_explicit_win64_2026-08-25.txt",
-        ROOT / "audit_tools" / "00_create_gateC8BR_release_env.ps1",
-        ROOT / "audit_tools" / "phase17_c8br_00_release_smoke_test.py",
+        ROOT / "audit_tools" / "environment_analysis_win64.txt",
+        ROOT / "audit_tools" / "environment_analysis_python.txt",
+        ROOT / "audit_tools" / "environment_analysis.yml",
+        ROOT / "audit_tools" / "environment_submission.yml",
+        ROOT / "audit_tools" / "environment_submission_win64.txt",
+        ROOT / "audit_tools" / "create_submission_environment.ps1",
+        ROOT / "audit_tools" / "check_submission_environment.py",
         ROOT / "audit_tools" / "docx_a11y_audit.py",
-        ROOT / "audit_tools" / "run_6013RP_phase17_gateC8BRF_author_release.ps1",
+        ROOT / "audit_tools" / "build_submission_package.ps1",
     ]
     reproducibility_files = [
         copy_file(path, reproducibility_dir / path.name)
@@ -278,7 +274,7 @@ def main() -> None:
         shutil.rmtree(PACKAGE)
     PACKAGE.mkdir(parents=True, exist_ok=True)
 
-    main_docx = PACKAGE / "main_text" / "Genome_Medicine_Manuscript.docx"
+    main_docx = PACKAGE / "main_text" / "Manuscript.docx"
     supplement_docx = PACKAGE / "additional_files" / "Supplementary_Information.docx"
     cover_docx = PACKAGE / "submission_docs" / "Cover_Letter.docx"
     outputs = [

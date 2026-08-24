@@ -1,0 +1,41 @@
+{
+  "title": "SLE B-cell remodeling analysis: code, source data and reproducible release",
+  "upload_type": "software",
+  "publication_date": "2026-08-25",
+  "version": "1.0.0",
+  "doi": "10.5281/zenodo.22086892",
+  "description": "Author-approved reproducible release supporting a disease-blind single-cell analysis of B-cell remodeling in systemic lupus erythematosus. The archive contains versioned code, publication figures, derived source data, statistical results, manuscript materials and integrity records.",
+  "creators": [
+    {
+      "name": "Chen, Zhi",
+      "affiliation": "School of Medicine, The Chinese University of Hong Kong, Shenzhen",
+      "orcid": "0009-0001-0072-5576"
+    },
+    {
+      "name": "Qi, Teng",
+      "affiliation": "School of Medicine, The Chinese University of Hong Kong, Shenzhen",
+      "orcid": "0009-0007-7648-4776"
+    }
+  ],
+  "keywords": [
+    "systemic lupus erythematosus",
+    "B cells",
+    "single-cell RNA sequencing",
+    "pseudobulk",
+    "interferon",
+    "reproducibility"
+  ],
+  "licenses": [
+    "MIT",
+    "CC-BY-4.0"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/1209433622cz-maker/sle-bcell-remodeling",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "language": "eng",
+  "access_right": "open"
+}

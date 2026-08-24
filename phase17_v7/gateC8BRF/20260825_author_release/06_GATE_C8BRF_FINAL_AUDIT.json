@@ -2,23 +2,22 @@
   "created_at": "2026-08-25",
   "decision": "PASS_GATE_C8BR_RELEASE_PORTABILITY_AUTHOR_COMPLETION_AND_PORTAL_PREFLIGHT",
   "primary_target": "Genome Medicine",
-  "source_scientific_freeze": "Gate C8S",
+  "source_scientific_freeze": "frozen disease-blind analysis",
   "scientific_estimates_changed": false,
   "author_completion_pass": true,
   "technical_package_pass": true,
   "portal_upload_set_authorized": true,
   "journal_submission_performed": false,
   "doi": "10.5281/zenodo.22086892",
-  "release_tag": "v1.0.0",
   "page_counts": {
     "main": 29,
     "supplement": 13,
     "cover": 1
   },
-  "manifest_payload_files": 151,
-  "package_zip": "04_submission/package_genome_medicine_gateC8BRF_author_release_2026-08-25.zip",
-  "package_zip_bytes": 46055879,
-  "package_zip_sha256": "1FB1170B68E399EDBCF95400611FDF733BDCB3B64BA64640AF0958494CC7904A",
+  "manifest_payload_files": 150,
+  "package_zip": "04_submission/journal_submission.zip",
+  "package_zip_bytes": 45995822,
+  "package_zip_sha256": "C6FA38AEEFDCD8BD077283EFF3E3586DF2A7F2AC534F8E69656A421C2EB1044F",
   "checks": {
     "zero_placeholders": {
       "pass": true,
@@ -100,8 +99,10 @@
     "portal_required_optional_policy": {
       "pass": true,
       "detail": {
-        "required": 11,
-        "optional": 7
+        "required_manifest": 11,
+        "required_on_disk": 11,
+        "optional_manifest": 7,
+        "optional_on_disk": 7
       }
     },
     "docx_structure_and_content": {
@@ -141,13 +142,13 @@
           "document": "main",
           "pages": 29,
           "page_pngs": 29,
-          "bytes": 252452
+          "bytes": 251443
         },
         {
           "document": "supplement",
           "pages": 13,
           "page_pngs": 13,
-          "bytes": 3287905
+          "bytes": 3287260
         },
         {
           "document": "cover",
@@ -175,5 +176,5 @@
       "detail": []
     }
   },
-  "next_stage": "Publish the exact GitHub v1.0.0 release and Zenodo record, verify DOI resolution, then complete field-by-field Genome Medicine portal entry and submit."
+  "next_stage": "Complete field-by-field Genome Medicine portal entry, verify the generated submission PDF, submit, and freeze the receipt and manuscript number."
 }

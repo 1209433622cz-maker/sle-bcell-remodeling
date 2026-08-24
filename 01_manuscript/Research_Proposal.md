@@ -2,20 +2,17 @@
 
 ## Independently replicated interferon remodeling with convergent regulatory evidence in systemic lupus erythematosus B cells
 
-**Outcome-integrated version 16**
-**Date:** 20 August 2026
 **Study type:** secondary analysis of public human transcriptomic data
-**Governance status:** Gates C1-C7 scientific integration completed; all central claims remain noncausal
+**Study status:** completed outcome-integrated research record; all central claims remain noncausal
 
-## Version provenance
+## Document provenance
 
 This outcome-integrated RP is a completed-study record, not a prospective
-preregistration. The frozen pre-outcome methodological provenance remains
-`research_proposal_v14_methodologically_revised_2026-08-10.md` and its dated
-DOCX/PDF renderings. Gate C8S manuscript v12 is the canonical submission report
-for final numerical, supplementary and statistical-traceability details. These
-documents have distinct roles and should remain versioned rather than merged or
-silently overwritten.
+preregistration. Earlier proposal files and their DOCX/PDF renderings preserve
+the pre-outcome methodological record. The current manuscript and supplementary
+information are authoritative for final numerical, reporting and statistical-
+traceability details. These documents have distinct roles and the historical
+record is retained in Git rather than silently overwritten.
 
 ## Project summary
 
@@ -104,7 +101,7 @@ primary datasets despite low genome-wide agreement (4,410 genes; rho=0.026).
 
 ### Aim 4. Test a frozen interferon-centred regulatory hypothesis
 
-**Status:** completed; Gate C6B passed for noncausal regulatory framing.
+**Status:** completed with noncausal regulatory framing retained.
 
 STAT1 and STAT2 CollecTRI activity estimates were positive and global-24-test
 significant in all three confirmatory contrasts. Core estimates retained direction
@@ -193,18 +190,18 @@ Prospective patient sampling, matched clinical covariates, direct chromatin or
 binding assays and replicated perturbation of patient-derived B cells would be
 needed to advance from convergent regulation to mechanism.
 
-## 6. Milestones and decision gates
+## 6. Completed milestones
 
-| Gate | Deliverable | Final status |
-|---|---|---|
-| C2B4 | disease-blind two-compartment identity | passed; scope frozen |
-| C3A | sample-level composition | passed; central composition claim rejected |
-| C4B | GSE174188 pseudobulk and programs | passed; IFN prioritized |
-| C5A-C5B | independent GSE135779 validation | passed; IFN replicated |
-| C6A | claim and number freeze | passed |
-| C6B | regulatory and orthogonal evidence | passed; noncausal framing authorized |
-| C7 | five main figures and manuscript integration | completed by v9/v16 package |
-| C8 | journal-specific submission package | next stage |
+| Deliverable | Final status |
+|---|---|
+| Disease-blind two-compartment identity | passed; scope frozen |
+| Sample-level composition | passed; central composition claim rejected |
+| GSE174188 pseudobulk and programs | passed; IFN prioritized |
+| Independent GSE135779 validation | passed; IFN replicated |
+| Claim and numerical freeze | passed |
+| Regulatory and orthogonal evidence | passed; noncausal framing authorized |
+| Five main figures and manuscript integration | completed |
+| Journal-specific submission package | completed; portal entry is next |
 
 ## 7. Expected impact
 

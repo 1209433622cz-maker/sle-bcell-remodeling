@@ -33,40 +33,40 @@ future reader can distinguish numerical inference from document rendering.
 
 ### Scientific analysis environment
 
-The single-cell and figure workflow was run in `sle-bcell-v7` with Python 3.11.
+The single-cell and figure workflow was run in a pinned Python 3.11 environment.
 The correlation-aware regulator sensitivity was run with R 4.6.0, edgeR 4.10.1
 and limma 3.68.4. The tracked analysis locks are:
 
-- `audit_tools/environment_phase17_v7_explicit_win64_2026-08-10.txt`
-- `audit_tools/environment_phase17_v7_pip_freeze_2026-08-10.txt`
-- `audit_tools/environment_phase17_v7_resolved_2026-08-10.yml`
+- `audit_tools/environment_analysis_win64.txt`
+- `audit_tools/environment_analysis_python.txt`
+- `audit_tools/environment_analysis.yml`
 
 Exact Windows reconstruction:
 
 ```powershell
-conda create -n sle-bcell-v7-repro `
-  --file .\audit_tools\environment_phase17_v7_explicit_win64_2026-08-10.txt
-conda activate sle-bcell-v7-repro
+conda create -n sle-bcell-analysis `
+  --file .\audit_tools\environment_analysis_win64.txt
+conda activate sle-bcell-analysis
 python -m pip install `
-  -r .\audit_tools\environment_phase17_v7_pip_freeze_2026-08-10.txt
+  -r .\audit_tools\environment_analysis_python.txt
 python .\02_analysis\scripts\01_check_scanpy_env.py
 ```
 
 ### Release and document environment
 
-The journal-facing build uses the dedicated `sle-bcell-c8br-release` environment,
-LibreOffice headless rendering for portable checks, and WPS Office as the
-authoritative DOCX rendering backend on the release workstation. Its tracked
-locks are:
+The journal-facing build uses the dedicated `sle-bcell-submission` environment.
+WPS Office is the authoritative DOCX rendering backend on the release workstation;
+LibreOffice provides an independent portability render during final review. Its
+tracked locks are:
 
-- `audit_tools/environment_gateC8BR_release_2026-08-25.yml`
-- `audit_tools/environment_gateC8BR_release_explicit_win64_2026-08-25.txt`
+- `audit_tools/environment_submission.yml`
+- `audit_tools/environment_submission_win64.txt`
 
-Recreate or refresh the release environment with:
+Recreate or refresh the document environment with the stable entry point:
 
 ```powershell
 powershell -ExecutionPolicy Bypass `
-  -File .\audit_tools\00_create_gateC8BR_release_env.ps1
+  -File .\audit_tools\create_submission_environment.ps1
 ```
 
 ## Frozen inferential sequence
@@ -107,19 +107,19 @@ powershell -ExecutionPolicy Bypass `
 10. Complete statistical outputs were packaged with sanitized design matrices,
     a unified test-family map, file-level provenance and deterministic hashes.
 
-## Journal-facing prefreeze rebuild
+## Submission package rebuild
 
-The active local rebuild is:
+The current author-facing rebuild is:
 
 ```powershell
 powershell -ExecutionPolicy Bypass `
-  -File .\audit_tools\run_6013RP_phase17_gateC8BRP_journal_facing_prefreeze.ps1
+  -File .\audit_tools\build_submission_package.ps1 `
+  -Doi "10.5281/zenodo.22086892"
 ```
 
-Use `-PortableCore` for a fully portable build that stops after LibreOffice
-checks. The default full mode also uses WPS Office and performs page-by-page
-raster and accessibility checks before the deterministic package archive is
-created.
+Use `-Mode PortableCore` for a portable build that stops before the WPS review.
+The default full mode uses WPS Office and performs page-by-page raster and
+accessibility checks before the deterministic package archive is created.
 
 ## Frozen release assertions
 
@@ -127,21 +127,20 @@ created.
 - Supplementary-figure panel-data assertions: 29/29.
 - Reference DOI identities independently resolved: 28/28.
 - Numbered manuscript references: 32.
-- The complete statistical results archive is byte-identical to the Gate C8S
-  frozen source archive.
+- The complete statistical results archive is byte-identical to the frozen
+  scientific source archive.
 - Main and supplementary DOCX files use numbered journal-style citations,
   embedded figure markers, explicit table titles, full-width tables, US Letter
   pages, 1-inch margins, Times New Roman text and double-spaced manuscript body
   text.
-- The release package contains a clean `portal_upload_preview` directory and a
-  filename map, but it is deliberately marked `DO NOT UPLOAD` until the author
-  completion matrix is signed.
+- The package contains separate `portal_upload_required` and
+  `portal_upload_optional` directories plus a filename and hash map.
 
-## Author-controlled release boundary
+## Author and portal boundary
 
-The pipeline cannot truthfully complete ethics, competing-interests, funding,
-CRediT contribution, acknowledgement, all-author originality/approval,
-correspondence-address approval, publication-licence or APC decisions. It also
-does not mint a repository DOI. These remain explicit author actions. Portal
-submission is unauthorized until every mandatory item is resolved and the
-final package is re-audited.
+The authors have completed ethics, competing-interests, funding, CRediT,
+acknowledgement, originality, approval, correspondence and licence decisions.
+The DOI is public and resolves to the archived release. The pipeline verifies
+the local submission package but does not perform the final journal submission;
+the corresponding author must still review the portal metadata and generated
+submission PDF before the irreversible submit action.
