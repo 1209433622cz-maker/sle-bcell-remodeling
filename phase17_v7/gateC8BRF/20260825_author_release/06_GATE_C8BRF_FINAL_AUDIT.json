@@ -1,0 +1,179 @@
+{
+  "created_at": "2026-08-25",
+  "decision": "PASS_GATE_C8BR_RELEASE_PORTABILITY_AUTHOR_COMPLETION_AND_PORTAL_PREFLIGHT",
+  "primary_target": "Genome Medicine",
+  "source_scientific_freeze": "Gate C8S",
+  "scientific_estimates_changed": false,
+  "author_completion_pass": true,
+  "technical_package_pass": true,
+  "portal_upload_set_authorized": true,
+  "journal_submission_performed": false,
+  "doi": "10.5281/zenodo.22086892",
+  "release_tag": "v1.0.0",
+  "page_counts": {
+    "main": 29,
+    "supplement": 13,
+    "cover": 1
+  },
+  "manifest_payload_files": 151,
+  "package_zip": "04_submission/package_genome_medicine_gateC8BRF_author_release_2026-08-25.zip",
+  "package_zip_bytes": 46055879,
+  "package_zip_sha256": "1FB1170B68E399EDBCF95400611FDF733BDCB3B64BA64640AF0958494CC7904A",
+  "checks": {
+    "zero_placeholders": {
+      "pass": true,
+      "detail": {
+        "manuscript": 0,
+        "cover": 0,
+        "supplement_embedding_markers": 7
+      }
+    },
+    "author_declarations_complete": {
+      "pass": true,
+      "detail": [
+        "No additional ethics approval was required",
+        "The authors declare that they have no competing interests",
+        "This research received no specific funding",
+        "Both authors read and approved",
+        "Not applicable.",
+        "Use of generative artificial intelligence",
+        "did not use generative artificial intelligence to create or alter primary research data"
+      ]
+    },
+    "persistent_citation_complete": {
+      "pass": true,
+      "detail": "10.5281/zenodo.22086892"
+    },
+    "licence_scope": {
+      "pass": true,
+      "detail": [
+        "MIT",
+        "CC-BY-4.0",
+        "third-party data excluded"
+      ]
+    },
+    "main_figure_contract": {
+      "pass": true,
+      "detail": {
+        "Figure1_disease_blind_identity_scope.pdf": {
+          "width_mm": 170.0,
+          "height_mm": 130.677
+        },
+        "Figure2_sample_level_composition.pdf": {
+          "width_mm": 170.0,
+          "height_mm": 134.274
+        },
+        "Figure3_gse174188_bconv_transcription.pdf": {
+          "width_mm": 170.0,
+          "height_mm": 137.87
+        },
+        "Figure4_independent_ifn_replication.pdf": {
+          "width_mm": 170.0,
+          "height_mm": 137.87
+        },
+        "Figure5_regulatory_evidence.pdf": {
+          "width_mm": 170.0,
+          "height_mm": 148.66
+        }
+      }
+    },
+    "figure1_publication_source": {
+      "pass": true,
+      "detail": {
+        "removed_rows": 2,
+        "publication_sha256": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805"
+      }
+    },
+    "figure2_uuid_governance": {
+      "pass": true,
+      "detail": {
+        "uuid_count": 90,
+        "versions": [
+          4
+        ]
+      }
+    },
+    "supplementary_assertions": {
+      "pass": true,
+      "detail": "29/29"
+    },
+    "portal_required_optional_policy": {
+      "pass": true,
+      "detail": {
+        "required": 11,
+        "optional": 7
+      }
+    },
+    "docx_structure_and_content": {
+      "pass": true,
+      "detail": {
+        "supplement_inline_figures": 7,
+        "supplement_tables": 8
+      }
+    },
+    "docx_accessibility": {
+      "pass": true,
+      "detail": [
+        {
+          "file": "main_text_a11y.json",
+          "high": 0,
+          "medium": 0,
+          "low": 0
+        },
+        {
+          "file": "supplement_a11y.json",
+          "high": 0,
+          "medium": 0,
+          "low": 0
+        },
+        {
+          "file": "cover_letter_a11y.json",
+          "high": 0,
+          "medium": 0,
+          "low": 0
+        }
+      ]
+    },
+    "wps_render_integrity": {
+      "pass": true,
+      "detail": [
+        {
+          "document": "main",
+          "pages": 29,
+          "page_pngs": 29,
+          "bytes": 252452
+        },
+        {
+          "document": "supplement",
+          "pages": 13,
+          "page_pngs": 13,
+          "bytes": 3287905
+        },
+        {
+          "document": "cover",
+          "pages": 1,
+          "page_pngs": 1,
+          "bytes": 73004
+        }
+      ]
+    },
+    "supplement_s7_pagination": {
+      "pass": true,
+      "detail": {
+        "title_page": [
+          5
+        ],
+        "first_data_row_same_page": true
+      }
+    },
+    "frozen_statistical_archive": {
+      "pass": true,
+      "detail": "AE903A53A19D7935464C601E2693192910EB4B59F5804D43DCA6ACA965D0B1F5"
+    },
+    "no_restricted_large_source_data": {
+      "pass": true,
+      "detail": []
+    }
+  },
+  "next_stage": "Publish the exact GitHub v1.0.0 release and Zenodo record, verify DOI resolution, then complete field-by-field Genome Medicine portal entry and submit."
+}

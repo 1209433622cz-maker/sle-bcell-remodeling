@@ -1,0 +1,74 @@
+{
+  "created_at": "2026-08-25",
+  "status": "PASS_GATE_C8BRF_DOCUMENTS_AND_PORTAL_MAPS_BUILT",
+  "design_preset": "standard_business_brief",
+  "named_override": "Genome Medicine submission: Times New Roman, manuscript double spacing and continuous line numbering",
+  "supplement_s7_pagination": "forced page break before S7 title",
+  "outputs": [
+    {
+      "source": "01_manuscript/manuscript_v16_genome_medicine_final_2026-08-25.md",
+      "output": "04_submission/package_genome_medicine_gateC8BRF_author_release_2026-08-25/main_text/Genome_Medicine_Manuscript.docx",
+      "paragraphs": 158,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 60005
+    },
+    {
+      "source": "01_manuscript/supplementary_information_v7_final_2026-08-25.md",
+      "output": "04_submission/package_genome_medicine_gateC8BRF_author_release_2026-08-25/additional_files/Supplementary_Information.docx",
+      "paragraphs": 65,
+      "tables": 8,
+      "inline_shapes": 7,
+      "placeholders": 0,
+      "bytes": 2775576
+    },
+    {
+      "source": "04_submission/cover_letter_genome_medicine_final_2026-08-25.md",
+      "output": "04_submission/package_genome_medicine_gateC8BRF_author_release_2026-08-25/submission_docs/Cover_Letter.docx",
+      "paragraphs": 17,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 40291
+    }
+  ],
+  "assets": {
+    "main_figure_files": 10,
+    "supplementary_figure_files": 14,
+    "source_files": 12,
+    "source_zip": "04_submission/package_genome_medicine_gateC8BRF_author_release_2026-08-25/additional_files/Figure_Source_Data.zip",
+    "source_zip_sha256": "A3030E0639B3BABC50C9C49DD317C643DE12B1FCC0559834E9A4E7A499AD20E5",
+    "sensitivity_zip": "04_submission/package_genome_medicine_gateC8BRF_author_release_2026-08-25/additional_files/Regulator_Sensitivity.zip",
+    "sensitivity_zip_sha256": "C5731726E1D152B316C6CDBA977F70C56018624DC8ADD36505E277095C47A04D",
+    "full_statistical_zip": "04_submission/package_genome_medicine_gateC8BRF_author_release_2026-08-25/additional_files/Full_Statistical_Results.zip",
+    "full_statistical_zip_sha256": "AE903A53A19D7935464C601E2693192910EB4B59F5804D43DCA6ACA965D0B1F5",
+    "reproducibility_files": 15,
+    "portal": {
+      "required": 11,
+      "optional": 7,
+      "required_roles": [
+        "main manuscript",
+        "additional file 1",
+        "cover letter",
+        "additional file 2",
+        "additional file 3",
+        "additional file 4",
+        "main figure 1",
+        "main figure 2",
+        "main figure 3",
+        "main figure 4",
+        "main figure 5"
+      ],
+      "optional_roles": [
+        "standalone supplementary figure S1",
+        "standalone supplementary figure S2",
+        "standalone supplementary figure S3",
+        "standalone supplementary figure S4",
+        "standalone supplementary figure S5",
+        "standalone supplementary figure S6",
+        "standalone supplementary figure S7"
+      ]
+    }
+  }
+}

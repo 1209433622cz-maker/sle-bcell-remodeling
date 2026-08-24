@@ -43,6 +43,7 @@ PROGRAM_LABELS = {
     "PAN_B_IDENTITY_QC": "Pan-B",
 }
 ASSERTIONS: list[dict[str, Any]] = []
+OUTPUT_WIDTH_MM: float | None = None
 
 
 def assert_equal(name: str, actual: Any, expected: Any) -> None:
@@ -123,6 +124,13 @@ def configure_style() -> None:
     )
 
 
+def set_output_width_mm(width_mm: float | None) -> None:
+    global OUTPUT_WIDTH_MM
+    if width_mm is not None and width_mm <= 0:
+        raise ValueError("Figure width must be positive")
+    OUTPUT_WIDTH_MM = width_mm
+
+
 def style_axis(axis: plt.Axes, grid: bool = False) -> None:
     axis.spines["top"].set_visible(False)
     axis.spines["right"].set_visible(False)
@@ -147,6 +155,14 @@ def panel_label(axis: plt.Axes, label: str, x: float = -0.16, y: float = 1.08) -
 
 
 def save_figure(figure: plt.Figure, figure_dir: Path, stem: str) -> None:
+    if OUTPUT_WIDTH_MM is not None:
+        current_width, current_height = figure.get_size_inches()
+        target_width = OUTPUT_WIDTH_MM / 25.4
+        figure.set_size_inches(
+            target_width,
+            current_height * target_width / current_width,
+            forward=True,
+        )
     figure.canvas.draw()
     visible_text = [
         artist
@@ -208,6 +224,8 @@ def build_figure1(
     source_dir: Path,
     *,
     graphical_validation_workflow: bool = False,
+    publication_source_data: bool = False,
+    explicit_threshold_semantics: bool = False,
 ) -> None:
     c2b3 = read_json(
         root
@@ -260,23 +278,28 @@ def build_figure1(
             "secondary_value": c3["sample_cohort_strata"],
             "detail": f"samples; sample-cohort strata; {c3['libraries']} libraries",
         },
-        {
-            "panel": "a",
-            "series": "gate_decision",
-            "category": "fine-state identity",
-            "estimate": np.nan,
-            "secondary_value": np.nan,
-            "detail": c2b3["decision"],
-        },
-        {
-            "panel": "a",
-            "series": "gate_decision",
-            "category": "two-compartment identity",
-            "estimate": np.nan,
-            "secondary_value": np.nan,
-            "detail": c2b4["decision"],
-        },
     ]
+    if not publication_source_data:
+        source_rows.extend(
+            [
+                {
+                    "panel": "a",
+                    "series": "gate_decision",
+                    "category": "fine-state identity",
+                    "estimate": np.nan,
+                    "secondary_value": np.nan,
+                    "detail": c2b3["decision"],
+                },
+                {
+                    "panel": "a",
+                    "series": "gate_decision",
+                    "category": "two-compartment identity",
+                    "estimate": np.nan,
+                    "secondary_value": np.nan,
+                    "detail": c2b4["decision"],
+                },
+            ]
+        )
     policy_labels = {
         "five_state": "5-state",
         "four_state_platelet_overlay_merged": "4-state",
@@ -428,7 +451,19 @@ def build_figure1(
 
     axis = axes[0, 1]
     x = np.arange(len(policy))
-    axis.axhline(0.90, color="#666666", lw=0.7, ls="--")
+    if explicit_threshold_semantics:
+        axis.hlines(0.90, 2.62, 3.38, color="#666666", lw=0.7, ls="--")
+        axis.text(
+            3.34,
+            0.884,
+            "2-compartment minimum-ARI criterion",
+            fontsize=5.0,
+            ha="right",
+            va="top",
+            color="#555555",
+        )
+    else:
+        axis.axhline(0.90, color="#666666", lw=0.7, ls="--")
     for x_value, (_, row) in zip(x, policy.iterrows(), strict=True):
         axis.plot(
             [float(x_value), float(x_value)],
@@ -451,6 +486,16 @@ def build_figure1(
     axis.plot(replicate["replicate"], replicate["mapped_adjusted_rand_index"], "o-", ms=3.0, lw=0.8, color=COLORS["internal"], label="Mapped ARI")
     axis.plot(replicate["replicate"], replicate["mapping_agreement"], "s-", ms=2.8, lw=0.8, color=COLORS["external"], label="Agreement")
     axis.axhline(0.99, color="#666666", lw=0.7, ls="--")
+    if explicit_threshold_semantics:
+        axis.text(
+            20.2,
+            0.99015,
+            "minimum mapped-ARI criterion",
+            fontsize=5.0,
+            ha="right",
+            va="bottom",
+            color="#555555",
+        )
     axis.set_xlabel("Disease-blind resampling replicate")
     axis.set_ylabel("Two-compartment stability")
     axis.set_ylim(0.985, 1.0008)
@@ -467,6 +512,16 @@ def build_figure1(
         axis.plot(row["minimum_jaccard"], y_value, "D", color=COLORS["secondary"], ms=3.2)
         axis.plot(row["median_jaccard"], y_value, "o", color=COLORS["teal"], ms=3.7)
     axis.axvline(0.95, color="#666666", lw=0.7, ls="--")
+    if explicit_threshold_semantics:
+        axis.text(
+            0.9508,
+            0.62,
+            "state-median Jaccard criterion",
+            fontsize=5.0,
+            ha="left",
+            va="center",
+            color="#555555",
+        )
     axis.set_yticks(y, states["state_label"])
     axis.set_xlim(0.94, 1.001)
     axis.set_xlabel("State Jaccard (minimum to median)")

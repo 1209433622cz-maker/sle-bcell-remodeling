@@ -1,0 +1,28 @@
+{
+  "created_at": "2026-08-25",
+  "status": "PASS",
+  "frozen_source": "phase17_v7/gateC8BRP/20260825_journal_facing_prefreeze/source_data/Figure1_source_data.csv",
+  "frozen_source_sha256": "60BED18114D447076538BB4C2355DCD7E29EA74701D5DF39654D1E4335200944",
+  "publication_source": "phase17_v7/gateC8BRF/20260825_author_release/source_data/Figure1_source_data.csv",
+  "publication_source_sha256": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805",
+  "removed_non_plotted_rows": [
+    {
+      "panel": "a",
+      "series": "gate_decision",
+      "category": "fine-state identity",
+      "estimate": "",
+      "secondary_value": "",
+      "detail": "HOLD_GATE_C2B3_REVIEW_REQUIRED"
+    },
+    {
+      "panel": "a",
+      "series": "gate_decision",
+      "category": "two-compartment identity",
+      "estimate": "",
+      "secondary_value": "",
+      "detail": "PASS_C2B4_TWO_COMPARTMENT_FREEZE_OUTCOME_UNLOCK_AUTHORIZED"
+    }
+  ],
+  "publication_rows_equal_frozen_rows_after_declared_filter": true,
+  "plotted_numeric_rows_changed": false
+}

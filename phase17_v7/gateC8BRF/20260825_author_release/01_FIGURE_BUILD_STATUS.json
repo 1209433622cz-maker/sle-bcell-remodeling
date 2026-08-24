@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-08-25",
+  "status": "PASS_GATE_C8BRF_170MM_PUBLICATION_FIGURES_BUILT",
+  "figures": 5,
+  "formats": [
+    "PDF_VECTOR",
+    "PNG_600_DPI"
+  ],
+  "target_width_mm": 170.0,
+  "dimensions": {
+    "Figure1_disease_blind_identity_scope.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 130.677
+    },
+    "Figure2_sample_level_composition.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 134.274
+    },
+    "Figure3_gse174188_bconv_transcription.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 137.87
+    },
+    "Figure4_independent_ifn_replication.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 137.87
+    },
+    "Figure5_regulatory_evidence.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 148.66
+    }
+  },
+  "scientific_estimates_changed": false,
+  "figure1_publication_filter": "removed only two non-plotted gate_decision rows",
+  "figure1_threshold_semantics": "explicit labels for all three dashed criteria",
+  "figure2_to_figure5_source_data_byte_identical_to_prefreeze": true,
+  "source_data_sha256": {
+    "Figure2_source_data.csv": "DAA6DDBAB469E0D510AB578BEE0A21AA73FA2D71184739E3F361C3EA6EC8DFE2",
+    "Figure3_source_data.csv": "DEFABF8C16D879362E3AD197C857A9197CD6D0691B20FDFA4AC97BEFF3710BC8",
+    "Figure4_source_data.csv": "1C04F4071F7F064CA1AB4E47A281F0AA14074466E06BAB6FA30078029F570A9E",
+    "Figure5_source_data.csv": "21925F6916DDAF97760CF73622ED8E4B4CCBE5AE0B3B53C721FDF607C1C6F9A4",
+    "Figure1_source_data.csv": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805"
+  },
+  "panel_data_assertions": 46,
+  "panel_data_assertions_passed": true
+}

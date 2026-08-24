@@ -124,7 +124,7 @@ created.
 ## Frozen release assertions
 
 - Main-figure panel-data assertions: 46/46.
-- Manuscript numerical assertions: 29/29.
+- Supplementary-figure panel-data assertions: 29/29.
 - Reference DOI identities independently resolved: 28/28.
 - Numbered manuscript references: 32.
 - The complete statistical results archive is byte-identical to the Gate C8S

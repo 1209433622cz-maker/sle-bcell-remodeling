@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-08-25",
+  "status": "PASS_FIGURE2_PUBLIC_NON_IDENTIFYING_SOURCE_UUIDS",
+  "decision": "retain sample_uuid and omitted_sample_uuid",
+  "rationale": "They are UUIDv4 values copied from the public CELLxGENE H5AD obs.sample_uuid field and are the frozen biological analysis unit; they are not locally generated author identifiers or direct personal identifiers.",
+  "public_collection_url": "https://cellxgene.cziscience.com/collections/436154da-bcf1-4130-9c8b-120ff9a888f2",
+  "public_dataset_url": "https://datasets.cellxgene.cziscience.com/c55dc602-d168-4d15-acc1-5de4f2f5d551.h5ad",
+  "public_dataset_visibility": "PUBLIC",
+  "source_h5ad_bytes": 12218105530,
+  "source_h5ad_inventory_sha256": "C577193B2F92FAB96F6C7CD5EE7BE8DAABE3CCCAEBCB200483FAFA9C8057B586",
+  "figure2_source_sha256": "DAA6DDBAB469E0D510AB578BEE0A21AA73FA2D71184739E3F361C3EA6EC8DFE2",
+  "figure_sample_uuid_count": 90,
+  "figure_omitted_sample_uuid_count": 90,
+  "figure_union_uuid_count": 90,
+  "public_h5ad_sample_uuid_count": 274,
+  "uuid_versions": [
+    4
+  ],
+  "unmapped_figure_ids": [],
+  "forbidden_direct_identifier_columns": [],
+  "checks": {
+    "source_collection_is_public": true,
+    "source_asset_url_is_public_cellxgene": true,
+    "source_h5ad_size_matches_public_asset": true,
+    "sample_uuid_is_direct_public_obs_column": true,
+    "public_h5ad_reports_274_sample_uuid_values": true,
+    "figure_ids_are_uuid_v4": true,
+    "figure_ids_map_to_frozen_analysis_inputs": true,
+    "no_direct_identifier_columns_in_figure_source": true
+  }
+}

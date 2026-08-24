@@ -392,7 +392,18 @@ def add_markdown_table(document: Document, block: str, body_size: float) -> None
     spacer.paragraph_format.space_after = Pt(3)
 
 
-def markdown_to_docx(source: Path, output: Path, *, body_size: float, double_space: bool, line_numbers: bool, running_header: str | None, title_override: str | None = None, compact: bool = False) -> dict:
+def markdown_to_docx(
+    source: Path,
+    output: Path,
+    *,
+    body_size: float,
+    double_space: bool,
+    line_numbers: bool,
+    running_header: str | None,
+    title_override: str | None = None,
+    compact: bool = False,
+    page_break_before_headings: set[str] | None = None,
+) -> dict:
     document = Document()
     configure_document(document, body_size, double_space, line_numbers, running_header)
     if compact:
@@ -441,7 +452,11 @@ def markdown_to_docx(source: Path, output: Path, *, body_size: float, double_spa
             continue
         if block.startswith("## "):
             heading = block[3:].strip()
-            if block.startswith("## Supplementary Figure S") or block.startswith("## Supplementary Table S8"):
+            if (
+                block.startswith("## Supplementary Figure S")
+                or block.startswith("## Supplementary Table S8")
+                or heading in (page_break_before_headings or set())
+            ):
                 document.add_page_break()
             paragraph = document.add_paragraph(style="Heading 1")
             add_inline(paragraph, heading, size=14)
