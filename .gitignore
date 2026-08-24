@@ -34,11 +34,16 @@ _phase17_review_pack/
 !04_submission/author_completion_matrix_gateC8BR_2026-08-25.md
 !04_submission/journal_target_decision_gateC8BR_2026-08-25.md
 !04_submission/reporting_checklist_gateC8BR_2026-08-25.md
+!04_submission/cover_letter_genome_medicine_gateC8BRP_AUTHOR_COMPLETION_REQUIRED_2026-08-25.md
+!04_submission/author_completion_matrix_gateC8BRP_2026-08-25.md
+!04_submission/journal_target_decision_gateC8BRP_2026-08-25.md
+!04_submission/reporting_checklist_gateC8BRP_2026-08-25.md
 !04_submission/document_qc/
 04_submission/document_qc/*
 !04_submission/document_qc/research_proposal_v14_2026-08-10_external_audit_integrated_qc_r2/
 04_submission/document_qc/research_proposal_v14_2026-08-10_external_audit_integrated_qc_r2/*
 !04_submission/document_qc/research_proposal_v14_2026-08-10_external_audit_integrated_qc_r2/RESEARCH_PROPOSAL_V14_QC.md
+phase17_v7/gateC8BRP/**/visual_qa/
 
 # Local software-test matrices and generated diagnostics.
 phase17_v7/**/_software_tests/

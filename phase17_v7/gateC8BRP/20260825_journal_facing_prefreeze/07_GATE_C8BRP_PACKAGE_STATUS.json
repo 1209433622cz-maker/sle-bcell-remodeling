@@ -1,0 +1,118 @@
+{
+  "created_at": "2026-08-25",
+  "decision": "PASS_GATE_C8BR_JOURNAL_FACING_PREFREEZE_AUTHOR_ACTION_REQUIRED",
+  "primary_target": "Genome Medicine",
+  "source_scientific_freeze": "Gate C8S",
+  "scientific_estimates_changed": false,
+  "technical_package_pass": true,
+  "portal_submission_authorized": false,
+  "checks": {
+    "portable_release_runtime": {
+      "pass": true,
+      "detail": "python=3.13.7; exact win-64 package spec present"
+    },
+    "reproducibility_record": {
+      "pass": true,
+      "detail": "tokens=7; separate analysis/release locks documented"
+    },
+    "main_figure_assertions": {
+      "pass": true,
+      "detail": "passed=46/46; source data unchanged"
+    },
+    "supplementary_figure_assertions": {
+      "pass": true,
+      "detail": "frozen assertions passed=29/29"
+    },
+    "publication_figure_files": {
+      "pass": true,
+      "detail": "pairs=12; each PNG >=4000x3000 and each PDF non-empty"
+    },
+    "reader_facing_figure_semantics": {
+      "pass": true,
+      "detail": "Figure 1 graphical workflow; Figure 4 sequential omission labels; Figure 5 parallel branches"
+    },
+    "figure_source_data": {
+      "pass": true,
+      "detail": "12/12 SHA manifest entries; all five main sources byte-identical; B-caSC0-7 retained"
+    },
+    "frozen_statistical_archive": {
+      "pass": true,
+      "detail": "entries=63; byte-identical sha256=AE903A53A19D7935464C601E2693192910EB4B59F5804D43DCA6ACA965D0B1F5"
+    },
+    "manuscript_reader_contract": {
+      "pass": true,
+      "detail": "abstract=318; references=32; optional author biography omitted"
+    },
+    "supplement_reader_contract": {
+      "pass": true,
+      "detail": "exact resampling mechanics present; internal history absent; figures=7; tables=8"
+    },
+    "source_build_contract": {
+      "pass": true,
+      "detail": "v15 manuscript and v6 supplement PASS; scientific estimates unchanged"
+    },
+    "journal_target_and_cover": {
+      "pass": true,
+      "detail": "Genome Medicine retained; claim-bounded cover letter; quartile not frozen"
+    },
+    "reference_verification": {
+      "pass": true,
+      "detail": "DOI identities PASS=28/28; numbered references=32"
+    },
+    "document_build_status": {
+      "pass": true,
+      "detail": "{'Genome_Medicine_Manuscript_AUTHOR_COMPLETION_REQUIRED.docx': 59723, 'Supplementary_Information.docx': 2775576, 'Cover_Letter_AUTHOR_CONFIRMATION_REQUIRED.docx': 40181}"
+    },
+    "portal_preview_aliases": {
+      "pass": true,
+      "detail": "18 unique clean aliases; source/alias/manifest hashes match; upload blocked"
+    },
+    "main_docx_ooxml": {
+      "pass": true,
+      "detail": "line_numbers=True; page_field=True; even_odd=True; double_spacing=True"
+    },
+    "supplement_docx_structure": {
+      "pass": true,
+      "detail": "tables=8; explicit_geometry=8; inline_figures=7"
+    },
+    "docx_accessibility": {
+      "pass": true,
+      "detail": "[{'file': 'main_text_a11y.json', 'high': 0, 'medium': 0, 'low': 0}, {'file': 'supplement_a11y.json', 'high': 0, 'medium': 0, 'low': 0}, {'file': 'cover_letter_a11y.json', 'high': 0, 'medium': 0, 'low': 0}]"
+    },
+    "wps_render_integrity": {
+      "pass": true,
+      "detail": "[{'document': 'main', 'pages': 28, 'page_pngs': 28, 'bytes': 251073}, {'document': 'supplement', 'pages': 13, 'page_pngs': 13, 'bytes': 3288063}, {'document': 'cover', 'pages': 1, 'page_pngs': 1, 'bytes': 84468}]"
+    },
+    "confirmed_author_identity": {
+      "pass": true,
+      "detail": "names, order, emails, ORCIDs, titles and supplied Zhi Chen biography preserved without inferring a Teng Qi biography"
+    },
+    "hard_stops_visible": {
+      "pass": true,
+      "detail": "manuscript placeholders=6; cover placeholders=2; author actions=21"
+    }
+  },
+  "hard_stops": [
+    "institutional ethics determination",
+    "competing interests",
+    "funding",
+    "final CRediT contributions and all-author approval",
+    "acknowledgements",
+    "all-author originality and exclusive-submission confirmation",
+    "correspondence-address approval",
+    "author-approved repository licence and immutable archive DOI",
+    "APC or institutional agreement check"
+  ],
+  "next_stage": "Complete author-controlled declarations and institutional ethics determination; approve the correspondence address and repository licence; create an immutable release DOI; then replace all placeholders and run the zero-placeholder WPS and portal-field preflight without reopening scientific analysis.",
+  "next_if_author_completed": "PASS_GATE_C8BR_RELEASE_PORTABILITY_AUTHOR_COMPLETION_AND_PORTAL_PREFLIGHT",
+  "deterministic_archive_rebuild_match": true,
+  "package_files_manifested": 138,
+  "page_counts": {
+    "main": 28,
+    "supplement": 13,
+    "cover": 1
+  },
+  "package_zip": "04_submission/package_genome_medicine_gateC8BRP_journal_facing_prefreeze_2026-08-25.zip",
+  "package_zip_bytes": 44159282,
+  "package_zip_sha256": "1869A48700162B6CDF92002D60DDD4E7BE2B65008FC1A212CFFAB9BE8F0C4F05"
+}

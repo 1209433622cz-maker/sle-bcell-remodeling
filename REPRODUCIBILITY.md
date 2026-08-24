@@ -3,7 +3,7 @@
 ## Repository boundary
 
 This repository contains analysis code, study-design documents, environment
-locks, machine-readable gate decisions, compact source data and publication
+locks, machine-readable decisions, compact source data and publication
 figures. Raw or processed H5AD objects, original public archives, per-cell
 exports, literature PDFs and generated submission packages are intentionally
 excluded from Git.
@@ -11,7 +11,7 @@ excluded from Git.
 A checkout alone is therefore not sufficient to recompute the study. Public
 data must be retrieved from the cited accessions and reconciled against the
 tracked provenance and checksum records before analysis. No patient-level
-outcome is used during disease-blind identity learning.
+outcome was used during disease-blind identity learning.
 
 ## Frozen data resources
 
@@ -26,15 +26,22 @@ The final manuscript does not treat the GSE174188 internal donor split as an
 independent cohort and does not assign an inferential P value to the two-donor
 GSE23307 experiment.
 
-## Environments
+## Two environment layers
 
-The single-cell and figure workflow was tested in `sle-bcell-v7` with Python
-3.11. The correlation-aware sensitivity was tested with R 4.6.0, edgeR 4.10.1
-and limma 3.68.4. Document generation and audit use the bundled Codex Python
-runtime; WPS Office is the authoritative DOCX rendering backend on this
-workstation.
+The scientific analysis and the release build are locked separately so that a
+future reader can distinguish numerical inference from document rendering.
 
-Exact Windows conda reconstruction:
+### Scientific analysis environment
+
+The single-cell and figure workflow was run in `sle-bcell-v7` with Python 3.11.
+The correlation-aware regulator sensitivity was run with R 4.6.0, edgeR 4.10.1
+and limma 3.68.4. The tracked analysis locks are:
+
+- `audit_tools/environment_phase17_v7_explicit_win64_2026-08-10.txt`
+- `audit_tools/environment_phase17_v7_pip_freeze_2026-08-10.txt`
+- `audit_tools/environment_phase17_v7_resolved_2026-08-10.yml`
+
+Exact Windows reconstruction:
 
 ```powershell
 conda create -n sle-bcell-v7-repro `
@@ -45,94 +52,96 @@ python -m pip install `
 python .\02_analysis\scripts\01_check_scanpy_env.py
 ```
 
-The resolved environment is
-`audit_tools/environment_phase17_v7_resolved_2026-08-10.yml`. The explicit
-Windows package specification is the exact local reconstruction path.
+### Release and document environment
+
+The journal-facing build uses the dedicated `sle-bcell-c8br-release` environment,
+LibreOffice headless rendering for portable checks, and WPS Office as the
+authoritative DOCX rendering backend on the release workstation. Its tracked
+locks are:
+
+- `audit_tools/environment_gateC8BR_release_2026-08-25.yml`
+- `audit_tools/environment_gateC8BR_release_explicit_win64_2026-08-25.txt`
+
+Recreate or refresh the release environment with:
+
+```powershell
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\00_create_gateC8BR_release_env.ps1
+```
 
 ## Frozen inferential sequence
 
-1. Hard-QC and library reconciliation retained 150,402/150,402 cells across
+1. Hard QC and library reconciliation retained 150,402/150,402 cells across
    88/88 libraries. The 1,972 residual-risk calls remained sensitivity-only.
 2. Disease-blind recurrent-HVG representations were reviewed before outcomes
    were unlocked.
-3. Resampling did not support the original five fine states as hard inferential
-   identities. The permissible frozen scope was reduced to broad `B_CONV` and
-   `B_ASC` compartments.
-4. Protected metadata were joined only after identity freeze. Composition was
+3. Identity stability was tested in the frozen 50-dimensional
+   `X_pca_harmony` space. Twenty 80% resamples were drawn without replacement
+   within each `library_uuid`. HVG selection, PCA and Harmony were not
+   recomputed. For each resample, a 15-nearest-neighbour graph and Leiden
+   partitions at resolutions 0.4, 0.6 and 0.8 were recomputed. The base seed
+   was 20260806; sampling used `20260806 + 1000 + r` and graph/clustering used
+   `20260806 + r` for zero-based replicate `r`.
+4. Resampled clusters were mapped to the corresponding full-data reference
+   cluster by maximum cell overlap. Stability was evaluated with ARI, AMI,
+   majority-mapping agreement, state Jaccard and state recall. Five-, four-
+   and three-state interpretations did not satisfy the predeclared joint
+   stability thresholds. A two-compartment model reconstructed from the frozen
+   transition map passed stricter thresholds: median/minimum mapped ARI
+   0.995553/0.990207, median/minimum mapping agreement 0.999925/0.999834 and
+   minimum state median Jaccard 0.991371. Required ASC markers `DERL3`,
+   `JCHAIN`, `MZB1`, `TNFRSF17` and `XBP1` each had sample support 1.0.
+5. The permissible frozen identity scope was therefore reduced to broad
+   `B_CONV` and `B_ASC` compartments. Fine-grained naive/memory subtype labels
+   were not used as hard inferential identities.
+6. Protected metadata were joined only after identity freeze. Composition was
    analysed at sample level and transcription with raw-count pseudobulk at the
    biological-sample or donor level.
-5. The discovery IFN/ISG program was frozen before donor-nonoverlap and
+7. The discovery IFN/ISG program was frozen before donor-nonoverlap and
    GSE135779 tests.
-6. STAT1/STAT2 regulators, signed CollecTRI targets, contrasts, backgrounds and
+8. STAT1/STAT2 regulators, signed CollecTRI targets, contrasts, backgrounds and
    designs were frozen before CAMERA and FRY sensitivity analyses.
-7. Five main and seven supplementary figures, manuscript numbers and legends
+9. Five main and seven supplementary figures, manuscript numbers and legends
    were regenerated from frozen tables and guarded by exact panel-data
    assertions.
-8. Complete statistical outputs were packaged with sanitized design matrices,
-   a unified test-family map, file-level provenance and deterministic hashes.
+10. Complete statistical outputs were packaged with sanitized design matrices,
+    a unified test-family map, file-level provenance and deterministic hashes.
 
-## Gate C8S rebuild
+## Journal-facing prefreeze rebuild
 
-The complete local rebuild is:
-
-```powershell
-powershell -ExecutionPolicy Bypass `
-  -File .\audit_tools\run_6013RP_phase17_gateC8S_submission_package.ps1
-```
-
-The runner executes these tracked components in order:
-
-- `audit_tools/phase17_c7_01_build_main_figures.py`
-- `audit_tools/phase17_c8s_01_build_supplementary_figures.py`
-- `audit_tools/phase17_c8s_02_build_full_statistical_archive.py`
-- `audit_tools/phase17_c8s_03_build_submission_sources.py`
-- `audit_tools/phase17_c8s_04_build_documents.py`
-- `audit_tools/render_docx_with_wps.ps1`
-- bundled `a11y_audit.py`
-- `audit_tools/phase17_c8s_05_final_submission_audit.py`
-
-The correlation-aware regulator sensitivity and DOI metadata verification remain
-frozen Gate C8R inputs; C8S does not recompute or relabel those estimates.
-
-For a quick package-only rebuild from already verified scientific outputs:
+The active local rebuild is:
 
 ```powershell
 powershell -ExecutionPolicy Bypass `
-  -File .\audit_tools\run_6013RP_phase17_gateC8S_submission_package.ps1 `
-  -SkipMainFigureBuild `
-  -SkipSupplementaryFigureBuild `
-  -SkipStatisticalArchiveBuild
+  -File .\audit_tools\run_6013RP_phase17_gateC8BRP_journal_facing_prefreeze.ps1
 ```
 
-## Automated locks
+Use `-PortableCore` for a fully portable build that stops after LibreOffice
+checks. The default full mode also uses WPS Office and performs page-by-page
+raster and accessibility checks before the deterministic package archive is
+created.
 
-- Main-figure assertions: 46/46 must pass, including the Figure 2a group counts
-  and the corrected Figure 5 panel-d/panel-e machine-readable mapping.
-- Supplementary-figure assertions: 29/29 must pass across S1-S7.
-- Figures: exactly five main and seven supplementary PDF/600-dpi PNG pairs;
-  visible figure text must be at least 5 pt.
-- Correlation-aware core family: six tests with exact target counts
-  `98/14/129/19/161/20`; CAMERA direction 6/6 and BH significance 5/6; FRY
-  direction and BH significance 6/6.
-- References: 26 DOI records must pass metadata verification; the manuscript
-  contains 30 references in total.
-- Main DOCX: double spacing, continuous line numbers, page numbering and
-  odd/even running headers.
-- Full statistical archive: 12 complete gene-level branches, 12 sanitized design
-  matrices, 63 payload files, no direct identifiers and a deterministic SHA-256.
-- Supplement: eight tables with explicit OOXML table width, grid, cell-width and
-  indent geometry, plus seven embedded figures.
-- WPS page review: 27 manuscript pages, 12 supplementary pages and 1 cover page.
-- Accessibility: zero high-, medium- or low-severity findings in all three DOCX
-  reports.
-- Packaging: every package file is listed in `MANIFEST_SHA256.csv`; the final
-  ZIP is rebuilt twice from the same frozen package tree with fixed entry order,
-  timestamps and permissions, and the two SHA-256 hashes must match.
+## Frozen release assertions
 
-## Release policy
+- Main-figure panel-data assertions: 46/46.
+- Manuscript numerical assertions: 29/29.
+- Reference DOI identities independently resolved: 28/28.
+- Numbered manuscript references: 32.
+- The complete statistical results archive is byte-identical to the Gate C8S
+  frozen source archive.
+- Main and supplementary DOCX files use numbered journal-style citations,
+  embedded figure markers, explicit table titles, full-width tables, US Letter
+  pages, 1-inch margins, Times New Roman text and double-spaced manuscript body
+  text.
+- The release package contains a clean `portal_upload_preview` directory and a
+  filename map, but it is deliberately marked `DO NOT UPLOAD` until the author
+  completion matrix is signed.
 
-The GitHub repository is currently public. It is not yet the final citable
-release: complete the data-license review, confirm that no non-shareable metadata
-are tracked, add an open-source licence and create an immutable Zenodo or
-equivalent DOI. The DOI and final release commit must then replace the visible
-manuscript and cover-letter placeholders before portal submission.
+## Author-controlled release boundary
+
+The pipeline cannot truthfully complete ethics, competing-interests, funding,
+CRediT contribution, acknowledgement, all-author originality/approval,
+correspondence-address approval, publication-licence or APC decisions. It also
+does not mint a repository DOI. These remain explicit author actions. Portal
+submission is unauthorized until every mandatory item is resolved and the
+final package is re-audited.

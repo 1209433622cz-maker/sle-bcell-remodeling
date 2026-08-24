@@ -81,6 +81,16 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Draw Figure 5a as parallel regulatory and response-evidence branches.",
     )
+    parser.add_argument(
+        "--graphical-validation-workflow",
+        action="store_true",
+        help="Draw the Figure 1a validation sequence as aligned nodes and arrows.",
+    )
+    parser.add_argument(
+        "--reader-facing-source-labels",
+        action="store_true",
+        help="Use sequential reader-facing omission labels in Figure 4d.",
+    )
     return parser.parse_args()
 
 
@@ -192,7 +202,13 @@ def forest(
     style_axis(axis)
 
 
-def build_figure1(root: Path, figure_dir: Path, source_dir: Path) -> None:
+def build_figure1(
+    root: Path,
+    figure_dir: Path,
+    source_dir: Path,
+    *,
+    graphical_validation_workflow: bool = False,
+) -> None:
     c2b3 = read_json(
         root
         / "phase17_v7/gateC2B3/20260813_full_neutral_state_freeze/16_GATE_C2B3_ADVISOR_REVIEW.json"
@@ -361,16 +377,43 @@ def build_figure1(root: Path, figure_dir: Path, source_dir: Path) -> None:
             xycoords=axis.transAxes,
             arrowprops={"arrowstyle": "-|>", "lw": 0.8, "color": COLORS["dark"]},
         )
-    axis.text(
-        0.5,
-        0.29,
-        "Frozen signatures  ->  GSE135779 validation  ->  regulatory convergence",
-        transform=axis.transAxes,
-        ha="center",
-        va="center",
-        fontsize=6.2,
-        fontweight="bold",
-    )
+    if graphical_validation_workflow:
+        validation_nodes = [
+            (0.12, "Frozen\nprograms", COLORS["internal"]),
+            (0.50, "Independent\nvalidation", COLORS["external"]),
+            (0.88, "Regulatory +\nresponse evidence", COLORS["ifn"]),
+        ]
+        for x, text, color in validation_nodes:
+            axis.text(
+                x,
+                0.29,
+                text,
+                transform=axis.transAxes,
+                ha="center",
+                va="center",
+                fontsize=5.8,
+                linespacing=1.2,
+                bbox={"boxstyle": "round,pad=0.25", "facecolor": "white", "edgecolor": color, "linewidth": 0.8},
+            )
+        for start, end in ((0.26, 0.37), (0.64, 0.75)):
+            axis.annotate(
+                "",
+                xy=(end, 0.29),
+                xytext=(start, 0.29),
+                xycoords=axis.transAxes,
+                arrowprops={"arrowstyle": "-|>", "lw": 0.7, "color": COLORS["dark"]},
+            )
+    else:
+        axis.text(
+            0.5,
+            0.29,
+            "Frozen signatures  ->  GSE135779 validation  ->  regulatory convergence",
+            transform=axis.transAxes,
+            ha="center",
+            va="center",
+            fontsize=6.2,
+            fontweight="bold",
+        )
     axis.text(
         0.5,
         0.10,
@@ -799,7 +842,13 @@ def load_tested_gene_table(path: Path, symbol_field: str) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def build_figure4(root: Path, figure_dir: Path, source_dir: Path) -> None:
+def build_figure4(
+    root: Path,
+    figure_dir: Path,
+    source_dir: Path,
+    *,
+    reader_facing_source_labels: bool = False,
+) -> None:
     c4_dir = root / "phase17_v7/gateC4B/20260815_edger_transcription"
     c5_dir = root / "phase17_v7/gateC5B/20260815_gse135779_external_validation"
     programs = read_csv(c5_dir / "07_PROGRAM_RESULTS.csv")
@@ -920,7 +969,12 @@ def build_figure4(root: Path, figure_dir: Path, source_dir: Path) -> None:
     panel_label(axis, "c")
 
     axis = axes[1, 1]
-    labels_d = ["Full childhood", "43 donor deletions"] + [f"Without {value}" for value in source_ifn["omitted_source_label"]]
+    omission_labels = (
+        [f"Omit source label {index}" for index in range(1, len(source_ifn) + 1)]
+        if reader_facing_source_labels
+        else [f"Without {value}" for value in source_ifn["omitted_source_label"]]
+    )
+    labels_d = ["Full childhood", "43 donor deletions"] + omission_labels
     y = np.arange(len(labels_d))[::-1]
     axis.errorbar(childhood["effect"], y[0], xerr=[[childhood["effect"] - childhood["ci_low"]], [childhood["ci_high"] - childhood["effect"]]], fmt="o", color=COLORS["sle"], ms=3.7, lw=0.9, capsize=1.8)
     donor_min = float(donor_ifn.iloc[0]["loo_min_effect"])
@@ -1164,10 +1218,20 @@ def main() -> None:
     source_dir.mkdir(parents=True, exist_ok=True)
     ASSERTIONS.clear()
     configure_style()
-    build_figure1(root, figure_dir, source_dir)
+    build_figure1(
+        root,
+        figure_dir,
+        source_dir,
+        graphical_validation_workflow=args.graphical_validation_workflow,
+    )
     build_figure2(root, figure_dir, source_dir)
     build_figure3(root, figure_dir, source_dir)
-    build_figure4(root, figure_dir, source_dir)
+    build_figure4(
+        root,
+        figure_dir,
+        source_dir,
+        reader_facing_source_labels=args.reader_facing_source_labels,
+    )
     build_figure5(
         root,
         figure_dir,

@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-08-25",
+  "status": "PASS_GATE_C8BRP_JOURNAL_FACING_FIGURES_BUILT",
+  "figures": 5,
+  "formats": [
+    "PDF",
+    "PNG_600_DPI"
+  ],
+  "source_data_files": 5,
+  "scientific_estimates_changed": false,
+  "visual_only_changes": [
+    "Figure 1a validation sequence uses aligned graphical nodes and arrows",
+    "Figure 4d uses sequential reader-facing omission labels while source codes remain in Source Data"
+  ],
+  "figure5_semantics_preserved": "parallel regulatory and response-evidence branches",
+  "all_source_data_match_gateC8BR": true,
+  "source_data_sha256": {
+    "Figure1_source_data.csv": "60BED18114D447076538BB4C2355DCD7E29EA74701D5DF39654D1E4335200944",
+    "Figure2_source_data.csv": "DAA6DDBAB469E0D510AB578BEE0A21AA73FA2D71184739E3F361C3EA6EC8DFE2",
+    "Figure3_source_data.csv": "DEFABF8C16D879362E3AD197C857A9197CD6D0691B20FDFA4AC97BEFF3710BC8",
+    "Figure4_source_data.csv": "1C04F4071F7F064CA1AB4E47A281F0AA14074466E06BAB6FA30078029F570A9E",
+    "Figure5_source_data.csv": "21925F6916DDAF97760CF73622ED8E4B4CCBE5AE0B3B53C721FDF607C1C6F9A4"
+  },
+  "panel_data_assertions": 46,
+  "panel_data_assertions_passed": true
+}

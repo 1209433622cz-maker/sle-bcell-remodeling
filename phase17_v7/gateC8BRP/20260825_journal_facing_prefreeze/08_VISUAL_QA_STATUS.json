@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-08-25",
+  "status": "PASS_GATE_C8BRP_VISUAL_QA",
+  "review_backend": "WPS PDF plus 150-dpi page rasters",
+  "pages_reviewed": {
+    "main_manuscript": 28,
+    "supplementary_information": 13,
+    "cover_letter": 1,
+    "total": 42
+  },
+  "main_figures_reviewed": 5,
+  "main_figure_geometry": {
+    "width_mm": 180.1,
+    "maximum_height_mm": 157.5,
+    "font_rows_per_pdf": "Arial and Arial Bold detected"
+  },
+  "checks": {
+    "blank_pages": 0,
+    "cropped_content": 0,
+    "incoherent_overlap": 0,
+    "unreadable_tables": 0,
+    "broken_figure_markers": 0,
+    "cover_letter_overflow": 0,
+    "figure1_graphical_workflow_clear": true,
+    "figure4_reader_labels_clear": true,
+    "figure5_parallel_evidence_clear": true
+  },
+  "scientific_estimates_changed": false,
+  "portal_submission_authorized": false,
+  "note": "Contact sheets were used for manual inspection and are local QA intermediates excluded from Git."
+}

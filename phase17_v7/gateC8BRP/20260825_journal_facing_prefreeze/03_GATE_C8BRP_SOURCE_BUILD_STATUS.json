@@ -1,0 +1,35 @@
+{
+  "created_at": "2026-08-25",
+  "status": "PASS_GATE_C8BRP_JOURNAL_FACING_SOURCES_BUILT",
+  "source_scientific_freeze": "Gate C8S",
+  "scientific_estimates_changed": false,
+  "abstract_words": 318,
+  "references": 32,
+  "manuscript_author_placeholders": 6,
+  "supplement_figure_markers": 7,
+  "supplement_internal_history_tokens": 0,
+  "identity_resampling_reporting": {
+    "cells": 150402,
+    "replicates": 20,
+    "fraction": 0.8,
+    "stratification": "library_uuid",
+    "frozen_dimensions": 50,
+    "recomputed": "15-nearest-neighbour graph and Leiden 0.4/0.6/0.8",
+    "base_seed": 20260806
+  },
+  "author_metadata_confirmed": [
+    "names",
+    "emails",
+    "MSc student in Bioinformatics titles",
+    "affiliation",
+    "ORCIDs"
+  ],
+  "outputs": {
+    "manuscript": "01_manuscript/manuscript_v15_genome_medicine_journal_facing_prefreeze_2026-08-25.md",
+    "supplement": "01_manuscript/supplementary_information_v6_journal_facing_2026-08-25.md",
+    "cover": "04_submission/cover_letter_genome_medicine_gateC8BRP_AUTHOR_COMPLETION_REQUIRED_2026-08-25.md",
+    "author_matrix": "04_submission/author_completion_matrix_gateC8BRP_2026-08-25.md",
+    "target": "04_submission/journal_target_decision_gateC8BRP_2026-08-25.md",
+    "checklist": "04_submission/reporting_checklist_gateC8BRP_2026-08-25.md"
+  }
+}

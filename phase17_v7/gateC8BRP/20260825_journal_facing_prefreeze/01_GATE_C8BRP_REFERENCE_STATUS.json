@@ -1,0 +1,8 @@
+{
+  "created_at": "2026-08-25",
+  "decision": "PASS",
+  "doi_records": 28,
+  "manuscript_references": 32,
+  "source": "byte-identical Gate C8BR verified reference state",
+  "source_status_sha256": "C4921A8711C005D560C72F77F66783E5507E5E3D997303944D79EBB9994AF646"
+}
