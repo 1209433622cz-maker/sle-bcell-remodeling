@@ -11,12 +11,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RUN_DIR = ROOT / "phase17_v7" / "gateC8BRF" / "20260825_author_release"
-SOURCE_MANUSCRIPT = ROOT / "01_manuscript" / "manuscript_v15_genome_medicine_journal_facing_prefreeze_2026-08-25.md"
 MANUSCRIPT = ROOT / "01_manuscript" / "Manuscript.md"
-SOURCE_SUPPLEMENT = ROOT / "01_manuscript" / "supplementary_information_v6_journal_facing_2026-08-25.md"
 SUPPLEMENT = ROOT / "01_manuscript" / "Supplementary_Information.md"
-SOURCE_COVER = ROOT / "04_submission" / "cover_letter_genome_medicine_gateC8BRP_AUTHOR_COMPLETION_REQUIRED_2026-08-25.md"
 COVER = ROOT / "04_submission" / "Cover_Letter.md"
+# Stable, version-neutral publication sources are authoritative. Historical dated
+# drafts remain provenance records but must never overwrite these files.
+SOURCE_MANUSCRIPT = MANUSCRIPT
+SOURCE_SUPPLEMENT = SUPPLEMENT
+SOURCE_COVER = COVER
 AUTHOR_RECORD = ROOT / "04_submission" / "Author_Confirmation.md"
 CHECKLIST = ROOT / "04_submission" / "Reporting_Checklist.md"
 ZENODO_METADATA = ROOT / "04_submission" / "Zenodo_Metadata.json"
@@ -58,12 +60,9 @@ def validate_doi(doi: str) -> str:
 
 def build_manuscript(doi: str) -> tuple[str, int]:
     text = SOURCE_MANUSCRIPT.read_text(encoding="utf-8-sig")
-    text = replace_once(
-        text,
-        "**Version:** Journal-facing author-completion draft v15, 25 August 2026\n\n**Date:** 25 August 2026\n\n",
-        "",
-        "manuscript drafting metadata",
-    )
+    draft_metadata = "**Version:** Journal-facing author-completion draft v15, 25 August 2026\n\n**Date:** 25 August 2026\n\n"
+    if draft_metadata in text:
+        text = replace_once(text, draft_metadata, "", "manuscript drafting metadata")
     text = replace_section(
         text,
         "### Ethics approval and consent to participate",
@@ -114,10 +113,14 @@ Generative artificial intelligence tools, including OpenAI Codex and ChatGPT, we
     )
     old_legend = "**a,** Audited GSE174188 hierarchy, hard-quality-control retention and separation of disease-blind identity reconstruction from sample-level outcome inference. **b,** Median mapped adjusted Rand index and minimum-to-median interval for each candidate identity policy across 20 resamples; policies are discrete alternatives and are not connected as a trajectory. **c,** Mapped adjusted Rand index and mapping agreement in each two-compartment resampling run. **d,** Minimum and median state Jaccard indices for `B_CONV` and `B_ASC`, with frozen antibody-secreting marker support. Cell-level summaries define identity stability and are not disease replicates."
     new_legend = "**a,** Audited GSE174188 hierarchy, hard-quality-control retention and separation of disease-blind identity reconstruction from sample-level outcome inference. **b,** Median mapped adjusted Rand index and minimum-to-median interval for each candidate identity policy across 20 resamples; policies are discrete alternatives and are not connected as a trajectory. The short dashed segment applies only to the two-compartment minimum-ARI criterion of 0.90. **c,** Mapped adjusted Rand index and mapping agreement in each two-compartment resampling run; the dashed horizontal guide marks the minimum mapped-ARI criterion of 0.990. **d,** Minimum and median state Jaccard indices for `B_CONV` and `B_ASC`, with frozen antibody-secreting marker support; the dashed vertical guide marks the minimum state-median Jaccard criterion of 0.95. Cell-level summaries define identity stability and are not disease replicates."
-    text = replace_once(text, old_legend, new_legend, "Figure 1 legend")
+    if old_legend in text:
+        text = replace_once(text, old_legend, new_legend, "Figure 1 legend")
     old_reference = "17. SLE B-cell remodeling analysis repository. GitHub. https://github.com/1209433622cz-maker/sle-bcell-remodeling. Accessed 21 Aug 2026."
     new_reference = f"17. Chen Z, Qi T. SLE B-cell remodeling analysis: code, source data and reproducible release. Zenodo. 2026. doi:{doi}."
-    text = replace_once(text, old_reference, new_reference, "release reference")
+    if old_reference in text:
+        text = replace_once(text, old_reference, new_reference, "release reference")
+    elif new_reference not in text:
+        raise RuntimeError("Final release reference is absent or inconsistent")
 
     abstract = text[text.index("## Abstract") + len("## Abstract") : text.index("## Keywords")]
     references = [
@@ -139,37 +142,43 @@ Generative artificial intelligence tools, including OpenAI Codex and ChatGPT, we
 
 def build_supplement(doi: str) -> str:
     text = SOURCE_SUPPLEMENT.read_text(encoding="utf-8-sig")
-    text = replace_once(
-        text,
-        "**Version:** Submission draft, 25 August 2026\n\n",
-        "",
-        "supplement drafting metadata",
-    )
-    text = replace_once(
-        text,
-        "| Immutable release | Final archive DOI will be inserted in the main manuscript availability statement after author approval |",
-        f"| Immutable archive | Zenodo doi:{doi} |",
-        "supplement release record",
-    )
-    if text.count("[[") != 7 or text.count("[[SUPPLEMENTARY_FIGURE:S") != 7:
+    draft_metadata = "**Version:** Submission draft, 25 August 2026\n\n"
+    if draft_metadata in text:
+        text = replace_once(text, draft_metadata, "", "supplement drafting metadata")
+    pending_release = "| Immutable release | Final archive DOI will be inserted in the main manuscript availability statement after author approval |"
+    final_release = f"| Immutable archive | Zenodo doi:{doi} |"
+    if pending_release in text:
+        text = replace_once(text, pending_release, final_release, "supplement release record")
+    elif final_release not in text:
+        raise RuntimeError("Final supplement release record is absent or inconsistent")
+    if text.count("[[") != 8 or text.count("[[SUPPLEMENTARY_FIGURE:S") != 8:
         raise RuntimeError("Supplement contains unexpected placeholders")
     return text
 
 
 def build_cover(doi: str) -> str:
     text = SOURCE_COVER.read_text(encoding="utf-8-sig")
-    text = replace_once(
-        text,
-        "The submission includes five 600-dpi main figures, seven supplementary figures, machine-readable source data, a complete statistical-results archive, supplementary information and a separate six-test regulator-sensitivity attachment. [[PRE-SUBMISSION ACTION REQUIRED: insert immutable archive DOI and licence information.]]",
-        f"The submission includes five vector main figures rendered at 170 mm with 600-dpi PNG companions, seven supplementary figures, machine-readable source data, a complete statistical-results archive, supplementary information and a separate six-test regulator-sensitivity attachment. The versioned release is archived at doi:{doi}. Original project code is MIT-licensed; original manuscript text, composite figures, documentation and project-generated derived source-data tables are available under CC BY 4.0, without relicensing third-party datasets.",
-        "cover release statement",
-    )
-    text = replace_once(
-        text,
-        "[[AUTHOR CONFIRMATION REQUIRED: confirm that all authors approved the manuscript and its submission; that the work has not been published and is not under consideration elsewhere; and disclose any policy issues or competing interests.]]",
-        "Both authors approved the manuscript, supplementary information, figures, source data, cover letter and submission. The work is original, is submitted exclusively to Genome Medicine and is not under consideration by another journal. The authors declare no competing interests and no specific funding. The manuscript transparently discloses the authors' reviewed use of generative artificial intelligence assistance.",
-        "cover author confirmation",
-    )
+    pending_release = "The submission includes five 600-dpi main figures, seven supplementary figures, machine-readable source data, a complete statistical-results archive, supplementary information and a separate six-test regulator-sensitivity attachment. [[PRE-SUBMISSION ACTION REQUIRED: insert immutable archive DOI and licence information.]]"
+    previous_release = f"The submission includes five vector main figures rendered at 170 mm with 600-dpi PNG companions, seven supplementary figures, machine-readable source data, a complete statistical-results archive, supplementary information and a separate six-test regulator-sensitivity attachment. The versioned release is archived at doi:{doi}. Original project code is MIT-licensed; original manuscript text, composite figures, documentation and project-generated derived source-data tables are available under CC BY 4.0, without relicensing third-party datasets."
+    final_release = f"The submission includes five vector main figures rendered at 170 mm with 600-dpi PNG companions, eight supplementary figures, machine-readable source data, a complete statistical-results archive, supplementary information and a regulator-sensitivity attachment containing baseline and prespecified overlap-depletion analyses. The archived release is available at doi:{doi}. Original project code is MIT-licensed; original manuscript text, composite figures, documentation and project-generated derived source-data tables are available under CC BY 4.0, without relicensing third-party datasets."
+    if pending_release in text:
+        text = replace_once(text, pending_release, final_release, "cover release statement")
+    elif previous_release in text:
+        text = replace_once(text, previous_release, final_release, "cover release statement")
+    elif final_release not in text:
+        raise RuntimeError("Final cover release statement is absent or inconsistent")
+
+    pending_confirmation = "[[AUTHOR CONFIRMATION REQUIRED: confirm that all authors approved the manuscript and its submission; that the work has not been published and is not under consideration elsewhere; and disclose any policy issues or competing interests.]]"
+    final_confirmation = "Both authors approved the manuscript, supplementary information, figures, source data, cover letter and submission. The work is original, is submitted exclusively to Genome Medicine and is not under consideration by another journal. The authors declare no competing interests and no specific funding. The manuscript transparently discloses the authors' reviewed use of generative artificial intelligence assistance."
+    if pending_confirmation in text:
+        text = replace_once(text, pending_confirmation, final_confirmation, "cover author confirmation")
+    elif final_confirmation not in text:
+        raise RuntimeError("Final cover author confirmation is absent or inconsistent")
+
+    overlap_sentence = "Post-freeze depletion of either the frozen 12-gene arm or the broader M5911 set preserved every method-level direction, while transparently exposing substantial attenuation of the low-coverage discovery STAT2 model after broad depletion."
+    if overlap_sentence not in text:
+        anchor = "Orthogonal enrichment of the independently curated M5911 response set"
+        text = replace_once(text, anchor, overlap_sentence + " " + anchor, "cover overlap-depletion summary")
     if "[[" in text or doi not in text:
         raise RuntimeError("Final cover letter contract failed")
     return text
@@ -220,16 +229,16 @@ def reporting_checklist(doi: str) -> str:
 
 ## Scientific freeze
 
-- [x] The scientific analysis is frozen and unchanged during publication engineering.
+- [x] Primary scientific families remain frozen; the declared post-freeze STAT1/STAT2 overlap-depletion sensitivity does not replace them.
 - [x] Main panel-data assertions pass 46/46.
-- [x] Supplementary-figure panel-data assertions pass 29/29.
-- [x] No new cohort, cluster, threshold, gene, regulator or signature was added.
+- [x] Legacy supplementary-figure panel-data assertions pass 29/29 and Supplementary Figure S8 has a separate verified 36-row source-data contract.
+- [x] No new cohort, cluster, primary threshold, regulator or signature was selected; depletion used two prespecified frozen gene sets.
 - [x] Primary B_ASC composition remains a null boundary.
 - [x] Central claim remains independently replicated IFN/ISG remodeling within broad B_CONV.
 
 ## Final publication engineering
 
-- [x] Figures 1-5 were rerendered at exactly 170 mm, with vector PDFs, 600-dpi PNGs, 5-7 pt text and 8 pt panel labels.
+- [x] Figures 1-5 were rerendered at exactly 170 mm, with vector PDFs, 600-dpi PNGs, 5-7 pt text and 8 pt panel labels; Figures 1a and 5a encode evidence hierarchy without causal ordering.
 - [x] Figure 1 Source Data removes only two non-plotted internal gate-decision rows; plotted rows are unchanged.
 - [x] Figure 1 threshold guides are explicitly defined.
 - [x] Figure 2 UUID provenance and privacy audit passed.

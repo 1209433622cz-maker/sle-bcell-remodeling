@@ -226,6 +226,7 @@ def build_figure1(
     graphical_validation_workflow: bool = False,
     publication_source_data: bool = False,
     explicit_threshold_semantics: bool = False,
+    nature_evidence_hierarchy: bool = False,
 ) -> None:
     c2b3 = read_json(
         root
@@ -375,79 +376,174 @@ def build_figure1(
     axis = axes[0, 0]
     axis.set_axis_off()
     panel_label(axis, "a", x=-0.06, y=1.03)
-    nodes = [
-        (0.02, "GSE174188\nB-lineage cells", COLORS["internal"]),
-        (0.36, "Disease-blind\nB_CONV / B_ASC", COLORS["teal"]),
-        (0.70, "Composition +\nB_CONV pseudobulk", COLORS["sle"]),
-    ]
-    for x, text, color in nodes:
-        axis.text(
-            x,
-            0.67,
-            text,
-            transform=axis.transAxes,
-            fontsize=7,
-            ha="left",
-            va="center",
-            linespacing=1.35,
-            bbox={"boxstyle": "round,pad=0.35", "facecolor": "white", "edgecolor": color, "linewidth": 1.0},
-        )
-    for start, end in ((0.27, 0.35), (0.60, 0.68)):
-        axis.annotate(
-            "",
-            xy=(end, 0.67),
-            xytext=(start, 0.67),
-            xycoords=axis.transAxes,
-            arrowprops={"arrowstyle": "-|>", "lw": 0.8, "color": COLORS["dark"]},
-        )
-    if graphical_validation_workflow:
-        validation_nodes = [
-            (0.12, "Frozen\nprograms", COLORS["internal"]),
-            (0.50, "Independent\nvalidation", COLORS["external"]),
-            (0.88, "Regulatory +\nresponse evidence", COLORS["ifn"]),
+    if nature_evidence_hierarchy:
+        tier_style = {
+            "transform": axis.transAxes,
+            "ha": "left",
+            "va": "center",
+            "fontsize": 5.2,
+            "fontweight": "bold",
+            "color": "#333333",
+        }
+        node_style = {
+            "transform": axis.transAxes,
+            "ha": "center",
+            "va": "center",
+            "fontsize": 5.4,
+            "linespacing": 1.15,
+        }
+        axis.text(0.00, 0.86, "Discovery", **tier_style)
+        discovery_nodes = [
+            (0.20, "B-lineage\ncells", COLORS["internal"]),
+            (0.43, "Hard QC", COLORS["dark"]),
+            (0.72, "Disease-blind\nB_CONV / B_ASC freeze", COLORS["teal"]),
         ]
-        for x, text, color in validation_nodes:
+        for x, label, color in discovery_nodes:
             axis.text(
                 x,
-                0.29,
-                text,
-                transform=axis.transAxes,
-                ha="center",
-                va="center",
-                fontsize=5.8,
-                linespacing=1.2,
-                bbox={"boxstyle": "round,pad=0.25", "facecolor": "white", "edgecolor": color, "linewidth": 0.8},
+                0.86,
+                label,
+                **node_style,
+                bbox={"boxstyle": "round,pad=0.24", "facecolor": "white", "edgecolor": color, "linewidth": 0.8},
             )
-        for start, end in ((0.26, 0.37), (0.64, 0.75)):
+        for start, end in ((0.29, 0.35), (0.51, 0.57)):
             axis.annotate(
                 "",
-                xy=(end, 0.29),
-                xytext=(start, 0.29),
+                xy=(end, 0.86),
+                xytext=(start, 0.86),
                 xycoords=axis.transAxes,
-                arrowprops={"arrowstyle": "-|>", "lw": 0.7, "color": COLORS["dark"]},
+                arrowprops={"arrowstyle": "-|>", "lw": 0.65, "color": COLORS["dark"]},
             )
-    else:
+        for x, label in (
+            (0.62, "B_ASC\ncomposition"),
+            (0.86, "B_CONV pseudobulk\n+ frozen programs"),
+        ):
+            axis.text(
+                x,
+                0.63,
+                label,
+                **node_style,
+                bbox={"boxstyle": "round,pad=0.22", "facecolor": "white", "edgecolor": COLORS["sle"], "linewidth": 0.75},
+            )
+            axis.annotate(
+                "",
+                xy=(x, 0.70),
+                xytext=(0.72, 0.79),
+                xycoords=axis.transAxes,
+                arrowprops={"arrowstyle": "-|>", "lw": 0.6, "color": COLORS["dark"]},
+            )
         axis.text(
-            0.5,
-            0.29,
-            "Frozen signatures  ->  GSE135779 validation  ->  regulatory convergence",
+            0.50,
+            0.52,
+            "GSE174188: 259 donors | 271 samples | 332 sample-cohort strata | 88 libraries",
             transform=axis.transAxes,
             ha="center",
             va="center",
-            fontsize=6.2,
-            fontweight="bold",
+            fontsize=5.0,
+            color="#444444",
         )
-    axis.text(
-        0.5,
-        0.10,
-        "259 donors | 271 samples | 332 sample-cohort strata | 88 libraries",
-        transform=axis.transAxes,
-        ha="center",
-        va="center",
-        fontsize=6.3,
-        color="#444444",
-    )
-    axis.set_title("Disease-blind discovery and frozen validation", loc="left", pad=4)
+
+        axis.text(0.00, 0.36, "Validation /\nreplication", linespacing=1.05, **tier_style)
+        for x, label, color in (
+            (0.38, "GSE174188\ninternal validation", COLORS["internal"]),
+            (0.76, "GSE135779\nindependent replication", COLORS["external"]),
+        ):
+            axis.text(
+                x,
+                0.34,
+                label,
+                **node_style,
+                bbox={"boxstyle": "round,pad=0.24", "facecolor": "white", "edgecolor": color, "linewidth": 0.8},
+            )
+
+        axis.text(0.00, 0.17, "Interpretation", **tier_style)
+        for x, label in (
+            (0.31, "same-data\nregulator robustness"),
+            (0.58, "M5911 response-set\nconcordance"),
+            (0.84, "GSE23307\nperturbational context"),
+        ):
+            axis.text(
+                x,
+                0.10,
+                label,
+                **node_style,
+                bbox={"boxstyle": "round,pad=0.20", "facecolor": "#F7F7F7", "edgecolor": "#777777", "linewidth": 0.65},
+            )
+        axis.set_title("Study design and evidence hierarchy", loc="left", pad=4)
+    else:
+        nodes = [
+            (0.02, "GSE174188\nB-lineage cells", COLORS["internal"]),
+            (0.36, "Disease-blind\nB_CONV / B_ASC", COLORS["teal"]),
+            (0.70, "Composition +\nB_CONV pseudobulk", COLORS["sle"]),
+        ]
+        for x, text, color in nodes:
+            axis.text(
+                x,
+                0.67,
+                text,
+                transform=axis.transAxes,
+                fontsize=7,
+                ha="left",
+                va="center",
+                linespacing=1.35,
+                bbox={"boxstyle": "round,pad=0.35", "facecolor": "white", "edgecolor": color, "linewidth": 1.0},
+            )
+        for start, end in ((0.27, 0.35), (0.60, 0.68)):
+            axis.annotate(
+                "",
+                xy=(end, 0.67),
+                xytext=(start, 0.67),
+                xycoords=axis.transAxes,
+                arrowprops={"arrowstyle": "-|>", "lw": 0.8, "color": COLORS["dark"]},
+            )
+        if graphical_validation_workflow:
+            validation_nodes = [
+                (0.12, "Frozen\nprograms", COLORS["internal"]),
+                (0.50, "Independent\nvalidation", COLORS["external"]),
+                (0.88, "Regulatory +\nresponse evidence", COLORS["ifn"]),
+            ]
+            for x, text, color in validation_nodes:
+                axis.text(
+                    x,
+                    0.29,
+                    text,
+                    transform=axis.transAxes,
+                    ha="center",
+                    va="center",
+                    fontsize=5.8,
+                    linespacing=1.2,
+                    bbox={"boxstyle": "round,pad=0.25", "facecolor": "white", "edgecolor": color, "linewidth": 0.8},
+                )
+            for start, end in ((0.26, 0.37), (0.64, 0.75)):
+                axis.annotate(
+                    "",
+                    xy=(end, 0.29),
+                    xytext=(start, 0.29),
+                    xycoords=axis.transAxes,
+                    arrowprops={"arrowstyle": "-|>", "lw": 0.7, "color": COLORS["dark"]},
+                )
+        else:
+            axis.text(
+                0.5,
+                0.29,
+                "Frozen signatures  ->  GSE135779 validation  ->  regulatory convergence",
+                transform=axis.transAxes,
+                ha="center",
+                va="center",
+                fontsize=6.2,
+                fontweight="bold",
+            )
+        axis.text(
+            0.5,
+            0.10,
+            "259 donors | 271 samples | 332 sample-cohort strata | 88 libraries",
+            transform=axis.transAxes,
+            ha="center",
+            va="center",
+            fontsize=6.3,
+            color="#444444",
+        )
+        axis.set_title("Disease-blind discovery and frozen validation", loc="left", pad=4)
 
     axis = axes[0, 1]
     x = np.arange(len(policy))
@@ -1055,6 +1151,7 @@ def build_figure5(
     *,
     proliferation_specificity_comparators: bool = False,
     parallel_evidence_branches: bool = False,
+    three_evidence_branches: bool = False,
 ) -> None:
     c6_dir = root / "phase17_v7/gateC6B/20260815_regulatory_evidence"
     regulators = read_csv(c6_dir / "01_CONFIRMATORY_REGULATOR_RESULTS.csv")
@@ -1108,22 +1205,102 @@ def build_figure5(
     source = pd.concat([regulator_source, gsea_source, donor_source], ignore_index=True)
     write_source(source_dir / "Figure5_source_data.csv", source)
 
-    figure = plt.figure(figsize=(7.09, 6.2), constrained_layout=True)
-    grid = figure.add_gridspec(
-        2,
-        4,
-        height_ratios=[0.70, 1.65],
-        width_ratios=[1.05, 1.05, 0.82, 0.82],
-    )
-    design_axis = figure.add_subplot(grid[0, 0:2])
-    gsea_axis = figure.add_subplot(grid[0, 2])
-    donor_axis = figure.add_subplot(grid[0, 3])
-    ifn_axis = figure.add_subplot(grid[1, 0:2])
-    control_axis = figure.add_subplot(grid[1, 2:4])
+    if three_evidence_branches:
+        figure = plt.figure(figsize=(7.09, 6.8), constrained_layout=True)
+        grid = figure.add_gridspec(
+            3,
+            4,
+            height_ratios=[0.72, 0.62, 1.45],
+            width_ratios=[1.0, 1.0, 0.9, 0.9],
+        )
+        design_axis = figure.add_subplot(grid[0, :])
+        gsea_axis = figure.add_subplot(grid[1, 2])
+        donor_axis = figure.add_subplot(grid[1, 3])
+        ifn_axis = figure.add_subplot(grid[1:, 0:2])
+        control_axis = figure.add_subplot(grid[2, 2:4])
+    else:
+        figure = plt.figure(figsize=(7.09, 6.2), constrained_layout=True)
+        grid = figure.add_gridspec(
+            2,
+            4,
+            height_ratios=[0.70, 1.65],
+            width_ratios=[1.05, 1.05, 0.82, 0.82],
+        )
+        design_axis = figure.add_subplot(grid[0, 0:2])
+        gsea_axis = figure.add_subplot(grid[0, 2])
+        donor_axis = figure.add_subplot(grid[0, 3])
+        ifn_axis = figure.add_subplot(grid[1, 0:2])
+        control_axis = figure.add_subplot(grid[1, 2:4])
 
     design_axis.set_axis_off()
     panel_label(design_axis, "a", x=-0.09, y=1.08)
-    if parallel_evidence_branches:
+    if three_evidence_branches:
+        design_axis.text(
+            0.50,
+            0.84,
+            "Replicated B_CONV IFN/ISG remodeling",
+            transform=design_axis.transAxes,
+            ha="center",
+            va="center",
+            fontsize=6.5,
+            fontweight="bold",
+            bbox={"boxstyle": "round,pad=0.28", "facecolor": "white", "edgecolor": COLORS["ifn"], "linewidth": 0.9},
+        )
+        branch_x = (0.18, 0.50, 0.82)
+        design_axis.plot([0.18, 0.82], [0.70, 0.70], transform=design_axis.transAxes, color="#666666", lw=0.65)
+        design_axis.plot([0.50, 0.50], [0.76, 0.70], transform=design_axis.transAxes, color="#666666", lw=0.65)
+        for x in branch_x:
+            design_axis.plot([x, x], [0.70, 0.63], transform=design_axis.transAxes, color="#666666", lw=0.65)
+        branch_titles = (
+            "Same-data regulator\nrobustness",
+            "Curated response-set\nconcordance",
+            "Separate perturbational\ncontext",
+        )
+        branch_details = (
+            "3 contrasts x 8 regulators\nglobal BH: 24 tests\ntarget deletion + 100 x 80%\nCAMERA + FRY sensitivity",
+            "MSigDB M5911\n3 ranked disease contrasts\n10,000 permutations/contrast",
+            "GSE23307 IFN-beta\nn=2 healthy donors\n12/12 positive genes per donor\ndescriptive; no inferential P",
+        )
+        for x, title, detail in zip(branch_x, branch_titles, branch_details, strict=True):
+            design_axis.text(
+                x,
+                0.56,
+                title,
+                transform=design_axis.transAxes,
+                ha="center",
+                va="center",
+                fontsize=5.8,
+                fontweight="bold",
+                linespacing=1.10,
+            )
+            design_axis.text(
+                x,
+                0.29,
+                detail,
+                transform=design_axis.transAxes,
+                ha="center",
+                va="center",
+                fontsize=5.2,
+                linespacing=1.12,
+                color="#333333",
+            )
+        design_axis.text(
+            0.50,
+            0.015,
+            "Interpretive support only - no causal regulator or unique upstream ligand established",
+            transform=design_axis.transAxes,
+            ha="center",
+            va="bottom",
+            fontsize=5.0,
+            fontweight="bold",
+            color="#555555",
+        )
+        design_axis.set_title(
+            "Evidence architecture for the replicated\nIFN/ISG program",
+            loc="left",
+            pad=4,
+        )
+    elif parallel_evidence_branches:
         design_axis.text(
             0.50,
             0.80,
@@ -1250,7 +1427,9 @@ def build_figure5(
     donor_axis.set_ylabel("Mean paired Δlog2(x+1)")
     donor_axis.set_ylim(0, donor["mean_paired_log2p1_effect"].max() * 1.25)
     donor_title = (
-        "IFN-beta\nresponse\n(n=2; descriptive)"
+        "IFN-beta\nresponse"
+        if three_evidence_branches
+        else "IFN-beta\nresponse\n(n=2; descriptive)"
         if parallel_evidence_branches
         else "IFN-beta response\n(n=2; descriptive)"
     )

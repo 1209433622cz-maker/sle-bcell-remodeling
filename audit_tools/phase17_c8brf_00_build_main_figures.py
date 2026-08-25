@@ -6,6 +6,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import re
 import shutil
 from pathlib import Path
 
@@ -41,6 +42,11 @@ def pdf_dimensions_mm(path: Path) -> tuple[float, float]:
     )
 
 
+def normalized_pdf_text(path: Path) -> str:
+    text = " ".join((page.extract_text() or "") for page in PdfReader(path).pages)
+    return re.sub(r"\s+", " ", text).strip()
+
+
 def main() -> None:
     figure_dir = RUN_DIR / "figures"
     source_dir = RUN_DIR / "source_data"
@@ -59,6 +65,7 @@ def main() -> None:
         graphical_validation_workflow=True,
         publication_source_data=True,
         explicit_threshold_semantics=True,
+        nature_evidence_hierarchy=True,
     )
     base.build_figure2(ROOT, figure_dir, source_dir)
     base.build_figure3(ROOT, figure_dir, source_dir)
@@ -74,6 +81,7 @@ def main() -> None:
         source_dir,
         proliferation_specificity_comparators=True,
         parallel_evidence_branches=True,
+        three_evidence_branches=True,
     )
     assertions = list(base.ASSERTIONS)
     if len(assertions) != 46 or not all(row.get("pass") is True for row in assertions):
@@ -93,6 +101,52 @@ def main() -> None:
     internal_tokens = ("HOLD_GATE", "PASS_GATE", "OUTCOME_UNLOCK")
     if any(token in publication_text for token in internal_tokens):
         raise RuntimeError("Internal gate token remains in publication Figure 1 Source Data")
+
+    figure1_text = normalized_pdf_text(figure_dir / "Figure1_disease_blind_identity_scope.pdf")
+    figure5_text = normalized_pdf_text(figure_dir / "Figure5_regulatory_evidence.pdf")
+    semantic_checks = {
+        "figure1_hierarchy_title": "Study design and evidence hierarchy" in figure1_text,
+        "figure1_internal_validation": "GSE174188 internal validation" in figure1_text,
+        "figure1_independent_replication": "GSE135779 independent replication" in figure1_text,
+        "figure1_parallel_interpretation_labels": all(
+            token in figure1_text
+            for token in (
+                "same-data regulator robustness",
+                "M5911 response-set concordance",
+                "GSE23307 perturbational context",
+            )
+        ),
+        "figure1_legacy_terms_absent": all(
+            token not in figure1_text
+            for token in (
+                "Independent validation",
+                "frozen validation",
+                "Regulatory + response evidence",
+                "identity stability",
+            )
+        ),
+        "figure5_architecture_title": "Evidence architecture for the replicated IFN/ISG program" in figure5_text,
+        "figure5_three_parallel_branches": all(
+            token in figure5_text
+            for token in (
+                "Same-data regulator robustness",
+                "Curated response-set concordance",
+                "Separate perturbational context",
+            )
+        ),
+        "figure5_limitation_visible": all(
+            token in figure5_text
+            for token in (
+                "n=2 healthy donors",
+                "descriptive; no inferential P",
+                "Interpretive support only",
+            )
+        ),
+        "figure5_legacy_branch_absent": "Response branch" not in figure5_text,
+    }
+    if not all(semantic_checks.values()):
+        failed = [name for name, passed in semantic_checks.items() if not passed]
+        raise RuntimeError(f"Figure semantic assertions failed: {failed}")
 
     source_hashes: dict[str, str] = {}
     for number in range(2, 6):
@@ -144,6 +198,7 @@ def main() -> None:
         "source_data_sha256": source_hashes,
         "panel_data_assertions": len(assertions),
         "panel_data_assertions_passed": True,
+        "semantic_diagram_assertions": semantic_checks,
     }
     (RUN_DIR / "01_FIGURE_BUILD_STATUS.json").write_text(
         json.dumps(status, indent=2) + "\n", encoding="utf-8", newline="\n"

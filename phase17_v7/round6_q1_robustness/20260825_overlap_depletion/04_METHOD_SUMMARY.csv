@@ -1,0 +1,7 @@
+"branch","method","tests","directions_up","q_below_0_05","minimum_target_retention","minimum_ulm_attenuation"
+"frozen_ifn12_depleted","CAMERA",6,6,5,0.785714285714286,NA
+"m5911_depleted","CAMERA",6,6,2,0.571428571428571,NA
+"frozen_ifn12_depleted","FRY",6,6,6,0.785714285714286,NA
+"m5911_depleted","FRY",6,6,5,0.571428571428571,NA
+"frozen_ifn12_depleted","ULM",6,6,6,0.785714285714286,0.534864810824315
+"m5911_depleted","ULM",6,6,5,0.571428571428571,0.179009973107747

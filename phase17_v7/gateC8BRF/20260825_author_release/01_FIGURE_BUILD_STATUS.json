@@ -26,7 +26,7 @@
     },
     "Figure5_regulatory_evidence.pdf": {
       "width_mm": 170.0,
-      "height_mm": 148.66
+      "height_mm": 163.047
     }
   },
   "scientific_estimates_changed": false,
@@ -41,5 +41,16 @@
     "Figure1_source_data.csv": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805"
   },
   "panel_data_assertions": 46,
-  "panel_data_assertions_passed": true
+  "panel_data_assertions_passed": true,
+  "semantic_diagram_assertions": {
+    "figure1_hierarchy_title": true,
+    "figure1_internal_validation": true,
+    "figure1_independent_replication": true,
+    "figure1_parallel_interpretation_labels": true,
+    "figure1_legacy_terms_absent": true,
+    "figure5_architecture_title": true,
+    "figure5_three_parallel_branches": true,
+    "figure5_limitation_visible": true,
+    "figure5_legacy_branch_absent": true
+  }
 }

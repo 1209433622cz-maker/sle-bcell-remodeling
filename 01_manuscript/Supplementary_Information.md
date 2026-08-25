@@ -6,7 +6,7 @@
 
 ## Supplementary overview
 
-This supplementary information reports the prespecified workflow, diagnostic analyses, statistical families and source-data structure supporting the main manuscript. Seven supplementary figures were reconstructed from the same frozen analysis tables used for the main results. Every displayed panel is linked to machine-readable source data and exact numerical assertions; no exploratory analysis was added during preparation of this document.
+This supplementary information reports the prespecified workflow, diagnostic analyses, statistical families and source-data structure supporting the main manuscript. Eight supplementary figures were reconstructed from frozen primary analyses and declared post-freeze sensitivity outputs. Every displayed panel is linked to machine-readable source data and exact numerical assertions; no exploratory result was promoted during preparation of this document.
 
 ## Supplementary Methods 1 | Prespecification and outcome protection
 
@@ -31,6 +31,10 @@ Prespecified sensitivity analyses varied minimum cell support, excluded residual
 ## Supplementary Methods 5 | Correlation-aware regulator sensitivity
 
 The sensitivity reused frozen STAT1/STAT2 signed targets, model matrices, contrasts and tested-gene backgrounds. Voom precision weights fed CAMERA with residual-estimated inter-gene correlation and FRY directional rotation tests. BH adjustment was applied across six core tests within each method. Exact agreement with frozen ULM matched-target counts was mandatory. This was a robustness analysis and not independent replication.
+
+## Supplementary Methods 6 | STAT1/STAT2 IFN-overlap depletion
+
+Two post-freeze branches removed either the 12 frozen positive-arm IFN/ISG genes or all 97 M5911 genes from the signed STAT1/STAT2 target sets. The three contrasts, tested-gene backgrounds, ranked statistic, CollecTRI signs, model matrices and ULM/CAMERA/FRY methods were unchanged, and targets were not reselected after depletion. BH correction was applied separately within each branch and method across six core tests. Leave-one-target ULM analysis was limited to depleted models retaining at least ten targets. Interpretation considered direction, attenuation, target retention, confidence intervals, corrected q values and method consistency.
 
 ## Supplementary Table S1 | Dataset roles and inferential units
 
@@ -78,6 +82,19 @@ The sensitivity reused frozen STAT1/STAT2 signed targets, model matrices, contra
 
 CAMERA and FRY directions were positive in all six tests. CAMERA passed BH correction in five of six; the explicit exception was GSE174188 primary STAT2 (q=0.1355). FRY passed BH correction in all six.
 
+## Supplementary Table S4B | IFN-overlap-depletion summary
+
+| Depletion | Method | Positive direction | Dedicated q<0.05 | Main qualification |
+|---|---|---:|---:|---|
+| Frozen 12-gene IFN/ISG arm | ULM | 6/6 | 6/6 | Minimum slope retention 53.5%; all 95% confidence intervals above zero |
+| Frozen 12-gene IFN/ISG arm | CAMERA | 6/6 | 5/6 | Discovery STAT2 q=0.326 |
+| Frozen 12-gene IFN/ISG arm | FRY | 6/6 | 6/6 | Direction and corrected support retained |
+| M5911 | ULM | 6/6 | 5/6 | Discovery STAT2 retained 8/14 targets; slope 0.391, 95% CI -0.745 to 1.526; q=0.500 |
+| M5911 | CAMERA | 6/6 | 2/6 | Broad attenuation across contrasts; discovery STAT2 q=0.623 |
+| M5911 | FRY | 6/6 | 5/6 | Discovery STAT2 q=0.099 |
+
+All 11 depleted ULM models retaining at least ten targets preserved direction in every leave-one-target analysis. These sensitivities support robustness beyond the narrow 12-gene arm but not independence from the broader interferon-response transcriptome.
+
 ## Supplementary Table S5 | Main-figure source-data map
 
 | Figure | Evidence basis | Machine-readable source |
@@ -87,6 +104,7 @@ CAMERA and FRY directions were positive in all six tests. CAMERA passed BH corre
 | Figure 3 | Raw-count pseudobulk transcription with explicit tested-gene symbols | Figure3_source_data.csv |
 | Figure 4 | Independent GSE135779 validation and influence analyses | Figure4_source_data.csv |
 | Figure 5 | Regulatory and orthogonal response evidence | Figure5_source_data.csv |
+| Supplementary Figure S8 | STAT1/STAT2 IFN-overlap-depletion sensitivity | Supplementary_Figure_S8_source_data.csv |
 
 ## Supplementary Table S6 | Reproducibility record
 
@@ -108,6 +126,7 @@ CAMERA and FRY directions were positive in all six tests. CAMERA passed BH corre
 | Four frozen programs | Donor/sample pseudobulk | OLS with HC3 | Two-sided | BH across four programs per analysis | Program inference |
 | TF-target activity | Ranked gene statistics | Signed-target slope t test | Two-sided | Global BH across 24 tests | Confirmatory regulatory evidence |
 | STAT1/STAT2 sensitivity | Ranked gene statistics | CAMERA and FRY | Positive-direction | Separate BH families of six per method | Correlation-aware sensitivity |
+| STAT1/STAT2 overlap depletion | Ranked gene statistics and pseudobulk counts | ULM, CAMERA and FRY | Two-sided ULM; positive-direction CAMERA/FRY | Separate BH family of six per branch and method | Post-freeze sensitivity |
 | M5911 | Ranked gene statistics | 10,000-permutation preranked test | Positive-direction | Descriptive BH across three contrasts | Orthogonal support |
 | GSE23307 | Paired donor | Mean paired log2(x+1) effect | Not tested | None; n=2 | Descriptive perturbation |
 
@@ -163,3 +182,9 @@ CAMERA and FRY directions were positive in all six tests. CAMERA passed BH corre
 **a,** CAMERA and FRY six-test BH concordance for STAT1 and STAT2. Dashed guides indicate q=0.05. **b,** CAMERA residual-estimated inter-gene correlations. **c,** Exact CAMERA and FRY BH q values. **d,** Matched signed-target counts, which equal the frozen ULM family (STAT1: 98, 129 and 161; STAT2: 14, 19 and 20).
 
 [[SUPPLEMENTARY_FIGURE:S7]]
+
+## Supplementary Figure S8 | STAT1/STAT2 IFN-overlap-depletion sensitivity
+
+**a,** ULM slopes and 95% confidence intervals after removal of the frozen 12-gene IFN/ISG positive arm. **b,** Corresponding estimates after removal of all 97 M5911 genes; discovery STAT2 retains eight targets and its interval crosses zero. Labels report remaining matched targets. **c,** Exact branch- and method-specific Benjamini-Hochberg q values across the six regulator-by-contrast tests. **d,** Percentage of frozen matched targets retained after each depletion. All method-level directions remain positive, but M5911 depletion produces substantial attenuation and does not support an overlap-independent interpretation.
+
+[[SUPPLEMENTARY_FIGURE:S8]]

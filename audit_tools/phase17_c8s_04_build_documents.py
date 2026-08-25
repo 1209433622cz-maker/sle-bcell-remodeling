@@ -403,6 +403,7 @@ def markdown_to_docx(
     title_override: str | None = None,
     compact: bool = False,
     page_break_before_headings: set[str] | None = None,
+    supplementary_figure_dirs: list[Path] | None = None,
 ) -> dict:
     document = Document()
     configure_document(document, body_size, double_space, line_numbers, running_header)
@@ -429,11 +430,16 @@ def markdown_to_docx(
     placeholders = 0
     for block in blocks:
         placeholders += block.count("[[")
-        figure_marker = re.fullmatch(r"\[\[SUPPLEMENTARY_FIGURE:(S[1-7])\]\]", block)
+        figure_marker = re.fullmatch(r"\[\[SUPPLEMENTARY_FIGURE:(S[1-9])\]\]", block)
         if figure_marker:
             placeholders -= 1
             figure_id = figure_marker.group(1)
-            matches = sorted((RUN_DIR / "supplementary_figures").glob(f"Supplementary_Figure_{figure_id}_*.png"))
+            figure_dirs = supplementary_figure_dirs or [RUN_DIR / "supplementary_figures"]
+            matches = sorted(
+                path
+                for directory in figure_dirs
+                for path in directory.glob(f"Supplementary_Figure_{figure_id}_*.png")
+            )
             if len(matches) != 1:
                 raise RuntimeError(f"Expected one PNG for {figure_id}; found {len(matches)}")
             paragraph = document.add_paragraph()

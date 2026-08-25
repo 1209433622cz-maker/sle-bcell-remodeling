@@ -1,0 +1,116 @@
+{
+  "created_at": "2026-08-25",
+  "status": "COMPLETE_ROUND6_OVERLAP_DEPLETION_REVIEW_REQUIRED",
+  "governance": "post-freeze sensitivity; original primary results and multiplicity families unchanged",
+  "depletion_sets": {
+    "frozen_ifn12": ["IFI44L", "IFI6", "IFIT1", "IFIT2", "IFIT3", "IRF7", "ISG15", "LY6E", "MX1", "MX2", "OAS1", "OAS2"],
+    "frozen_ifn12_count": 12,
+    "m5911": "HALLMARK_INTERFERON_ALPHA_RESPONSE",
+    "m5911_count": 97
+  },
+  "tests": 54,
+  "depletion_tests": 36,
+  "dedicated_families": 6,
+  "all_depleted_directions_up": true,
+  "ulm_depleted_ci_excludes_zero": 11,
+  "ulm_depleted_tests": 12,
+  "minimum_ulm_attenuation": 0.1790099731077,
+  "minimum_target_retention": 0.5714285714286,
+  "method_summary": [
+    {
+      "branch": "frozen_ifn12_depleted",
+      "method": "CAMERA",
+      "tests": 6,
+      "directions_up": 6,
+      "q_below_0_05": 5,
+      "minimum_target_retention": 0.7857142857143,
+      "minimum_ulm_attenuation": null
+    },
+    {
+      "branch": "m5911_depleted",
+      "method": "CAMERA",
+      "tests": 6,
+      "directions_up": 6,
+      "q_below_0_05": 2,
+      "minimum_target_retention": 0.5714285714286,
+      "minimum_ulm_attenuation": null
+    },
+    {
+      "branch": "frozen_ifn12_depleted",
+      "method": "FRY",
+      "tests": 6,
+      "directions_up": 6,
+      "q_below_0_05": 6,
+      "minimum_target_retention": 0.7857142857143,
+      "minimum_ulm_attenuation": null
+    },
+    {
+      "branch": "m5911_depleted",
+      "method": "FRY",
+      "tests": 6,
+      "directions_up": 6,
+      "q_below_0_05": 5,
+      "minimum_target_retention": 0.5714285714286,
+      "minimum_ulm_attenuation": null
+    },
+    {
+      "branch": "frozen_ifn12_depleted",
+      "method": "ULM",
+      "tests": 6,
+      "directions_up": 6,
+      "q_below_0_05": 6,
+      "minimum_target_retention": 0.7857142857143,
+      "minimum_ulm_attenuation": 0.5348648108243
+    },
+    {
+      "branch": "m5911_depleted",
+      "method": "ULM",
+      "tests": 6,
+      "directions_up": 6,
+      "q_below_0_05": 5,
+      "minimum_target_retention": 0.5714285714286,
+      "minimum_ulm_attenuation": 0.1790099731077
+    }
+  ],
+  "leave_one_target": {
+    "eligibility_threshold": 10,
+    "eligible_models": 11,
+    "all_eligible_models_preserve_direction": true
+  },
+  "interpretation_policy": "Review direction, ULM attenuation and confidence intervals, target retention, dedicated six-test BH q values and CAMERA/FRY agreement; do not use P<0.05 alone.",
+  "software": {
+    "R": "R version 4.6.0 (2026-04-24 ucrt)",
+    "edgeR": "4.10.1",
+    "limma": "3.68.4",
+    "Matrix": "1.7.5"
+  },
+  "input_audit": [
+    {
+      "contrast": "gse174188_primary",
+      "analysis_name": "primary_base",
+      "n_samples": 89,
+      "design_rank": 4,
+      "ranked_symbols": 4414,
+      "camera_fry_background_symbols": 4414,
+      "effect_column": "is_managed"
+    },
+    {
+      "contrast": "gse174188_internal_nonoverlap",
+      "analysis_name": "validation_nonoverlap",
+      "n_samples": 54,
+      "design_rank": 3,
+      "ranked_symbols": 6077,
+      "camera_fry_background_symbols": 6077,
+      "effect_column": "is_managed"
+    },
+    {
+      "contrast": "gse135779_childhood",
+      "analysis_name": "childhood_min50",
+      "n_samples": 43,
+      "design_rank": 2,
+      "ranked_symbols": 8468,
+      "camera_fry_background_symbols": 8468,
+      "effect_column": "is_sle"
+    }
+  ]
+}

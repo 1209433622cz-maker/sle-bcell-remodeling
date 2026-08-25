@@ -284,7 +284,7 @@
     },
     {
       "check": "Figure5_regulatory_evidence.minimum_visible_font_pt",
-      "actual": "5.30 pt",
+      "actual": "5.00 pt",
       "expected": "true",
       "pass": true
     }

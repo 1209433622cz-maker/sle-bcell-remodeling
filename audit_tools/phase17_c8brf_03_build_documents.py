@@ -16,6 +16,7 @@ RUN_DIR = ROOT / "phase17_v7" / "gateC8BRF" / "20260825_author_release"
 C8S_RUN = ROOT / "phase17_v7" / "gateC8S" / "20260821_supplementary_traceability_freeze"
 C8BR_RUN = ROOT / "phase17_v7" / "gateC8BR" / "20260825_release_portability_preflight"
 SENSITIVITY_SOURCE = ROOT / "phase17_v7" / "gateC8R" / "20260820_pre_submission_repair"
+ROUND6_SOURCE = ROOT / "phase17_v7" / "round6_q1_robustness" / "20260825_overlap_depletion"
 PACKAGE = ROOT / "04_submission" / "journal_submission"
 MANUSCRIPT_MD = ROOT / "01_manuscript" / "Manuscript.md"
 SUPPLEMENT_MD = ROOT / "01_manuscript" / "Supplementary_Information.md"
@@ -70,12 +71,13 @@ def build_portal_maps(
         required.append((source, required_dir / f"Figure_{number}.pdf", f"main figure {number}"))
 
     optional: list[tuple[Path, Path, str]] = []
-    for number in range(1, 8):
-        source = next(
-            (C8S_RUN / "supplementary_figures").glob(
-                f"Supplementary_Figure_S{number}_*.pdf"
-            )
+    for number in range(1, 9):
+        source_directory = (
+            C8S_RUN / "supplementary_figures"
+            if number <= 7
+            else ROUND6_SOURCE / "figures"
         )
+        source = next(source_directory.glob(f"Supplementary_Figure_S{number}_*.pdf"))
         optional.append(
             (
                 source,
@@ -111,9 +113,9 @@ def build_portal_maps(
     write_map(docs_dir / "PORTAL_UPLOAD_OPTIONAL.csv", optional_rows)
     (docs_dir / "PORTAL_UPLOAD_POLICY.txt").write_text(
         "Default portal set: upload these 11 files.\n"
-        "Do not also upload standalone Supplementary Figures S1-S7 when "
+        "Do not also upload standalone Supplementary Figures S1-S8 when "
         "Supplementary_Information.docx is accepted as Additional file 1.\n\n"
-        "These seven PDFs duplicate figures already embedded in Supplementary_Information.docx.\n"
+        "These eight PDFs duplicate figures already embedded in Supplementary_Information.docx.\n"
         "Upload them only if the journal portal explicitly requires separate supplementary figures.\n",
         encoding="utf-8",
         newline="\n",
@@ -157,6 +159,10 @@ def prepare_package_assets(
             (C8S_RUN / "supplementary_figures").glob("Supplementary_Figure_S*.*")
         )
     ]
+    supp_figures.extend(
+        copy_file(path, supp_figures_dir / path.name)
+        for path in sorted((ROUND6_SOURCE / "figures").glob("Supplementary_Figure_S8_*.*"))
+    )
     source_files = [
         copy_file(path, source_dir / path.name)
         for path in sorted((RUN_DIR / "source_data").glob("Figure*_source_data.csv"))
@@ -167,6 +173,12 @@ def prepare_package_assets(
             (C8S_RUN / "supplementary_source_data").glob(
                 "Supplementary_Figure_S*_source_data.csv"
             )
+        )
+    )
+    source_files.extend(
+        copy_file(path, source_dir / path.name)
+        for path in sorted(
+            (ROUND6_SOURCE / "source_data").glob("Supplementary_Figure_S8_source_data.csv")
         )
     )
     source_manifest = source_dir / "SHA256SUMS.csv"
@@ -190,6 +202,19 @@ def prepare_package_assets(
             "04_CORRELATION_AWARE_STAT1_STAT2_DECISION.json",
         )
     ]
+    sensitivity_files.extend(
+        copy_file(path, sensitivity_dir / path.name)
+        for path in (
+            ROUND6_SOURCE / "01_OVERLAP_DEPLETION_RESULTS.csv",
+            ROUND6_SOURCE / "02_ULM_LEAVE_ONE_TARGET.csv",
+            ROUND6_SOURCE / "03_ULM_LEAVE_ONE_TARGET_SUMMARY.csv",
+            ROUND6_SOURCE / "04_METHOD_SUMMARY.csv",
+            ROUND6_SOURCE / "05_OVERLAP_DEPLETION_STATUS.json",
+            ROUND6_SOURCE / "06_SUPPLEMENTARY_FIGURE_S8_STATUS.json",
+            ROUND6_SOURCE / "07_ROUND6_OVERLAP_DEPLETION_ADVISOR_REVIEW.md",
+            ROUND6_SOURCE / "source_data" / "Supplementary_Figure_S8_source_data.csv",
+        )
+    )
     sensitivity_manifest = sensitivity_dir / "SHA256SUMS.csv"
     sensitivity_manifest.write_text(
         "file,bytes,sha256\n"
@@ -240,6 +265,10 @@ def prepare_package_assets(
         ROOT / "audit_tools" / "check_submission_environment.py",
         ROOT / "audit_tools" / "docx_a11y_audit.py",
         ROOT / "audit_tools" / "build_submission_package.ps1",
+        ROOT / "audit_tools" / "phase17_round6_01_overlap_depletion_sensitivity.R",
+        ROOT / "audit_tools" / "phase17_round6_02_build_overlap_depletion_figure.py",
+        ROOT / "audit_tools" / "run_6013RP_round6_overlap_depletion.ps1",
+        ROOT / "00_project_management" / "round6_q1_robustness_execution_contract_2026-08-25.md",
     ]
     reproducibility_files = [
         copy_file(path, reproducibility_dir / path.name)
@@ -298,6 +327,10 @@ def main() -> None:
             page_break_before_headings={
                 "Supplementary Table S7 | Statistical tests and multiplicity families"
             },
+            supplementary_figure_dirs=[
+                C8S_RUN / "supplementary_figures",
+                ROUND6_SOURCE / "figures",
+            ],
         ),
         base.markdown_to_docx(
             COVER_MD,
@@ -316,7 +349,7 @@ def main() -> None:
         "status": "PASS_GATE_C8BRF_DOCUMENTS_AND_PORTAL_MAPS_BUILT",
         "design_preset": "standard_business_brief",
         "named_override": "Genome Medicine submission: Times New Roman, manuscript double spacing and continuous line numbering",
-        "supplement_s7_pagination": "forced page break before S7 title",
+        "supplement_statistical_family_pagination": "forced page break before Supplementary Table S7",
         "outputs": outputs,
         "assets": assets,
     }

@@ -2,16 +2,16 @@
 
 ## Scientific freeze
 
-- [x] The scientific analysis is frozen and unchanged during publication engineering.
+- [x] Primary scientific families remain frozen; the declared post-freeze STAT1/STAT2 overlap-depletion sensitivity does not replace them.
 - [x] Main panel-data assertions pass 46/46.
-- [x] Supplementary-figure panel-data assertions pass 29/29.
-- [x] No new cohort, cluster, threshold, gene, regulator or signature was added.
+- [x] Legacy supplementary-figure panel-data assertions pass 29/29 and Supplementary Figure S8 has a separate verified 36-row source-data contract.
+- [x] No new cohort, cluster, primary threshold, regulator or signature was selected; depletion used two prespecified frozen gene sets.
 - [x] Primary B_ASC composition remains a null boundary.
 - [x] Central claim remains independently replicated IFN/ISG remodeling within broad B_CONV.
 
 ## Final publication engineering
 
-- [x] Figures 1-5 were rerendered at exactly 170 mm, with vector PDFs, 600-dpi PNGs, 5-7 pt text and 8 pt panel labels.
+- [x] Figures 1-5 were rerendered at exactly 170 mm, with vector PDFs, 600-dpi PNGs, 5-7 pt text and 8 pt panel labels; Figures 1a and 5a encode evidence hierarchy without causal ordering.
 - [x] Figure 1 Source Data removes only two non-plotted internal gate-decision rows; plotted rows are unchanged.
 - [x] Figure 1 threshold guides are explicitly defined.
 - [x] Figure 2 UUID provenance and privacy audit passed.

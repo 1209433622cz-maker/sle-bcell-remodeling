@@ -10,11 +10,13 @@ checksum-managed outside Git.
 
 ## Study status
 
-The scientific analysis is frozen and the manuscript, supplementary information,
-figures, source data and declarations have completed final author and technical
-review. The citable archive is available at
+The primary scientific families remain frozen. A declared post-freeze Round 6
+robustness cycle is in progress before journal submission: STAT1/STAT2
+IFN-overlap depletion is complete, while the 150,402-cell end-to-end
+disease-blind identity resampling run is ready for local execution. The formal
+journal package is therefore on hold and must not be uploaded until that run is
+reviewed and the documents are rebuilt. The existing citable archive is available at
 [doi:10.5281/zenodo.22086892](https://doi.org/10.5281/zenodo.22086892).
-The next operational step is journal-portal entry and submission receipt freeze.
 
 Working title:
 
@@ -38,6 +40,10 @@ The frozen evidence chain is:
   sensitivity: CAMERA is positive in 6/6 tests and BH-significant in 5/6; FRY
   is positive and BH-significant in 6/6. Discovery STAT2 is the explicit CAMERA
   exception (q=0.1355).
+- All 36 method-level directions remained positive after removal of either the
+  frozen 12-gene IFN/ISG arm or M5911 genes. The narrow depletion retained
+  broad support, whereas M5911 depletion materially attenuated discovery
+  STAT2; the result does not support overlap-independent regulation.
 - M5911 enrichment and paired GSE23307 IFN-beta response provide orthogonal
   response evidence; neither establishes causality, direct TF binding or a
   unique upstream ligand.
@@ -51,35 +57,35 @@ The frozen evidence chain is:
 - [Author confirmation](04_submission/Author_Confirmation.md)
 - [Reporting checklist](04_submission/Reporting_Checklist.md)
 - [Portal upload guide](04_submission/Portal_Upload_Guide.md)
-- [Journal submission package](04_submission/journal_submission/)
+- [Round 6 execution contract](00_project_management/round6_q1_robustness_execution_contract_2026-08-25.md)
+- [Full-run handoff](00_project_management/round6_full_pipeline_resampling_handoff_2026-08-25.md)
 
 Git history and the immutable public release preserve superseded submission
 drafts. The stable filenames above are the only current author-facing entry
-points. Submission filenames do not contain internal gate labels, build dates
-or draft numbers.
+points. The generated `04_submission/journal_submission/` directory is not an
+authoritative source and remains withheld while Round 6 R1 is pending.
 
 ## Licence and citation
 
 Original repository code is MIT-licensed. Original manuscript text, composite figures, project documentation and project-generated derived source-data tables are CC BY 4.0. Public GEO/CELLxGENE data and other third-party material are excluded from these project licences; see `LICENSE_SCOPE.md`.
 
-## Rebuild
+## Pending full run
 
-Create or refresh the pinned document environment, then run the submission build:
+Run the resumable end-to-end identity analysis from the project root:
 
 ```powershell
 powershell -ExecutionPolicy Bypass `
-  -File .\audit_tools\create_submission_environment.ps1
-
-powershell -ExecutionPolicy Bypass `
-  -File .\audit_tools\build_submission_package.ps1 `
-  -Doi "10.5281/zenodo.22086892"
+  -File .\audit_tools\run_6013RP_round6_full_pipeline_identity_resampling.ps1 `
+  -OutputDir .\phase17_v7\round6_q1_robustness\20260825_full_pipeline_identity_resampling `
+  -Replicates 20 `
+  -ResampleFraction 0.8 `
+  -MaxCells 0 `
+  -HarmonyMaxIter 50
 ```
 
-The workflow rebuilds the author-approved sources, 170-mm figures, editable
-DOCX files, required and optional portal maps, WPS review PDFs, page images,
-accessibility reports, manifests and a deterministic local archive. Internal
-audit identifiers remain inside the provenance layer and are not used in
-journal-facing filenames.
+The exact inputs, hashes, checkpoints, monitoring command and decision rules are
+documented in the full-run handoff. Rerunning the same command resumes completed
+replicates.
 
 ## Repository layout
 
@@ -100,9 +106,9 @@ does not overwrite the proposal history.
 
 ## Next stage
 
-Scientific analysis is closed. The next stage is journal operations: confirm
-APC eligibility with the submission account or institutional library, enter the
-final metadata and declarations into the Genome Medicine portal, upload the
-required file set, compare every portal field and generated PDF against the
-manuscript, and submit. New analyses should be opened only in response to a
-decision-changing reviewer request.
+Complete and independently audit the full R1 run. If it passes, add the
+end-to-end identity result as a supplementary robustness figure; if it holds,
+retain the frozen-embedding result and narrow the identity claim explicitly.
+Then rebuild the DOCX and portal package, render every page with WPS, rerun
+accessibility and deterministic-manifest audits, update the archival release,
+and only then begin journal-portal submission.

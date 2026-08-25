@@ -1,0 +1,12 @@
+"branch","contrast","regulator","matched_targets_after_depletion","loo_tests","minimum_loo_slope","maximum_loo_slope","same_direction_fraction","all_same_direction"
+"frozen_ifn12_depleted","gse135779_childhood","STAT1",153,153,0.914971413532867,0.978554484410996,1,TRUE
+"m5911_depleted","gse135779_childhood","STAT1",136,136,0.662423862950518,0.731081910314183,1,TRUE
+"frozen_ifn12_depleted","gse174188_internal_nonoverlap","STAT1",122,122,0.812721540665768,0.912479032628438,1,TRUE
+"m5911_depleted","gse174188_internal_nonoverlap","STAT1",104,104,0.479062612224375,0.595616530771027,1,TRUE
+"frozen_ifn12_depleted","gse174188_primary","STAT1",92,92,0.900356922576897,1.02845346532707,1,TRUE
+"m5911_depleted","gse174188_primary","STAT1",77,77,0.337153751807102,0.489771945788858,1,TRUE
+"frozen_ifn12_depleted","gse135779_childhood","STAT2",16,16,1.62661114506639,2.13851036827214,1,TRUE
+"m5911_depleted","gse135779_childhood","STAT2",13,13,1.2692295436955,1.90887655968389,1,TRUE
+"frozen_ifn12_depleted","gse174188_internal_nonoverlap","STAT2",15,15,2.28903471121958,2.82225876653088,1,TRUE
+"m5911_depleted","gse174188_internal_nonoverlap","STAT2",12,12,2.09015343057902,2.76847550938875,1,TRUE
+"frozen_ifn12_depleted","gse174188_primary","STAT2",11,11,0.631806607036323,1.67665667449977,1,TRUE

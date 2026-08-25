@@ -1,5 +1,0 @@
-Default portal set: upload these 11 files.
-Do not also upload standalone Supplementary Figures S1-S7 when Supplementary_Information.docx is accepted as Additional file 1.
-
-These seven PDFs duplicate figures already embedded in Supplementary_Information.docx.
-Upload them only if the journal portal explicitly requires separate supplementary figures.
