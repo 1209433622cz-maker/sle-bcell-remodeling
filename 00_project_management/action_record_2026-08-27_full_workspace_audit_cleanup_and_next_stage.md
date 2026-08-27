@@ -1,7 +1,9 @@
 # Full workspace audit, cleanup and next-stage decision
 
-**Date:** 2026-08-27  
-**Workspace:** `H:\cuhk-2025fALL\6013RP-wyf`  
+**Date:** 2026-08-27
+
+**Workspace:** `H:\cuhk-2025fALL\6013RP-wyf`
+
 **Scope:** complete file inventory, size/content integrity audit, duplicate review,
 working-tree minimization, submission-package revalidation and scientific
 next-stage decision.

@@ -1,7 +1,9 @@
 # GSE135779 label-agnostic external mapping contract
 
-**Status:** PRE-OUTCOME METHOD FREEZE  
-**Date:** 2026-08-27  
+**Status:** PRE-OUTCOME METHOD FREEZE
+
+**Date:** 2026-08-27
+
 **Purpose:** test whether the independent IFN/ISG replication depends on the
 source-provided GSE135779 `subclusters` labels.
 
