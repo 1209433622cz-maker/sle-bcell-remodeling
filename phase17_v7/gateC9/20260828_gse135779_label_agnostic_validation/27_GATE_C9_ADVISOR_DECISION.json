@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-08-28T03:29:36+08:00",
+  "decision": "PASS_C9_LABEL_AGNOSTIC_EXTERNAL_SUPPORT",
+  "c9a_prefreeze_decision": "PASS_C9A_PREFREEZE_OUTCOME_UNLOCK_AUTHORIZED",
+  "threshold_changes_after_unlock": false,
+  "minimum_B_CONV_cells_per_donor": 50,
+  "primary_results": [
+    {
+      "mapper": "elastic_net",
+      "selection": "cluster_primary",
+      "stratum": "childhood",
+      "program_id": "IFN_ISG",
+      "n_HC": 11,
+      "n_SLE": 32,
+      "mean_HC": 0.1603667407238638,
+      "mean_SLE": 0.46633230929904307,
+      "effect_SLE_minus_HC": 0.30596556857517926,
+      "bootstrap_ci_low": 0.20782297529452473,
+      "bootstrap_ci_high": 0.41433315416306526,
+      "mannwhitney_u": 300.0,
+      "pvalue": 0.0005868155783566327,
+      "qvalue": 0.002347262313426531
+    },
+    {
+      "mapper": "nearest_centroid",
+      "selection": "cluster_primary",
+      "stratum": "childhood",
+      "program_id": "IFN_ISG",
+      "n_HC": 11,
+      "n_SLE": 32,
+      "mean_HC": 0.1578560778811518,
+      "mean_SLE": 0.46203218568536586,
+      "effect_SLE_minus_HC": 0.30417610780421406,
+      "bootstrap_ci_low": 0.20751360484941042,
+      "bootstrap_ci_high": 0.411304618022712,
+      "mannwhitney_u": 301.0,
+      "pvalue": 0.0005293030488614618,
+      "qvalue": 0.0021172121954458473
+    }
+  ],
+  "primary_quality": [
+    {
+      "mapper": "elastic_net",
+      "selection": "cluster_primary",
+      "qc_cells": 353527,
+      "selected_cells": 36630,
+      "source_B_denominator": 32741,
+      "source_B_recovered": 32313,
+      "source_B_recovery": 0.9869277053236004,
+      "selected_with_source_label": 33421,
+      "selected_non_B_source_label": 1108,
+      "source_label_contamination": 0.03315280811465845,
+      "source_label_unknown_fraction_selected": 0.0876057876057876,
+      "confident_cells": 35810,
+      "confident_fraction_selected": 0.9776139776139776
+    },
+    {
+      "mapper": "nearest_centroid",
+      "selection": "cluster_primary",
+      "qc_cells": 353527,
+      "selected_cells": 36630,
+      "source_B_denominator": 32741,
+      "source_B_recovered": 32313,
+      "source_B_recovery": 0.9869277053236004,
+      "selected_with_source_label": 33421,
+      "selected_non_B_source_label": 1108,
+      "source_label_contamination": 0.03315280811465845,
+      "source_label_unknown_fraction_selected": 0.0876057876057876,
+      "confident_cells": 34919,
+      "confident_fraction_selected": 0.9532896532896533
+    }
+  ],
+  "leave_one_donor_out": [
+    {
+      "mapper": "elastic_net",
+      "minimum_LOO_effect": 0.2806559854174257,
+      "all_LOO_positive": true
+    },
+    {
+      "mapper": "nearest_centroid",
+      "minimum_LOO_effect": 0.2789808990255495,
+      "all_LOO_positive": true
+    }
+  ],
+  "checks": {
+    "prediction_keys_unique": true,
+    "metadata_keys_unique": true,
+    "sample_join_one_to_one": true,
+    "outcome_join_complete_by_sample": true,
+    "cohort_join_complete": true,
+    "source_B_recovery_at_least_80pct": true,
+    "source_label_contamination_at_most_10pct": true,
+    "mapping_confidence_at_least_80pct": true,
+    "both_mappers_positive_childhood_IFN": true,
+    "elastic_net_IFN_q_below_0_05": true,
+    "no_single_donor_reverses_direction": true,
+    "minimum_50_B_CONV_cells_applied": true
+  },
+  "interpretation": "The source-label-defined external IFN/ISG replication is supported by a fully label-agnostic B-lineage selection and broad-state mapping sensitivity.",
+  "manuscript_scope": "supplementary robustness evidence; cannot convert formal R1 identity HOLD to PASS"
+}

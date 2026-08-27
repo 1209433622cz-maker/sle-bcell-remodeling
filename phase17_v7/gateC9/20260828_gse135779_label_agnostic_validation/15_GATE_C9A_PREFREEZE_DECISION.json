@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-08-28T03:27:32+08:00",
+  "decision": "PASS_C9A_PREFREEZE_OUTCOME_UNLOCK_AUTHORIZED",
+  "test_mode": false,
+  "disease_blind": true,
+  "source_labels_used": false,
+  "outcome_unlock_authorized": true,
+  "reference_model": {
+    "elastic_threshold": 0.95,
+    "centroid_threshold": 0.10771572589874268,
+    "chosen_alpha": 0.0001,
+    "elastic_mean_balanced_accuracy": 0.9601289969865773,
+    "centroid_mean_balanced_accuracy": 0.9501776694499281,
+    "n_reference_training_cells": 14300,
+    "n_reference_B_CONV": 13000,
+    "n_reference_B_ASC": 1300,
+    "n_reference_donors": 258
+  },
+  "external_prefreeze": {
+    "samples": 56,
+    "total_cells": 363083,
+    "qc_pass_cells": 353527,
+    "selected_B_cells": 36630,
+    "prediction_path": "10_CELL_PREDICTIONS_LOCAL.csv.gz",
+    "minimum_elastic_confident_fraction": 0.7307692307692307,
+    "minimum_centroid_confident_fraction": 0.5192307692307693
+  },
+  "checks": {
+    "input_manifest_complete": true,
+    "protected_metadata_content_not_parsed": true,
+    "reference_join_exact": true,
+    "elastic_net_cv_balanced_accuracy": true,
+    "nearest_centroid_cv_balanced_accuracy": true,
+    "all_expected_samples_processed": true,
+    "all_cells_reconciled": true,
+    "label_agnostic_B_cells_selected": true,
+    "per_cell_output_present": true
+  },
+  "frozen_rules": {
+    "primary_selection": "sample-wise Leiden cluster with B-lineage module greater than all exclusion modules and mean B detection >=1/9",
+    "selection_sensitivity": "per-cell B-lineage margin >0 and B detection >=1/9",
+    "primary_mapper": "donor-grouped elastic-net logistic regression",
+    "independent_mapper": "nearest-centroid Pearson correlation",
+    "outcome_family": [
+      "NAIVE_TO_MEMORY_AXIS",
+      "ATYPICAL_LOW_NAIVE_AXIS",
+      "APC_HLA",
+      "IFN_ISG"
+    ],
+    "primary_outcome": "childhood donor mean 12-gene IFN_ISG score in confidently mapped B_CONV",
+    "minimum_B_CONV_cells_per_donor": 50
+  }
+}

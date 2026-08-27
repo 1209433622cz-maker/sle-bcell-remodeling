@@ -1,0 +1,6 @@
+sample_id,module,requested_genes,present_genes,missing_genes
+JB17001,B_LINEAGE,9,9,
+JB17001,T_NK,7,5,TRBC1;TRBC2
+JB17001,MYELOID,8,8,
+JB17001,PLATELET,5,5,
+JB17001,ERYTHROID,5,5,

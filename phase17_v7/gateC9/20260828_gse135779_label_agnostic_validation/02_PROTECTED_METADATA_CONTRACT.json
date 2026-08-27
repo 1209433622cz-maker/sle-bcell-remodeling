@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-08-28T03:23:51+08:00",
+  "status": "PREFREEZE_COMPLETE",
+  "test_mode": false,
+  "protected_files": [
+    "Meta_cSLE_processed_0809202_small.csv",
+    "Meta_caSLE_processed_08092021_small.csv"
+  ],
+  "protected_fields": [
+    "Groups",
+    "Names",
+    "SLEDAI",
+    "SLEDAI_cat",
+    "subclusters"
+  ],
+  "permitted_prefreeze_identifiers": [
+    "sample_id",
+    "barcode",
+    "barcode_core"
+  ],
+  "outcome_unlock_authorized": true,
+  "unlock_decision_file": "15_GATE_C9A_PREFREEZE_DECISION.json"
+}

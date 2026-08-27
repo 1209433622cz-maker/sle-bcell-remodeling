@@ -1,0 +1,12 @@
+{
+  "created_at": "2026-08-28T03:29:10+08:00",
+  "status": "OUTCOME_METADATA_UNLOCKED_AFTER_C9A_PASS",
+  "c9a_decision": "PASS_C9A_PREFREEZE_OUTCOME_UNLOCK_AUTHORIZED",
+  "c9a_decision_sha256": "0106FAB4B238F7934647C18727D5F0674EFE79E325E4369FBDCC25C856926885",
+  "prediction_sha256": "685FC9B3032CB505FA06A9397C13B81760EBC6CCB9A2649AC3AB0460518E77C6",
+  "metadata_path": "Data/processed/GSE135779_nehar_validation/source/Meta_caSLE_processed_08092021_small.csv",
+  "metadata_sha256": "B3530E5E222BFC0EF81A1F1B63A8FABC345B03A53CD0CF922D39C2950C85E25F",
+  "threshold_changes_after_unlock": false,
+  "source_labels_role": "post hoc recovery and contamination audit only",
+  "outcome_role": "frozen donor-level program tests only"
+}
