@@ -106,24 +106,29 @@ powershell -ExecutionPolicy Bypass `
 ## Repository layout
 
 - `00_project_management/`: advisor audits, action records and formal decisions.
-- `01_manuscript/`: current manuscript sources and historical drafting provenance.
+- `01_manuscript/`: current canonical manuscript, supplement and proposal sources.
 - `02_analysis/`: environments, acquisition scripts, inventories and runbooks.
-- `03_results/`: retained result bundles and earlier figure provenance.
+- `03_results/`: the retained Phase 17 study-design figure bundle.
 - `audit_tools/`: executable analysis, build and audit scripts.
 - The analysis run tree contains machine-readable audit outputs and publication figures.
 - `04_submission/`: current portal guide, author records and journal-facing package.
+- `Data/`: a tracked retrieval guide plus ignored, disposable public-data caches.
 
 ## Research proposal
 
 The active completed RP is [Research_Proposal.md](01_manuscript/Research_Proposal.md).
-Earlier proposal files remain as pre-outcome methodological provenance. The
-current manuscript is more specific where completed analyses require it, but it
-does not overwrite the proposal history.
+Earlier proposal files remain recoverable from Git history and the project
+action records. The current manuscript is more specific where completed
+analyses require it, but it does not overwrite the proposal history.
 
 ## Next stage
 
-Perform one final independent adversarial review of the revised manuscript and
-all WPS pages, update the immutable archive with the refrozen repository and
-submission package, verify the target-journal fit and portal metadata, and only
-then begin journal submission. No identity threshold, replicate, seed, model or
-claim may be changed to convert the formal R1 HOLD into PASS.
+Restore the 1.30 GB GSE135779 processed RAW archive and run a label-agnostic
+external B-cell mapping/transfer sensitivity. This is the highest-value
+remaining scientific test because it directly addresses dependence on the
+source-provided external labels without modifying the formal R1 HOLD. Refreeze
+the manuscript only if that analysis changes claim boundaries or adds a valid
+supplementary result. Then update the immutable archive, repeat the independent
+WPS/adversarial review, verify target-journal fit and portal metadata, and begin
+journal submission. No identity threshold, replicate, seed, model or claim may
+be changed to convert the formal R1 HOLD into PASS.

@@ -61,7 +61,25 @@ while ($Attempt -lt $MaxAttempts) {
     Write-Host "Current size: $CurrentBytes / $ExpectedBytes bytes ($Percent%)"
     Write-Host "Resuming download..."
 
-    curl.exe --fail --location --continue-at - --retry 20 --retry-delay 15 --connect-timeout 60 --output "$OutFile" "$Url"
+    $CurlArgs = @(
+        "--fail",
+        "--location",
+        "--continue-at", "-",
+        "--retry", "20",
+        "--retry-all-errors",
+        "--retry-delay", "15",
+        "--connect-timeout", "60",
+        "--output", $OutFile
+    )
+    if ($env:OS -eq "Windows_NT") {
+        $CurlArgs += "--ssl-no-revoke"
+    }
+    $CurlArgs += $Url
+
+    & curl.exe @CurlArgs
+    if ($LASTEXITCODE -ne 0) {
+        Write-Warning "curl exited with code $LASTEXITCODE; the next attempt will resume the partial file."
+    }
 
     $NewBytes = 0
     if (Test-Path -LiteralPath $OutFile) {

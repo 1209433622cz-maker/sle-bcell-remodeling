@@ -38,4 +38,4 @@
 
 ## Next stage
 
-Complete an independent adversarial manuscript and all-page WPS review, then update the immutable archive before any journal portal upload.
+Restore GSE135779 and complete a label-agnostic external mapping sensitivity before updating the immutable archive or uploading to a journal portal.

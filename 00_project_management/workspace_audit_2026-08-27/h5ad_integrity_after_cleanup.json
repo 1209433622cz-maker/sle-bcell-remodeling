@@ -1,0 +1,25 @@
+[
+  {
+    "path": "phase17_v7\\gateC2B1\\20260810_171000_full_library_doublets\\04_full_raw_counts.h5ad",
+    "bytes": 270671628,
+    "ok": true,
+    "n_obs": 150402,
+    "n_vars": 30172,
+    "obs_columns": 5,
+    "obsm_keys": []
+  },
+  {
+    "path": "phase17_v7\\gateC2B2\\20260812_full_representation\\06_primary_all_cells_representation.h5ad",
+    "bytes": 114432893,
+    "ok": true,
+    "n_obs": 150402,
+    "n_vars": 3000,
+    "obs_columns": 15,
+    "obsm_keys": [
+      "X_pca",
+      "X_pca_harmony",
+      "X_umap_harmony",
+      "X_umap_unintegrated"
+    ]
+  }
+]

@@ -1,0 +1,93 @@
+[
+  {
+    "path": "04_submission\\journal_submission\\additional_files\\Figure_Source_Data.zip",
+    "bytes": 186694,
+    "entries": 15,
+    "ok": true,
+    "bad_entry": null
+  },
+  {
+    "path": "04_submission\\journal_submission\\additional_files\\Full_Statistical_Results.zip",
+    "bytes": 10814743,
+    "entries": 164,
+    "ok": true,
+    "bad_entry": null
+  },
+  {
+    "path": "04_submission\\journal_submission\\additional_files\\Regulator_Sensitivity.zip",
+    "bytes": 23794,
+    "entries": 11,
+    "ok": true,
+    "bad_entry": null
+  },
+  {
+    "path": "04_submission\\journal_submission\\portal_upload_required\\Figure_Source_Data.zip",
+    "bytes": 186694,
+    "entries": 15,
+    "ok": true,
+    "bad_entry": null
+  },
+  {
+    "path": "04_submission\\journal_submission\\portal_upload_required\\Full_Statistical_Results.zip",
+    "bytes": 10814743,
+    "entries": 164,
+    "ok": true,
+    "bad_entry": null
+  },
+  {
+    "path": "04_submission\\journal_submission\\portal_upload_required\\Regulator_Sensitivity.zip",
+    "bytes": 23794,
+    "entries": 11,
+    "ok": true,
+    "bad_entry": null
+  },
+  {
+    "path": "04_submission\\journal_submission.zip",
+    "bytes": 58515354,
+    "entries": 186,
+    "ok": true,
+    "bad_entry": null
+  },
+  {
+    "path": "audit_tools\\6013RP_phase17_gateC1_hotfix_v1.1_2026-08-06.zip",
+    "bytes": 10371,
+    "entries": 6,
+    "ok": true,
+    "bad_entry": null
+  },
+  {
+    "path": "audit_tools\\6013RP_phase17_gateC1_toolkit_2026-08-06.zip",
+    "bytes": 25120,
+    "entries": 9,
+    "ok": true,
+    "bad_entry": null
+  },
+  {
+    "path": "audit_tools\\6013RP_phase17_gateC2A_smoke_toolkit_2026-08-06.zip",
+    "bytes": 18911,
+    "entries": 9,
+    "ok": true,
+    "bad_entry": null
+  },
+  {
+    "path": "audit_tools\\6013RP_phase17_preflight_toolkit_2026-08-06.zip",
+    "bytes": 14093,
+    "entries": 6,
+    "ok": true,
+    "bad_entry": null
+  },
+  {
+    "path": "audit_tools\\6013RP_wyf_project_audit_toolkit_2026-08-06.zip",
+    "bytes": 21557,
+    "entries": 4,
+    "ok": true,
+    "bad_entry": null
+  },
+  {
+    "path": "phase17_v7\\gateC8S\\20260821_supplementary_traceability_freeze\\Additional_file_4_Full_Statistical_Results_GateC8S.zip",
+    "bytes": 8314122,
+    "entries": 63,
+    "ok": true,
+    "bad_entry": null
+  }
+]

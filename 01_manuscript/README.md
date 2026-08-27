@@ -11,9 +11,13 @@ internal review labels and dates are intentionally omitted from current files.
 
 ## Provenance
 
-Earlier manuscript, supplement and proposal files are retained to document how
-the study design, analyses and claims evolved. They are historical inputs and
-must not be uploaded to a journal portal.
+Superseded manuscript, supplement and proposal drafts were removed from the
+working tree during the 2026-08-27 workspace cleanup. Their complete evolution
+remains recoverable from Git history and the dated action records under
+`00_project_management/`; they must not be uploaded to a journal portal.
+
+The only retained internal reference assets in this folder are the verified
+BibTeX library and citation/signature audit. They are not journal uploads.
 
 The generated DOCX files are built from the current Markdown sources by
 `audit_tools/build_submission_package.ps1`.

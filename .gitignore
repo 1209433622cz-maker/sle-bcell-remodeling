@@ -1,5 +1,6 @@
 # Raw, processed and reference data are accession/checksum managed outside Git.
-Data/
+Data/*
+!Data/README.md
 PAPER/
 99_admin_course_docs/
 _phase17_review_pack/

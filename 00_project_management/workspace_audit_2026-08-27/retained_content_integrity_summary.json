@@ -1,0 +1,12 @@
+{
+  "total_files": 1379,
+  "checked": {
+    "utf8_text": 466,
+    "json": 170,
+    "csv": 455,
+    "pdf": 105,
+    "png": 141,
+    "docx": 12
+  },
+  "issues": []
+}

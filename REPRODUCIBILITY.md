@@ -13,6 +13,12 @@ data must be retrieved from the cited accessions and reconciled against the
 tracked provenance and checksum records before analysis. No patient-level
 outcome was used during disease-blind identity learning.
 
+The cleaned local workspace retains the formal 150,402-cell raw-count H5AD and
+the frozen primary representation used by the current R1 workflows, but not the
+larger public source cache. `Data/README.md` records the exact restoration
+commands. GSE135779 metadata are present locally; its 1.30 GB RAW archive must
+be restored before the planned label-agnostic external mapping sensitivity.
+
 ## Frozen data resources
 
 - `GSE174188`: discovery PBMC/B-lineage source and donor-nonoverlap internal

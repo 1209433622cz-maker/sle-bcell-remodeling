@@ -14,7 +14,27 @@ function Download-WithResume {
 
     New-Item -ItemType Directory -Force -Path (Split-Path -Parent $OutFile) | Out-Null
     Write-Host "Downloading:" $Url
-    curl.exe -L --fail --retry 5 --retry-delay 5 -C - -o $OutFile $Url
+    $curlArgs = @(
+        "--location",
+        "--fail",
+        "--retry", "10",
+        "--retry-all-errors",
+        "--retry-delay", "5",
+        "--continue-at", "-",
+        "--output", $OutFile
+    )
+    if ($env:OS -eq "Windows_NT") {
+        $curlArgs += "--ssl-no-revoke"
+    }
+    $curlArgs += $Url
+
+    & curl.exe @curlArgs
+    if ($LASTEXITCODE -ne 0) {
+        throw "curl failed with exit code $LASTEXITCODE while downloading $Url"
+    }
+    if (-not (Test-Path -LiteralPath $OutFile -PathType Leaf)) {
+        throw "Download completed without creating the expected file: $OutFile"
+    }
 
     if ($ExpectedBytes -gt 0) {
         $actual = (Get-Item -LiteralPath $OutFile).Length

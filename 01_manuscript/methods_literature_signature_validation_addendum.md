@@ -1,7 +1,0 @@
-# Methods Addendum - Literature-Informed Signature Validation
-
-Literature-informed signature validation was performed using donor-state pseudobulk expression from count-like `adata.raw.X`. Curated marker signatures were defined for ABC/DN2 core, ABC-low-naive-context, ZEB2-linked ABC, APC/HLA B-cell, EBV/APC-like B-cell, IFN/ISG, TLR7/FTO innate-axis, age-associated/atypical B-cell, naive B-cell, memory B-cell, plasmablast/ASC, and platelet/ambient-RNA programs. Signature gene availability was checked against `var["feature_name"]`.
-
-For each donor-state group, marker-gene counts were summed from `adata.raw.X`, normalized by total raw counts across all genes in the same donor-state group, and transformed as log1p(CP10K). Positive-marker signatures were scored as the mean log1p(CP10K) expression of available positive markers. Signed signatures with negative contextual markers were scored as the mean positive-marker score minus the mean negative-marker score.
-
-Donor-state groups with fewer than 10 cells were excluded from focus-state comparisons. The ABC/APC-like state was compared with other retained B-cell states using Mann-Whitney U tests with Benjamini-Hochberg correction across signatures. The flagged platelet/ambient-RNA-high state was excluded from the comparator. Signature specificity was assessed by ranking the ABC/APC-like state among refined B-cell states according to mean donor-state signature score.

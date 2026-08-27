@@ -465,7 +465,10 @@ def main() -> None:
         "package_zip_bytes": package_bytes,
         "package_zip_sha256": package_sha,
         "checks": checks,
-        "next_stage": "Complete an independent adversarial manuscript and all-page WPS review, then update the immutable archive before any journal portal upload.",
+        "next_stage": (
+            "Restore GSE135779 and complete a label-agnostic external mapping "
+            "sensitivity before updating the immutable archive or uploading to a journal portal."
+        ),
     }
     (RUN_DIR / "06_GATE_C8BRF_FINAL_AUDIT.json").write_text(
         json.dumps(audit, indent=2) + "\n", encoding="utf-8", newline="\n"
