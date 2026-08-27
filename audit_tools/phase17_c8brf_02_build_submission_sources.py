@@ -151,7 +151,7 @@ def build_supplement(doi: str) -> str:
         text = replace_once(text, pending_release, final_release, "supplement release record")
     elif final_release not in text:
         raise RuntimeError("Final supplement release record is absent or inconsistent")
-    if text.count("[[") != 8 or text.count("[[SUPPLEMENTARY_FIGURE:S") != 8:
+    if text.count("[[") != 9 or text.count("[[SUPPLEMENTARY_FIGURE:S") != 9:
         raise RuntimeError("Supplement contains unexpected placeholders")
     return text
 
@@ -160,11 +160,14 @@ def build_cover(doi: str) -> str:
     text = SOURCE_COVER.read_text(encoding="utf-8-sig")
     pending_release = "The submission includes five 600-dpi main figures, seven supplementary figures, machine-readable source data, a complete statistical-results archive, supplementary information and a separate six-test regulator-sensitivity attachment. [[PRE-SUBMISSION ACTION REQUIRED: insert immutable archive DOI and licence information.]]"
     previous_release = f"The submission includes five vector main figures rendered at 170 mm with 600-dpi PNG companions, seven supplementary figures, machine-readable source data, a complete statistical-results archive, supplementary information and a separate six-test regulator-sensitivity attachment. The versioned release is archived at doi:{doi}. Original project code is MIT-licensed; original manuscript text, composite figures, documentation and project-generated derived source-data tables are available under CC BY 4.0, without relicensing third-party datasets."
-    final_release = f"The submission includes five vector main figures rendered at 170 mm with 600-dpi PNG companions, eight supplementary figures, machine-readable source data, a complete statistical-results archive, supplementary information and a regulator-sensitivity attachment containing baseline and prespecified overlap-depletion analyses. The archived release is available at doi:{doi}. Original project code is MIT-licensed; original manuscript text, composite figures, documentation and project-generated derived source-data tables are available under CC BY 4.0, without relicensing third-party datasets."
+    previous_final_release = f"The submission includes five vector main figures rendered at 170 mm with 600-dpi PNG companions, eight supplementary figures, machine-readable source data, a complete statistical-results archive, supplementary information and a regulator-sensitivity attachment containing baseline and prespecified overlap-depletion analyses. The archived release is available at doi:{doi}. Original project code is MIT-licensed; original manuscript text, composite figures, documentation and project-generated derived source-data tables are available under CC BY 4.0, without relicensing third-party datasets."
+    final_release = f"The submission includes five vector main figures rendered at 170 mm with 600-dpi PNG companions, nine supplementary figures, machine-readable source data, a complete statistical-results archive including end-to-end identity robustness, supplementary information and a regulator-sensitivity attachment containing baseline and prespecified overlap-depletion analyses. The archived release is available at doi:{doi}. Original project code is MIT-licensed; original manuscript text, composite figures, documentation and project-generated derived source-data tables are available under CC BY 4.0, without relicensing third-party datasets."
     if pending_release in text:
         text = replace_once(text, pending_release, final_release, "cover release statement")
     elif previous_release in text:
         text = replace_once(text, previous_release, final_release, "cover release statement")
+    elif previous_final_release in text:
+        text = replace_once(text, previous_final_release, final_release, "cover release statement")
     elif final_release not in text:
         raise RuntimeError("Final cover release statement is absent or inconsistent")
 
@@ -231,8 +234,10 @@ def reporting_checklist(doi: str) -> str:
 
 - [x] Primary scientific families remain frozen; the declared post-freeze STAT1/STAT2 overlap-depletion sensitivity does not replace them.
 - [x] Main panel-data assertions pass 46/46.
-- [x] Legacy supplementary-figure panel-data assertions pass 29/29 and Supplementary Figure S8 has a separate verified 36-row source-data contract.
-- [x] No new cohort, cluster, primary threshold, regulator or signature was selected; depletion used two prespecified frozen gene sets.
+- [x] Legacy supplementary-figure panel-data assertions pass 29/29; Supplementary Figures S8 and S9 have separate verified 36-row and 128-row source-data contracts.
+- [x] End-to-end identity reconstruction completed 20/20 replicates and retained its formal B_ASC-specific HOLD at the unchanged state-overlap criterion.
+- [x] Boundary-exchange propagation retained the primary composition null and both tested GSE174188 B_CONV IFN/ISG effects.
+- [x] No new cohort, cluster, primary threshold, regulator or signature was selected; depletion used two prespecified frozen gene sets and identity propagation reused frozen models.
 - [x] Primary B_ASC composition remains a null boundary.
 - [x] Central claim remains independently replicated IFN/ISG remodeling within broad B_CONV.
 

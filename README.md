@@ -10,26 +10,32 @@ checksum-managed outside Git.
 
 ## Study status
 
-The primary scientific families remain frozen. A declared post-freeze Round 6
-robustness cycle is in progress before journal submission: STAT1/STAT2
-IFN-overlap depletion is complete, while the 150,402-cell end-to-end
-disease-blind identity resampling run is ready for local execution. The formal
-journal package is therefore on hold and must not be uploaded until that run is
-reviewed and the documents are rebuilt. The existing citable archive is available at
-[doi:10.5281/zenodo.22086892](https://doi.org/10.5281/zenodo.22086892).
+The primary scientific families remain frozen. The declared post-freeze Round 6
+robustness cycle is complete. Twenty end-to-end disease-blind reconstruction
+replicates retained high global concordance but missed the unchanged B_ASC
+state-overlap criterion; the formal result is HOLD, and B_CONV/B_ASC is now
+framed as an analysis scaffold rather than a universally reproducible taxonomy.
+Propagating every observed broad-state boundary exchange retained the primary
+composition null and both tested GSE174188 B_CONV IFN/ISG effects. The local
+journal package has been rebuilt and fully WPS-audited. The existing citable
+archive is available at [doi:10.5281/zenodo.22086892](https://doi.org/10.5281/zenodo.22086892);
+its payload must be updated before journal submission.
 
 Working title:
 
-**Disease-blind single-cell reconstruction separates unstable B-cell states
+**Disease-blind single-cell reconstruction separates unstable B-cell state assignments
 from reproducible interferon remodeling in systemic lupus erythematosus**
 
 The frozen evidence chain is:
 
 - 150,402 quality-controlled GSE174188 B-lineage cells, 259 donors, 271 samples
   and 88 libraries.
-- Disease-blind identity supports broad conventional-B (`B_CONV`) and
-  antibody-secreting-cell (`B_ASC`) compartments, not stable hard
-  naive-memory outcome subtypes.
+- Frozen-representation resampling supports a broad conventional-B (`B_CONV`)
+  and antibody-secreting-cell (`B_ASC`) analysis partition, not stable hard
+  naive-memory outcome subtypes. End-to-end resampling formally holds because
+  B_ASC median Jaccard is 0.930, below the unchanged 0.95 criterion.
+- Boundary propagation retains the primary B_ASC null across all 20 replicates
+  and retains positive primary and donor-nonoverlap B_CONV IFN/ISG effects.
 - Primary B_ASC relative abundance is null: odds ratio 0.947, 95% CI
   0.636-1.410, P=0.787.
 - The frozen IFN/ISG program replicates in GSE174188 discovery, a
@@ -59,17 +65,22 @@ The frozen evidence chain is:
 - [Portal upload guide](04_submission/Portal_Upload_Guide.md)
 - [Round 6 execution contract](00_project_management/round6_q1_robustness_execution_contract_2026-08-25.md)
 - [Full-run handoff](00_project_management/round6_full_pipeline_resampling_handoff_2026-08-25.md)
+- [R1 HOLD integration review](phase17_v7/round6_q1_robustness/20260827_r1_hold_integration/14_ROUND6_R1_HOLD_ADVISOR_REVIEW.md)
 
 Git history and the immutable public release preserve superseded submission
 drafts. The stable filenames above are the only current author-facing entry
-points. The generated `04_submission/journal_submission/` directory is not an
-authoritative source and remains withheld while Round 6 R1 is pending.
+points. The generated `04_submission/journal_submission/` directory is
+reproducible; Git tracks its reader-facing README, manifests, portal maps and
+11-file REQUIRED upload set, while internal renders and duplicate working assets
+remain ignored. Markdown, scripts and machine-readable analysis outputs remain
+the authoritative sources. The current local package passed WPS, accessibility,
+portal-map and deterministic-ZIP audits but has not been submitted.
 
 ## Licence and citation
 
 Original repository code is MIT-licensed. Original manuscript text, composite figures, project documentation and project-generated derived source-data tables are CC BY 4.0. Public GEO/CELLxGENE data and other third-party material are excluded from these project licences; see `LICENSE_SCOPE.md`.
 
-## Pending full run
+## Reproduce the end-to-end robustness cycle
 
 Run the resumable end-to-end identity analysis from the project root:
 
@@ -85,7 +96,12 @@ powershell -ExecutionPolicy Bypass `
 
 The exact inputs, hashes, checkpoints, monitoring command and decision rules are
 documented in the full-run handoff. Rerunning the same command resumes completed
-replicates.
+replicates. Audit the HOLD and rebuild its downstream propagation with:
+
+```powershell
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_6013RP_round6_r1_hold_integration.ps1
+```
 
 ## Repository layout
 
@@ -106,9 +122,8 @@ does not overwrite the proposal history.
 
 ## Next stage
 
-Complete and independently audit the full R1 run. If it passes, add the
-end-to-end identity result as a supplementary robustness figure; if it holds,
-retain the frozen-embedding result and narrow the identity claim explicitly.
-Then rebuild the DOCX and portal package, render every page with WPS, rerun
-accessibility and deterministic-manifest audits, update the archival release,
-and only then begin journal-portal submission.
+Perform one final independent adversarial review of the revised manuscript and
+all WPS pages, update the immutable archive with the refrozen repository and
+submission package, verify the target-journal fit and portal metadata, and only
+then begin journal submission. No identity threshold, replicate, seed, model or
+claim may be changed to convert the formal R1 HOLD into PASS.

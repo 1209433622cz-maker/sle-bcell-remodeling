@@ -91,21 +91,32 @@ powershell -ExecutionPolicy Bypass `
    0.995553/0.990207, median/minimum mapping agreement 0.999925/0.999834 and
    minimum state median Jaccard 0.991371. Required ASC markers `DERL3`,
    `JCHAIN`, `MZB1`, `TNFRSF17` and `XBP1` each had sample support 1.0.
-5. The permissible frozen identity scope was therefore reduced to broad
-   `B_CONV` and `B_ASC` compartments. Fine-grained naive/memory subtype labels
+5. The permissible frozen identity scope was therefore reduced to a broad
+   `B_CONV`/`B_ASC` analysis scaffold. Fine-grained naive/memory subtype labels
    were not used as hard inferential identities.
-6. Protected metadata were joined only after identity freeze. Composition was
+6. A separate end-to-end sensitivity recomputed gene filtering, recurrent HVGs,
+   PCA, Harmony, neighbour graphs and Leiden clustering in 20 within-library
+   80% resamples. All runs converged and four global criteria passed, but B_ASC
+   median Jaccard was 0.930323, below the unchanged 0.95 state-overlap criterion.
+   The formal decision is `HOLD_FULL_PIPELINE_TWO_COMPARTMENT_REPRODUCIBILITY`.
+7. Observed broad-state exchanges were propagated without changing sample or
+   gene eligibility. Primary B_ASC odds ratios ranged from 0.896 to 0.967 and
+   all intervals included one. Primary and donor-nonoverlap B_CONV IFN/ISG
+   effects remained positive with every interval above zero. This is same-data
+   sensitivity, not independent replication.
+8. Protected metadata were joined only after identity freeze. Composition was
    analysed at sample level and transcription with raw-count pseudobulk at the
    biological-sample or donor level.
-7. The discovery IFN/ISG program was frozen before donor-nonoverlap and
+9. The discovery IFN/ISG program was frozen before donor-nonoverlap and
    GSE135779 tests.
-8. STAT1/STAT2 regulators, signed CollecTRI targets, contrasts, backgrounds and
+10. STAT1/STAT2 regulators, signed CollecTRI targets, contrasts, backgrounds and
    designs were frozen before CAMERA and FRY sensitivity analyses.
-9. Five main and seven supplementary figures, manuscript numbers and legends
-   were regenerated from frozen tables and guarded by exact panel-data
-   assertions.
-10. Complete statistical outputs were packaged with sanitized design matrices,
-    a unified test-family map, file-level provenance and deterministic hashes.
+11. Five main and nine supplementary figures, manuscript numbers and legends
+    were regenerated from frozen or declared sensitivity tables and guarded by
+    exact panel-data assertions.
+12. Complete statistical outputs were packaged with sanitized design matrices,
+    a unified test-family map, 101 end-to-end identity robustness files,
+    file-level provenance and deterministic hashes.
 
 ## Submission package rebuild
 
@@ -124,17 +135,22 @@ accessibility checks before the deterministic package archive is created.
 ## Frozen release assertions
 
 - Main-figure panel-data assertions: 46/46.
-- Supplementary-figure panel-data assertions: 29/29.
+- Supplementary-figure panel-data assertions: legacy 29/29 plus separate S8
+  (36 rows) and S9 (128 rows; 8/8 checks) contracts.
 - Reference DOI identities independently resolved: 28/28.
 - Numbered manuscript references: 32.
-- The complete statistical results archive is byte-identical to the frozen
-  scientific source archive.
+- The complete statistical results archive preserves the frozen source archive
+  and deterministically adds 101 reviewer-facing end-to-end identity and
+  boundary-propagation files; its internal 163-row manifest validates exactly.
 - Main and supplementary DOCX files use numbered journal-style citations,
   embedded figure markers, explicit table titles, full-width tables, US Letter
   pages, 1-inch margins, Times New Roman text and double-spaced manuscript body
   text.
 - The package contains separate `portal_upload_required` and
   `portal_upload_optional` directories plus a filename and hash map.
+- The final WPS render contains 32 manuscript pages, 17 supplementary pages and
+  one cover-letter page; all three DOCX accessibility audits report zero high,
+  medium or low findings.
 
 ## Author and portal boundary
 

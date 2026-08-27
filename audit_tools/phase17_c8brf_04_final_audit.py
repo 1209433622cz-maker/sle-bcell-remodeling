@@ -20,6 +20,8 @@ from pypdf import PdfReader
 ROOT = Path(__file__).resolve().parents[1]
 RUN_DIR = ROOT / "phase17_v7" / "gateC8BRF" / "20260825_author_release"
 C8S_RUN = ROOT / "phase17_v7" / "gateC8S" / "20260821_supplementary_traceability_freeze"
+ROUND6_SOURCE = ROOT / "phase17_v7" / "round6_q1_robustness" / "20260825_overlap_depletion"
+R1_INTEGRATION = ROOT / "phase17_v7" / "round6_q1_robustness" / "20260827_r1_hold_integration"
 PACKAGE = ROOT / "04_submission" / "journal_submission"
 PACKAGE_ZIP = ROOT / "04_submission" / "journal_submission.zip"
 MANUSCRIPT = ROOT / "01_manuscript" / "Manuscript.md"
@@ -141,7 +143,7 @@ submission filenames.
 
 ## Portal policy
 
-Use `portal_upload_required/` as the default 11-file upload set. The seven PDFs
+Use `portal_upload_required/` as the default 11-file upload set. The nine PDFs
 in `portal_upload_optional/` duplicate figures embedded in Supplementary
 Information and should be used only if the journal portal explicitly requires
 standalone supplementary figures.
@@ -259,11 +261,18 @@ def main() -> None:
     supplement_assertions = read_json(
         C8S_RUN / "03_SUPPLEMENTARY_PANEL_DATA_ASSERTIONS.json"
     )
+    s8_status = read_json(ROUND6_SOURCE / "06_SUPPLEMENTARY_FIGURE_S8_STATUS.json")
+    s9_status = read_json(R1_INTEGRATION / "13_SUPPLEMENTARY_FIGURE_S9_STATUS.json")
     check(
         "supplementary_assertions",
         len(supplement_assertions["checks"]) == 29
-        and all(row["pass"] is True for row in supplement_assertions["checks"]),
-        "29/29",
+        and all(row["pass"] is True for row in supplement_assertions["checks"])
+        and s8_status["status"] == "PASS_ROUND6_SUPPLEMENTARY_FIGURE_S8_BUILT"
+        and s8_status["source_rows"] == 36
+        and s9_status["status"] == "PASS_ROUND6_SUPPLEMENTARY_FIGURE_S9_BUILT"
+        and s9_status["source_rows"] == 128
+        and all(s9_status["checks"].values()),
+        "legacy 29/29; S8 36 rows; S9 128 rows and 8/8 checks",
     )
 
     required_rows = list(
@@ -295,7 +304,7 @@ def main() -> None:
     check(
         "portal_required_optional_policy",
         len(required_rows) == 11
-        and len(optional_rows) == 7
+        and len(optional_rows) == 9
         and required_disk_files == required_aliases
         and optional_disk_files == optional_aliases
         and not required_aliases.intersection(optional_aliases)
@@ -317,8 +326,8 @@ def main() -> None:
     check(
         "docx_structure_and_content",
         all("[[" not in value for value in docx_values.values())
-        and len(supplement_doc.inline_shapes) == 7
-        and len(supplement_doc.tables) == 8,
+        and len(supplement_doc.inline_shapes) == 9
+        and len(supplement_doc.tables) == 9,
         {
             "supplement_inline_figures": len(supplement_doc.inline_shapes),
             "supplement_tables": len(supplement_doc.tables),
@@ -349,7 +358,7 @@ def main() -> None:
     render_ok = True
     for name, pdf, minimum, maximum in (
         ("main", MAIN_PDF, 25, 32),
-        ("supplement", SUPP_PDF, 12, 17),
+        ("supplement", SUPP_PDF, 14, 20),
         ("cover", COVER_PDF, 1, 2),
     ):
         reader = PdfReader(pdf) if pdf.exists() else None
@@ -389,11 +398,36 @@ def main() -> None:
     )
 
     stats_copy = PACKAGE / "additional_files" / "Full_Statistical_Results.zip"
-    stats_frozen = C8S_RUN / "Additional_file_4_Full_Statistical_Results_GateC8S.zip"
+    with zipfile.ZipFile(stats_copy) as archive:
+        stats_names = set(archive.namelist())
+        stats_manifest = list(
+            csv.DictReader(
+                archive.read("MANIFEST_SHA256.csv").decode("utf-8-sig").splitlines()
+            )
+        )
+        manifest_valid = all(
+            row["relative_path"] in stats_names
+            and len(archive.read(row["relative_path"])) == int(row["bytes"])
+            and hashlib.sha256(archive.read(row["relative_path"])).hexdigest().upper()
+            == row["sha256"]
+            for row in stats_manifest
+        )
+        identity_names = {
+            name for name in stats_names if name.startswith("identity_robustness/")
+        }
     check(
-        "frozen_statistical_archive",
-        sha256(stats_copy) == sha256(stats_frozen),
-        sha256(stats_copy),
+        "augmented_statistical_archive",
+        manifest_valid
+        and len(identity_names) == 101
+        and "identity_robustness/end_to_end_resampling/05_FULL_PIPELINE_RESAMPLING_STATUS.json"
+        in identity_names
+        and "identity_robustness/boundary_propagation/14_ROUND6_R1_HOLD_ADVISOR_REVIEW.md"
+        in identity_names,
+        {
+            "manifest_rows": len(stats_manifest),
+            "identity_robustness_files": len(identity_names),
+            "sha256": sha256(stats_copy),
+        },
     )
     restricted_suffixes = {".h5ad", ".h5", ".rds", ".mtx", ".bam", ".fastq"}
     restricted = [
@@ -415,10 +449,10 @@ def main() -> None:
     package_bytes, package_sha = build_deterministic_archive()
     decision = "PASS_GATE_C8BR_RELEASE_PORTABILITY_AUTHOR_COMPLETION_AND_PORTAL_PREFLIGHT"
     audit = {
-        "created_at": "2026-08-25",
+        "created_at": "2026-08-27",
         "decision": decision,
         "primary_target": "Genome Medicine",
-        "source_scientific_freeze": "frozen disease-blind analysis",
+        "source_scientific_freeze": "frozen disease-blind analysis with formal end-to-end identity HOLD propagation",
         "scientific_estimates_changed": False,
         "author_completion_pass": True,
         "technical_package_pass": True,
@@ -431,7 +465,7 @@ def main() -> None:
         "package_zip_bytes": package_bytes,
         "package_zip_sha256": package_sha,
         "checks": checks,
-        "next_stage": "Complete field-by-field Genome Medicine portal entry, verify the generated submission PDF, submit, and freeze the receipt and manuscript number.",
+        "next_stage": "Complete an independent adversarial manuscript and all-page WPS review, then update the immutable archive before any journal portal upload.",
     }
     (RUN_DIR / "06_GATE_C8BRF_FINAL_AUDIT.json").write_text(
         json.dumps(audit, indent=2) + "\n", encoding="utf-8", newline="\n"
@@ -447,13 +481,13 @@ def main() -> None:
         "",
         "- Scientific estimates changed: No.",
         "- Main figure assertions: 46/46.",
-        "- Supplementary-figure assertions: 29/29.",
+        "- Supplementary-figure assertions: legacy 29/29 plus verified S8 and S9 contracts.",
         "- Main figures: 5/5 at 170 mm, vector PDF plus 600-dpi PNG.",
         "- Manuscript and cover placeholders: 0.",
         "- WPS pages: "
         f"{page_counts['main']} manuscript, {page_counts['supplement']} supplement, {page_counts['cover']} cover.",
         "- Accessibility findings: 0 high, 0 medium, 0 low for all three DOCX files.",
-        "- Portal maps: 11 REQUIRED, 7 OPTIONAL.",
+        "- Portal maps: 11 REQUIRED, 9 OPTIONAL.",
         f"- Deterministic ZIP: {package_bytes:,} bytes; SHA-256 `{package_sha}`.",
         "",
         "## Check matrix",
@@ -480,7 +514,7 @@ def main() -> None:
     (RUN_DIR / "07_GATE_C8BRF_PACKAGE_STATUS.json").write_text(
         json.dumps(
             {
-                "created_at": "2026-08-25",
+                "created_at": "2026-08-27",
                 "status": decision,
                 "doi": doi,
                 "package_zip_bytes": package_bytes,

@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-08-27T07:50:51+08:00",
+  "status": "COMPLETE",
+  "decision": "HOLD_FULL_PIPELINE_TWO_COMPARTMENT_REPRODUCIBILITY",
+  "disease_blind": true,
+  "test_mode": false,
+  "analysis_pool_cells": 150402,
+  "replicates": 20,
+  "fraction": 0.8,
+  "primary_branch": "harmony",
+  "primary_resolution": 0.4,
+  "harmony_replicates_converged": 20,
+  "primary_metrics": {
+    "median_mapped_ari": 0.9629724043729124,
+    "minimum_mapped_ari": 0.929696806592458,
+    "median_mapped_ami": 0.9165181539403966,
+    "minimum_mapped_ami": 0.8630809600618349,
+    "median_mapping_agreement": 0.9993683510638298,
+    "minimum_mapping_agreement": 0.9987699468085106,
+    "minimum_state_median_jaccard": 0.9303233364573571
+  },
+  "thresholds": {
+    "median_mapped_ari": 0.95,
+    "minimum_mapped_ari": 0.9,
+    "median_mapping_agreement": 0.995,
+    "minimum_mapping_agreement": 0.99,
+    "minimum_state_median_jaccard": 0.95
+  },
+  "checks": {
+    "replicates_complete": true,
+    "all_harmony_replicates_converged": true,
+    "median_mapped_ari": true,
+    "minimum_mapped_ari": true,
+    "median_mapping_agreement": true,
+    "minimum_mapping_agreement": true,
+    "minimum_state_median_jaccard": false
+  },
+  "interpretation": "Passing strengthens end-to-end broad-identity reproducibility; holding narrows the claim to the frozen representation."
+}

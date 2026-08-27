@@ -1,0 +1,3 @@
+"analysis","replicates","baseline_effect","minimum_effect","median_effect","maximum_effect","minimum_attenuation","all_effects_positive","all_intervals_above_zero"
+"primary_base",20,0.836556476435973,0.836099679048919,0.839934850429595,0.844612648084434,0.99945395511251,TRUE,TRUE
+"validation_nonoverlap",20,1.08624050109214,1.05931817157525,1.08462272141156,1.08665602231338,0.975215130084157,TRUE,TRUE

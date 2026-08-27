@@ -4,8 +4,10 @@
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import shutil
+import zipfile
 from pathlib import Path
 
 import phase17_c8s_04_build_documents as base
@@ -17,10 +19,13 @@ C8S_RUN = ROOT / "phase17_v7" / "gateC8S" / "20260821_supplementary_traceability
 C8BR_RUN = ROOT / "phase17_v7" / "gateC8BR" / "20260825_release_portability_preflight"
 SENSITIVITY_SOURCE = ROOT / "phase17_v7" / "gateC8R" / "20260820_pre_submission_repair"
 ROUND6_SOURCE = ROOT / "phase17_v7" / "round6_q1_robustness" / "20260825_overlap_depletion"
+FULL_R1_SOURCE = ROOT / "phase17_v7" / "round6_q1_robustness" / "20260825_full_pipeline_identity_resampling"
+R1_INTEGRATION = ROOT / "phase17_v7" / "round6_q1_robustness" / "20260827_r1_hold_integration"
 PACKAGE = ROOT / "04_submission" / "journal_submission"
 MANUSCRIPT_MD = ROOT / "01_manuscript" / "Manuscript.md"
 SUPPLEMENT_MD = ROOT / "01_manuscript" / "Supplementary_Information.md"
 COVER_MD = ROOT / "04_submission" / "Cover_Letter.md"
+FIXED_ZIP_TIME = (2026, 8, 27, 0, 0, 0)
 
 
 def copy_file(source: Path, target: Path) -> Path:
@@ -48,6 +53,90 @@ def write_map(path: Path, rows: list[dict[str, object]]) -> None:
         writer.writerows(rows)
 
 
+def build_augmented_statistical_archive(source: Path, output: Path) -> int:
+    """Preserve the frozen archive and add reviewer-facing R1 identity outputs."""
+    entries: dict[str, bytes] = {}
+    with zipfile.ZipFile(source) as archive:
+        for name in archive.namelist():
+            if name not in {"MANIFEST_SHA256.csv", "README_FULL_STATISTICAL_RESULTS.md"}:
+                entries[name] = archive.read(name)
+
+    identity_files: list[tuple[Path, str]] = []
+    identity_files.extend(
+        (path, f"identity_robustness/end_to_end_resampling/{path.name}")
+        for path in sorted(FULL_R1_SOURCE.glob("*"))
+        if path.is_file()
+    )
+    for replicate_dir in sorted(FULL_R1_SOURCE.glob("replicate_*")):
+        identity_files.extend(
+            (
+                path,
+                "identity_robustness/end_to_end_resampling/"
+                f"{replicate_dir.name}/{path.name}",
+            )
+            for path in sorted(replicate_dir.glob("*"))
+            if path.is_file() and path.name != "04_R04_CELL_ASSIGNMENTS.csv.gz"
+        )
+    identity_files.extend(
+        (path, f"identity_robustness/boundary_propagation/{path.name}")
+        for path in sorted(R1_INTEGRATION.glob("*"))
+        if path.is_file()
+    )
+    identity_files.extend(
+        (path, f"identity_robustness/boundary_propagation/source_data/{path.name}")
+        for path in sorted((R1_INTEGRATION / "source_data").glob("*"))
+        if path.is_file()
+    )
+    if len(identity_files) != 101:
+        raise RuntimeError(
+            f"Expected 101 reviewer-facing R1 identity files; found {len(identity_files)}"
+        )
+    for path, archive_name in identity_files:
+        if archive_name in entries:
+            raise RuntimeError(f"Duplicate statistical archive path: {archive_name}")
+        entries[archive_name] = path.read_bytes()
+
+    entries["README_FULL_STATISTICAL_RESULTS.md"] = (
+        "# Full statistical results\n\n"
+        "This reviewer-facing archive contains complete result tables supporting the "
+        "manuscript, not raw sequencing data. GSE174188 is the discovery and internal "
+        "donor-nonoverlap resource; GSE135779 is the independent childhood validation "
+        "dataset; GSE23307 is descriptive at two paired donors.\n\n"
+        "The original frozen gene-level, composition, transcription, regulatory, design "
+        "and statistical-framework directories are retained. `identity_robustness/` adds "
+        "the 20-replicate end-to-end disease-blind reconstruction audit and downstream "
+        "B_CONV/B_ASC boundary-propagation results. The formal state-overlap HOLD is "
+        "retained; these same-data sensitivities do not constitute independent replication.\n\n"
+        "Large raw matrices and per-cell assignment exports are intentionally excluded. "
+        "All displayed S9 data are also supplied in Figure Source Data. File-level hashes "
+        "are recorded in `MANIFEST_SHA256.csv`.\n"
+    ).encode("utf-8")
+    manifest_rows = ["relative_path,bytes,sha256"]
+    for name in sorted(entries):
+        payload = entries[name]
+        manifest_rows.append(
+            f"{name},{len(payload)},{hashlib.sha256(payload).hexdigest().upper()}"
+        )
+    entries["MANIFEST_SHA256.csv"] = ("\n".join(manifest_rows) + "\n").encode("utf-8")
+
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(
+        output, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9
+    ) as archive:
+        for name in sorted(entries):
+            info = zipfile.ZipInfo(name, date_time=FIXED_ZIP_TIME)
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = 0o100644 << 16
+            info.create_system = 3
+            archive.writestr(
+                info,
+                entries[name],
+                compress_type=zipfile.ZIP_DEFLATED,
+                compresslevel=9,
+            )
+    return len(identity_files)
+
+
 def build_portal_maps(
     main_docx: Path,
     supplement_docx: Path,
@@ -71,11 +160,13 @@ def build_portal_maps(
         required.append((source, required_dir / f"Figure_{number}.pdf", f"main figure {number}"))
 
     optional: list[tuple[Path, Path, str]] = []
-    for number in range(1, 9):
+    for number in range(1, 10):
         source_directory = (
             C8S_RUN / "supplementary_figures"
             if number <= 7
             else ROUND6_SOURCE / "figures"
+            if number == 8
+            else R1_INTEGRATION / "figures"
         )
         source = next(source_directory.glob(f"Supplementary_Figure_S{number}_*.pdf"))
         optional.append(
@@ -113,9 +204,9 @@ def build_portal_maps(
     write_map(docs_dir / "PORTAL_UPLOAD_OPTIONAL.csv", optional_rows)
     (docs_dir / "PORTAL_UPLOAD_POLICY.txt").write_text(
         "Default portal set: upload these 11 files.\n"
-        "Do not also upload standalone Supplementary Figures S1-S8 when "
+        "Do not also upload standalone Supplementary Figures S1-S9 when "
         "Supplementary_Information.docx is accepted as Additional file 1.\n\n"
-        "These eight PDFs duplicate figures already embedded in Supplementary_Information.docx.\n"
+        "These nine PDFs duplicate figures already embedded in Supplementary_Information.docx.\n"
         "Upload them only if the journal portal explicitly requires separate supplementary figures.\n",
         encoding="utf-8",
         newline="\n",
@@ -163,6 +254,10 @@ def prepare_package_assets(
         copy_file(path, supp_figures_dir / path.name)
         for path in sorted((ROUND6_SOURCE / "figures").glob("Supplementary_Figure_S8_*.*"))
     )
+    supp_figures.extend(
+        copy_file(path, supp_figures_dir / path.name)
+        for path in sorted((R1_INTEGRATION / "figures").glob("Supplementary_Figure_S9_*.*"))
+    )
     source_files = [
         copy_file(path, source_dir / path.name)
         for path in sorted((RUN_DIR / "source_data").glob("Figure*_source_data.csv"))
@@ -179,6 +274,12 @@ def prepare_package_assets(
         copy_file(path, source_dir / path.name)
         for path in sorted(
             (ROUND6_SOURCE / "source_data").glob("Supplementary_Figure_S8_source_data.csv")
+        )
+    )
+    source_files.extend(
+        copy_file(path, source_dir / path.name)
+        for path in sorted(
+            (R1_INTEGRATION / "source_data").glob("Supplementary_Figure_S9_source_data.csv")
         )
     )
     source_manifest = source_dir / "SHA256SUMS.csv"
@@ -230,9 +331,10 @@ def prepare_package_assets(
     base.write_deterministic_zip(
         sensitivity_zip, sensitivity_files + [sensitivity_manifest]
     )
-    stats_zip = copy_file(
+    stats_zip = PACKAGE / "additional_files" / "Full_Statistical_Results.zip"
+    identity_robustness_files = build_augmented_statistical_archive(
         C8S_RUN / "Additional_file_4_Full_Statistical_Results_GateC8S.zip",
-        PACKAGE / "additional_files" / "Full_Statistical_Results.zip",
+        stats_zip,
     )
 
     for path in sorted((C8BR_RUN / "references").glob("*")):
@@ -268,7 +370,15 @@ def prepare_package_assets(
         ROOT / "audit_tools" / "phase17_round6_01_overlap_depletion_sensitivity.R",
         ROOT / "audit_tools" / "phase17_round6_02_build_overlap_depletion_figure.py",
         ROOT / "audit_tools" / "run_6013RP_round6_overlap_depletion.ps1",
+        ROOT / "audit_tools" / "phase17_round6_03_full_pipeline_identity_resampling.py",
+        ROOT / "audit_tools" / "run_6013RP_round6_full_pipeline_identity_resampling.ps1",
+        ROOT / "audit_tools" / "phase17_round6_04_audit_r1_hold_and_prepare_propagation.py",
+        ROOT / "audit_tools" / "phase17_round6_05_fit_identity_uncertainty_composition.py",
+        ROOT / "audit_tools" / "phase17_round6_05_fit_identity_uncertainty_ifn.R",
+        ROOT / "audit_tools" / "phase17_round6_06_build_identity_hold_figure.py",
+        ROOT / "audit_tools" / "run_6013RP_round6_r1_hold_integration.ps1",
         ROOT / "00_project_management" / "round6_q1_robustness_execution_contract_2026-08-25.md",
+        ROOT / "00_project_management" / "round6_full_pipeline_resampling_handoff_2026-08-25.md",
     ]
     reproducibility_files = [
         copy_file(path, reproducibility_dir / path.name)
@@ -293,6 +403,7 @@ def prepare_package_assets(
         "sensitivity_zip_sha256": base.sha256(sensitivity_zip),
         "full_statistical_zip": stats_zip.relative_to(ROOT).as_posix(),
         "full_statistical_zip_sha256": base.sha256(stats_zip),
+        "identity_robustness_files": identity_robustness_files,
         "reproducibility_files": len(reproducibility_files),
         "portal": portal,
     }
@@ -330,12 +441,13 @@ def main() -> None:
             supplementary_figure_dirs=[
                 C8S_RUN / "supplementary_figures",
                 ROUND6_SOURCE / "figures",
+                R1_INTEGRATION / "figures",
             ],
         ),
         base.markdown_to_docx(
             COVER_MD,
             cover_docx,
-            body_size=10.5,
+            body_size=10,
             double_space=False,
             line_numbers=False,
             running_header=None,

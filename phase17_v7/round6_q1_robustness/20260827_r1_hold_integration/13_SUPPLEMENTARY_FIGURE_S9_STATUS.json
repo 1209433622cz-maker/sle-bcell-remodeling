@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-08-27T10:36:48+08:00",
+  "status": "PASS_ROUND6_SUPPLEMENTARY_FIGURE_S9_BUILT",
+  "decision": "ACCEPT_R1_HOLD_WITH_DOWNSTREAM_ROBUSTNESS_BOUNDARY",
+  "figure_pdf": "phase17_v7/round6_q1_robustness/20260827_r1_hold_integration/figures/Supplementary_Figure_S9_identity_boundary_and_propagation.pdf",
+  "figure_png": "phase17_v7/round6_q1_robustness/20260827_r1_hold_integration/figures/Supplementary_Figure_S9_identity_boundary_and_propagation.png",
+  "source_data": "phase17_v7/round6_q1_robustness/20260827_r1_hold_integration/source_data/Supplementary_Figure_S9_source_data.csv",
+  "width_mm": 170.0,
+  "height_mm": 160.0,
+  "source_rows": 128,
+  "checks": {
+    "width_170mm": true,
+    "five_panels": true,
+    "formal_four_pass_one_hold": true,
+    "basc_below_state_threshold_all_replicates": true,
+    "bconv_above_state_threshold_all_replicates": true,
+    "primary_composition_intervals_include_one": true,
+    "ifn_effects_positive": true,
+    "ifn_intervals_above_zero": true
+  }
+}

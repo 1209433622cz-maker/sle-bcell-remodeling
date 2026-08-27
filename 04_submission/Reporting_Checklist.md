@@ -4,8 +4,10 @@
 
 - [x] Primary scientific families remain frozen; the declared post-freeze STAT1/STAT2 overlap-depletion sensitivity does not replace them.
 - [x] Main panel-data assertions pass 46/46.
-- [x] Legacy supplementary-figure panel-data assertions pass 29/29 and Supplementary Figure S8 has a separate verified 36-row source-data contract.
-- [x] No new cohort, cluster, primary threshold, regulator or signature was selected; depletion used two prespecified frozen gene sets.
+- [x] Legacy supplementary-figure panel-data assertions pass 29/29; Supplementary Figures S8 and S9 have separate verified 36-row and 128-row source-data contracts.
+- [x] End-to-end identity reconstruction completed 20/20 replicates and retained its formal B_ASC-specific HOLD at the unchanged state-overlap criterion.
+- [x] Boundary-exchange propagation retained the primary composition null and both tested GSE174188 B_CONV IFN/ISG effects.
+- [x] No new cohort, cluster, primary threshold, regulator or signature was selected; depletion used two prespecified frozen gene sets and identity propagation reused frozen models.
 - [x] Primary B_ASC composition remains a null boundary.
 - [x] Central claim remains independently replicated IFN/ISG remodeling within broad B_CONV.
 

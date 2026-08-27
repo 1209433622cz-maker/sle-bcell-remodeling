@@ -1,9 +1,9 @@
 {
-  "created_at": "2026-08-25",
+  "created_at": "2026-08-27",
   "status": "PASS_GATE_C8BR_RELEASE_PORTABILITY_AUTHOR_COMPLETION_AND_PORTAL_PREFLIGHT",
   "doi": "10.5281/zenodo.22086892",
-  "package_zip_bytes": 45995822,
-  "package_zip_sha256": "C6FA38AEEFDCD8BD077283EFF3E3586DF2A7F2AC534F8E69656A421C2EB1044F",
+  "package_zip_bytes": 58515354,
+  "package_zip_sha256": "63446D18B55A856B016C377A8EF4E7BBDAC1B713C0E56B27E6F0ACE505EE22BB",
   "canonical_builder_output": true,
   "manual_rezip_permitted": false
 }

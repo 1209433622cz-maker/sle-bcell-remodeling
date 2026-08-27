@@ -396,7 +396,7 @@ def build_figure1(
         discovery_nodes = [
             (0.20, "B-lineage\ncells", COLORS["internal"]),
             (0.43, "Hard QC", COLORS["dark"]),
-            (0.72, "Disease-blind\nB_CONV / B_ASC freeze", COLORS["teal"]),
+            (0.72, "Frozen-representation\nB_CONV / B_ASC scaffold", COLORS["teal"]),
         ]
         for x, label, color in discovery_nodes:
             axis.text(
@@ -574,7 +574,7 @@ def build_figure1(
     axis.set_ylabel("Mapped adjusted Rand index")
     axis.set_ylim(0.28, 1.03)
     axis.legend(frameon=False, fontsize=6, loc="lower left")
-    axis.set_title("Fine-state instability is retained", loc="left", pad=4)
+    axis.set_title("Frozen-representation policy selection", loc="left", pad=4)
     style_axis(axis)
     panel_label(axis, "b")
 
@@ -596,7 +596,7 @@ def build_figure1(
     axis.set_ylabel("Two-compartment stability")
     axis.set_ylim(0.985, 1.0008)
     axis.legend(frameon=False, fontsize=6, loc="lower left")
-    axis.set_title("B_CONV/B_ASC reproduces in 20/20 runs", loc="left", pad=4)
+    axis.set_title("Frozen-representation broad partition", loc="left", pad=4)
     style_axis(axis)
     panel_label(axis, "c")
 
@@ -629,8 +629,9 @@ def build_figure1(
         va="center",
         ha="left",
         color="#444444",
+        bbox={"facecolor": "white", "edgecolor": "none", "pad": 0.8},
     )
-    axis.set_title("Broad identities meet the frozen scope", loc="left", pad=4)
+    axis.set_title("Frozen-representation scope gate", loc="left", pad=4)
     style_axis(axis)
     panel_label(axis, "d")
     save_figure(figure, figure_dir, "Figure1_disease_blind_identity_scope")

@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-08-27T10:18:11+08:00",
+  "status": "PASS_R1_IDENTITY_UNCERTAINTY_COMPOSITION_PROPAGATION",
+  "method": "full frozen partition with replicate-specific sampled-cell boundary exchanges; original beta-binomial design and fixed sample eligibility",
+  "numerical_reproduction_tolerance": 0.0005,
+  "baseline_absolute_or_differences": {
+    "primary": 1.2624805738714606e-05,
+    "validation": 3.514364493772959e-05,
+    "flare": 5.671820141550654e-06,
+    "validation_nonoverlap": 0.00013624288127533912
+  },
+  "primary": {
+    "minimum_odds_ratio": 0.8960395763983153,
+    "median_odds_ratio": 0.9255553699384884,
+    "maximum_odds_ratio": 0.9667578492553742,
+    "all_intervals_include_one": true
+  },
+  "checks": {
+    "baseline_reproduced_within_numerical_tolerance": true,
+    "twenty_replicates_per_analysis": true,
+    "all_models_converged": true,
+    "all_hessians_positive": true,
+    "primary_all_intervals_include_one": true
+  },
+  "interpretation": "The primary B_ASC null boundary is retained under observed R1 broad-state assignment exchanges."
+}

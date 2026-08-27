@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-08-27T10:23:37+0800",
+  "status": "PASS_R1_IDENTITY_UNCERTAINTY_IFN_PROPAGATION",
+  "method": "full-data frozen B_CONV counts plus replicate-specific boundary-cell deltas; edgeR TMM logCPM; frozen 12-gene z-score; OLS HC3",
+  "sample_selection": "frozen; no sample or gene re-selection",
+  "summary": [
+    {
+      "analysis": "primary_base",
+      "replicates": 20,
+      "baseline_effect": 0.8366,
+      "minimum_effect": 0.8361,
+      "median_effect": 0.8399,
+      "maximum_effect": 0.8446,
+      "minimum_attenuation": 0.9995,
+      "all_effects_positive": true,
+      "all_intervals_above_zero": true
+    },
+    {
+      "analysis": "validation_nonoverlap",
+      "replicates": 20,
+      "baseline_effect": 1.0862,
+      "minimum_effect": 1.0593,
+      "median_effect": 1.0846,
+      "maximum_effect": 1.0867,
+      "minimum_attenuation": 0.9752,
+      "all_effects_positive": true,
+      "all_intervals_above_zero": true
+    }
+  ],
+  "checks": {
+    "baseline_effects_reproduced": true,
+    "twenty_replicates_per_analysis": true,
+    "all_effects_positive": true,
+    "all_intervals_above_zero": true
+  },
+  "interpretation": "R1 state-membership uncertainty did not reverse or erase the frozen B_CONV IFN/ISG effects. This is a sensitivity analysis, not independent replication."
+}

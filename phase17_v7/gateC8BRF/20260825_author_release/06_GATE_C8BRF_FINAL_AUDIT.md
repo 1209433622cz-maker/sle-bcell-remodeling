@@ -8,13 +8,13 @@
 
 - Scientific estimates changed: No.
 - Main figure assertions: 46/46.
-- Supplementary-figure assertions: 29/29.
+- Supplementary-figure assertions: legacy 29/29 plus verified S8 and S9 contracts.
 - Main figures: 5/5 at 170 mm, vector PDF plus 600-dpi PNG.
 - Manuscript and cover placeholders: 0.
-- WPS pages: 29 manuscript, 13 supplement, 1 cover.
+- WPS pages: 32 manuscript, 17 supplement, 1 cover.
 - Accessibility findings: 0 high, 0 medium, 0 low for all three DOCX files.
-- Portal maps: 11 REQUIRED, 7 OPTIONAL.
-- Deterministic ZIP: 45,995,822 bytes; SHA-256 `C6FA38AEEFDCD8BD077283EFF3E3586DF2A7F2AC534F8E69656A421C2EB1044F`.
+- Portal maps: 11 REQUIRED, 9 OPTIONAL.
+- Deterministic ZIP: 58,515,354 bytes; SHA-256 `63446D18B55A856B016C377A8EF4E7BBDAC1B713C0E56B27E6F0ACE505EE22BB`.
 
 ## Check matrix
 
@@ -33,9 +33,9 @@
 | docx_accessibility | PASS |
 | wps_render_integrity | PASS |
 | supplement_s7_pagination | PASS |
-| frozen_statistical_archive | PASS |
+| augmented_statistical_archive | PASS |
 | no_restricted_large_source_data | PASS |
 
 ## Next stage
 
-Complete field-by-field Genome Medicine portal entry, verify the generated submission PDF, submit, and freeze the receipt and manuscript number.
+Complete an independent adversarial manuscript and all-page WPS review, then update the immutable archive before any journal portal upload.

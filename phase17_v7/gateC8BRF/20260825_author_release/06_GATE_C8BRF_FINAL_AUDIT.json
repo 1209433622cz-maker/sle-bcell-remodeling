@@ -1,8 +1,8 @@
 {
-  "created_at": "2026-08-25",
+  "created_at": "2026-08-27",
   "decision": "PASS_GATE_C8BR_RELEASE_PORTABILITY_AUTHOR_COMPLETION_AND_PORTAL_PREFLIGHT",
   "primary_target": "Genome Medicine",
-  "source_scientific_freeze": "frozen disease-blind analysis",
+  "source_scientific_freeze": "frozen disease-blind analysis with formal end-to-end identity HOLD propagation",
   "scientific_estimates_changed": false,
   "author_completion_pass": true,
   "technical_package_pass": true,
@@ -10,21 +10,21 @@
   "journal_submission_performed": false,
   "doi": "10.5281/zenodo.22086892",
   "page_counts": {
-    "main": 29,
-    "supplement": 13,
+    "main": 32,
+    "supplement": 17,
     "cover": 1
   },
-  "manifest_payload_files": 150,
+  "manifest_payload_files": 185,
   "package_zip": "04_submission/journal_submission.zip",
-  "package_zip_bytes": 45995822,
-  "package_zip_sha256": "C6FA38AEEFDCD8BD077283EFF3E3586DF2A7F2AC534F8E69656A421C2EB1044F",
+  "package_zip_bytes": 58515354,
+  "package_zip_sha256": "63446D18B55A856B016C377A8EF4E7BBDAC1B713C0E56B27E6F0ACE505EE22BB",
   "checks": {
     "zero_placeholders": {
       "pass": true,
       "detail": {
         "manuscript": 0,
         "cover": 0,
-        "supplement_embedding_markers": 7
+        "supplement_embedding_markers": 9
       }
     },
     "author_declarations_complete": {
@@ -72,7 +72,7 @@
         },
         "Figure5_regulatory_evidence.pdf": {
           "width_mm": 170.0,
-          "height_mm": 148.66
+          "height_mm": 163.047
         }
       }
     },
@@ -94,22 +94,22 @@
     },
     "supplementary_assertions": {
       "pass": true,
-      "detail": "29/29"
+      "detail": "legacy 29/29; S8 36 rows; S9 128 rows and 8/8 checks"
     },
     "portal_required_optional_policy": {
       "pass": true,
       "detail": {
         "required_manifest": 11,
         "required_on_disk": 11,
-        "optional_manifest": 7,
-        "optional_on_disk": 7
+        "optional_manifest": 9,
+        "optional_on_disk": 9
       }
     },
     "docx_structure_and_content": {
       "pass": true,
       "detail": {
-        "supplement_inline_figures": 7,
-        "supplement_tables": 8
+        "supplement_inline_figures": 9,
+        "supplement_tables": 9
       }
     },
     "docx_accessibility": {
@@ -140,21 +140,21 @@
       "detail": [
         {
           "document": "main",
-          "pages": 29,
-          "page_pngs": 29,
-          "bytes": 251443
+          "pages": 32,
+          "page_pngs": 32,
+          "bytes": 268956
         },
         {
           "document": "supplement",
-          "pages": 13,
-          "page_pngs": 13,
-          "bytes": 3287260
+          "pages": 17,
+          "page_pngs": 17,
+          "bytes": 4542966
         },
         {
           "document": "cover",
           "pages": 1,
           "page_pngs": 1,
-          "bytes": 73004
+          "bytes": 74730
         }
       ]
     },
@@ -162,19 +162,23 @@
       "pass": true,
       "detail": {
         "title_page": [
-          5
+          7
         ],
         "first_data_row_same_page": true
       }
     },
-    "frozen_statistical_archive": {
+    "augmented_statistical_archive": {
       "pass": true,
-      "detail": "AE903A53A19D7935464C601E2693192910EB4B59F5804D43DCA6ACA965D0B1F5"
+      "detail": {
+        "manifest_rows": 163,
+        "identity_robustness_files": 101,
+        "sha256": "7B6805AE83A8A73C9FC28FB6CCA5F36B7E75B35926C7DEBB2B518DF33E025F86"
+      }
     },
     "no_restricted_large_source_data": {
       "pass": true,
       "detail": []
     }
   },
-  "next_stage": "Complete field-by-field Genome Medicine portal entry, verify the generated submission PDF, submit, and freeze the receipt and manuscript number."
+  "next_stage": "Complete an independent adversarial manuscript and all-page WPS review, then update the immutable archive before any journal portal upload."
 }
