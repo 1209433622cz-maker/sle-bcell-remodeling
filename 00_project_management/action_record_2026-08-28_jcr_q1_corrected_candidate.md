@@ -185,7 +185,9 @@ D87F83BEBE281E748E54DF0736E34B38E1CB0FF83C746C934B43E730373BA150
 
 本轮提交只包含当前源码、相应 figure/source manifest、验证脚本及必要审计记录。大矩阵、候选 ZIP、DOCX/PDF 文档渲染、页面 PNG 和便携性临时解包目录继续留在本地并受 ignore 规则管理。保留旧批准与原包，不做破坏性清理。
 
-GitHub 同步的实际提交、远端检查和提交字节一致性以本目录随后生成的 [git_sync_receipt.json](jcr_q1_refreeze_2026-08-28/git_sync_receipt.json) 为准。本报告本身不将尚未发生的推送写成完成，也不把 Git commit 当成新期刊 release。
+源码提交 **`05e41f40284fc65c6cd18bbecaa2bf507e81b5f8`** 已推送到 GitHub，随后通过 `git ls-remote` 确认远端 `main` 为同一提交。75 条 package source provenance 全部与本地文件一致，其中 66 条对应已提交 Git blob；另外 9 条是受 ignore 管理的 8 份 DOCX/PDF 和原 Regulator Sensitivity ZIP。45 条图件/源数据 manifest 也逐项与提交字节核对，去重后共验证 81 个 Git-bound payload，全部一致。
+
+完整回执见 [git_sync_receipt.json](jcr_q1_refreeze_2026-08-28/git_sync_receipt.json)。回执和本段同步说明在源码提交之后另行作为文档提交，避免把提交哈希写进自身而造成循环。此次只是 GitHub 源码同步，不是新期刊 release 或 DOI 发布。
 
 下一阶段依次为：
 

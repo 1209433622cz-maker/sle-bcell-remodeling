@@ -1,0 +1,64 @@
+{
+  "recorded_at": "2026-08-28T22:05:01+08:00",
+  "status": "PASS_CANDIDATE_SOURCE_COMMIT_SYNC",
+  "repository": "https://github.com/1209433622cz-maker/sle-bcell-remodeling",
+  "branch": "main",
+  "baseline_commit": "c68775982f47a637dbc2bfa1b89df3640984b31d",
+  "candidate_source_commit": "05e41f40284fc65c6cd18bbecaa2bf507e81b5f8",
+  "remote_main_at_source_verification": "05e41f40284fc65c6cd18bbecaa2bf507e81b5f8",
+  "source_push_exit_code": 0,
+  "source_commit_changed_files": 96,
+  "commit_bytes_verification": {
+    "status": "PASS_COMMITTED_CANDIDATE_BYTES",
+    "source_provenance_rows_checked_locally": 75,
+    "source_provenance_rows_bound_to_git_blobs": 66,
+    "local_only_source_rows": 9,
+    "local_only_explanation": "Eight rendered DOCX/PDF documents and the pre-existing Regulator_Sensitivity.zip; all nine still matched the package source manifest",
+    "figure_manifest_rows_bound_to_git_blobs": 45,
+    "distinct_git_bound_payloads": 81,
+    "git_cached_diff_check_exit_code": 0
+  },
+  "candidate_zip": {
+    "path": "04_submission/corrected_candidate.zip",
+    "bytes": 26632739,
+    "sha256": "D87F83BEBE281E748E54DF0736E34B38E1CB0FF83C746C934B43E730373BA150",
+    "payload_files": 82,
+    "tracked_in_git": false
+  },
+  "prior_approved_zip": {
+    "path": "04_submission/author_confirmed_review.zip",
+    "bytes": 26034837,
+    "sha256": "0363C066FB7F8FAD5E867FC820ED7F80C8F3D1A10E0A1CB43B8A7A51FCA92234",
+    "unchanged": true
+  },
+  "verification_execution": {
+    "review_bundle_tests": 33,
+    "pdf_margin_number_tests": 1,
+    "document_builder_tests": 3,
+    "scientific_contract_tests": 9,
+    "unit_tests_total": 46,
+    "unit_tests_failed": 0,
+    "scientific_test_environment": "Existing sle-bcell conda environment",
+    "powershell_scripts_parsed": 33,
+    "powershell_parse_errors": 0,
+    "candidate_semantic_checks_passed": 13,
+    "fresh_figure1_assertions_passed": 9,
+    "document_pages_rendered": 60,
+    "page_images_identical_to_prior": 56,
+    "changed_pages_visually_inspected": [
+      "Cover_Letter/page-1.png",
+      "Manuscript/page-17.png",
+      "Manuscript/page-25.png",
+      "Manuscript/page-27.png"
+    ],
+    "final_figure1_visually_inspected": true,
+    "portable_verification": "PASS with Python -I -S in candidate with spaces directory",
+    "scope": "Presentation, manifest, source/commit integrity and contract regression checks; no new numerical scientific run"
+  },
+  "receipt_scope": "This records the verified source commit. This receipt and the report synchronization note are committed subsequently as documentation only; it does not claim to contain its own commit hash.",
+  "new_release_created": false,
+  "new_doi_issued": false,
+  "submission_authorized": false,
+  "journal_submission_performed": false,
+  "payment_performed": false
+}
