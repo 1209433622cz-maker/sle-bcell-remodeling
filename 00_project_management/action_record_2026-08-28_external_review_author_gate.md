@@ -204,8 +204,15 @@ Communications Biology 为另一重点候选；Genome Medicine 是较高风险�
 Git 暂存差异检查发现来稿 Markdown 原有的行末双空格；这些空格属于来稿，
 本轮没有改动，仅在 `received/` 归档目录豁免空白规则，保持其已记录哈希。
 
-同步状态在本轮收尾核实后补充；不得以准备提交代替已同步的事实。
-无论代码同步是否成功，本轮均不创建 release、tag、Zenodo 新版本或投稿。
+已提交并同步至 GitHub `main`：
+`1ed000c4319cd11ce30920eea407a393ab681c2d`。`git ls-remote` 返回的远端 SHA
+与本地完全一致。进一步从该提交直接读取上述 79 项 Git blob 重新验算，全部通过；
+本地审阅 ZIP 仍为前述 SHA-256。回执保存在
+`external_review_2026-08-28/git_sync_verification.json`，绑定的是实际被验算的
+内容提交，而非随后追加此回执的报告提交。
+
+采用正常快进推送，没有强推、移动旧标签或修改历史提交。本轮不创建 release、
+tag、Zenodo 新版本或投稿；GitHub 已同步不代表科学 HOLD 或作者授权已解除。
 
 ## 10. 下一阶段目标
 
@@ -236,5 +243,6 @@ Git 暂存差异检查发现来稿 Markdown 原有的行末双空格；这些空
 - 包构建回执、守恒核查与换目录测试：同目录 `correction_package_build.json`、
   `post_edit_consistency.json`、`portable_verification.json`。
 - WPS 文档哈希：同目录 `document_pages/document_render_audit.json`。
+- GitHub 同步及 79 项提交内容验算：同目录 `git_sync_verification.json`。
 
 当前材料更容易核查，但仍不等于外部方法结论已认证、作者已经再次批准或期刊已接收。
