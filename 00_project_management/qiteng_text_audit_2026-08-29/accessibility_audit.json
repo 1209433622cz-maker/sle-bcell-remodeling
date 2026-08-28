@@ -1,0 +1,64 @@
+{
+  "file": ".\\00_project_management\\qiteng_text_audit_2026-08-29\\review_candidate\\Manuscript.docx",
+  "counts": {
+    "high": 0,
+    "medium": 0,
+    "low": 6
+  },
+  "findings": [
+    {
+      "severity": "low",
+      "kind": "hyperlink_raw_url",
+      "message": "Hyperlink display text is a raw URL (often less accessible)",
+      "context": {
+        "part": "word/document.xml",
+        "text": "https://orcid.org/0009-0001-0072-5576"
+      }
+    },
+    {
+      "severity": "low",
+      "kind": "hyperlink_raw_url",
+      "message": "Hyperlink display text is a raw URL (often less accessible)",
+      "context": {
+        "part": "word/document.xml",
+        "text": "https://orcid.org/0009-0007-7648-4776"
+      }
+    },
+    {
+      "severity": "low",
+      "kind": "hyperlink_raw_url",
+      "message": "Hyperlink display text is a raw URL (often less accessible)",
+      "context": {
+        "part": "word/document.xml",
+        "text": "https://github.com/1209433622cz-maker/sle-bcell-remodeling"
+      }
+    },
+    {
+      "severity": "low",
+      "kind": "hyperlink_raw_url",
+      "message": "Hyperlink display text is a raw URL (often less accessible)",
+      "context": {
+        "part": "word/document.xml",
+        "text": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE174188"
+      }
+    },
+    {
+      "severity": "low",
+      "kind": "hyperlink_raw_url",
+      "message": "Hyperlink display text is a raw URL (often less accessible)",
+      "context": {
+        "part": "word/document.xml",
+        "text": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE135779"
+      }
+    },
+    {
+      "severity": "low",
+      "kind": "hyperlink_raw_url",
+      "message": "Hyperlink display text is a raw URL (often less accessible)",
+      "context": {
+        "part": "word/document.xml",
+        "text": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE23307"
+      }
+    }
+  ]
+}

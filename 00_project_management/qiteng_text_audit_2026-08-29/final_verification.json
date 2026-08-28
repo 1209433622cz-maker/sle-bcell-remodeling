@@ -1,0 +1,113 @@
+{
+  "audit_date": "2026-08-29",
+  "decision": "TEXT_AUDIT_COMPLETE_EXACT_AUTHOR_SIGNOFF_PENDING",
+  "starting_git_commit": "8fa5262e001197d70b082a318406d67628fbadfb",
+  "scientific_candidate_source_commit": "05e41f40284fc65c6cd18bbecaa2bf507e81b5f8",
+  "evidence_manifest": {
+    "path": "evidence_manifest.csv",
+    "rows": 33,
+    "sha256": "34B21B75F0A12CB1C3567B1D8C1B4F2A391F30F3BAB58E9442814CBC2C2DF51D",
+    "scope": "Received files, exact review outputs, audit inputs and receipts, three audit/test scripts, 15 figure source-data tables, canonical manuscript and local frozen ZIP; not a full workspace inventory"
+  },
+  "received_pdf_discrepancy": {
+    "bytes": 220503,
+    "actual_sha256": "0605370085473800D7B2D4B991FF54619BB1DEEA6BA143A8AAAA2BFCBCD1C315",
+    "sha256_claimed_in_received_action_record": "95121B630498DBB2D8D442816F772DAA8E6616D565ED1F81CFD8B33F635BAD70",
+    "hash_matches_claim": false,
+    "body_text_matches_received_docx_after_stated_normalization": true,
+    "cause": "UNKNOWN; body equality does not explain the binary hash difference"
+  },
+  "exact_review_files": [
+    {
+      "path": "review_candidate/Manuscript.docx",
+      "bytes": 37842,
+      "sha256": "F6DB97C146A6DC41EED1910C0D0E5FCAA03C9A03EACF29EDA2CFB9F3803BBE0B"
+    },
+    {
+      "path": "review_candidate/Manuscript.pdf",
+      "bytes": 253145,
+      "sha256": "DE6F9E1AAFD45995C99507FBC733AAF9FB8ACC1BD9AC6C1E2ED444AED60B7E73"
+    },
+    {
+      "path": "review_candidate/Manuscript.md",
+      "bytes": 63712,
+      "sha256": "D383FF7605144531DF8E6CF1F3DC710561ABB2D88E3B957EAE0DD94ABD8F7A32"
+    }
+  ],
+  "text_checks": {
+    "paragraphs": 169,
+    "paragraphs_changed_from_received_docx": 17,
+    "local_replacements": 20,
+    "numeric_tokens_preserved_in_each_changed_paragraph": true,
+    "references": 32,
+    "reference_identities_unchanged": true,
+    "bibliography_text_unchanged_after_renumbering": true,
+    "first_appearance_contiguous_1_to_32": true,
+    "five_main_figure_legends_unchanged_after_whitespace_and_markup_normalization": true,
+    "figure1c_mapping_agreement_threshold": 0.99,
+    "original_refined_markdown_provided": false,
+    "markdown_origin": "Reconstructed from DOCX; not the original source claimed in the received record",
+    "accessibility": {"high": 0, "medium": 0, "low_raw_urls": 6},
+    "new_review_abstract_whitespace_words": 330
+  },
+  "render_checks": {
+    "received_pdf": {
+      "pages": 18,
+      "normalized_body_equal_to_docx": true,
+      "outside_page_characters": 0,
+      "header_footer_margin_numbers": 36,
+      "fresh_received_docx_visual_spot_check_pages": [1, 18],
+      "full_received_visual_review_claimed": false
+    },
+    "final_wps_pdf": {
+      "pages": 18,
+      "pages_visually_inspected": 18,
+      "normalized_body_equal_to_docx": true,
+      "outside_page_characters": 0,
+      "header_footer_margin_numbers": 0,
+      "body_line_numbers_contiguous": true,
+      "body_line_number_range": [1, 719],
+      "visible_clipping_overlap_missing_glyph_or_reference_overflow_found": false
+    },
+    "secondary_libreoffice_render": {
+      "pages": 18,
+      "pages_visually_inspected": 18,
+      "normalized_body_equal_to_docx": true,
+      "outside_page_characters": 0,
+      "header_footer_margin_numbers": 0,
+      "body_line_numbers_contiguous": true,
+      "body_line_number_range": [1, 720],
+      "visible_clipping_overlap_missing_glyph_or_reference_overflow_found": false,
+      "distributed_as_final_pdf": false
+    },
+    "comparison_normalization": "PDF body crop x=65..page width, y=50..742 pt; NFKC, whitespace and soft-hyphen normalization only; text equality is not binary equality or visual proof"
+  },
+  "frozen_candidate": {
+    "bytes": 26632739,
+    "sha256": "D87F83BEBE281E748E54DF0736E34B38E1CB0FF83C746C934B43E730373BA150",
+    "payload_files_verified": 82,
+    "source_provenance_rows_unchanged": 75,
+    "nested_manifest_rows": [15, 184, 10],
+    "canonical_sources_modified": false,
+    "scientific_data_modified": false,
+    "new_scientific_analyses_or_figures": false,
+    "new_submission_package": false
+  },
+  "tests": {
+    "working_directory": "audit_tools",
+    "command": "python -m unittest test_review_bundle test_target_preparation test_refined_manuscript -v",
+    "unique_tests_passed": 50,
+    "test_review_bundle": 33,
+    "test_target_preparation": 6,
+    "test_refined_manuscript": 11
+  },
+  "approval_and_release": {
+    "author_approval": "PENDING_EXACT_REFINED_FILES",
+    "external_methods_review": "No new named independent reviewer signoff established",
+    "target_journal": null,
+    "official_jcr_q1_evidence_verified_this_round": false,
+    "apc_eligibility_or_payment_authorized_this_round": false,
+    "new_release_or_doi_created": false,
+    "submission_authorized": false
+  }
+}

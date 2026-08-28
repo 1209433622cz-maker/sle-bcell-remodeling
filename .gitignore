@@ -75,6 +75,12 @@ phase17_v7/post_gateC9/20260828_corrected_candidate/figure1_final_redraw/source_
 00_project_management/jcr_q1_refreeze_2026-08-28/figure_renders/
 00_project_management/jcr_q1_refreeze_2026-08-28/contact_*.png
 
+# Manuscript text audit: retain evidence and review documents, not render caches.
+00_project_management/qiteng_text_audit_2026-08-29/render_received/
+00_project_management/qiteng_text_audit_2026-08-29/render_review/
+00_project_management/qiteng_text_audit_2026-08-29/render_wps/
+00_project_management/qiteng_text_audit_2026-08-29/audit/Received_PDF_Body.txt
+
 # Local software-test matrices and generated diagnostics.
 phase17_v7/**/_software_tests/
 phase17_v7/**/_software_test*/

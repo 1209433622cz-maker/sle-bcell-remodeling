@@ -30,10 +30,17 @@ archive is available at [doi:10.5281/zenodo.22086892](https://doi.org/10.5281/ze
 a matching new archive version is required before journal submission; the initial
 snapshot remains historical.
 
-Working title:
+Frozen corrected-candidate title (unchanged):
 
 **Disease-blind single-cell reconstruction separates unstable B-cell state assignments
 from reproducible interferon remodeling in systemic lupus erythematosus**
+
+A separate [refined manuscript review](00_project_management/qiteng_text_audit_2026-08-29/Review_Status.md)
+retains this scientific baseline and proposes `distinguishes` in place of
+`separates`. Its prose audit tightens null-result interpretation, source-label
+ownership of external replication, and the R1/C9R limits. The exact new DOCX/PDF
+await author approval; this review has not replaced the frozen candidate or
+authorized a new release or submission.
 
 The frozen evidence chain is:
 
@@ -92,10 +99,13 @@ The frozen evidence chain is:
 - [JCR evidence and journal decision](00_project_management/jcr_q1_refreeze_2026-08-28/Journal_Decision.md)
 - [Latest target-preparation audit and next actions](00_project_management/action_record_2026-08-29_jcr_q1_target_preparation.md)
 - [Institutional JCR and APC request draft](00_project_management/jcr_q1_target_preparation_2026-08-29/Institutional_Request_Draft.md)
+- [Refined manuscript, exact-file review status and hashes](00_project_management/qiteng_text_audit_2026-08-29/Review_Status.md)
+- [Manuscript text audit and detailed action record](00_project_management/action_record_2026-08-29_qiteng_manuscript_text_audit.md)
 
 Git history and the immutable public release preserve superseded submission
-drafts. The stable filenames above are the only current author-facing entry
-points. The historical `04_submission/journal_submission/` directory is preserved;
+drafts. The canonical source links identify the frozen corrected candidate;
+the separate refined-manuscript link identifies a pending prose review, not a
+second submission package. The historical `04_submission/journal_submission/` directory is preserved;
 Git tracks its reader-facing README, manifests, portal maps and
 11-file REQUIRED upload set, while internal renders and duplicate working assets
 remain ignored. Markdown, scripts and machine-readable analysis outputs remain

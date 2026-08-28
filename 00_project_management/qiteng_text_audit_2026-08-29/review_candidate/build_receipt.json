@@ -1,0 +1,178 @@
+{
+  "created_at": "2026-08-29T01:55:54+08:00",
+  "input": {
+    "name": "SLE_Bcell_Manuscript_QiTeng_Refined_2026-08-29.docx",
+    "bytes": 37657,
+    "sha256": "86EF9D51C7D7B2472A434CE4851F5DAA2231479491FE43112AADFE5CAE719078"
+  },
+  "change_specification": {
+    "name": "editorial_changes.json",
+    "bytes": 10455,
+    "sha256": "019FD8FA932CBEF5D67846402C8CC4556ECB29249D34C4B1641D9B78D9EAE7CC"
+  },
+  "outputs": [
+    {
+      "name": "Manuscript.docx",
+      "bytes": 37842,
+      "sha256": "F6DB97C146A6DC41EED1910C0D0E5FCAA03C9A03EACF29EDA2CFB9F3803BBE0B"
+    },
+    {
+      "name": "Manuscript.md",
+      "bytes": 63712,
+      "sha256": "D383FF7605144531DF8E6CF1F3DC710561ABB2D88E3B957EAE0DD94ABD8F7A32"
+    }
+  ],
+  "paragraphs_changed": 17,
+  "replacements": 20,
+  "paragraph_changes": [
+    {
+      "paragraph": 10,
+      "change_ids": [
+        "TEXT-01"
+      ],
+      "before": "Methods: We reanalysed public single-cell transcriptomic datasets using donor- and cohort-resolved inference. In GSE174188, disease-blind B-lineage reconstruction preceded sample-level composition and raw-count pseudobulk analyses. A frozen-representation identity policy was challenged by 20 end-to-end resampling replicates that recomputed highly variable genes, principal components, Harmony, neighbour graphs and Leiden clusters; observed boundary exchanges were then propagated through the prespecified composition and IFN/ISG models. The IFN/ISG program was evaluated in independent GSE135779 and complemented by prespecified regulatory, response-set and perturbational analyses.",
+      "after": "Methods: We reanalysed public single-cell transcriptomic datasets using donor- and cohort-resolved inference. In GSE174188, disease-blind B-lineage reconstruction preceded sample-level composition and raw-count pseudobulk analyses. A frozen-representation identity policy was challenged by 20 end-to-end resampling replicates that recomputed highly variable genes, principal components, Harmony, neighbour graphs and Leiden clusters; observed boundary exchanges were then propagated through the prespecified composition and IFN/ISG models. The IFN/ISG program was evaluated in a source-label-defined conventional-B analog in independent GSE135779 and complemented by prespecified regulatory, response-set and perturbational analyses."
+    },
+    {
+      "paragraph": 11,
+      "change_ids": [
+        "TEXT-02",
+        "TEXT-03"
+      ],
+      "before": "Results: Among 150,402 GSE174188 B-lineage cells, frozen-representation resampling supported broad conventional-B (B_CONV) and antibody-secreting-cell (B_ASC) compartments but not stable fine-grained naive/memory assignments. End-to-end resampling retained high global concordance yet missed the prespecified B_ASC overlap criterion (median Jaccard 0.930 versus 0.95), restricting the partition to an analysis scaffold. Propagating observed boundary exchanges preserved both the primary B_ASC composition null and the B_CONV IFN/ISG effects. The primary B_ASC estimate was 0.947 (95% confidence interval 0.636-1.410; P=0.787). By contrast, the IFN/ISG program was higher in the primary GSE174188 contrast (effect 0.837; q=2.98 x 10^-6), the donor-nonoverlap internal contrast (effect 1.086; q=3.61 x 10^-4) and independent GSE135779 childhood donors (11 controls and 32 SLE; effect 1.042; q=2.98 x 10^-6). All ten jointly tested IFN genes were positive despite weak genome-wide agreement (Spearman rho=0.026). STAT1/STAT2 evidence remained directionally concordant across ULM, CAMERA and FRY, while broader M5911 depletion attenuated discovery STAT2 and limited claims of overlap-independent regulation.",
+      "after": "Results: Among 150,402 GSE174188 B-lineage cells, frozen-representation resampling supported broad conventional-B (B_CONV) and antibody-secreting-cell (B_ASC) compartments but not stable fine-grained naive/memory assignments. End-to-end resampling retained high global concordance yet missed the prespecified B_ASC overlap criterion (median Jaccard 0.930 versus 0.95), restricting the partition to an analysis scaffold. Propagating observed boundary exchanges preserved both the primary B_ASC composition null and the B_CONV IFN/ISG effects. The primary B_ASC odds ratio was 0.947 (95% confidence interval 0.636-1.410; P=0.787). By contrast, the IFN/ISG program was higher in the primary GSE174188 contrast (effect 0.837; q=2.98 x 10^-6), the donor-nonoverlap internal contrast (effect 1.086; q=3.61 x 10^-4) and independent GSE135779 childhood donors (11 controls and 32 SLE; effect 1.042; q=2.98 x 10^-6). All ten jointly tested IFN genes were positive despite weak genome-wide agreement (Spearman rho=0.026). Corrected source-label-independent mapping failed reference calibration; no corrected external disease effect was estimated. STAT1/STAT2 evidence remained directionally concordant across ULM, CAMERA and FRY, while broader M5911 depletion attenuated discovery STAT2 and limited claims of overlap-independent regulation."
+    },
+    {
+      "paragraph": 12,
+      "change_ids": [
+        "TEXT-04"
+      ],
+      "before": "Conclusions: The reproducible signal in these data is a process-level IFN remodeling program within a disease-blind conventional-B analysis scaffold, not a universally stable B-cell taxonomy. Regulatory evidence is convergent but observational and does not establish a causal regulator or unique upstream stimulus.",
+      "after": "Conclusions: These cohorts support a process-level IFN association through disease-blind discovery and source-label-defined external replication, while the tested hard state assignments retain stability and transfer limits. Regulatory evidence is convergent but observational and does not establish a causal regulator or unique upstream stimulus."
+    },
+    {
+      "paragraph": 61,
+      "change_ids": [
+        "TEXT-05"
+      ],
+      "before": "Disease-blind reconstruction supports an analysis scaffold, not a reproducible taxonomy",
+      "after": "Disease-blind reconstruction supports a scaffold with state-specific stability limits"
+    },
+    {
+      "paragraph": 67,
+      "change_ids": [
+        "TEXT-06"
+      ],
+      "before": "B_ASC abundance does not explain the primary disease contrast",
+      "after": "The primary B_ASC abundance contrast lacks statistical support"
+    },
+    {
+      "paragraph": 68,
+      "change_ids": [
+        "TEXT-07",
+        "TEXT-08"
+      ],
+      "before": "After the broad scaffold was fixed, outcomes were joined and composition was analysed at the sample-cohort level, with at least 50 eligible B cells per stratum and no cell-level disease test. In the primary processing-cohort-4 comparison, B_ASC relative abundance was not higher in SLE: the conditional odds ratio was 0.947 (95% confidence interval 0.636-1.410; P=0.787), with adjusted fractions of 1.61% in controls and 1.52% in source-defined managed SLE. The HC1 sandwich analysis was concordant (95% confidence interval 0.651-1.376; P=0.774), and none of the 90 leave-one-sample-out fits generated evidence that reversed the primary interpretation.",
+      "after": "After the broad scaffold was fixed, outcomes were joined and composition was analysed at the sample-cohort level, with at least 50 eligible B cells per stratum and no cell-level disease test. In the primary processing-cohort-4 comparison, B_ASC relative abundance showed no statistically supported difference between source-defined managed SLE and controls: the conditional odds ratio was 0.947 (95% confidence interval 0.636-1.410; P=0.787), with adjusted fractions of 1.61% in controls and 1.52% in source-defined managed SLE. The interval does not establish equivalent abundance or exclude an increase. The HC1 sandwich analysis was concordant (95% confidence interval 0.651-1.376; P=0.774), and none of the 90 leave-one-sample-out fits generated evidence that reversed the primary interpretation."
+    },
+    {
+      "paragraph": 70,
+      "change_ids": [
+        "TEXT-09"
+      ],
+      "before": "A prespecified IFN/ISG program dominates within-B_CONV transcription",
+      "after": "IFN/ISG is the most consistently supported of the four prespecified B_CONV programs"
+    },
+    {
+      "paragraph": 75,
+      "change_ids": [
+        "TEXT-10"
+      ],
+      "before": "Independent GSE135779 replicates the IFN program, not a transcriptome-wide state",
+      "after": "Independent GSE135779 replicates IFN/ISG despite low genome-wide concordance"
+    },
+    {
+      "paragraph": 77,
+      "change_ids": [
+        "TEXT-11"
+      ],
+      "before": "The childhood analysis included 43 donors (11 controls and 32 SLE) with at least 50 mapped cells per donor. The frozen IFN/ISG program was higher in SLE (effect 1.042, 95% confidence interval 0.681-1.402; q=2.98 x 10^-6). The combined childhood-adult analysis included 54 donors (16 controls and 38 SLE) and produced a similar estimate (effect 0.996, 95% confidence interval 0.655-1.337; q=1.31 x 10^-6). Minimum-support sensitivities remained positive at 20 cells (effect 0.965; q=6.75 x 10^-7) and 100 cells (effect 0.939; q=4.06 x 10^-6).",
+      "after": "The childhood analysis included 43 donors (11 controls and 32 SLE) with at least 50 mapped cells per donor. The frozen IFN/ISG program was higher in SLE (effect 1.042, 95% confidence interval 0.681-1.402; q=2.98 x 10^-6). The combined childhood-adult analysis included 54 donors (16 controls and 38 SLE) and produced a similar estimate (effect 0.996, 95% confidence interval 0.655-1.337; q=1.31 x 10^-6). For the combined analysis, minimum-support sensitivities remained positive at 20 cells (effect 0.965; q=6.75 x 10^-7) and 100 cells (effect 0.939; q=4.06 x 10^-6)."
+    },
+    {
+      "paragraph": 80,
+      "change_ids": [
+        "TEXT-12",
+        "TEXT-13"
+      ],
+      "before": "This agreement did not extend to the complete transcriptome. Among 4,410 shared tested genes, the cross-dataset effect correlation was only Spearman rho=0.026. The external evidence therefore supports replication of a prespecified IFN program, not a globally shared SLE transcriptomic state. Consistent with that distinction, the GSE135779 atypical/low-naive score was positive (effect 1.191; q=5.10 x 10^-4) although the corresponding GSE174188 result was null; it is an external-only observation rather than a replication result. Conversely, the GSE174188 naive-to-memory and APC/HLA signals were null externally.",
+      "after": "Gene-level concordance was weak across the shared tested gene set. Among 4,410 shared tested genes, the cross-dataset effect correlation was only Spearman rho=0.026. The external evidence therefore supports replication of a prespecified IFN program but does not establish a globally shared SLE transcriptomic state. Consistent with that distinction, the GSE135779 atypical/low-naive score was positive (effect 1.191; q=5.10 x 10^-4) although the corresponding GSE174188 result was null; it is an external-only observation rather than a replication result. Conversely, the GSE174188 naive-to-memory and APC/HLA signals were null externally."
+    },
+    {
+      "paragraph": 83,
+      "change_ids": [
+        "TEXT-14"
+      ],
+      "before": "Regulatory and response evidence converges on, but does not establish, IFN-centred control",
+      "after": "Convergent regulatory and response evidence remains observational"
+    },
+    {
+      "paragraph": 91,
+      "change_ids": [
+        "TEXT-15"
+      ],
+      "before": "The central finding of this study is not a new B-cell taxonomy but a difference in reproducibility across biological layers. Fine-grained B-cell state assignments did not satisfy the prespecified stability criteria, and even the broad B_CONV/B_ASC partition failed one state-specific end-to-end criterion because B_ASC membership was less reproducible than the global partition metrics suggested. Retaining that failure changed the interpretation of the study: B_CONV/B_ASC is used as an analysis scaffold, not as a transferable taxonomy. Within that bounded scaffold, assignment uncertainty did not alter the primary B_ASC composition null or the positive B_CONV IFN/ISG effects. The result that survives the full inferential sequence is therefore process-level interferon remodeling rather than a disease-defining cell-state label or generalized B_ASC expansion.",
+      "after": "The central finding of this study is not a new B-cell taxonomy but a difference in reproducibility across biological layers. Fine-grained B-cell state assignments did not satisfy the prespecified stability criteria, and even the broad B_CONV/B_ASC partition failed one state-specific end-to-end criterion because B_ASC membership was less reproducible than the global partition metrics suggested. Retaining that failure changed the interpretation of the study: B_CONV/B_ASC is used as an analysis scaffold, not as a transferable taxonomy. Within that bounded scaffold, assignment uncertainty did not alter the primary B_ASC composition null or the positive B_CONV IFN/ISG effects. The supported result is a process-level interferon association within these inferential limits; neither a disease-defining cell-state label nor generalized B_ASC expansion was established."
+    },
+    {
+      "paragraph": 93,
+      "change_ids": [
+        "TEXT-16"
+      ],
+      "before": "The independent GSE135779 analysis strengthens that process-level interpretation while also defining its limits. The childhood cohort reproduced the frozen IFN/ISG program, donor-deletion and source-label-omission analyses retained the direction, and all ten jointly tested IFN genes were positive in both primary datasets. Yet the genome-wide effect correlation was only rho=0.026. These observations are not contradictory: a transcriptome-wide correlation asks whether thousands of gene effects agree across cohorts that differ in age structure, source annotation, processing, covariates and gene universe, whereas the program analysis asks whether a prespecified coherent biological response retains direction and statistical support. The data support the latter and reject the stronger claim of a globally shared disease transcriptome. Importantly, a corrected attempt to reconstruct the external mapping without source labels failed its prespecified B_ASC calibration criterion, and no corrected disease outcome was estimated. Independent replication therefore remains tied to the prespecified source-label-defined broad B-cell analog rather than demonstrating de novo taxonomy transfer.",
+      "after": "The independent GSE135779 analysis strengthens that process-level interpretation while also defining its limits. The childhood cohort reproduced the frozen IFN/ISG program, donor-deletion and source-label-omission analyses retained the direction, and all ten jointly tested IFN genes were positive in both primary datasets. Yet the genome-wide effect correlation was only rho=0.026. These observations are not contradictory: a transcriptome-wide correlation asks whether thousands of gene effects agree across cohorts that differ in age structure, source annotation, processing, covariates and gene universe, whereas the program analysis asks whether a prespecified coherent biological response retains direction and statistical support. The data support the latter but do not establish the stronger claim of a globally shared disease transcriptome. Importantly, a corrected attempt to reconstruct the external mapping without source labels failed its prespecified B_ASC calibration criterion, and no corrected disease outcome was estimated. Independent replication therefore remains tied to the prespecified source-label-defined broad B-cell analog rather than demonstrating de novo taxonomy transfer."
+    },
+    {
+      "paragraph": 95,
+      "change_ids": [
+        "TEXT-17"
+      ],
+      "before": "The analysis also narrows several tempting but unsupported narratives. The naive-to-memory and APC/HLA programs provide internal context but do not independently reproduce in GSE135779. The external atypical/low-naive signal cannot be called replication because the corresponding GSE174188 result was null. High global concordance of the broad B_CONV scaffold does not establish a discrete IFN-high subtype, and the primary composition null should not be displaced by the secondary flare contrast. These negative and non-generalizing results are consequential: they prevent a heterogeneous set of secondary signals from being promoted to co-equal disease features and keep the manuscript centred on the one program that survives the full validation hierarchy.",
+      "after": "The analysis also narrows several tempting but unsupported narratives. The naive-to-memory and APC/HLA programs provide internal context but do not independently reproduce in GSE135779. The external atypical/low-naive signal cannot be called replication because the corresponding GSE174188 result was null. High global concordance of the broad B_CONV scaffold does not establish a discrete IFN-high subtype, and the primary composition null should not be displaced by the secondary flare contrast. These negative and non-generalizing results are consequential: they prevent a heterogeneous set of secondary signals from being promoted to co-equal disease features and keep the manuscript centred on the program supported in the prespecified discovery, internal and source-label-defined external analyses."
+    },
+    {
+      "paragraph": 98,
+      "change_ids": [
+        "TEXT-18"
+      ],
+      "before": "Taken together, the study supports a restrained model of SLE B-cell remodeling: hard state assignments are less reproducible than a coherent within-compartment interferon program. By treating failed stability and calibration criteria as evidence boundaries rather than results to be tuned away, the analysis isolates a process-level signal that is replicated across datasets while keeping mechanistic and clinical claims within the limits of the available data.",
+      "after": "Taken together, the study supports a restrained model of SLE B-cell remodeling: the prespecified IFN/ISG association was reproduced across these cohorts, whereas the tested hard state policies had defined stability and transfer limits. These are distinct assessments, not a common-scale comparison of reproducibility. Retaining failed stability and calibration criteria limits the scope of the replicated process-level association and keeps mechanistic and clinical claims within the available evidence."
+    },
+    {
+      "paragraph": 100,
+      "change_ids": [
+        "TEXT-19"
+      ],
+      "before": "SLE is associated with a reproducible IFN/ISG transcriptional shift within a disease-blind conventional-B analysis scaffold, whereas hard B-cell state assignments show explicit reproducibility limits. Independent cohort validation, identity-uncertainty propagation and qualified regulatory and response analyses support this process-level interpretation without establishing a universal taxonomy, generalized B_ASC expansion, causal regulator or unique upstream stimulus. The principal advance is therefore inferential as well as biological: the remodeling layer that remains reproducible is a continuous interferon program rather than a fixed disease-defined cell state.",
+      "after": "SLE is associated with an IFN/ISG transcriptional shift supported in disease-blind GSE174188 B_CONV analyses and independently replicated in a source-label-defined GSE135779 conventional-B analog. The tested state assignments retained stability limits, and corrected source-label-independent mapping failed calibration without estimating a disease effect. Same-data uncertainty propagation and qualified regulatory and response analyses support this bounded process-level interpretation; they do not establish a universal taxonomy, generalized B_ASC expansion, causal regulator, unique upstream stimulus or clinical utility."
+    },
+    {
+      "paragraph": 115,
+      "change_ids": [
+        "TEXT-20"
+      ],
+      "before": "ZC: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Software, Visualization, Writing - original draft. TQ: Conceptualization, Methodology, Project administration, Validation, Writing - review and editing. Both authors approved the preceding reviewed snapshot. Final approval of this corrected candidate is pending.",
+      "after": "ZC: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Software, Visualization, Writing - original draft. TQ: Conceptualization, Methodology, Project administration, Validation, Writing - review and editing. Both authors approved the preceding reviewed snapshot. Final approval of these exact refined manuscript files is pending."
+    }
+  ],
+  "header_footer_line_number_suppression": 2,
+  "reference_count": 32,
+  "reference_order_preserved": true,
+  "figure_legends_preserved": true,
+  "numeric_tokens_preserved_in_each_changed_paragraph": true,
+  "canonical_sources_modified": false,
+  "scientific_reanalysis": false,
+  "author_approval": "PENDING_EXACT_REFINED_FILES",
+  "submission_authorized": false,
+  "scope": "Standalone manuscript review candidate; not a submission package or a replacement of corrected_candidate.zip"
+}

@@ -1,0 +1,87 @@
+{
+  "created_at": "2026-08-29T02:02:32+08:00",
+  "status": "PASS_UNCHANGED_CANDIDATE_TARGET_PREPARATION_AUDIT",
+  "candidate": {
+    "path": "04_submission/corrected_candidate.zip",
+    "bytes": 26632739,
+    "sha256": "D87F83BEBE281E748E54DF0736E34B38E1CB0FF83C746C934B43E730373BA150"
+  },
+  "verification": {
+    "status": "PASS_PORTABLE_TECHNICAL_VERIFICATION",
+    "payload_files": 82,
+    "nested_manifest_rows": {
+      "Figure_Source_Data.zip": 15,
+      "Full_Statistical_Results.zip": 184,
+      "Regulator_Sensitivity.zip": 10
+    },
+    "document_pages": 60,
+    "submission_authorized": false,
+    "external_methods_review_status": "FEEDBACK_RECEIVED_CLOSURE_PENDING",
+    "author_reapproval": "PENDING_CORRECTED_CANDIDATE",
+    "confirmed_scope_payloads": 0,
+    "postapproval_presentation_issue": {
+      "id": "F1C_THRESHOLD_LABEL",
+      "status": "INTEGRATED_CORRECTED_CANDIDATE_PENDING_APPROVAL",
+      "scientific_values_changed": false,
+      "record": "Figure_1_Legend_Correction.md"
+    },
+    "scope": "Sizes, hashes, complete manifests, DOCX structure and recorded review boundaries; not a numerical rerun or independent scientific review."
+  },
+  "source_provenance_rows_unchanged": 75,
+  "current_manuscript_words": {
+    "Title": 16,
+    "Abstract": 309,
+    "Background": 425,
+    "Methods": 1981,
+    "Results": 1849,
+    "Discussion": 891
+  },
+  "unapplied_format_draft_words": {
+    "Candidate Title": 13,
+    "Candidate Abstract": 117
+  },
+  "word_count_method": "Whitespace tokens, excluding Markdown headings and leading bold structured-abstract labels; hyphenated tokens count once. This is not the journal portal word counter.",
+  "calibration_source_files": [
+    {
+      "path": "phase17_v7/gateC9R/20260828_normalization_correction/07_MAPPER_CONFIDENCE_CALIBRATION.csv",
+      "bytes": 7594,
+      "sha256": "753BC9ED7A240BCA757982A9BAEA41079359EE6DEA646527E5FC4437D0B9B15C"
+    },
+    {
+      "path": "phase17_v7/gateC9R/20260828_normalization_correction/15_GATE_C9A_PREFREEZE_DECISION.json",
+      "bytes": 2376,
+      "sha256": "4D4624B1670ABEF25DD6D9D69AC2DB445AC4E453F4F3CAB07BDBEADE5A85DF5C"
+    }
+  ],
+  "calibration_candidates": [
+    {
+      "mapper": "elastic_net",
+      "candidates": 26,
+      "eligible_candidates": 0,
+      "selected_threshold": 0.95,
+      "selected_coverage": 0.941958041958042,
+      "selected_B_CONV_precision": 0.9964495087110891,
+      "selected_B_ASC_precision": 0.8852097130242825,
+      "selected_eligible": false,
+      "diagnostic_fallback_only": true
+    },
+    {
+      "mapper": "nearest_centroid",
+      "candidates": 46,
+      "eligible_candidates": 16,
+      "selected_threshold": 0.11776697933673859,
+      "selected_coverage": 0.95,
+      "selected_B_CONV_precision": 0.9923743779097769,
+      "selected_B_ASC_precision": 1.0,
+      "selected_eligible": true,
+      "diagnostic_fallback_only": false
+    }
+  ],
+  "s10_decision": "RETAIN_CURRENT_FIGURE; two-axis frontier alone omits B_CONV precision and the separate primary-mapper requirement",
+  "new_numerical_analysis": false,
+  "new_document_or_figure_render": false,
+  "target_journal": null,
+  "q1_verified": false,
+  "submission_authorized": false,
+  "scope": "Existing bytes, manuscript length and frozen calibration-table interpretation, not independent scientific review or JCR evidence verification"
+}

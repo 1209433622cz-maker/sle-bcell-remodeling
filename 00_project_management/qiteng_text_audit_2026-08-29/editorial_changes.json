@@ -1,0 +1,154 @@
+{
+  "input_sha256": "86EF9D51C7D7B2472A434CE4851F5DAA2231479491FE43112AADFE5CAE719078",
+  "scope": "Bounded claim calibration and header/footer line-number repair; no new analyses, changed estimates, citations or figure legends",
+  "author_approval": "PENDING_EXACT_REFINED_FILES",
+  "changes": [
+    {
+      "id": "TEXT-01",
+      "paragraph": 10,
+      "old": "The IFN/ISG program was evaluated in independent GSE135779 and complemented",
+      "new": "The IFN/ISG program was evaluated in a source-label-defined conventional-B analog in independent GSE135779 and complemented",
+      "reason": "State the ownership of external identity selection in the abstract."
+    },
+    {
+      "id": "TEXT-02",
+      "paragraph": 11,
+      "old": "The primary B_ASC estimate was 0.947",
+      "new": "The primary B_ASC odds ratio was 0.947",
+      "reason": "Name the estimand instead of leaving an unlabeled numerical estimate."
+    },
+    {
+      "id": "TEXT-03",
+      "paragraph": 11,
+      "old": "STAT1/STAT2 evidence remained directionally concordant",
+      "new": "Corrected source-label-independent mapping failed reference calibration; no corrected external disease effect was estimated. STAT1/STAT2 evidence remained directionally concordant",
+      "reason": "Carry the decision-changing C9R boundary into the abstract without adding an outcome."
+    },
+    {
+      "id": "TEXT-04",
+      "paragraph": 12,
+      "old": "Conclusions: The reproducible signal in these data is a process-level IFN remodeling program within a disease-blind conventional-B analysis scaffold, not a universally stable B-cell taxonomy. Regulatory evidence is convergent but observational and does not establish a causal regulator or unique upstream stimulus.",
+      "new": "Conclusions: These cohorts support a process-level IFN association through disease-blind discovery and source-label-defined external replication, while the tested hard state assignments retain stability and transfer limits. Regulatory evidence is convergent but observational and does not establish a causal regulator or unique upstream stimulus.",
+      "reason": "Do not extend the discovery identity method to the external cohort or imply universal state instability."
+    },
+    {
+      "id": "TEXT-05",
+      "paragraph": 61,
+      "old": "Disease-blind reconstruction supports an analysis scaffold, not a reproducible taxonomy",
+      "new": "Disease-blind reconstruction supports a scaffold with state-specific stability limits",
+      "reason": "Localize the end-to-end failure to its state-specific criterion."
+    },
+    {
+      "id": "TEXT-06",
+      "paragraph": 67,
+      "old": "B_ASC abundance does not explain the primary disease contrast",
+      "new": "The primary B_ASC abundance contrast lacks statistical support",
+      "reason": "A nonsignificant abundance test is not a mediation or exclusion test."
+    },
+    {
+      "id": "TEXT-07",
+      "paragraph": 68,
+      "old": "B_ASC relative abundance was not higher in SLE:",
+      "new": "B_ASC relative abundance showed no statistically supported difference between source-defined managed SLE and controls:",
+      "reason": "Avoid asserting absence of an increase from a two-sided null result."
+    },
+    {
+      "id": "TEXT-08",
+      "paragraph": 68,
+      "old": "The HC1 sandwich analysis was concordant",
+      "new": "The interval does not establish equivalent abundance or exclude an increase. The HC1 sandwich analysis was concordant",
+      "reason": "The reported confidence interval spans potentially material increases as well as decreases."
+    },
+    {
+      "id": "TEXT-09",
+      "paragraph": 70,
+      "old": "A prespecified IFN/ISG program dominates within-B_CONV transcription",
+      "new": "IFN/ISG is the most consistently supported of the four prespecified B_CONV programs",
+      "reason": "No variance decomposition or global dominance test was performed."
+    },
+    {
+      "id": "TEXT-10",
+      "paragraph": 75,
+      "old": "Independent GSE135779 replicates the IFN program, not a transcriptome-wide state",
+      "new": "Independent GSE135779 replicates IFN/ISG despite low genome-wide concordance",
+      "reason": "Report observed low concordance without treating it as proof of absence of all shared biology."
+    },
+    {
+      "id": "TEXT-11",
+      "paragraph": 77,
+      "old": "Minimum-support sensitivities remained positive at 20 cells",
+      "new": "For the combined analysis, minimum-support sensitivities remained positive at 20 cells",
+      "reason": "The 0.965 and 0.939 estimates belong to combined_min20 and combined_min100, not childhood-only analyses."
+    },
+    {
+      "id": "TEXT-12",
+      "paragraph": 80,
+      "old": "This agreement did not extend to the complete transcriptome.",
+      "new": "Gene-level concordance was weak across the shared tested gene set.",
+      "reason": "Only the shared filtered genes were compared; the complete transcriptome was not tested."
+    },
+    {
+      "id": "TEXT-13",
+      "paragraph": 80,
+      "old": "The external evidence therefore supports replication of a prespecified IFN program, not a globally shared SLE transcriptomic state.",
+      "new": "The external evidence therefore supports replication of a prespecified IFN program but does not establish a globally shared SLE transcriptomic state.",
+      "reason": "Bound the unsupported stronger claim without asserting its falsity."
+    },
+    {
+      "id": "TEXT-14",
+      "paragraph": 83,
+      "old": "Regulatory and response evidence converges on, but does not establish, IFN-centred control",
+      "new": "Convergent regulatory and response evidence remains observational",
+      "reason": "Avoid using causal control as the heading's organizing claim."
+    },
+    {
+      "id": "TEXT-15",
+      "paragraph": 91,
+      "old": "The result that survives the full inferential sequence is therefore process-level interferon remodeling rather than a disease-defining cell-state label or generalized B_ASC expansion.",
+      "new": "The supported result is a process-level interferon association within these inferential limits; neither a disease-defining cell-state label nor generalized B_ASC expansion was established.",
+      "reason": "The evidence chain includes failed criteria and cannot be described as fully passed."
+    },
+    {
+      "id": "TEXT-16",
+      "paragraph": 93,
+      "old": "The data support the latter and reject the stronger claim of a globally shared disease transcriptome.",
+      "new": "The data support the latter but do not establish the stronger claim of a globally shared disease transcriptome.",
+      "reason": "Low observed correlation is not an equivalence or rejection test for every shared transcriptomic process."
+    },
+    {
+      "id": "TEXT-17",
+      "paragraph": 95,
+      "old": "the one program that survives the full validation hierarchy",
+      "new": "the program supported in the prespecified discovery, internal and source-label-defined external analyses",
+      "reason": "Do not imply that corrected source-label-independent validation succeeded."
+    },
+    {
+      "id": "TEXT-18",
+      "paragraph": 98,
+      "old": "Taken together, the study supports a restrained model of SLE B-cell remodeling: hard state assignments are less reproducible than a coherent within-compartment interferon program. By treating failed stability and calibration criteria as evidence boundaries rather than results to be tuned away, the analysis isolates a process-level signal that is replicated across datasets while keeping mechanistic and clinical claims within the limits of the available data.",
+      "new": "Taken together, the study supports a restrained model of SLE B-cell remodeling: the prespecified IFN/ISG association was reproduced across these cohorts, whereas the tested hard state policies had defined stability and transfer limits. These are distinct assessments, not a common-scale comparison of reproducibility. Retaining failed stability and calibration criteria limits the scope of the replicated process-level association and keeps mechanistic and clinical claims within the available evidence.",
+      "reason": "Jaccard stability and program-association replication are different estimands, not interchangeable reproducibility scores."
+    },
+    {
+      "id": "TEXT-19",
+      "paragraph": 100,
+      "old": "SLE is associated with a reproducible IFN/ISG transcriptional shift within a disease-blind conventional-B analysis scaffold, whereas hard B-cell state assignments show explicit reproducibility limits. Independent cohort validation, identity-uncertainty propagation and qualified regulatory and response analyses support this process-level interpretation without establishing a universal taxonomy, generalized B_ASC expansion, causal regulator or unique upstream stimulus. The principal advance is therefore inferential as well as biological: the remodeling layer that remains reproducible is a continuous interferon program rather than a fixed disease-defined cell state.",
+      "new": "SLE is associated with an IFN/ISG transcriptional shift supported in disease-blind GSE174188 B_CONV analyses and independently replicated in a source-label-defined GSE135779 conventional-B analog. The tested state assignments retained stability limits, and corrected source-label-independent mapping failed calibration without estimating a disease effect. Same-data uncertainty propagation and qualified regulatory and response analyses support this bounded process-level interpretation; they do not establish a universal taxonomy, generalized B_ASC expansion, causal regulator, unique upstream stimulus or clinical utility.",
+      "reason": "Specify discovery versus external identity ownership and preserve both negative boundaries in the final claim."
+    },
+    {
+      "id": "TEXT-20",
+      "paragraph": 115,
+      "old": "Final approval of this corrected candidate is pending.",
+      "new": "Final approval of these exact refined manuscript files is pending.",
+      "reason": "Earlier author approval does not automatically cover the new manuscript files."
+    }
+  ],
+  "format_repairs": [
+    {
+      "id": "LAYOUT-01",
+      "change": "Suppress line numbering in header and footer paragraphs only",
+      "reason": "The supplied document and fresh LibreOffice render show a second marginal counter in headers and footers; keep the continuous body line numbers and Page field."
+    }
+  ]
+}
