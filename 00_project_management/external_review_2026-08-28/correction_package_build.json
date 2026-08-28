@@ -1,0 +1,19 @@
+{
+  "status": "PASS_PORTABLE_TECHNICAL_VERIFICATION",
+  "payload_files": 72,
+  "nested_manifest_rows": {
+    "Figure_Source_Data.zip": 15,
+    "Full_Statistical_Results.zip": 184,
+    "Regulator_Sensitivity.zip": 10
+  },
+  "document_pages": 60,
+  "submission_authorized": false,
+  "external_methods_review_status": "FEEDBACK_RECEIVED_CLOSURE_PENDING",
+  "scope": "Sizes, hashes, complete manifests, DOCX structure and recorded review boundaries; not a numerical rerun or independent scientific review.",
+  "bundle": "04_submission/author_review",
+  "zip_bytes": 26022917,
+  "zip_sha256": "EA046B266681940AD551851354726907B8ABD14E948DCD28025100061283791F",
+  "deterministic_double_build": true,
+  "historical_statistical_payloads_unchanged": 163,
+  "source_manifests_verified": true
+}

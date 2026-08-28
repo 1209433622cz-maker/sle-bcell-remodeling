@@ -17,9 +17,12 @@ Do not reuse it as metadata for a new release without reconciliation.
 
 ## Generated package
 
-`correction_review/` and `correction_review.zip` are the current locally generated,
+`author_review/` and `author_review.zip` are the current locally generated,
 journal-neutral author-review bundle. Their `STATUS.json` explicitly prohibits
 submission. `PORTAL_FILES.csv` lists draft roles, not permission to upload.
+The `governance/` directory contains the current unchecked author form, the
+current-only checklist and the external methods-review dossier. The previous
+`correction_review/` and ZIP are preserved review snapshots, not current sources.
 
 `journal_submission/` and `journal_submission.zip` remain historical snapshots.
 Do not mix their portal files with the revised documents or overwrite them.
@@ -30,6 +33,7 @@ Build a new review bundle with `audit_tools/build_correction_review.ps1` using a
 empty output directory. Verify an existing bundle with its bundled
 `verify_review_bundle.py`; the verifier needs only Python's standard library.
 Verification is not a fresh numerical rerun, publication approval or a new DOI.
+Use each historical ZIP's own bundled verifier for its original schema.
 
 Superseded submission drafts remain recoverable from Git history and the
 immutable public release; they are not retained as competing files on `main`.

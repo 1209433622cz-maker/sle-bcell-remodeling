@@ -8,7 +8,7 @@ from pathlib import Path
 import zipfile
 
 from docx_a11y_audit import audit as a11y_audit
-from verify_review_bundle import archive_entries, csv_records, safe_name, sha256, verify_bundle, verify_entries
+from verify_review_bundle import archive_entries, csv_records, safe_name, sha256, verify_bundle, verify_entries, verify_review_governance
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -183,6 +183,11 @@ def build(args):
     for name in ("REPRODUCIBILITY.md","LICENSE","LICENSE_CONTENT_CC_BY_4.0.md","LICENSE_SCOPE.md"):
         add(ROOT/name,"reproducibility/"+name)
     add(ROOT/"Data/README.md","reproducibility/DATA_RETRIEVAL.md")
+    for name in ("Author_Confirmation.md", "Reporting_Checklist.md"):
+        add(ROOT/"04_submission"/name, "governance/"+name)
+    for name in ("External_Methods_Review.md", "review_gate.json"):
+        add(audit_dir/name, "governance/"+name)
+    governance = verify_review_governance(payloads)
     add(audit_dir/"document_pages/document_render_audit.json","quality_control/document_render_audit.json")
     add(document_build,"quality_control/document_build.json")
     accessibility = []
@@ -204,6 +209,7 @@ def build(args):
     payloads["PORTAL_FILES.csv"] = csv_bytes(portal)
     payloads["STATUS.json"] = (json.dumps({
         "review_only":True,"submission_authorized":False,"author_reapproval":"PENDING",
+        "external_methods_review_status":governance["external_methods_review_status"],
         "target_journal":None,"matching_archive_doi":None,"initial_archive_doi":"10.5281/zenodo.22086892",
         "corrected_disease_outcomes_estimated":False,"calibration_status":decision["decision"],
         "identity_status":"HOLD_FULL_PIPELINE_TWO_COMPARTMENT_REPRODUCIBILITY",
@@ -219,6 +225,10 @@ def build(args):
         "figures, fifteen figure source tables, full statistical results and compact "
         "correction provenance. PORTAL_FILES.csv contains draft roles, not upload "
         "authorization. Filenames are journal-neutral.\n\n"
+        "governance/ contains a fresh unchecked author form, a current-only checklist "
+        "and an external methods-review dossier. Supplied feedback is recorded, but "
+        "reviewer identity, methodological closure and renewed author approval are "
+        "not authenticated or assumed.\n\n"
         "Run `python -I -S verify_review_bundle.py --bundle .` after extraction. "
         "A passing result verifies technical integrity and boundaries, not scientific "
         "validity, author approval, a new DOI, or journal submission. The verifier "

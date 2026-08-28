@@ -5,6 +5,7 @@ import csv
 import hashlib
 import io
 import json
+import re
 from pathlib import Path, PurePosixPath
 import xml.etree.ElementTree as ET
 import zipfile
@@ -67,6 +68,36 @@ def require_review_status(status):
         raise ValueError("No matching DOI or renewed author approval has been recorded")
 
 
+def verify_review_governance(entries):
+    names = {"Author_Confirmation.md", "Reporting_Checklist.md", "External_Methods_Review.md", "review_gate.json"}
+    if not all("governance/" + name in entries for name in names):
+        raise ValueError("Current review governance records are incomplete")
+    gate = json.loads(entries["governance/review_gate.json"])
+    if gate.get("gate") != "EXTERNAL_METHODS_REVIEW_AND_AUTHOR_REAPPROVAL_GATE":
+        raise ValueError("Unexpected review gate")
+    if (gate.get("external_feedback_received") is not True
+            or gate.get("external_methods_review_status") != "FEEDBACK_RECEIVED_CLOSURE_PENDING"
+            or gate.get("reviewer_identity") is not None
+            or gate.get("reviewer_independence_confirmed") is not False
+            or gate.get("external_methods_review_decision") is not None):
+        raise ValueError("Feedback cannot be promoted to external methods approval")
+    authors = gate.get("authors", [])
+    if (len(authors) != 2 or {row.get("name") for row in authors} != {"Zhi Chen", "Teng Qi"}
+            or any(row.get("decision") != "PENDING" or row.get("date") is not None
+                   or row.get("evidence") is not None for row in authors)):
+        raise ValueError("Current author reapproval must remain pending")
+    if (gate.get("submission_authorized") is not False or gate.get("target_journal") is not None
+            or gate.get("matching_archive_doi") is not None):
+        raise ValueError("Review governance cannot authorize a release or submission")
+    author_text = entries["governance/Author_Confirmation.md"].decode("utf-8-sig")
+    if re.search(r"(?im)^\s*[-*]\s+\[x\]", author_text):
+        raise ValueError("Current author form contains checked approval boxes")
+    checklist = entries["governance/Reporting_Checklist.md"].decode("utf-8-sig")
+    if "Earlier package record" in checklist or "46/46" in checklist:
+        raise ValueError("Historical acceptance checks leaked into the current checklist")
+    return gate
+
+
 def verify_document_provenance(entries, records):
     if len(records) != 4:
         raise ValueError("Four source-to-DOCX build records are required")
@@ -89,6 +120,9 @@ def verify_bundle(root):
     count = verify_entries(entries, "MANIFEST_SHA256.csv")
     status = json.loads(entries["STATUS.json"])
     require_review_status(status)
+    governance = verify_review_governance(entries)
+    if status.get("external_methods_review_status") != governance["external_methods_review_status"]:
+        raise ValueError("Package and review governance status disagree")
     verify_document_provenance(entries,json.loads(entries["quality_control/document_build.json"])["documents"])
     if b"Renewed final approval of the corrected manuscript and supporting materials is pending." not in entries["sources/Manuscript.md"]:
         raise ValueError("Current manuscript must disclose pending renewed approval")
@@ -103,6 +137,8 @@ def verify_bundle(root):
         raise ValueError("Expected source tables for 5 main and 10 supplementary figures")
     stats = archives["Full_Statistical_Results.zip"]["content"]
     prefix = "external_mapping_calibration/"
+    if governance["scientific_input_manifest_sha256"] != sha256(stats[prefix+"01_INPUT_SHA256_MANIFEST.csv"]):
+        raise ValueError("Review gate refers to different scientific inputs")
     extension = {name:payload for name,payload in stats.items() if name.startswith(prefix)}
     if len(extension) != 20:
         raise ValueError("Corrected calibration attachment must contain 20 documented files")
@@ -150,6 +186,7 @@ def verify_bundle(root):
     return {"status":"PASS_PORTABLE_TECHNICAL_VERIFICATION", "payload_files":count,
             "nested_manifest_rows":{name:record["members"] for name,record in archives.items()},
             "document_pages":render["pages"],"submission_authorized":False,
+            "external_methods_review_status":governance["external_methods_review_status"],
             "scope":"Sizes, hashes, complete manifests, DOCX structure and recorded review boundaries; not a numerical rerun or independent scientific review."}
 
 

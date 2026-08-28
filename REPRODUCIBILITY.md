@@ -146,6 +146,13 @@ powershell -ExecutionPolicy Bypass `
 
 ## Correction review bundle
 
+The current generated bundle is `04_submission/author_review.zip`. It adds the
+current unchecked author confirmation, a current-only reporting checklist, and
+an external methods-review dossier. Supplied feedback is archived but is not
+treated as authenticated reviewer signoff or renewed author approval. The older
+`correction_review.zip` remains an immutable local review snapshot; use its own
+bundled verifier to check that earlier schema.
+
 The historical release builders are retired on the current branch: they rewrite
 canonical prose and delete the previous package. Do not use them for this review.
 The new builder writes only a new, empty output directory and checks source hashes.
@@ -164,8 +171,8 @@ retained historical statistical archive and the local review documents.
 The extracted bundle can be checked from any directory, without site packages:
 
 ```powershell
-python -I -S .\04_submission\correction_review\verify_review_bundle.py `
-  --bundle .\04_submission\correction_review
+python -I -S .\04_submission\author_review\verify_review_bundle.py `
+  --bundle .\04_submission\author_review
 ```
 
 This checks file closure, sizes, hashes, nested statistical archives and claim
@@ -174,19 +181,22 @@ reference-cell predictions and per-cell external predictions remain local.
 
 ## Historical release versus current review
 
-- Current main-figure panel-data assertions: 47/47.
+- Current main-figure assertions: 42 scientific/data checks plus five typography
+  checks, 47/47 in total; these are not 47 separate scientific tests.
 - Supplementary-figure panel-data assertions: legacy 29/29 plus separate S8
   (36 rows) and S9 (128 rows; 8/8 checks) contracts.
 - Reference DOI identities independently resolved: 28/28.
 - Numbered manuscript references: 32.
-- The complete statistical results archive preserves the frozen source archive
+- The historical complete statistical results archive preserves the frozen source archive
   and deterministically adds 101 reviewer-facing end-to-end identity and
   boundary-propagation files; its internal 163-row manifest validates exactly.
+- The current archive preserves those 163 files byte-for-byte and adds 20
+  calibration records plus one scope note, for 184 manifest payloads.
 - Main and supplementary DOCX files use numbered journal-style citations,
   embedded figure markers, explicit table titles, full-width tables, US Letter
   pages, 1-inch margins, Times New Roman text and double-spaced manuscript body
   text.
-- The package contains separate `portal_upload_required` and
+- The historical package contains separate `portal_upload_required` and
   `portal_upload_optional` directories plus a filename and hash map.
 - The earlier WPS release had 32 manuscript pages, 17 supplementary pages and
   one cover-letter page. Current page counts and accessibility results are

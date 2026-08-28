@@ -58,6 +58,9 @@ phase17_v7/post_gateC9/**/documents/
 00_project_management/post_gateC9_release_review_2026-08-28/_venv/
 00_project_management/post_gateC9_release_review_2026-08-28/_build_attempts/
 00_project_management/post_gateC9_release_review_2026-08-28/*.png
+00_project_management/external_review_2026-08-28/document_pages/*
+!00_project_management/external_review_2026-08-28/document_pages/document_render_audit.json
+00_project_management/external_review_2026-08-28/_portable_test/
 
 # Local software-test matrices and generated diagnostics.
 phase17_v7/**/_software_tests/

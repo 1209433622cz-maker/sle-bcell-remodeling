@@ -1,0 +1,16 @@
+﻿Priority,ID,Task,Execution rule,Domain
+P0,GOV-01,Create current author confirmation,Preserve old checked approval record as historical; create a fresh current-correction approval record with revised-content approval initially unchecked.,Release governance
+P0,GOV-02,Clean current Reporting Checklist,Separate historical v1.0.0 checks from current correction status; align current figure-check count/definitions and prevent old author approval from appearing current.,Release governance
+P0,EXT-01,Independent methods review,"External reviewer checks normalization denominator, calibration arithmetic, fail-closed gate, outcome protection, non-nested CV caveat and supersession logic.",Methods review
+P0,EXT-02,Archive reviewer comments,Record concrete reviewer findings and disposition; do not treat generic approval as reproducibility evidence.,Methods review
+P1,TEXT-01,Refine calibration Methods wording,Replace `selected regularization and confidence thresholds` with wording that candidate thresholds were evaluated under frozen eligibility criteria.,Manuscript
+P1,TEXT-02,Add explicit Discussion correction boundary,One sentence: corrected source-label-agnostic mapping failed B_ASC calibration and no corrected disease outcome was estimated.,Manuscript
+P1,FIG-S10,Optional calibration-frontier redraw,"If useful after external review, rerender S10 panel d from frozen calibration candidates as coverage-vs-state-precision frontier; no disease outcomes or retuning.",Figure
+P0,AUTHOR-01,Renewed author approval,"Both authors approve the corrected manuscript, supplement, figures, attachments, cover, correction disclosure and journal choice.",Author
+P0,JOURNAL-01,Select target journal,Prioritize fit; evaluate npj Systems Biology and Applications / Communications Biology / Genome Medicine; institution verifies current Q1/JCR/CAS.,Journal strategy
+P0,PACKAGE-01,Target-specific rerender,"After journal selection, rerun figures from code to the journal's exact requested width/format; no manual figure edits.",Publication engineering
+P0,RELEASE-01,Create revised release version,Keep v1.0.0 immutable; tag exact final corrected commit as a new version such as v1.1.0.,Release
+P0,RELEASE-02,Zenodo New Version,"Publish a matching version-specific DOI, then update Data Availability/citation/portal metadata.",Release
+P0,QA-01,Final WPS/a11y/manifest audit,"Rebuild documents and deterministic package after author approval, journal formatting and DOI insertion.",QA
+P0,SUBMIT-01,Portal preflight and submit,"Only upload files authorized by the new package; preserve receipt, manuscript number and actual uploaded-file hashes.",Submission
+STOP,SCIENCE,No outcome-informed rescue,"No threshold relaxation, elastic-net replacement, seed/grid expansion, new mapper/cohort/TF/gene set before first submission unless external review identifies a decision-changing defect.",Governance

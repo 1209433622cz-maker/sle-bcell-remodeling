@@ -1,48 +1,44 @@
-# Reporting and release review checklist
+# Current correction review checklist
 
-## Current correction hold
+**REVIEW ONLY. NOT AUTHORIZED FOR SUBMISSION.**
 
-This section records the current correction review, not submission authorization.
-Historical acceptance checks are retained separately below. The target journal is
-undecided.
+This file contains current status only. Previous checked approvals and old
+acceptance counts are preserved at
+`00_project_management/external_review_2026-08-28/history/Reporting_Checklist.md`.
+They do not authorize this correction or its submission.
 
-- [x] Original C9 PASS invalidated after normalization and calibration-gate audit.
-- [x] Corrected 56-matrix run retained reference-calibration HOLD; outcomes remained protected.
-- [x] Manuscript, supplement and RP now disclose this limitation.
-- [x] Correction-review figures, Markdown/DOCX/WPS hashes and package manifests reconciled end to end.
-- [x] The separate bundle contains 5 main figures, 10 supplementary figures, 15 source tables and 20 corrected calibration records.
-- [x] Four current documents were WPS-rendered and audited; old author-approval claims were replaced by an explicit pending-renewal statement.
-- [x] Corrected code, compact results and review documentation synchronized to GitHub; remote main verified at `1f1b5db6e72e6acba7b7d700dd5c45b871707ac1` before the final action-record update.
-- [ ] New Zenodo version and version-specific DOI match the final approved payload.
-- [ ] Final corrected package approved for portal upload.
+## Scientific scope
 
-## Earlier package record
+- [x] The original C9 PASS is excluded from supporting evidence after the normalization and calibration-gate audit.
+- [x] The corrected 56-matrix, 363,083-cell run remains on reference-calibration HOLD; corrected disease outcomes were not estimated.
+- [x] R1 end-to-end identity HOLD and source-label dependence remain explicit.
+- [x] No threshold, seed, mapper, gene set or original disease effect was changed in this editorial round.
+- [x] Methods describes evaluated confidence candidates, not an eligible elastic-net threshold.
+- [x] Discussion explicitly states the corrected B_ASC calibration failure and absence of corrected disease estimates.
+- [x] Main-figure checks are 42 scientific/data assertions plus 5 typography checks, totaling 47; this is not 47 independent scientific tests.
+- [x] Existing S1-S7 checks total 29; S8 and S9 have separate 36-row and 128-row source contracts. S10 describes reference calibration, not a disease effect.
 
-## Scientific freeze
+## Review governance
 
-- [x] Primary scientific families remain frozen; the declared post-freeze STAT1/STAT2 overlap-depletion sensitivity does not replace them.
-- [x] Main panel-data assertions pass 46/46.
-- [x] Legacy supplementary-figure panel-data assertions pass 29/29; Supplementary Figures S8 and S9 have separate verified 36-row and 128-row source-data contracts.
-- [x] End-to-end identity reconstruction completed 20/20 replicates and retained its formal B_ASC-specific HOLD at the unchanged state-overlap criterion.
-- [x] Boundary-exchange propagation retained the primary composition null and both tested GSE174188 B_CONV IFN/ISG effects.
-- [x] No new cohort, cluster, primary threshold, regulator or signature was selected; depletion used two prespecified frozen gene sets and identity propagation reused frozen models.
-- [x] Primary B_ASC composition remains a null boundary.
-- [x] Central claim remains independently replicated IFN/ISG remodeling within broad B_CONV.
+- [x] The user-supplied review memo and 15-row action matrix have been archived with hashes and itemized responses.
+- [x] Historical author approvals are separated from the current unchecked confirmation record.
+- [x] The external methods-review dossier defines 12 checkable questions and distinguishes feedback received from signed methodological closure.
+- [ ] External reviewer identity, independence, evidence scope and a specific final decision are recorded.
+- [ ] Both authors have approved the exact corrected materials identified by package hash.
+- [ ] The target journal, ranking basis and APC arrangements have been confirmed.
 
-## Final publication engineering
+## Technical and release checks
 
-- [x] Figures 1-5 were rerendered at exactly 170 mm, with vector PDFs, 600-dpi PNGs, 5-7 pt text and 8 pt panel labels; Figures 1a and 5a encode evidence hierarchy without causal ordering.
-- [x] Figure 1 Source Data removes only two non-plotted internal gate-decision rows; plotted rows are unchanged.
-- [x] Figure 1 threshold guides are explicitly defined.
-- [x] Figure 2 UUID provenance and privacy audit passed.
-- [x] Supplementary Table S7 starts on a new page.
-- [x] Portal REQUIRED and OPTIONAL upload maps are separate.
-- [x] Manuscript and cover letter contain zero placeholders.
+Each new build must validate its own Markdown/DOCX/PDF hashes, all-page WPS
+rendering, accessibility, complete nested manifests and deterministic ZIP bytes.
+The machine-readable build receipt records the actual result for that payload;
+this checklist does not transfer a prior render PASS to changed files.
 
-## Declarations and release
+- [ ] Target-journal figure dimensions and submission instructions have been applied from source code and rechecked.
+- [ ] Any required independent-environment numerical reproduction has been completed and scoped accurately.
+- [ ] The approved final commit is associated with a new immutable archive and matching version-specific DOI.
+- [ ] DOI insertion and any subsequent edits have been rebuilt, reverified and approved for the final payload.
+- [ ] Actual portal upload files have been authorized; submission receipt and manuscript number may be recorded only after submission.
 
-- [x] Ethics, consent, competing interests, funding, contributions, acknowledgements and AI-use statements are complete.
-- [x] Both authors approved every submission component and confirmed originality and exclusive submission.
-- [x] Repository licence scope excludes third-party public data.
-- [x] Release DOI: `https://doi.org/10.5281/zenodo.22086892`.
-- [x] Deterministic ZIP rebuild, WPS all-page review and accessibility audit are required to pass before journal upload.
+The initial DOI remains historical. No new release, final author approval or
+journal submission is asserted by the technical review package.

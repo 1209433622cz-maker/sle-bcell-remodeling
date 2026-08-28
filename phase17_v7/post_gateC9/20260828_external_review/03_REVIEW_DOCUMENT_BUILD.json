@@ -1,0 +1,50 @@
+{
+  "status": "REVIEW_DOCUMENTS_BUILT",
+  "next_step": "WPS export and final render audit; this build record alone is not release approval",
+  "documents": [
+    {
+      "source": "01_manuscript/Manuscript.md",
+      "output": "phase17_v7/post_gateC9/20260828_external_review/documents/Manuscript.docx",
+      "paragraphs": 168,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 63235,
+      "source_sha256": "AD69351BC1B12EB881EC5DF049642640ED9F42C7821654E953303D1162B1EC1B",
+      "docx_sha256": "9944ED9424C5B79E0945976E5EC710EC5F6416098FC7349762127B5D5CEE7365"
+    },
+    {
+      "source": "01_manuscript/Supplementary_Information.md",
+      "output": "phase17_v7/post_gateC9/20260828_external_review/documents/Supplementary_Information.docx",
+      "paragraphs": 89,
+      "tables": 10,
+      "inline_shapes": 10,
+      "placeholders": 0,
+      "bytes": 4082326,
+      "source_sha256": "55081AD1C836678D478C5A73543774861B3DA29C1D54DAD27E48C79BBA21BAA7",
+      "docx_sha256": "7C2D1DCD21A6C84FE31F0243B5B307C19B77E98B78221D9388D2A971C4CB380A"
+    },
+    {
+      "source": "01_manuscript/Research_Proposal.md",
+      "output": "phase17_v7/post_gateC9/20260828_external_review/documents/Research_Proposal.docx",
+      "paragraphs": 71,
+      "tables": 2,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 46983,
+      "source_sha256": "0768D8047C2243D329F601D355A00962708A15569F205CA33DB76F7428079D18",
+      "docx_sha256": "C6D4BD902F549B4D399E066FF1ED99FFB1EB148AE98F73D016D6F8DABE7F1EEA"
+    },
+    {
+      "source": "04_submission/Cover_Letter.md",
+      "output": "phase17_v7/post_gateC9/20260828_external_review/documents/Cover_Letter.docx",
+      "paragraphs": 16,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 40171,
+      "source_sha256": "B5B93AD3E4032383CE21AEC1ED0986FE7793A7D3419DD34575E2881C1CCE5264",
+      "docx_sha256": "5265CB37D7E9566C70E0E0788AE73A4A506EAEEC661219F5F633A1A16E377F02"
+    }
+  ]
+}

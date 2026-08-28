@@ -1,0 +1,518 @@
+这轮我按**最新 GitHub `main`、你上传的 `correction_review.zip`、`6013RP-wyf(1).zip`、最新 Manuscript/Supplement/RP、C9R 纠错代码与校准结果、R1/R2 结果以及当前 15 张图**重新做了独立终局复核。
+
+这一次最重要的结论与上一轮有实质变化：
+
+> **旧的 `PASS_C9_LABEL_AGNOSTIC_EXTERNAL_SUPPORT` 必须撤回其论文支持性效力。现在正确状态是 C9R calibration HOLD，而且 corrected disease outcomes 没有被解锁、也没有被计算。**
+
+GitHub 最新 `main` 已经推进到 `f28cf6a481232408710862eee5ee2db735dec70b`，提交目的就是记录 correction-review 完成与下一阶段边界。 你这次上传的行动记录与仓库最新状态是一致的：elastic-net 的 B_ASC precision 为 **0.885210 < 0.90**，所以纠错后的 outcome unlock 被正确阻断；R1 的 B_ASC-specific HOLD 同时继续保留。
+
+## 一、这次纠错是必要的，而且处理方式是正确的
+
+我复核后确认，旧 C9 有两个真正的技术阻断问题。
+
+第一，旧 reference mapper 的 reference cells 是先截取约 601 个 mapping features，再以这些 selected-feature counts 作为 library-size denominator；external cells 却是按**全转录组 library total**做 log1p(CP10K) 再截取 features。也就是说 reference 与 external feature vectors 原先并不在同一归一化尺度。纠错契约已经把它改成两边统一使用 full-library totals，并明确禁止改 feature set、alpha grid、confidence grid、seed 或 gate 来“救结果”。
+
+第二，旧 elastic-net 的 0.95 confidence threshold 实际没有满足冻结的双 state precision 门槛，却允许 diagnostic fallback 继续授权 outcome access。纠错后的 gate 已改成真正的 fail-closed：B_CONV precision 很高，但 B_ASC precision 只有 **0.8852097**，因此 formal decision 是 HOLD，`outcome_unlock_authorized=false`。
+
+所以目前绝不能再写：
+
+> “source-label-agnostic GSE135779 validation replicated the IFN result.”
+
+现在准确的表述只能是：
+
+> **Source-label-defined GSE135779 replication remains; source-label-independent external robustness remains unresolved because corrected reference calibration did not meet the frozen B_ASC precision criterion.**
+
+这一点最新 README 已经写对了。
+
+---
+
+## 二、不要试图把 C9R HOLD 调成 PASS
+
+这是现在最重要的方法学纪律。
+
+虽然中心外部 IFN 分析真正关心的是 B_CONV，而且 corrected elastic-net 的 B_CONV precision 达到约 **0.99645**，但不能在看到旧 C9 outcome 以后，把原本的“双 state ≥0.90”改成“只要求 B_CONV ≥0.90”。
+
+同样不能：
+
+* 把 0.90 改成 0.88；
+* 丢掉 elastic-net，只保留通过的 centroid；
+* 扩大 alpha/confidence grid；
+* 换 seed；
+* 换 feature set；
+* 新增第三 mapper，直到某个算法 PASS；
+* 再调用原来已经看过的 positive C9 outcome 来选择模型。
+
+这些都会把一次高质量纠错变成 outcome-informed rescue。
+
+如果未来 reviewer 真正要求 source-label-independent external corroboration，正确路径是**新的预先冻结验证设计或另一个独立队列**，而不是修改 C9R gate。
+
+---
+
+# 三、好消息是：论文中央科学结论没有被推翻
+
+这次被撤回的是**额外 robustness layer**，不是主分析。
+
+当前最稳的科学链仍然是：
+
+1. GSE174188：150,402 个 QC-passed B-lineage cells；
+2. 259 donors / 271 samples / 88 libraries；
+3. fine-grained hard B-cell assignments 不足以承担稳定疾病推断；
+4. frozen-representation 下 broad `B_CONV/B_ASC` 可作为 analysis scaffold；
+5. end-to-end R1 正式 HOLD，而且已经明确是 **B_ASC-specific**：B_ASC median Jaccard=0.930323<0.95，而 B_CONV median Jaccard≈0.99936；
+6. 把所有实际观察到的 broad-state boundary exchanges 传播回下游模型后，primary B_ASC composition null 仍然保持；
+7. primary B_CONV IFN/ISG effect 仍保持；
+8. donor-nonoverlap internal IFN/ISG 仍保持；
+9. **source-label-defined** independent GSE135779 childhood IFN/ISG replication 仍保持；
+10. genome-wide cross-dataset rho=0.026，主动拒绝“整个转录组都复制”；
+11. STAT1/STAT2 ULM + CAMERA/FRY 继续只是 convergent observational evidence；
+12. narrow 12-gene depletion 之后仍有广泛支持；
+13. M5911 depletion 明显削弱 discovery STAT2，因此不支持“regulatory signal 独立于 broader IFN response”；
+14. GSE23307 n=2 继续 descriptive；
+15. corrected C9 disease outcome **没有计算**。
+
+最新 manuscript 已经正确按照这条层级写作：标题是 `unstable B-cell state assignments`，而不是说 biological states 本身不存在；Abstract 也继续把 IFN/ISG replication 放在中心，没有拿被撤回的 C9 positive result 当亮点。
+
+所以文章最强的 conceptual novelty 现在反而更清楚：
+
+> **inferential granularity must be validated rather than assumed：hard state membership 的可重复性边界明确，而 process-level IFN remodeling 对 biological-unit inference、identity-boundary propagation 和独立 source-label-defined cohort validation 更稳健。**
+
+这仍然是一区文章最值得卖的思想。
+
+---
+
+# 四、manuscript 当前已经很成熟，但还有两个非常窄的文字修正
+
+### 1. Methods 中一句话应该更精确
+
+现在 `Reference-calibrated external mapping sensitivity` 写：
+
+> “Reference donor-grouped cross-validation selected regularization and confidence thresholds.”
+
+纠错后这句话稍微过强，因为 elastic-net **实际上不存在符合全部 eligibility criteria 的合格 confidence threshold**。
+
+建议改成：
+
+> **“Reference donor-grouped cross-validation evaluated regularization and candidate confidence thresholds under prespecified state-specific eligibility criteria.”**
+
+或者：
+
+> **“Candidate regularization and confidence thresholds were evaluated using donor-grouped reference cross-validation and frozen state-specific eligibility criteria.”**
+
+这是准确性修正，不涉及数据重跑。
+
+### 2. Discussion limitations 最好再明确加一句 C9R
+
+现在 Results 已经非常透明地报告 calibration HOLD，但 Discussion limitations 对这一条没有像 R1 HOLD 那么显眼。
+
+建议增加：
+
+> **“A post-freeze attempt to reconstruct external B-lineage selection without source labels failed its frozen B_ASC reference-calibration criterion after normalization was corrected, so no corrected disease outcome was estimated.”**
+
+这样 hostile reviewer 不可能说作者把重要 correction 埋在 Results 中。
+
+---
+
+# 五、Abstract 暂时不要继续加内容
+
+当前 Abstract 我独立统计约 **342 words**。
+
+这一版已经非常接近比较理想的上限，而且层级是正确的：
+
+> identity boundary → composition null → B_CONV IFN → independent source-label-defined validation → regulator qualification → non-causal conclusion。
+
+不要把 C9R 的 calibration 数字再塞进摘要。
+
+纠错 C9 是一个重要 transparency boundary，但不是新的 central biological finding。
+
+如果后面选一个更喜欢短摘要的期刊，可以再压到约 **320–330 words**；目前不是 P0。
+
+---
+
+# 六、Supplement S10 的定位现在是正确的
+
+Supplementary Information 已经把 S10 定义为：
+
+> **corrected reference calibration and unresolved external transfer**
+
+而不是继续画原来的 positive disease effect。
+
+这一点非常好。
+
+它现在展示：
+
+* normalization mismatch corrected；
+* frozen precision gate；
+* frozen coverage gate；
+* donor-grouped calibration folds。
+
+我实际检查了最终 S10：没有 clipping、没有文字重叠、没有视觉误导，elastic B_ASC point 很清楚地落在 0.90 precision 线下。
+
+### 但如果还追求最后 1% 的 reviewer communication
+
+S10d 目前画的是：
+
+> donor-grouped balanced accuracy folds
+
+这个指标看起来都很高，反而容易让不仔细的 reviewer 产生：
+
+> “既然 balanced accuracy 这么好，为什么你们说 HOLD？”
+
+所以我有一个**可选 P1**：
+
+把 S10d 改成从冻结 `07_MAPPER_CONFIDENCE_CALIBRATION.csv` 直接生成的：
+
+> **coverage–B_ASC precision calibration frontier**
+
+并画出：
+
+> coverage ≥0.80
+> precision ≥0.90
+
+的 eligible quadrant。
+
+这样能把“为什么 overall classifier 很好但 gate 仍失败”表达得更直观。
+
+但注意：
+
+> **这只是从冻结 calibration candidates 重画图，不重新训练、不重新选阈值、不读取 disease outcome。**
+
+现有 S10 已经可以进入外部方法审阅，所以这不是 blocker。
+
+---
+
+# 七、Nature-style 图件现在真正可以给 PASS
+
+这一轮我对 correction review 里的 **5 主图 + S1–S10 共 15 张 PDF**重新做了 text-span 和尺寸检查。
+
+结果非常干净：
+
+* 全部约 **170 mm** 宽；
+* Arial / Arial Bold；
+* vector PDF；
+* 600-dpi PNG；
+* 所有正常文字 **≥5 pt 且 ≤7 pt**；
+* 所有 >7 pt 的文字全部只是 **8 pt lowercase panel labels**；
+* 没有 <5 pt 的可见文字。
+
+Nature 当前正式图件规范要求 multi-panel labels 为 **8 pt bold upright lowercase**，其余文字 5–7 pt、Arial/Helvetica，线宽约 0.25–1 pt，并尽量使用可编辑 vector artwork；Nature 自身标准双栏宽是 183 mm、最大图高 170 mm。([Nature][1])
+
+所以：
+
+> **严格意义上的 Nature typography 现在已经 PASS。**
+
+唯一要区分的是：
+
+> 170 mm ≠ Nature 自己的 183 mm double-column production width。
+
+但你目前尚未冻结目标期刊，所以**没有必要为了追求 183 mm 再重跑所有图**。
+
+等期刊确定之后，再从绘图代码一次性改为目标期刊 exact width 即可。
+
+这比现在人为把所有图做成 Nature 183 mm，然后投一个要求 170/180 mm 的期刊更合理。
+
+---
+
+# 八、纠错包本身我也独立验过：技术完整性很高
+
+你上传的：
+
+`correction_review.zip`
+
+我重新计算得到：
+
+* **26,013,157 bytes**
+* SHA-256
+  `DA07D1D7F87E559A7778618FDFAE5BD55DA77291E1F0BAA44B915CDE209B5993`
+* manifest payload：**68**
+* **68/68 size + SHA PASS**
+* missing：0
+* extra：0
+
+Nested archives：
+
+* Figure Source Data：**15/15 PASS**
+* Full Statistical Results：**184/184 PASS**
+
+而 `6013RP-wyf(1).zip` 内嵌的 `correction_review.zip` 与单独上传的 review ZIP **逐字节相同**。
+
+其中 Manuscript、Supplement、Research Proposal、Cover Letter 的 source Markdown 也与 correction bundle 中的 source files 逐字节一致。
+
+所以没有“你给我的 ZIP 和 GitHub/当前源不是同一版本”这一类 release 漂移。
+
+你上传的本轮行动记录也记录了同一个 review ZIP hash 和相同技术状态。
+
+---
+
+# 九、现在剩余最大的不是科学问题，而是两个 release-governance 问题
+
+## 1. `Reporting_Checklist.md` 最好拆掉历史授权
+
+当前 checklist 顶部已经正确写：
+
+> current correction hold
+> target journal undecided
+> renewed approval/archive pending
+
+这很好。
+
+但同一个文件下面的 `Earlier package record` 仍保留：
+
+> `[x] Both authors approved every submission component...`
+
+以及旧 DOI/旧 release 的一系列打勾项目。
+
+虽然有 historical heading，但对于未来作者或第三方来说，**一个 current checklist 中同时有 pending approval 和 checked final approval** 仍然容易误读。
+
+而且当前 correction figure checker 实际是：
+
+> **42 个 scientific/data main checks + 5 个 main-figure typography checks = 47/47**
+
+REPRODUCIBILITY 也已经按 current 47/47 记录；checklist 下面仍保留的是旧 46/46 口径。
+
+建议：
+
+> 把旧 package record 搬到 `Historical_Reporting_Checklist_v1.0.0.md`
+
+current checklist 只保留 current correction truth。
+
+---
+
+## 2. `Author_Confirmation.md` 最好生成一个全新的 current 版本
+
+现文件其实已经非常负责任地写：
+
+> checked confirmations 是 25 August 之前批准的旧材料；corrected manuscript/supplement/cover 需要 renewed approval。
+
+但它的标题仍是：
+
+> **Final author and release confirmation record**
+
+下面又是大量 `[x]`。
+
+机器看得懂 scope clarification，人很容易一扫而过把 `[x]` 当成当前授权。
+
+我的建议是：
+
+保留旧记录不修改，再新建：
+
+> `Author_Confirmation_Current_Correction.md`
+
+其中：
+
+作者身份、ORCID、单位、既有长期事实可以继承；
+
+但下面这些必须重新变成：
+
+> `[ ]`
+
+* corrected manuscript approved；
+* corrected Supplement approved；
+* S10 approved；
+* revised Source Data/Full Statistics approved；
+* correction wording approved；
+* cover letter approved；
+* renewed originality/exclusive submission；
+* chosen journal；
+* final archive DOI；
+* submission authorization。
+
+**这是现在最值得做的 P0。**
+
+不是继续跑生信。
+
+---
+
+# 十、当前 release 的真实状态
+
+现在 `Portal_Upload_Guide.md` 已经正确写：
+
+> existing package must not be uploaded；
+> no current file is authorized；
+> use correction review only for review；
+> final archive / approval / journal selection 后再 rebuild。
+
+所以目前不是：
+
+> “什么时候可以点 Submit？”
+
+而是：
+
+> **“什么时候外部方法审阅和作者重新批准能够关闭？”**
+
+当前技术性 package 质量已经足够高，瓶颈已经不在构建系统。
+
+---
+
+# 十一、投稿目标现在我建议重新排序
+
+纠错前，我对 Genome Medicine 的评价比较积极。
+
+**C9 PASS 被撤回后，我建议改变优先级。**
+
+不是因为论文变差了，而是它现在更诚实地暴露出：
+
+> independent replication 仍依赖 source-provided broad B-cell labels。
+
+同时这是：
+
+* public-data secondary analysis；
+* IFN biology 本身已知；
+* 没有 prospective cohort；
+* 没有 direct patient perturbation；
+* clinical utility 没建立。
+
+所以现在应该更重视**概念匹配**，而不是硬冲“医学影响力”最高的名字。
+
+### ① npj Systems Biology and Applications：我现在最推荐首先评估
+
+官方 scope 明确覆盖：
+
+* computational/mathematical analysis of complex biological systems；
+* disease modeling；
+* single-cell systems biology；
+* systems immunology。([Nature][2])
+
+而且当前确有一个开放的 **Systems immunology** collection，聚焦计算/实验方法解析 immunological states/disorders。([Nature][3])
+
+你的故事本质是：
+
+> identity uncertainty + inferential hierarchy + systems immunology + reproducible process-level signal
+
+与这个定位非常自然。
+
+**如果作者所在机构确认它当前满足你们所要求的 Q1/JCR/CAS标准，我会把它列为首选候选。**
+
+---
+
+### ② Communications Biology：当前最平衡的 Nature Portfolio 选择
+
+Communications Biology 官方明确接受：
+
+> **secondary data analysis**
+> **innovative computational methods**
+
+并要求 novel insight、strong evidence、technical soundness，以及对特定 biological subfield 有实质推进。([Nature][4])
+
+这与你当前稿件非常匹配。
+
+而且其统计透明性要求与现有 manuscript 很接近：明确 test、n、comparison、sidedness、P value、descriptive statistics 等。([Nature][5])
+
+如果你优先考虑：
+
+> **SCI一区 + Nature Portfolio + 不大幅改稿 + 接受 secondary computational analysis**
+
+它可能是当前最平衡的一档。
+
+---
+
+### ③ Genome Medicine：仍可冲，但我现在把它定义为 stretch
+
+我不反对投。
+
+但它现在的 desk risk 比 C9 PASS 阶段更明显：
+
+> IFN known biology + secondary public-data analysis + source-label-defined external replication + no clinical utility。
+
+Genome Medicine 本身长期定位强调 genetics/genomics/omics/systems approaches 对 human disease 和 precision medicine 的影响。([Springer][6])
+
+你的稿子符合 scope，但是否达到其“足够 broad medical advance”是编辑判断，不是再跑几个 sensitivity 就能解决的。
+
+因此如果作者优先追求更高医学影响力，可以先冲；
+
+如果优先追求：
+
+> **当前证据与期刊 scope 的最大匹配度**
+
+我会先评估 npj Systems Biology and Applications / Communications Biology。
+
+**具体 JCR/CAS Q1 必须在投稿当天由学校/机构渠道确认，我不会把动态分区写死在 release 包里。**
+
+---
+
+# 十二、当前完成度
+
+| 模块                                           |                  当前评价 |
+| -------------------------------------------- | --------------------: |
+| Scientific design                            |               **98%** |
+| Statistical rigor                            |               **98%** |
+| R1 negative-boundary transparency            |               **99%** |
+| Identity uncertainty propagation             |               **98%** |
+| Source-label-defined independent validation  |               **96%** |
+| Source-label-independent external robustness | **HOLD / unresolved** |
+| Regulatory robustness                        |               **97%** |
+| Correction governance                        |               **98%** |
+| Manuscript logic                             |               **97%** |
+| Main figures scientific content              |               **99%** |
+| Strict Nature typography                     |               **99%** |
+| Supplementary evidence                       |               **98%** |
+| Source-data traceability                     |               **99%** |
+| Reproducibility engineering                  |               **98%** |
+| External independent methods review          |           **PENDING** |
+| Renewed author approval                      |           **PENDING** |
+| Matching revised DOI/archive                 |           **PENDING** |
+| Journal-specific package                     |           **PENDING** |
+| Portal readiness                             |    **BLOCKED，原因不是计算** |
+
+---
+
+# 下一阶段：不再叫 Gate C10 science
+
+我建议正式把下一阶段定义成：
+
+> **`EXTERNAL_METHODS_REVIEW_AND_AUTHOR_REAPPROVAL_GATE`**
+
+只有这一条路径。
+
+首先让一个**非本分析代理**的 reviewer 专门检查 normalization denominator、full-library totals、72 个 calibration candidate 的算术、state-specific precision/coverage gate、fallback 是否真正 fail-closed、outcome 是否确实没被打开、56/363,083 formal-run 完整性、donor-fold leakage、非完整 nested CV 的 limitation，以及“centroid PASS 不能事后 rescue elastic FAIL”的治理规则。
+
+然后完成两个内部小修：
+
+> current Author Confirmation 重建；
+> current Reporting Checklist 与历史授权彻底拆开；
+> Methods 一句话精修；
+> Discussion 增加一条 C9R HOLD limitation。
+
+接着由两位作者重新批准**当前 corrected 版本**。
+
+再确定期刊。
+
+期刊一旦确定，才从代码按 exact journal specification 重跑全部图件；不是手工 resize。
+
+最后：
+
+> final commit → 新 tag（例如 `v1.1.0`，绝不移动 v1.0.0）→ Zenodo New Version → version-specific DOI → DOI 回填 → WPS/a11y → deterministic package → portal preflight → submit。
+
+---
+
+## 本轮最终判断
+
+这次项目成熟度实际上比“所有 analysis 都 PASS”更高。
+
+因为现在你有两条非常可信的负面边界：
+
+> **R1：B_ASC-specific state reproducibility HOLD**
+
+以及：
+
+> **C9R：corrected external label-agnostic calibration HOLD**
+
+同时作者没有改门槛、没有挑算法、没有删除结果来救 PASS。
+
+这种透明性对于高水平审稿人，比多塞一个阳性数据集更有说服力。
+
+现在再新增 cohort、mapper、TF、signature 或 threshold search，已经不是“追求完美”，而是在增加 post hoc freedom。
+
+**下一轮真正应该追求的完美，是让外部方法审阅者确认这次纠错确实闭环，再由作者重新批准，然后按最合适的一区期刊完成 release refreeze。**
+
+我已经把本轮完整复核与下一阶段矩阵整理好了：
+
+[下载 C9 技术纠错后独立终局审计报告](sandbox:/mnt/data/SLE_Bcell_PostCorrection_independent_full_audit_2026-08-28.md)
+
+[下载 External Review / Author Reapproval 执行矩阵](sandbox:/mnt/data/SLE_Bcell_ExternalReview_AuthorReapproval_action_matrix_2026-08-28.csv)
+
+[1]: https://www.nature.com/nature/for-authors/final-submission?utm_source=chatgpt.com "Final submission | Nature"
+[2]: https://www.nature.com/npjsba/aims?utm_source=chatgpt.com "Aims & Scope | npj Systems Biology and Applications"
+[3]: https://www.nature.com/npjsba/calls-for-papers?utm_source=chatgpt.com "Calls for papers | npj Systems Biology and Applications"
+[4]: https://www.nature.com/commsbio/aims?utm_source=chatgpt.com "Aims & Scope | Communications Biology"
+[5]: https://www.nature.com/commsbio/submit/submission-guidelines?utm_source=chatgpt.com "Submission guidelines | Communications Biology"
+[6]: https://link.springer.com/article/10.1186/s13073-019-0624-z?utm_source=chatgpt.com "A decade of Genome Medicine: toward precision medicine | Genome Medicine | Springer Nature Link"

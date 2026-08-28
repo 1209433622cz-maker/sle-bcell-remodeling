@@ -1,16 +1,16 @@
 # Journal portal preparation guide
 
-**Submission hold (28 August 2026):** the existing package predates the corrected
-external-mapping calibration audit. Do not upload it unchanged. Canonical sources
-now retain C9A HOLD; the original C9 PASS is superseded. The target journal is not
-currently fixed. Rebuild the package, rerender the documents and reconcile the
-version-specific archive before using the historical checklist below.
+**Submission hold (28 August 2026):** the current author-review package retains
+C9A HOLD; the original C9 PASS is superseded. The target journal is not fixed.
+The following roles are provisional, not journal-specific requirements. Final
+author approval, formatting and a matching version-specific archive are still
+required before portal upload.
 
-Use `correction_review/PORTAL_FILES.csv` to review proposed file roles only.
+Use `author_review/PORTAL_FILES.csv` to review proposed file roles only.
 No files are currently authorized for upload. The historical `journal_submission`
 directory must not be used as the current package.
 
-## Required files
+## Provisional file roles
 
 | Portal role | Filename |
 |---|---|

@@ -1,0 +1,17 @@
+{
+  "gate": "EXTERNAL_METHODS_REVIEW_AND_AUTHOR_REAPPROVAL_GATE",
+  "baseline_repository_commit": "f28cf6a481232408710862eee5ee2db735dec70b",
+  "scientific_input_manifest_sha256": "C7BE217FA71CDA3EDA5601FB8947F933732CA032B3C46331233CE783AA114189",
+  "external_feedback_received": true,
+  "external_methods_review_status": "FEEDBACK_RECEIVED_CLOSURE_PENDING",
+  "reviewer_identity": null,
+  "reviewer_independence_confirmed": false,
+  "external_methods_review_decision": null,
+  "authors": [
+    {"name": "Zhi Chen", "decision": "PENDING", "date": null, "evidence": null},
+    {"name": "Teng Qi", "decision": "PENDING", "date": null, "evidence": null}
+  ],
+  "target_journal": null,
+  "matching_archive_doi": null,
+  "submission_authorized": false
+}

@@ -80,6 +80,9 @@ The frozen evidence chain is:
 - [R1 HOLD integration review](phase17_v7/round6_q1_robustness/20260827_r1_hold_integration/14_ROUND6_R1_HOLD_ADVISOR_REVIEW.md)
 - [Corrected mapping calibration review](phase17_v7/gateC9R/20260828_normalization_correction/16_GATE_C9A_PREFREEZE_REVIEW.md)
 - [Correction review and synchronization record](00_project_management/action_record_2026-08-28_correction_release_reconciliation.md)
+- [Current external-review response and author gate](00_project_management/action_record_2026-08-28_external_review_author_gate.md)
+- [External methods-review dossier](00_project_management/external_review_2026-08-28/External_Methods_Review.md)
+- [Journal fit and formatting assessment](00_project_management/external_review_2026-08-28/Journal_Fit_and_Format_Assessment.md)
 - [Current figure and source-data manifest](phase17_v7/post_gateC9/20260828_advisor_correction_review/02_REVIEW_FIGURE_MANIFEST.csv)
 
 Git history and the immutable public release preserve superseded submission
@@ -91,10 +94,13 @@ remain ignored. Markdown, scripts and machine-readable analysis outputs remain
 the authoritative sources. That historical package predates the correction and
 must not be submitted unchanged. Historical PASS labels do not override this status.
 
-The separate local `04_submission/correction_review.zip` contains the current four
+The separate local `04_submission/author_review.zip` contains the current four
 review documents, five main and ten supplementary figures, and reconciled
 statistical attachments. It passed WPS, accessibility, manifest and deterministic
 packaging checks, but remains review-only with renewed author approval pending.
+Current and historical author approvals are separated, and the package carries
+an external methods-review dossier. The earlier `correction_review.zip` is kept
+as a historical review snapshot.
 Generated review packages are not tracked in Git; the linked action record gives
 the exact package hash, verification scope and next-stage requirements.
 

@@ -2,12 +2,26 @@
 
 import unittest
 import importlib
+import json
 
 from phase17_postc9_06_build_correction_package import manifest_bytes, zip_bytes
-from verify_review_bundle import archive_entries, require_review_status, safe_name, sha256, verify_document_provenance, verify_entries
+from verify_review_bundle import archive_entries, require_review_status, safe_name, sha256, verify_document_provenance, verify_entries, verify_review_governance
 
 
 class ReviewBundleTests(unittest.TestCase):
+    def governance(self):
+        gate = {"gate":"EXTERNAL_METHODS_REVIEW_AND_AUTHOR_REAPPROVAL_GATE",
+                "external_feedback_received":True,
+                "external_methods_review_status":"FEEDBACK_RECEIVED_CLOSURE_PENDING",
+                "reviewer_identity":None,"reviewer_independence_confirmed":False,
+                "external_methods_review_decision":None,"submission_authorized":False,
+                "authors":[{"name":name,"decision":"PENDING","date":None,"evidence":None}
+                           for name in ("Zhi Chen","Teng Qi")]}
+        entries = {"governance/"+name:b"- [ ] Pending\n" for name in
+                   ("Author_Confirmation.md","Reporting_Checklist.md","External_Methods_Review.md")}
+        entries["governance/review_gate.json"] = json.dumps(gate).encode()
+        return entries, gate
+
     def payload(self):
         entries = {"data/result.csv":b"name,value\nA,1\n"}
         entries["MANIFEST_SHA256.csv"] = manifest_bytes(entries)
@@ -67,6 +81,35 @@ class ReviewBundleTests(unittest.TestCase):
         entries["sources/Manuscript.md"] = b"changed after render"
         with self.assertRaisesRegex(ValueError,"different snapshots"):
             verify_document_provenance(entries,rows)
+
+    def test_current_governance_is_complete_and_pending(self):
+        entries, gate = self.governance()
+        self.assertEqual(verify_review_governance(entries),gate)
+        del entries["governance/External_Methods_Review.md"]
+        with self.assertRaisesRegex(ValueError,"incomplete"):
+            verify_review_governance(entries)
+
+    def test_feedback_cannot_become_external_signoff(self):
+        entries, gate = self.governance()
+        gate["external_methods_review_decision"] = "APPROVED"
+        entries["governance/review_gate.json"] = json.dumps(gate).encode()
+        with self.assertRaisesRegex(ValueError,"external methods approval"):
+            verify_review_governance(entries)
+
+    def test_author_approval_cannot_be_invented(self):
+        entries, gate = self.governance()
+        gate["authors"][0]["decision"] = "APPROVED"
+        entries["governance/review_gate.json"] = json.dumps(gate).encode()
+        with self.assertRaisesRegex(ValueError,"author reapproval"):
+            verify_review_governance(entries)
+
+    def test_old_checked_forms_are_rejected(self):
+        for name,text in (("Author_Confirmation.md",b"- [X] Approved\n"),
+                          ("Reporting_Checklist.md",b"Earlier package record: 46/46\n")):
+            entries, _ = self.governance()
+            entries["governance/"+name] = text
+            with self.assertRaises(ValueError):
+                verify_review_governance(entries)
 
 
 if __name__ == "__main__":
