@@ -90,6 +90,8 @@ The frozen evidence chain is:
 - [Current candidate figure and source-data manifest](phase17_v7/post_gateC9/20260828_corrected_candidate/02_REVIEW_FIGURE_MANIFEST.csv)
 - [Corrected candidate and JCR Q1 action record](00_project_management/action_record_2026-08-28_jcr_q1_corrected_candidate.md)
 - [JCR evidence and journal decision](00_project_management/jcr_q1_refreeze_2026-08-28/Journal_Decision.md)
+- [Latest target-preparation audit and next actions](00_project_management/action_record_2026-08-29_jcr_q1_target_preparation.md)
+- [Institutional JCR and APC request draft](00_project_management/jcr_q1_target_preparation_2026-08-29/Institutional_Request_Draft.md)
 
 Git history and the immutable public release preserve superseded submission
 drafts. The stable filenames above are the only current author-facing entry

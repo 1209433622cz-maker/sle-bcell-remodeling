@@ -1,0 +1,60 @@
+{
+  "record_date": "2026-08-29",
+  "timezone": "Asia/Hong_Kong",
+  "phase": "JCR_Q1_TARGET_SELECTION_AND_FINAL_FILE_FREEZE",
+  "status": "PREPARATION_COMPLETE_EXTERNAL_EVIDENCE_PENDING",
+  "candidate_sha256": "D87F83BEBE281E748E54DF0736E34B38E1CB0FF83C746C934B43E730373BA150",
+  "ranking_system": "JCR JIF quartile",
+  "required_quartile": "Q1",
+  "conditional_fit_lead": "npj Systems Biology and Applications",
+  "parallel_candidate": "Communications Biology",
+  "selected_target": null,
+  "official_jcr_profile_export_obtained": false,
+  "q1_eligibility_verified": false,
+  "institutional_jcr_guide": "https://cuhk-shenzhen.libguides.com/c.php?g=964056",
+  "institutional_jcr_bridge": "https://idp.cuhk.edu.cn/bridge/jcr",
+  "institutional_bridge_observation_date": "2026-08-28",
+  "institutional_bridge_result": "Public metadata for npj only; rank and quartile not obtained",
+  "npj_public_row": {
+    "electronic_issn": "2056-7189",
+    "most_recent_jcr_year": 2025,
+    "displayed_category": "MATHEMATICAL & COMPUTATIONAL BIOLOGY",
+    "index": "SCIE",
+    "all_categories_verified": false,
+    "rank": null,
+    "denominator": null,
+    "quartile": null
+  },
+  "apc": {
+    "institution": "The Chinese University of Hong Kong, Shenzhen",
+    "institutional_coverage_verified": false,
+    "hong_kong_agreement_inherited": false,
+    "npj_lookup_result": "INCONCLUSIVE_NO_USABLE_INSTITUTION_RESULT",
+    "author_budget_authorized": false,
+    "waiver_requested": false,
+    "payment_performed": false,
+    "library_request_drafted": true,
+    "library_request_sent": false
+  },
+  "formatting": {
+    "candidate_source_changed": false,
+    "existing_short_title_words": 13,
+    "existing_short_abstract_words": 117,
+    "draft_applied": false,
+    "initial_format_flexible_for_both_candidates": true,
+    "all_figures_rerender_mandatory_before_initial_submission": false,
+    "target_specific_requirements_still_to_check": true,
+    "s10": "RETAIN_CURRENT_VERIFIED_FIGURE"
+  },
+  "release": {
+    "new_draft_created": false,
+    "new_doi_reserved": false,
+    "new_version_published": false,
+    "historical_tag_moved": false
+  },
+  "author_approval": "PENDING_CORRECTED_CANDIDATE",
+  "submission_authorized": false,
+  "numerical_reanalysis_performed": false,
+  "independent_reviewer_identity_verified": false,
+  "notes": "Incoming review prose is evidence to assess, not a named independent signoff or authorization. Readiness is not a completion percentage."
+}

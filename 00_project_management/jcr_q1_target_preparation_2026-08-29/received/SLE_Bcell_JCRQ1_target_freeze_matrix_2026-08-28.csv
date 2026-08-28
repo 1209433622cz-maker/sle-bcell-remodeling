@@ -1,0 +1,14 @@
+﻿Priority,ID,Task,Execution rule,Domain
+P0,JCR-01,Obtain official current JCR profile,"Record metric year, every assigned category, rank/denominator and quartile from Clarivate/institutional JCR. Do not freeze Q1 from JIF or SJR.",Journal
+P0,JCR-02,Select target,Conditional lead npj Systems Biology and Applications; Communications Biology parallel strong candidate; Genome Medicine stretch.,Journal
+P0,COST-01,APC feasibility,"Check institutional OA agreement, author budget and waiver options before target lock; do not assume coverage.",Finance
+P0,FMT-01,One-shot journal manuscript format,"After target selection only: title, abstract, section order, declarations and AI-use placement. Preserve all scientific boundaries.",Manuscript
+P0,FIG-01,Journal-specific figure rerender,Rerun from source at the selected journal's final dimensions/font/line requirements. Never hand-resize or edit final PDFs.,Figure
+P1,FIG-S10,Optional calibration-frontier panel,"If reviewer communication benefits, redraw S10d from frozen calibration candidates as coverage-vs-B_ASC-precision frontier; no retuning/outcomes.",Figure
+P0,QA-01,Rebuild and full QA,"DOCX/PDF rebuild, WPS all-page review, a11y, figure semantic/font/size checks, nested manifests and deterministic ZIP.",QA
+P0,REL-01,Freeze exact final commit,Create final corrected target-specific commit; keep historical v1.0.0 immutable.,Release
+P0,REL-02,New version DOI,Create v1.1.0 (or equivalent) and Zenodo New Version; use exact version-specific DOI.,Release
+P0,REL-03,DOI insertion rebuild,"Insert DOI into manuscript/repository/portal metadata, then rebuild and reverify once more.",Release
+P0,AUTHOR-01,Exact-file final approval,"Both authors approve exact final hashes after target formatting and DOI insertion, and explicitly authorize upload/submission.",Author
+P0,SUBMIT-01,Portal preflight and submission,"Upload only authorized files, inspect generated PDF, record manuscript number, receipt, timestamp and uploaded hashes.",Submission
+STOP,SCIENCE,No exploratory rescue,"No new cohort, mapper, threshold, seed, TF/regulon, gene-set or outcome-informed rescue before first submission.",Governance

@@ -1,0 +1,577 @@
+我这一轮重新按 **GitHub 最新 `main` + 你上传的 `corrected_candidate.zip` + 当前 Manuscript/Supplement/RP/Cover Letter + R1/R2/C9R + 15 张主/补图 + 当前 JCR Q1 选刊记录** 做了独立终局复核。
+
+GitHub 已经比上一轮继续前进：当前最新 `main` 是 `74678c7cf75e376d90cdae886b6a1a4cf1951714`，其前一实质源码提交 `05e41f40284fc65c6cd18bbecaa2bf507e81b5f8` 已正式把 Figure 1c 的阈值语义纠错整合进去，并保存 corrected candidate 的验证回执。
+
+## 本轮最重要的结论
+
+> **上轮唯一明确的 Figure 1c submission-facing blocker 已经关闭。**
+
+当前 `corrected_candidate.zip` 中，Figure 1c 已不再把 0.990 错写成 `minimum mapped-ARI criterion`，而是正确显示：
+
+> `minimum agreement criterion`
+
+对应 legend 也已经同步改成：
+
+> `minimum mapping-agreement criterion of 0.990`
+
+而真实冻结规则仍是：
+
+> minimum mapped ARI ≥ 0.900
+> minimum mapping agreement ≥ 0.990
+
+所以这一次不是“看起来修好了”，而是**图、图注、源码、Source Data 和机器断言已经对齐**。GitHub 当前 README 也明确记录 corrected candidate 已正式整合 Figure 1 redraw、legend correction 和 panel-a spacing correction，同时保持科学数据不变。
+
+---
+
+## corrected_candidate.zip 独立完整性：PASS
+
+我重新逐文件计算你上传的：
+
+`corrected_candidate.zip`
+
+结果为：
+
+| 项目                 |                                                               独立结果 |
+| ------------------ | -----------------------------------------------------------------: |
+| ZIP 大小             |                                               **26,632,739 bytes** |
+| SHA-256            | `D87F83BEBE281E748E54DF0736E34B38E1CB0FF83C746C934B43E730373BA150` |
+| ZIP entries        |                                                                 83 |
+| Manifest payload   |                                                             **82** |
+| Size 校验            |                                                     **82/82 PASS** |
+| SHA-256 校验         |                                                     **82/82 PASS** |
+| Missing payload    |                                                                  0 |
+| Unexpected payload |                                                                  0 |
+
+这一 SHA 与 GitHub 当前同步回执完全一致；repo 记录的 candidate payload 数也是 82。
+
+所以当前不存在“上传包与 GitHub candidate 不是同一个版本”的问题。
+
+---
+
+# 科学主体已经不应再重开
+
+现在最值得保护的是已经形成的证据边界，而不是继续制造更多 PASS。
+
+当前最稳的科学链条仍然是：
+
+**150,402 B-lineage cells**
+
+→ fine-grained hard state assignment 不稳定
+
+→ B_CONV/B_ASC 只作为 analysis scaffold
+
+→ R1 end-to-end HOLD，而且是 B_ASC-specific
+
+→ identity-boundary propagation 后 composition null 保持
+
+→ primary B_CONV IFN/ISG 保持
+
+→ donor-nonoverlap internal support
+
+→ source-label-defined independent GSE135779 childhood replication
+
+→ genome-wide rho=0.026，主动拒绝 transcriptome-wide replication
+
+→ STAT1/STAT2 observational convergence
+
+→ M5911 depletion 暴露 discovery STAT2 attenuation
+
+→ C9R corrected source-label-independent mapper calibration HOLD
+
+→ corrected disease outcome 不解锁、不估计。
+
+这条链现在非常完整。
+
+尤其当前 README 已明确写：
+
+> C9 原 PASS 已因 normalization 和 calibration-gate 问题失效；corrected run 在 B_ASC precision 0.885 < 0.90 时停止，而且没有打开新的 disease outcome。source-label-defined GSE135779 replication 继续保留，但 source-label-independent robustness 不成立。
+
+这是正确的科学治理。
+
+---
+
+# C9R 不要再救
+
+我仍然明确反对首投前重新：
+
+改 0.90 为 0.88、只保留 centroid、扩大 confidence grid、换 seed、重新选择 features、做 B_CONV-only post hoc gate，或者继续找 mapper 直到得到 PASS。
+
+因为现在你已经知道旧 C9 positive outcome。
+
+任何这类调整都会使新的 calibration design 带有 outcome-informed freedom。
+
+当前最好的论文不是：
+
+> “所有 robustness analyses 都 PASS。”
+
+而是：
+
+> **我们在预设 gate 不满足时真的停止了分析。**
+
+对于 hostile reviewer，这比增加一个阳性 sensitivity 更有可信度。
+
+---
+
+# Figure 1 现在科学和视觉都可以冻结
+
+我重新渲染了 candidate 里的 Figure 1。
+
+现在 Figure 1a 的三个 interpretation nodes：
+
+* same-data regulator robustness
+* M5911 response-set concordance
+* GSE23307 perturbational context
+
+已经没有之前的边界重叠。
+
+Figure 1b 也明确写：
+
+> `2-compartment minimum-ARI criterion`
+
+Figure 1c 则现在正确写：
+
+> `minimum agreement criterion`
+
+Figure 1d 的：
+
+> state-median Jaccard criterion
+
+也清楚。
+
+因此 Figure 1 当前已经完成了：
+
+**identity policy → broad partition → scope gate**
+
+三层语义的最终闭环。
+
+我不建议再为了视觉美化重新打开 Figure 1。
+
+---
+
+# 15 张图的 Nature-style QC：当前 journal-neutral 版本已经很强
+
+我独立解析了：
+
+**Figures 1–5 + Supplementary Figures S1–S10**
+
+共 15 个 vector PDF。
+
+结果为：
+
+| 指标               | 当前状态                    |
+| ---------------- | ----------------------- |
+| 宽度               | 全部约 **170.0 mm**        |
+| Fonts            | Arial / Arial Bold      |
+| 最小 visible text  | **5.0–6.0 pt**          |
+| 最大非 panel text   | **≤7 pt**               |
+| Panel labels     | **8 pt bold lowercase** |
+| Vector text      | PASS                    |
+| 最大 figure height | 约 **163 mm**            |
+
+Nature 当前通用 initial-submission figure guidance 建议 double-column 约 180 mm、最大高度 170 mm、Arial/Helvetica、正文 5–7 pt、vector editable artwork。([Nature][1])
+
+所以：
+
+> **作为 journal-neutral Nature-style reviewer figures：PASS。**
+
+但是我现在不建议再把“Nature 通用规范”当作所有 Nature Portfolio 子刊的最终 production spec。
+
+例如 Communications Biology 自己的最新 submission guidance 明确说 final figures 应按预计出版尺寸制作，并把 **8 pt** 作为 optimum font size，同时要求统一 Arial/Helvetica、RGB、≥300 dpi，并优先 vector/editable files。([Nature][2])
+
+也就是说：
+
+> 当前 170 mm / 5–7 pt 可以继续作为候选稿；
+>
+> **具体选刊后应按那个期刊自己的 final figure guide 从代码重跑一次。**
+
+这是目前最合理的策略。
+
+---
+
+# S10：现在可用，但还有一个可选的最后优化
+
+当前 S10 已经清楚表达：
+
+* normalization mismatch corrected
+* frozen precision gate
+* frozen coverage gate
+* donor-grouped calibration folds
+
+其中最关键的 panel b 已直接显示：
+
+> Elastic-net B_ASC precision ≈ 0.885
+
+在 0.90 threshold 以下。
+
+所以科学表达没有问题。
+
+但 panel d 仍然是：
+
+> donor-grouped balanced accuracy
+
+这些值都很高，容易让非方法 reviewer 产生：
+
+> “整体 accuracy 都这么好，为什么 HOLD？”
+
+所以如果最终想再提高 1% reader communication，我仍然推荐一个**纯 frozen-data 的可选改图**：
+
+把 S10d 换成：
+
+> **coverage vs B_ASC precision calibration frontier**
+
+直接画出：
+
+> coverage ≥0.80
+> B_ASC precision ≥0.90
+
+的 eligible region。
+
+这样能一眼说明：
+
+> overall classifier quality 很高 ≠ frozen state-specific gate 合格。
+
+这只应从现有 calibration table 重绘，绝对不能重新训练 mapper。
+
+不是 P0；当前 S10 已经足够提交。
+
+---
+
+# Manuscript 现在已经接近科学终稿
+
+我重新统计 candidate source：
+
+> Title：约 **16 words**
+> Abstract：约 **337 words**
+> Background：约 431
+> Methods：约 2,080
+> Results：约 2,050
+> Discussion：约 896
+
+正文科学结构已经非常成熟。
+
+当前标题：
+
+> **Disease-blind single-cell reconstruction separates unstable B-cell state assignments from reproducible interferon remodeling in systemic lupus erythematosus**
+
+我仍然认为科学上是准确的。
+
+“state assignments”这个词非常重要，因为它避免了：
+
+> naive / memory / DN2 biological states 本身“不存在”
+
+这种误读。
+
+---
+
+# 当前 narrative 已经非常适合 Q1 编辑阅读
+
+现在最强的文章逻辑不是：
+
+> IFN is increased in SLE.
+
+而是：
+
+> **the reproducibility of the inferential unit was tested before it was trusted.**
+
+然后文章表现出：
+
+> hard cell-state membership 有明确 reproducibility boundary，
+
+但：
+
+> process-level IFN remodeling 对 donor hierarchy、assignment uncertainty 和独立 cohort 更稳定。
+
+这才是稿件真正有潜力进入一区的 conceptual component。
+
+---
+
+# 一个文字细节已经正确修掉
+
+上轮我指出：
+
+> `excluding dependence on a single source label`
+
+逻辑略过强。
+
+现在 candidate 已经改为：
+
+> **`arguing against dependence on any single contributing source label`**
+
+这是更严格的表述。
+
+GitHub 本轮 action record 也明确将它列为三处 manuscript source change 之一，而且 854 个 numeric tokens 完全没变。
+
+这项可以冻结。
+
+---
+
+# 当前最大的 blocker 已经完全变成“选刊”
+
+现在 repo 的 `Journal_Decision.md` 自己已经正确写：
+
+> **target journal not selected. JCR Q1 eligibility remains unverified.**
+
+这也是我现在最同意的一点。
+
+不要用：
+
+> JIF 高
+
+推导：
+
+> 一定是 JCR Q1。
+
+也不要用：
+
+> SJR Q1 / CAS 一区
+
+替代你们已经明确要求的：
+
+> **JCR Q1**。
+
+---
+
+# 当前 fit-based 首选仍是 npj Systems Biology and Applications
+
+从科学内容匹配度看，它依然是我目前最喜欢的候选。
+
+官方 scope 直接包括：
+
+* computational and mathematical analysis of complex biological systems；
+* disease modeling；
+* single-cell systems biology；
+* systems immunology。([Nature][3])
+
+你的论文核心恰好是：
+
+> single-cell systems immunology + uncertainty-aware state reconstruction + biological process reproducibility。
+
+Publisher 当前报告的 2025 JIF 为：
+
+> **4.4**。([Nature][4])
+
+而且 npj 官方明确说明：**initial submission 不需要先完全按最终格式排版**，只需足够适合 editorial assessment 和 peer review。([Nature][5])
+
+这意味着如果 JCR Q1 被正式确认：
+
+> 没必要继续过度工程化 manuscript 之后才投稿。
+
+---
+
+# Communications Biology 仍然是并列强候选
+
+它当前 official scope 明确允许：
+
+> **secondary data analysis**
+
+以及：
+
+> **innovative computational methods**。([Nature][6])
+
+它要求的核心标准则是：
+
+> novel insight
+> strong evidence
+> technically sound
+> important to the biological subfield。([Nature][6])
+
+当前 publisher-reported 2025 JIF 是：
+
+> **5.8**。([Nature][7])
+
+这个稿件最大的优势：
+
+> transparent HOLDs + strong reproducibility + independent program-level replication
+
+非常符合它的 technical soundness 标准。
+
+但它对 biological advance 的要求会比 npj SBA 更敏感。
+
+所以从 desk-risk 来看，我当前仍排：
+
+> **npj SBA：fit 更自然**
+
+> **Communications Biology：品牌/广度更好，但对 biological novelty 的要求稍高**
+
+前提都一样：
+
+> **先正式核实 JCR Q1。**
+
+---
+
+# 如果最后选 Communications Biology，格式需要一次性重构
+
+它目前 Article guidance 推荐：
+
+> title ≈15 words or fewer
+> abstract ≤150 words
+> Introduction + Results + Discussion 约 ≤5,000 words。([Nature][8])
+
+当前正文长度完全没问题。
+
+真正需要改变的是：
+
+> **16-word title + 337-word structured abstract**
+
+而不是删除大量 Results。
+
+我建议的 Nature Portfolio candidate title 仍然是：
+
+> **Interferon remodeling persists despite uncertain B-cell state assignments in systemic lupus erythematosus**
+
+它更直接地表达：
+
+> state uncertainty vs process-level robustness。
+
+---
+
+# Genome Medicine 仍然只是 stretch
+
+我没有把它完全排除。
+
+但现在 C9R source-label-independent external robustness 正式 HOLD 后，Genome Medicine 的 desk-risk 更清楚：
+
+> known IFN biology
+> public-data secondary analysis
+> source-label-defined external replication
+> no prospective treatment cohort
+> no direct matched patient perturbation
+> no demonstrated clinical utility
+
+所以现在如果目标是：
+
+> **JCR Q1 + 最匹配当前证据结构**
+
+我更倾向：
+
+> npj Systems Biology and Applications / Communications Biology
+
+而不是继续因为历史准备惯性默认 Genome Medicine。
+
+---
+
+# 当前 package 还不能上传
+
+虽然 corrected candidate 技术上已经非常完整，但它自己的状态仍然是：
+
+> `review_only = true`
+
+> `submission_authorized = false`
+
+> `author_reapproval = PENDING_CORRECTED_CANDIDATE`
+
+而且 11 个 portal roles 全部仍是：
+
+> `DRAFT_NOT_FOR_UPLOAD`
+
+这是正确状态。
+
+因为旧作者确认绑定的是 prior reviewed snapshot；Figure 1 correction 和 journal-specific formatting 都不应该被默认为已经批准。
+
+当前 README 也明确说明 candidate approval 仍 pending。
+
+---
+
+# 现在不建议立刻再找作者确认
+
+更高效的路径是：
+
+> 先确认期刊。
+
+因为一旦选刊，还会产生：
+
+> title change
+> abstract compression
+> section reordering
+> final figure dimensions
+> journal-specific AI disclosure placement
+> new DOI
+
+如果现在先让作者批准 corrected candidate，过几个小时又让作者批准 journal-formatted candidate，是低效重复。
+
+应该最后：
+
+> **一次 exact-file approval。**
+
+---
+
+# 当前完成度
+
+| 模块                                           |                                                当前判断 |
+| -------------------------------------------- | --------------------------------------------------: |
+| Scientific design                            |                                             **98%** |
+| Statistical rigor                            |                                             **98%** |
+| R1 transparency                              |                                             **99%** |
+| Identity uncertainty propagation             |                                             **98%** |
+| Independent source-label-defined validation  |                                             **96%** |
+| Source-label-independent external robustness |                               **HOLD / unresolved** |
+| Regulatory robustness                        |                                             **97%** |
+| Manuscript logic                             |                                             **98%** |
+| Main figures                                 |                                             **99%** |
+| Figure 1 semantic correctness                |                                            **100%** |
+| Nature-style review typography               |                                             **99%** |
+| Supplement                                   |                                             **98%** |
+| Source-data traceability                     |                                             **99%** |
+| Reproducibility engineering                  |                                             **99%** |
+| Candidate package integrity                  |                                            **100%** |
+| Verified JCR Q1 target                       |                                         **PENDING** |
+| Final target-journal formatting              |                                         **PENDING** |
+| New immutable version DOI                    |                                         **PENDING** |
+| Exact final author authorization             |                                         **PENDING** |
+| Portal readiness                             | **BLOCKED by publication engineering, not science** |
+
+---
+
+# 下一阶段目标
+
+我建议现在正式进入：
+
+> **`JCR_Q1_TARGET_SELECTION_AND_FINAL_FILE_FREEZE`**
+
+而不是再做 Gate C10/C11 biology。
+
+执行顺序固定为：
+
+1. 从 Clarivate/学校 JCR 获取候选刊当前 **metric year + 全部 category + rank/denominator + quartile**；
+2. 只保留正式满足 JCR Q1 的候选；
+3. 如果 npj SBA 与 Communications Biology 都满足，按 journal fit + APC 可行性选一个；
+4. 确认 APC/学校 OA agreement/waiver；
+5. 一次性完成 target-specific title、abstract、section order、AI disclosure；
+6. 从代码按目标期刊 final specification 重跑图件，不手改 PDF；
+7. 保持 R1 HOLD、C9R HOLD 和全部结果不变；
+8. rebuild DOCX/PDF → WPS full-page QA → accessibility → semantic assertions；
+9. freeze final Git commit；
+10. 保留 `v1.0.0` 不动，新建例如 **v1.1.0**；
+11. Zenodo `New Version`，取得 version-specific DOI；
+12. DOI 回填后**再完整 rebuild 一次**；
+13. 两位作者批准 exact final hashes，并明确 authorize submission；
+14. portal preflight → submit → 保存 manuscript number / receipt / actual uploaded hashes。
+
+## 最终导师判断
+
+这一版项目已经不缺分析。
+
+目前最重要的进展是：
+
+> **Figure 1 最后一个明确语义错误已经真正关闭，而且没有牵动任何科学值。**
+
+R1 HOLD 和 C9R HOLD 也已经被转化成稿件可信度的一部分，而不是被隐藏或“救回”。
+
+因此下一轮最值得做的事只有一个：
+
+> **正式锁定 JCR Q1 期刊，然后一次性完成 journal-specific final release。**
+
+本轮更新的完整审计和执行矩阵已经生成：
+
+[下载 Corrected Candidate 独立全量审计报告](sandbox:/mnt/data/SLE_Bcell_corrected_candidate_independent_full_audit_2026-08-28.md)
+
+[下载 JCR Q1 Target Freeze 执行矩阵](sandbox:/mnt/data/SLE_Bcell_JCRQ1_target_freeze_matrix_2026-08-28.csv)
+
+[1]: https://www.nature.com/nature/for-authors/initial-submission?utm_source=chatgpt.com "Initial submission | Nature"
+[2]: https://www.nature.com/commsbio/submit/submission-guidelines?utm_source=chatgpt.com "Submission guidelines | Communications Biology"
+[3]: https://www.nature.com/npjsba/aims?utm_source=chatgpt.com "Aims & Scope | npj Systems Biology and Applications"
+[4]: https://www.nature.com/npjsba/journal-impact?utm_source=chatgpt.com "Journal Metrics | npj Systems Biology and Applications"
+[5]: https://www.nature.com/npjsba/for-authors-and-referees?utm_source=chatgpt.com "For Authors and Referees | npj Systems Biology and Applications"
+[6]: https://www.nature.com/commsbio/aims?utm_source=chatgpt.com "Aims & Scope | Communications Biology"
+[7]: https://www.nature.com/commsbio/journal-impact?utm_source=chatgpt.com "Journal Metrics | Communications Biology"
+[8]: https://www.nature.com/documents/CommsBio-file-checklist-revision.pdf?utm_source=chatgpt.com "Revised manuscript submission file checklist"
