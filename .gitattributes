@@ -22,5 +22,5 @@
 audit_tools/run_6013RP_phase17_gateC9_label_agnostic_gse135779.ps1 text eol=lf
 
 # Generated review manifests describe exact bytes, including CSV line endings.
-phase17_v7/post_gateC9/** -text
-00_project_management/post_gateC9_release_review_2026-08-28/calibration_recount_audit.json -text
+phase17_v7/post_gateC9/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+00_project_management/post_gateC9_release_review_2026-08-28/calibration_recount_audit.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
