@@ -18,7 +18,7 @@ framed as an analysis scaffold rather than a universally reproducible taxonomy.
 Propagating every observed broad-state boundary exchange retained the primary
 composition null and both tested GSE174188 B_CONV IFN/ISG effects. The local
 journal package is an earlier WPS-audited snapshot, not a submission-ready release.
-Independent code review invalidated the subsequent C9 PASS: reference and external
+A post-freeze code audit invalidated the subsequent C9 PASS: reference and external
 normalization differed, and failed confidence calibration incorrectly authorized
 outcome access. The corrected full run processed all 363,083 cells but stopped
 at calibration HOLD (B_ASC precision 0.885 < 0.90). No corrected external disease
@@ -27,7 +27,8 @@ retained; source-label-independent robustness is not established. See the
 [correction contract](00_project_management/gateC9_technical_correction_contract_2026-08-28.md).
 The existing citable
 archive is available at [doi:10.5281/zenodo.22086892](https://doi.org/10.5281/zenodo.22086892);
-its payload must be updated before journal submission.
+a matching new archive version is required before journal submission; the initial
+snapshot remains historical.
 
 Working title:
 
@@ -78,16 +79,24 @@ The frozen evidence chain is:
 - [Full-run handoff](00_project_management/round6_full_pipeline_resampling_handoff_2026-08-25.md)
 - [R1 HOLD integration review](phase17_v7/round6_q1_robustness/20260827_r1_hold_integration/14_ROUND6_R1_HOLD_ADVISOR_REVIEW.md)
 - [Corrected mapping calibration review](phase17_v7/gateC9R/20260828_normalization_correction/16_GATE_C9A_PREFREEZE_REVIEW.md)
+- [Correction review and synchronization record](00_project_management/action_record_2026-08-28_correction_release_reconciliation.md)
+- [Current figure and source-data manifest](phase17_v7/post_gateC9/20260828_advisor_correction_review/02_REVIEW_FIGURE_MANIFEST.csv)
 
 Git history and the immutable public release preserve superseded submission
 drafts. The stable filenames above are the only current author-facing entry
-points. The generated `04_submission/journal_submission/` directory is
-reproducible; Git tracks its reader-facing README, manifests, portal maps and
+points. The historical `04_submission/journal_submission/` directory is preserved;
+Git tracks its reader-facing README, manifests, portal maps and
 11-file REQUIRED upload set, while internal renders and duplicate working assets
 remain ignored. Markdown, scripts and machine-readable analysis outputs remain
-the authoritative sources. The current local package passed WPS, accessibility,
-portal-map and deterministic-ZIP audits, but predates this correction and must
-not be submitted unchanged. Historical PASS labels do not override this status.
+the authoritative sources. That historical package predates the correction and
+must not be submitted unchanged. Historical PASS labels do not override this status.
+
+The separate local `04_submission/correction_review.zip` contains the current four
+review documents, five main and ten supplementary figures, and reconciled
+statistical attachments. It passed WPS, accessibility, manifest and deterministic
+packaging checks, but remains review-only with renewed author approval pending.
+Generated review packages are not tracked in Git; the linked action record gives
+the exact package hash, verification scope and next-stage requirements.
 
 ## Licence and citation
 

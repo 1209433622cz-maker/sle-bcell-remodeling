@@ -10,7 +10,10 @@ reference calibration; the original C9 PASS is not supporting evidence.
 - `Author_Confirmation.md`
 - `Reporting_Checklist.md`
 - `Portal_Upload_Guide.md`
-- `Zenodo_Metadata.json`
+
+`Zenodo_Metadata.json` records the initial published archive. Its DOI and author
+approval apply to that historical snapshot, not the current correction review.
+Do not reuse it as metadata for a new release without reconciliation.
 
 ## Generated package
 

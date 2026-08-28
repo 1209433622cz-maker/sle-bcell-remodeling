@@ -2,8 +2,9 @@
 
 ## Current correction hold
 
-This checklist below describes the earlier package, not current submission
-authorization. The latest target journal is undecided.
+This section records the current correction review, not submission authorization.
+Historical acceptance checks are retained separately below. The target journal is
+undecided.
 
 - [x] Original C9 PASS invalidated after normalization and calibration-gate audit.
 - [x] Corrected 56-matrix run retained reference-calibration HOLD; outcomes remained protected.
@@ -11,7 +12,7 @@ authorization. The latest target journal is undecided.
 - [x] Correction-review figures, Markdown/DOCX/WPS hashes and package manifests reconciled end to end.
 - [x] The separate bundle contains 5 main figures, 10 supplementary figures, 15 source tables and 20 corrected calibration records.
 - [x] Four current documents were WPS-rendered and audited; old author-approval claims were replaced by an explicit pending-renewal statement.
-- [ ] Corrected code, compact results and review documentation synchronized to GitHub.
+- [x] Corrected code, compact results and review documentation synchronized to GitHub; remote main verified at `1f1b5db6e72e6acba7b7d700dd5c45b871707ac1` before the final action-record update.
 - [ ] New Zenodo version and version-specific DOI match the final approved payload.
 - [ ] Final corrected package approved for portal upload.
 
