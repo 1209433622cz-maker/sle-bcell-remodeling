@@ -1,5 +1,13 @@
 # Reproducibility and repository scope
 
+## Current correction status
+
+The original C9 PASS is superseded. Corrected calibration processed all 56
+external matrices but B_ASC reference precision was 0.885210, below 0.90.
+No corrected disease outcome was estimated. The R1 identity HOLD also remains.
+The current materials are for review, not submission; the initial DOI does not
+identify the corrected package. See the current action records for provenance.
+
 ## Repository boundary
 
 This repository contains analysis code, study-design documents, environment
@@ -16,8 +24,8 @@ outcome was used during disease-blind identity learning.
 The cleaned local workspace retains the formal 150,402-cell raw-count H5AD and
 the frozen primary representation used by the current R1 workflows, but not the
 larger public source cache. `Data/README.md` records the exact restoration
-commands. GSE135779 metadata are present locally; its 1.30 GB RAW archive must
-be restored before the planned label-agnostic external mapping sensitivity.
+commands. GSE135779's 1.30 GB RAW archive and metadata were restored for the
+completed correction. They remain local and are not part of a Git checkout.
 
 ## Frozen data resources
 
@@ -39,7 +47,10 @@ future reader can distinguish numerical inference from document rendering.
 
 ### Scientific analysis environment
 
-The single-cell and figure workflow was run in a pinned Python 3.11 environment.
+The single-cell workflow was run in a Python 3.11 environment. The corrected
+C9 execution records its actual packages in `04_EXECUTION_PROVENANCE.json`;
+the older lock files below describe the earlier analysis environment, not an
+independently requalified correction environment.
 The correlation-aware regulator sensitivity was run with R 4.6.0, edgeR 4.10.1
 and limma 3.68.4. The tracked analysis locks are:
 
@@ -60,10 +71,11 @@ python .\02_analysis\scripts\01_check_scanpy_env.py
 
 ### Release and document environment
 
-The journal-facing build uses the dedicated `sle-bcell-submission` environment.
-WPS Office is the authoritative DOCX rendering backend on the release workstation;
-LibreOffice provides an independent portability render during final review. Its
-tracked locks are:
+Earlier releases used a dedicated submission environment. The correction figures
+were rebuilt with the installed Python 3.13.7 plotting runtime (NumPy 2.3.3,
+pandas 2.3.3, Matplotlib 3.10.7), and DOCX generation used the bundled document
+runtime. WPS renders the current documents; LibreOffice is not available on this
+workstation and no new cross-renderer verification is claimed. Historical locks:
 
 - `audit_tools/environment_submission.yml`
 - `audit_tools/environment_submission_win64.txt`
@@ -117,30 +129,52 @@ powershell -ExecutionPolicy Bypass `
    GSE135779 tests.
 10. STAT1/STAT2 regulators, signed CollecTRI targets, contrasts, backgrounds and
    designs were frozen before CAMERA and FRY sensitivity analyses.
-11. Five main and nine supplementary figures, manuscript numbers and legends
+11. Five main and ten supplementary figures, manuscript numbers and legends
     were regenerated from frozen or declared sensitivity tables and guarded by
     exact panel-data assertions.
 12. Complete statistical outputs were packaged with sanitized design matrices,
     a unified test-family map, 101 end-to-end identity robustness files,
     file-level provenance and deterministic hashes.
+13. An audit found mismatched reference/external normalization denominators and
+    an ineligible calibration fallback in C9. Full-library normalization and
+    fail-closed outcome access were corrected without changing candidate grids
+    or gates. The complete run retained calibration HOLD. Original outcomes had
+    already been seen; the correction is not a prospective preregistration.
+14. A separate arithmetic implementation recounted all 72 confidence candidates
+    from 14,300 OOF records, confirmed donor separation in five folds, and
+    reproduced the failed calibration. This is not external model validation.
 
-## Submission package rebuild
+## Correction review bundle
 
-The current author-facing rebuild is:
+The historical release builders are retired on the current branch: they rewrite
+canonical prose and delete the previous package. Do not use them for this review.
+The new builder writes only a new, empty output directory and checks source hashes.
+After WPS rendering, build with:
 
 ```powershell
 powershell -ExecutionPolicy Bypass `
-  -File .\audit_tools\build_submission_package.ps1 `
-  -Doi "10.5281/zenodo.22086892"
+  -File .\audit_tools\build_correction_review.ps1
 ```
 
-Use `-Mode PortableCore` for a portable build that stops before the WPS review.
-The default full mode uses WPS Office and performs page-by-page raster and
-accessibility checks before the deterministic package archive is created.
+The builder assembles already-rendered, hash-verified documents and figures; it
+does not perform numerical inference or automatically approve release. See its
+parameters for the document and audit directories. A checkout requires the
+retained historical statistical archive and the local review documents.
 
-## Frozen release assertions
+The extracted bundle can be checked from any directory, without site packages:
 
-- Main-figure panel-data assertions: 46/46.
+```powershell
+python -I -S .\04_submission\correction_review\verify_review_bundle.py `
+  --bundle .\04_submission\correction_review
+```
+
+This checks file closure, sizes, hashes, nested statistical archives and claim
+boundaries, not biological validity or a fresh recomputation. Large matrices,
+reference-cell predictions and per-cell external predictions remain local.
+
+## Historical release versus current review
+
+- Current main-figure panel-data assertions: 47/47.
 - Supplementary-figure panel-data assertions: legacy 29/29 plus separate S8
   (36 rows) and S9 (128 rows; 8/8 checks) contracts.
 - Reference DOI identities independently resolved: 28/28.
@@ -154,15 +188,15 @@ accessibility checks before the deterministic package archive is created.
   text.
 - The package contains separate `portal_upload_required` and
   `portal_upload_optional` directories plus a filename and hash map.
-- The final WPS render contains 32 manuscript pages, 17 supplementary pages and
-  one cover-letter page; all three DOCX accessibility audits report zero high,
-  medium or low findings.
+- The earlier WPS release had 32 manuscript pages, 17 supplementary pages and
+  one cover-letter page. Current page counts and accessibility results are
+  computed afresh and included in the correction-review evidence; these old
+  counts are not acceptance criteria for the revised documents.
 
 ## Author and portal boundary
 
-The authors have completed ethics, competing-interests, funding, CRediT,
-acknowledgement, originality, approval, correspondence and licence decisions.
-The DOI is public and resolves to the archived release. The pipeline verifies
-the local submission package but does not perform the final journal submission;
-the corresponding author must still review the portal metadata and generated
-submission PDF before the irreversible submit action.
+The recorded author identities, declarations and licences are retained. The
+substantively revised manuscript and cover letter require renewed final approval.
+No target journal is fixed. A matching version-specific archive, exact release
+commit, final portal review and author authorization remain prerequisites to
+submission. Technical bundle verification does not satisfy these requirements.

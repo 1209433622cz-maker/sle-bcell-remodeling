@@ -1,0 +1,95 @@
+{
+  "created_at": "2026-08-28T08:42:11+08:00",
+  "status": "PASS_INDEPENDENT_IMPLEMENTATION_RECOUNT",
+  "calibration_rows": 72,
+  "reference_cells": 14300,
+  "donors": 258,
+  "folds": 5,
+  "donor_fold_leakage": false,
+  "sample_matrices": 56,
+  "elastic_B_ASC_precision": 0.8852097130242825,
+  "outcome_unlock_authorized": false,
+  "scope": "Independent implementation of arithmetic checks by the same auditing agent; not a separate external reviewer, model refit, or disease analysis.",
+  "inputs": [
+    {
+      "file": "01_INPUT_SHA256_MANIFEST.csv",
+      "bytes": 2437,
+      "sha256": "C7BE217FA71CDA3EDA5601FB8947F933732CA032B3C46331233CE783AA114189"
+    },
+    {
+      "file": "02_PROTECTED_METADATA_CONTRACT.json",
+      "bytes": 527,
+      "sha256": "63810896FC9F2856B6A6E0882D5C94C8E003EF84DFDB9244B0ADDD68C8DB0C08"
+    },
+    {
+      "file": "03_REFERENCE_LIBRARY_SIZE_AUDIT.csv",
+      "bytes": 753678,
+      "sha256": "845B84FEF5F42AA15040579C9E28E0DFDE8E38085231022C55EC3EFDF44B5919"
+    },
+    {
+      "file": "04_EXECUTION_PROVENANCE.json",
+      "bytes": 485,
+      "sha256": "1B38BC0DAB0589860E38B9DCD0C6758EE8EB0E0435E262DCC7DFC90E36BCCFCD"
+    },
+    {
+      "file": "05_REFERENCE_MODEL_FEATURES.csv",
+      "bytes": 19389,
+      "sha256": "3283BF7D69EF78541EC477ECE4ABDA93AF8519D37316F2FB075B54D9555D8BBF"
+    },
+    {
+      "file": "06_MAPPER_DONOR_GROUPED_CV.csv",
+      "bytes": 3249,
+      "sha256": "6782953EFFDD452671D435B4A5AE75A7C5CD0070E82A0C08C17EF18BCE813A90"
+    },
+    {
+      "file": "07_MAPPER_CONFIDENCE_CALIBRATION.csv",
+      "bytes": 7594,
+      "sha256": "753BC9ED7A240BCA757982A9BAEA41079359EE6DEA646527E5FC4437D0B9B15C"
+    },
+    {
+      "file": "08_REFERENCE_OOF_PREDICTIONS.csv",
+      "bytes": 1646919,
+      "sha256": "96ADA767A495E8246317924431454D2DAE677B2428CDBC85E4956495AFBD5F5B"
+    },
+    {
+      "file": "09_FROZEN_MAPPER_PARAMETERS.csv",
+      "bytes": 32031,
+      "sha256": "71B364DD3FA084A8FFA9CEFA6DC0B22256E6AE216055623C439B914A507AA255"
+    },
+    {
+      "file": "10_CELL_PREDICTIONS_LOCAL.csv.gz",
+      "bytes": 31351639,
+      "sha256": "38BAD3AE7346EF3ECA393F04F1B79DC4A89517B82EDA1C368F9244232E5F5904"
+    },
+    {
+      "file": "11_SAMPLE_PREFREEZE_SUMMARY.csv",
+      "bytes": 8084,
+      "sha256": "ACE7C235DC21CDB2D577D97776065060EE3EDA2E75F1A2292D55BB93D575A12D"
+    },
+    {
+      "file": "12_CLUSTER_SELECTION_AUDIT.csv",
+      "bytes": 55454,
+      "sha256": "CB9E049934BF8962CA25E6B31785F3B805529BB7984FBBD002E6DE9A502FBEC3"
+    },
+    {
+      "file": "13_LINEAGE_MODULE_AVAILABILITY.csv",
+      "bytes": 179,
+      "sha256": "BE36E90766D34EABE11ADBDB9E895697CC6CB5761E2DAA815C7BBE4054213E88"
+    },
+    {
+      "file": "14_PROGRAM_GENE_AVAILABILITY.csv",
+      "bytes": 264,
+      "sha256": "6BFB5BC80CA78231B14F0445ABFD8918B4941BBD56908326416B85B9179264F9"
+    },
+    {
+      "file": "15_GATE_C9A_PREFREEZE_DECISION.json",
+      "bytes": 2376,
+      "sha256": "4D4624B1670ABEF25DD6D9D69AC2DB445AC4E453F4F3CAB07BDBEADE5A85DF5C"
+    },
+    {
+      "file": "16_GATE_C9A_PREFREEZE_REVIEW.md",
+      "bytes": 689,
+      "sha256": "8299F822053C793A4D2989230C76A7DBB1D7594DB11278D4792A54E2588182F9"
+    }
+  ]
+}

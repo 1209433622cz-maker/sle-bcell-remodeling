@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-08-28T08:29:24+08:00",
+  "files": 1517,
+  "bytes": 2198236530,
+  "content_issues": 1,
+  "manifest_checks": 229,
+  "manifest_all_pass": true,
+  "corrected_decision": "HOLD_C9A_PREFREEZE_REVIEW_REQUIRED",
+  "corrected_outcome_unlock": false,
+  "corrected_outcome_files": [],
+  "figure_audit": {
+    "figures": 15,
+    "widths_170mm": true,
+    "font_or_canvas_violations": []
+  },
+  "document_audit": {
+    "pages": 59,
+    "document_hashes_match_rendered_files": true,
+    "page_counts": {
+      "Manuscript.pdf": 34,
+      "Research_Proposal.pdf": 6,
+      "Supplementary_Information.pdf": 19
+    },
+    "all_pages_within_canvas": true,
+    "all_markers_resolved": true,
+    "ten_supplementary_inline_figures": true
+  },
+  "unchanged_scientific_figure_source_tables": 14,
+  "scope": "All workspace files except .git, __pycache__, and this audit output. SHA-256 for all; content checks by format; no claim of rerunning all historical models or validating every biological entry."
+}

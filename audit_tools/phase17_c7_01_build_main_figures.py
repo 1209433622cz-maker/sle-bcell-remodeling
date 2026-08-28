@@ -6,7 +6,10 @@ from __future__ import annotations
 import argparse
 import csv
 import gzip
+import hashlib
+import io
 import json
+import zipfile
 from pathlib import Path
 from typing import Any
 
@@ -100,6 +103,20 @@ def read_json(path: Path) -> dict[str, Any]:
 
 
 def read_csv(path: Path) -> pd.DataFrame:
+    if not path.exists() and path.parent.name == "05_gene_results":
+        root = Path(__file__).resolve().parents[1]
+        accession = "GSE135779" if "gateC5B" in path.parts else "GSE174188"
+        member = f"gene_level_results/{accession}/{path.name}"
+        archive = root / "04_submission/journal_submission/portal_upload_required/Full_Statistical_Results.zip"
+        with zipfile.ZipFile(archive) as package:
+            manifest = pd.read_csv(package.open("MANIFEST_SHA256.csv"))
+            expected = manifest.loc[manifest["relative_path"].eq(member)]
+            if len(expected) != 1:
+                raise RuntimeError(f"No unique archived result: {member}")
+            payload = package.read(member)
+            if hashlib.sha256(payload).hexdigest().upper() != expected.iloc[0]["sha256"]:
+                raise RuntimeError(f"Archived result checksum mismatch: {member}")
+        return pd.read_csv(io.BytesIO(gzip.decompress(payload)))
     return pd.read_csv(path)
 
 
@@ -163,7 +180,8 @@ def save_figure(figure: plt.Figure, figure_dir: Path, stem: str) -> None:
             current_height * target_width / current_width,
             forward=True,
         )
-    figure.canvas.draw()
+    from publication_style_contract import apply_publication_style
+    apply_publication_style(figure, OUTPUT_WIDTH_MM or 170.0)
     visible_text = [
         artist
         for artist in figure.findobj(matplotlib.text.Text)
@@ -979,19 +997,13 @@ def build_figure3(root: Path, figure_dir: Path, source_dir: Path) -> None:
 
 
 def load_tested_gene_table(path: Path, symbol_field: str) -> pd.DataFrame:
-    rows: list[dict[str, Any]] = []
-    with gzip.open(path, "rt", encoding="utf-8-sig", newline="") as handle:
-        for row in csv.DictReader(handle):
-            if row["tested_filterByExpr"].strip().lower() != "true":
-                continue
-            rows.append(
-                {
-                    "ensembl_id": row["ensembl_id"],
-                    "gene_symbol": row[symbol_field].strip().upper(),
-                    "logFC": float(row["logFC"]),
-                }
-            )
-    return pd.DataFrame(rows)
+    table = read_csv(path)
+    tested = table["tested_filterByExpr"].astype(str).str.strip().str.lower().eq("true")
+    result = table.loc[tested, ["ensembl_id", symbol_field, "logFC"]].copy()
+    result = result.rename(columns={symbol_field: "gene_symbol"})
+    result["gene_symbol"] = result["gene_symbol"].fillna("").astype(str).str.strip().str.upper()
+    result["logFC"] = result["logFC"].astype(float)
+    return result.reset_index(drop=True)
 
 
 def build_figure4(
@@ -1007,7 +1019,7 @@ def build_figure4(
     cross_program = read_csv(c5_dir / "16_CROSS_DATASET_IFN_PROGRAM_EFFECTS.csv")
     cross_ifn = read_csv(c5_dir / "16_CROSS_DATASET_IFN_GENE_EFFECTS.csv")
     donor_loo = read_csv(c5_dir / "10_PRIMARY_PROGRAM_DONOR_LOO.csv")
-    program_scores = read_csv(c5_dir / "08_PROGRAM_SAMPLE_SCORES.csv.gz")
+    primary_samples = read_csv(c5_dir / "02_matrix_exports/childhood_min50_samples.csv")
     source_loo = read_csv(c5_dir / "12_SOURCE_LABEL_LOO_PROGRAM_RESULTS.csv")
     external_order = ["childhood_min50", "combined_min50", "adult_min50", "combined_min20", "combined_min100"]
     external_labels = {
@@ -1078,11 +1090,8 @@ def build_figure4(
         10,
     )
     assert_equal("Figure4.panel_d.donor_loo_summary_rows", len(donor_ifn), 1)
-    donor_deletions = program_scores.loc[
-        program_scores["analysis_name"].eq("childhood_min50")
-        & program_scores["program_id"].eq("IFN_ISG")
-    ]
-    assert_equal("Figure4.panel_d.donor_deletions", len(donor_deletions), 43)
+    assert_equal("Figure4.panel_d.eligible_donors", primary_samples["donor_name"].nunique(), 43)
+    assert_equal("Figure4.panel_d.eligible_samples", primary_samples["sample_id"].nunique(), 43)
     assert_equal("Figure4.panel_d.source_label_omissions", len(source_ifn), 8)
 
     source_rows: list[pd.DataFrame] = []
@@ -1108,7 +1117,7 @@ def build_figure4(
     non_ifn = merged.loc[~merged["is_frozen_ifn_gene"]]
     axis.scatter(non_ifn["gse174188_logFC"], non_ifn["gse135779_logFC"], s=4, color=COLORS["light"], alpha=0.38, linewidths=0, rasterized=True)
     axis.scatter(highlighted["gse174188_logFC"], highlighted["gse135779_logFC"], s=18, color=COLORS["sle"], edgecolor="white", linewidth=0.35, zorder=3)
-    labels = highlighted.nlargest(6, "gse135779_logFC")
+    labels = highlighted.nlargest(3, "gse135779_logFC")
     for _, row in labels.iterrows():
         axis.annotate(row["gene_symbol"], (row["gse174188_logFC"], row["gse135779_logFC"]), xytext=(3, 2), textcoords="offset points", fontsize=5.5)
     axis.axhline(0, color="#777777", lw=0.6)
@@ -1439,7 +1448,7 @@ def build_figure5(
         donor_axis.text(index, row["mean_paired_log2p1_effect"] + 0.10, f"{int(row['positive_genes'])}/12", ha="center", fontsize=6)
     style_axis(donor_axis)
     panel_label(donor_axis, "e", x=-0.20, y=1.10)
-    control_axis.text(0.98, 0.015, "* global 24-test BH q<0.05", transform=control_axis.transAxes, ha="right", va="bottom", fontsize=5.8, color="#444444")
+    control_axis.text(0.98, -0.19, "* global 24-test BH q<0.05", transform=control_axis.transAxes, ha="right", va="top", fontsize=5.8, color="#444444")
     save_figure(figure, figure_dir, "Figure5_regulatory_evidence")
 
 

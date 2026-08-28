@@ -59,7 +59,36 @@ def bool_series(values: pd.Series) -> pd.Series:
     return values.astype(str).str.lower().isin({"true", "1", "yes"})
 
 
-def verify_prefreeze(prefreeze: Path, project_root: Path) -> dict:
+def validate_unlock_decision(decision: dict) -> None:
+    if decision.get("decision") != "PASS_C9A_PREFREEZE_OUTCOME_UNLOCK_AUTHORIZED":
+        raise RuntimeError(f"Outcome unlock prohibited by C9A decision: {decision.get('decision')}")
+    if not decision.get("outcome_unlock_authorized") or decision.get("test_mode"):
+        raise RuntimeError("C9A does not authorize formal outcome access")
+    if decision.get("normalization_contract") != "full_library_cp10k_before_feature_subsetting":
+        raise RuntimeError("Legacy or unknown normalization contract cannot authorize outcome access")
+    checks = decision.get("checks", {})
+    required = ("elastic_confidence_calibration_eligible", "centroid_confidence_calibration_eligible",
+                "all_expected_samples_processed", "all_cells_reconciled")
+    if not all(checks.get(key) is True for key in required) or not all(checks.values()):
+        raise RuntimeError("C9A calibration or completeness checks did not pass")
+
+
+def verify_metadata_binding(metadata_path: Path, manifest: pd.DataFrame, project_root: Path) -> None:
+    candidates = manifest.loc[
+        manifest["filename"].eq("Meta_caSLE_processed_08092021_small.csv")
+        & bool_series(manifest["protected_metadata"])
+    ]
+    if len(candidates) != 1:
+        raise RuntimeError("Protected outcome metadata must have one frozen manifest entry")
+    frozen = candidates.iloc[0]
+    frozen_path = Path(frozen["path"])
+    if not frozen_path.is_absolute():
+        frozen_path = project_root / frozen_path
+    if metadata_path.resolve() != frozen_path.resolve() or sha256_file(metadata_path) != frozen["sha256"]:
+        raise RuntimeError("Requested metadata does not match the frozen protected input")
+
+
+def verify_prefreeze(prefreeze: Path, project_root: Path, metadata_path: Path) -> dict:
     decision_path = prefreeze / "15_GATE_C9A_PREFREEZE_DECISION.json"
     manifest_path = prefreeze / "01_INPUT_SHA256_MANIFEST.csv"
     integrity_path = prefreeze / "17_FILE_INTEGRITY_MANIFEST.csv"
@@ -67,14 +96,9 @@ def verify_prefreeze(prefreeze: Path, project_root: Path) -> dict:
         if not path.is_file():
             raise FileNotFoundError(path)
     decision = json.loads(decision_path.read_text(encoding="utf-8"))
-    if decision.get("decision") != "PASS_C9A_PREFREEZE_OUTCOME_UNLOCK_AUTHORIZED":
-        raise RuntimeError(
-            "Outcome unlock prohibited by C9A decision: "
-            f"{decision.get('decision')}"
-        )
-    if not decision.get("outcome_unlock_authorized"):
-        raise RuntimeError("C9A outcome_unlock_authorized is false")
+    validate_unlock_decision(decision)
     input_manifest = pd.read_csv(manifest_path)
+    verify_metadata_binding(metadata_path, input_manifest, project_root)
     for row in input_manifest.itertuples(index=False):
         path = Path(row.path)
         if not path.is_absolute():
@@ -85,6 +109,12 @@ def verify_prefreeze(prefreeze: Path, project_root: Path) -> dict:
         if observed != row.sha256:
             raise RuntimeError(f"Input changed after C9A prefreeze: {path}")
     integrity = pd.read_csv(integrity_path)
+    for row in integrity.itertuples(index=False):
+        path = prefreeze / row.filename
+        if path.parent.resolve() != prefreeze.resolve():
+            raise RuntimeError("Unsafe prefreeze integrity path")
+        if not path.is_file() or path.stat().st_size != row.size_bytes or sha256_file(path) != row.sha256:
+            raise RuntimeError(f"Prefreeze artifact changed: {path.name}")
     prediction = prefreeze / "10_CELL_PREDICTIONS_LOCAL.csv.gz"
     frozen_prediction = integrity.loc[
         integrity["filename"].eq(prediction.name), "sha256"
@@ -417,19 +447,20 @@ def make_figure(
         }
     )
     colors = {"HC": "#2878B5", "SLE": "#C44536"}
-    fig, axes = plt.subplots(1, 3, figsize=(7.08, 2.35), constrained_layout=True)
+    fig, axes = plt.subplots(1, 3, figsize=(170 / 25.4, 67 / 25.4))
+    fig.subplots_adjust(left=0.07, right=0.985, bottom=0.20, top=0.82, wspace=0.62)
 
     primary = selection_audit.loc[
         selection_audit["selection"].eq("cluster_primary")
     ].set_index("mapper")
-    metrics = ["source_B_recovery", "confident_fraction_selected"]
+    metrics = ["source_B_recovery", "confident_fraction_selected", "source_label_contamination"]
     x = np.arange(len(MAPPERS))
-    width = 0.32
+    width = 0.24
     for offset, metric, label, color in zip(
-        (-width / 2, width / 2),
+        (-width, 0, width),
         metrics,
-        ("Source-B recovery", "Confident mapping"),
-        ("#3A7D44", "#6C5B7B"),
+        ("Source-B recovery", "Confident mapping", "Known-label non-B"),
+        ("#3A7D44", "#58758E", "#D48936"),
     ):
         axes[0].bar(
             x + offset,
@@ -439,11 +470,12 @@ def make_figure(
             label=label,
         )
     axes[0].axhline(0.8, color="#555555", linestyle="--", linewidth=0.7)
+    axes[0].axhline(0.1, color="#999999", linestyle=":", linewidth=0.7)
     axes[0].set_xticks(x, ["Elastic net", "Centroid"])
     axes[0].set_ylim(0, 1.05)
     axes[0].set_ylabel("Fraction")
-    axes[0].legend(frameon=False, fontsize=6, loc="lower right")
-    axes[0].set_title("Selection and mapping audit", fontsize=8)
+    axes[0].legend(frameon=False, fontsize=5, loc="center", bbox_to_anchor=(0.5, 0.47))
+    axes[0].set_title("Selection and mapping audit", fontsize=7)
 
     cv_summary = (
         cv.groupby("mapper", observed=True)["balanced_accuracy"]
@@ -469,7 +501,7 @@ def make_figure(
     axes[1].set_xticks(x, ["Elastic net", "Centroid"])
     axes[1].set_ylim(0.5, 1.02)
     axes[1].set_ylabel("Balanced accuracy")
-    axes[1].set_title("Donor-grouped reference CV", fontsize=8)
+    axes[1].set_title("Donor-grouped reference CV", fontsize=7)
 
     plot_data = donors.loc[
         donors["selection"].eq("cluster_primary")
@@ -503,11 +535,11 @@ def make_figure(
                 [position - 0.20, position + 0.20],
                 [np.mean(values), np.mean(values)],
                 color="#111111",
-                linewidth=1.2,
+                linewidth=0.8,
             )
     axes[2].set_xticks([0.5, 3.5], ["Elastic net", "Centroid"])
     axes[2].set_ylabel("Mean IFN/ISG score")
-    axes[2].set_title("Childhood B_CONV donors", fontsize=8)
+    axes[2].set_title("Childhood B_CONV donors", fontsize=7)
     axes[2].legend(
         handles=[
             Line2D([0], [0], marker="o", linestyle="none", color=colors["HC"], label="HC", markersize=4),
@@ -523,7 +555,7 @@ def make_figure(
             1.08,
             label,
             transform=axis.transAxes,
-            fontsize=10,
+            fontsize=8,
             fontweight="bold",
             va="top",
         )
@@ -534,7 +566,6 @@ def make_figure(
         fig.savefig(
             output / f"25_GATE_C9_LABEL_AGNOSTIC_VALIDATION_FIGURE.{suffix}",
             dpi=600 if suffix == "png" else None,
-            bbox_inches="tight",
         )
     plt.close(fig)
     svg_path = output / "25_GATE_C9_LABEL_AGNOSTIC_VALIDATION_FIGURE.svg"
@@ -546,6 +577,10 @@ def make_figure(
 
     source_rows = []
     for row in selection_audit.itertuples(index=False):
+        source_rows.append({
+            "panel": "a", "selection": row.selection, "mapper": row.mapper,
+            "metric": "source_label_contamination", "value": row.source_label_contamination,
+        })
         source_rows.append(
             {
                 "panel": "a",
@@ -606,7 +641,7 @@ def main() -> int:
     if not metadata_path.is_file():
         raise FileNotFoundError(metadata_path)
 
-    decision = verify_prefreeze(prefreeze, project_root)
+    decision = verify_prefreeze(prefreeze, project_root, metadata_path)
     unlock_log = {
         "created_at": now_iso(),
         "status": "OUTCOME_METADATA_UNLOCKED_AFTER_C9A_PASS",
@@ -620,6 +655,8 @@ def main() -> int:
         "metadata_path": metadata_path.relative_to(project_root).as_posix(),
         "metadata_sha256": sha256_file(metadata_path),
         "threshold_changes_after_unlock": False,
+        "post_unblinding_technical_correction": decision["post_unblinding_technical_correction"],
+        "previous_C9_outcomes_known": True,
         "source_labels_role": "post hoc recovery and contamination audit only",
         "outcome_role": "frozen donor-level program tests only",
     }
@@ -722,7 +759,7 @@ def main() -> int:
         final_decision = "PASS_C9_LABEL_AGNOSTIC_EXTERNAL_SUPPORT"
         interpretation = (
             "The source-label-defined external IFN/ISG replication is supported by a "
-            "fully label-agnostic B-lineage selection and broad-state mapping sensitivity."
+            "reference-calibrated, source-label-agnostic B-lineage selection and broad-state mapping sensitivity."
         )
     elif direction_failure or donor_dominated:
         final_decision = "NO_GO_C9_LABEL_AGNOSTIC_EXTERNAL_SUPPORT"

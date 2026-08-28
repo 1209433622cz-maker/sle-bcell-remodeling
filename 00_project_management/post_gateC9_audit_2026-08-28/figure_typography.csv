@@ -1,0 +1,16 @@
+figure,width_mm,height_mm,text_spans,min_pt,max_pt,fonts
+Figure1_disease_blind_identity_scope.pdf,170.00000237358938,130.67701500786677,82,5.0,8.0,Arial-BoldMT;ArialMT
+Figure2_sample_level_composition.pdf,170.00000237358938,134.2736300998264,57,6.0,8.0,Arial-BoldMT;ArialMT
+Figure3_gse174188_bconv_transcription.pdf,170.00000237358938,137.8702344258626,68,5.199999809265137,8.0,Arial-BoldMT;ArialMT
+Figure4_independent_ifn_replication.pdf,170.00000237358938,137.8702344258626,66,5.5,8.0,Arial-BoldMT;ArialMT
+Figure5_regulatory_evidence.pdf,170.00000237358938,163.04654006958006,103,5.0,8.0,Arial-BoldMT;ArialMT
+Supplementary_Figure_S10_reference_calibration_boundary.pdf,170.00000237358938,110.00000406901042,54,6.0,8.0,Arial-BoldMT;ArialMT
+Supplementary_Figure_S1_source_integrity_qc.pdf,170.00000237358938,123.48378482394747,75,5.5,8.0,Arial-BoldMT;ArialMT
+Supplementary_Figure_S2_representation_diagnostics.pdf,170.00000237358938,125.88152821858723,69,5.5,8.0,Arial-BoldMT;ArialMT
+Supplementary_Figure_S3_identity_adjudication.pdf,170.00000237358938,125.88152821858723,65,5.5,8.0,Arial-BoldMT;ArialMT
+Supplementary_Figure_S4_composition_diagnostics.pdf,170.00000237358938,125.88152821858723,55,6.0,8.0,Arial-BoldMT;ArialMT
+Supplementary_Figure_S5_pseudobulk_diagnostics.pdf,170.00000237358938,128.279271613227,78,6.0,8.0,Arial-BoldMT;ArialMT
+Supplementary_Figure_S6_external_validation_diagnostics.pdf,170.00000237358938,128.279271613227,65,6.0,8.0,Arial-BoldMT;ArialMT
+Supplementary_Figure_S7_regulator_correlation_sensitivity.pdf,170.00000237358938,125.88152821858723,103,5.099999904632568,8.0,Arial-BoldMT;ArialMT
+Supplementary_Figure_S8_overlap_depletion.pdf,170.00000237358938,158.75,110,5.0,8.0,Arial-BoldMT;ArialMT
+Supplementary_Figure_S9_identity_boundary_and_propagation.pdf,170.00000237358938,159.99999906751842,89,5.099999904632568,8.0,Arial-BoldMT;ArialMT

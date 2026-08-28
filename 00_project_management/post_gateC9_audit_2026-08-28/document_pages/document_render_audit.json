@@ -1,0 +1,514 @@
+{
+  "created_at": "2026-08-28T08:26:57+08:00",
+  "engine": "WPS PDF export followed by Poppler 110-dpi page rendering",
+  "document_hashes": [
+    {
+      "file": "Manuscript.pdf",
+      "bytes": 275363,
+      "sha256": "969AE707229E68CC26C147B1A5113B0BF6718B3290025A8A47C4767A4BF3913D"
+    },
+    {
+      "file": "Manuscript.docx",
+      "bytes": 63104,
+      "sha256": "97A709105C013A6AEABB6C5FFCE136117399C2351AFE9ED18F42A50ECFDD7EA4"
+    },
+    {
+      "file": "Research_Proposal.pdf",
+      "bytes": 164299,
+      "sha256": "554CE01AD289FD990C1F28A37112F2C6939608FFF8A1194E8B4A43C821F36F80"
+    },
+    {
+      "file": "Research_Proposal.docx",
+      "bytes": 46983,
+      "sha256": "7999A9D4A4C548FA548E02A473DB84FB5DB260D61E5288880F40D948C2F3EE1B"
+    },
+    {
+      "file": "Supplementary_Information.pdf",
+      "bytes": 5046367,
+      "sha256": "1753DE860A755A4F0D0816BB3F1EE881E3A578C2C239DCF9E1C4043413725C7D"
+    },
+    {
+      "file": "Supplementary_Information.docx",
+      "bytes": 4082231,
+      "sha256": "0DD980758FBC6065FF9CCD1CF77C9FC56BD894821E2A80137DDBD504E9DF0A4A"
+    }
+  ],
+  "pages": 59,
+  "page_checks": [
+    {
+      "document": "Manuscript.pdf",
+      "page": 1,
+      "text_characters": 1631,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 2,
+      "text_characters": 1856,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 3,
+      "text_characters": 1963,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 4,
+      "text_characters": 1865,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 5,
+      "text_characters": 2000,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 6,
+      "text_characters": 2060,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 7,
+      "text_characters": 1855,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 8,
+      "text_characters": 2139,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 9,
+      "text_characters": 1968,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 10,
+      "text_characters": 1998,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 11,
+      "text_characters": 1910,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 12,
+      "text_characters": 1935,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 13,
+      "text_characters": 1939,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 14,
+      "text_characters": 2045,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 15,
+      "text_characters": 2135,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 16,
+      "text_characters": 2068,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 17,
+      "text_characters": 2075,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 18,
+      "text_characters": 1906,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 19,
+      "text_characters": 2209,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 20,
+      "text_characters": 2035,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 21,
+      "text_characters": 2238,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 22,
+      "text_characters": 2054,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 23,
+      "text_characters": 2073,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 24,
+      "text_characters": 1661,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 25,
+      "text_characters": 1560,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 26,
+      "text_characters": 1956,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 27,
+      "text_characters": 1927,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 28,
+      "text_characters": 2228,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 29,
+      "text_characters": 1688,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 30,
+      "text_characters": 1635,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 31,
+      "text_characters": 1651,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 32,
+      "text_characters": 1669,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 33,
+      "text_characters": 1662,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript.pdf",
+      "page": 34,
+      "text_characters": 303,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Research_Proposal.pdf",
+      "page": 1,
+      "text_characters": 3130,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Research_Proposal.pdf",
+      "page": 2,
+      "text_characters": 3211,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Research_Proposal.pdf",
+      "page": 3,
+      "text_characters": 2966,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Research_Proposal.pdf",
+      "page": 4,
+      "text_characters": 2669,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Research_Proposal.pdf",
+      "page": 5,
+      "text_characters": 2085,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Research_Proposal.pdf",
+      "page": 6,
+      "text_characters": 612,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 1,
+      "text_characters": 3031,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 2,
+      "text_characters": 3611,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 3,
+      "text_characters": 2868,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 4,
+      "text_characters": 1773,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 5,
+      "text_characters": 1777,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 6,
+      "text_characters": 1643,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 7,
+      "text_characters": 1739,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 8,
+      "text_characters": 753,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 9,
+      "text_characters": 2000,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 10,
+      "text_characters": 503,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 11,
+      "text_characters": 521,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 12,
+      "text_characters": 642,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 13,
+      "text_characters": 505,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 14,
+      "text_characters": 427,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 15,
+      "text_characters": 350,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 16,
+      "text_characters": 400,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 17,
+      "text_characters": 719,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 18,
+      "text_characters": 1031,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information.pdf",
+      "page": 19,
+      "text_characters": 969,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    }
+  ],
+  "all_pages_within_canvas": true,
+  "all_markers_resolved": true,
+  "visual_review": "Page images require human/model visual inspection; structural checks alone are insufficient"
+}

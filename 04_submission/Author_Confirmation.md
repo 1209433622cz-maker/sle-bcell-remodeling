@@ -4,6 +4,13 @@
 
 **Release DOI:** `10.5281/zenodo.22086892`
 
+**Scope clarification, 28 August 2026:** the checked confirmations below record
+the previous author-approved materials. The revised calibration-HOLD manuscript,
+supplement and cover letter require renewed final content approval. General
+permission to continue editing does not constitute that approval. Author identity,
+licence and previously supplied declarations are retained; no author decision is
+invented for the revised package.
+
 ## Authors and correspondence
 
 - [x] Complete author order: Zhi Chen, first author; Teng Qi, corresponding author.

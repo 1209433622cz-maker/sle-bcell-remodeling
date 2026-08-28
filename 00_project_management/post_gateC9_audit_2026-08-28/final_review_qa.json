@@ -1,0 +1,25 @@
+{
+  "created_at": "2026-08-28T08:29:24+08:00",
+  "checks": {
+    "frozen_manifests": true,
+    "historical_source_tables_unchanged": true,
+    "fifteen_figures_within_style_contract": true,
+    "rendered_document_hashes": true,
+    "document_structure": true,
+    "corrected_calibration_hold_obeyed": true,
+    "no_unclassified_content_issues": true
+  },
+  "all_automated_checks_pass": true,
+  "release_authorized": false,
+  "scientific_status": "HOLD_C9A_PREFREEZE_REVIEW_REQUIRED",
+  "visual_review_record": "00_project_management/action_record_2026-08-28_post_gateC9_advisor_correction_audit.md",
+  "interpretation": "Automated technical checks are not publication approval or independent biological validation.",
+  "runtime": {
+    "python": "3.13.7",
+    "packages": {
+      "pandas": "2.3.3",
+      "PyMuPDF": "1.26.3",
+      "Pillow": "12.3.0"
+    }
+  }
+}

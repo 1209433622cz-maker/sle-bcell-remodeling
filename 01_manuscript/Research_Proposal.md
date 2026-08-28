@@ -1,9 +1,9 @@
 # MBI6013 Research Proposal
 
-## Independently replicated interferon remodeling with convergent regulatory evidence in systemic lupus erythematosus B cells
+## Disease-blind reconstruction separates B-cell assignment uncertainty from interferon remodeling in systemic lupus erythematosus
 
 **Study type:** secondary analysis of public human transcriptomic data
-**Study status:** completed outcome-integrated research record; all central claims remain noncausal
+**Study status:** outcome-integrated research record; identity and external-mapping limitations retained; release reconciliation pending
 
 ## Document provenance
 
@@ -23,10 +23,11 @@ hierarchy; disease-blind identity reconstruction; sample-level composition;
 sample-by-compartment pseudobulk transcription; independent dataset validation; and
 prespecified regulatory and perturbational convergence.
 
-Four findings are complete. First, disease-blind resampling supports two broad
-B-lineage compartments, conventional B cells (`B_CONV`) and antibody-secreting cells
-(`B_ASC`), while finer hard naive-memory states are insufficiently stable for
-outcome inference. Second, the primary sample-level `B_ASC` composition contrast is
+Four findings remain central. First, frozen-representation resampling supports a
+conventional-B (`B_CONV`) and antibody-secreting-cell (`B_ASC`) analysis scaffold,
+but end-to-end reconstruction misses the frozen B_ASC overlap criterion. Neither
+fine states nor a universally reproducible broad taxonomy are established.
+Second, the primary sample-level `B_ASC` composition contrast is
 null. Third, a frozen type I interferon/interferon-stimulated-gene (IFN/ISG) program
 within `B_CONV` replicates from GSE174188 into independent GSE135779. Fourth,
 prespecified STAT1/STAT2 target activity, exact M5911 enrichment and a small paired
@@ -68,14 +69,18 @@ this hypothesis at an observational, noncausal level.
 
 ### Aim 1. Reconstruct disease-blind B-lineage identity from audited raw counts
 
-**Status:** completed.
+**Status:** completed with formal end-to-end HOLD, not unconditional taxonomy validation.
 
 The GSE174188 source contained 152,981 B-lineage cells and 30,172 genes. Hard quality
 control retained 150,402 cells. The initial five-state policy failed the frozen
-resampling gate. A repaired two-compartment model (`B_CONV`, `B_ASC`) reproduced in
-20/20 resamples, with minimum mapped adjusted Rand index 0.990 and minimum state
-median Jaccard index 0.991. Hard naive, memory and atypical composition labels remain
-prohibited.
+resampling gate. The two-compartment model passed 20 frozen-representation graph
+resamples (minimum mapped ARI 0.990; minimum state-median Jaccard 0.991), but these
+did not refit the full representation. Twenty subsequent end-to-end replicates
+recomputed feature selection, PCA, Harmony and clustering. B_ASC median Jaccard
+was 0.930323, below the unchanged 0.95 gate; B_CONV median was 0.999363. The partition
+is retained only as an analysis scaffold. Propagating all observed boundary
+exchanges preserved the primary composition null and both GSE174188 IFN effects.
+Hard naive, memory and atypical composition labels remain prohibited.
 
 ### Aim 2. Separate SLE-associated composition from within-compartment transcription
 
@@ -98,6 +103,14 @@ estimate was 0.996 (q=1.31 x 10^-6), while the adult-only estimate was positive 
 underpowered. Forty-three donor deletions and eight source-label omissions retained
 the childhood direction. All ten jointly tested IFN genes were positive in both
 primary datasets despite low genome-wide agreement (4,410 genes; rho=0.026).
+
+An additional reference-calibrated, source-label-agnostic mapping sensitivity did
+not qualify. After correction of a reference/external normalization mismatch,
+all 56 matrices and 363,083 cells were processed, but elastic-net reference B_ASC
+precision was 0.885210, below 0.90. Corrected disease outcomes remained protected.
+The original C9 PASS is superseded; the primary source-label-defined replication
+above is not replaced or upgraded. This correction followed exposure to the old
+sensitivity outcomes and is not a new prospective preregistration.
 
 ### Aim 4. Test a frozen interferon-centred regulatory hypothesis
 
@@ -125,7 +138,7 @@ Composition used sample-cohort strata; GSE174188 transcription used sample-cohor
 
 Identity representations were evaluated with marker conservation, technical mixing,
 bridge coverage and 20 disease-blind resamples. Failure of fine states was retained.
-Composition used supported cohort-specific conditional-binomial models, minimum 50
+Composition used supported cohort-specific beta-binomial models, minimum 50
 cells per stratum, HC1 checks, threshold sensitivities and leave-one-sample-out
 analysis. No cell-level disease test was used.
 
@@ -155,6 +168,11 @@ weights. Eight regulators across three contrasts formed one 24-test global
 Benjamini-Hochberg family. Core STAT1/STAT2 models underwent leave-one-target and
 100 x 80% target-resampling analyses.
 
+Correlation-aware CAMERA/FRY tests and explicit IFN-overlap depletion were retained
+as same-data sensitivities. Broader M5911 depletion attenuated discovery STAT2,
+which retained eight targets with a confidence interval spanning zero. These
+results prohibit an overlap-independent regulatory claim.
+
 MSigDB 2026.1.Hs M5911 used 10,000 deterministic gene-label permutations per ranked contrast.
 GSE23307 paired untreated and IFN-beta-exposed primary B-cell probes were transformed
 as log2(x+1), median-collapsed to 12 genes and differenced within two donors. No
@@ -165,11 +183,12 @@ audit-only and excluded from active evidence.
 
 | Layer | Result | Publication role |
 |---|---|---|
-| Identity | `B_CONV`/`B_ASC` pass; fine states fail | foundation and scope boundary |
+| Identity | frozen-representation pass; end-to-end B_ASC overlap HOLD | analysis scaffold, not stable taxonomy |
 | Composition | primary `B_ASC` null | negative boundary |
 | Discovery | GSE174188 IFN/ISG positive | central association |
 | Internal replication | donor-nonoverlap IFN/ISG positive | within-accession support |
 | Independent replication | GSE135779 childhood IFN/ISG positive | central external evidence |
+| Source-label-agnostic mapping | corrected reference calibration HOLD | source-label dependence unresolved |
 | Regulatory convergence | STAT1/STAT2 target activity reproduced | central noncausal support |
 | Orthogonal response | M5911 and two-donor IFN-beta direction | supportive convergence |
 
@@ -194,14 +213,14 @@ needed to advance from convergent regulation to mechanism.
 
 | Deliverable | Final status |
 |---|---|
-| Disease-blind two-compartment identity | passed; scope frozen |
+| Disease-blind two-compartment identity | end-to-end HOLD; scaffold retained |
 | Sample-level composition | passed; central composition claim rejected |
 | GSE174188 pseudobulk and programs | passed; IFN prioritized |
 | Independent GSE135779 validation | passed; IFN replicated |
-| Claim and numerical freeze | passed |
+| Claim and numerical freeze | C9 PASS superseded; corrected calibration limitation integrated |
 | Regulatory and orthogonal evidence | passed; noncausal framing authorized |
 | Five main figures and manuscript integration | completed |
-| Journal-specific submission package | completed; portal entry is next |
+| Journal-specific submission package | historical snapshot; rebuild and re-audit required before submission |
 
 ## 7. Expected impact
 
@@ -218,6 +237,8 @@ composition narratives from inflating the conclusion.
 - Use broad conventional-B compartment, not a hard naive, memory or atypical subtype.
 - Describe relative `B_ASC` abundance, not absolute expansion or depletion.
 - Reserve independent replication for GSE135779 IFN/ISG.
+- Do not use the corrected C9 HOLD to claim source-label-independent replication.
+- Report calibration folds as reference diagnostics, not unbiased held-out performance.
 - Describe the adult estimate as positive but underpowered.
 - State that replication is program-specific and genome-wide agreement is low.
 - Use convergent observational IFN-centred regulatory evidence.

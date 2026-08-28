@@ -1,5 +1,12 @@
 # Public data cache
 
+Source documentation caveat: `libaries.csv` in the GSE135779 download is an
+illustrative molecule-info template containing `SampleX`, `/path_Sample...`
+and a literal `...` row. It is preserved and hashed, but is not a real library
+manifest and is not parsed for sample selection, mapping or disease inference.
+The actual 56-sample inventory is obtained from paired matrix/barcode members
+of `GSE135779_RAW.tar`.
+
 Large public matrices and archives are intentionally excluded from Git. The
 2026-08-27 workspace cleanup removed the local public-data cache while retaining
 the formal Phase 17 inputs required to reproduce the current R1 robustness
@@ -18,7 +25,8 @@ powershell -ExecutionPolicy Bypass `
   -DownloadRaw
 
 powershell -ExecutionPolicy Bypass `
-  -File .\audit_tools\run_6013RP_phase17_gateC9_label_agnostic_gse135779.ps1
+  -File .\audit_tools\run_6013RP_phase17_gateC9_label_agnostic_gse135779.ps1 `
+  -PostUnblindingCorrection
 ```
 
 The downloader resumes partial files, verifies exact byte counts and uses the
@@ -26,7 +34,9 @@ Windows curl certificate workaround when needed. The expected RAW archive is
 1,299,783,680 bytes with SHA-256
 `B5764C303AC76873738D6E05B6992277FCD6A14BF5BFCB27331E54DCBCAC619B`.
 The Gate C9 runner processes all matrix cells sample by sample and does not
-require a persistent derived B-cell H5AD.
+require a persistent derived B-cell H5AD. The corrected run is on calibration
+HOLD and deliberately does not unlock outcomes. Use a new `-OutputDir` to repeat
+it; existing frozen directories cannot be overwritten.
 
 The 12.2 GB GSE174188 CELLxGENE source is not required for the next external
 mapping analysis because the formal raw-count and representation inputs above

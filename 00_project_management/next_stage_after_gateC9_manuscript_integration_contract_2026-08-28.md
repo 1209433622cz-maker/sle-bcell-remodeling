@@ -1,5 +1,11 @@
 # Post-Gate-C9 manuscript integration contract
 
+**Superseded on 2026-08-28:** independent implementation review invalidated the
+original C9 PASS. The corrected full run is on calibration HOLD. The positive
+integration instructions below are retained only as history and must not be
+executed. See `gateC9_technical_correction_contract_2026-08-28.md` and the current
+action report. Do not use the numerical anchors below as publication evidence.
+
 **Status:** PRE-INTEGRATION FREEZE
 
 **Date:** 2026-08-28

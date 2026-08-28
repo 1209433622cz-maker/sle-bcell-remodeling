@@ -410,6 +410,7 @@ def prepare_package_assets(
 
 
 def main() -> None:
+    raise RuntimeError("Retired package writer: preserve the historical release and build a separate correction-review bundle.")
     if PACKAGE.exists():
         shutil.rmtree(PACKAGE)
     PACKAGE.mkdir(parents=True, exist_ok=True)

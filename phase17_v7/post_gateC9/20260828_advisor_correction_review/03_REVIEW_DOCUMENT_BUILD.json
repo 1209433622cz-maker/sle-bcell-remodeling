@@ -1,0 +1,33 @@
+{
+  "status": "REVIEW_DOCUMENTS_BUILT",
+  "next_step": "WPS export and final render audit; this build record alone is not release approval",
+  "documents": [
+    {
+      "source": "01_manuscript/Manuscript.md",
+      "output": "phase17_v7/post_gateC9/20260828_advisor_correction_review/documents/Manuscript.docx",
+      "paragraphs": 168,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 63104
+    },
+    {
+      "source": "01_manuscript/Supplementary_Information.md",
+      "output": "phase17_v7/post_gateC9/20260828_advisor_correction_review/documents/Supplementary_Information.docx",
+      "paragraphs": 89,
+      "tables": 10,
+      "inline_shapes": 10,
+      "placeholders": 0,
+      "bytes": 4082231
+    },
+    {
+      "source": "01_manuscript/Research_Proposal.md",
+      "output": "phase17_v7/post_gateC9/20260828_advisor_correction_review/documents/Research_Proposal.docx",
+      "paragraphs": 71,
+      "tables": 2,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 46983
+    }
+  ]
+}

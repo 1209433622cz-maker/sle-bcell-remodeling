@@ -11,6 +11,7 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+throw "Historical C8BRF release entry point retired: it cannot publish the corrected C9 HOLD. Use build_correction_review.ps1; recover historical code from its Git revision for historical reproduction."
 $Root = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 $RunDir = Join-Path $Root "phase17_v7\gateC8BRF\20260825_author_release"
 $Package = Join-Path $Root "04_submission\journal_submission"

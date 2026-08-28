@@ -214,7 +214,7 @@ def set_run_font(run, size: float | None = None, bold: bool | None = None, itali
         run.font.color.rgb = color
 
 
-INLINE_PATTERN = re.compile(r"(\[\[(?:.|\n)*?\]\]|\*\*.*?\*\*|`.*?`)")
+INLINE_PATTERN = re.compile(r"(\[\[(?:.|\n)*?\]\]|\*\*.*?\*\*|`.*?`|\*[^*\n]+\*)")
 
 
 def add_inline(paragraph, text: str, size: float | None = None) -> None:
@@ -230,6 +230,9 @@ def add_inline(paragraph, text: str, size: float | None = None) -> None:
         elif piece.startswith("`") and piece.endswith("`"):
             run = paragraph.add_run(piece[1:-1])
             set_run_font(run, size=(size or 12) - 0.5, font="Courier New", color=INK)
+        elif piece.startswith("*") and piece.endswith("*"):
+            run = paragraph.add_run(piece[1:-1])
+            set_run_font(run, size=size, italic=True, color=INK)
         else:
             run = paragraph.add_run(piece)
             set_run_font(run, size=size, color=INK)
@@ -354,6 +357,12 @@ def paragraph_blocks(markdown: str) -> list[str]:
 
 def table_widths(rows: list[list[str]]) -> list[int]:
     cols = len(rows[0])
+    if rows[0] == ["Resource", "Role", "Biological unit", "Active scope"]:
+        return [1600, 1700, 2100, 3960]
+    if rows[0] == ["Directory", "Contents", "Files"]:
+        return [3350, 4900, 1110]
+    if rows[0] == ["Depletion", "Method", "Positive direction", "Dedicated q<0.05", "Main qualification"]:
+        return [2000, 1300, 1200, 1400, 3460]
     if cols == 6 and rows[0][:3] == ["Contrast", "Regulator", "Matched targets"]:
         return [2400, 1100, 1350, 2100, 1250, 1160]
     maxima = []
@@ -374,6 +383,8 @@ def add_markdown_table(document: Document, block: str, body_size: float) -> None
     table = document.add_table(rows=len(raw_rows), cols=len(raw_rows[0]))
     table.style = "Table Grid"
     for r_idx, row in enumerate(raw_rows):
+        row_properties = table.rows[r_idx]._tr.get_or_add_trPr()
+        row_properties.append(OxmlElement("w:cantSplit"))
         for c_idx, value in enumerate(row):
             cell = table.cell(r_idx, c_idx)
             cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
@@ -383,6 +394,7 @@ def add_markdown_table(document: Document, block: str, body_size: float) -> None
             paragraph.paragraph_format.line_spacing = 1.0
             add_inline(paragraph, value, size=8.5 if len(raw_rows[0]) >= 6 else body_size - 1)
             if r_idx == 0:
+                paragraph.paragraph_format.keep_with_next = True
                 set_cell_shading(cell, TABLE_FILL)
                 for run in paragraph.runs:
                     run.bold = True
@@ -418,9 +430,9 @@ def markdown_to_docx(
         section.bottom_margin = Inches(0.75)
     document.core_properties.author = "Zhi Chen; Teng Qi"
     document.core_properties.title = title_override or source.stem
-    document.core_properties.subject = "Genome Medicine Research submission"
+    document.core_properties.subject = "Research manuscript and supporting information"
     document.core_properties.keywords = "SLE; B cells; single-cell RNA sequencing; interferon"
-    document.core_properties.comments = "Generated reproducibly from Gate C8S Markdown sources."
+    document.core_properties.comments = "Generated reproducibly from canonical Markdown sources."
 
     ref_num_id = add_numbering(document, "decimal", "%1.", 720, 360)
     bullet_num_id = add_numbering(document, "bullet", "•", 540, 270)
@@ -430,7 +442,7 @@ def markdown_to_docx(
     placeholders = 0
     for block in blocks:
         placeholders += block.count("[[")
-        figure_marker = re.fullmatch(r"\[\[SUPPLEMENTARY_FIGURE:(S[1-9])\]\]", block)
+        figure_marker = re.fullmatch(r"\[\[SUPPLEMENTARY_FIGURE:(S[1-9]\d*)\]\]", block)
         if figure_marker:
             placeholders -= 1
             figure_id = figure_marker.group(1)

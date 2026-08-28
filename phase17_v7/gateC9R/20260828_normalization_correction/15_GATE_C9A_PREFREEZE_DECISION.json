@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-08-28T04:22:33+08:00",
+  "decision": "HOLD_C9A_PREFREEZE_REVIEW_REQUIRED",
+  "test_mode": false,
+  "disease_blind": true,
+  "normalization_contract": "full_library_cp10k_before_feature_subsetting",
+  "post_unblinding_technical_correction": true,
+  "previous_C9_outcomes_known": true,
+  "source_labels_used": false,
+  "outcome_unlock_authorized": false,
+  "reference_model": {
+    "elastic_threshold": 0.95,
+    "centroid_threshold": 0.11776697933673859,
+    "elastic_calibration_eligible": false,
+    "centroid_calibration_eligible": true,
+    "chosen_alpha": 0.0001,
+    "elastic_mean_balanced_accuracy": 0.9605693108684038,
+    "centroid_mean_balanced_accuracy": 0.950293202325114,
+    "n_reference_training_cells": 14300,
+    "n_reference_B_CONV": 13000,
+    "n_reference_B_ASC": 1300,
+    "n_reference_donors": 258
+  },
+  "external_prefreeze": {
+    "samples": 56,
+    "total_cells": 363083,
+    "qc_pass_cells": 353527,
+    "selected_B_cells": 36630,
+    "prediction_path": "10_CELL_PREDICTIONS_LOCAL.csv.gz",
+    "minimum_elastic_confident_fraction": 0.82171581769437,
+    "minimum_centroid_confident_fraction": 0.46153846153846156
+  },
+  "checks": {
+    "input_manifest_complete": true,
+    "protected_metadata_content_not_parsed": true,
+    "reference_join_exact": true,
+    "elastic_net_cv_balanced_accuracy": true,
+    "nearest_centroid_cv_balanced_accuracy": true,
+    "elastic_confidence_calibration_eligible": false,
+    "centroid_confidence_calibration_eligible": true,
+    "all_expected_samples_processed": true,
+    "all_cells_reconciled": true,
+    "label_agnostic_B_cells_selected": true,
+    "per_cell_output_present": true
+  },
+  "frozen_rules": {
+    "primary_selection": "sample-wise Leiden cluster with B-lineage module greater than all exclusion modules and mean B detection >=1/9",
+    "selection_sensitivity": "per-cell B-lineage margin >0 and B detection >=1/9",
+    "primary_mapper": "donor-grouped elastic-net logistic regression",
+    "algorithmically_distinct_mapper": "nearest-centroid Pearson correlation sharing the reference and feature space",
+    "outcome_family": [
+      "NAIVE_TO_MEMORY_AXIS",
+      "ATYPICAL_LOW_NAIVE_AXIS",
+      "APC_HLA",
+      "IFN_ISG"
+    ],
+    "primary_outcome": "childhood donor mean 12-gene IFN_ISG score in confidently mapped B_CONV",
+    "minimum_B_CONV_cells_per_donor": 50
+  }
+}

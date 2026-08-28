@@ -1,0 +1,15 @@
+file,rows,pass
+Figure1_source_data.csv,55,True
+Figure2_source_data.csv,191,True
+Figure3_source_data.csv,38,True
+Figure4_source_data.csv,4430,True
+Figure5_source_data.csv,29,True
+Supplementary_Figure_S1_source_data.csv,97,True
+Supplementary_Figure_S2_source_data.csv,176,True
+Supplementary_Figure_S3_source_data.csv,39,True
+Supplementary_Figure_S4_source_data.csv,14,True
+Supplementary_Figure_S5_source_data.csv,17,True
+Supplementary_Figure_S6_source_data.csv,21,True
+Supplementary_Figure_S7_source_data.csv,6,True
+Supplementary_Figure_S8_source_data.csv,36,True
+Supplementary_Figure_S9_source_data.csv,128,True

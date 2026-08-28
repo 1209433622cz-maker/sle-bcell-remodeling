@@ -1,6 +1,6 @@
 # Cover letter
 
-25 August 2026
+28 August 2026
 
 Teng Qi
 
@@ -10,23 +10,21 @@ MED Start-up Building, 2001 Longxiang Boulevard, Longgang District, Shenzhen 518
 
 Email: tengqi@link.cuhk.edu.cn
 
-Editors, Genome Medicine
-
 Dear Editors,
 
-Please consider our Research article, "Disease-blind single-cell reconstruction separates unstable B-cell state assignments from reproducible interferon remodeling in systemic lupus erythematosus", for publication in Genome Medicine.
+Please consider our Research article, "Disease-blind single-cell reconstruction separates unstable B-cell state assignments from reproducible interferon remodeling in systemic lupus erythematosus", for publication.
 
 This study addresses a recurrent problem in disease single-cell genomics: cell identity, relative abundance and within-compartment transcription can be conflated when annotations are informed by outcomes or cells are treated as independent replicates. We reconstructed B-lineage identity without disease labels, retained biological samples or donors as inferential units and carried a frozen transcriptional result into an independent SLE dataset.
 
-The principal advance is not rediscovery of interferon involvement in SLE, but a deliberately bounded identification of the remodeling layer that survives sequential safeguards. Fine naive-memory partitions were not stable enough for hard outcome inference. End-to-end reconstruction retained high global two-compartment concordance but missed the unchanged B_ASC state-overlap criterion, so B_CONV/B_ASC is presented as an analysis scaffold rather than a universally reproducible taxonomy. Propagating every observed broad-state boundary exchange preserved the primary antibody-secreting-cell composition null and both internal B_CONV IFN/ISG effects. The interferon-responsive program reproduced in GSE174188 discovery, a donor-nonoverlap internal contrast and independent GSE135779 childhood donors. STAT1 and STAT2 target activities were positive and globally significant under the prespecified ULM family; correlation-aware CAMERA supported five of six core tests after correction and FRY supported six of six, with the discovery STAT2 CAMERA exception reported explicitly. Post-freeze depletion of either the frozen 12-gene arm or the broader M5911 set preserved every method-level direction, while transparently exposing substantial attenuation of the low-coverage discovery STAT2 model after broad depletion. Orthogonal enrichment of the independently curated M5911 response set and paired IFN-beta perturbation profiles supplied complementary response evidence. We do not claim a discrete IFN-high subtype, universal plasmablast expansion, causal regulator, direct TF binding or unique upstream ligand.
+The principal contribution is a bounded account of which remodeling layer survives sequential safeguards. Fine partitions were unstable, and end-to-end reconstruction missed the unchanged B_ASC overlap criterion; broad compartments are therefore an analysis scaffold, not a universally reproducible taxonomy. Propagating observed boundary exchanges preserved the primary antibody-secreting-cell composition null and both internal IFN/ISG effects. The IFN program reproduced in discovery, donor-nonoverlap internal and independent childhood contrasts. STAT1/STAT2 target activity and orthogonal response evidence provided noncausal support, with partial CAMERA support and substantial discovery STAT2 attenuation after broad IFN-overlap depletion disclosed. We do not claim a discrete IFN-high subtype, universal plasmablast expansion, causal regulator, direct binding or unique upstream ligand.
 
-We believe the work fits Genome Medicine because it uses human single-cell genomics, independent disease-cohort validation and systems-level regulatory evidence to refine the level at which an immunogenomic SLE finding is reproducible. The staged, auditable design is also relevant beyond SLE to secondary analysis of technically imbalanced public single-cell cohorts.
+The independent childhood replication remains defined by source-provided B-cell labels. An additional source-label-agnostic sensitivity did not meet its frozen reference-calibration criteria after a normalization correction; the original sensitivity was excluded and no corrected disease outcome was estimated. We report this limitation rather than upgrading the strength of validation.
 
-All datasets are public and are cited by accession. Scripts, machine-readable decisions, figure source data and integrity manifests are versioned in the accompanying repository. The submission includes five vector main figures rendered at 170 mm with 600-dpi PNG companions, nine supplementary figures, machine-readable source data, a complete statistical-results archive including end-to-end identity robustness, supplementary information and a regulator-sensitivity attachment containing baseline and prespecified overlap-depletion analyses. The archived release is available at doi:10.5281/zenodo.22086892. Original project code is MIT-licensed; original manuscript text, composite figures, documentation and project-generated derived source-data tables are available under CC BY 4.0, without relicensing third-party datasets.
+The work is relevant to human immunogenomics and secondary analysis of technically imbalanced public single-cell cohorts. Its contribution is the separation of reproducible program-level associations from unstable identity and composition claims, not the discovery of a new causal SLE mechanism.
 
-Both authors approved the manuscript, supplementary information, figures, source data, cover letter and submission. The work is original, is submitted exclusively to Genome Medicine and is not under consideration by another journal. The authors declare no competing interests and no specific funding. The manuscript transparently discloses the authors' reviewed use of generative artificial intelligence assistance.
+All datasets are public and cited by accession. The accompanying review materials contain five vector main figures, ten supplementary figures, machine-readable source data, full statistical results including the corrected calibration diagnostics, and regulator-sensitivity results. The initial archive at doi:10.5281/zenodo.22086892 predates the subsequent robustness and correction work; a matching revised archive remains required before submission. Original code is MIT-licensed and original text, composite figures, documentation and derived source data are CC BY 4.0, without relicensing third-party datasets.
 
-Suggested reviewers and opposed reviewers, if any, will be supplied by the corresponding author through the submission system using verifiable institutional contact information.
+The authors have confirmed originality, no concurrent journal review, no competing interests and no specific funding, and have approved disclosure of generative artificial intelligence assistance. The revised materials and final journal choice require renewed author approval before submission; this review letter is not evidence of that approval.
 
 Sincerely,
 

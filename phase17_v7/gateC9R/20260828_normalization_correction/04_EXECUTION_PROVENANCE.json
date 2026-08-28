@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-08-28T04:19:59+08:00",
+  "normalization_contract": "full_library_cp10k_before_feature_subsetting",
+  "post_unblinding_technical_correction": true,
+  "previous_C9_outcomes_known": true,
+  "prospective_preregistration_claim_authorized": false,
+  "calibration_fallback_authorizes_unlock": false,
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pandas": "2.3.3",
+    "anndata": "0.12.17",
+    "scanpy": "1.11.5",
+    "scikit-learn": "1.9.0"
+  }
+}

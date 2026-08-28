@@ -84,8 +84,8 @@ def main() -> None:
         three_evidence_branches=True,
     )
     assertions = list(base.ASSERTIONS)
-    if len(assertions) != 46 or not all(row.get("pass") is True for row in assertions):
-        raise RuntimeError(f"Expected 46 passing assertions; found {len(assertions)}")
+    if len(assertions) != 47 or not all(row.get("pass") is True for row in assertions):
+        raise RuntimeError(f"Expected 47 passing assertions; found {len(assertions)}")
 
     frozen_figure1 = PREFREEZE_RUN / "source_data" / "Figure1_source_data.csv"
     publication_figure1 = source_dir / "Figure1_source_data.csv"

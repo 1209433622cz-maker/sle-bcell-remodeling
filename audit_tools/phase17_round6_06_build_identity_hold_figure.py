@@ -31,6 +31,7 @@ COLORS = {
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--integration-dir", type=Path, required=True)
+    parser.add_argument("--output-dir", type=Path)
     return parser.parse_args()
 
 
@@ -59,8 +60,9 @@ def panel_label(axis, label: str, x: float = -0.14, y: float = 1.08) -> None:
 def main() -> None:
     args = parse_args()
     run = args.integration_dir.resolve()
-    figure_dir = run / "figures"
-    source_dir = run / "source_data"
+    output = args.output_dir.resolve() if args.output_dir else run
+    figure_dir = output / "figures"
+    source_dir = output / "source_data"
     figure_dir.mkdir(parents=True, exist_ok=True)
     source_dir.mkdir(parents=True, exist_ok=True)
 
@@ -284,6 +286,8 @@ def main() -> None:
 
     pdf_path = figure_dir / "Supplementary_Figure_S9_identity_boundary_and_propagation.pdf"
     png_path = figure_dir / "Supplementary_Figure_S9_identity_boundary_and_propagation.png"
+    from publication_style_contract import apply_publication_style
+    apply_publication_style(figure)
     figure.savefig(
         pdf_path,
         format="pdf",
@@ -343,7 +347,7 @@ def main() -> None:
         "source_rows": len(source_data),
         "checks": checks,
     }
-    (run / "13_SUPPLEMENTARY_FIGURE_S9_STATUS.json").write_text(
+    (output / "13_SUPPLEMENTARY_FIGURE_S9_STATUS.json").write_text(
         json.dumps(status, indent=2) + "\n", encoding="utf-8", newline="\n"
     )
 
@@ -384,7 +388,7 @@ Do not:
 
 Place Supplementary Figure S9 and its Source Data in the supplementary information. Figure 1 should identify panels b-d as frozen-representation resampling. The manuscript title should refer to unstable state **assignments**, not unstable biological states.
 """
-    (run / "14_ROUND6_R1_HOLD_ADVISOR_REVIEW.md").write_text(
+    (output / "14_ROUND6_R1_HOLD_ADVISOR_REVIEW.md").write_text(
         review, encoding="utf-8", newline="\n"
     )
     print(json.dumps(status, indent=2))

@@ -162,9 +162,21 @@ def read_tar_matrix(archive: tarfile.TarFile, member_name: str) -> sparse.csr_ma
     return matrix
 
 
-def normalize_log_cp10k(counts: sparse.spmatrix) -> sparse.csr_matrix:
+def normalize_log_cp10k(
+    counts: sparse.spmatrix, *, library_totals: np.ndarray | None = None
+) -> sparse.csr_matrix:
+    """Normalize to full-library totals, including when counts are feature-subsetted."""
     matrix = counts.tocsr().astype(np.float32, copy=True)
-    totals = np.asarray(matrix.sum(axis=1)).ravel().astype(np.float32)
+    if not np.isfinite(matrix.data).all() or (matrix.data < 0).any():
+        raise ValueError("Counts must be finite and nonnegative")
+    subset_totals = np.asarray(matrix.sum(axis=1)).ravel().astype(np.float32)
+    totals = subset_totals if library_totals is None else np.asarray(library_totals, dtype=np.float32)
+    if totals.shape != (matrix.shape[0],):
+        raise ValueError("One library total per cell is required")
+    if not np.isfinite(totals).all() or (totals < 0).any():
+        raise ValueError("Library totals must be finite and nonnegative")
+    if (totals + 1e-5 * np.maximum(subset_totals, 1) < subset_totals).any():
+        raise ValueError("Library totals cannot be smaller than selected-feature counts")
     factors = np.divide(
         10_000.0,
         totals,

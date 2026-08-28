@@ -1,7 +1,14 @@
-# Genome Medicine portal upload guide
+# Journal portal preparation guide
 
-Use the files in `journal_submission/portal_upload_required/` unless the portal
-explicitly requests a different organization.
+**Submission hold (28 August 2026):** the existing package predates the corrected
+external-mapping calibration audit. Do not upload it unchanged. Canonical sources
+now retain C9A HOLD; the original C9 PASS is superseded. The target journal is not
+currently fixed. Rebuild the package, rerender the documents and reconcile the
+version-specific archive before using the historical checklist below.
+
+Use `correction_review/PORTAL_FILES.csv` to review proposed file roles only.
+No files are currently authorized for upload. The historical `journal_submission`
+directory must not be used as the current package.
 
 ## Required files
 
@@ -21,7 +28,7 @@ explicitly requests a different organization.
 
 ## Optional files
 
-The seven `Supplementary_Figure_S*.pdf` files duplicate figures embedded in
+The ten `Supplementary_Figure_S*.pdf` files duplicate figures embedded in
 `Supplementary_Information.docx`. Upload them only if the portal explicitly
 requires standalone supplementary figures.
 
@@ -31,7 +38,8 @@ requires standalone supplementary figures.
 2. Confirm both ORCID records and the corresponding email.
 3. Copy ethics, consent, competing interests, funding, acknowledgements,
    contributions and generative-AI statements from `Manuscript.docx`.
-4. Enter the archive DOI as `10.5281/zenodo.22086892`.
+4. Create and verify a matching archive after renewed approval. The initial DOI
+   `10.5281/zenodo.22086892` does not identify the revised materials.
 5. Compare the portal-generated PDF against the manuscript, supplement, cover
    letter and all five figures before final submission.
 6. After submission, save the receipt, manuscript number, submission time and

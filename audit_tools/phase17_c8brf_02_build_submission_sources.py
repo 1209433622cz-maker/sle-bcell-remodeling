@@ -353,6 +353,7 @@ def zenodo_metadata(doi: str) -> dict[str, object]:
 
 
 def main() -> None:
+    raise RuntimeError("Retired source generator: would overwrite post-C9 corrections. Use canonical Markdown and the correction-review builder.")
     args = parse_args()
     doi = validate_doi(args.doi)
     RUN_DIR.mkdir(parents=True, exist_ok=True)

@@ -9,6 +9,7 @@ param(
     [string]$OutputDir = "",
     [string]$CondaEnvironment = "sle-bcell",
     [switch]$TestMode,
+    [switch]$PostUnblindingCorrection,
     [int]$MaxSamples = 0
 )
 
@@ -25,7 +26,7 @@ $Defaults = @{
     ReferenceRaw = "phase17_v7\gateC2B1\20260810_171000_full_library_doublets\04_full_raw_counts.h5ad"
     ReferenceRepresentation = "phase17_v7\gateC2B2\20260812_full_representation\06_primary_all_cells_representation.h5ad"
     ProgramDictionary = "phase17_v7\gateC5A\20260815_gse135779_source_mapping_freeze\10_FROZEN_PROGRAM_DICTIONARY.csv"
-    OutputDir = "phase17_v7\gateC9\20260828_gse135779_label_agnostic_validation"
+    OutputDir = "phase17_v7\gateC9R\20260828_normalization_correction"
 }
 
 foreach ($Name in $Defaults.Keys) {
@@ -62,6 +63,7 @@ $PrefreezeArguments = @(
     "--output-dir", $OutputDir
 )
 if ($TestMode) { $PrefreezeArguments += "--test-mode" }
+if ($PostUnblindingCorrection) { $PrefreezeArguments += "--post-unblinding-correction" }
 if ($MaxSamples -gt 0) { $PrefreezeArguments += @("--max-samples", "$MaxSamples") }
 
 Write-Host "[1/2] Freezing label-agnostic selection, mapping and program scores..."

@@ -96,6 +96,8 @@ def write_source(path: Path, panels: list[pd.DataFrame]) -> None:
 
 
 def save_figure(figure: plt.Figure, figure_dir: Path, basename: str) -> None:
+    from publication_style_contract import apply_publication_style
+    apply_publication_style(figure)
     visible_sizes = [
         float(item.get_fontsize())
         for item in figure.findobj(match=Text)
@@ -103,8 +105,8 @@ def save_figure(figure: plt.Figure, figure_dir: Path, basename: str) -> None:
     ]
     minimum = min(visible_sizes)
     assert_true(f"{basename}.minimum_visible_font_pt", minimum >= 5.0, f"{minimum:.2f} pt")
-    figure.savefig(figure_dir / f"{basename}.pdf", bbox_inches="tight")
-    figure.savefig(figure_dir / f"{basename}.png", dpi=600, bbox_inches="tight")
+    figure.savefig(figure_dir / f"{basename}.pdf")
+    figure.savefig(figure_dir / f"{basename}.png", dpi=600)
     plt.close(figure)
 
 
@@ -557,8 +559,15 @@ def build_s7(root: Path, figure_dir: Path, source_dir: Path) -> None:
     x = -np.log10(sensitivity["camera_q_core6"])
     y = -np.log10(sensitivity["fry_q_core6"])
     axes[0, 0].scatter(x, y, c=colors, s=22)
-    for xv, yv, label in zip(x, y, labels, strict=True):
-        axes[0, 0].text(xv + 0.025, yv + 0.025, label.replace("\n", " "), fontsize=5.1)
+    label_y = [5.8, 4.1, 5.3, 6.7, 4.3, 4.8]
+    for index, (xv, yv, label) in enumerate(zip(x, y, labels, strict=True)):
+        display = label.replace("internal_nonoverlap", "Nonoverlap").replace("primary", "Discovery").replace("childhood", "Childhood").replace("\n", " ")
+        label_x = 0.96 if index == 1 else 1.72
+        axes[0, 0].annotate(display, (xv, yv), xytext=(label_x, label_y[index]),
+                            fontsize=5.1, va="center",
+                            arrowprops={"arrowstyle":"-", "lw":0.5, "color":"#777777"})
+    axes[0, 0].set_xlim(0.82, 2.65)
+    axes[0, 0].set_ylim(1.0, 7.0)
     threshold = -np.log10(0.05)
     axes[0, 0].axvline(threshold, color=COLORS["grey"], lw=0.6, ls="--")
     axes[0, 0].axhline(threshold, color=COLORS["grey"], lw=0.6, ls="--")

@@ -1,0 +1,5 @@
+sample_id,program_id,positive_requested,positive_present,positive_missing,negative_requested,negative_present,negative_missing
+JB17001,NAIVE_TO_MEMORY_AXIS,7,7,,7,7,
+JB17001,ATYPICAL_LOW_NAIVE_AXIS,7,7,,3,3,
+JB17001,APC_HLA,10,10,,0,0,
+JB17001,IFN_ISG,12,12,,0,0,

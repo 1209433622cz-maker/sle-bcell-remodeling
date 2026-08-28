@@ -17,12 +17,15 @@ state-overlap criterion; the formal result is HOLD, and B_CONV/B_ASC is now
 framed as an analysis scaffold rather than a universally reproducible taxonomy.
 Propagating every observed broad-state boundary exchange retained the primary
 composition null and both tested GSE174188 B_CONV IFN/ISG effects. The local
-journal package has been rebuilt and fully WPS-audited. A subsequent
-label-agnostic analysis of all 363,083 GSE135779 matrix cells independently
-recovered the external B-lineage compartment and retained the childhood
-IFN/ISG direction under two frozen broad-state mappers. This result is a
-supplementary robustness sensitivity and does not change the formal identity
-HOLD. The existing citable
+journal package is an earlier WPS-audited snapshot, not a submission-ready release.
+Independent code review invalidated the subsequent C9 PASS: reference and external
+normalization differed, and failed confidence calibration incorrectly authorized
+outcome access. The corrected full run processed all 363,083 cells but stopped
+at calibration HOLD (B_ASC precision 0.885 < 0.90). No corrected external disease
+outcomes were opened. Source-label-defined primary GSE135779 replication is
+retained; source-label-independent robustness is not established. See the
+[correction contract](00_project_management/gateC9_technical_correction_contract_2026-08-28.md).
+The existing citable
 archive is available at [doi:10.5281/zenodo.22086892](https://doi.org/10.5281/zenodo.22086892);
 its payload must be updated before journal submission.
 
@@ -45,10 +48,9 @@ The frozen evidence chain is:
   0.636-1.410, P=0.787.
 - The frozen IFN/ISG program replicates in GSE174188 discovery, a
   donor-nonoverlap internal contrast and independent GSE135779 childhood donors.
-- Label-agnostic GSE135779 selection recovered 98.7% of post hoc source-labeled
-  B cells with 3.3% non-B contamination. Elastic-net and nearest-centroid
-  mappings retained positive childhood IFN/ISG effects (0.306 and 0.304;
-  q=0.00235 and q=0.00212), with no leave-one-donor reversal.
+- Corrected reference-calibrated, source-label-agnostic mapping is on HOLD:
+  elastic-net B_ASC precision missed the frozen 0.90 criterion. Original C9
+  effects are superseded audit records, not supporting publication evidence.
 - Genome-wide cross-dataset agreement is low (Spearman rho=0.026); the claim is
   program-specific replication, not a globally shared disease transcriptome.
 - Frozen STAT1/STAT2 ULM results are supported by a correlation-aware
@@ -75,7 +77,7 @@ The frozen evidence chain is:
 - [Round 6 execution contract](00_project_management/round6_q1_robustness_execution_contract_2026-08-25.md)
 - [Full-run handoff](00_project_management/round6_full_pipeline_resampling_handoff_2026-08-25.md)
 - [R1 HOLD integration review](phase17_v7/round6_q1_robustness/20260827_r1_hold_integration/14_ROUND6_R1_HOLD_ADVISOR_REVIEW.md)
-- [Label-agnostic GSE135779 review](phase17_v7/gateC9/20260828_gse135779_label_agnostic_validation/28_GATE_C9_ADVISOR_REVIEW.md)
+- [Corrected mapping calibration review](phase17_v7/gateC9R/20260828_normalization_correction/16_GATE_C9A_PREFREEZE_REVIEW.md)
 
 Git history and the immutable public release preserve superseded submission
 drafts. The stable filenames above are the only current author-facing entry
@@ -84,7 +86,8 @@ reproducible; Git tracks its reader-facing README, manifests, portal maps and
 11-file REQUIRED upload set, while internal renders and duplicate working assets
 remain ignored. Markdown, scripts and machine-readable analysis outputs remain
 the authoritative sources. The current local package passed WPS, accessibility,
-portal-map and deterministic-ZIP audits but has not been submitted.
+portal-map and deterministic-ZIP audits, but predates this correction and must
+not be submitted unchanged. Historical PASS labels do not override this status.
 
 ## Licence and citation
 
@@ -117,12 +120,15 @@ Run the protected two-stage GSE135779 label-agnostic sensitivity with:
 
 ```powershell
 powershell -ExecutionPolicy Bypass `
-  -File .\audit_tools\run_6013RP_phase17_gateC9_label_agnostic_gse135779.ps1
+  -File .\audit_tools\run_6013RP_phase17_gateC9_label_agnostic_gse135779.ps1 `
+  -PostUnblindingCorrection
 ```
 
 The runner freezes selection, mapper calibration and program scores before it
 permits source-label or outcome-field parsing and joins. The recomputable per-cell
-prediction table remains outside Git.
+prediction table remains outside Git. Use a new `-OutputDir` for a repeat run;
+nonempty runs are protected. A calibration HOLD returns nonzero and deliberately
+prevents outcome access; it is not an instruction to relax the threshold.
 
 ## Repository layout
 
@@ -132,7 +138,7 @@ prediction table remains outside Git.
 - `03_results/`: the retained Phase 17 study-design figure bundle.
 - `audit_tools/`: executable analysis, build and audit scripts.
 - The analysis run tree contains machine-readable audit outputs and publication figures.
-- `04_submission/`: current portal guide, author records and journal-facing package.
+- `04_submission/`: current review guide, author records and a preserved historical package.
 - `Data/`: a tracked retrieval guide plus ignored, disposable public-data caches.
 
 ## Research proposal
@@ -144,11 +150,14 @@ analyses require it, but it does not overwrite the proposal history.
 
 ## Next stage
 
-Integrate the completed Gate C9 result as a supplementary robustness analysis,
-not as a replacement primary analysis. Add one concise Methods subsection, one
-bounded Results paragraph, a supplementary figure with source data and the
-explicit 15.1% contamination limitation of the per-cell margin sensitivity.
-Then rebuild the manuscript and submission package, repeat WPS/PDF/adversarial
-audits, publish an updated Zenodo version and proceed to the journal portal. No
-new exploratory dataset or identity-threshold repair is justified before
-submission, and the formal R1 HOLD must remain unchanged.
+The corrected limitation is integrated into the manuscript, supplement and RP.
+The separate correction-review bundle adds the full calibration family and S10,
+with portable hash checks. It is not authorized for submission. Historical
+one-click release writers are retired to protect the revised sources and old
+package. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for current entry points.
+
+Obtain an external review of the correction and renewed author content approval,
+then select a journal and publish a matching version-specific archive. Do not
+tune C9 thresholds or substitute the centroid mapper to obtain a PASS. R1 HOLD
+and source-label dependence remain explicit. No new DOI or journal submission
+is implied by a GitHub code correction.

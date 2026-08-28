@@ -133,7 +133,7 @@ submission filenames.
 
 - DOI: https://doi.org/{doi}
 - Scientific estimates changed during final publication engineering: no
-- Main panel-data assertions: PASS 46/46
+- Main panel-data assertions: PASS 47/47
 - Supplementary-figure panel-data assertions: PASS 29/29
 - Main figures: vector PDF at 170 mm plus 600-dpi PNG
 - Author declarations and generative-AI disclosure: complete
@@ -228,7 +228,7 @@ def main() -> None:
     check(
         "main_figure_contract",
         figure_status["status"] == "PASS_GATE_C8BRF_170MM_PUBLICATION_FIGURES_BUILT"
-        and len(assertions["checks"]) == 46
+        and len(assertions["checks"]) == 47
         and all(row["pass"] is True for row in assertions["checks"])
         and dimension_pass,
         dimensions,
@@ -483,7 +483,7 @@ def main() -> None:
         "## Verified outcome",
         "",
         "- Scientific estimates changed: No.",
-        "- Main figure assertions: 46/46.",
+        "- Main figure assertions: 47/47.",
         "- Supplementary-figure assertions: legacy 29/29 plus verified S8 and S9 contracts.",
         "- Main figures: 5/5 at 170 mm, vector PDF plus 600-dpi PNG.",
         "- Manuscript and cover placeholders: 0.",

@@ -6,7 +6,7 @@ from __future__ import annotations
 import argparse
 import gzip
 import json
-import re
+import importlib.metadata
 import sys
 import tarfile
 from datetime import datetime
@@ -76,12 +76,19 @@ def portable_path(path: Path, project_root: Path) -> str:
         return path.name
 
 
-def clear_stale_outcome_outputs(output: Path) -> None:
-    """Invalidate old C9B files before a new blinded C9A run begins."""
-    for path in output.iterdir():
-        match = re.match(r"^(\d{2})_", path.name)
-        if path.is_file() and match and int(match.group(1)) >= 18:
-            path.unlink()
+def require_empty_run_directory(output: Path) -> None:
+    if output.exists() and any(output.iterdir()):
+        raise RuntimeError("Run directory is not empty; preserve frozen runs and use a new directory")
+
+
+def validate_run_scope(test_mode: bool, max_samples: int | None) -> None:
+    if max_samples is not None and (not test_mode or max_samples < 1):
+        raise ValueError("--max-samples is positive and test-only; formal runs require all 56 samples")
+
+
+def confidence_calibration_passed(audit: pd.DataFrame) -> bool:
+    selected = audit.loc[audit["selected"]]
+    return bool(len(selected) == 1 and selected["eligible"].all())
 
 
 def load_external_genes(path: Path) -> pd.DataFrame:
@@ -272,6 +279,7 @@ def calibrate_confidence(
         )
         threshold = float(audit.sort_values(["fallback_rank", "coverage"], ascending=False).iloc[0]["threshold"])
     audit["selected"] = np.isclose(audit["threshold"], threshold)
+    audit["diagnostic_fallback_only"] = eligible.empty
     return threshold, audit.drop(columns=["fallback_rank"], errors="ignore")
 
 
@@ -306,10 +314,28 @@ def train_reference_mappers(
             set(external_genes["gene_symbol_upper"]),
         )
         feature_indices = features["reference_raw_index"].to_numpy(dtype=int)
-        counts = raw[rows, feature_indices].X
-        if not sparse.issparse(counts):
-            counts = sparse.csr_matrix(counts)
-        expression = normalize_log_cp10k(counts)
+        full_counts = raw[rows, :].X
+        if not sparse.issparse(full_counts):
+            full_counts = sparse.csr_matrix(full_counts)
+        totals = np.asarray(full_counts.sum(axis=1)).ravel()
+        counts = full_counts[:, feature_indices]
+        feature_totals = np.asarray(counts.sum(axis=1)).ravel()
+        expression = normalize_log_cp10k(counts, library_totals=totals)
+        write_csv(
+            pd.DataFrame({
+                "reference_row": rows,
+                "donor_id": groups,
+                "state": np.where(labels == 1, "B_ASC", "B_CONV"),
+                "full_library_counts": totals,
+                "selected_feature_counts": feature_totals,
+                "selected_fraction_of_library": feature_totals / totals,
+                "legacy_prelog_inflation_factor": np.divide(
+                    totals, feature_totals, out=np.full_like(totals, np.nan), where=feature_totals > 0
+                ),
+            }),
+            output / "03_REFERENCE_LIBRARY_SIZE_AUDIT.csv",
+        )
+        del full_counts, counts
     finally:
         raw.file.close()
         representation.file.close()
@@ -485,6 +511,8 @@ def train_reference_mappers(
         "features": features,
         "elastic_threshold": elastic_threshold,
         "centroid_threshold": centroid_threshold,
+        "elastic_calibration_eligible": confidence_calibration_passed(elastic_calibration),
+        "centroid_calibration_eligible": confidence_calibration_passed(centroid_calibration),
         "chosen_alpha": chosen_alpha,
         "elastic_mean_balanced_accuracy": elastic_mean_ba,
         "centroid_mean_balanced_accuracy": centroid_mean_ba,
@@ -867,7 +895,9 @@ def main() -> int:
     parser.add_argument("--output-dir", required=True)
     parser.add_argument("--test-mode", action="store_true")
     parser.add_argument("--max-samples", type=int)
+    parser.add_argument("--post-unblinding-correction", action="store_true")
     args = parser.parse_args()
+    validate_run_scope(bool(args.test_mode), args.max_samples)
 
     source = Path(args.source_dir).resolve()
     project_root = Path(args.project_root).resolve()
@@ -875,8 +905,8 @@ def main() -> int:
     reference_representation = Path(args.reference_representation).resolve()
     program_dictionary_path = Path(args.program_dictionary).resolve()
     output = Path(args.output_dir).resolve()
+    require_empty_run_directory(output)
     output.mkdir(parents=True, exist_ok=True)
-    clear_stale_outcome_outputs(output)
 
     input_paths = [
         source / "GSE135779_RAW.tar",
@@ -888,6 +918,10 @@ def main() -> int:
         reference_raw,
         reference_representation,
         program_dictionary_path,
+        Path(__file__).resolve(),
+        Path(__file__).with_name("phase17_c9_common.py").resolve(),
+        Path(__file__).with_name("phase17_c9_02_unlock_outcomes_and_review.py").resolve(),
+        Path(__file__).with_name("run_6013RP_phase17_gateC9_label_agnostic_gse135779.ps1").resolve(),
     ]
     missing = [str(path) for path in input_paths if not path.is_file()]
     if missing:
@@ -920,6 +954,19 @@ def main() -> int:
         "outcome_unlock_authorized": False,
     }
     write_json(protection, output / "02_PROTECTED_METADATA_CONTRACT.json")
+    provenance = {
+        "created_at": now_iso(),
+        "normalization_contract": "full_library_cp10k_before_feature_subsetting",
+        "post_unblinding_technical_correction": bool(args.post_unblinding_correction),
+        "previous_C9_outcomes_known": True,
+        "prospective_preregistration_claim_authorized": False,
+        "calibration_fallback_authorizes_unlock": False,
+        "packages": {
+            package: importlib.metadata.version(package)
+            for package in ("numpy", "scipy", "pandas", "anndata", "scanpy", "scikit-learn")
+        },
+    }
+    write_json(provenance, output / "04_EXECUTION_PROVENANCE.json")
 
     external_genes = load_external_genes(source / "GSE135779_genes.tsv.gz")
     programs, program_ids = load_programs(program_dictionary_path)
@@ -953,8 +1000,10 @@ def main() -> int:
             "centroid_mean_balanced_accuracy"
         ]
         >= 0.90,
+        "elastic_confidence_calibration_eligible": mappers["elastic_calibration_eligible"],
+        "centroid_confidence_calibration_eligible": mappers["centroid_calibration_eligible"],
         "all_expected_samples_processed": external["samples"] == expected_samples,
-        "all_cells_reconciled": external["total_cells"] > 0,
+        "all_cells_reconciled": external["total_cells"] > 0 if args.test_mode else external["total_cells"] == 363_083,
         "label_agnostic_B_cells_selected": external["selected_B_cells"] > 0,
         "per_cell_output_present": external["prediction_path"].is_file(),
     }
@@ -972,6 +1021,9 @@ def main() -> int:
         ),
         "test_mode": bool(args.test_mode),
         "disease_blind": True,
+        "normalization_contract": provenance["normalization_contract"],
+        "post_unblinding_technical_correction": provenance["post_unblinding_technical_correction"],
+        "previous_C9_outcomes_known": True,
         "source_labels_used": False,
         "outcome_unlock_authorized": authorized,
         "reference_model": {
@@ -993,7 +1045,7 @@ def main() -> int:
             "primary_selection": "sample-wise Leiden cluster with B-lineage module greater than all exclusion modules and mean B detection >=1/9",
             "selection_sensitivity": "per-cell B-lineage margin >0 and B detection >=1/9",
             "primary_mapper": "donor-grouped elastic-net logistic regression",
-            "independent_mapper": "nearest-centroid Pearson correlation",
+            "algorithmically_distinct_mapper": "nearest-centroid Pearson correlation sharing the reference and feature space",
             "outcome_family": program_ids,
             "primary_outcome": "childhood donor mean 12-gene IFN_ISG score in confidently mapped B_CONV",
             "minimum_B_CONV_cells_per_donor": 50,

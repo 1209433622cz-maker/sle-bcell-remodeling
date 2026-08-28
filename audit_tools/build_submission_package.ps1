@@ -11,6 +11,7 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+throw "The historical release builder is retired after the C9 correction. Use audit_tools/build_correction_review.ps1 for a non-submittable review bundle. Existing releases must not be overwritten."
 $InternalBuilder = Join-Path $PSScriptRoot "run_6013RP_phase17_gateC8BRF_author_release.ps1"
 if (-not (Test-Path -LiteralPath $InternalBuilder)) {
     throw "Internal submission builder not found: $InternalBuilder"

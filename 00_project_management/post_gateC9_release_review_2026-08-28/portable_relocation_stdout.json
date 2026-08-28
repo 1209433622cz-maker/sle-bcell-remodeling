@@ -1,0 +1,12 @@
+{
+  "status": "PASS_PORTABLE_TECHNICAL_VERIFICATION",
+  "payload_files": 68,
+  "nested_manifest_rows": {
+    "Figure_Source_Data.zip": 15,
+    "Full_Statistical_Results.zip": 184,
+    "Regulator_Sensitivity.zip": 10
+  },
+  "document_pages": 60,
+  "submission_authorized": false,
+  "scope": "Sizes, hashes, complete manifests, DOCX structure and recorded review boundaries; not a numerical rerun or independent scientific review."
+}

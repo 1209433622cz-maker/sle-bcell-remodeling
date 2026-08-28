@@ -6,7 +6,7 @@
 
 ## Supplementary overview
 
-This supplementary information reports the prespecified workflow, diagnostic analyses, statistical families and source-data structure supporting the main manuscript. Nine supplementary figures were reconstructed from frozen primary analyses and declared post-freeze sensitivity outputs. Every displayed panel is linked to machine-readable source data and exact numerical assertions; no exploratory result was promoted during preparation of this document.
+This supplementary information reports the prespecified workflow, diagnostic analyses, statistical families and source-data structure supporting the main manuscript. Nine supplementary figures were reconstructed from frozen primary analyses and declared post-freeze sensitivity outputs; a tenth reports the corrected reference-calibration limitation. Each figure has machine-readable source data. Original external-mapping sensitivity outcomes are superseded, and no corrected disease effect was estimated after calibration failed.
 
 ## Supplementary Methods 1 | Prespecification and outcome protection
 
@@ -116,6 +116,7 @@ All 11 depleted ULM models retaining at least ten targets preserved direction in
 | Figure 5 | Regulatory and orthogonal response evidence | Figure5_source_data.csv |
 | Supplementary Figure S8 | STAT1/STAT2 IFN-overlap-depletion sensitivity | Supplementary_Figure_S8_source_data.csv |
 | Supplementary Figure S9 | End-to-end identity boundary and downstream propagation | Supplementary_Figure_S9_source_data.csv |
+| Supplementary Figure S10 | Corrected reference calibration and unresolved external transfer | Supplementary_Figure_S10_source_data.csv |
 
 ## Supplementary Table S6 | Reproducibility record
 
@@ -127,7 +128,7 @@ All 11 depleted ULM models retaining at least ten targets preserved direction in
 | End-to-end identity and boundary propagation | Full Statistical Results additional file, `identity_robustness/` |
 | Analysis code and decisions | `https://github.com/1209433622cz-maker/sle-bcell-remodeling` |
 | Environment reconstruction | Pinned scientific and release environments documented in `REPRODUCIBILITY.md` |
-| Immutable archive | Zenodo doi:10.5281/zenodo.22086892 |
+| Initial immutable archive | Zenodo doi:10.5281/zenodo.22086892; predates post-freeze robustness and correction; a matching updated archive is required before submission |
 
 ## Supplementary Table S7 | Statistical tests and multiplicity families
 
@@ -155,6 +156,29 @@ All 11 depleted ULM models retaining at least ten targets preserved direction in
 | regulatory_and_orthogonal | ULM, target influence, CAMERA/FRY, M5911 and GSE23307 summaries | 9 |
 | statistical_framework | Machine-readable test and multiplicity map | 1 |
 | identity_robustness | Aggregate and replicate-level end-to-end identity metrics, boundary propagation results and integrity records | 101 |
+| external_mapping_calibration | Corrected feature and parameter tables, full confidence-calibration family, aggregate selection diagnostics, provenance, arithmetic recount and publication boundary | 20 |
+
+## Supplementary Table S9 | Reference-calibrated external mapping boundary
+
+| Component | Corrected diagnostic | Interpretation |
+|---|---|---|
+| External input | 56 matrices; 363,083 cells | Complete source matrix coverage |
+| External QC and selection | 353,527 QC-passing cells; 36,630 B-lineage candidates | No source labels or disease fields parsed |
+| Reference training | 13,000 B_CONV and 1,300 B_ASC; 258 donors; 601 features | Both algorithms share reference and features |
+| Normalization | Full-library log1p(CP10K) before feature subsetting in both datasets | Corrects reference feature-only denominator |
+| Elastic-net calibration | Diagnostic threshold 0.95; coverage 0.941958; B_CONV precision 0.996450; B_ASC precision 0.885210 | No eligible candidate: state precision must be at least 0.90 and coverage at least 0.80 |
+| Centroid calibration | Margin 0.117767; coverage 0.95; B_CONV precision 0.992374; B_ASC precision 1.0 | Eligible, but cannot replace required primary mapper |
+| Mean reference-fold balanced accuracy | Elastic net 0.960569; centroid 0.950293 | Calibration diagnostics; not independent performance estimates |
+| Outcome policy | Corrected disease outcomes not estimated | No corrected effect, confidence interval, P or q value exists |
+| Prior outcome exposure | Original sensitivity outcomes were known before correction | Technical correction, not new prospective preregistration |
+| Publication boundary | Primary GSE135779 replication remains source-label-defined | Original C9 PASS and effect estimates excluded from supporting evidence |
+
+Full candidate calibration, donor-grouped cross-validation, reference normalization
+audit and corrected input/prediction hashes are retained with the analysis code.
+The original source-label-based pseudobulk effect is a standardized HC3 model
+estimate; the unexecuted sensitivity would instead compare donor mean cell-level
+log1p(CP10K) scores. They are different estimands and must not be compared as effect
+attenuation. No new multiplicity family was evaluated after the calibration HOLD.
 
 ## Supplementary Figure S1 | Source integrity and hard-quality-control diagnostics
 
@@ -209,3 +233,19 @@ All 11 depleted ULM models retaining at least ten targets preserved direction in
 **a,** Observed values and unchanged criteria for the five formal end-to-end two-compartment checks; four passed and minimum state-median Jaccard produced HOLD. **b,** State Jaccard across 20 complete reconstruction replicates shows that the formal failure is localized to B_ASC, while B_CONV remains above the 0.95 criterion. **c,** Counts of sampled cells exchanged across the B_CONV/B_ASC boundary. **d,** Primary B_ASC composition odds ratios and 95% confidence intervals after each observed boundary exchange; the dashed guide marks one and the orange line marks the frozen estimate. **e,** Primary and donor-nonoverlap B_CONV IFN/ISG effects after boundary-cell raw counts were propagated through frozen TMM logCPM and HC3 models; dotted lines mark the frozen effects. All propagation analyses reuse GSE174188 and quantify assignment sensitivity rather than independent replication.
 
 [[SUPPLEMENTARY_FIGURE:S9]]
+
+## Supplementary Figure S10 | Reference calibration limits source-label-agnostic external transfer
+
+**a,** Median and interquartile range of full-library divided by selected-feature
+counts among 13,000 B_CONV and 1,300 B_ASC reference training cells. This ratio
+quantifies the legacy pre-log scaling discrepancy; corrected mapping uses
+full-library denominators in both datasets. **b,** Per-state precision at the
+diagnostic elastic-net and eligible centroid thresholds; the dashed line is the
+unchanged 0.90 criterion. **c,** Reference-cell coverage at those thresholds; the
+dashed line is the unchanged 0.80 criterion. **d,** Balanced accuracy in each of
+five donor-grouped reference calibration folds. These folds select model and
+threshold parameters, not independent performance estimates. The elastic-net
+B_ASC precision failure prevents outcome access; centroid success is not a
+replacement analysis. No corrected external disease result is shown.
+
+[[SUPPLEMENTARY_FIGURE:S10]]

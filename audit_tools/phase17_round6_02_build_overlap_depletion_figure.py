@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import json
+import argparse
+from datetime import datetime
 from pathlib import Path
 
 import matplotlib as mpl
@@ -117,6 +119,12 @@ def forest(axis: plt.Axes, rows: pd.DataFrame, label: str, title: str) -> None:
 
 
 def main() -> None:
+    global FIGURE_DIR, SOURCE_DIR
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output-dir", type=Path, default=RUN_DIR)
+    output_dir = parser.parse_args().output_dir.resolve()
+    FIGURE_DIR = output_dir / "figures"
+    SOURCE_DIR = output_dir / "source_data"
     configure_style()
     FIGURE_DIR.mkdir(parents=True, exist_ok=True)
     SOURCE_DIR.mkdir(parents=True, exist_ok=True)
@@ -171,7 +179,9 @@ def main() -> None:
     for row_index in range(matrix.shape[0]):
         for column_index in range(matrix.shape[1]):
             q_value = q_table.iloc[row_index, column_index]
-            color = "white" if matrix[row_index, column_index] > 2.1 else "#111111"
+            red, green, blue, _ = image.cmap(image.norm(matrix[row_index, column_index]))
+            luminance = 0.2126 * red + 0.7152 * green + 0.0722 * blue
+            color = "#111111" if luminance > 0.5 else "white"
             axis.text(column_index, row_index, f"{q_value:.2g}", ha="center", va="center", fontsize=5.0, color=color)
     axis.set_xticks(
         np.arange(len(column_order)),
@@ -219,11 +229,13 @@ def main() -> None:
     axis.set_yticks(y_positions, label_order)
     axis.set_xlabel("Frozen targets retained (%)")
     axis.set_title("Regulon target retention", loc="left", pad=4)
-    axis.legend(frameon=False, loc="lower left")
+    axis.legend(frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.17))
     style_axis(axis)
     panel_label(axis, "d")
 
     stem = "Supplementary_Figure_S8_overlap_depletion"
+    from publication_style_contract import apply_publication_style
+    apply_publication_style(figure)
     pdf_path = FIGURE_DIR / f"{stem}.pdf"
     png_path = FIGURE_DIR / f"{stem}.png"
     figure.savefig(pdf_path)
@@ -236,7 +248,8 @@ def main() -> None:
     if abs(width_mm - WIDTH_MM) > 0.2:
         raise RuntimeError(f"Unexpected supplementary figure width: {width_mm:.3f} mm")
     status = {
-        "created_at": "2026-08-25",
+        "created_at": datetime.now().astimezone().isoformat(timespec="seconds"),
+        "analysis_source_date": "2026-08-25",
         "status": "PASS_ROUND6_SUPPLEMENTARY_FIGURE_S8_BUILT",
         "figure_pdf": pdf_path.relative_to(ROOT).as_posix(),
         "figure_png": png_path.relative_to(ROOT).as_posix(),
@@ -246,7 +259,7 @@ def main() -> None:
         "source_rows": len(depleted),
         "all_depleted_directions_up": True,
     }
-    (RUN_DIR / "06_SUPPLEMENTARY_FIGURE_S8_STATUS.json").write_text(
+    (output_dir / "06_SUPPLEMENTARY_FIGURE_S8_STATUS.json").write_text(
         json.dumps(status, indent=2) + "\n", encoding="utf-8", newline="\n"
     )
     print(json.dumps(status, indent=2))

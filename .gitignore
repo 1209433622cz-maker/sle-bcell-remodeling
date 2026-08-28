@@ -49,6 +49,16 @@ _phase17_review_pack/
 !04_submission/journal_submission/submission_docs/PORTAL_UPLOAD_POLICY.txt
 phase17_v7/gateC8BRP/**/visual_qa/
 
+# Correction review: keep compact evidence, not per-cell or rendered QA caches.
+phase17_v7/gateC9R/**/03_REFERENCE_LIBRARY_SIZE_AUDIT.csv
+phase17_v7/gateC9R/**/08_REFERENCE_OOF_PREDICTIONS.csv
+phase17_v7/post_gateC9/**/documents/
+00_project_management/post_gateC9_release_review_2026-08-28/document_pages/
+00_project_management/post_gateC9_release_review_2026-08-28/_portable_test/
+00_project_management/post_gateC9_release_review_2026-08-28/_venv/
+00_project_management/post_gateC9_release_review_2026-08-28/_build_attempts/
+00_project_management/post_gateC9_release_review_2026-08-28/*.png
+
 # Local software-test matrices and generated diagnostics.
 phase17_v7/**/_software_tests/
 phase17_v7/**/_software_test*/
@@ -75,6 +85,9 @@ phase17_v7/gateC5A/**/*pseudobulk_counts*.npz
 phase17_v7/gateC6B/**/resources/
 
 # Runtime, editor and Office artifacts.
+00_project_management/post_gateC9_audit_2026-08-28/figure_renders/
+00_project_management/post_gateC9_audit_2026-08-28/contact_*.png
+00_project_management/post_gateC9_audit_2026-08-28/document_pages/**/*.png
 **/__pycache__/
 *.py[cod]
 .pytest_cache/

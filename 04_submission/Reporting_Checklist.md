@@ -1,4 +1,21 @@
-# Genome Medicine final reporting and release checklist
+# Reporting and release review checklist
+
+## Current correction hold
+
+This checklist below describes the earlier package, not current submission
+authorization. The latest target journal is undecided.
+
+- [x] Original C9 PASS invalidated after normalization and calibration-gate audit.
+- [x] Corrected 56-matrix run retained reference-calibration HOLD; outcomes remained protected.
+- [x] Manuscript, supplement and RP now disclose this limitation.
+- [x] Correction-review figures, Markdown/DOCX/WPS hashes and package manifests reconciled end to end.
+- [x] The separate bundle contains 5 main figures, 10 supplementary figures, 15 source tables and 20 corrected calibration records.
+- [x] Four current documents were WPS-rendered and audited; old author-approval claims were replaced by an explicit pending-renewal statement.
+- [ ] Corrected code, compact results and review documentation synchronized to GitHub.
+- [ ] New Zenodo version and version-specific DOI match the final approved payload.
+- [ ] Final corrected package approved for portal upload.
+
+## Earlier package record
 
 ## Scientific freeze
 

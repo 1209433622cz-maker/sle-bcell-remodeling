@@ -1,0 +1,50 @@
+{
+  "status": "REVIEW_DOCUMENTS_BUILT",
+  "next_step": "WPS export and final render audit; this build record alone is not release approval",
+  "documents": [
+    {
+      "source": "01_manuscript/Manuscript.md",
+      "output": "phase17_v7/post_gateC9/20260828_release_review/documents/Manuscript.docx",
+      "paragraphs": 168,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 63149,
+      "source_sha256": "FD837E3BDD73F3CE92B6926D40200FD0161E6EE7D02F6854E194EA0C2832435F",
+      "docx_sha256": "4587E10078B3B30C55408197E539FED566892CF4A48CA09937B337E087242279"
+    },
+    {
+      "source": "01_manuscript/Supplementary_Information.md",
+      "output": "phase17_v7/post_gateC9/20260828_release_review/documents/Supplementary_Information.docx",
+      "paragraphs": 89,
+      "tables": 10,
+      "inline_shapes": 10,
+      "placeholders": 0,
+      "bytes": 4082326,
+      "source_sha256": "55081AD1C836678D478C5A73543774861B3DA29C1D54DAD27E48C79BBA21BAA7",
+      "docx_sha256": "CB736552617DCFCC83B768284EBEFD642B5A6A06FD9D944F27DD6B38010ADB97"
+    },
+    {
+      "source": "01_manuscript/Research_Proposal.md",
+      "output": "phase17_v7/post_gateC9/20260828_release_review/documents/Research_Proposal.docx",
+      "paragraphs": 71,
+      "tables": 2,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 46983,
+      "source_sha256": "0768D8047C2243D329F601D355A00962708A15569F205CA33DB76F7428079D18",
+      "docx_sha256": "15EEC9B9AD44AA2807EDB2EF8AEFB4CB1150A49F4BC5C6F7C099F8F665B63378"
+    },
+    {
+      "source": "04_submission/Cover_Letter.md",
+      "output": "phase17_v7/post_gateC9/20260828_release_review/documents/Cover_Letter.docx",
+      "paragraphs": 16,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 40171,
+      "source_sha256": "B5B93AD3E4032383CE21AEC1ED0986FE7793A7D3419DD34575E2881C1CCE5264",
+      "docx_sha256": "0C64F26E8FF655DB54D7A4234868C26B004D004DB8D1F5B1C269135EE06520B8"
+    }
+  ]
+}
