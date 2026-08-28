@@ -1,0 +1,50 @@
+{
+  "recorded_at": "2026-08-29T01:18:45+08:00",
+  "status": "PASS_TARGET_PREPARATION_GITHUB_SYNC",
+  "repository": "https://github.com/1209433622cz-maker/sle-bcell-remodeling",
+  "branch": "main",
+  "baseline_commit": "74678c7cf75e376d90cdae886b6a1a4cf1951714",
+  "target_preparation_commit": "bc37f6ad2cd4a32a0390f5da7d188b326be56d89",
+  "remote_main_at_verification": "bc37f6ad2cd4a32a0390f5da7d188b326be56d89",
+  "push_exit_code": 0,
+  "changed_files": 12,
+  "working_tree_clean_at_verification": true,
+  "candidate_source_commit_unchanged": "05e41f40284fc65c6cd18bbecaa2bf507e81b5f8",
+  "candidate_zip": {
+    "path": "04_submission/corrected_candidate.zip",
+    "bytes": 26632739,
+    "sha256": "D87F83BEBE281E748E54DF0736E34B38E1CB0FF83C746C934B43E730373BA150",
+    "payload_files_verified": 82,
+    "source_provenance_rows_unchanged": 75,
+    "tracked_in_git": false,
+    "new_release_attachment_uploaded": false
+  },
+  "audit_receipt": {
+    "path": "00_project_management/jcr_q1_target_preparation_2026-08-29/candidate_no_drift_audit.json",
+    "bytes": 3439,
+    "sha256": "E907FB385D5D0AA1E03A03C61B961C513686C20B17E6F6DC4E2F912FF9FC1376",
+    "executed_at": "2026-08-29T01:17:30+08:00"
+  },
+  "verification_execution": {
+    "review_bundle_tests": 33,
+    "target_preparation_tests": 6,
+    "unit_tests_total_unique": 39,
+    "unit_tests_failed": 0,
+    "git_cached_diff_check_exit_code": 0,
+    "received_attachments_byte_matched_to_git": 3,
+    "new_numerical_analysis": false,
+    "new_document_or_figure_render": false,
+    "scope": "Technical integrity, frozen calibration-table interpretation and target preparation; not a fresh full scientific or visual audit"
+  },
+  "target_journal": null,
+  "official_jcr_q1_verified": false,
+  "institutional_apc_coverage_verified": false,
+  "new_doi_reserved": false,
+  "new_archive_published": false,
+  "new_release_created": false,
+  "journal_submission_performed": false,
+  "submission_authorized": false,
+  "library_request_sent": false,
+  "payment_performed": false,
+  "receipt_scope": "The substantive preparation commit was pushed and its remote hash verified. This receipt and the report synchronization note are committed subsequently as documentation only; this record does not claim to contain its own commit hash."
+}

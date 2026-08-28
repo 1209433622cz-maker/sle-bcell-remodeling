@@ -130,6 +130,18 @@ APC 方面，公开的香港协议表列有 CUHK，但不能据此认定深圳�
 
 运行 `test_review_bundle` 和 `test_target_preparation`，**39 项测试通过**，即 33 项既有包/批准边界测试加 6 项新增测试。没有把上一轮 46 项测试或 60 页渲染当作本轮新执行数量。集成审计再次核验 82 payloads 与 75 条 source provenance。
 
+本轮复核命令如下。审计 JSON 最后执行时间为 `2026-08-29T01:17:30+08:00`；再次执行会更新该回执时间，不会写入候选包。
+
+```powershell
+Set-Location 'H:\cuhk-2025fALL\6013RP-wyf\audit_tools'
+& 'C:\Users\Administrator\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' -m unittest -v test_review_bundle test_target_preparation
+Set-Location 'H:\cuhk-2025fALL\6013RP-wyf'
+& 'C:\Users\Administrator\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' .\audit_tools\phase17_postc9_13_audit_target_preparation.py --output .\00_project_management\jcr_q1_target_preparation_2026-08-29\candidate_no_drift_audit.json
+git diff --cached --check
+```
+
+另已解析两份新增 JSON，核对三份输入附件与 Git blob 的字节一致性，并检查了本轮新增文件中的常见凭据模式，未发现匹配。该模式检查不是完整的安全审计。
+
 新增材料包括本报告、[定刊准备说明](jcr_q1_target_preparation_2026-08-29/Target_Preparation.md)、[结构化待办状态](jcr_q1_target_preparation_2026-08-29/target_readiness.json)、只读审计 JSON 和原始附件。README 只添加新入口；.gitattributes 保留新审计附件的原始字节。不修改仍被候选包哈希绑定的 REPRODUCIBILITY 或批准记录。
 
 执行过程中的浏览器问题均限定处理：部分官方网页在网页读取工具中超时，改用实际浏览器读取学校指南；机构查询控件没有返回有效结果，未推断资助资格；中断后旧浏览器标签被清理，没有重复使用失效页面继续作出判断。本轮未索取密码或读取浏览器凭据。
@@ -147,6 +159,6 @@ APC 方面，公开的香港协议表列有 CUHK，但不能据此认定深圳�
 
 Zenodo 官方支持预留 DOI 和创建链接到原记录的新版本草稿。本轮只明确顺序，没有创建草稿、预留 DOI、发布 release、移动 tag 或提交稿件。[DOI 预留](https://help.zenodo.org/docs/deposit/describe-records/reserve-doi/)、[版本管理](https://help.zenodo.org/docs/deposit/manage-versions/)。
 
-本轮 GitHub 同步将单独保存 [git_sync_receipt.json](jcr_q1_target_preparation_2026-08-29/git_sync_receipt.json)，以实际远端核验为准。源码/报告同步不构成公开新归档或授权期刊提交。
+本轮实质工作已提交并推送到 GitHub，提交为 `bc37f6ad2cd4a32a0390f5da7d188b326be56d89`；`git ls-remote` 已确认远端 `main` 相同，核验时工作区干净。该提交只涉及 12 个审计、准备文档、测试及入口文件，未修改候选包绑定的源文件。详细证据见 [git_sync_receipt.json](jcr_q1_target_preparation_2026-08-29/git_sync_receipt.json)。回执与本段同步说明以随后仅文档提交保存，回执不声称包含自己的提交哈希。源码/报告同步不构成公开新归档或授权期刊提交；本地 ZIP 没有在本轮上传为新 release 附件。
 
 **下一阶段最需要的是外部证据与选刊决定，不是再增加分析或制造新版本。** 若输入仍只是重复肯定当前候选的审计意见，保留冻结状态；取得 JCR/费用信息后即可推进一次性定稿，避免无依据的反复改图、重建和重新批准。
