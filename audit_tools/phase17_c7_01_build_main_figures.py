@@ -599,12 +599,13 @@ def build_figure1(
     axis = axes[1, 0]
     axis.plot(replicate["replicate"], replicate["mapped_adjusted_rand_index"], "o-", ms=3.0, lw=0.8, color=COLORS["internal"], label="Mapped ARI")
     axis.plot(replicate["replicate"], replicate["mapping_agreement"], "s-", ms=2.8, lw=0.8, color=COLORS["external"], label="Agreement")
-    axis.axhline(0.99, color="#666666", lw=0.7, ls="--")
+    agreement_threshold = float(c2b4["thresholds"]["minimum_mapping_agreement"])
+    axis.axhline(agreement_threshold, color="#666666", lw=0.7, ls="--")
     if explicit_threshold_semantics:
         axis.text(
             20.2,
-            0.99015,
-            "minimum mapped-ARI criterion",
+            agreement_threshold + 0.00015,
+            "minimum agreement criterion",
             fontsize=5.0,
             ha="right",
             va="bottom",

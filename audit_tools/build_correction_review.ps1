@@ -1,9 +1,9 @@
 param(
     [string]$Python = "python",
-    [string]$OutputDir = "04_submission\author_review",
-    [string]$DocumentDir = "phase17_v7\post_gateC9\20260828_external_review\documents",
+    [string]$OutputDir = "04_submission\author_confirmed_review",
+    [string]$DocumentDir = "phase17_v7\post_gateC9\20260828_author_confirmation\documents",
     [string]$FigureReview = "phase17_v7\post_gateC9\20260828_advisor_correction_review",
-    [string]$AuditDir = "00_project_management\external_review_2026-08-28"
+    [string]$AuditDir = "00_project_management\author_confirmation_2026-08-28"
 )
 
 $ErrorActionPreference = "Stop"

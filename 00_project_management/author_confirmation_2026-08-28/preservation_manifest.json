@@ -1,0 +1,42 @@
+{
+  "recorded_at": "2026-08-28T20:03:46.3324880+08:00",
+  "baseline_commit": "61faa3198d21eb5d285c5b6089dd1bd4e565ffe7",
+  "reviewed_zip_sha256": "EA046B266681940AD551851354726907B8ABD14E948DCD28025100061283791F",
+  "files": [
+    {
+      "source": "04_submission/Author_Confirmation.md",
+      "relative_path": "history/Author_Confirmation.md",
+      "bytes": 3938,
+      "sha256": "2672F7839AEEEE1BAB5BB0F6D68F3B3B154356B951BC91BB6AA6883ADEBEA51C",
+      "source_copy_only": false
+    },
+    {
+      "source": "04_submission/Reporting_Checklist.md",
+      "relative_path": "history/Reporting_Checklist.md",
+      "bytes": 3037,
+      "sha256": "8472F4DA4FB8B1219FB20FCFEFB28E3A483C3C375AB7745808C7FDC8581DE9FB",
+      "source_copy_only": false
+    },
+    {
+      "source": "00_project_management/external_review_2026-08-28/calibration_recount.csv",
+      "relative_path": "calibration_recount.csv",
+      "bytes": 7503,
+      "sha256": "54E0837E5A0F060332DD3B463ED84CE59EC178715632838AF0003AA1E93E09CA",
+      "source_copy_only": false
+    },
+    {
+      "source": "00_project_management/external_review_2026-08-28/calibration_recount_audit.json",
+      "relative_path": "calibration_recount_audit.json",
+      "bytes": 3280,
+      "sha256": "1F94B54CDC96EAEB12599F68945C04AC73E379D93C494CBDEDA1CC67D6FD862B",
+      "source_copy_only": false
+    },
+    {
+      "source": "00_project_management/external_review_2026-08-28/External_Methods_Review.md",
+      "relative_path": "External_Methods_Review.md",
+      "bytes": 5007,
+      "sha256": "48471180826902F42FF3888AE6C1C83D13E2CAE90639A0CC2C039C2604DA5F24",
+      "source_copy_only": true
+    }
+  ]
+}

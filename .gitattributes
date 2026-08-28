@@ -26,3 +26,4 @@ phase17_v7/post_gateC9/** -text whitespace=blank-at-eol,blank-at-eof,space-befor
 00_project_management/post_gateC9_release_review_2026-08-28/calibration_recount_audit.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 00_project_management/external_review_2026-08-28/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 00_project_management/external_review_2026-08-28/received/** -whitespace
+00_project_management/author_confirmation_2026-08-28/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

@@ -226,7 +226,7 @@ This research received no specific funding.
 
 ### Authors' contributions
 
-ZC: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Software, Visualization, Writing - original draft. TQ: Conceptualization, Methodology, Project administration, Validation, Writing - review and editing. Both authors approved the earlier materials. Renewed final approval of the corrected manuscript and supporting materials is pending.
+ZC: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Software, Visualization, Writing - original draft. TQ: Conceptualization, Methodology, Project administration, Validation, Writing - review and editing. Both authors have approved the corrected manuscript and supporting materials.
 
 ### Acknowledgements
 

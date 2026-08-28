@@ -1,0 +1,50 @@
+{
+  "status": "REVIEW_DOCUMENTS_BUILT",
+  "next_step": "WPS export and final render audit; this build record alone is not release approval",
+  "documents": [
+    {
+      "source": "01_manuscript/Manuscript.md",
+      "output": "phase17_v7/post_gateC9/20260828_author_confirmation/documents/Manuscript.docx",
+      "paragraphs": 168,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 63207,
+      "source_sha256": "0BD023465AF0A06CCC8CCEA6F4B2DF68138297B0E1E0F756C8DC0CE0409B2B7C",
+      "docx_sha256": "C7A34992D5F95C3BE7BA6FE241530EB243ADFD33E39D5A62E17A85225B4BBFDD"
+    },
+    {
+      "source": "01_manuscript/Supplementary_Information.md",
+      "output": "phase17_v7/post_gateC9/20260828_author_confirmation/documents/Supplementary_Information.docx",
+      "paragraphs": 89,
+      "tables": 10,
+      "inline_shapes": 10,
+      "placeholders": 0,
+      "bytes": 4082326,
+      "source_sha256": "55081AD1C836678D478C5A73543774861B3DA29C1D54DAD27E48C79BBA21BAA7",
+      "docx_sha256": "1DCC72B27DFBE633BCD3D1DF6F8BA32D73A60429B825E5BA9B468E7E74AF7013"
+    },
+    {
+      "source": "01_manuscript/Research_Proposal.md",
+      "output": "phase17_v7/post_gateC9/20260828_author_confirmation/documents/Research_Proposal.docx",
+      "paragraphs": 71,
+      "tables": 2,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 46983,
+      "source_sha256": "0768D8047C2243D329F601D355A00962708A15569F205CA33DB76F7428079D18",
+      "docx_sha256": "3AB82C9B9A12AD01B389A296630A8E4017E49D4B6CC74DC01B6B0EEE7EE833C9"
+    },
+    {
+      "source": "04_submission/Cover_Letter.md",
+      "output": "phase17_v7/post_gateC9/20260828_author_confirmation/documents/Cover_Letter.docx",
+      "paragraphs": 16,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 40169,
+      "source_sha256": "330255B2928A4041770F45619BEB28E496B130A16D8FDF21594084C83C1A1B34",
+      "docx_sha256": "63EA6B0A979ACBC93B7852AF4BE809380993CDAC42A335AF0EAB30FBE9A04A95"
+    }
+  ]
+}

@@ -61,6 +61,9 @@ phase17_v7/post_gateC9/**/documents/
 00_project_management/external_review_2026-08-28/document_pages/*
 !00_project_management/external_review_2026-08-28/document_pages/document_render_audit.json
 00_project_management/external_review_2026-08-28/_portable_test/
+00_project_management/author_confirmation_2026-08-28/document_pages/*
+!00_project_management/author_confirmation_2026-08-28/document_pages/document_render_audit.json
+00_project_management/author_confirmation_2026-08-28/_portable_test/
 
 # Local software-test matrices and generated diagnostics.
 phase17_v7/**/_software_tests/

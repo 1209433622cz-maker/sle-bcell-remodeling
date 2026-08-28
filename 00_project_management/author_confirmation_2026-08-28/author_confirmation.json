@@ -1,0 +1,33 @@
+{
+  "record_type": "USER_MESSAGE_REPORTING_BOTH_AUTHORS",
+  "confirmation_date": "2026-08-28",
+  "evidence_source": "Current conversation: explicit user message following delivery of the author_review.zip package",
+  "statement": "两位作者确认当前材料，已审阅外部方法学评审意见及处理方案",
+  "supplemental_document_approval": {
+    "statement": "主文和投稿信已批准。",
+    "confirmation_date": "2026-08-28",
+    "approved_source_sha256": {
+      "sources/Manuscript.md": "0BD023465AF0A06CCC8CCEA6F4B2DF68138297B0E1E0F756C8DC0CE0409B2B7C",
+      "sources/Cover_Letter.md": "330255B2928A4041770F45619BEB28E496B130A16D8FDF21594084C83C1A1B34"
+    },
+    "scope": "Supplemental user approval of the current manuscript and cover letter after the administrative approval-statement updates were explained; not approval of future journal-format revisions or actual submission."
+  },
+  "baseline_repository_commit": "61faa3198d21eb5d285c5b6089dd1bd4e565ffe7",
+  "authors": ["Zhi Chen", "Teng Qi"],
+  "reviewed_package": {
+    "path": "04_submission/author_review.zip",
+    "bytes": 26022917,
+    "sha256": "EA046B266681940AD551851354726907B8ABD14E948DCD28025100061283791F",
+    "manifest_sha256": "1FC3DA15A663F2FFB94141469C3A13A7A5DF0E36156DD7E2AD6041446FCA6BFA"
+  },
+  "current_content_confirmed": true,
+  "external_feedback_and_disposition_considered": true,
+  "independently_collected_author_signatures": false,
+  "external_reviewer_identity_authenticated": false,
+  "target_journal_selected": false,
+  "apc_commitment_authorized": false,
+  "new_archive_release_authorized": false,
+  "future_material_changes_preapproved": false,
+  "submission_authorized": false,
+  "scope_note": "Records the user's report for both authors, not invented signatures. Approval is bound to the reviewed snapshot. Only the manuscript and cover-letter approval statements may change in the administrative update; new scientific or journal-format changes are not preapproved."
+}

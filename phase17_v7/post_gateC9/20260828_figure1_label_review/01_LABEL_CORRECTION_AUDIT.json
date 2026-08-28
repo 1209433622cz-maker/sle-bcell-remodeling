@@ -1,0 +1,86 @@
+{
+  "status": "PASS_FIGURE1_LABEL_CORRECTION_PREVIEW",
+  "actual_label": "minimum agreement criterion",
+  "guide_y": 0.99,
+  "minimum_mapped_ari": 0.9,
+  "line_matches_frozen_agreement_threshold": true,
+  "source_data_byte_identical": true,
+  "source_data_sha256": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805",
+  "frozen_threshold_source_sha256": "B1706E2A2B1E854E11A1B061C49B6F8A6E8B62A02184F037286863D37A6206EA",
+  "generator_sha256": "317A1999C0EB9C78F4036980506EC8EEB1619FFB0711017460B073111E7F3662",
+  "assertions": [
+    {
+      "check": "Figure1.panel_b.policy_count",
+      "actual": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "check": "Figure1.panel_c.resampling_replicates",
+      "actual": 20,
+      "expected": 20,
+      "pass": true
+    },
+    {
+      "check": "Figure1.panel_d.frozen_state_count",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "check": "Figure1.hard_qc_cells",
+      "actual": 150402,
+      "expected": 150402,
+      "pass": true
+    },
+    {
+      "check": "Figure1.donors",
+      "actual": 259,
+      "expected": 259,
+      "pass": true
+    },
+    {
+      "check": "Figure1.samples",
+      "actual": 271,
+      "expected": 271,
+      "pass": true
+    },
+    {
+      "check": "Figure1.sample_cohort_strata",
+      "actual": 332,
+      "expected": 332,
+      "pass": true
+    },
+    {
+      "check": "Figure1.libraries",
+      "actual": 88,
+      "expected": 88,
+      "pass": true
+    },
+    {
+      "check": "Figure1_disease_blind_identity_scope.minimum_visible_font_pt",
+      "actual": "5.00 pt",
+      "expected": "true",
+      "pass": true
+    }
+  ],
+  "files": [
+    {
+      "path": "figures/Figure1_disease_blind_identity_scope.pdf",
+      "bytes": 62089,
+      "sha256": "A06D0C04C5B0BA33D86C4D223408DD4A9F6A22C328A0127FCF6E0E75A1A3C575"
+    },
+    {
+      "path": "figures/Figure1_disease_blind_identity_scope.png",
+      "bytes": 574658,
+      "sha256": "9F752154992CBF106470FF03B79BEED2F4CF92C6A88A8262B25C52E4A002A521"
+    },
+    {
+      "path": "source_data/Figure1_source_data.csv",
+      "bytes": 3481,
+      "sha256": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805"
+    }
+  ],
+  "integrated_into_approved_snapshot": false,
+  "submission_authorized": false
+}

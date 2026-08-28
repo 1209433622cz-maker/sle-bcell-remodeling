@@ -8,7 +8,7 @@ from pathlib import Path
 import zipfile
 
 from docx_a11y_audit import audit as a11y_audit
-from verify_review_bundle import archive_entries, csv_records, safe_name, sha256, verify_bundle, verify_entries, verify_review_governance
+from verify_review_bundle import CONFIRMED, archive_entries, csv_records, safe_name, sha256, verify_bundle, verify_entries, verify_review_governance
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -187,7 +187,25 @@ def build(args):
         add(ROOT/"04_submission"/name, "governance/"+name)
     for name in ("External_Methods_Review.md", "review_gate.json"):
         add(audit_dir/name, "governance/"+name)
+    if (audit_dir/"author_confirmation.json").exists():
+        for name in ("author_confirmation.json", "Reviewed_Package_MANIFEST_SHA256.csv"):
+            add(audit_dir/name, "governance/"+name)
+    if (audit_dir/"Figure_1_Legend_Correction.md").exists():
+        add(audit_dir/"Figure_1_Legend_Correction.md", "governance/Figure_1_Legend_Correction.md")
     governance = verify_review_governance(payloads)
+    author_state = governance["authors"][0]["decision"]
+    if author_state == CONFIRMED:
+        reviewed = json.loads(payloads["governance/author_confirmation.json"])["reviewed_package"]
+        reviewed_path = (ROOT/safe_name(reviewed["path"])).resolve()
+        if not reviewed_path.is_relative_to(ROOT/"04_submission"):
+            raise ValueError("Reviewed snapshot is outside the submission workspace")
+        reviewed_bytes = reviewed_path.read_bytes()
+        if len(reviewed_bytes) != reviewed["bytes"] or sha256(reviewed_bytes) != reviewed["sha256"]:
+            raise ValueError("Author-reviewed package changed after confirmation")
+        reviewed_entries = archive_entries(reviewed_bytes)
+        verify_entries(reviewed_entries, "MANIFEST_SHA256.csv")
+        if reviewed_entries["MANIFEST_SHA256.csv"] != payloads["governance/Reviewed_Package_MANIFEST_SHA256.csv"]:
+            raise ValueError("Reviewed snapshot manifest differs from the preserved ZIP")
     add(audit_dir/"document_pages/document_render_audit.json","quality_control/document_render_audit.json")
     add(document_build,"quality_control/document_build.json")
     accessibility = []
@@ -208,7 +226,11 @@ def build(args):
         portal.append({"role":role,"path":name,"bytes":len(payloads[name]),"sha256":sha256(payloads[name]),"authorization":"DRAFT_NOT_FOR_UPLOAD"})
     payloads["PORTAL_FILES.csv"] = csv_bytes(portal)
     payloads["STATUS.json"] = (json.dumps({
-        "review_only":True,"submission_authorized":False,"author_reapproval":"PENDING",
+        "review_only":True,"submission_authorized":False,"author_reapproval":author_state,
+        "reviewed_package_sha256":governance.get("reviewed_package_sha256"),
+        "author_review_of_external_feedback":governance.get("author_review_of_external_feedback",False),
+        "journal_requirement":governance.get("journal_requirement"),
+        "postapproval_presentation_issue":governance.get("postapproval_presentation_issue"),
         "external_methods_review_status":governance["external_methods_review_status"],
         "target_journal":None,"matching_archive_doi":None,"initial_archive_doi":"10.5281/zenodo.22086892",
         "corrected_disease_outcomes_estimated":False,"calibration_status":decision["decision"],
@@ -225,13 +247,18 @@ def build(args):
         "figures, fifteen figure source tables, full statistical results and compact "
         "correction provenance. PORTAL_FILES.csv contains draft roles, not upload "
         "authorization. Filenames are journal-neutral.\n\n"
-        "governance/ contains a fresh unchecked author form, a current-only checklist "
-        "and an external methods-review dossier. Supplied feedback is recorded, but "
-        "reviewer identity, methodological closure and renewed author approval are "
-        "not authenticated or assumed.\n\n"
+        "governance/ records current author decisions, a current-only checklist "
+        "and an external methods-review dossier. When confirmation is recorded, "
+        "its receipt binds the earlier reviewed ZIP and permits only the specified "
+        "administrative approval-statement updates. It is not approval of future "
+        "scientific changes, journal choice, a new release or actual submission. "
+        "Reviewer identity and an independent methods decision remain unverified.\n\n"
+        "STATUS.json also records any known postapproval presentation issue. "
+        "Its correction preview is separate; do not submit a reviewed snapshot "
+        "before the documented correction is integrated and checked.\n\n"
         "Run `python -I -S verify_review_bundle.py --bundle .` after extraction. "
         "A passing result verifies technical integrity and boundaries, not scientific "
-        "validity, author approval, a new DOI, or journal submission. The verifier "
+        "validity, author identity, a new DOI, or journal submission. The verifier "
         "requires no site packages or access to the original workspace.\n\n"
         "Large matrices and cell-level predictions are not included. Recomputing "
         "the analysis requires the public data and scientific environment described "

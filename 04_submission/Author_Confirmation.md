@@ -1,11 +1,20 @@
 # Current author review and release authorization
 
-**Status: PENDING. No current submission authorization is recorded.**
+**Status: CONFIRMED_REVIEWED_SNAPSHOT. Submission is not authorized.**
 
-This is a new confirmation record for the corrected materials. Permission to
-continue editing, a technical package PASS, or the supplied review memo is not
-final author approval. The previous checked record is preserved byte-for-byte at
-`00_project_management/external_review_2026-08-28/history/Author_Confirmation.md`.
+On 28 August 2026 the user explicitly confirmed the current materials for both
+authors and stated that both had considered the external methodological feedback
+and its disposition. This is a record of that user message, not independently
+collected signatures or an authenticated external-review certificate.
+
+Evidence: `00_project_management/author_confirmation_2026-08-28/author_confirmation.json`.
+Reviewed package: `04_submission/author_review.zip`, 26,022,917 bytes.
+SHA-256: `EA046B266681940AD551851354726907B8ABD14E948DCD28025100061283791F`.
+The earlier pending form is preserved under the same audit directory's `history/`.
+The package remains unchanged. A separately built administrative update records
+the confirmation; it does not extend approval to future scientific edits.
+The user subsequently stated that the manuscript and cover letter were approved.
+Their exact current Markdown hashes are also bound in the evidence receipt.
 
 ## Previously supplied identity and declarations
 
@@ -19,37 +28,39 @@ University of Hong Kong, Shenzhen. Previously supplied declarations state no
 additional ethics approval required for the secondary analysis of public
 de-identified data, no competing interests, no specific funding and no
 acknowledgements. These are retained author-supplied facts, not new institutional
-determinations. Publication-day accuracy and current contributions remain for
-both authors to confirm.
+determinations. These declarations and the current contribution statement form
+part of the confirmed materials; accuracy at the eventual submission date must
+still be maintained.
 
 The established licence scope remains MIT for original code and CC BY 4.0 for
 original text, figures, documentation and project-derived source tables, excluding
 third-party material. APC funding, waiver eligibility and journal choice are not
 inferred from the affiliation.
 
-## Materials requiring renewed approval
+## Materials confirmed in the reviewed snapshot
 
-Each box remains unchecked until explicit confirmation covering both authors is
-recorded, with the date, exact package SHA-256 and retained confirmation evidence.
-The current package identity is supplied by the action report and build receipt;
-approval of any earlier hash does not approve a subsequently changed payload.
+The boxes below record the explicit confirmation of the identified snapshot.
+They do not authorize a journal choice, APC payment, new release or submission.
 
-- [ ] Corrected manuscript, including the evaluated-candidate Methods wording.
-- [ ] Supplementary Information and all five main and ten supplementary figures, including S10.
-- [ ] Figure Source Data, Full Statistical Results and Regulator Sensitivity attachments.
-- [ ] Research proposal and consistency of its evidence boundaries with the manuscript.
-- [ ] Cover letter and the disclosure of the normalization and calibration-gate correction.
-- [ ] R1 identity HOLD, C9R calibration HOLD, unestimated corrected disease outcomes and withdrawal of the original C9 supporting claim.
-- [ ] Source-label-defined replication, non-nested reference calibration and noncausal regulatory interpretation.
-- [ ] Author order, affiliations, correspondence, CRediT contributions, ethics, conflicts, funding and acknowledgements remain accurate.
-- [ ] Generative-AI disclosure and responsibility for verification of the revised materials.
-- [ ] Renewed originality, exclusive submission and absence of concurrent journal review.
-- [ ] Historical scope of DOI 10.5281/zenodo.22086892 and requirement for a matching revised archive.
+- [x] Corrected manuscript, including the evaluated-candidate Methods wording.
+- [x] Supplementary Information and all five main and ten supplementary figures, including S10.
+- [x] Figure Source Data, Full Statistical Results and Regulator Sensitivity attachments.
+- [x] Research proposal and consistency of its evidence boundaries with the manuscript.
+- [x] Cover letter and the disclosure of the normalization and calibration-gate correction.
+- [x] R1 identity HOLD, C9R calibration HOLD, unestimated corrected disease outcomes and withdrawal of the original C9 supporting claim.
+- [x] Source-label-defined replication, non-nested reference calibration and noncausal regulatory interpretation.
+- [x] Author order, affiliations, correspondence, CRediT contributions, ethics, conflicts, funding and acknowledgements remain accurate.
+- [x] Generative-AI disclosure and responsibility for verification of the revised materials.
+- [x] Originality, exclusive submission and absence of concurrent journal review as declared in the current materials.
+- [x] Historical scope of DOI 10.5281/zenodo.22086892 and requirement for a matching revised archive.
+- [x] The external methods-review findings and disposition have been considered.
 
 ## Decisions reserved for the authors
 
-- [ ] The external methods-review findings and disposition have been considered.
-- [ ] A target journal is selected; the institution's required ranking system, year and category are documented.
+The user separately specified JCR Q1 as the journal-ranking requirement on
+28 August 2026. This settles the ranking system, not a specific journal.
+
+- [ ] A target journal is selected; its JCR metric year, category and Q1 evidence are documented.
 - [ ] Actual APC liability or funding eligibility is confirmed without assuming an institutional waiver.
 - [ ] A matching final release commit, immutable version and version-specific DOI have been checked.
 - [ ] Final journal-formatted files and their hashes are approved after any material or DOI changes.
@@ -57,8 +68,15 @@ approval of any earlier hash does not approve a subsequently changed payload.
 
 | Author | Current content approval | Date | Evidence reference |
 |---|---|---|---|
-| Zhi Chen | PENDING | Not recorded | Not recorded |
-| Teng Qi | PENDING | Not recorded | Not recorded |
+| Zhi Chen | CONFIRMED_REVIEWED_SNAPSHOT | 2026-08-28 | User message; author_confirmation.json |
+| Teng Qi | CONFIRMED_REVIEWED_SNAPSHOT | 2026-08-28 | User message; author_confirmation.json |
 
-No signatures, dates or decisions have been supplied by the agent on behalf of
-either author. This record is for review, not a journal-facing declaration of approval.
+The date records receipt of the user's statement, not an invented signing event.
+No signature or independently authenticated reviewer decision is supplied by the
+agent. Final journal-formatted files and actual submission remain unapproved.
+
+A postapproval presentation issue was found in Figure 1c: the 0.990 guide is the
+minimum mapping-agreement criterion, not the minimum ARI criterion. A corrected
+preview and exact legend replacement are separately recorded; the approved
+snapshot is not overwritten and this update does not silently approve that
+future integrated figure or caption. No underlying numerical result changes.

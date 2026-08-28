@@ -17,12 +17,18 @@ Do not reuse it as metadata for a new release without reconciliation.
 
 ## Generated package
 
-`author_review/` and `author_review.zip` are the current locally generated,
+`author_confirmed_review/` and `author_confirmed_review.zip` are the current locally generated,
 journal-neutral author-review bundle. Their `STATUS.json` explicitly prohibits
 submission. `PORTAL_FILES.csv` lists draft roles, not permission to upload.
-The `governance/` directory contains the current unchecked author form, the
-current-only checklist and the external methods-review dossier. The previous
-`correction_review/` and ZIP are preserved review snapshots, not current sources.
+The `governance/` directory records both authors' confirmation of the preserved
+`author_review.zip` snapshot, as explicitly reported by the user, and their
+consideration of the external feedback and disposition. Only approval statements
+are updated in the current manuscript and cover letter. The receipt and reviewed
+manifest prevent that confirmation from being extended to later scientific changes.
+`author_review/`, `correction_review/` and their ZIPs are preserved snapshots.
+The user requires JCR Q1. A separately corrected Figure 1c label/legend preview
+must be integrated before final-file review; its issue record is included under
+`governance/`. The approved snapshot is preserved, not silently relabelled.
 
 `journal_submission/` and `journal_submission.zip` remain historical snapshots.
 Do not mix their portal files with the revised documents or overwrite them.

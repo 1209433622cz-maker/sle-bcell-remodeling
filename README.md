@@ -81,8 +81,12 @@ The frozen evidence chain is:
 - [Corrected mapping calibration review](phase17_v7/gateC9R/20260828_normalization_correction/16_GATE_C9A_PREFREEZE_REVIEW.md)
 - [Correction review and synchronization record](00_project_management/action_record_2026-08-28_correction_release_reconciliation.md)
 - [Current external-review response and author gate](00_project_management/action_record_2026-08-28_external_review_author_gate.md)
-- [External methods-review dossier](00_project_management/external_review_2026-08-28/External_Methods_Review.md)
+- [Author confirmation and next-stage preparation](00_project_management/action_record_2026-08-28_author_confirmation_and_journal_preparation.md)
+- [Current author confirmation](04_submission/Author_Confirmation.md)
+- [External methods-review dossier](00_project_management/author_confirmation_2026-08-28/External_Methods_Review.md)
 - [Journal fit and formatting assessment](00_project_management/external_review_2026-08-28/Journal_Fit_and_Format_Assessment.md)
+- [JCR Q1 criterion and next-format draft](00_project_management/author_confirmation_2026-08-28/Journal_Format_Draft.md)
+- [Figure 1c correction record](00_project_management/author_confirmation_2026-08-28/Figure_1_Legend_Correction.md)
 - [Current figure and source-data manifest](phase17_v7/post_gateC9/20260828_advisor_correction_review/02_REVIEW_FIGURE_MANIFEST.csv)
 
 Git history and the immutable public release preserve superseded submission
@@ -94,13 +98,19 @@ remain ignored. Markdown, scripts and machine-readable analysis outputs remain
 the authoritative sources. That historical package predates the correction and
 must not be submitted unchanged. Historical PASS labels do not override this status.
 
-The separate local `04_submission/author_review.zip` contains the current four
+The separate local `04_submission/author_confirmed_review.zip` contains the current four
 review documents, five main and ten supplementary figures, and reconciled
 statistical attachments. It passed WPS, accessibility, manifest and deterministic
-packaging checks, but remains review-only with renewed author approval pending.
-Current and historical author approvals are separated, and the package carries
-an external methods-review dossier. The earlier `correction_review.zip` is kept
-as a historical review snapshot.
+packaging checks and records both authors' confirmation as reported by the user.
+The manuscript and cover letter were also explicitly approved. Approval is bound
+to identified source hashes and the preserved `author_review.zip`, not arbitrary
+later edits. Current and historical decisions are separated. External reviewer
+identity remains unverified, and the package is not authorized for submission.
+Both earlier review ZIPs are preserved.
+A Figure 1c threshold-label error was subsequently identified: 0.990 is the
+mapping-agreement criterion, not the ARI criterion. A corrected preview is
+available separately and must be integrated with its legend before finalization;
+the approved snapshot has not been silently replaced.
 Generated review packages are not tracked in Git; the linked action record gives
 the exact package hash, verification scope and next-stage requirements.
 
@@ -171,8 +181,12 @@ with portable hash checks. It is not authorized for submission. Historical
 one-click release writers are retired to protect the revised sources and old
 package. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for current entry points.
 
-Obtain an external review of the correction and renewed author content approval,
-then select a journal and publish a matching version-specific archive. Do not
+Current-content confirmation, explicit manuscript/cover-letter approval and
+author consideration of external feedback are recorded. The user requires JCR
+Q1. Next, verify candidate-specific JCR year/category evidence, select a journal, prepare
+its final format and reconcile the corresponding archive. Further independent
+methods review can address the remaining authentication gap; no journal-mandated
+signed pre-submission certificate is assumed. Do not
 tune C9 thresholds or substitute the centroid mapper to obtain a PASS. R1 HOLD
 and source-label dependence remain explicit. No new DOI or journal submission
 is implied by a GitHub code correction.

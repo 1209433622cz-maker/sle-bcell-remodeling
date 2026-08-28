@@ -3,10 +3,12 @@
 **Submission hold (28 August 2026):** the current author-review package retains
 C9A HOLD; the original C9 PASS is superseded. The target journal is not fixed.
 The following roles are provisional, not journal-specific requirements. Final
-author approval, formatting and a matching version-specific archive are still
-required before portal upload.
+approval of journal-formatted files, formatting checks and a matching
+version-specific archive are still required before portal upload. Confirmation
+of the reviewed scientific content and consideration of external feedback have
+already been recorded for both authors; they are not upload authorization.
 
-Use `author_review/PORTAL_FILES.csv` to review proposed file roles only.
+Use `author_confirmed_review/PORTAL_FILES.csv` to review proposed file roles only.
 No files are currently authorized for upload. The historical `journal_submission`
 directory must not be used as the current package.
 
@@ -38,7 +40,7 @@ requires standalone supplementary figures.
 2. Confirm both ORCID records and the corresponding email.
 3. Copy ethics, consent, competing interests, funding, acknowledgements,
    contributions and generative-AI statements from `Manuscript.docx`.
-4. Create and verify a matching archive after renewed approval. The initial DOI
+4. Create and verify a matching archive after final-file approval. The initial DOI
    `10.5281/zenodo.22086892` does not identify the revised materials.
 5. Compare the portal-generated PDF against the manuscript, supplement, cover
    letter and all five figures before final submission.

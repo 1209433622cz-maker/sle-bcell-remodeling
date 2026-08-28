@@ -21,12 +21,10 @@ They do not authorize this correction or its submission.
 ## Review governance
 
 - [x] The user-supplied review memo and 15-row action matrix have been archived with hashes and itemized responses.
-- [x] Historical author approvals and the earlier pending form are preserved separately from the current confirmation.
+- [x] Historical author approvals are separated from the current unchecked confirmation record.
 - [x] The external methods-review dossier defines 12 checkable questions and distinguishes feedback received from signed methodological closure.
 - [ ] External reviewer identity, independence, evidence scope and a specific final decision are recorded.
-- [x] The user confirmed the exact reviewed materials for both authors, bound to the SHA-256 in author_confirmation.json.
-- [x] Both authors considered the external methodological feedback and the documented disposition, as explicitly reported by the user.
-- [x] The user specified JCR Q1, rather than a CAS or SJR quartile, as the selection criterion.
+- [ ] Both authors have approved the exact corrected materials identified by package hash.
 - [ ] The target journal, ranking basis and APC arrangements have been confirmed.
 
 ## Technical and release checks
@@ -37,13 +35,10 @@ The machine-readable build receipt records the actual result for that payload;
 this checklist does not transfer a prior render PASS to changed files.
 
 - [ ] Target-journal figure dimensions and submission instructions have been applied from source code and rechecked.
-- [ ] The postapproval Figure 1c agreement-threshold label and corresponding legend correction have been integrated into final journal-formatted files and reviewed.
 - [ ] Any required independent-environment numerical reproduction has been completed and scoped accurately.
 - [ ] The approved final commit is associated with a new immutable archive and matching version-specific DOI.
 - [ ] DOI insertion and any subsequent edits have been rebuilt, reverified and approved for the final payload.
 - [ ] Actual portal upload files have been authorized; submission receipt and manuscript number may be recorded only after submission.
 
-The initial DOI remains historical. Current-content confirmation is recorded;
-it is not approval of future changes, a new release or actual journal submission.
-Unverified external-reviewer identity remains disclosed, without inventing a
-journal requirement for a signed pre-submission methods certificate.
+The initial DOI remains historical. No new release, final author approval or
+journal submission is asserted by the technical review package.
