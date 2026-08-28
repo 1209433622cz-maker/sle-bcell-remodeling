@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-08-29T03:15:45+08:00",
+  "status": "PASS_OLD_ZENODO_ASSETS_BACKED_UP",
+  "record_id": "22086892",
+  "retrieval": "Checksum text from Zenodo; ZIPs from the original GitHub release mirrors after stalled Zenodo transfer",
+  "files": [
+    {
+      "file": "SHA256SUMS_v1.0.0.txt",
+      "path": "04_submission/zenodo_history/22086892/SHA256SUMS_v1.0.0.txt",
+      "bytes": 235,
+      "sha256": "EA45AE5A2EF565E05DFFC96AD952E56E14D192916D678F3AD46A5AF15C3372D5",
+      "md5": "cdc4376d9a1d7d3f2a8c2cd2b51c6da0",
+      "public_zenodo_md5": "md5:cdc4376d9a1d7d3f2a8c2cd2b51c6da0",
+      "github_release_sha256": "EA45AE5A2EF565E05DFFC96AD952E56E14D192916D678F3AD46A5AF15C3372D5",
+      "verified": true
+    },
+    {
+      "file": "package_genome_medicine_gateC8BRF_author_release_2026-08-25.zip",
+      "path": "04_submission/zenodo_history/22086892/package_genome_medicine_gateC8BRF_author_release_2026-08-25.zip",
+      "bytes": 46055879,
+      "sha256": "1FB1170B68E399EDBCF95400611FDF733BDCB3B64BA64640AF0958494CC7904A",
+      "md5": "21c301dce8ea9a3c97cb2bed8ddd27ef",
+      "public_zenodo_md5": "md5:21c301dce8ea9a3c97cb2bed8ddd27ef",
+      "github_release_sha256": "1FB1170B68E399EDBCF95400611FDF733BDCB3B64BA64640AF0958494CC7904A",
+      "verified": true
+    },
+    {
+      "file": "sle-bcell-remodeling-v1.0.0-source.zip",
+      "path": "04_submission/zenodo_history/22086892/sle-bcell-remodeling-v1.0.0-source.zip",
+      "bytes": 41764089,
+      "sha256": "94FBE198A0EEAAA2D6A491EC1C10F5C4020D1D5A82985DAF19799ACDD73F6999",
+      "md5": "203a320a9eb6d3f1ecdbe82923156638",
+      "public_zenodo_md5": "md5:203a320a9eb6d3f1ecdbe82923156638",
+      "github_release_sha256": "94FBE198A0EEAAA2D6A491EC1C10F5C4020D1D5A82985DAF19799ACDD73F6999",
+      "verified": true
+    }
+  ],
+  "remote_deleted": false
+}

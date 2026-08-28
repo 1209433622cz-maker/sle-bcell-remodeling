@@ -1,0 +1,50 @@
+{
+  "status": "PREPARED_METADATA_NOT_A_SAVED_ZENODO_DRAFT",
+  "existing_record_id": "22086892",
+  "existing_version_doi": "10.5281/zenodo.22086892",
+  "existing_concept_doi": "10.5281/zenodo.22086891",
+  "new_record_id": null,
+  "new_version_doi": null,
+  "proposed_version": "1.1.0",
+  "title": "SLE B-cell remodeling analysis: code, source data and reproducible release",
+  "resource_type": "software",
+  "language": "eng",
+  "creators": [
+    {"name": "Chen, Zhi", "orcid": "0009-0001-0072-5576", "affiliation": "School of Medicine, The Chinese University of Hong Kong, Shenzhen"},
+    {"name": "Qi, Teng", "orcid": "0009-0007-7648-4776", "affiliation": "School of Medicine, The Chinese University of Hong Kong, Shenzhen", "contact_person": true}
+  ],
+  "repository": "https://github.com/1209433622cz-maker/sle-bcell-remodeling",
+  "description": "Revised scientific-baseline archive for the author-confirmed QiTeng R2 manuscript. The study supports a prespecified within-conventional-B IFN/ISG association in GSE174188 and source-label-defined independent replication in GSE135779. End-to-end reconstruction did not meet the B_ASC state-overlap criterion (R1 HOLD). Corrected source-label-independent external mapping failed primary-mapper calibration (C9R HOLD); no corrected external disease effects were estimated. The archive preserves these failed criteria and their supporting provenance. Regulatory and response analyses provide observational support, not causal binding, a unique upstream ligand or clinical utility. This version supersedes the initial archive, which predates the R1 and corrected external-mapping audits. It is a scientific reproducibility archive, not a journal submission or a peer-reviewed article.",
+  "licenses_and_scope": [
+    {"id": "mit", "scope": "Original project code"},
+    {"id": "cc-by-4.0", "scope": "Original manuscript, composite figures, documentation and project-generated derived source-data tables"}
+  ],
+  "third_party_scope": "GEO, CELLxGENE, third-party papers, databases and software retain their source terms; no third-party relicensing or redistribution of large source matrices is authorized by these licenses",
+  "planned_public_files": ["Research_Archive.zip", "Source_Code.zip", "SHA256SUMS.txt"],
+  "planned_research_archive": [
+    "Approved scientific manuscript, with administrative approval and actual new DOI updates only",
+    "Unchanged reconciled supplementary information, five main figures and ten supplementary figures",
+    "Unchanged figure source data, full statistical results and regulator sensitivity attachments",
+    "R1 and C9R HOLD decisions, exact author confirmation, source provenance and complete checksums"
+  ],
+  "exclude_from_current_publication_payload": [
+    "Superseded C9 disease effects as current supporting evidence",
+    "Historical journal-specific cover letters or portal checklists presented as current approved submission files",
+    "Credentials, local logs, raw matrices, per-cell recomputable caches and third-party writing-skill ZIP",
+    "A false claim that the current archive already has a reserved or published new DOI"
+  ],
+  "old_record_deletion_reason_draft": "Superseded scientific archive: the initial version predates the completed end-to-end identity audit and corrected external-mapping calibration. A verified new version retains the corrected evidence boundaries and provenance. Preserve a tombstone linking to the replacement.",
+  "publication_requires": [
+    "Authenticated account access and check for an existing new-version draft",
+    "Actual new-version DOI reservation before final administrative document build",
+    "Frozen scientific-section equality and unchanged evidence hashes",
+    "Final render and package verification after administrative updates",
+    "Required action-time browser confirmation for publication and personal-data transmission"
+  ],
+  "deletion_requires": [
+    "New version is published and its DOI and file hashes are verified",
+    "Old three public assets and metadata are locally backed up and checked",
+    "Platform confirmation targets only record 22086892, not all versions",
+    "Required action-time browser confirmation for deletion"
+  ]
+}
