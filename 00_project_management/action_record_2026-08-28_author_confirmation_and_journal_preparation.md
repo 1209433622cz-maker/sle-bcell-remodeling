@@ -217,8 +217,15 @@ JCR 类别/分区。本次直接获取 JCR profile 未成功。检索中的第�
 不把报错当作成功执行。Nature 部分页直接访问重定向失败，后用其可读取的官网
 地址取得正文；JCR 具体分区仍保持未验证。
 
-GitHub 同步结果将在实际推送核对后补入，不预写“已发布”。本轮不创建 tag、
-release、Zenodo 版本或 DOI，也没有任何期刊上传动作。
+已正常提交并推送 GitHub `main`：
+`aae470136d9394079b688a7538c0e3fc074652f9`。远端 `git ls-remote` 与本地 SHA
+一致，且直接读取该提交的 **95 项唯一 Git blob** 核验全部通过，其中包含
+62 项既有科学冻结证据、当前包的可追踪源文件、保留记录和新图 1 预览。
+确认记录 ZIP 的 SHA-256 保持不变。
+
+回执为 `author_confirmation_2026-08-28/git_sync_verification.json`，绑定上述
+实际核验的内容提交；随后补入回执的提交不改变研究材料。没有强推或移动旧标签。
+本轮不创建 tag、release、Zenodo 版本或 DOI，也没有任何期刊上传动作。
 
 ## 10. 下一阶段目标
 
@@ -237,6 +244,7 @@ release、Zenodo 版本或 DOI，也没有任何期刊上传动作。
 ## 11. 主要交付
 
 - 本行动记录及 `author_confirmation_2026-08-28/` 下的确认凭证、状态和核验 JSON。
+- 同目录 `git_sync_verification.json`：95 项提交内容核验及远端同步回执。
 - `04_submission/author_confirmed_review.zip`：作者确认记录包，非最终投稿包。
 - `phase17_v7/post_gateC9/20260828_figure1_label_review/`：源驱动图 1 纠错预览及审计。
 - `Figure_1_Legend_Correction.md`：具体发现与精确替换文本。
