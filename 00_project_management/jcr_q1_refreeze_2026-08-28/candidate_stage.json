@@ -1,0 +1,29 @@
+{
+  "status": "STAGED_FOR_DOCUMENT_REBUILD",
+  "baseline_zip_sha256": "0363C066FB7F8FAD5E867FC820ED7F80C8F3D1A10E0A1CB43B8A7A51FCA92234",
+  "figure_and_source_files": 45,
+  "unchanged_figure_and_source_files": 43,
+  "allowed_changes": {
+    "sources/Manuscript.md": [
+      [
+        "minimum mapped-ARI criterion of 0.990",
+        "minimum mapping-agreement criterion of 0.990"
+      ],
+      [
+        "excluding dependence on a single source label",
+        "arguing against dependence on any single contributing source label"
+      ],
+      [
+        "Both authors have approved the corrected manuscript and supporting materials.",
+        "Both authors approved the preceding reviewed snapshot. Final approval of this corrected candidate is pending."
+      ]
+    ],
+    "sources/Cover_Letter.md": [
+      [
+        "Both authors have approved the corrected review materials. Journal choice, final formatted files and submission authorization remain to be confirmed.",
+        "Both authors approved the preceding reviewed snapshot. This corrected candidate, journal choice, final formatted files and submission authorization remain to be confirmed."
+      ]
+    ]
+  },
+  "submission_authorized": false
+}

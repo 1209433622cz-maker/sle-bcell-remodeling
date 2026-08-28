@@ -1,0 +1,50 @@
+{
+  "status": "REVIEW_DOCUMENTS_BUILT",
+  "next_step": "WPS export and final render audit; this build record alone is not release approval",
+  "documents": [
+    {
+      "source": "01_manuscript/Manuscript.md",
+      "output": "phase17_v7/post_gateC9/20260828_corrected_candidate/documents/Manuscript.docx",
+      "paragraphs": 168,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 63232,
+      "source_sha256": "EDE21BA437AB4E2081B81ED7E454D5FCB2B8B8A4F16C75DA23601A3826372E56",
+      "docx_sha256": "A5846AD000E42108BD8C26977882DD3CF007AC2F1607F2E11BD5610054679E85"
+    },
+    {
+      "source": "01_manuscript/Supplementary_Information.md",
+      "output": "phase17_v7/post_gateC9/20260828_corrected_candidate/documents/Supplementary_Information.docx",
+      "paragraphs": 89,
+      "tables": 10,
+      "inline_shapes": 10,
+      "placeholders": 0,
+      "bytes": 4082326,
+      "source_sha256": "55081AD1C836678D478C5A73543774861B3DA29C1D54DAD27E48C79BBA21BAA7",
+      "docx_sha256": "0F5B23BD4AB07185464C1B1A1A441DF91B90F73EF15D319B97D9A50997AA28CB"
+    },
+    {
+      "source": "01_manuscript/Research_Proposal.md",
+      "output": "phase17_v7/post_gateC9/20260828_corrected_candidate/documents/Research_Proposal.docx",
+      "paragraphs": 71,
+      "tables": 2,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 46983,
+      "source_sha256": "0768D8047C2243D329F601D355A00962708A15569F205CA33DB76F7428079D18",
+      "docx_sha256": "B5AD2C64CD68CFCDB660E839D1E3A029851BCF10D25E77172A0123DE9619CEBB"
+    },
+    {
+      "source": "04_submission/Cover_Letter.md",
+      "output": "phase17_v7/post_gateC9/20260828_corrected_candidate/documents/Cover_Letter.docx",
+      "paragraphs": 16,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 40184,
+      "source_sha256": "7ECE71C9C638EEA057974D0E7B3993ECF2DFCC857BA3A64187F73D5AB1502911",
+      "docx_sha256": "FCF663C0041218054A1859314222F201CF468AFC909BBDEF8562DDFCF40C6FBA"
+    }
+  ]
+}

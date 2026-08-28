@@ -17,18 +17,18 @@ Do not reuse it as metadata for a new release without reconciliation.
 
 ## Generated package
 
-`author_confirmed_review/` and `author_confirmed_review.zip` are the current locally generated,
-journal-neutral author-review bundle. Their `STATUS.json` explicitly prohibits
+`corrected_candidate/` and `corrected_candidate.zip` are the current locally generated,
+journal-neutral correction candidate. Their `STATUS.json` explicitly prohibits
 submission. `PORTAL_FILES.csv` lists draft roles, not permission to upload.
-The `governance/` directory records both authors' confirmation of the preserved
-`author_review.zip` snapshot, as explicitly reported by the user, and their
-consideration of the external feedback and disposition. Only approval statements
-are updated in the current manuscript and cover letter. The receipt and reviewed
-manifest prevent that confirmation from being extended to later scientific changes.
-`author_review/`, `correction_review/` and their ZIPs are preserved snapshots.
-The user requires JCR Q1. A separately corrected Figure 1c label/legend preview
-must be integrated before final-file review; its issue record is included under
-`governance/`. The approved snapshot is preserved, not silently relabelled.
+Figure 1c and its legend are corrected together; Figure 1a interpretation nodes
+have non-overlapping text. The omission claim is qualified without changing any
+numbers. `governance/` distinguishes the confirmed prior materials from this
+pending candidate, retains original changed files and verifies the exact delta.
+All three statistical/source-data ZIPs and the other fourteen figures are unchanged.
+`author_confirmed_review/`, `author_review/`, `correction_review/` and their ZIPs
+are preserved snapshots; they are not final upload materials.
+The user requires JCR Q1. Current-year category, rank and quartile evidence,
+journal-specific formatting and final-file approval remain separate tasks.
 
 `journal_submission/` and `journal_submission.zip` remain historical snapshots.
 Do not mix their portal files with the revised documents or overwrite them.

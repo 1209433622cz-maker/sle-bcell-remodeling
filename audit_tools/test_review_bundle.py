@@ -5,7 +5,7 @@ import importlib
 import json
 
 from phase17_postc9_06_build_correction_package import manifest_bytes, zip_bytes
-from verify_review_bundle import AUTHOR_APPROVAL_EDITS, CONFIRMED, CONFIRMED_SCOPE_PATHS, archive_entries, require_review_status, safe_name, sha256, verify_confirmed_snapshot_scope, verify_document_provenance, verify_entries, verify_review_governance
+from verify_review_bundle import AUTHOR_APPROVAL_EDITS, CANDIDATE, CANDIDATE_EDITS, CANDIDATE_REPLACED, CONFIRMED, CONFIRMED_SCOPE_PATHS, archive_entries, require_review_status, safe_name, sha256, verify_candidate_snapshot_scope, verify_confirmed_snapshot_scope, verify_document_provenance, verify_entries, verify_review_governance
 
 
 class ReviewBundleTests(unittest.TestCase):
@@ -238,6 +238,126 @@ class ReviewBundleTests(unittest.TestCase):
             verify_review_governance(entries)
         entries["governance/Figure_1_Legend_Correction.md"] = b"Correction preview; not integrated.\n"
         self.assertEqual(verify_review_governance(entries),gate)
+
+    def candidate_governance(self):
+        entries, prior_gate = self.confirmed_governance()
+        for before, _ in CANDIDATE_EDITS["sources/Manuscript.md"][:2]:
+            entries["sources/Manuscript.md"] += (before + "\n").encode()
+        source = b"value\n0.990\n"
+        entries["additional_files/Figure_Source_Data.zip"] = zip_bytes({"Figure1_source_data.csv":source})
+        reviewed = {name:entries[name] for name in CONFIRMED_SCOPE_PATHS}
+        for name, (before, after) in AUTHOR_APPROVAL_EDITS.items():
+            reviewed[name] = reviewed[name].decode().replace(after, before).encode()
+        entries["governance/Reviewed_Package_MANIFEST_SHA256.csv"] = manifest_bytes(reviewed)
+        receipt = json.loads(entries["governance/author_confirmation.json"])
+        receipt["reviewed_package"]["manifest_sha256"] = sha256(entries["governance/Reviewed_Package_MANIFEST_SHA256.csv"])
+        entries["governance/author_confirmation.json"] = json.dumps(receipt).encode()
+        prior_gate["confirmation_evidence_sha256"] = sha256(entries["governance/author_confirmation.json"])
+        entries["governance/Prior_Review_Gate.json"] = json.dumps(prior_gate).encode()
+        gate = json.loads(json.dumps(prior_gate))
+        gate["prior_review_gate_sha256"] = sha256(entries["governance/Prior_Review_Gate.json"])
+        for author in gate["authors"]:
+            author.update(decision=CANDIDATE, date=None, evidence=None)
+        gate["postapproval_presentation_issue"] = {
+            "id":"F1C_THRESHOLD_LABEL","status":"INTEGRATED_CORRECTED_CANDIDATE_PENDING_APPROVAL",
+            "scientific_values_changed":False,"record":"Figure_1_Legend_Correction.md"}
+        entries["governance/review_gate.json"] = json.dumps(gate).encode()
+        entries["governance/Author_Confirmation.md"] = (CANDIDATE + "\nPrior " + CONFIRMED).encode()
+        entries["governance/Figure_1_Legend_Correction.md"] = b"Integrated candidate, pending approval.\n"
+        for name in CANDIDATE_REPLACED:
+            entries["governance/prior_snapshot/"+name] = entries[name]
+        for name, changes in CANDIDATE_EDITS.items():
+            text = entries[name].decode()
+            for before, after in changes:
+                text = text.replace(before, after)
+            entries[name] = text.encode()
+        for ext in ("pdf", "png"):
+            entries["figures/Figure_1."+ext] = b"corrected figure " + ext.encode()
+        def record(path, payload):
+            return {"path":path,"bytes":len(payload),"sha256":sha256(payload)}
+        label = {"actual_label":"minimum agreement criterion","guide_y":.990,"minimum_mapped_ari":.900,
+                 "line_matches_frozen_agreement_threshold":True,"source_data_byte_identical":True,
+                 "panel_a_interpretation_boxes_disjoint":True,"minimum_interpretation_box_gap_pt":5,
+                 "source_data_sha256":sha256(source),"assertions":[{"pass":True} for _ in range(9)],
+                 "files":[record("figures/Figure1_disease_blind_identity_scope."+ext, entries["figures/Figure_1."+ext])
+                          for ext in ("pdf", "png")] + [record("source_data/Figure1_source_data.csv",source)]}
+        entries["quality_control/figure1_label_correction.json"] = json.dumps(label).encode()
+        for ext in ("docx", "pdf"):
+            entries["main_text/Manuscript."+ext] = b"rendered candidate " + ext.encode()
+        semantic = {"status":"PASS_CORRECTED_CANDIDATE_SEMANTICS","checks":{"test":True},
+                    "files":[record(name, entries[name]) for name in
+                             (*CANDIDATE_REPLACED,"main_text/Manuscript.docx","main_text/Manuscript.pdf")]}
+        entries["quality_control/candidate_semantic_audit.json"] = json.dumps(semantic).encode()
+        return entries, gate
+
+    def test_candidate_keeps_prior_confirmation_without_extending_it(self):
+        entries, gate = self.candidate_governance()
+        self.assertEqual(verify_review_governance(entries),gate)
+        self.assertEqual(verify_candidate_snapshot_scope(entries,gate),41)
+        with self.assertRaises(ValueError):
+            verify_confirmed_snapshot_scope(entries,json.loads(entries["governance/Prior_Review_Gate.json"]))
+
+    def test_candidate_rejects_undeclared_prose_or_numeric_change(self):
+        for extra in (b"A new claim.\n", b"0.991\n"):
+            entries, gate = self.candidate_governance()
+            entries["sources/Manuscript.md"] += extra
+            with self.assertRaisesRegex(ValueError,"undeclared prose"):
+                verify_candidate_snapshot_scope(entries,gate)
+
+    def test_candidate_cannot_change_other_science_payloads(self):
+        for name in ("figures/Figure_2.pdf","additional_files/Full_Statistical_Results.zip","sources/Research_Proposal.md"):
+            entries, gate = self.candidate_governance()
+            entries[name] += b"change"
+            with self.assertRaises(ValueError):
+                verify_candidate_snapshot_scope(entries,gate)
+
+    def test_candidate_requires_original_approved_payloads(self):
+        entries, gate = self.candidate_governance()
+        del entries["governance/prior_snapshot/figures/Figure_1.pdf"]
+        with self.assertRaisesRegex(ValueError,"Missing prior snapshot"):
+            verify_candidate_snapshot_scope(entries,gate)
+
+    def test_candidate_rejects_altered_prior_approval_evidence(self):
+        entries, _ = self.candidate_governance()
+        entries["governance/Prior_Review_Gate.json"] += b" "
+        with self.assertRaisesRegex(ValueError,"not hash-bound"):
+            verify_review_governance(entries)
+
+    def test_candidate_rejects_false_approval_date(self):
+        entries, gate = self.candidate_governance()
+        gate["authors"][0]["date"] = "2026-08-28"
+        entries["governance/review_gate.json"] = json.dumps(gate).encode()
+        with self.assertRaisesRegex(ValueError,"not be invented"):
+            verify_review_governance(entries)
+
+    def test_candidate_rejects_wrong_threshold_semantics(self):
+        for key, value in (("guide_y",.9),("minimum_mapped_ari",.99),("actual_label","minimum mapped-ARI criterion"),
+                           ("panel_a_interpretation_boxes_disjoint",False),("minimum_interpretation_box_gap_pt",-1)):
+            entries, gate = self.candidate_governance()
+            label = json.loads(entries["quality_control/figure1_label_correction.json"])
+            label[key] = value
+            entries["quality_control/figure1_label_correction.json"] = json.dumps(label).encode()
+            with self.assertRaisesRegex(ValueError,"source-driven assertions"):
+                verify_candidate_snapshot_scope(entries,gate)
+
+    def test_candidate_rejects_stale_corrected_figure_bytes(self):
+        entries, gate = self.candidate_governance()
+        entries["figures/Figure_1.pdf"] += b"changed"
+        with self.assertRaisesRegex(ValueError,"provenance differs"):
+            verify_candidate_snapshot_scope(entries,gate)
+
+    def test_candidate_rejects_stale_render_semantic_audit(self):
+        entries, gate = self.candidate_governance()
+        entries["main_text/Manuscript.pdf"] += b"changed"
+        with self.assertRaisesRegex(ValueError,"bind the current candidate"):
+            verify_candidate_snapshot_scope(entries,gate)
+
+    def test_candidate_cannot_omit_correction_issue(self):
+        entries, gate = self.candidate_governance()
+        del gate["postapproval_presentation_issue"]
+        entries["governance/review_gate.json"] = json.dumps(gate).encode()
+        with self.assertRaisesRegex(ValueError,"must disclose"):
+            verify_review_governance(entries)
 
 
 if __name__ == "__main__":

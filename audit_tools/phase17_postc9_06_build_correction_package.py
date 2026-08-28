@@ -8,7 +8,7 @@ from pathlib import Path
 import zipfile
 
 from docx_a11y_audit import audit as a11y_audit
-from verify_review_bundle import CONFIRMED, archive_entries, csv_records, safe_name, sha256, verify_bundle, verify_entries, verify_review_governance
+from verify_review_bundle import CANDIDATE, CONFIRMED, archive_entries, csv_records, safe_name, sha256, verify_bundle, verify_entries, verify_review_governance
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -192,9 +192,16 @@ def build(args):
             add(audit_dir/name, "governance/"+name)
     if (audit_dir/"Figure_1_Legend_Correction.md").exists():
         add(audit_dir/"Figure_1_Legend_Correction.md", "governance/Figure_1_Legend_Correction.md")
+    if (audit_dir/"Prior_Review_Gate.json").exists():
+        add(audit_dir/"Prior_Review_Gate.json", "governance/Prior_Review_Gate.json")
+        for path in sorted((audit_dir/"prior_snapshot").rglob("*")):
+            if path.is_file():
+                add(path, "governance/prior_snapshot/"+path.relative_to(audit_dir/"prior_snapshot").as_posix())
+        for name in ("figure1_label_correction.json", "candidate_semantic_audit.json"):
+            add(audit_dir/name, "quality_control/"+name)
     governance = verify_review_governance(payloads)
     author_state = governance["authors"][0]["decision"]
-    if author_state == CONFIRMED:
+    if author_state in {CONFIRMED, CANDIDATE}:
         reviewed = json.loads(payloads["governance/author_confirmation.json"])["reviewed_package"]
         reviewed_path = (ROOT/safe_name(reviewed["path"])).resolve()
         if not reviewed_path.is_relative_to(ROOT/"04_submission"):
@@ -215,7 +222,11 @@ def build(args):
         accessibility.append(record)
     payloads["quality_control/accessibility.json"] = (json.dumps(accessibility,indent=2)+"\n").encode()
     add(figures/"01_FIGURE_BUILD_ASSERTIONS.json","quality_control/figure_build_assertions.json")
-    add(ROOT/"00_project_management/post_gateC9_audit_2026-08-28/figure_typography.csv","quality_control/figure_typography.csv")
+    typography = audit_dir/"figure_typography.csv"
+    if author_state == CANDIDATE and not typography.exists():
+        raise ValueError("Candidate needs a fresh typography audit, not the earlier figure report")
+    add(typography if typography.exists() else ROOT/"00_project_management/post_gateC9_audit_2026-08-28/figure_typography.csv",
+        "quality_control/figure_typography.csv")
     payloads["SOURCE_PROVENANCE.csv"] = csv_bytes(provenance)
     roles = [("main manuscript","main_text/Manuscript.docx"),
              ("supplementary information","additional_files/Supplementary_Information.docx"),
@@ -227,6 +238,7 @@ def build(args):
     payloads["PORTAL_FILES.csv"] = csv_bytes(portal)
     payloads["STATUS.json"] = (json.dumps({
         "review_only":True,"submission_authorized":False,"author_reapproval":author_state,
+        "prior_author_approval":CONFIRMED if author_state == CANDIDATE else None,
         "reviewed_package_sha256":governance.get("reviewed_package_sha256"),
         "author_review_of_external_feedback":governance.get("author_review_of_external_feedback",False),
         "journal_requirement":governance.get("journal_requirement"),
@@ -253,9 +265,11 @@ def build(args):
         "administrative approval-statement updates. It is not approval of future "
         "scientific changes, journal choice, a new release or actual submission. "
         "Reviewer identity and an independent methods decision remain unverified.\n\n"
-        "STATUS.json also records any known postapproval presentation issue. "
-        "Its correction preview is separate; do not submit a reviewed snapshot "
-        "before the documented correction is integrated and checked.\n\n"
+        "STATUS.json distinguishes the confirmed prior snapshot from a pending "
+        "corrected candidate. For the candidate, Figure 1c and its legend are "
+        "integrated together; the approved original files remain under "
+        "governance/prior_snapshot/. Earlier review bundles retain their known "
+        "label issue. No technical PASS grants final-file or submission approval.\n\n"
         "Run `python -I -S verify_review_bundle.py --bundle .` after extraction. "
         "A passing result verifies technical integrity and boundaries, not scientific "
         "validity, author identity, a new DOI, or journal submission. The verifier "

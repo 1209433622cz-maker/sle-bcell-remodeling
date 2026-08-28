@@ -9,6 +9,7 @@ from unittest.mock import patch
 import numpy as np
 
 import phase17_c7_01_build_main_figures as figures
+from publication_style_contract import apply_publication_style
 
 
 def digest(path):
@@ -47,6 +48,18 @@ def main():
         checked.update({"actual_label":"minimum agreement criterion", "guide_y":expected,
                         "minimum_mapped_ari":thresholds["minimum_mapped_ari"],
                         "line_matches_frozen_agreement_threshold":True})
+        apply_publication_style(figure, 170)
+        nodes = [text for text in figure.axes[0].texts if text.get_text().startswith(
+            ("same-data\n", "M5911", "GSE23307\n"))]
+        boxes = sorted((text.get_bbox_patch().get_window_extent(figure.canvas.get_renderer())
+                        for text in nodes), key=lambda box: box.x0)
+        if len(boxes) != 3:
+            raise AssertionError("Expected three interpretation-only evidence nodes")
+        gaps = [(right.x0-left.x1)*72/figure.dpi for left,right in zip(boxes,boxes[1:])]
+        if min(gaps) < 2:
+            raise AssertionError("Figure 1a interpretation boxes overlap or have insufficient spacing")
+        checked.update({"panel_a_interpretation_boxes_disjoint":True,
+                        "minimum_interpretation_box_gap_pt":min(gaps)})
         save(figure, directory, stem)
 
     figures.ASSERTIONS.clear()

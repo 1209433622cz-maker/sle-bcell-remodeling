@@ -1,0 +1,617 @@
+这轮我按**最新 GitHub `main`、你上传的 `author_confirmed_review.zip`、当前 Manuscript/Supplement/RP/Cover Letter、R1/R2/C9R 边界、15 张图以及最新 Nature Portfolio 期刊规范**重新做了独立的博士生导师级全量复核。
+
+GitHub 最新状态已经推进到 `c68775982f47a637dbc2bfa1b89df3640984b31d`，这一提交明确记录了作者确认同步；当前作者确认状态是 `CONFIRMED_REVIEWED_SNAPSHOT`，但**并未授权未来格式修改、新 DOI 或实际投稿**。
+
+## 总判定
+
+科学部分已经达到我认为的**首投前上限**。现在继续新增 cohort、mapper、TF、signature 或为了让 HOLD 变 PASS 而继续调参数，都会降低论文可信度，而不是提升它。
+
+但我这轮确认了一个非常具体的投稿 blocker：
+
+> **当前作者确认包中的 Figure 1c 仍然是错标版本。**
+
+我直接从你上传的 `author_confirmed_review.zip` 解析 Figure 1 PDF 和 Manuscript source。Figure 1c 仍显示：
+
+> `minimum mapped-ARI criterion`
+
+而 Figure 1 legend 仍写：
+
+> “the dashed horizontal guide marks the minimum mapped-ARI criterion of 0.990.”
+
+这与冻结决策不符。真实规则是：
+
+**minimum mapped ARI = 0.900**
+
+而：
+
+**minimum mapping agreement = 0.990**
+
+仓库已经发现并修正了绘图源码，也生成了独立 corrected preview；但最新 README 和 Author Confirmation 都明确说明：**这个 correction 还没有整合回作者批准的 snapshot**。
+
+所以当前包仍然是：
+
+> **review-ready / author-confirmed snapshot**
+
+而不是：
+
+> **submission-ready final release**。
+
+---
+
+# 1. 上传的作者确认包本身技术完整性很高
+
+我独立重新验了：
+
+`author_confirmed_review.zip`
+
+结果：
+
+| 项目                    |                                                               独立结果 |
+| --------------------- | -----------------------------------------------------------------: |
+| ZIP bytes             |                                                     **26,034,837** |
+| SHA-256               | `0363C066FB7F8FAD5E867FC820ED7F80C8F3D1A10E0A1CB43B8A7A51FCA92234` |
+| ZIP entries           |                                                             **76** |
+| Manifest payload      |                                                             **75** |
+| Size/SHA verification |                                                     **75/75 PASS** |
+| Missing               |                                                              **0** |
+| Extra                 |                                                              **0** |
+
+这个 SHA 也与 GitHub 当前 author-confirmation synchronization record 完全一致。
+
+包内机器状态同样清楚：
+
+`review_only = true`
+
+`submission_authorized = false`
+
+`author_reapproval = CONFIRMED_REVIEWED_SNAPSHOT`
+
+`external_methods_review_status = FEEDBACK_RECEIVED_CLOSURE_PENDING`
+
+`target_journal = null`
+
+`matching_archive_doi = null`
+
+`corrected_disease_outcomes_estimated = false`
+
+因此当前 governance 没有发生“技术 PASS = 自动投稿授权”的错误。
+
+---
+
+# 2. C9 技术纠错现在已经真正闭环
+
+现在绝不能再恢复旧的：
+
+> `PASS_C9_LABEL_AGNOSTIC_EXTERNAL_SUPPORT`
+
+纠错后 reference 和 external normalization 已统一为 full-library log1p(CP10K)，而 elastic-net B_ASC precision 为：
+
+> **0.885210**
+
+低于冻结：
+
+> **0.90**
+
+所以 outcome unlock 正确保持关闭。独立算术 recount 也重现了这一点，并且记录 `outcome_unlock_authorized=false`。
+
+当前 correction contract 同样明确规定：
+
+> centroid 通过不能事后替代失败的 elastic-net；不能改 threshold、grid、seed 或 mapper 去获得 PASS。
+
+这部分我建议彻底冻结。
+
+它不是“分析失败”。
+
+它证明你的 pipeline 有能力真正阻止作者在看到结果后绕过既定门槛。
+
+---
+
+# 3. 论文中央证据仍然很强
+
+当前最稳的故事仍然是：
+
+| 层级                                   | 结论                                                |
+| ------------------------------------ | ------------------------------------------------- |
+| Fine cell-state taxonomy             | 不稳定，不承担 hard disease inference                    |
+| Broad B_CONV/B_ASC                   | 仅作为 analysis scaffold                             |
+| Full-pipeline R1                     | B_ASC-specific HOLD                               |
+| Composition                          | primary B_ASC null                                |
+| Boundary propagation                 | composition null 保持                               |
+| B_CONV IFN                           | primary positive                                  |
+| Internal support                     | donor-nonoverlap positive                         |
+| External replication                 | source-label-defined GSE135779 childhood positive |
+| Transcriptome-wide replication       | 明确否定，rho=0.026                                    |
+| STAT1/STAT2                          | convergent observational evidence                 |
+| M5911 depletion                      | discovery STAT2 明显衰减                              |
+| C9R source-label-independent mapping | calibration HOLD；无 disease outcome                |
+| Causality / clinical utility         | 不支持                                               |
+
+当前 README 也已经按照这个证据层级重写，不再把 C9R 当 positive support。
+
+所以目前最有价值的 conceptual contribution 仍然是：
+
+> **Inferential granularity must be validated rather than assumed.**
+
+换成更适合编辑阅读的语言就是：
+
+> **hard cell-state membership has explicit reproducibility limits, whereas process-level IFN remodeling survives biological-unit inference, identity-boundary propagation and independent source-label-defined cohort validation.**
+
+这条故事是成立的。
+
+---
+
+# 4. R1 HOLD 与 C9R HOLD 反而使文章更可信
+
+现在项目同时保留了两个真正的负面门：
+
+**R1：**
+
+B_ASC median Jaccard = 0.930323 < 0.95。
+
+**C9R：**
+
+elastic-net B_ASC precision = 0.885210 < 0.90。
+
+如果为了“完美”把它们调成 PASS，文章会更差。
+
+现在更好的 narrative 是：
+
+> taxonomy-level reproducibility 比 process-level transcriptional reproducibility 更脆弱。
+
+这与论文主旨完全一致。
+
+所以我明确不建议再做：
+
+新 C10 cohort、新 mapper、新 threshold、新 seed family、新 TF database 或新 IFN gene-set sweep。
+
+---
+
+# 5. Manuscript 当前逻辑已经接近最终稿
+
+当前正文结构非常合理：
+
+> identity validity
+> → composition
+> → B_CONV transcription
+> → independent source-label-defined replication
+> → corrected external-mapping limitation
+> → regulator/response convergence
+> → claim boundaries
+
+最新 Methods 已经把原来“selected confidence thresholds”修成更准确的：
+
+> “evaluated regularization and candidate confidence thresholds under prespecified state-specific eligibility criteria.”
+
+这是正确修复。
+
+Discussion 也已经主动加入 C9R limitation：
+
+> calibration failed → no corrected disease outcome estimated。
+
+当前粗略字数为：
+
+| Section                           |     Words |
+| --------------------------------- | --------: |
+| Abstract                          |   **342** |
+| Background                        |       432 |
+| Methods                           |     2,095 |
+| Results                           |     2,064 |
+| Discussion                        |       902 |
+| Background + Results + Discussion | **3,398** |
+
+所以论文现在的问题不是“正文太长”。
+
+如果最终投 Nature Portfolio 类期刊，真正需要重构的是：
+
+> **title + abstract + section format**
+
+而不是大砍科学内容。
+
+---
+
+# 6. 我还建议一个很小的措辞降级
+
+现在 GSE135779 leave-one-source-label Results 写：
+
+> “excluding dependence on a single source label.”
+
+我建议最终稿改为：
+
+> **“arguing against dependence on any single contributing source label.”**
+
+因为逐个删除八个 label 能证明：
+
+> 没有某一个 label 单独驱动结果。
+
+但它不能严格证明：
+
+> 整个 source-label annotation scheme 完全无关。
+
+这和 C9R HOLD 的边界会更加逻辑一致。
+
+这是 P1，不是 blocker。
+
+---
+
+# 7. AI disclosure 需要按目标期刊再移动一次
+
+当前 AI disclosure 在 Declarations。
+
+如果最后选择 Nature Portfolio journal，建议把相同的责任声明放进 Methods。
+
+Communications Biology 当前官方 Submission Guidelines 明确写：
+
+> LLM use should be documented in the Methods section。([Nature][1])
+
+因此最终 journal-specific build 可以增加一个很短的：
+
+> `Generative AI assistance`
+
+或：
+
+> `Software and AI assistance`
+
+不需要增加任何新声明，只把现有内容放到政策最合适的位置。
+
+---
+
+# 8. Nature-style 图形现在已经真正达标
+
+我重新解析了当前包全部：
+
+> **5 main + S1–S10 = 15 figures**
+
+当前图件全部约：
+
+**170 mm width**
+
+而且：
+
+* Arial / Arial Bold；
+* vector PDF；
+* editable text；
+* visible text minimum = **5 pt**；
+* normal text maximum = **7 pt**；
+* panel labels = **8 pt**。
+
+Nature 当前正式 production guide 要求 multi-panel labels 8 pt bold lowercase，其余文字 5–7 pt，Arial/Helvetica，线宽 0.25–1 pt，并优先 editable vector art。([Nature][2])
+
+因此：
+
+> **Typography：PASS。**
+
+需要区分的是：
+
+Nature 自己的标准 double-column 是：
+
+> **183 mm**
+
+而不是当前 170 mm。([Nature][2])
+
+但现在还没选期刊，所以没必要为了形式上的“Nature 183 mm”再全重跑一次。
+
+更合理的是：
+
+> **先选期刊，再从绘图代码一次性 rerender 到目标期刊 exact width。**
+
+---
+
+# 9. Figure 1c 修复必须通过重跑，不许手改
+
+这是下一轮第一项 code-owned P0。
+
+当前已修 source code 的做法是正确的：
+
+> 从 frozen decision JSON 读取 `minimum_mapping_agreement`
+
+然后绘制：
+
+> `minimum agreement criterion`
+
+Source Data 不变。
+
+最终必须同步两处：
+
+**Figure 1c**
+
+和：
+
+**Figure 1 legend**
+
+否则会出现图改了、caption 还错的另一种 inconsistency。
+
+你现在的 `author_confirmed_review.zip` 仍然是旧图，所以这一步还没有完成。
+
+---
+
+# 10. 作者确认状态现在已经比上一轮好很多
+
+现在不是“作者未确认”。
+
+当前记录已经明确：
+
+> 两位作者确认 reviewed snapshot，主文和 cover letter 也已经批准。
+
+这一轮很好地解决了上一轮我指出的 historical `[x]` 与 current approval 混淆。
+
+但这份批准有明确边界：
+
+它**不自动覆盖**：
+
+* Figure 1c corrected version；
+* 目标期刊新 title；
+* 150-word abstract；
+* section restructuring；
+* 新 DOI；
+* final upload files。
+
+所以最有效率的办法不是现在再要求作者重新批准一次。
+
+而是：
+
+> **先把期刊选定，所有必要格式/图 1 修复一次做完，最后只做一次 exact-file approval。**
+
+---
+
+# 11. 外部 methods review 不再是绝对 blocker
+
+当前状态：
+
+> `FEEDBACK_RECEIVED_CLOSURE_PENDING`
+
+而作者已经确认阅读并考虑了这些 methodological feedback。
+
+但 reviewer identity / independence 仍然没有经过独立认证。最新 external review dossier 自己也非常诚实地写明这一点。
+
+我的判断：
+
+> **这不是一般期刊要求的硬性 submission prerequisite。**
+
+如果能找到真正独立的单细胞/统计生信同行，把 12-question dossier 真正签核一遍，当然是很高价值的 P1。
+
+但不应该因为暂时没有这个人，就无限期卡住论文。
+
+尤其你们已经把：
+
+* normalization correction；
+* fail-closed gate；
+* no outcome access；
+* non-nested CV limitation；
+* selective rescue prohibition
+
+全部写进 manuscript 和 repo。
+
+---
+
+# 12. JCR Q1 选刊现在应该成为主任务
+
+仓库当前已经记录：
+
+> 用户明确要求 **JCR Q1**，不是用 CAS/SJR 代替。
+
+但是目前还没有拿到官方 JCR category/quartile profile，所以我不会仅凭 JIF 把某刊直接称为“已验证 Q1”。
+
+## fit-based 第一候选：npj Systems Biology and Applications
+
+其官方 scope 明确包括：
+
+* computational/mathematical analysis of complex biological systems；
+* disease modeling；
+* single-cell systems biology；
+* systems immunology。([Nature][3])
+
+Publisher-reported 2025 JIF 是 **4.4**。([Nature][4])
+
+而且现在有一个非常相关的开放专刊：
+
+> **Systems immunology: multi-omics approaches, dynamical modeling and novel agentic AI approaches**
+
+deadline：
+
+> **2026-09-12**。([Nature][5])
+
+从**文章故事匹配度**看，这个期刊目前是我最看好的候选。
+
+但前提仍然是：
+
+> **先取得官方/机构 JCR profile，确认当前 metric year/category 真的是 Q1。**
+
+---
+
+# 13. Communications Biology 是并列强候选
+
+Communications Biology 官方 scope 明确允许：
+
+> secondary data analysis
+
+以及：
+
+> innovative computational methods。([Nature][6])
+
+Publisher 当前 Nature Portfolio metrics 页面给出的 JIF 为：
+
+> **5.8**。([Nature][7])
+
+它的 Article 评价重点是：
+
+> novel biological insight、strong evidence、technical soundness、对具体 biological subfield 的推进。([Nature][6])
+
+这与当前文章“强技术治理 + 透明 negative boundaries + process-level biological signal”非常匹配。
+
+同时它当前建议 Article：
+
+> ~5,000 words。([Nature][8])
+
+你的 Background + Results + Discussion 只有约 **3,398 words**，完全不需要为了它大删正文。
+
+但它的格式 checklist 通常建议：
+
+> title ~15 words
+> abstract ≤150 words。([Nature][9])
+
+所以 Abstract 342 words 最终需要重写。
+
+---
+
+# 14. Genome Medicine 现在属于 stretch，而不是最优首选
+
+不是因为稿件不够严谨。
+
+而是 editor 会问：
+
+> known SLE IFN biology + public-data reanalysis + source-label-defined external replication，是否构成足够广的 medical advance？
+
+你现在缺的不是统计：
+
+而是：
+
+* prospective cohort；
+* matched patient perturbation；
+* treatment response；
+* direct clinical utility。
+
+因此如果你更追求：
+
+> **医学影响力上限**
+
+Genome Medicine 仍可冲。
+
+但如果目标是：
+
+> **JCR Q1 + 文章逻辑高度匹配 + 不再开新实验**
+
+我会先核实：
+
+**npj Systems Biology and Applications**
+
+和：
+
+**Communications Biology**
+
+的正式 JCR Q1 状态。
+
+---
+
+# 15. 如果选 Nature Portfolio，我建议换一个更适合编辑的标题
+
+当前标题：
+
+> Disease-blind single-cell reconstruction separates unstable B-cell state assignments from reproducible interferon remodeling in systemic lupus erythematosus
+
+科学上没问题。
+
+但略“方法名式”。
+
+如果最终投 npj / Communications Biology，我更喜欢：
+
+> **Interferon remodeling persists despite uncertain B-cell state assignments in systemic lupus erythematosus**
+
+它把最重要的 conceptual contrast 直接放出来：
+
+> state assignment uncertainty
+
+vs.
+
+> IFN process reproducibility。
+
+这个版本也更短。
+
+---
+
+# 16. Abstract 建议直接压成约 130–150 words
+
+我已经在本轮报告中给了一个可直接用于 Nature Portfolio 候选的压缩草稿。
+
+它只保留：
+
+> identity uncertainty
+> → propagation
+> → IFN replication
+> → corrected C9 HOLD
+> → regulatory qualification
+> → no taxonomy/causality。
+
+这样比现在 342-word structured abstract 更符合 npj/Communications Biology 的编辑阅读方式。
+
+但是：
+
+> **不要现在覆盖已经批准的 source。**
+
+先确定期刊，再一次性替换并进入 final approval。
+
+---
+
+# 当前完成度
+
+| 模块                                       |                                                 完成度 |
+| ---------------------------------------- | --------------------------------------------------: |
+| Scientific design                        |                                             **98%** |
+| Statistical rigor                        |                                             **98%** |
+| R1 boundary transparency                 |                                             **99%** |
+| Identity propagation                     |                                             **98%** |
+| Source-label-defined external validation |                                             **96%** |
+| Source-label-independent robustness      |                               **HOLD / unresolved** |
+| Regulatory robustness                    |                                             **97%** |
+| Manuscript logic                         |                                             **98%** |
+| Main figure science                      |                                             **99%** |
+| Nature typography                        |                                             **99%** |
+| Figure 1 final semantic correctness      |                                             **90%** |
+| Supplement                               |                                             **98%** |
+| Source-data traceability                 |                                             **99%** |
+| Reproducibility                          |                                             **98%** |
+| Author approval of current snapshot      |                                            **100%** |
+| Verified JCR Q1 target                   |                                         **PENDING** |
+| Final journal-formatted approval         |                                         **PENDING** |
+| Matching revised DOI                     |                                         **PENDING** |
+| Portal readiness                         | **BLOCKED by publication engineering, not science** |
+
+---
+
+# 下一阶段
+
+我现在建议正式把项目推进到：
+
+> **`JCR_Q1_JOURNAL_SELECTION_AND_FINAL_CORRECTION_REFREEZE`**
+
+执行顺序应固定为：
+
+1. 从学校/Clarivate JCR 获取候选刊当前 metric year、category、rank、quartile，正式锁定 JCR Q1；
+2. 选定目标期刊；
+3. 一次性整合 Figure 1c corrected builder + corrected legend；
+4. 从代码按目标期刊 exact width 重跑全部最终图，而不是手动 resize；
+5. 按期刊要求统一 title、abstract、section order 和 AI disclosure；
+6. 全量 rebuild DOCX/PDF → WPS → accessibility → figure semantic assertions；
+7. freeze exact final Git commit；
+8. 保留 `v1.0.0` 不动，新建例如 **`v1.1.0`**；
+9. Zenodo `New Version`，取得 version-specific DOI；
+10. DOI 回填后**再 rebuild 一次**；
+11. 两位作者对 exact final hashes 做最后一次 approval + 明确 submission authorization；
+12. portal preflight → submit → 保存 receipt / manuscript number / uploaded hashes。
+
+现在不要再开新的科学分析。
+
+当前唯一必须解决的“技术性科学表述错误”，就是：
+
+> **Figure 1c 的 0.990 threshold type。**
+
+其余工作全部已经进入：
+
+> **journal selection + final publication engineering**。
+
+本轮详细终局报告和执行矩阵已经生成：
+
+[下载作者确认后 JCR Q1 终局审计报告](sandbox:/mnt/data/SLE_Bcell_AuthorConfirmed_JCRQ1_final_audit_2026-08-28.md)
+
+[下载 JCR Q1 Final Refreeze 执行矩阵](sandbox:/mnt/data/SLE_Bcell_JCRQ1_final_refreeze_action_matrix_2026-08-28.csv)
+
+**最终导师判断：这篇论文现在不应该再靠“更多分析”变得更好。下一轮最有价值的动作是正式核实 JCR Q1、选刊，然后把 Figure 1c 修复与期刊格式一次性整合成新的最终 release。**
+
+[1]: https://www.nature.com/commsbio/submit/submission-guidelines?utm_source=chatgpt.com "Submission guidelines | Communications Biology"
+[2]: https://www.nature.com/nature/for-authors/final-submission?utm_source=chatgpt.com "Final submission | Nature"
+[3]: https://www.nature.com/npjsba/aims?utm_source=chatgpt.com "Aims & Scope | npj Systems Biology and Applications"
+[4]: https://www.nature.com/npjsba/journal-impact?utm_source=chatgpt.com "Journal Metrics | npj Systems Biology and Applications"
+[5]: https://www.nature.com/npjsba/calls-for-papers?utm_source=chatgpt.com "Calls for papers | npj Systems Biology and Applications"
+[6]: https://www.nature.com/commsbio/aims?utm_source=chatgpt.com "Aims & Scope | Communications Biology"
+[7]: https://www.nature.com/nature-portfolio/about-journals/journal-metrics?utm_source=chatgpt.com "Journal Metrics | Nature Portfolio"
+[8]: https://www.nature.com/commsbio/submit/content-types?utm_source=chatgpt.com "Content types | Communications Biology"
+[9]: https://www.nature.com/documents/CommsBio-file-checklist-revision.pdf?utm_source=chatgpt.com "Revised manuscript submission file checklist"

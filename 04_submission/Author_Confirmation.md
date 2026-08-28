@@ -1,6 +1,12 @@
 # Current author review and release authorization
 
-**Status: CONFIRMED_REVIEWED_SNAPSHOT. Submission is not authorized.**
+**Current candidate: PENDING_CORRECTED_CANDIDATE. Prior snapshot: CONFIRMED_REVIEWED_SNAPSHOT. Submission is not authorized.**
+
+The current candidate integrates the Figure 1c agreement-threshold correction,
+the matching manuscript legend and a qualified source-label omission claim.
+Its approval is pending; the already confirmed snapshot and its receipt below
+remain valid and unchanged. No repeated approval of unchanged historical files
+is requested. Journal formatting and exact-file approval should be consolidated.
 
 On 28 August 2026 the user explicitly confirmed the current materials for both
 authors and stated that both had considered the external methodological feedback
@@ -14,7 +20,8 @@ The earlier pending form is preserved under the same audit directory's `history/
 The package remains unchanged. A separately built administrative update records
 the confirmation; it does not extend approval to future scientific edits.
 The user subsequently stated that the manuscript and cover letter were approved.
-Their exact current Markdown hashes are also bound in the evidence receipt.
+Their exact then-current Markdown hashes are also bound in the evidence receipt.
+Those hashes identify the preserved prior snapshot, not the new candidate.
 
 ## Previously supplied identity and declarations
 
@@ -66,7 +73,7 @@ The user separately specified JCR Q1 as the journal-ranking requirement on
 - [ ] Final journal-formatted files and their hashes are approved after any material or DOI changes.
 - [ ] Explicit authorization to upload and submit the exact approved files is recorded.
 
-| Author | Current content approval | Date | Evidence reference |
+| Author | Prior snapshot approval | Date | Evidence reference |
 |---|---|---|---|
 | Zhi Chen | CONFIRMED_REVIEWED_SNAPSHOT | 2026-08-28 | User message; author_confirmation.json |
 | Teng Qi | CONFIRMED_REVIEWED_SNAPSHOT | 2026-08-28 | User message; author_confirmation.json |
@@ -75,8 +82,9 @@ The date records receipt of the user's statement, not an invented signing event.
 No signature or independently authenticated reviewer decision is supplied by the
 agent. Final journal-formatted files and actual submission remain unapproved.
 
-A postapproval presentation issue was found in Figure 1c: the 0.990 guide is the
-minimum mapping-agreement criterion, not the minimum ARI criterion. A corrected
-preview and exact legend replacement are separately recorded; the approved
-snapshot is not overwritten and this update does not silently approve that
-future integrated figure or caption. No underlying numerical result changes.
+The Figure 1c issue is now integrated in `corrected_candidate.zip`: the 0.990
+guide is the minimum mapping-agreement criterion, not the minimum ARI criterion.
+The figure was regenerated from source and the legend rebuilt with it. The
+approved snapshot is not overwritten. No underlying numerical result changes.
+The candidate's manifest, prior-file comparison and rendered semantic checks
+are recorded under `00_project_management/jcr_q1_refreeze_2026-08-28/`.

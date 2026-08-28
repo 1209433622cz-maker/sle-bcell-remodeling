@@ -1,0 +1,64 @@
+{
+  "status": "BUILT_PENDING_VISUAL_REVIEW",
+  "all_pass": true,
+  "checks": [
+    {
+      "check": "Figure1.panel_b.policy_count",
+      "actual": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "check": "Figure1.panel_c.resampling_replicates",
+      "actual": 20,
+      "expected": 20,
+      "pass": true
+    },
+    {
+      "check": "Figure1.panel_d.frozen_state_count",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "check": "Figure1.hard_qc_cells",
+      "actual": 150402,
+      "expected": 150402,
+      "pass": true
+    },
+    {
+      "check": "Figure1.donors",
+      "actual": 259,
+      "expected": 259,
+      "pass": true
+    },
+    {
+      "check": "Figure1.samples",
+      "actual": 271,
+      "expected": 271,
+      "pass": true
+    },
+    {
+      "check": "Figure1.sample_cohort_strata",
+      "actual": 332,
+      "expected": 332,
+      "pass": true
+    },
+    {
+      "check": "Figure1.libraries",
+      "actual": 88,
+      "expected": 88,
+      "pass": true
+    },
+    {
+      "check": "Figure1_disease_blind_identity_scope.minimum_visible_font_pt",
+      "actual": "5.00 pt",
+      "expected": "true",
+      "pass": true
+    }
+  ],
+  "assertions": 9,
+  "scope": "Figure 1 regenerated; Figures 2-5 and S1-S10 byte-identical to the previous reviewed build",
+  "inherited_assertions_sha256": "F3A89A37869D13E64B47BB195AAC2486C4F46CE3A60C642C21D509CD5A5D1433",
+  "inherited_assertions_all_pass": true
+}

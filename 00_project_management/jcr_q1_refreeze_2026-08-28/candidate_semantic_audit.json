@@ -1,0 +1,55 @@
+{
+  "status": "PASS_CORRECTED_CANDIDATE_SEMANTICS",
+  "checks": {
+    "source_corrected_caption": true,
+    "docx_corrected_caption": true,
+    "pdf_corrected_caption": true,
+    "no_old_caption": true,
+    "figure_corrected_label": true,
+    "figure_no_old_label": true,
+    "source_label_claim_bounded": true,
+    "ai_disclosure_already_in_methods": true,
+    "candidate_approval_not_invented": true,
+    "sources/Manuscript.md_exact_delta": true,
+    "sources/Manuscript.md_unchanged_numbers": true,
+    "sources/Cover_Letter.md_exact_delta": true,
+    "sources/Cover_Letter.md_unchanged_numbers": true
+  },
+  "unchanged_numeric_token_counts": {
+    "sources/Manuscript.md": 854,
+    "sources/Cover_Letter.md": 10
+  },
+  "files": [
+    {
+      "path": "sources/Manuscript.md",
+      "bytes": 61099,
+      "sha256": "EDE21BA437AB4E2081B81ED7E454D5FCB2B8B8A4F16C75DA23601A3826372E56"
+    },
+    {
+      "path": "sources/Cover_Letter.md",
+      "bytes": 3544,
+      "sha256": "7ECE71C9C638EEA057974D0E7B3993ECF2DFCC857BA3A64187F73D5AB1502911"
+    },
+    {
+      "path": "figures/Figure_1.pdf",
+      "bytes": 62117,
+      "sha256": "AE2CF01F0ED579CEEBA8E38BD01A13F1F59714A3A30F0AEFEED8FB7D7213EDC1"
+    },
+    {
+      "path": "figures/Figure_1.png",
+      "bytes": 577779,
+      "sha256": "46E392AA837EA28178CC90B2862357F8C2D3580237E00D7BA92DDFB29311CA7A"
+    },
+    {
+      "path": "main_text/Manuscript.docx",
+      "bytes": 63232,
+      "sha256": "A5846AD000E42108BD8C26977882DD3CF007AC2F1607F2E11BD5610054679E85"
+    },
+    {
+      "path": "main_text/Manuscript.pdf",
+      "bytes": 276326,
+      "sha256": "13498688976ACE200D792B8CDB2B30B84576991B3751337725E99C961FFB4CEE"
+    }
+  ],
+  "submission_authorized": false
+}

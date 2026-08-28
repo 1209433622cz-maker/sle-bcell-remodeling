@@ -64,6 +64,16 @@ phase17_v7/post_gateC9/**/documents/
 00_project_management/author_confirmation_2026-08-28/document_pages/*
 !00_project_management/author_confirmation_2026-08-28/document_pages/document_render_audit.json
 00_project_management/author_confirmation_2026-08-28/_portable_test/
+00_project_management/jcr_q1_refreeze_2026-08-28/document_pages/*
+!00_project_management/jcr_q1_refreeze_2026-08-28/document_pages/document_render_audit.json
+00_project_management/jcr_q1_refreeze_2026-08-28/_portable_test/
+00_project_management/jcr_q1_refreeze_2026-08-28/jcr_access_*.png
+phase17_v7/post_gateC9/20260828_corrected_candidate/figure1_regeneration/figures/
+phase17_v7/post_gateC9/20260828_corrected_candidate/figure1_regeneration/source_data/
+phase17_v7/post_gateC9/20260828_corrected_candidate/figure1_final_redraw/figures/
+phase17_v7/post_gateC9/20260828_corrected_candidate/figure1_final_redraw/source_data/
+00_project_management/jcr_q1_refreeze_2026-08-28/figure_renders/
+00_project_management/jcr_q1_refreeze_2026-08-28/contact_*.png
 
 # Local software-test matrices and generated diagnostics.
 phase17_v7/**/_software_tests/

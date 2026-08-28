@@ -8,7 +8,9 @@ version-specific archive are still required before portal upload. Confirmation
 of the reviewed scientific content and consideration of external feedback have
 already been recorded for both authors; they are not upload authorization.
 
-Use `author_confirmed_review/PORTAL_FILES.csv` to review proposed file roles only.
+Use `corrected_candidate/PORTAL_FILES.csv` to review proposed file roles only.
+It includes the regenerated Figure 1 and matching corrected manuscript legend;
+the older author-confirmed snapshot remains preserved separately.
 No files are currently authorized for upload. The historical `journal_submission`
 directory must not be used as the current package.
 

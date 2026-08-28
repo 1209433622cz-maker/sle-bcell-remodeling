@@ -13,6 +13,20 @@ import zipfile
 
 
 CONFIRMED = "CONFIRMED_REVIEWED_SNAPSHOT"
+CANDIDATE = "PENDING_CORRECTED_CANDIDATE"
+CANDIDATE_EDITS = {
+    "sources/Manuscript.md": (
+        ("minimum mapped-ARI criterion of 0.990", "minimum mapping-agreement criterion of 0.990"),
+        ("excluding dependence on a single source label", "arguing against dependence on any single contributing source label"),
+        ("Both authors have approved the corrected manuscript and supporting materials.",
+         "Both authors approved the preceding reviewed snapshot. Final approval of this corrected candidate is pending."),
+    ),
+    "sources/Cover_Letter.md": (
+        ("Both authors have approved the corrected review materials. Journal choice, final formatted files and submission authorization remain to be confirmed.",
+         "Both authors approved the preceding reviewed snapshot. This corrected candidate, journal choice, final formatted files and submission authorization remain to be confirmed."),
+    ),
+}
+CANDIDATE_REPLACED = tuple(CANDIDATE_EDITS) + ("figures/Figure_1.pdf", "figures/Figure_1.png")
 AUTHOR_APPROVAL_EDITS = {
     "sources/Manuscript.md": (
         "Both authors approved the earlier materials. Renewed final approval of the corrected manuscript and supporting materials is pending.",
@@ -92,7 +106,7 @@ def require_review_status(status):
     if status.get("corrected_disease_outcomes_estimated") is not False:
         raise ValueError("Corrected disease outcomes must remain unestimated")
     if (status.get("matching_archive_doi") is not None or status.get("target_journal") is not None
-            or status.get("author_reapproval") not in {"PENDING", CONFIRMED}):
+            or status.get("author_reapproval") not in {"PENDING", CONFIRMED, CANDIDATE}):
         raise ValueError("No matching DOI or final submission approval has been recorded")
 
 
@@ -201,6 +215,15 @@ def verify_review_governance(entries):
         sections = author_text.split("## Decisions reserved for the authors", 1)
         if len(sections) != 2 or re.search(r"(?im)^\s*[-*]\s+\[x\]", sections[1]):
             raise ValueError("Reserved author decisions must remain unchecked")
+    elif decisions == {CANDIDATE}:
+        if any(row.get("date") is not None or row.get("evidence") is not None for row in authors):
+            raise ValueError("Candidate approval must not be invented")
+        if CANDIDATE not in author_text or CONFIRMED not in author_text:
+            raise ValueError("Distinguish pending candidate approval from confirmed prior materials")
+        prior_key = "governance/Prior_Review_Gate.json"
+        if prior_key not in entries or sha256(entries[prior_key]) != gate.get("prior_review_gate_sha256"):
+            raise ValueError("Prior approval gate is not hash-bound")
+        verify_confirmation_receipt(entries, json.loads(entries[prior_key]))
     else:
         raise ValueError("Current author reapproval has an unsupported or mixed decision")
     checklist = entries["governance/Reporting_Checklist.md"].decode("utf-8-sig")
@@ -210,9 +233,69 @@ def verify_review_governance(entries):
     if issue is not None:
         record = "governance/" + safe_name(issue.get("record", ""))
         if (issue.get("id") != "F1C_THRESHOLD_LABEL" or issue.get("scientific_values_changed") is not False
-                or issue.get("status") != "CORRECTED_PREVIEW_NOT_YET_INTEGRATED" or record not in entries):
+                or issue.get("status") != ("INTEGRATED_CORRECTED_CANDIDATE_PENDING_APPROVAL"
+                    if decisions == {CANDIDATE} else "CORRECTED_PREVIEW_NOT_YET_INTEGRATED")
+                or record not in entries):
             raise ValueError("Known postapproval presentation issue is not fully disclosed")
+    elif decisions == {CANDIDATE}:
+        raise ValueError("Candidate must disclose the integrated presentation correction")
     return gate
+
+
+def verify_candidate_snapshot_scope(entries, gate):
+    """Check the exact editorial delta without extending prior author approval."""
+    prior = dict(entries)
+    for name in CANDIDATE_REPLACED:
+        key = "governance/prior_snapshot/" + name
+        if key not in entries:
+            raise ValueError("Missing prior snapshot payload: " + name)
+        prior[name] = entries[key]
+    prior_gate = json.loads(entries["governance/Prior_Review_Gate.json"])
+    verify_confirmed_snapshot_scope(prior, prior_gate)
+    for name, changes in CANDIDATE_EDITS.items():
+        expected = prior[name].decode("utf-8")
+        for before, after in changes:
+            if expected.count(before) != 1 or after in expected:
+                raise ValueError("Editorial change does not identify exactly one original phrase")
+            expected = expected.replace(before, after)
+        if entries[name] != expected.encode("utf-8"):
+            raise ValueError("Candidate contains an undeclared prose change: " + name)
+        if re.findall(r"\d+(?:\.\d+)?", expected) != re.findall(r"\d+(?:\.\d+)?", prior[name].decode("utf-8")):
+            raise ValueError("Candidate changed numerical tokens")
+    label = json.loads(entries["quality_control/figure1_label_correction.json"])
+    if (label.get("actual_label") != "minimum agreement criterion" or label.get("guide_y") != .990
+            or label.get("minimum_mapped_ari") != .900
+            or label.get("line_matches_frozen_agreement_threshold") is not True
+            or label.get("source_data_byte_identical") is not True
+            or label.get("panel_a_interpretation_boxes_disjoint") is not True
+            or label.get("minimum_interpretation_box_gap_pt", 0) < 2
+            or len(label.get("assertions", [])) != 9 or not all(row["pass"] is True for row in label["assertions"])):
+        raise ValueError("Figure 1 threshold correction lacks source-driven assertions")
+    figure_names = {"figures/Figure1_disease_blind_identity_scope." + ext: "figures/Figure_1." + ext
+                    for ext in ("pdf", "png")}
+    source = archive_entries(entries["additional_files/Figure_Source_Data.zip"])["Figure1_source_data.csv"]
+    figure_payloads = {name: entries[target] for name, target in figure_names.items()}
+    figure_payloads["source_data/Figure1_source_data.csv"] = source
+    if {row["path"] for row in label["files"]} != set(figure_payloads):
+        raise ValueError("Incomplete Figure 1 correction provenance")
+    for row in label["files"]:
+        payload = figure_payloads[row["path"]]
+        if len(payload) != row["bytes"] or sha256(payload) != row["sha256"]:
+            raise ValueError("Figure 1 correction provenance differs from candidate")
+    if sha256(source) != label["source_data_sha256"]:
+        raise ValueError("Figure 1 scientific source data changed")
+    semantic = json.loads(entries["quality_control/candidate_semantic_audit.json"])
+    if semantic.get("status") != "PASS_CORRECTED_CANDIDATE_SEMANTICS" or not semantic.get("checks") or not all(semantic["checks"].values()):
+        raise ValueError("Candidate semantic audit did not pass")
+    required = {"sources/Manuscript.md", "sources/Cover_Letter.md", "figures/Figure_1.pdf",
+                "figures/Figure_1.png", "main_text/Manuscript.docx", "main_text/Manuscript.pdf"}
+    if {row["path"] for row in semantic["files"]} != required:
+        raise ValueError("Incomplete semantic audit scope")
+    for row in semantic["files"]:
+        payload = entries[row["path"]]
+        if len(payload) != row["bytes"] or sha256(payload) != row["sha256"]:
+            raise ValueError("Semantic audit does not bind the current candidate")
+    return len(CONFIRMED_SCOPE_PATHS)
 
 
 def verify_document_provenance(entries, records):
@@ -254,6 +337,10 @@ def verify_bundle(root):
             raise ValueError("Package and author-approved snapshot disagree")
         if status.get("author_review_of_external_feedback") is not True:
             raise ValueError("Package omits recorded author consideration of feedback")
+    elif author_state == CANDIDATE:
+        verify_candidate_snapshot_scope(entries, governance)
+        if status.get("prior_author_approval") != CONFIRMED:
+            raise ValueError("Candidate omits prior content approval")
     elif b"Renewed final approval of the corrected manuscript and supporting materials is pending." not in entries["sources/Manuscript.md"]:
         raise ValueError("Pending manuscript must disclose pending renewed approval")
     archives = {}

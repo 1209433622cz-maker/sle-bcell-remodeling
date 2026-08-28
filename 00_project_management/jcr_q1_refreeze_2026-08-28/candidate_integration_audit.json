@@ -1,0 +1,531 @@
+{
+  "status": "PASS_BOUNDED_CORRECTED_CANDIDATE_INTEGRATION",
+  "verification": {
+    "status": "PASS_PORTABLE_TECHNICAL_VERIFICATION",
+    "payload_files": 82,
+    "nested_manifest_rows": {
+      "Figure_Source_Data.zip": 15,
+      "Full_Statistical_Results.zip": 184,
+      "Regulator_Sensitivity.zip": 10
+    },
+    "document_pages": 60,
+    "submission_authorized": false,
+    "external_methods_review_status": "FEEDBACK_RECEIVED_CLOSURE_PENDING",
+    "author_reapproval": "PENDING_CORRECTED_CANDIDATE",
+    "confirmed_scope_payloads": 0,
+    "postapproval_presentation_issue": {
+      "id": "F1C_THRESHOLD_LABEL",
+      "status": "INTEGRATED_CORRECTED_CANDIDATE_PENDING_APPROVAL",
+      "scientific_values_changed": false,
+      "record": "Figure_1_Legend_Correction.md"
+    },
+    "scope": "Sizes, hashes, complete manifests, DOCX structure and recorded review boundaries; not a numerical rerun or independent scientific review."
+  },
+  "candidate_zip": {
+    "path": "04_submission/corrected_candidate.zip",
+    "bytes": 26632739,
+    "sha256": "D87F83BEBE281E748E54DF0736E34B38E1CB0FF83C746C934B43E730373BA150"
+  },
+  "prior_approved_zip": {
+    "path": "04_submission/author_confirmed_review.zip",
+    "bytes": 26034837,
+    "sha256": "0363C066FB7F8FAD5E867FC820ED7F80C8F3D1A10E0A1CB43B8A7A51FCA92234"
+  },
+  "science_scope_comparison": [
+    {
+      "path": "sources/Manuscript.md",
+      "byte_identical": false
+    },
+    {
+      "path": "sources/Supplementary_Information.md",
+      "byte_identical": true
+    },
+    {
+      "path": "sources/Research_Proposal.md",
+      "byte_identical": true
+    },
+    {
+      "path": "sources/Cover_Letter.md",
+      "byte_identical": false
+    },
+    {
+      "path": "figures/Figure_1.pdf",
+      "byte_identical": false
+    },
+    {
+      "path": "figures/Figure_1.png",
+      "byte_identical": false
+    },
+    {
+      "path": "figures/Figure_2.pdf",
+      "byte_identical": true
+    },
+    {
+      "path": "figures/Figure_2.png",
+      "byte_identical": true
+    },
+    {
+      "path": "figures/Figure_3.pdf",
+      "byte_identical": true
+    },
+    {
+      "path": "figures/Figure_3.png",
+      "byte_identical": true
+    },
+    {
+      "path": "figures/Figure_4.pdf",
+      "byte_identical": true
+    },
+    {
+      "path": "figures/Figure_4.png",
+      "byte_identical": true
+    },
+    {
+      "path": "figures/Figure_5.pdf",
+      "byte_identical": true
+    },
+    {
+      "path": "figures/Figure_5.png",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S1.pdf",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S1.png",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S2.pdf",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S2.png",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S3.pdf",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S3.png",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S4.pdf",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S4.png",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S5.pdf",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S5.png",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S6.pdf",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S6.png",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S7.pdf",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S7.png",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S8.pdf",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S8.png",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S9.pdf",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S9.png",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S10.pdf",
+      "byte_identical": true
+    },
+    {
+      "path": "figures_supplementary/Supplementary_Figure_S10.png",
+      "byte_identical": true
+    },
+    {
+      "path": "additional_files/Figure_Source_Data.zip",
+      "byte_identical": true
+    },
+    {
+      "path": "additional_files/Full_Statistical_Results.zip",
+      "byte_identical": true
+    },
+    {
+      "path": "additional_files/Regulator_Sensitivity.zip",
+      "byte_identical": true
+    },
+    {
+      "path": "reproducibility/phase17_c9_common.py",
+      "byte_identical": true
+    },
+    {
+      "path": "reproducibility/phase17_c9_01_prefreeze_label_agnostic_mapping.py",
+      "byte_identical": true
+    },
+    {
+      "path": "reproducibility/phase17_c9_02_unlock_outcomes_and_review.py",
+      "byte_identical": true
+    },
+    {
+      "path": "reproducibility/run_6013RP_phase17_gateC9_label_agnostic_gse135779.ps1",
+      "byte_identical": true
+    }
+  ],
+  "unchanged_science_payloads": 37,
+  "all_three_statistical_archives_byte_identical": true,
+  "figure_source_tables_byte_identical": 15,
+  "page_image_comparison": [
+    {
+      "page": "Cover_Letter/page-1.png",
+      "sha256": "C4F663E6FAD144EDFF6253E7C11C2E4A63583C3260397EF8DBAEDED14D69000E",
+      "identical_to_previous": false
+    },
+    {
+      "page": "Manuscript/page-01.png",
+      "sha256": "A545A769A40F3EF07A1A6D393EA1D36D15C077FD33C6B0A9F6FCDB6EEB79C2AB",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-02.png",
+      "sha256": "5E2DEC8B6B98454E95869042538C33E4DA84C0F302E3DA0485262E82A9DCEA0B",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-03.png",
+      "sha256": "DCFB2168518567750941CCDB13F29E1D7B681488EEEE66E6A3C83A7CE677B881",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-04.png",
+      "sha256": "A78CCE1E14B95E5330B2E06B4AF2E04CF7EC5EE40188D56181967A0965935D44",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-05.png",
+      "sha256": "9672136F4C422129155164DEC7C7E7C5D97449C8BBA32B1104A0A45AB92C6404",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-06.png",
+      "sha256": "5CA23EFC0300B1520F167E7E2DD828354970FEA2B0A1A235CAA0F66451648654",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-07.png",
+      "sha256": "FF971EBE4C5B7C38582B2E0922FA02A0C7687FF63206BA6335D3B93990CBF285",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-08.png",
+      "sha256": "C8B29F38C17E414A4E4DD0C246A02FC77D85E92BE03F5D128D6E70DE7E49BBB7",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-09.png",
+      "sha256": "27C49FBE5680A0B721867E21C595E536DD6ED3194CFFBF1B5364F346336E5E1D",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-10.png",
+      "sha256": "A004BFDF8C170270D63DB8B57A17F374CE00A481D8CBE53780A6EF16DF9E005D",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-11.png",
+      "sha256": "E04D7D609266AC018A10042AB31F5E1A115A1F8049E8B1FE5B8031A36B25D4A6",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-12.png",
+      "sha256": "479E2B615FC6B913F2C04EB09C965944E2E6E1F882393E1D9316D99D7D90D807",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-13.png",
+      "sha256": "13A6DB70E428B4332171A689AEC4FF8D44815D8F9469DBE1367D0035CAE33784",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-14.png",
+      "sha256": "F9ABC6255221B4247B461FA0A4526F2C39CBF4BB9DE49319D1849E3EF8A02808",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-15.png",
+      "sha256": "0AA989AB8CBA2E04768312B0CCB75CE11E0A25ABDC759A235A3BC31BEEF36B28",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-16.png",
+      "sha256": "BA43119BD8D9AAC1DA7211C243FD8EA6BDE8B6678A2EE76696C8A7F5030E377F",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-17.png",
+      "sha256": "2712ECD7AEE9E1F38AB61923437E0D11A4AFF53ABB12CA352CE72E9F92252738",
+      "identical_to_previous": false
+    },
+    {
+      "page": "Manuscript/page-18.png",
+      "sha256": "38C1C2661861A22DFA9B0C1132BD57C9EBD98C903DC58A0035E364CD2F7CF366",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-19.png",
+      "sha256": "104A9BF330A13470F57A65A343527322B23FA9930821CBB6D8E84C839C10AB27",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-20.png",
+      "sha256": "3B107117BEC0CF276718BFECA6EA8E9DF7FEF54567F6FE2020016F5C93DE7780",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-21.png",
+      "sha256": "BA559FA2168C8E4B3DF9CCFBF70F8C062FED393E0CBA52CF88D16E94C1F34323",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-22.png",
+      "sha256": "2655C755764BB2FB3FE040CB298B0E43EE564CCEEB9CC6B75B81CE1A332DE753",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-23.png",
+      "sha256": "BF2635822A3ED978C766FDA09900A75A529E795FA0F80A27C413A859692B3A5F",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-24.png",
+      "sha256": "6252DCF89DD948A0E11D34DFCA76CCB4B78C3D0FFA3AB39D48013A00C86303A5",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-25.png",
+      "sha256": "4948D7E7DC476216236560B216D1EC8645E8D5E0B970F6610FEB237688FAB1BA",
+      "identical_to_previous": false
+    },
+    {
+      "page": "Manuscript/page-26.png",
+      "sha256": "1766AA778371C64CFBBD4BCD7A0DBCED5187F0B09B1E35742C9F4BC87CF4E4E1",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-27.png",
+      "sha256": "BC82CEF9F6D11409DA1D757AB572103685C7AD76B54D9DE86CB88A83616E8D71",
+      "identical_to_previous": false
+    },
+    {
+      "page": "Manuscript/page-28.png",
+      "sha256": "4173BA5BB3D5A516162D59544EFFA58FC09EDAEBEB2147330B85ECD296F83F25",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-29.png",
+      "sha256": "850D2516AC8DFFF6B11E278EE4A25BEB70D8D2A2BAA8FB52AC2F71109F0C5A91",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-30.png",
+      "sha256": "BD71301B8B240B697AB37F77F8B23659D87BFF4D20BB9D322CE1E9BC0B4245A1",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-31.png",
+      "sha256": "FA3C4A90A97662294693C5230EAF7884415E4375467BF42B0B4B92D92E954C73",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-32.png",
+      "sha256": "251DB5653D36EE8BA235835817F492104A6E367092D2B06CA3820290D10266F9",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-33.png",
+      "sha256": "7F226DFC90A0EB8E0D5214FA0A370B7AE1582A88231A6C83D2E95D08E677DA57",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Manuscript/page-34.png",
+      "sha256": "BD2ED1BB708FF555545BEF94F2C5F95CA8484DCF8CE724021D4019448941C5DE",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Research_Proposal/page-1.png",
+      "sha256": "AAF4724E7DE34D063D6143289F94E82A5F373CDB635496B18D0224498DF9F0FD",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Research_Proposal/page-2.png",
+      "sha256": "B1F420B0AB0B4505D51DD529E2D1F3CBB92CA82AB0390B7D726515FF680308B2",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Research_Proposal/page-3.png",
+      "sha256": "20AABF87946E2D9A236ADEE9F1795448F3688D758233743F983CFC7762021A4E",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Research_Proposal/page-4.png",
+      "sha256": "6416861865EB1A54907F8FE3B3ED1375064C982BA075DC5EECB02CE4DE4B868E",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Research_Proposal/page-5.png",
+      "sha256": "1B0F3746F7386EFFAC4D0440E93D7964898E3EAABF5A18CB26560C722B23D085",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Research_Proposal/page-6.png",
+      "sha256": "B46BA32E91BF3FC6AE38177088CDA9FF8C1F45F33F9885DEA671CAEF951EDA06",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-01.png",
+      "sha256": "F32A19DF487C4A38C706558FC9A4C0E16FF00236B183D960AB813D52F1E91197",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-02.png",
+      "sha256": "B10B288AC2276883465A91702DC6A9809ACE92D8A051D425E548FE75A7ADFA0E",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-03.png",
+      "sha256": "FD6BC5B41400A267D63ADA610EBE62E38201A3653CB8F140E7D0065D7413AB2A",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-04.png",
+      "sha256": "11069BCD8AFA1AFC40F03BE38EA6E74E04FC094FBA18B4A04757868F0A68E820",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-05.png",
+      "sha256": "266E73B8A95C72E86A32A12AA9569D0962400ABF878D7C167854C2E524CAD4F7",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-06.png",
+      "sha256": "424E410872CFCB51D28424147382578526B56C365A551A639EFA4AC0AB1AD8AF",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-07.png",
+      "sha256": "7AF08BE2DBDAE91EA29B84F091E98FA38F4F7350C4A1734DAA101D872576AC0A",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-08.png",
+      "sha256": "6DB3BBF5594164FC7637E6B7388419801826F2C33641FA601FF106D01385C5BA",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-09.png",
+      "sha256": "A54D5704D6BDA022AE70614C02E3081101C9BEA09D7A6E1612290048159D5A97",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-10.png",
+      "sha256": "44FB7D50F8D4D6C8F9C6228130D2624F4CAEE2B62326CB530F239B5BBBDE6FCA",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-11.png",
+      "sha256": "5F85767E51289A8857BF3EC08C525F35A445AEA14B4DF672F4EA7037A064D745",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-12.png",
+      "sha256": "EFA0E27FF736122B2AAF8CDFED8EEA9E43682E810F70F9826F832F4659A8B611",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-13.png",
+      "sha256": "04B61E47F64E5FFB5300F0308268A09ADC601C1955DC3D17493F278A03139B61",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-14.png",
+      "sha256": "8A3E9BB5B782993BAE5D471D87204022694FE3660B637CFD997A430431DA469A",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-15.png",
+      "sha256": "6D17AD150830D8273D4FC73A12D1805E2010E6FEE3996B19BB90DE90F20B089B",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-16.png",
+      "sha256": "57C16BD56A4A9AB256B1FCB7477C4718BD3F6DEFC190E29FD674D12EB354B596",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-17.png",
+      "sha256": "AFA41576B7CEDB211BABECBC8242B0A61F99ECA1E54C52F2A6D40D24C6415160",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-18.png",
+      "sha256": "BF638A2D799E8C72F056FD2BFD44D5B41C3D1923AFDA1CC84DD6781E78CFC3DF",
+      "identical_to_previous": true
+    },
+    {
+      "page": "Supplementary_Information/page-19.png",
+      "sha256": "9AD7712BE002E5453C675E70A2C81271096461DAD4A47B8DF43DD75D780FB7B5",
+      "identical_to_previous": true
+    }
+  ],
+  "unchanged_page_images": 56,
+  "changed_page_images": [
+    "Cover_Letter/page-1.png",
+    "Manuscript/page-17.png",
+    "Manuscript/page-25.png",
+    "Manuscript/page-27.png"
+  ],
+  "received_documents": [
+    {
+      "path": "received/SLE_Bcell_AuthorConfirmed_JCRQ1_final_audit_2026-08-28.md",
+      "bytes": 15767,
+      "sha256": "700C7FA0BFB30D55D0C6516EC3FCBFDD27CDA233D01E902FFA0A9022F199BC0C"
+    },
+    {
+      "path": "received/SLE_Bcell_JCRQ1_final_refreeze_action_matrix_2026-08-28.csv",
+      "bytes": 2931,
+      "sha256": "1B16843B7F94C4BD848634DFF195B147E5DC80F7BA484418164FF673AE30918D"
+    },
+    {
+      "path": "received/pasted-text.txt",
+      "bytes": 21482,
+      "sha256": "AAD9440F5E99ADFF8965B9E7F9B78BDE22ACCAA57307909E238CBF54885912E9"
+    }
+  ],
+  "scope": "Exact editorial delta and artifact integrity, not a new numerical analysis or independent review",
+  "submission_authorized": false
+}

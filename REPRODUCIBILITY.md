@@ -146,22 +146,25 @@ powershell -ExecutionPolicy Bypass `
 
 ## Correction review bundle
 
-The current generated bundle is `04_submission/author_confirmed_review.zip`.
+The current generated bundle is `04_submission/corrected_candidate.zip`.
 The user explicitly confirmed the reviewed materials for both authors and their
 consideration of the external feedback and disposition, then specifically
 approved the manuscript and cover letter. The evidence receipt binds the
-preserved `author_review.zip` and the two current Markdown hashes. Only the
-specified administrative approval statements change; scientific sources,
-figures and statistical attachments cannot inherit approval after other edits.
+preserved `author_review.zip` and the two then-current Markdown hashes.
+The current candidate separately integrates the Figure 1 threshold-label and
+legend correction, repairs interpretation-node spacing and qualifies the
+single-label omission claim. The verifier checks the exact prose delta and
+reconstructs the prior approval scope using retained original files. Candidate
+approval is pending; unchanged statistics and other figures retain their bytes.
 External reviewer identity remains unverified. Journal choice, final formatted
 files, new release and actual submission are separate decisions. Both older
 review ZIPs remain immutable; use their own bundled verifiers for their schemas.
 
-The user specified JCR Q1. A known Figure 1c presentation error is separately
-disclosed: the 0.990 guide is the minimum mapping-agreement criterion. The live
-figure generator is corrected and a new preview has byte-identical source data,
-but that preview and its legend are not yet integrated into the approved snapshot.
-Do not treat an integrity PASS as clearance of this outstanding presentation item.
+The user specified JCR Q1. Figure 1c now labels the 0.990 guide as the minimum
+mapping-agreement criterion in both the candidate figure and manuscript legend.
+All figure source tables remain byte-identical. The earlier approved snapshot is
+preserved unchanged. Integrity and semantic checks do not grant final approval,
+establish a journal's quartile, or authorize a DOI release or submission.
 
 The historical release builders are retired on the current branch: they rewrite
 canonical prose and delete the previous package. Do not use them for this review.
@@ -181,8 +184,8 @@ retained historical statistical archive and the local review documents.
 The extracted bundle can be checked from any directory, without site packages:
 
 ```powershell
-python -I -S .\04_submission\author_confirmed_review\verify_review_bundle.py `
-  --bundle .\04_submission\author_confirmed_review
+python -I -S .\04_submission\corrected_candidate\verify_review_bundle.py `
+  --bundle .\04_submission\corrected_candidate
 ```
 
 This checks file closure, sizes, hashes, nested statistical archives and claim

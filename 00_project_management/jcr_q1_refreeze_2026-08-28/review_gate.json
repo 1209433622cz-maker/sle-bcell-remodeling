@@ -1,0 +1,45 @@
+{
+  "gate": "EXTERNAL_METHODS_REVIEW_AND_AUTHOR_REAPPROVAL_GATE",
+  "baseline_repository_commit": "c68775982f47a637dbc2bfa1b89df3640984b31d",
+  "scientific_input_manifest_sha256": "C7BE217FA71CDA3EDA5601FB8947F933732CA032B3C46331233CE783AA114189",
+  "external_feedback_received": true,
+  "external_methods_review_status": "FEEDBACK_RECEIVED_CLOSURE_PENDING",
+  "reviewer_identity": null,
+  "reviewer_independence_confirmed": false,
+  "external_methods_review_decision": null,
+  "author_review_of_external_feedback": true,
+  "confirmation_evidence_sha256": "41741526E568108467A06FD07728323DC0C2643B2BDA5A0ACA6F91BE4F38906C",
+  "reviewed_package_sha256": "EA046B266681940AD551851354726907B8ABD14E948DCD28025100061283791F",
+  "authors": [
+    {
+      "name": "Zhi Chen",
+      "decision": "PENDING_CORRECTED_CANDIDATE",
+      "date": null,
+      "evidence": null
+    },
+    {
+      "name": "Teng Qi",
+      "decision": "PENDING_CORRECTED_CANDIDATE",
+      "date": null,
+      "evidence": null
+    }
+  ],
+  "target_journal": null,
+  "journal_requirement": {
+    "system": "JCR",
+    "quartile": "Q1",
+    "confirmation_date": "2026-08-28",
+    "source_statement": "JCR Q1",
+    "candidate_metric_year_verified": false
+  },
+  "postapproval_presentation_issue": {
+    "id": "F1C_THRESHOLD_LABEL",
+    "status": "INTEGRATED_CORRECTED_CANDIDATE_PENDING_APPROVAL",
+    "scientific_values_changed": false,
+    "record": "Figure_1_Legend_Correction.md"
+  },
+  "matching_archive_doi": null,
+  "submission_authorized": false,
+  "candidate_baseline_zip_sha256": "0363C066FB7F8FAD5E867FC820ED7F80C8F3D1A10E0A1CB43B8A7A51FCA92234",
+  "prior_review_gate_sha256": "FF33290F3EFECE23B8FF0D1D81D8ED8C2D9CFC1E1CF82F70E5644B3DF432C144"
+}

@@ -86,8 +86,10 @@ The frozen evidence chain is:
 - [External methods-review dossier](00_project_management/author_confirmation_2026-08-28/External_Methods_Review.md)
 - [Journal fit and formatting assessment](00_project_management/external_review_2026-08-28/Journal_Fit_and_Format_Assessment.md)
 - [JCR Q1 criterion and next-format draft](00_project_management/author_confirmation_2026-08-28/Journal_Format_Draft.md)
-- [Figure 1c correction record](00_project_management/author_confirmation_2026-08-28/Figure_1_Legend_Correction.md)
-- [Current figure and source-data manifest](phase17_v7/post_gateC9/20260828_advisor_correction_review/02_REVIEW_FIGURE_MANIFEST.csv)
+- [Integrated Figure 1 correction record](00_project_management/jcr_q1_refreeze_2026-08-28/Figure_1_Legend_Correction.md)
+- [Current candidate figure and source-data manifest](phase17_v7/post_gateC9/20260828_corrected_candidate/02_REVIEW_FIGURE_MANIFEST.csv)
+- [Corrected candidate and JCR Q1 action record](00_project_management/action_record_2026-08-28_jcr_q1_corrected_candidate.md)
+- [JCR evidence and journal decision](00_project_management/jcr_q1_refreeze_2026-08-28/Journal_Decision.md)
 
 Git history and the immutable public release preserve superseded submission
 drafts. The stable filenames above are the only current author-facing entry
@@ -98,7 +100,7 @@ remain ignored. Markdown, scripts and machine-readable analysis outputs remain
 the authoritative sources. That historical package predates the correction and
 must not be submitted unchanged. Historical PASS labels do not override this status.
 
-The separate local `04_submission/author_confirmed_review.zip` contains the current four
+The preserved local `04_submission/author_confirmed_review.zip` contains the prior four
 review documents, five main and ten supplementary figures, and reconciled
 statistical attachments. It passed WPS, accessibility, manifest and deterministic
 packaging checks and records both authors' confirmation as reported by the user.
@@ -108,9 +110,14 @@ later edits. Current and historical decisions are separated. External reviewer
 identity remains unverified, and the package is not authorized for submission.
 Both earlier review ZIPs are preserved.
 A Figure 1c threshold-label error was subsequently identified: 0.990 is the
-mapping-agreement criterion, not the ARI criterion. A corrected preview is
-available separately and must be integrated with its legend before finalization;
-the approved snapshot has not been silently replaced.
+mapping-agreement criterion, not the ARI criterion. The current local
+`04_submission/corrected_candidate.zip` integrates a source-driven Figure 1
+redraw and corrected legend, fixes interpretation-box spacing in panel a, and
+qualifies the single-source-label omission claim. Its four documents are rebuilt
+from the current sources. All scientific source data and statistical attachments
+remain unchanged. The prior approval is preserved; candidate approval is pending.
+The manuscript and cover-letter source links above now identify this candidate,
+not the older author-confirmed snapshot. No new release or submission is authorized.
 Generated review packages are not tracked in Git; the linked action record gives
 the exact package hash, verification scope and next-stage requirements.
 

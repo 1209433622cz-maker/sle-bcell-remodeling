@@ -24,7 +24,7 @@ The work is relevant to human immunogenomics and secondary analysis of technical
 
 All datasets are public and cited by accession. The accompanying review materials contain five vector main figures, ten supplementary figures, machine-readable source data, full statistical results including the corrected calibration diagnostics, and regulator-sensitivity results. The initial archive at doi:10.5281/zenodo.22086892 predates the subsequent robustness and correction work; a matching revised archive remains required before submission. Original code is MIT-licensed and original text, composite figures, documentation and derived source data are CC BY 4.0, without relicensing third-party datasets.
 
-The authors have confirmed originality, no concurrent journal review, no competing interests and no specific funding, and have approved disclosure of generative artificial intelligence assistance. Both authors have approved the corrected review materials. Journal choice, final formatted files and submission authorization remain to be confirmed.
+The authors have confirmed originality, no concurrent journal review, no competing interests and no specific funding, and have approved disclosure of generative artificial intelligence assistance. Both authors approved the preceding reviewed snapshot. This corrected candidate, journal choice, final formatted files and submission authorization remain to be confirmed.
 
 Sincerely,
 

@@ -476,9 +476,9 @@ def build_figure1(
 
         axis.text(0.00, 0.17, "Interpretation", **tier_style)
         for x, label in (
-            (0.31, "same-data\nregulator robustness"),
-            (0.58, "M5911 response-set\nconcordance"),
-            (0.84, "GSE23307\nperturbational context"),
+            (0.31, "same-data\nregulator\nrobustness"),
+            (0.58, "M5911\nresponse-set\nconcordance"),
+            (0.84, "GSE23307\nperturbational\ncontext"),
         ):
             axis.text(
                 x,

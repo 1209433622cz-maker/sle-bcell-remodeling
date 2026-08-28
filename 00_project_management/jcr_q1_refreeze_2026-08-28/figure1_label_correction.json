@@ -1,0 +1,88 @@
+{
+  "status": "PASS_FIGURE1_LABEL_CORRECTION_PREVIEW",
+  "actual_label": "minimum agreement criterion",
+  "guide_y": 0.99,
+  "minimum_mapped_ari": 0.9,
+  "line_matches_frozen_agreement_threshold": true,
+  "panel_a_interpretation_boxes_disjoint": true,
+  "minimum_interpretation_box_gap_pt": 18.774898312207753,
+  "source_data_byte_identical": true,
+  "source_data_sha256": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805",
+  "frozen_threshold_source_sha256": "B1706E2A2B1E854E11A1B061C49B6F8A6E8B62A02184F037286863D37A6206EA",
+  "generator_sha256": "1B33B96FEF9B641DC230542CB5040553B2DF7264FFCB78D768D6F6691313020E",
+  "assertions": [
+    {
+      "check": "Figure1.panel_b.policy_count",
+      "actual": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "check": "Figure1.panel_c.resampling_replicates",
+      "actual": 20,
+      "expected": 20,
+      "pass": true
+    },
+    {
+      "check": "Figure1.panel_d.frozen_state_count",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "check": "Figure1.hard_qc_cells",
+      "actual": 150402,
+      "expected": 150402,
+      "pass": true
+    },
+    {
+      "check": "Figure1.donors",
+      "actual": 259,
+      "expected": 259,
+      "pass": true
+    },
+    {
+      "check": "Figure1.samples",
+      "actual": 271,
+      "expected": 271,
+      "pass": true
+    },
+    {
+      "check": "Figure1.sample_cohort_strata",
+      "actual": 332,
+      "expected": 332,
+      "pass": true
+    },
+    {
+      "check": "Figure1.libraries",
+      "actual": 88,
+      "expected": 88,
+      "pass": true
+    },
+    {
+      "check": "Figure1_disease_blind_identity_scope.minimum_visible_font_pt",
+      "actual": "5.00 pt",
+      "expected": "true",
+      "pass": true
+    }
+  ],
+  "files": [
+    {
+      "path": "figures/Figure1_disease_blind_identity_scope.pdf",
+      "bytes": 62117,
+      "sha256": "AE2CF01F0ED579CEEBA8E38BD01A13F1F59714A3A30F0AEFEED8FB7D7213EDC1"
+    },
+    {
+      "path": "figures/Figure1_disease_blind_identity_scope.png",
+      "bytes": 577779,
+      "sha256": "46E392AA837EA28178CC90B2862357F8C2D3580237E00D7BA92DDFB29311CA7A"
+    },
+    {
+      "path": "source_data/Figure1_source_data.csv",
+      "bytes": 3481,
+      "sha256": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805"
+    }
+  ],
+  "integrated_into_approved_snapshot": false,
+  "submission_authorized": false
+}
