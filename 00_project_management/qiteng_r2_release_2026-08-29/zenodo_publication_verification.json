@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-08-29T12:44:26+08:00",
+  "verified_at": "2026-08-29T13:38:54+08:00",
   "status": "PASS_PUBLIC_ZENODO_RELEASE_VERIFIED",
   "record_id": "22151739",
   "doi": "10.5281/zenodo.22151739",
@@ -41,12 +41,18 @@
   },
   "public_checksum_file_content_verified": true,
   "version_chain_record_ids": [
-    22151739,
-    22086892
+    22151739
   ],
   "new_record_is_latest_version": true,
   "doi_resolution": "https://zenodo.org/records/22151739",
-  "old_record_deleted": false,
-  "github_release_created": false,
+  "concept_doi_resolution": "https://zenodo.org/records/22151739",
+  "old_record_deleted": true,
+  "old_record_api_status": 410,
+  "old_record_tombstone_visible": true,
+  "old_record_removal_reason": "retracted",
+  "old_record_deletion_policy": "grace-period-v1",
+  "old_record_citation_retained": true,
+  "old_record_removal_timestamp": "2026-08-29T05:20:04.133175+00:00",
+  "old_doi_resolution": "https://zenodo.org/records/22086892",
   "journal_submission": false
 }

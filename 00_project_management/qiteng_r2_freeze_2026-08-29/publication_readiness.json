@@ -1,6 +1,6 @@
 {
   "assessment_date": "2026-08-29",
-  "status": "PUBLIC_ZENODO_RELEASE_VERIFIED_AWAITING_OLD_RECORD_AND_GITHUB_RELEASE_CONFIRMATION",
+  "status": "PUBLIC_RELEASE_GOVERNANCE_COMPLETE_JOURNAL_SELECTION_PENDING",
   "completed": {
     "exact_scientific_baseline_confirmed": true,
     "author_and_ethics_declarations_confirmed": true,
@@ -43,15 +43,31 @@
     "new_zenodo_record_publicly_verified": true,
     "new_zenodo_doi_resolves": true,
     "public_file_sizes_md5_and_sha256_verified": true,
-    "public_version_chain_verified": [22151739, 22086892]
+    "public_live_version_record_ids_after_deletion": [22151739],
+    "old_zenodo_record_deleted": true,
+    "old_zenodo_tombstone_visible": true,
+    "old_zenodo_api_status": 410,
+    "github_release_created": true,
+    "github_release_tag": "v1.1.0",
+    "github_release_content_commit": "f1859ff8498d5569a1d5027b36ed18c8b7c7536f",
+    "github_release_assets_sha256_verified": 3
   },
   "public_record_observation": {
+    "record_id": "22151739",
+    "version_doi": "10.5281/zenodo.22151739",
+    "concept_doi": "10.5281/zenodo.22086891",
+    "publication_date": "2026-08-29",
+    "published_versions_observed": 1,
+    "source_files": ["zenodo_publication_verification.json", "github_release_verification.json"]
+  },
+  "old_record_tombstone_observation": {
     "record_id": "22086892",
     "version_doi": "10.5281/zenodo.22086892",
-    "concept_doi": "10.5281/zenodo.22086891",
-    "publication_date": "2026-08-25",
-    "published_versions_observed": 1,
-    "source_files": ["zenodo_existing_record.json", "zenodo_published_versions.json"]
+    "api_status": 410,
+    "visible": true,
+    "removal_reason": "retracted",
+    "deletion_policy": "grace-period-v1",
+    "citation_retained": true
   },
   "access": {
     "public_rest_api": "ACCESSIBLE_WITHOUT_AUTHENTICATION",
@@ -67,21 +83,18 @@
     "draft_creation_confirmation": "COMPLETED",
     "draft_creation_confirmation_scope": "Linked new-version draft and DOI reservation only; no publication or deletion",
     "publication_confirmation": "COMPLETED_FOR_EXACT_UPLOAD_METADATA_AND_PUBLICATION_SCOPE",
-    "deletion_confirmation": "NOT_YET_REQUESTED_AT_ACTION_TIME"
+    "deletion_confirmation": "COMPLETED_FOR_RECORD_22086892_ONLY",
+    "github_release_confirmation": "COMPLETED_FOR_V1.1.0_AND_THREE_FROZEN_ASSETS"
   },
-  "not_completed": {
-    "new_version_draft_created_or_recovered": true,
-    "new_doi_reserved": true,
-    "new_doi": "10.5281/zenodo.22151739",
-    "administrative_docx_pdf_rebuild": true,
-    "new_archive_built_or_uploaded": true,
-    "new_zenodo_record_published": true,
-    "old_zenodo_record_deleted": false,
-    "new_github_release_or_tag_created": false,
+  "remaining_not_completed": {
+    "target_journal_selected": false,
+    "current_jcr_q1_evidence_verified": false,
+    "journal_specific_format_adaptation": false,
+    "exact_final_files_author_signoff": false,
     "journal_submission": false
   },
   "old_record_deletion_scope": "Record 22086892 only, after verified replacement and required action-time confirmation; no local historical artifacts, Git history, other versions or unrelated records",
   "deletion_policy_source": "https://help.zenodo.org/docs/deposit/manage-records/",
-  "deletion_policy_note": "Owner deletion is described within 30 days of publication; the DOI retains a tombstone. The actual account's delete control and version-specific scope remain to be inspected.",
-  "next": "Obtain separate action-time confirmation before deleting only old Zenodo record 22086892 and before creating the public GitHub v1.1.0 tag/release; do not alter the verified new Zenodo record or begin journal submission"
+  "deletion_policy_note": "The owner deletion workflow removed only record 22086892; its DOI and citation remain visible through a tombstone, while record 22151739 and the concept DOI remain public.",
+  "next": "Select a current JCR Q1 target journal, then perform only journal-specific title, abstract and formatting adaptation plus exact-file author signoff; do not reopen biological analysis or begin journal submission without separate authorization"
 }

@@ -1,5 +1,5 @@
 {
-  "status": "PUBLIC_RELEASE_VERIFIED_AWAITING_OLD_RECORD_AND_GITHUB_RELEASE_DECISIONS",
+  "status": "REPLACEMENT_PUBLISHED_OLD_TOMBSTONE_GITHUB_RELEASE_VERIFIED",
   "existing_record_id": "22086892",
   "existing_version_doi": "10.5281/zenodo.22086892",
   "existing_concept_doi": "10.5281/zenodo.22086891",
@@ -45,5 +45,19 @@
     "Old three public assets and metadata are locally backed up and checked",
     "Platform confirmation targets only record 22086892, not all versions",
     "Required action-time browser confirmation for deletion"
-  ]
+  ],
+  "execution_result": {
+    "new_record_published_and_verified": true,
+    "live_version_record_ids_after_deletion": [22151739],
+    "old_record_deleted": true,
+    "old_doi_tombstone_visible": true,
+    "old_record_api_status": 410,
+    "old_record_removal_reason": "retracted",
+    "concept_doi_resolves_to_new_record": true,
+    "github_release_created_and_verified": true,
+    "github_release_tag": "v1.1.0",
+    "github_release_content_commit": "f1859ff8498d5569a1d5027b36ed18c8b7c7536f",
+    "github_release_url": "https://github.com/1209433622cz-maker/sle-bcell-remodeling/releases/tag/v1.1.0",
+    "journal_submission": false
+  }
 }

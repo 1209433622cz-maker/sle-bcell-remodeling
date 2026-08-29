@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-08-29T12:44:18+08:00",
+  "created_at": "2026-08-29T13:37:30+08:00",
   "status": "PASS_FREEZE_INTEGRITY_NOT_SCIENTIFIC_GATE_PASS",
-  "author_confirmation_sha256": "267494C0395D674FFB49AAB8328E4B05FDD458FCFA5BE0BB9C5E4CB1873EF076",
+  "author_confirmation_sha256": "5EB7904CABD59F601935A313F937C39CB5847CB7CD79A0D9DDE0F0AF632F2B38",
   "evidence_manifest_sha256": "917B91BFFD3A87CCD562EFB8F4372B30DF9E465B67A38E8C9C3B5F57353B0880",
   "frozen_evidence_files": 21,
   "scientific_sections": 9,
@@ -17,8 +17,15 @@
     "doi": "10.5281/zenodo.22151739",
     "published": true,
     "publicly_verified": true,
-    "old_record_deleted": false
+    "old_record_deleted": true,
+    "old_tombstone_verified": true
   },
-  "scope": "Integrity and user-confirmed scope only; no new scientific analysis, independent signatures, old-record deletion or journal submission",
+  "github_release": {
+    "tag": "v1.1.0",
+    "content_commit": "f1859ff8498d5569a1d5027b36ed18c8b7c7536f",
+    "created": true,
+    "publicly_verified": true
+  },
+  "scope": "Integrity and user-confirmed scope only; no new scientific analysis, independent signatures or journal submission",
   "submission_authorized": false
 }

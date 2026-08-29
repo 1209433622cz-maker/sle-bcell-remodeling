@@ -5,6 +5,7 @@ from datetime import datetime
 import hashlib
 import json
 from pathlib import Path
+import urllib.error
 import urllib.request
 
 
@@ -27,9 +28,15 @@ def checksum(path, algorithm):
     return digest.hexdigest()
 
 
-def read_url(url, limit=None):
+def read_url(url, limit=None, allowed_statuses=(200,)):
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request, timeout=60) as response:
+    try:
+        response = urllib.request.urlopen(request, timeout=60)
+    except urllib.error.HTTPError as error:
+        if error.code not in allowed_statuses:
+            raise
+        response = error
+    with response:
         data = response.read() if limit is None else response.read(limit)
         return {
             "status": response.status,
@@ -143,8 +150,30 @@ def main():
     versions_response = read_url(f"https://zenodo.org/api/records/{RECORD_ID}/versions")
     versions = json.loads(versions_response["data"].decode("utf-8"))["hits"]["hits"]
     version_ids = [item["id"] for item in versions]
-    require(int(RECORD_ID) in version_ids and OLD_RECORD_ID in version_ids, "Version chain is incomplete")
+    require(int(RECORD_ID) in version_ids, "Current record is absent from the live version list")
+    require(OLD_RECORD_ID not in version_ids, "Deleted record remains in the live version list")
     require(versions[0]["id"] == int(RECORD_ID), "New record is not the latest version")
+
+    old_api_response = read_url(
+        f"https://zenodo.org/api/records/{OLD_RECORD_ID}", allowed_statuses=(410,)
+    )
+    require(old_api_response["status"] == 410, "Old record API is not a tombstone")
+    old_payload = json.loads(old_api_response["data"].decode("utf-8"))
+    require(old_payload["message"] == "Record deleted", "Unexpected tombstone message")
+    old_tombstone = old_payload["tombstone"]
+    require(old_tombstone["is_visible"] is True, "Old tombstone is not publicly visible")
+    require(
+        old_tombstone["removal_reason"]["id"] == "retracted",
+        "Unexpected old-record removal reason",
+    )
+    require(
+        old_tombstone["deletion_policy"]["id"] == "grace-period-v1",
+        "Unexpected old-record deletion policy",
+    )
+    require(
+        f"10.5281/zenodo.{OLD_RECORD_ID}" in old_tombstone["citation_text"],
+        "Old tombstone does not retain its DOI citation",
+    )
 
     public_html = read_url(f"https://zenodo.org/records/{RECORD_ID}")["data"].decode("utf-8")
     require("Creative Commons Attribution 4.0 International" in public_html, "CC BY 4.0 is not public")
@@ -154,6 +183,23 @@ def main():
     require(
         doi_response["final_url"].rstrip("/") == f"https://zenodo.org/records/{RECORD_ID}",
         "DOI resolved to an unexpected URL",
+    )
+    concept_doi_response = read_url(f"https://doi.org/{CONCEPT_DOI}", limit=4096)
+    require(
+        concept_doi_response["final_url"].rstrip("/")
+        == f"https://zenodo.org/records/{RECORD_ID}",
+        "Concept DOI did not resolve to the current version",
+    )
+    old_doi_response = read_url(
+        f"https://doi.org/10.5281/zenodo.{OLD_RECORD_ID}",
+        limit=4096,
+        allowed_statuses=(410,),
+    )
+    require(old_doi_response["status"] == 410, "Old DOI did not resolve as deleted")
+    require(
+        old_doi_response["final_url"].rstrip("/")
+        == f"https://zenodo.org/records/{OLD_RECORD_ID}",
+        "Old DOI resolved to an unexpected tombstone URL",
     )
 
     receipt = {
@@ -175,8 +221,15 @@ def main():
         "version_chain_record_ids": version_ids,
         "new_record_is_latest_version": True,
         "doi_resolution": doi_response["final_url"],
-        "old_record_deleted": False,
-        "github_release_created": False,
+        "concept_doi_resolution": concept_doi_response["final_url"],
+        "old_record_deleted": True,
+        "old_record_api_status": old_api_response["status"],
+        "old_record_tombstone_visible": old_tombstone["is_visible"],
+        "old_record_removal_reason": old_tombstone["removal_reason"]["id"],
+        "old_record_deletion_policy": old_tombstone["deletion_policy"]["id"],
+        "old_record_citation_retained": True,
+        "old_record_removal_timestamp": old_tombstone["removal_date"],
+        "old_doi_resolution": old_doi_response["final_url"],
         "journal_submission": False,
     }
     output.parent.mkdir(parents=True, exist_ok=True)

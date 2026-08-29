@@ -15,8 +15,11 @@ reference calibration; the original C9 PASS is not supporting evidence.
 approval apply to that historical snapshot. The linked replacement is public as
 record `22151739`, DOI `10.5281/zenodo.22151739`; its release materials were rebuilt
 from the QiTeng R2 scientific freeze and independently checked against the public
-API. The old record remains in the version chain until separately authorized for
-deletion.
+API. The separately authorized old-record deletion was subsequently completed: DOI
+`10.5281/zenodo.22086892` now resolves to a visible tombstone, while the concept
+DOI resolves to record `22151739`. GitHub release `v1.1.0` mirrors the three
+verified Zenodo upload files and its annotated tag targets the frozen content
+commit `f1859ff8498d5569a1d5027b36ed18c8b7c7536f`.
 
 ## Generated package
 

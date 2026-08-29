@@ -1,0 +1,39 @@
+{
+  "verified_at": "2026-08-29T13:34:49+08:00",
+  "status": "PASS_PUBLIC_GITHUB_RELEASE_VERIFIED",
+  "repository": "https://github.com/1209433622cz-maker/sle-bcell-remodeling",
+  "release_id": 378885936,
+  "release_url": "https://github.com/1209433622cz-maker/sle-bcell-remodeling/releases/tag/v1.1.0",
+  "tag": "v1.1.0",
+  "annotated_tag_object": "6e492e3dcd5e6ee89b386e6c459622dffe0d9269",
+  "content_commit": "f1859ff8498d5569a1d5027b36ed18c8b7c7536f",
+  "title": "SLE B-cell remodeling reproducibility release",
+  "draft": false,
+  "prerelease": false,
+  "latest_release": true,
+  "scientific_boundaries_verified": [
+    "R1 HOLD",
+    "C9R HOLD",
+    "no corrected external outcomes"
+  ],
+  "assets": {
+    "Research_Archive.zip": {
+      "bytes": 25577813,
+      "sha256": "AAE67863FC6B34B0AC091F8D38524FFC55A7CF364FF7FF4B4D43FEDFA4AE0095",
+      "download_url": "https://github.com/1209433622cz-maker/sle-bcell-remodeling/releases/download/v1.1.0/Research_Archive.zip"
+    },
+    "Source_Code.zip": {
+      "bytes": 78040863,
+      "sha256": "51B1007908668F8EE25971E99270BF8477720A25ED7491BACD2F7572A4E24645",
+      "download_url": "https://github.com/1209433622cz-maker/sle-bcell-remodeling/releases/download/v1.1.0/Source_Code.zip"
+    },
+    "SHA256SUMS.txt": {
+      "bytes": 171,
+      "sha256": "BE96EEC9C0610208F867FE7258A3C7E672A63E8273C486CC09CAAE2BFCDB457B",
+      "download_url": "https://github.com/1209433622cz-maker/sle-bcell-remodeling/releases/download/v1.1.0/SHA256SUMS.txt"
+    }
+  },
+  "zenodo_doi": "10.5281/zenodo.22151739",
+  "old_zenodo_tombstone_doi": "10.5281/zenodo.22086892",
+  "journal_submission": false
+}

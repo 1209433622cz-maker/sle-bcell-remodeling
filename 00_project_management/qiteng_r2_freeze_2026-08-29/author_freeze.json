@@ -22,7 +22,10 @@
   "browser_action_time_confirmation_scope": "Create a linked new-version draft for record 22086892 and reserve a DOI while carrying forward the existing authors, ORCIDs, affiliations and licenses; no publication or deletion",
   "browser_publication_confirmation_completed": true,
   "browser_publication_confirmation_scope": "Upload the three verified files to Zenodo draft 22151739, save the reconciled metadata and publicly publish DOI 10.5281/zenodo.22151739; no old-record deletion, GitHub release or journal submission",
-  "browser_deletion_confirmation_completed": false,
+  "browser_deletion_confirmation_completed": true,
+  "browser_deletion_confirmation_scope": "Delete only Zenodo record 22086892 after verified replacement; retain the visible DOI tombstone, record 22151739, concept DOI, local backup and Git history",
+  "github_release_confirmation_completed": true,
+  "github_release_confirmation_scope": "Create public GitHub v1.1.0 release on the exact frozen content commit and upload only Research_Archive.zip, Source_Code.zip and SHA256SUMS.txt",
   "submission_authorized": false,
   "apc_commitment_authorized": false,
   "corrected_external_outcome_unlock_authorized": false,
@@ -58,5 +61,15 @@
   "new_zenodo_published": true,
   "new_zenodo_publication_verified": true,
   "new_zenodo_publication_verification_path": "00_project_management/qiteng_r2_release_2026-08-29/zenodo_publication_verification.json",
-  "old_zenodo_deleted": false
+  "old_zenodo_deleted": true,
+  "old_zenodo_tombstone_verified": true,
+  "old_zenodo_tombstone_api_status": 410,
+  "old_zenodo_tombstone_reason": "retracted",
+  "old_zenodo_tombstone_removed_at": "2026-08-29T05:20:04.133175+00:00",
+  "github_release_created": true,
+  "github_release_publicly_verified": true,
+  "github_release_tag": "v1.1.0",
+  "github_release_url": "https://github.com/1209433622cz-maker/sle-bcell-remodeling/releases/tag/v1.1.0",
+  "github_release_content_commit": "f1859ff8498d5569a1d5027b36ed18c8b7c7536f",
+  "github_release_verification_path": "00_project_management/qiteng_r2_release_2026-08-29/github_release_verification.json"
 }

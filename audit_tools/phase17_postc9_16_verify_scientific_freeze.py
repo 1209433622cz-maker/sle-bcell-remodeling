@@ -128,8 +128,15 @@ def main():
             "published": record.get("new_zenodo_published", False),
             "publicly_verified": record.get("new_zenodo_publication_verified", False),
             "old_record_deleted": record.get("old_zenodo_deleted", False),
+            "old_tombstone_verified": record.get("old_zenodo_tombstone_verified", False),
         },
-        "scope": "Integrity and user-confirmed scope only; no new scientific analysis, independent signatures, old-record deletion or journal submission",
+        "github_release": {
+            "tag": record.get("github_release_tag"),
+            "content_commit": record.get("github_release_content_commit"),
+            "created": record.get("github_release_created", False),
+            "publicly_verified": record.get("github_release_publicly_verified", False),
+        },
+        "scope": "Integrity and user-confirmed scope only; no new scientific analysis, independent signatures or journal submission",
         "submission_authorized": False,
     }
     output.parent.mkdir(parents=True, exist_ok=True)
