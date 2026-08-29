@@ -1,6 +1,6 @@
 {
   "assessment_date": "2026-08-29",
-  "status": "DOI_RESERVED_ADMINISTRATIVE_RELEASE_BUILD_IN_PROGRESS",
+  "status": "LOCAL_RELEASE_VERIFIED_AWAITING_UPLOAD_AND_PUBLICATION_CONFIRMATION",
   "completed": {
     "exact_scientific_baseline_confirmed": true,
     "author_and_ethics_declarations_confirmed": true,
@@ -27,7 +27,16 @@
     "final_pdf_structural_audit_passed": true,
     "docx_accessibility_high_findings": 0,
     "docx_accessibility_medium_findings": 0,
-    "docx_accessibility_low_raw_url_findings": 5
+    "docx_accessibility_low_raw_url_findings": 5,
+    "release_archives_built_and_verified": true,
+    "deterministic_rebuild_passed": true,
+    "research_archive_bytes": 25577813,
+    "research_archive_sha256": "AAE67863FC6B34B0AC091F8D38524FFC55A7CF364FF7FF4B4D43FEDFA4AE0095",
+    "source_code_archive_bytes": 78040863,
+    "source_code_archive_sha256": "51B1007908668F8EE25971E99270BF8477720A25ED7491BACD2F7572A4E24645",
+    "source_code_commit": "f1859ff8498d5569a1d5027b36ed18c8b7c7536f",
+    "checksum_file_bytes": 171,
+    "checksum_file_sha256": "BE96EEC9C0610208F867FE7258A3C7E672A63E8273C486CC09CAAE2BFCDB457B"
   },
   "public_record_observation": {
     "record_id": "22086892",
@@ -58,7 +67,7 @@
     "new_doi_reserved": true,
     "new_doi": "10.5281/zenodo.22151739",
     "administrative_docx_pdf_rebuild": true,
-    "new_archive_built_or_uploaded": false,
+    "new_archive_built_or_uploaded": true,
     "new_zenodo_record_published": false,
     "old_zenodo_record_deleted": false,
     "new_github_release_or_tag_created": false,
@@ -67,5 +76,5 @@
   "old_record_deletion_scope": "Record 22086892 only, after verified replacement and required action-time confirmation; no local historical artifacts, Git history, other versions or unrelated records",
   "deletion_policy_source": "https://help.zenodo.org/docs/deposit/manage-records/",
   "deletion_policy_note": "Owner deletion is described within 30 days of publication; the DOI retains a tombstone. The actual account's delete control and version-specific scope remain to be inspected.",
-  "next": "Build and verify the administrative-only update and archive for reserved DOI 10.5281/zenodo.22151739, obtain action-time upload/publication confirmation, publish and verify, then obtain deletion confirmation and process only the specified old record"
+  "next": "Obtain action-time confirmation to transmit the three verified files and author-identifying manuscript content to Zenodo draft 22151739, save reconciled metadata and publicly publish; verify DOI and hashes before separately requesting deletion confirmation for record 22086892"
 }

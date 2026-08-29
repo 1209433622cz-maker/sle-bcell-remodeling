@@ -1,0 +1,35 @@
+{
+  "created_at": "2026-08-29T09:20:00+08:00",
+  "status": "PASS_LOCAL_ARCHIVES_VERIFIED_NOT_UPLOADED_OR_PUBLISHED",
+  "zenodo_record_id": "22151739",
+  "reserved_doi": "10.5281/zenodo.22151739",
+  "source_commit": "f1859ff8498d5569a1d5027b36ed18c8b7c7536f",
+  "research_archive_files": 59,
+  "manifest_rows": 58,
+  "provenance_rows": 55,
+  "scientific_sections_unchanged": true,
+  "R1_decision": "HOLD_FULL_PIPELINE_TWO_COMPARTMENT_REPRODUCIBILITY",
+  "C9R_decision": "HOLD_C9A_PREFREEZE_REVIEW_REQUIRED",
+  "corrected_external_outcome_unlock_authorized": false,
+  "forbidden_stale_submission_files_present": false,
+  "outputs": [
+    {
+      "name": "Research_Archive.zip",
+      "bytes": 25577813,
+      "sha256": "AAE67863FC6B34B0AC091F8D38524FFC55A7CF364FF7FF4B4D43FEDFA4AE0095"
+    },
+    {
+      "name": "Source_Code.zip",
+      "bytes": 78040863,
+      "sha256": "51B1007908668F8EE25971E99270BF8477720A25ED7491BACD2F7572A4E24645"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 171,
+      "sha256": "BE96EEC9C0610208F867FE7258A3C7E672A63E8273C486CC09CAAE2BFCDB457B"
+    }
+  ],
+  "uploaded": false,
+  "published": false,
+  "old_record_deleted": false
+}
