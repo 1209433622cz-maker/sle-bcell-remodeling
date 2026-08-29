@@ -1,0 +1,41 @@
+{
+  "audited_at": "2026-08-30T00:35:02+08:00",
+  "status": "PASS_CURRENT_SUBMISSION_PACKAGE_INTEGRITY_NOT_SUBMISSION_AUTHORIZATION",
+  "package_zip_bytes": 19168244,
+  "package_zip_sha256": "B7D30320ADFFF5D15E335A269AFC62E516C5001B2FF7BE4F8188E3B72AAFBFD5",
+  "deterministic_rebuilds_observed": 2,
+  "deterministic_rebuild_sha256_match": true,
+  "zip_entries": 31,
+  "manifest_files_verified": 30,
+  "scientific_files_copied_byte_for_byte": 22,
+  "pdf_pages": {
+    "Manuscript.pdf": 18,
+    "Supplementary_Information.pdf": 19,
+    "Cover_Letter_Draft.pdf": 1
+  },
+  "main_figure_pdfs": 5,
+  "supplementary_figure_pdfs": 10,
+  "nested_zip_entries": {
+    "Figure_Source_Data.zip": 16,
+    "Full_Statistical_Results.zip": 185,
+    "Regulator_Sensitivity.zip": 11
+  },
+  "docx_files_opened": 3,
+  "cover_letter_renderer": "WPS Office",
+  "cover_letter_pages_visually_checked": 1,
+  "cover_letter_accessibility": {
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "scientific_freeze_reverified": true,
+  "R1_decision": "HOLD_FULL_PIPELINE_TWO_COMPARTMENT_REPRODUCIBILITY",
+  "C9R_decision": "HOLD_C9A_PREFREEZE_REVIEW_REQUIRED",
+  "selected_target": null,
+  "jcr_q1_verified": false,
+  "institutional_apc_coverage_verified": false,
+  "exact_package_author_approved": false,
+  "submission_authorized": false,
+  "apc_commitment_authorized": false,
+  "next_gate": "Archive official JCR/APC evidence, freeze the target, adapt once, rebuild and obtain exact-file author approval"
+}
