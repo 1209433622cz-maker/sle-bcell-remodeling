@@ -5,8 +5,28 @@
 The original C9 PASS is superseded. Corrected calibration processed all 56
 external matrices but B_ASC reference precision was 0.885210, below 0.90.
 No corrected disease outcome was estimated. The R1 identity HOLD also remains.
-The current materials are for review, not submission; the initial DOI does not
-identify the corrected package. See the current action records for provenance.
+The corrected, author-confirmed QiTeng R2 materials are preserved in the public
+Zenodo archive [doi:10.5281/zenodo.22151739](https://doi.org/10.5281/zenodo.22151739)
+and matching [GitHub v1.1.0 release](https://github.com/1209433622cz-maker/sle-bcell-remodeling/releases/tag/v1.1.0).
+The initial DOI `10.5281/zenodo.22086892` now resolves to a citation-preserving
+tombstone after administrative replacement. This public release is a
+reproducibility archive, not authorization to submit to a journal.
+
+## Current public release
+
+The GitHub release contains the same `Research_Archive.zip`, `Source_Code.zip`
+and `SHA256SUMS.txt` bytes verified on Zenodo. The annotated `v1.1.0` tag peels
+to content commit `f1859ff8498d5569a1d5027b36ed18c8b7c7536f`. Public checks are recorded in:
+
+- `00_project_management/qiteng_r2_release_2026-08-29/zenodo_publication_verification.json`
+- `00_project_management/qiteng_r2_release_2026-08-29/github_release_verification.json`
+
+The `governance/author_freeze.json` embedded inside the immutable Research
+Archive is a pre-publication authorization receipt and therefore records the
+state before publication and old-record deletion. It must not be rewritten in
+the published ZIP. Current administrative truth is represented by the two
+post-release verification files above and the updated receipt on `main` at
+`00_project_management/qiteng_r2_freeze_2026-08-29/author_freeze.json`.
 
 ## Repository boundary
 
@@ -144,9 +164,9 @@ powershell -ExecutionPolicy Bypass `
     from 14,300 OOF records, confirmed donor separation in five folds, and
     reproduced the failed calibration. This is not external model validation.
 
-## Correction review bundle
+## Historical correction review bundle
 
-The current generated bundle is `04_submission/corrected_candidate.zip`.
+The historical generated bundle is `04_submission/corrected_candidate.zip`.
 The user explicitly confirmed the reviewed materials for both authors and their
 consideration of the external feedback and disposition, then specifically
 approved the manuscript and cover letter. The evidence receipt binds the
@@ -154,11 +174,13 @@ preserved `author_review.zip` and the two then-current Markdown hashes.
 The current candidate separately integrates the Figure 1 threshold-label and
 legend correction, repairs interpretation-node spacing and qualifies the
 single-label omission claim. The verifier checks the exact prose delta and
-reconstructs the prior approval scope using retained original files. Candidate
-approval is pending; unchanged statistics and other figures retain their bytes.
-External reviewer identity remains unverified. Journal choice, final formatted
-files, new release and actual submission are separate decisions. Both older
-review ZIPs remain immutable; use their own bundled verifiers for their schemas.
+reconstructs the prior approval scope using retained original files. Its
+candidate-approval field records that review snapshot; unchanged statistics and
+other figures retain their bytes. The later QiTeng R2 scientific baseline and
+public release are governed by their own confirmation and verification receipts.
+External reviewer identity remains unverified. Journal choice, target-formatted
+exact files and actual submission remain separate decisions. Both older review
+ZIPs remain immutable; use their own bundled verifiers for their schemas.
 
 The user specified JCR Q1. Figure 1c now labels the 0.990 guide as the minimum
 mapping-agreement criterion in both the candidate figure and manuscript legend.
@@ -192,7 +214,7 @@ This checks file closure, sizes, hashes, nested statistical archives and claim
 boundaries, not biological validity or a fresh recomputation. Large matrices,
 reference-cell predictions and per-cell external predictions remain local.
 
-## Historical release versus current review
+## Historical review artifacts versus current release
 
 - Current main-figure assertions: 42 scientific/data checks plus five typography
   checks, 47/47 in total; these are not 47 separate scientific tests.
@@ -218,8 +240,9 @@ reference-cell predictions and per-cell external predictions remain local.
 
 ## Author and portal boundary
 
-The recorded author identities, declarations and licences are retained. The
-substantively revised manuscript and cover letter require renewed final approval.
-No target journal is fixed. A matching version-specific archive, exact release
-commit, final portal review and author authorization remain prerequisites to
-submission. Technical bundle verification does not satisfy these requirements.
+The recorded author identities, declarations and licences are retained. QiTeng R2
+is the confirmed scientific baseline and its journal-neutral reproducibility
+archive is public. No target journal is fixed. Target-specific title, abstract,
+layout, figure dimensions, cover letter and exact-file hashes still require a
+new final approval before submission. Technical bundle or release verification
+does not authorize portal upload, APC commitment or journal submission.

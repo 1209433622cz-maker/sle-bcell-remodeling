@@ -17,7 +17,9 @@ state-overlap criterion; the formal result is HOLD, and B_CONV/B_ASC is now
 framed as an analysis scaffold rather than a universally reproducible taxonomy.
 Propagating every observed broad-state boundary exchange retained the primary
 composition null and both tested GSE174188 B_CONV IFN/ISG effects. The local
-journal package is an earlier WPS-audited snapshot, not a submission-ready release.
+legacy journal package is an earlier WPS-audited snapshot and must not be
+submitted; the current journal-neutral manuscript is preserved in the verified
+public reproducibility release described below.
 A post-freeze code audit invalidated the subsequent C9 PASS: reference and external
 normalization differed, and failed confidence calibration incorrectly authorized
 outcome access. The corrected full run processed all 363,083 cells but stopped
@@ -25,10 +27,14 @@ at calibration HOLD (B_ASC precision 0.885 < 0.90). No corrected external diseas
 outcomes were opened. Source-label-defined primary GSE135779 replication is
 retained; source-label-independent robustness is not established. See the
 [correction contract](00_project_management/gateC9_technical_correction_contract_2026-08-28.md).
-The existing citable
-archive is available at [doi:10.5281/zenodo.22086892](https://doi.org/10.5281/zenodo.22086892);
-a matching new archive version is required before journal submission; the initial
-snapshot remains historical.
+The current citable archive is
+[doi:10.5281/zenodo.22151739](https://doi.org/10.5281/zenodo.22151739), mirrored by
+the verified [GitHub v1.1.0 release](https://github.com/1209433622cz-maker/sle-bcell-remodeling/releases/tag/v1.1.0).
+The initial [doi:10.5281/zenodo.22086892](https://doi.org/10.5281/zenodo.22086892)
+was administratively withdrawn after verified replacement and remains visible as
+a citation-preserving tombstone. The concept DOI
+[doi:10.5281/zenodo.22086891](https://doi.org/10.5281/zenodo.22086891) resolves to
+the current version.
 
 Author-confirmed scientific manuscript title:
 
@@ -41,10 +47,10 @@ including its declarations and ethics statement. The exact files use
 source-label ownership of external replication, and the R1/C9R limits.
 Both original HOLD decisions are permanently retained; no threshold relaxation,
 mapper substitution or selective rerun may convert them into a PASS.
-The user has requested a matching new Zenodo version and deletion of the old
-Zenodo record after verified replacement. Neither remote action has completed;
-the existing DOI still describes the historical snapshot. Journal submission
-remains unauthorized. Historical files and Git history are not deletion targets.
+The replacement Zenodo version, old-record tombstone and matching GitHub release
+have been completed and independently checked against local file hashes. Journal
+submission remains unauthorized. Historical files, the old GitHub release/tag
+and Git history were not deletion targets.
 
 The frozen evidence chain is:
 
@@ -79,6 +85,13 @@ The frozen evidence chain is:
 
 ## Current manuscript and submission files
 
+- [Current release manuscript source](04_submission/zenodo_release/manuscript/Manuscript.md)
+- [Current release manuscript DOCX](04_submission/zenodo_release/manuscript/Manuscript.docx)
+- [Current release manuscript PDF](04_submission/zenodo_release/manuscript/Manuscript.pdf)
+- [Zenodo publication verification](00_project_management/qiteng_r2_release_2026-08-29/zenodo_publication_verification.json)
+- [GitHub release verification](00_project_management/qiteng_r2_release_2026-08-29/github_release_verification.json)
+- [Conditional JCR Q1 journal decision](00_project_management/jcr_q1_journal_selection_2026-08-29/Journal_Selection_Decision.md)
+- [JCR profile and APC evidence runbook](00_project_management/jcr_q1_journal_selection_2026-08-29/JCR_Profile_Capture_Runbook.md)
 - [Author-confirmed scientific manuscript](00_project_management/qiteng_text_audit_2026-08-29/review_candidate/Manuscript.md)
 - [Earlier corrected-candidate manuscript source](01_manuscript/Manuscript.md)
 - [Supplementary information source](01_manuscript/Supplementary_Information.md)
@@ -111,9 +124,9 @@ The frozen evidence chain is:
 
 Git history and the immutable public release preserve superseded submission
 drafts. The `01_manuscript/` source links still identify the earlier corrected
-candidate; the separate QiTeng R2 link is the newly confirmed scientific prose
-baseline. Administrative DOI integration is pending and no new submission
-package has been created. The historical `04_submission/journal_submission/` directory is preserved;
+candidate; the separate QiTeng R2 and release-manuscript links identify the
+confirmed scientific prose and DOI-integrated archive files. No target-specific
+submission package has been created. The historical `04_submission/journal_submission/` directory is preserved;
 Git tracks its reader-facing README, manifests, portal maps and
 11-file REQUIRED upload set, while internal renders and duplicate working assets
 remain ignored. Markdown, scripts and machine-readable analysis outputs remain
@@ -137,9 +150,9 @@ qualifies the single-source-label omission claim. Its four documents are rebuilt
 from the current sources. All scientific source data and statistical attachments
 remain unchanged. Its recorded historical approval status is preserved.
 The earlier manuscript and cover-letter sources identify that candidate;
-the newly confirmed QiTeng R2 scientific baseline is linked separately above.
-A matching new Zenodo version is requested but not yet published. Journal
-submission remains unauthorized.
+the confirmed QiTeng R2 scientific baseline and current release files are linked
+separately above. Zenodo `22151739` and GitHub `v1.1.0` are public and verified.
+Journal submission remains unauthorized.
 Generated review packages are not tracked in Git; the linked action record gives
 the exact package hash, verification scope and next-stage requirements.
 
@@ -187,7 +200,7 @@ prevents outcome access; it is not an instruction to relax the threshold.
 ## Repository layout
 
 - `00_project_management/`: advisor audits, action records and formal decisions.
-- `01_manuscript/`: earlier corrected-candidate sources, supplement and proposal; DOI integration of the separately linked QiTeng R2 baseline is pending.
+- `01_manuscript/`: earlier corrected-candidate sources, supplement and proposal; the current DOI-integrated QiTeng R2 files are under `04_submission/zenodo_release/manuscript/`.
 - `02_analysis/`: environments, acquisition scripts, inventories and runbooks.
 - `03_results/`: the retained Phase 17 study-design figure bundle.
 - `audit_tools/`: executable analysis, build and audit scripts.
@@ -210,16 +223,16 @@ with portable hash checks. It is not authorized for submission. Historical
 one-click release writers are retired to protect the revised sources and old
 package. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for current entry points.
 
-QiTeng R2 scientific prose, declarations and ethics are now author-confirmed.
-The immediate request is to publish a matching new Zenodo version, verify its
-DOI and files, and only then process deletion of the old Zenodo record while
-preserving local history and a public tombstone. Authenticated record management
-has been verified; linked-draft creation and DOI reservation await action-time
-confirmation. No new Zenodo DOI has yet been reserved or published.
-The user requires JCR Q1. Journal selection still requires official JCR evidence
-and APC feasibility before final formatting and submission. Further independent
-methods review can address the remaining authentication gap; no journal-mandated
-signed pre-submission certificate is assumed. Do not
-tune C9 thresholds or substitute the centroid mapper to obtain a PASS. R1 HOLD
-and source-label dependence remain explicit. No new DOI or journal submission
-is implied by a GitHub code correction.
+QiTeng R2 scientific prose, declarations and ethics are author-confirmed, and the
+matching Zenodo/GitHub reproducibility release is complete. The next stage is
+JCR Q1 journal selection and one bounded target-specific adaptation. Fit-first
+preference is npj Systems Biology and Applications, with Communications Biology
+second, but no journal is formally selected until a current institutional or
+Clarivate JCR profile establishes the required category rank and quartile and
+APC feasibility is understood.
+
+Do not tune C9 thresholds, substitute the centroid mapper, rescue R1, add a new
+cohort or reopen exploratory analysis before first submission. After target
+freeze, adapt only the title, abstract, section order, declarations, figure
+dimensions and cover letter required by that journal; then rebuild, verify and
+obtain exact-file author approval before any portal action.

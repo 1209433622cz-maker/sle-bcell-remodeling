@@ -1,0 +1,20 @@
+{
+  "verified_at": "2026-08-30T00:03:16+08:00",
+  "status": "PASS_RELEASE_DOCUMENTATION_CURRENT_JOURNAL_GATE_UNRESOLVED",
+  "checks": {
+    "release_documentation_files_verified": 2,
+    "received_evidence_files_verified": 3,
+    "current_zenodo_doi": "10.5281/zenodo.22151739",
+    "old_zenodo_tombstone_doi": "10.5281/zenodo.22086892",
+    "github_release_tag": "v1.1.0",
+    "selected_target": null,
+    "jcr_q1_verified": false,
+    "institutional_apc_coverage_verified": false,
+    "target_specific_adaptation_started": false,
+    "submission_authorized": false,
+    "R1_decision": "HOLD_FULL_PIPELINE_TWO_COMPARTMENT_REPRODUCIBILITY",
+    "C9R_decision": "HOLD_C9A_PREFREEZE_REVIEW_REQUIRED",
+    "scientific_analysis_changed": false
+  },
+  "next_gate": "Obtain official JCR profile exports and institutional APC/OA evidence before selecting or adapting to a journal"
+}

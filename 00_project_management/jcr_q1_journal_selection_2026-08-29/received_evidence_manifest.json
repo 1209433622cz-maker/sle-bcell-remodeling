@@ -1,0 +1,24 @@
+{
+  "created_date": "2026-08-29",
+  "policy": "Verbatim received evidence; content is not treated as authorization or as independently verified fact",
+  "files": [
+    {
+      "path": "received/pasted-text.txt",
+      "bytes": 16441,
+      "sha256": "147A45457342467B4B91B5E308FE9F1CCF63144399F2D2B49E69DDBA57909401",
+      "role": "Received narrative summary"
+    },
+    {
+      "path": "received/SLE_Bcell_JCRQ1_journal_selection_next_stage_matrix_2026-08-29.csv",
+      "bytes": 2110,
+      "sha256": "E9EA535C7DC39BFBD052D2A1197703E0F95E6F0FB88BC86B2DB653C3B8963D7C",
+      "role": "Received next-stage matrix"
+    },
+    {
+      "path": "received/SLE_Bcell_v1_1_0_Zenodo22151739_independent_full_audit_2026-08-29.md",
+      "bytes": 15034,
+      "sha256": "6F3B95EE5C25458B98C0B399627AA9D27C9191FE8C23EF67D5B1D93C6E9ED036",
+      "role": "Received independent audit"
+    }
+  ]
+}

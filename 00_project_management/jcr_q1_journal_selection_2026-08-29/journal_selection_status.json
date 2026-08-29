@@ -1,0 +1,33 @@
+{
+  "record_date": "2026-08-29",
+  "phase": "JCR_Q1_JOURNAL_SELECTION_AND_FORMAT_ADAPTATION",
+  "status": "CONDITIONAL_FIT_LEAD_SET_OFFICIAL_JCR_AND_APC_EVIDENCE_PENDING",
+  "ranking_system": "JCR JIF quartile",
+  "required_quartile": "Q1",
+  "jcr_release": 2026,
+  "jcr_data_year": 2025,
+  "selected_target": null,
+  "conditional_fit_lead": "npj Systems Biology and Applications",
+  "conditional_fit_lead_article_type": "Article",
+  "second_candidate": "Communications Biology",
+  "stretch_candidate": "Genome Medicine",
+  "official_jcr_profile_export_obtained": false,
+  "all_categories_rank_denominator_quartile_verified": false,
+  "institutional_multicategory_rule_verified": false,
+  "institutional_apc_coverage_verified": false,
+  "target_specific_manuscript_adaptation_started": false,
+  "figure_rerender_started": false,
+  "exact_target_files_author_approved": false,
+  "submission_authorized": false,
+  "apc_commitment_authorized": false,
+  "scientific_baseline": "QiTeng R2",
+  "R1_decision": "HOLD_FULL_PIPELINE_TWO_COMPARTMENT_REPRODUCIBILITY",
+  "C9R_decision": "HOLD_C9A_PREFREEZE_REVIEW_REQUIRED",
+  "corrected_external_outcome_unlock_authorized": false,
+  "new_scientific_analysis_performed": false,
+  "release_documentation_drift_repaired": [
+    "README.md",
+    "REPRODUCIBILITY.md"
+  ],
+  "next_gate": "Obtain and hash the two official JCR profiles plus institutional APC/OA response; then apply the target-freeze decision rule"
+}

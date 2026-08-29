@@ -1,0 +1,13 @@
+﻿Priority,ID,Task,Execution rule,Domain
+P0,DOC-01,Update root README,Replace stale 22086892/current-pending language with 22151739 + v1.1.0 public status; keep journal submission unauthorized.,Repository governance
+P0,DOC-02,Update REPRODUCIBILITY.md,Add current public DOI/release section and distinguish historical pre-publication receipts from current post-release verification.,Repository governance
+P1,DOC-03,Clarify author_freeze scope,Do not mutate v1.1.0; on main/next version label author_freeze.json as a pre-publication authorization receipt.,Repository governance
+P0,JCR-01,Obtain institutional JCR evidence,"Record metric year, categories, rank/denominator and quartile for npj SBA, Communications Biology and any other candidate.",Journal selection
+P0,JCR-02,Choose target,"If institution confirms both as Q1, default recommendation: npj Systems Biology and Applications; Communications Biology second.",Journal selection
+P0,FMT-01,Target-specific manuscript adaptation,"Only after journal selection: title, abstract, sections, AI disclosure and cover letter; preserve scientific baseline.",Manuscript
+P0,FIG-01,Target-specific figure rerender,Rerun figures from code at journal exact width/font/line specs; no manual PDF edits and no source-data changes.,Figures
+P1,TXT-01,Remove old DOI from reader-facing final text,"For final journal manuscript, consider citing only 22151739; keep old tombstone relation in provenance/release notes.",Manuscript
+P1,REL-01,No immediate new Zenodo version,Keep v1.1.0 immutable; create another version only if journal adaptation materially changes the archived manuscript or exact-submission provenance is desired.,Release
+P0,AUTHOR-01,Exact-file approval,"After target formatting, both authors approve exact DOCX/PDF hashes and authorize submission.",Author
+P0,SUBMIT-01,Portal preflight,"Verify author order, declarations, data DOI, figures, supplement, AI statement and generated PDF before submit.",Submission
+STOP,SCIENCE,No exploratory analysis,No new cohort/mapper/threshold/gene-set/TF or HOLD rescue before first submission.,Governance

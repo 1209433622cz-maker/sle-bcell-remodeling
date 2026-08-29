@@ -1,0 +1,81 @@
+{
+  "checked_date": "2026-08-29",
+  "timezone": "Asia/Hong_Kong",
+  "source_policy": "Official publisher and Clarivate sources only for current claims",
+  "jcr": {
+    "release": 2026,
+    "data_year": 2025,
+    "release_date": "2026-06-17",
+    "release_url": "https://clarivate.com/news/clarivate-releases-journal-citation-reports-2026/",
+    "institutional_profile_export_obtained": false,
+    "rank_and_quartile_verified": false
+  },
+  "journals": [
+    {
+      "name": "npj Systems Biology and Applications",
+      "electronic_issn": "2056-7189",
+      "role": "CONDITIONAL_FIT_LEAD",
+      "scope_url": "https://www.nature.com/npjsba/aims",
+      "scope_match": [
+        "computational and mathematical systems biology",
+        "disease modeling",
+        "single-cell systems biology",
+        "systems immunology"
+      ],
+      "publisher_metrics_url": "https://www.nature.com/npjsba/journal-impact",
+      "publisher_reported_2025_jif": 4.4,
+      "median_first_editorial_decision_days": 8,
+      "median_submission_to_acceptance_days": 155,
+      "article_guidance_url": "https://www.nature.com/npjsba/content-types",
+      "title_max_words": 15,
+      "abstract_max_words": 150,
+      "discussion_subheadings_allowed": false,
+      "separate_limitations_or_conclusions_allowed": false,
+      "collection": {
+        "name": "Systems immunology: multi-omics approaches, dynamical modeling and novel agentic AI approaches",
+        "status": "open",
+        "deadline": "2026-09-12",
+        "url": "https://www.nature.com/collections/heaibjjajc/how-to-submit"
+      },
+      "jcr_q1_verified": false
+    },
+    {
+      "name": "Communications Biology",
+      "electronic_issn": "2399-3642",
+      "role": "SECOND_CONDITIONAL_CANDIDATE",
+      "scope_url": "https://www.nature.com/commsbio/aims",
+      "scope_match": [
+        "secondary data analysis",
+        "innovative computational methods"
+      ],
+      "editorial_risk": "Requires significant biological advance and new biological insight",
+      "publisher_metrics_url": "https://www.nature.com/commsbio/journal-impact",
+      "publisher_reported_2025_jif": 5.8,
+      "median_first_editorial_decision_days": 6,
+      "median_submission_to_acceptance_days": 217,
+      "submission_guidance_url": "https://www.nature.com/commsbio/submit/submission-guidelines",
+      "initial_format_flexible": true,
+      "llm_use_disclosure_location": "Methods",
+      "statistics_and_reproducibility_subsection_required": true,
+      "jcr_q1_verified": false
+    }
+  ],
+  "apc": {
+    "institutional_coverage_verified": false,
+    "author_payment_authorized": false,
+    "current_price_recheck_required_before_decision": true,
+    "official_npj_url": "https://www.nature.com/npjsba/apc",
+    "official_communications_biology_url": "https://www.nature.com/commsbio/open-access"
+  },
+  "current_manuscript": {
+    "path": "04_submission/zenodo_release/manuscript/Manuscript.md",
+    "title_whitespace_word_count": 16,
+    "abstract_whitespace_word_count": 334,
+    "prepared_npj_candidate_title_words": 13,
+    "prepared_npj_candidate_abstract_words": 117,
+    "candidate_applied": false
+  },
+  "scientific_changes_performed": false,
+  "selected_target": null,
+  "submission_authorized": false
+}

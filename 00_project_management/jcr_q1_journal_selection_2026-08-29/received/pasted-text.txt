@@ -1,0 +1,656 @@
+这轮我按**最新 GitHub `main`、公开 GitHub v1.1.0 release、Zenodo 22151739、你上传的 Manuscript DOCX/PDF、本轮 action record、以及 `zenodo_release.zip` 内部 Research Archive / Source Code / Figure Source Data / Full Statistical Results**重新做了独立终局复核。
+
+## 总判定
+
+项目的**科学主体已经完成**，而且现在的 v1.1.0 / Zenodo 22151739 已经是一个质量很高、能够被第三方核验的 reproducibility release。
+
+GitHub 当前最新 `main` 已到：
+
+`395bb55de19416079f4cac0fbd87a61907a818d7`
+
+本轮提交明确记录旧 Zenodo tombstone 和 GitHub v1.1.0 release，没有重新运行分析，也没有修改科学结论。
+
+`Scientific_Freeze.md` 也已经明确更新为：Zenodo `22151739` 与 GitHub `v1.1.0` 均已公开发布并验证，旧记录 `22086892` 已按授权转为 tombstone；R1/C9R HOLD 都继续冻结。
+
+所以我的核心判断是：
+
+> **现在不应该再新增生信分析。真正剩余的问题已经从 biology/statistics 转移为 repository documentation → JCR Q1 选刊 → journal-specific adaptation → final author approval → submission。**
+
+---
+
+# 1. Zenodo 22151739：独立判断为 PASS
+
+GitHub 的公开 verification record 已记录：
+
+* DOI：`10.5281/zenodo.22151739`
+* Version：1.1.0
+* Open access
+* publication date：2026-08-29
+* 2 creators
+* MIT + CC BY 4.0
+* R1 HOLD retained
+* C9R HOLD retained
+* no corrected external outcome
+* old record 22086892 → HTTP 410 tombstone。
+
+我同时独立解包了你上传的 `zenodo_release.zip`。
+
+公开的三个真正 release assets 是：
+
+| 文件                   |      Bytes | SHA-256                                                            |
+| -------------------- | ---------: | ------------------------------------------------------------------ |
+| Research_Archive.zip | 25,577,813 | `AAE67863FC6B34B0AC091F8D38524FFC55A7CF364FF7FF4B4D43FEDFA4AE0095` |
+| Source_Code.zip      | 78,040,863 | `51B1007908668F8EE25971E99270BF8477720A25ED7491BACD2F7572A4E24645` |
+| SHA256SUMS.txt       |        171 | `BE96EEC9C0610208F867FE7258A3C7E672A63E8273C486CC09CAAE2BFCDB457B` |
+
+这些值与 GitHub latest release API 返回的 asset digests 完全一致。
+
+GitHub release 自身也已验证：
+
+* `draft=false`
+* `prerelease=false`
+* latest release
+* tag `v1.1.0`
+* release content commit = `f1859ff...`
+* Zenodo DOI = 22151739。
+
+### 因此
+
+**Zenodo/GitHub release 内容一致性：100% PASS。**
+
+---
+
+# 2. 你这次上传的 Manuscript 与 Zenodo archive 是同一份
+
+我独立计算得到：
+
+`Manuscript(1).docx`
+
+SHA-256：
+
+`3D8155E204241BA7C33F4CDE820F5D1B858EDB9713A5740453A97DC0410BF8C6`
+
+`Manuscript(1).pdf`
+
+SHA-256：
+
+`117B694FD63C3FFEE421DFCD5A94F057F460689612E7D4AAE67E4F821CB1755C`
+
+而 `zenodo_release.zip` 内的：
+
+* `manuscript/Manuscript.docx`
+* `manuscript/Manuscript.pdf`
+* `wps_render/Manuscript_WPS.pdf`
+
+就是完全相同的 bytes。
+
+所以：
+
+> **这次你让我检查的 Manuscript 确实就是 Zenodo v1.1.0 中冻结的 manuscript。**
+
+不存在本地稿、GitHub 稿、Zenodo 稿三套版本漂移。
+
+---
+
+# 3. Research Archive 的内部 manifest 也完全通过
+
+我重新计算：
+
+* ZIP 内实际 files：59
+* manifest payload：58
+* 58/58 SHA-256 PASS
+* 58/58 size PASS
+* Missing = 0
+* Extra = 0
+
+这个 archive 已经同时包含：
+
+> manuscript + supplement + 5 main figures + S1–S10 + Figure Source Data + Full Statistical Results + regulator sensitivity + R1/C9R governance + licenses + provenance + QA records。
+
+这已经不是简单“把代码传 Zenodo”。
+
+它是一个真正的：
+
+> **publication-grade reproducibility compendium**
+
+我给这一块 **A / 100%**。
+
+---
+
+# 4. Source_Code.zip 也没有发现明显凭据泄漏
+
+我对公开 Source_Code archive 做了一轮快速 secret-pattern audit。
+
+没有发现：
+
+* `.env`
+* GitHub PAT
+* OpenAI key
+* AWS access key
+* private key
+* obvious password/API-key assignments。
+
+### 但有一个不是安全漏洞、而是“公开范围偏大”的问题
+
+Source_Code.zip 是 exact Git archive，所以它也包含大量：
+
+* action records
+* `received/`
+* pasted review
+* pasted-text
+* project management history。
+
+也就是说它更接近：
+
+> **full provenance snapshot**
+
+而不是：
+
+> minimal clean source-code package。
+
+这现在不是 P0，因为 GitHub repository 本身已经 public，而且我没有发现 credentials。
+
+以后可以额外提供一个 `Minimal_Source_Code.zip` 方便普通 reviewer，但**不要为了“清理漂亮”去破坏 Git history**。
+
+---
+
+# 5. 我这轮发现的最大新 P0：GitHub 根 README 已经落后于真实状态
+
+这是目前最值得马上修的地方。
+
+最新 `Scientific_Freeze.md` 已经正确说：
+
+> Zenodo 22151739 published
+> GitHub v1.1.0 published
+> old 22086892 tombstoned。
+
+但**当前 root `README.md` 仍然写着旧状态**：
+
+* existing citable archive = `22086892`
+* matching new archive is required
+* new Zenodo version not yet published
+* old record not deleted
+* DOI integration pending。
+
+这已经和真正 public state 相反。
+
+同样，当前 `REPRODUCIBILITY.md` 仍然以：
+
+> initial DOI doesn't identify corrected package
+> matching release pending
+> candidate approval/release pending
+
+作为 current narrative。
+
+## 这是当前真正的 release-level blocker
+
+不是科学错误。
+
+但一个 reviewer 点击 GitHub 首页，首先看到的就是 README。
+
+如果他说：
+
+> “你 manuscript 说 DOI 是 22151739，但 README 说还是旧 DOI、new archive pending？”
+
+会产生完全没必要的版本疑问。
+
+### 下一轮第一件事应该是
+
+**只更新 `main`：**
+
+* README
+* REPRODUCIBILITY
+
+写成当前真实状态。
+
+不要：
+
+* 修改 v1.1.0 tag
+* 修改 public release assets
+* 重发 Zenodo
+* 改科学结果。
+
+这是纯 documentation repair。
+
+---
+
+# 6. 还有一个更隐蔽的 archive 内部状态问题
+
+`Research_Archive.zip` 内的：
+
+> `governance/author_freeze.json`
+
+仍然写：
+
+* `new_zenodo_published=false`
+* `old_zenodo_deleted=false`
+* publication confirmation false
+
+而 Release Metadata 和外部 verification 已经明确告诉我们实际已发布。
+
+这看起来矛盾，但它的本质是：
+
+> **author_freeze.json 保存的是“发布前授权时点”的状态快照。**
+
+并不是 current release status。
+
+所以不要修改已公开 v1.1.0。
+
+### 正确处理
+
+在 GitHub main / 下一版本里明确标记：
+
+> `author_freeze.json = pre-publication authorization receipt`
+
+真正 current administrative status 看：
+
+> `zenodo_publication_verification.json`
+
+和：
+
+> `github_release_verification.json`
+
+即可。
+
+---
+
+# 7. 旧 DOI tombstone 有一个“观感风险”
+
+旧：
+
+`10.5281/zenodo.22086892`
+
+现在 tombstone 的 machine-readable removal reason 是：
+
+> `retracted`
+
+但实际上本项目的真实情况不是：
+
+> 论文科学结论被撤回
+
+而是：
+
+> **verified replacement 后行政性撤换旧 reproducibility snapshot。**
+
+GitHub release body已经写得比较清楚：
+
+> initial Zenodo version was withdrawn after verified replacement。
+
+### 我建议最终期刊稿
+
+Data Availability **只引用新 DOI：**
+
+`10.5281/zenodo.22151739`
+
+不需要继续强调旧 DOI。
+
+当前 manuscript 中旧 DOI 只出现 1 次，是：
+
+> “supersedes the initial archive…”
+
+这句话可以在最终 journal-specific adaptation 时删除。
+
+历史关系本来就已经由：
+
+* Zenodo version chain
+* tombstone
+* GitHub release
+* provenance records
+
+永久保存。
+
+没有必要让编辑一打开稿件就看到一个显示 `retracted` 的旧 DOI。
+
+---
+
+# 8. Manuscript 科学写作现在仍然是高成熟度
+
+当前 title：
+
+> **Disease-blind single-cell reconstruction distinguishes unstable B-cell state assignments from reproducible interferon remodeling in systemic lupus erythematosus**
+
+我仍然建议保留其核心语义。
+
+特别是：
+
+> `state assignments`
+
+而不是：
+
+> `B-cell states`
+
+非常重要。
+
+它避免声称 biological DN2/naive/memory states 本身不存在。
+
+---
+
+# 9. Abstract 有一个选刊前需要记住的数字
+
+我用当前 Markdown 做简单 tokenization：
+
+> Abstract ≈ **356 words**
+
+具体 Word / journal tokenizer 会有几词误差。
+
+这意味着：
+
+* 现在 journal-neutral baseline 没问题；
+* 如果目标要求 ≤350，必须再压一点；
+* 如果投 Communications Biology / 其他 Nature Portfolio 短摘要期刊，则需要明显重写。
+
+**但现在不要继续无目标压缩。**
+
+等选刊后一轮解决。
+
+---
+
+# 10. Manuscript DOCX / PDF 质量很好
+
+### PDF
+
+* 18 pages
+* US Letter
+* WPS-rendered
+* embedded Times New Roman / Arial / Arial Bold
+* no encryption
+* no forms
+* no JS
+
+我重新逐页视觉检查：
+
+> **18/18 PASS**
+
+没有：
+
+* clipping
+* overlap
+* missing glyph
+* broken reference
+* abnormal page break。
+
+### DOCX
+
+结构审计：
+
+* tracked insertions = 0
+* tracked deletions = 0
+* visible comment references = 0
+* accessibility:
+
+  * High 0
+  * Medium 0
+  * Low 5
+
+5 个 low 都只是 raw-URL hyperlink display。
+
+存在一个空的 `comments.xml`，但没有 comment anchor/reference，不影响 manuscript。
+
+### 结论
+
+**Manuscript 文件层已经接近最终出版工程级。**
+
+---
+
+# 11. 五主图 + S1–S10 再次全部通过
+
+我独立解析了 15 个 figure PDFs。
+
+全部：
+
+* width = **170.0 mm**
+* Arial / Arial Bold
+* vector PDF
+* minimum visible text = **5–6 pt**
+* non-panel max ≤ **7 pt**
+* panel labels = **8 pt**
+
+Main figure 最大高度：
+
+> Figure 5 ≈ 163 mm
+
+Supplementary 最大：
+
+> ≈160 mm
+
+没有发现新的：
+
+* clipping
+* overlap
+* Figure 1 threshold mislabel
+* Figure 5 causal-chain implication
+* unreadable small fonts。
+
+Nature 当前通用图件要求仍强调标准 sans-serif、multi-panel label 8 pt bold lowercase、正文 5–7 pt 和 editable vector artwork。你现在这套 typography 已经非常接近该标准。([Nature][1])
+
+### 所以
+
+**现在绝对不要重画图。**
+
+只等期刊选定后：
+
+> 从代码改 exact final width。
+
+不是为了 Nature 风格继续改图。
+
+---
+
+# 12. 科学结果现在已经完全应该停止扩展
+
+当前最可信的文章结构依旧是：
+
+> Fine hard states：不稳定
+> Broad scaffold：有限使用
+> R1：HOLD
+> B_ASC composition：null
+> B_CONV IFN：positive
+> internal donor-nonoverlap：positive
+> independent GSE135779：positive
+> genome-wide rho：0.026
+> regulator：observational convergence
+> M5911 depletion：限制 STAT2 claim
+> C9R：HOLD
+> corrected disease outcome：未打开。
+
+这个结构已经比“全部 sensitivity 都显著”更可信。
+
+### 首投前禁止再做
+
+* 新 cohort
+* 新 mapper
+* threshold rescue
+* TF sweep
+* gene-set sweep
+* R1/C9R rescue
+* 为显著性换模型。
+
+---
+
+# 13. 选刊：当前仍然最推荐 npj Systems Biology and Applications
+
+前提仍然是：
+
+> **学校/Clarivate 正式确认其当前 JCR Q1。**
+
+从 scope 看，它是最自然的。
+
+npj SBA 官方明确覆盖：
+
+* computational/mathematical systems biology
+* disease modeling
+* single-cell systems biology
+* systems immunology。([Nature][2])
+
+2025 publisher-reported JIF：
+
+> **4.4**
+
+median first editorial decision：
+
+> **8 days**
+
+median submission-to-acceptance：
+
+> **155 days**。([Nature][3])
+
+而且现在还有一个高度匹配的：
+
+> **Systems immunology: multi-omics approaches, dynamical modeling and novel agentic AI approaches**
+
+Collection，截止：
+
+> **2026-09-12**。([Nature][4])
+
+它明确欢迎 computational approaches 研究：
+
+> immunological states and disorders，以及 phenotype/cell-state 关系。([Nature][5])
+
+这和本文的：
+
+> SLE + B-cell state-assignment uncertainty + IFN process reproducibility
+
+高度吻合。
+
+---
+
+# 14. Communications Biology 继续是第二选择
+
+官方 scope 明确接受：
+
+> secondary data analysis
+
+以及：
+
+> innovative computational methods。([Nature][6])
+
+2025 JIF：
+
+> **5.8**
+
+median first decision：
+
+> **6 days**
+
+median acceptance：
+
+> **217 days**。([Nature][7])
+
+但它更强调：
+
+> significant biological advance / novel biological insight。([Nature][6])
+
+你的困难在于：
+
+> SLE IFN biology 本身并不新。
+
+因此它的 desk risk 会高于 npj SBA。
+
+---
+
+# 15. 我现在的选刊排序
+
+如果机构正式核实 JCR Q1：
+
+### 第一
+
+**npj Systems Biology and Applications**
+
+最强 scope fit。
+
+### 第二
+
+**Communications Biology**
+
+更广、更强品牌，但 biological-novelty gate 更高。
+
+### 第三
+
+**Genome Medicine**
+
+仍属于 stretch；不建议再因为历史准备惯性默认首投。
+
+---
+
+# 当前完成度
+
+| 模块                            |        当前判断 |
+| ----------------------------- | ----------: |
+| Scientific design             |     **98%** |
+| Statistics                    |     **98%** |
+| R1 transparency               |     **99%** |
+| C9R governance                |     **99%** |
+| Manuscript logic              |     **98%** |
+| Main figures                  |     **99%** |
+| Supplement figures            |     **99%** |
+| Source-data traceability      |     **99%** |
+| Research Archive integrity    |    **100%** |
+| Zenodo/GitHub asset integrity |    **100%** |
+| Public release governance     |     **98%** |
+| GitHub current documentation  |     **82%** |
+| Journal selection             | **PENDING** |
+| Submission                    | **PENDING** |
+
+---
+
+# 下一阶段我建议正式定义为
+
+> **`JCR_Q1_JOURNAL_SELECTION_AND_FORMAT_ADAPTATION`**
+
+但在选刊前先做一个很窄的 P0：
+
+### Step 0
+
+修：
+
+* `README.md`
+* `REPRODUCIBILITY.md`
+
+让 GitHub 默认页面与 Zenodo 22151739 / v1.1.0 当前事实一致。
+
+### Step 1
+
+从学校/Clarivate 获取：
+
+* JCR metric year
+* category
+* rank/denominator
+* quartile
+* APC/OA agreement
+
+### Step 2
+
+如果 npj SBA 正式满足你要求的 JCR Q1：
+
+> **我建议直接冻结它为首投目标。**
+
+### Step 3
+
+然后只做一次：
+
+> title + abstract + section order + AI disclosure placement + target figure dimensions
+
+不再重写科学正文。
+
+### Step 4
+
+最后：
+
+> exact-file author approval → portal preflight → submit。
+
+---
+
+这轮完整审计报告和执行矩阵已经生成：
+
+[下载 v1.1.0 / Zenodo 22151739 独立全量审计报告](sandbox:/mnt/data/SLE_Bcell_v1_1_0_Zenodo22151739_independent_full_audit_2026-08-29.md)
+
+[下载 JCR Q1 选刊与下一阶段执行矩阵](sandbox:/mnt/data/SLE_Bcell_JCRQ1_journal_selection_next_stage_matrix_2026-08-29.csv)
+
+**这轮最大的真正新发现不是科学问题，而是 GitHub 首页文档仍停留在“新 Zenodo 未发布”的历史状态。把这个 documentation drift 修完以后，我认为项目就应该正式停止科研扩展，进入 JCR Q1 选刊与一次性期刊格式适配。**
+
+[1]: https://www.nature.com/npjsba/for-authors-and-referees?utm_source=chatgpt.com "For Authors and Referees | npj Systems Biology and Applications"
+[2]: https://www.nature.com/npjsba/aims?utm_source=chatgpt.com "Aims & Scope | npj Systems Biology and Applications"
+[3]: https://www.nature.com/npjsba/journal-impact?utm_source=chatgpt.com "Journal Metrics | npj Systems Biology and Applications"
+[4]: https://www.nature.com/npjsba/calls-for-papers?utm_source=chatgpt.com "Calls for papers | npj Systems Biology and Applications"
+[5]: https://www.nature.com/collections/heaibjjajc/how-to-submit?utm_source=chatgpt.com "How to submit | Systems immunology: multi-omics approaches, dynamical modeling and novel agentic AI approaches"
+[6]: https://www.nature.com/commsbio/aims?utm_source=chatgpt.com "Aims & Scope | Communications Biology"
+[7]: https://www.nature.com/commsbio/journal-impact?utm_source=chatgpt.com "Journal Metrics | Communications Biology"

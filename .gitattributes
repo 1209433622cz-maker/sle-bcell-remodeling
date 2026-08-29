@@ -31,6 +31,8 @@ phase17_v7/post_gateC9/** -text whitespace=blank-at-eol,blank-at-eof,space-befor
 00_project_management/jcr_q1_refreeze_2026-08-28/received/** -whitespace
 00_project_management/jcr_q1_target_preparation_2026-08-29/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 00_project_management/jcr_q1_target_preparation_2026-08-29/received/** -whitespace
+00_project_management/jcr_q1_journal_selection_2026-08-29/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+00_project_management/jcr_q1_journal_selection_2026-08-29/received/** -whitespace
 00_project_management/qiteng_text_audit_2026-08-29/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 00_project_management/qiteng_text_audit_2026-08-29/received/** -whitespace
 00_project_management/qiteng_r2_freeze_2026-08-29/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

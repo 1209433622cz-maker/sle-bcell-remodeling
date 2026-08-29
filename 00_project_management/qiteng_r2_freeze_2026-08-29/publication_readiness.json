@@ -1,13 +1,14 @@
 {
   "assessment_date": "2026-08-29",
-  "status": "PUBLIC_RELEASE_GOVERNANCE_COMPLETE_JOURNAL_SELECTION_PENDING",
+  "status": "PUBLIC_RELEASE_COMPLETE_CONDITIONAL_JOURNAL_LEAD_JCR_EVIDENCE_PENDING",
   "completed": {
     "exact_scientific_baseline_confirmed": true,
     "author_and_ethics_declarations_confirmed": true,
     "permanent_R1_and_C9R_HOLD_recorded": true,
     "frozen_evidence_files_verified": 21,
     "scientific_sections_verified": 9,
-    "unit_tests_passed": 59,
+    "unit_tests_passed": 77,
+    "release_documentation_regression_tests_passed": 5,
     "historical_candidate_payloads_verified": 82,
     "historical_source_provenance_rows_unchanged": 75,
     "old_zenodo_public_files_backed_up": 3,
@@ -93,8 +94,20 @@
     "exact_final_files_author_signoff": false,
     "journal_submission": false
   },
+  "journal_selection": {
+    "status": "CONDITIONAL_FIT_LEAD_SET_OFFICIAL_JCR_AND_APC_EVIDENCE_PENDING",
+    "jcr_release": 2026,
+    "jcr_data_year": 2025,
+    "selected_target": null,
+    "conditional_fit_lead": "npj Systems Biology and Applications",
+    "second_candidate": "Communications Biology",
+    "official_jcr_profile_export_obtained": false,
+    "jcr_q1_eligibility_verified": false,
+    "institutional_apc_coverage_verified": false,
+    "target_specific_adaptation_started": false
+  },
   "old_record_deletion_scope": "Record 22086892 only, after verified replacement and required action-time confirmation; no local historical artifacts, Git history, other versions or unrelated records",
   "deletion_policy_source": "https://help.zenodo.org/docs/deposit/manage-records/",
   "deletion_policy_note": "The owner deletion workflow removed only record 22086892; its DOI and citation remain visible through a tombstone, while record 22151739 and the concept DOI remain public.",
-  "next": "Select a current JCR Q1 target journal, then perform only journal-specific title, abstract and formatting adaptation plus exact-file author signoff; do not reopen biological analysis or begin journal submission without separate authorization"
+  "next": "Obtain and hash the two official 2026 JCR profiles plus the institutional APC/OA response; apply the recorded target-freeze rule, then perform only bounded journal-specific adaptation and exact-file author signoff without reopening biological analysis or beginning submission without separate authorization"
 }
