@@ -9,6 +9,7 @@ import gzip
 import hashlib
 import io
 import json
+import os
 import zipfile
 from pathlib import Path
 from typing import Any
@@ -411,7 +412,11 @@ def build_figure1(
             "linespacing": 1.15,
         }
         axis.text(0.00, 0.86, "Discovery", **tier_style)
+        npj_layout = os.environ.get("NPJ_SBA_STYLE") == "1"
         discovery_nodes = [
+            (0.33, "B-lineage cells\n+ hard QC", COLORS["internal"]),
+            (0.76, "Frozen-representation\nB_CONV / B_ASC scaffold", COLORS["teal"]),
+        ] if npj_layout else [
             (0.20, "B-lineage\ncells", COLORS["internal"]),
             (0.43, "Hard QC", COLORS["dark"]),
             (0.72, "Frozen-representation\nB_CONV / B_ASC scaffold", COLORS["teal"]),
@@ -424,7 +429,8 @@ def build_figure1(
                 **node_style,
                 bbox={"boxstyle": "round,pad=0.24", "facecolor": "white", "edgecolor": color, "linewidth": 0.8},
             )
-        for start, end in ((0.29, 0.35), (0.51, 0.57)):
+        arrow_spans = ((0.47, 0.58),) if npj_layout else ((0.29, 0.35), (0.51, 0.57))
+        for start, end in arrow_spans:
             axis.annotate(
                 "",
                 xy=(end, 0.86),
@@ -432,10 +438,14 @@ def build_figure1(
                 xycoords=axis.transAxes,
                 arrowprops={"arrowstyle": "-|>", "lw": 0.65, "color": COLORS["dark"]},
             )
-        for x, label in (
+        downstream_nodes = (
+            (0.47, "B_ASC\ncomposition"),
+            (0.80, "B_CONV pseudobulk\n+ frozen programs"),
+        ) if npj_layout else (
             (0.62, "B_ASC\ncomposition"),
             (0.86, "B_CONV pseudobulk\n+ frozen programs"),
-        ):
+        )
+        for x, label in downstream_nodes:
             axis.text(
                 x,
                 0.63,
@@ -475,11 +485,16 @@ def build_figure1(
             )
 
         axis.text(0.00, 0.17, "Interpretation", **tier_style)
-        for x, label in (
+        interpretation_nodes = (
+            (0.36, "same-data\nregulator\nrobustness"),
+            (0.61, "M5911\nresponse-set\nconcordance"),
+            (0.86, "GSE23307\nperturbational\ncontext"),
+        ) if npj_layout else (
             (0.31, "same-data\nregulator\nrobustness"),
             (0.58, "M5911\nresponse-set\nconcordance"),
             (0.84, "GSE23307\nperturbational\ncontext"),
-        ):
+        )
+        for x, label in interpretation_nodes:
             axis.text(
                 x,
                 0.10,

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import argparse
+import os
 from datetime import datetime
 from pathlib import Path
 
@@ -142,7 +143,16 @@ def main() -> None:
     source_path = SOURCE_DIR / "Supplementary_Figure_S8_source_data.csv"
     depleted.to_csv(source_path, index=False, lineterminator="\n")
 
-    figure, axes = plt.subplots(2, 2, figsize=(WIDTH_MM / 25.4, 6.25), constrained_layout=True)
+    if os.environ.get("NPJ_SBA_STYLE") == "1":
+        figure = plt.figure(figsize=(WIDTH_MM / 25.4, 215 / 25.4), constrained_layout=True)
+        grid = figure.add_gridspec(3, 2, height_ratios=(1.0, 0.82, 0.92))
+        axes = np.empty((2, 2), dtype=object)
+        axes[0, 0] = figure.add_subplot(grid[0, 0])
+        axes[0, 1] = figure.add_subplot(grid[0, 1])
+        axes[1, 0] = figure.add_subplot(grid[1, :])
+        axes[1, 1] = figure.add_subplot(grid[2, :])
+    else:
+        figure, axes = plt.subplots(2, 2, figsize=(WIDTH_MM / 25.4, 6.25), constrained_layout=True)
     forest(
         axes[0, 0],
         ulm.loc[ulm["branch"].eq("frozen_ifn12_depleted")],

@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-08-30T05:40:21+08:00",
+  "status": "PASS_NPJ_SBA_TARGET_SPECIFIC_REFREEZE_AUTHOR_APPROVAL_REQUIRED",
+  "package_directory": "04_submission/npj_systems_biology_and_applications/SLE_Bcell_npj_Systems_Biology_and_Applications",
+  "package_zip": "04_submission/npj_systems_biology_and_applications/SLE_Bcell_npj_Systems_Biology_and_Applications.zip",
+  "package_zip_bytes": 14884957,
+  "package_zip_sha256": "8E56CD61DBA88098B2015CC5E539036BFEAC7E1BA9E90C753AC8CD142C62FA7F",
+  "manifest_files_verified": 20,
+  "deterministic_double_build": true,
+  "main_figures": 5,
+  "single_supplementary_pdf": true,
+  "supplementary_data_archives": 3,
+  "new_scientific_analysis_performed": false,
+  "R1_decision": "HOLD_FULL_PIPELINE_TWO_COMPARTMENT_REPRODUCIBILITY",
+  "C9R_decision": "HOLD_C9A_PREFREEZE_REVIEW_REQUIRED",
+  "corrected_external_outcome_unlock_authorized": false,
+  "exact_package_author_approved": false,
+  "submission_authorized": false,
+  "apc_commitment_authorized": false
+}

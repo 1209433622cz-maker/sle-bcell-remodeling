@@ -1,0 +1,848 @@
+这一轮我按**最新 GitHub `main`、Zenodo 22151739、你上传的当前 Submission Package、Manuscript、Supplement、Cover Letter，以及 npj Systems Biology and Applications 最新官方投稿规范**重新做了 target-specific 全量复核。
+
+结论已经非常明确：
+
+> **科学部分不需要再开新分析；但当前包还不是 npj Systems Biology and Applications 可直接提交的版本。**
+
+GitHub 最新状态已经推进到 `82912054f8ac79e8941bf5dd8546aa30b290ad66`，这一提交建立的是“journal-neutral submission package”，而不是 npj-specific final package。 你上传的行动记录也明确给出状态 `PASS_CURRENT_SUBMISSION_PACKAGE_INTEGRITY_NOT_SUBMISSION_AUTHORIZATION`，30 个 manifest 文件、82/82 回归测试均通过，但 target-specific adaptation 尚未开始。
+
+## 总体导师判断
+
+现在应当正式把项目状态从：
+
+`JCR_Q1_JOURNAL_SELECTION`
+
+推进到：
+
+> **`NPJ_SBA_TARGET_SPECIFIC_REFREEZE`**
+
+这不是新的 biology gate。
+
+这一阶段应该：
+
+> **冻结全部科学结果，只重构 npj 稿件格式，并从源代码重渲染图件。**
+
+不再新增 cohort、mapper、TF、signature 或为了把 R1/C9R 变成 PASS 而调整参数。
+
+---
+
+# 一、选 npj Systems Biology and Applications 是合理的
+
+这个期刊官方 scope 直接包括：
+
+* computational/mathematical analysis of complex biological systems；
+* disease modeling；
+* single-cell systems biology；
+* systems immunology。([Nature][1])
+
+所以这篇论文真正应该卖的不是：
+
+> “SLE 中发现了 IFN。”
+
+而是：
+
+> **不同 inferential layers 的可重复性并不相同：hard B-cell state assignments 有明确稳定性边界，而 process-level IFN remodeling 在 biological-unit-aware inference、assignment uncertainty propagation 和独立队列中更稳定。**
+
+这与 npj SBA 的 systems biology 定位高度吻合。
+
+当前期刊官方页面给出的 2025 JIF 为 **4.4**，median first editorial decision 为 **8 天**，median submission-to-acceptance 为 **155 天**。([Nature][2])
+
+不过，Nature 官网没有给出你要求的 JCR quartile；因此正式投稿前仍建议保存 Clarivate/学校 JCR profile，确认当前 category/rank/Q1。
+
+---
+
+# 二、我重新独立验了当前 Submission Package：技术完整性 PASS
+
+你上传的：
+
+`SLE_Bcell_Submission_Package.zip`
+
+我重新计算得到：
+
+> SHA-256
+> `B7D30320ADFFF5D15E335A269AFC62E516C5001B2FF7BE4F8188E3B72AAFBFD5`
+
+并运行包内 portable verifier：
+
+> **30/30 PASS**
+
+与 action record 完全一致。
+
+所以现在的问题不是 package corruption，也不是 scientific drift。
+
+问题是：
+
+> **journal-neutral package ≠ npj-compliant package。**
+
+---
+
+# 三、当前 manuscript 的第一项 P0：标题超过 npj 上限
+
+当前标题是：
+
+> Disease-blind single-cell reconstruction distinguishes unstable B-cell state assignments from reproducible interferon remodeling in systemic lupus erythematosus
+
+我独立统计：
+
+> **16 words**
+
+而 npj Article 的官方要求是：
+
+> **title up to 15 words**，且避免 punctuation、idiom、pun。([Nature][3])
+
+### 我建议的新标题
+
+> **Disease-blind reconstruction distinguishes reproducible interferon remodeling from unstable B-cell state assignments in systemic lupus erythematosus**
+
+正好：
+
+> **15 words**
+
+并且比当前标题更强。
+
+它同时保留：
+
+* disease-blind reconstruction；
+* reproducible IFN remodeling；
+* unstable state assignments；
+* SLE。
+
+而且没有暗示 B-cell biological states 本身不存在。
+
+---
+
+# 四、当前最大文字 blocker：Abstract 必须重写
+
+当前 manuscript 的 Abstract 是 structured：
+
+> Background
+> Methods
+> Results
+> Conclusions
+
+而且我从当前 DOCX 重新统计约：
+
+> **356 words**
+
+当前稿中的完整 structured abstract 可见于你上传的 manuscript。
+
+但 npj Article 官方要求：
+
+> **Abstract 无小标题，最多 150 words。** ([Nature][3])
+
+所以这不是“小幅压缩”。
+
+是一次 target-specific rewrite。
+
+### 我建议的 140-word 版本
+
+> Single-cell disease studies can conflate cell identity, abundance and transcription when unstable annotations are treated as fixed biological states. We reanalysed public systemic lupus erythematosus datasets using disease-blind B-lineage reconstruction and donor-aware inference. Among 150,402 discovery B-lineage cells, end-to-end resampling failed a prespecified antibody-secreting-cell overlap criterion, restricting broad B-cell compartments to an analysis scaffold, yet propagation of observed assignment exchanges preserved the primary composition null and conventional-B IFN/ISG effect. The IFN/ISG program replicated in independent GSE135779 childhood donors using a source-label-defined broad B-cell analogue despite weak genome-wide concordance. Corrected source-label-independent remapping failed prespecified calibration, so no corrected external disease effect was estimated. STAT1/STAT2 analyses provided convergent but observational support and weakened after broader interferon-gene depletion. These results separate reproducible process-level interferon remodeling from less stable hard state assignments without establishing a universal B-cell taxonomy, causal regulator or clinical utility.
+
+我建议下一版直接围绕这个版本精修，不再从 356 words 一点点删。
+
+---
+
+# 五、Main manuscript 的 section order 目前明显还是 Genome Medicine/BMC 风格
+
+当前是：
+
+> Background
+> Methods
+> Results
+> Discussion
+> Conclusions
+> List of abbreviations
+> Declarations
+
+而 npj Article 官方格式要求：
+
+* Introduction：无 subheading；
+* Results：允许并建议 subheadings；
+* Discussion：**不允许再有独立 limitations 或 conclusions section**；
+* Methods：使用 subheadings；
+* Data availability：mandatory；
+* Code availability：适用时 mandatory。([Nature][3])
+
+所以我建议最终重组为：
+
+> **Introduction**
+> **Results**
+> **Discussion**
+> **Methods**
+> **Data availability**
+> **Code availability**
+> **Acknowledgements**
+> **Author contributions**
+> **Competing interests**
+> **References**
+> **Figure legends**
+
+### 当前的 Conclusions
+
+不删除科学内容。
+
+直接折叠成 Discussion 最后一个 landing paragraph。
+
+这样更符合 Nature Portfolio 的叙事节奏。
+
+---
+
+# 六、Data Availability 现在位置不对
+
+当前 Data Availability 位于：
+
+> Conclusions → Abbreviations → Declarations → Availability of data and materials
+
+也就是说它在 manuscript 后半段。
+
+而 npj 明确要求：
+
+> **Data availability 应作为独立 section，放在 Methods 之后、References 之前。** ([Nature][4])
+
+### 最终稿建议只引用当前 DOI
+
+保留：
+
+* GSE174188
+* GSE135779
+* GSE23307
+* GitHub
+* `10.5281/zenodo.22151739`
+
+建议从 journal-facing manuscript 删除：
+
+> `supersedes the initial archive at doi:10.5281/zenodo.22086892`
+
+原因不是隐藏历史。
+
+而是旧 DOI 现在是 tombstone，历史替换关系已经由 Zenodo/GitHub provenance 永久记录，没有必要在编辑第一眼阅读的正式稿里制造“retracted DOI”的视觉噪声。
+
+---
+
+# 七、现在缺少 npj 要求的独立 Code Availability
+
+这是一个明确的 P0。
+
+npj 对 central custom code 要求：
+
+> 必须提供单独的 `Code availability` section，说明代码是否公开以及如何访问；位置在 Data availability 后、References 前。([Nature][4])
+
+你们其实已经比要求做得更好：
+
+* GitHub public；
+* GitHub v1.1.0；
+* Zenodo；
+* fixed commit；
+* SHA manifests；
+* deterministic scripts。
+
+现在只是没有把这些内容转换成期刊要求的 section。
+
+### 建议形式
+
+> **Code availability**
+> Custom analysis and reproducibility code is publicly available at the project GitHub repository and is archived with the version-specific reproducibility release at doi:10.5281/zenodo.22151739. The archived release contains the exact source-code snapshot, environment records, deterministic seeds, provenance manifests and restoration instructions used for the reported analyses.
+
+完全不需要重新分析。
+
+---
+
+# 八、我发现一个新的 package 内部 P0：Supplementary title 还没同步
+
+我直接解包检查了当前：
+
+`Supplementary_Information.docx`
+
+首页标题仍然是：
+
+> **Disease-blind single-cell reconstruction separates unstable B-cell state assignments...**
+
+但主文现在已经是：
+
+> **... distinguishes unstable B-cell state assignments...**
+
+也就是说：
+
+> Manuscript = `distinguishes`
+
+> Supplement = `separates`
+
+这是当前 package 内真实存在的 title drift。
+
+虽然不影响任何科学结果，但 npj final package 绝不能保留。
+
+下一轮必须从 source 重建 Supplement，不手工改 PDF。
+
+---
+
+# 九、更重要：npj 不允许 Supplementary Methods
+
+这是本轮发现的最大 target-specific incompatibility。
+
+当前 Supplement 中存在：
+
+* Supplementary Methods 1
+* Supplementary Methods 2
+* Supplementary Methods 2B
+* Supplementary Methods 3
+* Supplementary Methods 4
+* Supplementary Methods 5
+* Supplementary Methods 6
+
+而 npj 官方明确写：
+
+> **The journal does not permit Supplementary Methods; all Methods should be reported in the main manuscript file.** ([Nature][4])
+
+因此当前 Supplement 虽然科学上优秀，但**不能按现在的结构直接提交 npj**。
+
+### 正确处理
+
+不是删除 reproducibility 信息。
+
+而是：
+
+**main Methods 已经包含的 → Supplement 中删除重复。**
+
+真正独有、且解释论文所必需的：
+
+> seed
+> exact mapping rule
+> calibration logic
+> detailed thresholds
+
+再合并进 main Methods。
+
+其余极细 implementation provenance：
+
+> 留在 Zenodo + GitHub reproducibility documentation。
+
+这是最符合 Nature 的做法。
+
+---
+
+# 十、Supplementary package 也应该重新整理
+
+npj 要求：
+
+> Supplementary Information 应作为**一个 merged separate PDF**提交。([Nature][4])
+
+你现在其实已经有：
+
+> 19-page `Supplementary_Information.pdf`
+
+而且 S1–S10 已经在里面。
+
+因此 portal 不应该再同时上传：
+
+> 10 个独立 Supplementary_Figure_S*.pdf
+
+这些文件保留在 reproducibility release 没问题，但投稿系统里会显得重复。
+
+### 我建议最终 portal-facing Supplement
+
+**Supplementary_Information.pdf**
+
+包含：
+
+* Tables S1–S9
+* Figures S1–S10
+* legends
+
+不要 Supplementary Methods。
+
+另外三个机器文件改名：
+
+> **Supplementary Data 1 — Figure source data**
+
+> **Supplementary Data 2 — Regulator sensitivity**
+
+> **Supplementary Data 3 — Full statistical results**
+
+而不是当前 BMC 风格的：
+
+> Additional file 2/3/4。
+
+---
+
+# 十一、Funding 也需要按 npj 改
+
+当前：
+
+> Funding
+> This research received no specific funding.
+
+然后：
+
+> Acknowledgements
+> Not applicable.
+
+npj 官方写得很明确：
+
+> **Funding information belongs in Acknowledgements；不允许单独的 Funding statement。** ([Nature][3])
+
+所以改成：
+
+> **Acknowledgements**
+> This study received no funding.
+
+然后删除 Funding section。
+
+---
+
+# 十二、AI disclosure 现在反而已经做对了
+
+npj 最新 Submission Guidelines 明确要求：
+
+> LLM use 应记录在 Methods 中。([Nature][4])
+
+你当前 Methods 已经有：
+
+> **Generative AI assistance**
+
+而且写得很好：
+
+* Codex 用于 code drafting/workflow documentation/language editing/QC；
+* computations local；
+* numbers 来自 machine outputs；
+* authors responsible；
+* AI not author。
+
+所以：
+
+> **Methods 中这一段保留。**
+
+Declarations 里另外一段 AI disclosure 可以在 target formatting 时删除重复。
+
+---
+
+# 十三、References 数量没问题，但格式还不是 npj Nature style
+
+当前：
+
+> **32 references**
+
+npj Article guide：
+
+> ~60 references 以内，非严格上限。([Nature][3])
+
+数量完全没问题。
+
+但最终需要转成 Nature reference style，例如：
+
+> Perez, R. K. et al. Single-cell RNA-seq reveals cell type-specific molecular and genetic associations to lupus. *Science* **376**, eabf1970 (2022).
+
+而不是当前的 Vancouver/BMC-style 全作者+年份位置。
+
+npj 明确规定：
+
+> > 5 authors 时只写第一作者 + et al.，并使用 Nature reference format。([Nature][4])
+
+这是程序化转换即可。
+
+不要新增文献。
+
+---
+
+# 十四、现在真正应该“重画”的地方：全部 15 张图要做一次 npj-specific rerender
+
+你要求“优先选择重跑分析和画图而不是手改现有输出”，在这里非常适用。
+
+当前 generic publication style contract 实际写的是：
+
+> non-panel font clamp = 5–7 pt
+> panel = 8 pt
+> line width clamp = 0.25–1.0 pt。
+
+主 Figure builder 也大量使用：
+
+> axes linewidth 0.7
+> tick width 0.6
+> grid 0.5
+> errorbar 0.9。
+
+这符合之前“Nature 通用 5–7 pt”思路。
+
+但是 **npj 自己**的 final figure guidelines 更具体：
+
+* Arial/Helvetica；
+* RGB；
+* vector preferred；
+* **optimum font size = 8 pt**；
+* **thinnest final line ≥1 pt**；
+* 避免 red-green contrast；
+* 按预计 publication size / A4 width 制作。([Nature][4])
+
+所以这次：
+
+> **确实值得重渲染。**
+
+但注意：
+
+> 重渲染 ≠ 重跑统计。
+
+---
+
+# 十五、我建议新建 `npj_sba` 图形 style contract
+
+不覆盖现在的 publication figures。
+
+新输出目录。
+
+新的约束建议：
+
+* Arial；
+* normal text 目标 8 pt；
+* panel label 8 pt bold lowercase；
+* positive line widths 全部 ≥1 pt；
+* RGB；
+* white background；
+* vector PDF；
+* colorblind-safe palette；
+* 不以红–绿作为主要对比；
+* 主图按 A4 page-width 重新布局；
+* 每个 multi-panel figure 仍是单个 PDF；
+* source-data hashes 必须完全不变；
+* numeric annotations 必须完全不变。
+
+### 这一步我建议重跑：
+
+> **5 主图 + S1–S10 全部 15 张。**
+
+因为统一改 style 比逐张 patch 更安全。
+
+---
+
+# 十六、当前配色也值得随这次 rerender 一起修
+
+当前代码里存在：
+
+> SLE red
+
+和：
+
+> external green
+
+的语义颜色。
+
+npj 明确建议避免需要依赖 red/green 区分的视觉。([Nature][4])
+
+所以建议统一换成：
+
+> SLE = vermillion/orange-red
+> internal = blue
+> external = purple/teal
+> controls = dark gray
+
+不要改变任何数据映射，只改视觉编码。
+
+---
+
+# 十七、Figure legends 已经很好，不需要科学性重写
+
+我重新统计主图 legends：
+
+| Figure | Words |
+| ------ | ----: |
+| Fig. 1 |   195 |
+| Fig. 2 |    92 |
+| Fig. 3 |   120 |
+| Fig. 4 |   113 |
+| Fig. 5 |   147 |
+
+npj 上限：
+
+> **350 words / figure**。([Nature][3])
+
+全部轻松通过。
+
+所以 legends 只需要：
+
+> npj typography/reference nomenclature 微调
+
+不要重写科学内容。
+
+---
+
+# 十八、统计学部分已经很强，但再做一次“reporting compliance map”
+
+npj 的 statistical guidelines 很严格，要求：
+
+* statistical test；
+* n；
+* comparison；
+* why this test；
+* alpha；
+* one-/two-tailed；
+* actual P value；
+* descriptive statistics；
+* multiple comparison correction。([Nature][4])
+
+你的 Methods 已经覆盖绝大部分。
+
+但正文很多地方主要报告：
+
+> q
+
+而没有同时写 nominal P。
+
+完整 P 值实际上在 Full Statistical Results 中。
+
+所以最好的下一步不是重跑统计。
+
+而是程序化生成：
+
+> **`npj_statistics_reporting_map.csv`**
+
+把每一个 main-text / main-figure inferential claim 映射到：
+
+> n | unit | test | sidedness | P | q | CI | multiplicity family
+
+缺什么就从 frozen output 补什么。
+
+这样可以做到：
+
+> **零新分析，100% reporting traceability。**
+
+---
+
+# 十九、Cover Letter 现在也必须重新写
+
+当前 Cover Letter 的 technical quality 没问题，但它是明确的：
+
+> **Journal-neutral draft | Target selection and exact-file author approval pending** 
+
+而且它现在大量重复了 Abstract/Introduction。
+
+npj 官方明确说：
+
+> cover letter 应说明工作重要性和为什么适合本刊，并尽量避免重复 Abstract 和 Introduction。([Nature][4])
+
+### 新 cover letter 应该只突出三个点
+
+**第一：systems biology problem**
+
+> biological inference depends on the stability of the state representation itself.
+
+**第二：why npj SBA**
+
+> single-cell systems biology + systems immunology + disease modeling。
+
+**第三：novelty**
+
+> not another SLE-IFN discovery paper; a hierarchy showing which biological layer remains reproducible after identity is stress-tested.
+
+R1/C9R 可以只用一句：
+
+> prespecified failed gates were retained rather than post hoc rescued.
+
+比现在逐项描述 HOLD 更有编辑说服力。
+
+---
+
+# 二十、Systems Immunology Collection：我不建议为了 deadline 强行冲
+
+npj 目前确实有：
+
+> **Systems immunology: multi-omics approaches, dynamical modeling and novel agentic AI approaches**
+
+Collection。
+
+当前官方 deadline：
+
+> **12 September 2026**。([Nature][5])
+
+Collection 的范围确实包含：
+
+> computational approaches to immunological states and disorders。([Nature][5])
+
+但你的文章不是：
+
+* multi-omics；
+* dynamical modeling；
+* agentic AI biological analysis。
+
+所以我的建议是：
+
+> **首先按普通 Article 投 npj SBA。**
+
+不要为了进 Collection 临时加：
+
+> network dynamics
+> AI models
+> multi-omics。
+
+Collection 与普通 Article 的审稿标准相同。([Nature][6])
+
+如果最后编辑/portal 明确认为 collection fit，可以再选择 collection。
+
+---
+
+# 二十一、APC 现在需要你现实确认
+
+npj SBA 是 fully OA。
+
+当前 Original Research APC：
+
+> **£2,690 / US$3,490 / €2,990**
+
+可能另加税。([Nature][7])
+
+Springer Nature 公共 OA-agreement 页面显示：
+
+> **The Chinese University of Hong Kong**
+
+有 Nature Portfolio coverage。([Springer Nature][8])
+
+但你们当前 affiliation 写的是：
+
+> **The Chinese University of Hong Kong, Shenzhen**
+
+这不能自动等同于 Hong Kong JULAC agreement eligibility。
+
+所以：
+
+> **必须让 CUHK-Shenzhen library / OA office 确认。**
+
+不能靠学校名字相似直接假定免 APC。
+
+---
+
+# 二十二、当前论文最强的编辑 framing
+
+我建议 npj 版本的核心句固定成：
+
+> **The contribution is not the rediscovery of interferon involvement in SLE, but the identification of an inferential level at which that involvement remains reproducible when cell-state identity itself is stress-tested.**
+
+这其实已经接近你 Discussion 当前的核心逻辑。
+
+这是 npj SBA 最容易理解的 novelty。
+
+而不是：
+
+> IFN ↑
+
+或者：
+
+> STAT1/STAT2 ↑。
+
+---
+
+# 当前 readiness
+
+| 模块                               |        当前 |
+| -------------------------------- | --------: |
+| Scientific design                |   **98%** |
+| Statistical rigor                |   **98%** |
+| R1/C9R transparency              |   **99%** |
+| Reproducibility                  |   **99%** |
+| Scope fit for npj SBA            |   **96%** |
+| Main narrative                   |   **98%** |
+| Package integrity                |  **100%** |
+| Title compliance                 |   **80%** |
+| Abstract compliance              |   **35%** |
+| npj section structure            |   **65%** |
+| Data/Code availability           |   **65%** |
+| Supplement compliance            |   **55%** |
+| Generic Nature figure quality    |   **99%** |
+| npj-specific figure compliance   |  **~80%** |
+| Target-specific cover letter     |   **55%** |
+| Overall npj submission readiness | **约 75%** |
+
+这剩下的 25%：
+
+> **几乎全部是 publication engineering。**
+
+不是科学证据不足。
+
+---
+
+# 下一阶段目标
+
+我建议正式定义成：
+
+> **`NPJ_SBA_TARGET_SPECIFIC_REFREEZE`**
+
+并且一次性完成，而不是继续迭代 biology。
+
+执行顺序：
+
+1. **冻结科学结果**
+
+   * R1 HOLD 不动；
+   * C9R HOLD 不动；
+   * 所有统计值不动。
+
+2. **重构主文**
+
+   * 15-word title；
+   * ≤150-word unstructured abstract；
+   * Introduction；
+   * Results；
+   * Discussion；
+   * Methods；
+   * Data availability；
+   * Code availability；
+   * npj declarations。
+
+3. **重构 Supplement**
+
+   * 修正 title mismatch；
+   * 删除 Supplementary Methods；
+   * 只保留 Tables/Figures；
+   * 合成一个 PDF。
+
+4. **从代码重渲染全部 15 张图**
+
+   * npj 8 pt target typography；
+   * line ≥1 pt；
+   * RGB；
+   * colorblind-safe；
+   * source data 不变。
+
+5. **自动化 statistics reporting audit**
+
+6. **重写 npj-specific Cover Letter**
+
+7. **准备 Nature Portfolio Reporting Summary + Editorial Policy Checklist**
+   npj 鼓励投稿时一并提交，并在 peer review 流程中要求相关表单。([Nature][4])
+
+8. **确认 JCR Q1 + APC/OA**
+
+9. **构建新的 npj-specific submission candidate**
+
+10. **两位作者对 exact final hashes 做最后批准**
+
+然后才：
+
+> portal upload。
+
+---
+
+## 最终判断
+
+现在**不值得重跑新的生物信息学分析**。
+
+但这一次确实有一项值得按你要求“从源头重跑”的工作：
+
+> **全部 Figure 1–5 + S1–S10 按 npj 自己的 8 pt / ≥1 pt / RGB / color-accessible 规范，从 frozen source data 重新渲染。**
+
+同时完成 manuscript 和 Supplement 的 npj-specific refreeze。
+
+这会比再增加一个 cohort 或 sensitivity 更明显地提高实际投稿质量。
+
+本轮详细报告与冻结契约已经生成：
+
+[下载 npj SBA Target-Specific 全量审计报告](sandbox:/mnt/data/SLE_Bcell_npj_SBA_target_specific_full_audit_2026-08-30.md)
+
+[下载 npj SBA Target Adaptation Contract](sandbox:/mnt/data/SLE_Bcell_npj_SBA_target_adaptation_contract_2026-08-30.md)
+
+**下一轮最值得直接执行的就是 `NPJ_SBA_TARGET_SPECIFIC_REFREEZE`，而不是再讨论要不要做更多分析。**
+
+[1]: https://www.nature.com/npjsba/aims "https://www.nature.com/npjsba/aims"
+[2]: https://www.nature.com/npjsba/journal-impact "https://www.nature.com/npjsba/journal-impact"
+[3]: https://www.nature.com/npjsba/for-authors-and-referees/about/content-types "https://www.nature.com/npjsba/for-authors-and-referees/about/content-types"
+[4]: https://www.nature.com/npjsba/for-authors-and-referees/submission-guidelines "https://www.nature.com/npjsba/for-authors-and-referees/submission-guidelines"
+[5]: https://www.nature.com/npjsba/calls-for-papers "https://www.nature.com/npjsba/calls-for-papers"
+[6]: https://www.nature.com/npjsba/for-authors-and-referees/collections-and-special-issues "https://www.nature.com/npjsba/for-authors-and-referees/collections-and-special-issues"
+[7]: https://www.nature.com/npjsba/apc "https://www.nature.com/npjsba/apc"
+[8]: https://www.springernature.com/cn/open-science/oa-agreements/hong-kong "https://www.springernature.com/cn/open-science/oa-agreements/hong-kong"

@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-08-30",
+  "status": "PASS_NPJ_SBA_SOURCES_BUILT_SCIENCE_FROZEN",
+  "selected_target": "npj Systems Biology and Applications",
+  "content_type": "Article",
+  "title_words": 15,
+  "abstract_words": 140,
+  "reference_count": 32,
+  "supplementary_methods_removed": true,
+  "scientific_reanalysis": false,
+  "numerical_results_reselected": false,
+  "R1_decision": "HOLD_FULL_PIPELINE_TWO_COMPARTMENT_REPRODUCIBILITY",
+  "C9R_decision": "HOLD_C9A_PREFREEZE_REVIEW_REQUIRED",
+  "corrected_external_outcome_unlock_authorized": false,
+  "jcr_q1_verified": false,
+  "institutional_apc_coverage_verified": false,
+  "exact_file_author_approval": false,
+  "submission_authorized": false,
+  "apc_commitment_authorized": false,
+  "inputs": {
+    "04_submission\\zenodo_release\\manuscript\\Manuscript.md": "ECA52AA68520B1D21F86E8320ED5D4B151820588385EEDC38A4699E6AA266586",
+    "01_manuscript\\Supplementary_Information.md": "55081AD1C836678D478C5A73543774861B3DA29C1D54DAD27E48C79BBA21BAA7"
+  },
+  "outputs": {
+    "phase17_v7\\npj_sba_target_refreeze\\20260830_target_specific_refreeze\\sources\\Cover_Letter.md": "C104124ADF2124B481AF4BBE8FD084E15F89CDF7BE4A582C2F1D8A50379550BC",
+    "phase17_v7\\npj_sba_target_refreeze\\20260830_target_specific_refreeze\\sources\\Editorial_Policy_Checklist_Draft.md": "58BA16147F21CE8074D4F6856035FB8065F1567BE4DACE63E8D00FBB69D0E790",
+    "phase17_v7\\npj_sba_target_refreeze\\20260830_target_specific_refreeze\\sources\\Manuscript.md": "550C9D93D0BC54EF9B5468ABCBCE82559BE0BFF032DFA36EBB73D88D4DB69BD3",
+    "phase17_v7\\npj_sba_target_refreeze\\20260830_target_specific_refreeze\\sources\\Nature_Portfolio_Reporting_Summary_Draft.md": "D1044A7AF3641E560330A086228A21BEBF94489491FB73953067AB6B504AC451",
+    "phase17_v7\\npj_sba_target_refreeze\\20260830_target_specific_refreeze\\sources\\Supplementary_Information.md": "416925FB7FBEBB3AEE61D04A8778154F94170B42A124C86DDB9EF07693813B23"
+  }
+}

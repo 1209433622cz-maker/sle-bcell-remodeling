@@ -1,0 +1,177 @@
+{
+  "created_at": "2026-08-30",
+  "status": "PASS_NPJ_SBA_SOURCE_RERENDER_PENDING_VISUAL_REVIEW",
+  "figure_count": 15,
+  "main_figures": 5,
+  "supplementary_figures": 10,
+  "format": "single-page vector PDF",
+  "width_mm": 170.0,
+  "style_contract": {
+    "font_family": "Arial",
+    "target_visible_text_pt": 8.0,
+    "panel_labels": "bold lower-case 8 pt",
+    "minimum_positive_line_width_pt": 1.0,
+    "color_mode": "RGB",
+    "background": "white"
+  },
+  "source_tables_byte_identical": true,
+  "source_data": {
+    "Figure1_source_data.csv": {
+      "sha256": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Figure2_source_data.csv": {
+      "sha256": "DAA6DDBAB469E0D510AB578BEE0A21AA73FA2D71184739E3F361C3EA6EC8DFE2",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Figure3_source_data.csv": {
+      "sha256": "DEFABF8C16D879362E3AD197C857A9197CD6D0691B20FDFA4AC97BEFF3710BC8",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Figure4_source_data.csv": {
+      "sha256": "F3604F40DAEDB0DD01617BB223A8762323C8AAC7F16185292367B9A13FEC4755",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Figure5_source_data.csv": {
+      "sha256": "21925F6916DDAF97760CF73622ED8E4B4CCBE5AE0B3B53C721FDF607C1C6F9A4",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S10_source_data.csv": {
+      "sha256": "FF4309EBAF761A0563F018AE1BE07212EF2CB2241E79DF12C374BCB1426A60FF",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S1_source_data.csv": {
+      "sha256": "A140D1D900A3EA869551097146AFFD3872BC7AC78E9E9712E4BDAC834A57CB68",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S2_source_data.csv": {
+      "sha256": "E46FE5B33B11D45319DD80C3D669AEEB83F2517095CD0C1FD5EEFA1F57C58731",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S3_source_data.csv": {
+      "sha256": "133E973C2753F4946A24739C049308152299A915A3FC6754B30AD0521F979C96",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S4_source_data.csv": {
+      "sha256": "7BA2660E5A50ADCF28407BCC92A91C791576DD69A9A1ABA9618DEB045C3A4E19",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S5_source_data.csv": {
+      "sha256": "F6682D636C1FF3A1784E0B9E8AEFF5C5D1BB075176312E87FCB938F65C4DA897",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S6_source_data.csv": {
+      "sha256": "A1D1DCBF9D20BA01D0022D4DA0F73A618776D34A687E764F18AB83439204DBF6",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S7_source_data.csv": {
+      "sha256": "D92140A17B96E6B77F5EEBF322A5D77A5E6F2132EDD54CC9C3E73521E5352CA3",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S8_source_data.csv": {
+      "sha256": "26A3F90E3165D8928874F278384B2587CB549DD4FFDE93440AAC4CEEAE06A9A2",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S9_source_data.csv": {
+      "sha256": "46EE840F86CA33AA4F5FCE0A37EEFCB4DB23831533BBFA20400BAE50744F5D42",
+      "byte_identical_to_corrected_candidate": true
+    }
+  },
+  "figures": {
+    "Figure_1.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 130.677,
+      "bytes": 58057,
+      "sha256": "F1D7E9D7F896EE9C674DE0A2AF4144CDDC0F450D0CDABE083AB3722849F2AE22"
+    },
+    "Figure_2.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 134.274,
+      "bytes": 49242,
+      "sha256": "FAD7E6A45BF3CEE9B6EEC343A11DBA1E6E62BE62095BEA793B6B035F9794EDA7"
+    },
+    "Figure_3.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 137.87,
+      "bytes": 54107,
+      "sha256": "E4D763FCEEDCCC8A4A347605F12FA1EE5A9229D37856904B989290D252FD6CF2"
+    },
+    "Figure_4.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 137.87,
+      "bytes": 53292,
+      "sha256": "E32D15D4D8EAAFDAB1EDBFDAB67E042FB1BE06E80D0E43A7D02A2E2D7E7C6D25"
+    },
+    "Figure_5.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 163.047,
+      "bytes": 63032,
+      "sha256": "1C187101163687929E5DF0169D940EF12F603728BA0C942841574613F2667F5F"
+    },
+    "Supplementary_Figure_S10.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 110.0,
+      "bytes": 42817,
+      "sha256": "AF4AD9ACD7418499867CB0EA6A53982B693CFCA1FF3E07E9CEA55D5DD40DA3D9"
+    },
+    "Supplementary_Figure_S1.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 123.484,
+      "bytes": 50564,
+      "sha256": "00A00E1C7F7D744971E7A286BF44B3891BA21C5BDFAB4A34B2035FF20EA59E0B"
+    },
+    "Supplementary_Figure_S2.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 125.882,
+      "bytes": 49802,
+      "sha256": "76CE1A03DCEEAF9A7675B61E55B21F543D95EC23870DADD9DA4ABA63ED6C8D9E"
+    },
+    "Supplementary_Figure_S3.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 125.882,
+      "bytes": 50301,
+      "sha256": "704BC336434A17EA2269E5B23E28C009FD7DACAAC57B2E1A48C4E822A1BE9D82"
+    },
+    "Supplementary_Figure_S4.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 125.882,
+      "bytes": 47413,
+      "sha256": "8668C39B1B3A29613111972C1761EBC66D23D17B20F1E7B010BF422A94FC5098"
+    },
+    "Supplementary_Figure_S5.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 128.279,
+      "bytes": 50892,
+      "sha256": "FA7A49E70FAE9FEE7BE4C2EC37D50D99838593560BAC2E814A0DF4DD97F0D503"
+    },
+    "Supplementary_Figure_S6.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 128.279,
+      "bytes": 47587,
+      "sha256": "D78753C3F517DAF9C89B709E82F9237CFAB26F16995FFA210176121316C0A4D2"
+    },
+    "Supplementary_Figure_S7.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 125.882,
+      "bytes": 48214,
+      "sha256": "D36753B1EAFFD6A0E5FC1F60A8BCA880826CBCF3390B394D0B40228A0DCCF380"
+    },
+    "Supplementary_Figure_S8.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 215.0,
+      "bytes": 49997,
+      "sha256": "49EE33B15E0C61F3DE60969AE24D23680C7E3805653DFF72A8678002137648E0"
+    },
+    "Supplementary_Figure_S9.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 160.0,
+      "bytes": 52832,
+      "sha256": "7E7F1A162858D32D62D489C0666696D99A3B501AF59BBF36DE6362CBF39AA849"
+    }
+  },
+  "scientific_reanalysis": false,
+  "plotted_numeric_values_changed": false,
+  "R1_decision": "HOLD_FULL_PIPELINE_TWO_COMPARTMENT_REPRODUCIBILITY",
+  "C9R_decision": "HOLD_C9A_PREFREEZE_REVIEW_REQUIRED",
+  "corrected_external_outcome_unlock_authorized": false
+}

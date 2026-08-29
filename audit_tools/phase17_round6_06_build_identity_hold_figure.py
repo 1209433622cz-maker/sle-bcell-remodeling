@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from datetime import datetime
 from pathlib import Path
 
@@ -127,7 +128,7 @@ def main() -> None:
     grid = figure.add_gridspec(
         2,
         6,
-        left=0.145,
+        left=0.170 if os.environ.get("NPJ_SBA_STYLE") == "1" else 0.145,
         right=0.985,
         bottom=0.09,
         top=0.965,
@@ -149,8 +150,9 @@ def main() -> None:
         axis.plot(row["threshold"], y_value, "|", color=COLORS["dark"], ms=9, mew=1.2)
         color = COLORS["teal"] if row["pass"] else COLORS["orange"]
         axis.plot(row["observed"], y_value, "o", color=color, ms=4.5, zorder=3)
+        npj_style = os.environ.get("NPJ_SBA_STYLE") == "1"
         axis.text(
-            1.006,
+            0.972 if npj_style else 1.006,
             y_value,
             "PASS" if row["pass"] else "HOLD",
             fontsize=5.5,

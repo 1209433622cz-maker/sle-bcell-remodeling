@@ -1,0 +1,69 @@
+{
+  "created_at": "2026-08-30",
+  "status": "PASS_NPJ_SBA_DOCX_BUILT_RENDER_QA_REQUIRED",
+  "design": "Nature Portfolio submission manuscript; Times New Roman body, double-spaced main text, continuous line numbering",
+  "outputs": [
+    {
+      "source": "phase17_v7/npj_sba_target_refreeze/20260830_target_specific_refreeze/sources/Manuscript.md",
+      "output": "phase17_v7/npj_sba_target_refreeze/20260830_target_specific_refreeze/documents/Manuscript.docx",
+      "paragraphs": 151,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 61125
+    },
+    {
+      "source": "phase17_v7/npj_sba_target_refreeze/20260830_target_specific_refreeze/sources/Supplementary_Information.md",
+      "output": "phase17_v7/npj_sba_target_refreeze/20260830_target_specific_refreeze/documents/Supplementary_Information.docx",
+      "paragraphs": 70,
+      "tables": 10,
+      "inline_shapes": 10,
+      "placeholders": 0,
+      "bytes": 4452076
+    },
+    {
+      "source": "phase17_v7/npj_sba_target_refreeze/20260830_target_specific_refreeze/sources/Cover_Letter.md",
+      "output": "phase17_v7/npj_sba_target_refreeze/20260830_target_specific_refreeze/documents/Cover_Letter.docx",
+      "paragraphs": 11,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 39536
+    }
+  ],
+  "checks": {
+    "manuscript_title_exact": true,
+    "manuscript_article_type": true,
+    "manuscript_introduction": true,
+    "manuscript_no_background_heading": true,
+    "manuscript_no_conclusions_heading": true,
+    "manuscript_data_availability": true,
+    "manuscript_code_availability": true,
+    "manuscript_ai_disclosure": true,
+    "manuscript_current_doi": true,
+    "manuscript_no_old_doi": true,
+    "supplement_title_exact": true,
+    "supplement_no_methods": true,
+    "supplement_figures_embedded": true,
+    "cover_names_target": true,
+    "cover_does_not_claim_exact_file_approval": true,
+    "cover_no_submission_authorization_claim": true
+  },
+  "files": {
+    "Manuscript.docx": {
+      "bytes": 61138,
+      "sha256": "6E4532912F519871046A7596A9A721B77E181B83988FF478865F6D2322688C97"
+    },
+    "Supplementary_Information.docx": {
+      "bytes": 4452142,
+      "sha256": "D3B04CAA65D8A8A8CBDD28E8D491F13CC2B3AAB5A2C1B6C16C53C253C589C811"
+    },
+    "Cover_Letter.docx": {
+      "bytes": 39519,
+      "sha256": "8133DEBDAD5249FB2DAEAAAEBAF364E6CCDA0DEC4EA3A31DD5ABAF0D0A4730B6"
+    }
+  },
+  "scientific_reanalysis": false,
+  "exact_file_author_approval": false,
+  "submission_authorized": false
+}
