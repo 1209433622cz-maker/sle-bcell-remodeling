@@ -20,7 +20,8 @@
   "old_version_deletion_condition": "Only after a matching new version is published and verified; use the platform deletion workflow, preserve tombstone, local evidence and Git history",
   "browser_action_time_confirmation_completed": true,
   "browser_action_time_confirmation_scope": "Create a linked new-version draft for record 22086892 and reserve a DOI while carrying forward the existing authors, ORCIDs, affiliations and licenses; no publication or deletion",
-  "browser_publication_confirmation_completed": false,
+  "browser_publication_confirmation_completed": true,
+  "browser_publication_confirmation_scope": "Upload the three verified files to Zenodo draft 22151739, save the reconciled metadata and publicly publish DOI 10.5281/zenodo.22151739; no old-record deletion, GitHub release or journal submission",
   "browser_deletion_confirmation_completed": false,
   "submission_authorized": false,
   "apc_commitment_authorized": false,
@@ -54,6 +55,8 @@
   "new_zenodo_record_id": "22151739",
   "new_zenodo_doi": "10.5281/zenodo.22151739",
   "new_zenodo_draft_created": true,
-  "new_zenodo_published": false,
+  "new_zenodo_published": true,
+  "new_zenodo_publication_verified": true,
+  "new_zenodo_publication_verification_path": "00_project_management/qiteng_r2_release_2026-08-29/zenodo_publication_verification.json",
   "old_zenodo_deleted": false
 }

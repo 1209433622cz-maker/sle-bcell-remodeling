@@ -1,0 +1,52 @@
+{
+  "verified_at": "2026-08-29T12:44:26+08:00",
+  "status": "PASS_PUBLIC_ZENODO_RELEASE_VERIFIED",
+  "record_id": "22151739",
+  "doi": "10.5281/zenodo.22151739",
+  "concept_doi": "10.5281/zenodo.22086891",
+  "version": "1.1.0",
+  "publication_date": "2026-08-29",
+  "access_right": "open",
+  "title": "SLE B-cell remodeling analysis: code, source data and reproducible release",
+  "creators_verified": 2,
+  "keywords_verified": 6,
+  "licenses_verified_in_public_html": [
+    "CC-BY-4.0",
+    "MIT"
+  ],
+  "scientific_boundaries_verified": [
+    "R1 HOLD",
+    "C9R HOLD",
+    "no corrected external outcomes"
+  ],
+  "public_files": {
+    "Source_Code.zip": {
+      "bytes": 78040863,
+      "public_md5": "md5:972157ae86be2d1b450cbfc797cc8f44",
+      "local_sha256": "51B1007908668F8EE25971E99270BF8477720A25ED7491BACD2F7572A4E24645",
+      "download_url": "https://zenodo.org/api/records/22151739/files/Source_Code.zip/content"
+    },
+    "Research_Archive.zip": {
+      "bytes": 25577813,
+      "public_md5": "md5:e684cd92599dcbd9fee39b42e7a93f8e",
+      "local_sha256": "AAE67863FC6B34B0AC091F8D38524FFC55A7CF364FF7FF4B4D43FEDFA4AE0095",
+      "download_url": "https://zenodo.org/api/records/22151739/files/Research_Archive.zip/content"
+    },
+    "SHA256SUMS.txt": {
+      "bytes": 171,
+      "public_md5": "md5:c47ddcf56c062ee1c7fa22e010e89290",
+      "local_sha256": "BE96EEC9C0610208F867FE7258A3C7E672A63E8273C486CC09CAAE2BFCDB457B",
+      "download_url": "https://zenodo.org/api/records/22151739/files/SHA256SUMS.txt/content"
+    }
+  },
+  "public_checksum_file_content_verified": true,
+  "version_chain_record_ids": [
+    22151739,
+    22086892
+  ],
+  "new_record_is_latest_version": true,
+  "doi_resolution": "https://zenodo.org/records/22151739",
+  "old_record_deleted": false,
+  "github_release_created": false,
+  "journal_submission": false
+}

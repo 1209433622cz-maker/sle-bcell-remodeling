@@ -1,6 +1,6 @@
 {
   "assessment_date": "2026-08-29",
-  "status": "LOCAL_RELEASE_VERIFIED_AWAITING_UPLOAD_AND_PUBLICATION_CONFIRMATION",
+  "status": "PUBLIC_ZENODO_RELEASE_VERIFIED_AWAITING_OLD_RECORD_AND_GITHUB_RELEASE_CONFIRMATION",
   "completed": {
     "exact_scientific_baseline_confirmed": true,
     "author_and_ethics_declarations_confirmed": true,
@@ -36,7 +36,14 @@
     "source_code_archive_sha256": "51B1007908668F8EE25971E99270BF8477720A25ED7491BACD2F7572A4E24645",
     "source_code_commit": "f1859ff8498d5569a1d5027b36ed18c8b7c7536f",
     "checksum_file_bytes": 171,
-    "checksum_file_sha256": "BE96EEC9C0610208F867FE7258A3C7E672A63E8273C486CC09CAAE2BFCDB457B"
+    "checksum_file_sha256": "BE96EEC9C0610208F867FE7258A3C7E672A63E8273C486CC09CAAE2BFCDB457B",
+    "zenodo_files_uploaded": 3,
+    "zenodo_metadata_saved": true,
+    "new_zenodo_record_published": true,
+    "new_zenodo_record_publicly_verified": true,
+    "new_zenodo_doi_resolves": true,
+    "public_file_sizes_md5_and_sha256_verified": true,
+    "public_version_chain_verified": [22151739, 22086892]
   },
   "public_record_observation": {
     "record_id": "22086892",
@@ -59,7 +66,7 @@
     "network_or_security_settings_modified": false,
     "draft_creation_confirmation": "COMPLETED",
     "draft_creation_confirmation_scope": "Linked new-version draft and DOI reservation only; no publication or deletion",
-    "publication_confirmation": "NOT_YET_REQUESTED_AT_ACTION_TIME",
+    "publication_confirmation": "COMPLETED_FOR_EXACT_UPLOAD_METADATA_AND_PUBLICATION_SCOPE",
     "deletion_confirmation": "NOT_YET_REQUESTED_AT_ACTION_TIME"
   },
   "not_completed": {
@@ -68,7 +75,7 @@
     "new_doi": "10.5281/zenodo.22151739",
     "administrative_docx_pdf_rebuild": true,
     "new_archive_built_or_uploaded": true,
-    "new_zenodo_record_published": false,
+    "new_zenodo_record_published": true,
     "old_zenodo_record_deleted": false,
     "new_github_release_or_tag_created": false,
     "journal_submission": false
@@ -76,5 +83,5 @@
   "old_record_deletion_scope": "Record 22086892 only, after verified replacement and required action-time confirmation; no local historical artifacts, Git history, other versions or unrelated records",
   "deletion_policy_source": "https://help.zenodo.org/docs/deposit/manage-records/",
   "deletion_policy_note": "Owner deletion is described within 30 days of publication; the DOI retains a tombstone. The actual account's delete control and version-specific scope remain to be inspected.",
-  "next": "Obtain action-time confirmation to transmit the three verified files and author-identifying manuscript content to Zenodo draft 22151739, save reconciled metadata and publicly publish; verify DOI and hashes before separately requesting deletion confirmation for record 22086892"
+  "next": "Obtain separate action-time confirmation before deleting only old Zenodo record 22086892 and before creating the public GitHub v1.1.0 tag/release; do not alter the verified new Zenodo record or begin journal submission"
 }

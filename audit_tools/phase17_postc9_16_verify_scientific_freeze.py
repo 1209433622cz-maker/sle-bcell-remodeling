@@ -122,7 +122,14 @@ def main():
         "R1_decision": r1["r1_decision"], "C9R_decision": c9r["decision"],
         "corrected_external_outcome_unlock_authorized": False,
         "candidate_administrative_update": candidate,
-        "scope": "Integrity and user-confirmed scope only; no new scientific analysis, independent signatures, publication or deletion",
+        "zenodo_publication": {
+            "record_id": record.get("new_zenodo_record_id"),
+            "doi": record.get("new_zenodo_doi"),
+            "published": record.get("new_zenodo_published", False),
+            "publicly_verified": record.get("new_zenodo_publication_verified", False),
+            "old_record_deleted": record.get("old_zenodo_deleted", False),
+        },
+        "scope": "Integrity and user-confirmed scope only; no new scientific analysis, independent signatures, old-record deletion or journal submission",
         "submission_authorized": False,
     }
     output.parent.mkdir(parents=True, exist_ok=True)

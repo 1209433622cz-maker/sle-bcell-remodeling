@@ -1,5 +1,5 @@
 {
-  "status": "LOCAL_RELEASE_VERIFIED_AWAITING_UPLOAD_AND_PUBLICATION_CONFIRMATION",
+  "status": "PUBLIC_RELEASE_VERIFIED_AWAITING_OLD_RECORD_AND_GITHUB_RELEASE_DECISIONS",
   "existing_record_id": "22086892",
   "existing_version_doi": "10.5281/zenodo.22086892",
   "existing_concept_doi": "10.5281/zenodo.22086891",
