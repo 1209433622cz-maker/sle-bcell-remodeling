@@ -12,8 +12,10 @@ reference calibration; the original C9 PASS is not supporting evidence.
 - `Portal_Upload_Guide.md`
 
 `Zenodo_Metadata.json` records the initial published archive. Its DOI and author
-approval apply to that historical snapshot, not the current correction review.
-Do not reuse it as metadata for a new release without reconciliation.
+approval apply to that historical snapshot. The linked replacement draft is
+record `22151739`, with reserved DOI `10.5281/zenodo.22151739`; local release
+materials are rebuilt from the QiTeng R2 scientific freeze and are not yet public.
+Do not treat DOI reservation or a local archive check as publication.
 
 ## Generated package
 

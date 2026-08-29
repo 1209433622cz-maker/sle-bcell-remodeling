@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-08-29T09:15:14+08:00",
+  "status": "PASS_FREEZE_INTEGRITY_NOT_SCIENTIFIC_GATE_PASS",
+  "author_confirmation_sha256": "2D51FFFEAE3126946A2F8E156417F3E629A8A63FE5755FF2377AFCE348910CBD",
+  "evidence_manifest_sha256": "917B91BFFD3A87CCD562EFB8F4372B30DF9E465B67A38E8C9C3B5F57353B0880",
+  "frozen_evidence_files": 21,
+  "scientific_sections": 9,
+  "R1_decision": "HOLD_FULL_PIPELINE_TWO_COMPARTMENT_REPRODUCIBILITY",
+  "C9R_decision": "HOLD_C9A_PREFREEZE_REVIEW_REQUIRED",
+  "corrected_external_outcome_unlock_authorized": false,
+  "candidate_administrative_update": {
+    "name": "Manuscript.md",
+    "sha256": "ECA52AA68520B1D21F86E8320ED5D4B151820588385EEDC38A4699E6AA266586"
+  },
+  "scope": "Integrity and user-confirmed scope only; no new scientific analysis, independent signatures, publication or deletion",
+  "submission_authorized": false
+}

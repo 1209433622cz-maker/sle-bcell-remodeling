@@ -1,10 +1,10 @@
 {
-  "status": "PREPARED_METADATA_NOT_A_SAVED_ZENODO_DRAFT",
+  "status": "LINKED_DRAFT_CREATED_DOI_RESERVED_NOT_PUBLISHED",
   "existing_record_id": "22086892",
   "existing_version_doi": "10.5281/zenodo.22086892",
   "existing_concept_doi": "10.5281/zenodo.22086891",
-  "new_record_id": null,
-  "new_version_doi": null,
+  "new_record_id": "22151739",
+  "new_version_doi": "10.5281/zenodo.22151739",
   "proposed_version": "1.1.0",
   "title": "SLE B-cell remodeling analysis: code, source data and reproducible release",
   "resource_type": "software",
@@ -31,12 +31,11 @@
     "Superseded C9 disease effects as current supporting evidence",
     "Historical journal-specific cover letters or portal checklists presented as current approved submission files",
     "Credentials, local logs, raw matrices, per-cell recomputable caches and third-party writing-skill ZIP",
-    "A false claim that the current archive already has a reserved or published new DOI"
+    "A false claim that the reserved DOI is already registered through public publication"
   ],
   "old_record_deletion_reason_draft": "Superseded scientific archive: the initial version predates the completed end-to-end identity audit and corrected external-mapping calibration. A verified new version retains the corrected evidence boundaries and provenance. Preserve a tombstone linking to the replacement.",
   "publication_requires": [
-    "Authenticated account access and check for an existing new-version draft",
-    "Actual new-version DOI reservation before final administrative document build",
+    "Linked draft 22151739 and reserved DOI 10.5281/zenodo.22151739 remain associated with the existing version chain",
     "Frozen scientific-section equality and unchanged evidence hashes",
     "Final render and package verification after administrative updates",
     "Required action-time browser confirmation for publication and personal-data transmission"

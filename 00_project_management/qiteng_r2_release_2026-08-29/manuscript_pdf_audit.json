@@ -1,0 +1,12 @@
+{
+  "file": "04_submission/zenodo_release/manuscript/Manuscript.pdf",
+  "renderer": "WPS Office",
+  "pages": 18,
+  "bytes": 252321,
+  "sha256": "117B694FD63C3FFEE421DFCD5A94F057F460689612E7D4AAE67E4F821CB1755C",
+  "new_doi_occurrences": 2,
+  "old_doi_occurrences": 1,
+  "pending_approval_phrase_present": false,
+  "trailing_x_artifact_present": false,
+  "status": "PASS"
+}

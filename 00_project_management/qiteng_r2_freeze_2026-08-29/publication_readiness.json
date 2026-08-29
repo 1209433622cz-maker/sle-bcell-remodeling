@@ -1,6 +1,6 @@
 {
   "assessment_date": "2026-08-29",
-  "status": "SCIENTIFIC_FREEZE_CONFIRMED_AWAITING_DRAFT_CREATION_CONFIRMATION",
+  "status": "DOI_RESERVED_ADMINISTRATIVE_RELEASE_BUILD_IN_PROGRESS",
   "completed": {
     "exact_scientific_baseline_confirmed": true,
     "author_and_ethics_declarations_confirmed": true,
@@ -14,7 +14,20 @@
     "old_zenodo_public_files_total_bytes": 87820203,
     "old_backup_sha256_and_md5_verified": true,
     "old_backup_zip_crc_checks_passed": 2,
-    "new_version_metadata_plan_prepared": true
+    "new_version_metadata_plan_prepared": true,
+    "new_version_draft_created": true,
+    "new_doi_reserved": true,
+    "new_zenodo_record_id": "22151739",
+    "new_zenodo_doi": "10.5281/zenodo.22151739",
+    "administrative_docx_pdf_rebuild": true,
+    "scientific_sections_unchanged_after_doi_integration": 9,
+    "libreoffice_pages_visually_checked": 18,
+    "wps_pages_visually_checked": 18,
+    "final_pdf_renderer": "WPS Office",
+    "final_pdf_structural_audit_passed": true,
+    "docx_accessibility_high_findings": 0,
+    "docx_accessibility_medium_findings": 0,
+    "docx_accessibility_low_raw_url_findings": 5
   },
   "public_record_observation": {
     "record_id": "22086892",
@@ -35,13 +48,16 @@
     "named_zenodo_api_environment_token_configured": false,
     "browser_credentials_or_session_stores_inspected": false,
     "network_or_security_settings_modified": false,
-    "user_action_requested": "Confirm creating a linked new-version draft and reserving its DOI with the existing author identities, ORCIDs, affiliations and licenses; no publication or deletion at this step"
+    "draft_creation_confirmation": "COMPLETED",
+    "draft_creation_confirmation_scope": "Linked new-version draft and DOI reservation only; no publication or deletion",
+    "publication_confirmation": "NOT_YET_REQUESTED_AT_ACTION_TIME",
+    "deletion_confirmation": "NOT_YET_REQUESTED_AT_ACTION_TIME"
   },
   "not_completed": {
-    "new_version_draft_created_or_recovered": false,
-    "new_doi_reserved": false,
-    "new_doi": null,
-    "administrative_docx_pdf_rebuild": false,
+    "new_version_draft_created_or_recovered": true,
+    "new_doi_reserved": true,
+    "new_doi": "10.5281/zenodo.22151739",
+    "administrative_docx_pdf_rebuild": true,
     "new_archive_built_or_uploaded": false,
     "new_zenodo_record_published": false,
     "old_zenodo_record_deleted": false,
@@ -51,5 +67,5 @@
   "old_record_deletion_scope": "Record 22086892 only, after verified replacement and required action-time confirmation; no local historical artifacts, Git history, other versions or unrelated records",
   "deletion_policy_source": "https://help.zenodo.org/docs/deposit/manage-records/",
   "deletion_policy_note": "Owner deletion is described within 30 days of publication; the DOI retains a tombstone. The actual account's delete control and version-specific scope remain to be inspected.",
-  "next": "After draft-creation confirmation, create a linked new-version draft and reserve its actual DOI, build and verify the administrative-only update and archive, publish and verify, then process the specified old record"
+  "next": "Build and verify the administrative-only update and archive for reserved DOI 10.5281/zenodo.22151739, obtain action-time upload/publication confirmation, publish and verify, then obtain deletion confirmation and process only the specified old record"
 }

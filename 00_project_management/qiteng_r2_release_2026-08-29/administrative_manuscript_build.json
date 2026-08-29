@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-08-29T09:10:01+08:00",
+  "status": "PASS_ADMINISTRATIVE_DOI_INTEGRATION_NOT_PUBLICATION",
+  "reserved_doi": "10.5281/zenodo.22151739",
+  "zenodo_record_id": "22151739",
+  "source_files": [
+    {
+      "name": "Manuscript.docx",
+      "bytes": 37842,
+      "sha256": "F6DB97C146A6DC41EED1910C0D0E5FCAA03C9A03EACF29EDA2CFB9F3803BBE0B"
+    },
+    {
+      "name": "Manuscript.md",
+      "bytes": 63712,
+      "sha256": "D383FF7605144531DF8E6CF1F3DC710561ABB2D88E3B957EAE0DD94ABD8F7A32"
+    }
+  ],
+  "output_files": [
+    {
+      "name": "Manuscript.docx",
+      "bytes": 37793,
+      "sha256": "3D8155E204241BA7C33F4CDE820F5D1B858EDB9713A5740453A97DC0410BF8C6"
+    },
+    {
+      "name": "Manuscript.md",
+      "bytes": 63673,
+      "sha256": "ECA52AA68520B1D21F86E8320ED5D4B151820588385EEDC38A4699E6AA266586"
+    }
+  ],
+  "changed_docx_paragraphs": [
+    109,
+    115,
+    168
+  ],
+  "changes": [
+    "Data Availability: replace the required-future archive statement with the reserved version DOI and retain the superseded DOI",
+    "Authors' contributions: replace the historical pending sentence with the reported author-confirmed scope",
+    "Reference 32: cite the reserved version DOI"
+  ],
+  "scientific_section_sha256": {
+    "Title": "D211855481DD8A0BA3634763C849AA9645725148B72C78F22D50A62A929FF06E",
+    "Abstract": "127E394611999962C7B34E320E93FCCEBC5A6C0369B53908669D5A34C8B69F0B",
+    "Background": "6E00A50083C25D65CE4D7FD1EBFC179DCBACEFFC20A51AB982BA115A389DFA9C",
+    "Methods": "8FAEA59F90A335613D197A666F14CB9B81A84505684487E5405084767F98619C",
+    "Results": "3249BE78FB3A95A88AC0E072A5158E50D17F31450EE92F631B124541634EF9F0",
+    "Discussion": "DB0A0A0D29452D8B9A6DDAD59390173D299E098017748C60348D333AEEC04681",
+    "Conclusions": "D973FA1A1B70ED9B287A99F4536B8D6BB9143F6581831F40163722A5EED7C9DC",
+    "List of abbreviations": "5C7DF868DB5605CE4059D5AA185A92E640FB45401980498924C70CBB3828BC30",
+    "Figure legends": "54F8C0161FE71D4D2DF97A40842380C30628B9FF38A15D0A603308E6D598BCED"
+  },
+  "scientific_sections_unchanged": true,
+  "reference_count": 32,
+  "publication_claimed": false,
+  "submission_authorized": false
+}

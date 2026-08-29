@@ -18,7 +18,10 @@
   "old_zenodo_record_deletion_requested": true,
   "old_zenodo_record_to_delete": "22086892",
   "old_version_deletion_condition": "Only after a matching new version is published and verified; use the platform deletion workflow, preserve tombstone, local evidence and Git history",
-  "browser_action_time_confirmation_completed": false,
+  "browser_action_time_confirmation_completed": true,
+  "browser_action_time_confirmation_scope": "Create a linked new-version draft for record 22086892 and reserve a DOI while carrying forward the existing authors, ORCIDs, affiliations and licenses; no publication or deletion",
+  "browser_publication_confirmation_completed": false,
+  "browser_deletion_confirmation_completed": false,
   "submission_authorized": false,
   "apc_commitment_authorized": false,
   "corrected_external_outcome_unlock_authorized": false,
@@ -48,7 +51,9 @@
     "Insert the actually reserved new archive DOI in Data Availability and the archive reference",
     "Update release provenance and license metadata without changing scientific claims"
   ],
-  "new_zenodo_doi": null,
+  "new_zenodo_record_id": "22151739",
+  "new_zenodo_doi": "10.5281/zenodo.22151739",
+  "new_zenodo_draft_created": true,
   "new_zenodo_published": false,
   "old_zenodo_deleted": false
 }
