@@ -1,6 +1,6 @@
 {
-  "created_at": "2026-08-30",
-  "status": "PASS_NPJ_SBA_SOURCE_RERENDER_ARTIFACT_CONTRACT_PENDING_VISUAL_REVIEW",
+  "created_at": "2026-08-30T21:58:43+08:00",
+  "status": "PASS_NPJ_SBA_S8_LAYOUT_REPAIR_SOURCE_DATA_FROZEN",
   "figure_count": 15,
   "main_figures": 5,
   "supplementary_figures": 10,
@@ -158,9 +158,9 @@
     },
     "Supplementary_Figure_S8.pdf": {
       "width_mm": 170.0,
-      "height_mm": 215.0,
-      "bytes": 49922,
-      "sha256": "1BE2F0152C0B51CFCED8BD1DD79D34C5F80FD4AC490D30BA712E723994766D81"
+      "height_mm": 155.0,
+      "bytes": 48658,
+      "sha256": "1AD5B47752A44B27107E12A4EE94343404B7AB12F59C8D697988AC854A52E665"
     },
     "Supplementary_Figure_S9.pdf": {
       "width_mm": 170.0,
@@ -419,8 +419,8 @@
       "minimum_visible_text_pt": 8.0,
       "maximum_visible_text_pt": 8.0,
       "minimum_positive_line_width_pt": 1.0,
-      "visible_text_spans": 117,
-      "vector_drawings_with_positive_width": 115
+      "visible_text_spans": 131,
+      "vector_drawings_with_positive_width": 110
     },
     "Supplementary_Figure_S9.pdf": {
       "checks": {
@@ -446,5 +446,6 @@
   "plotted_numeric_values_changed": false,
   "R1_decision": "HOLD_FULL_PIPELINE_TWO_COMPARTMENT_REPRODUCIBILITY",
   "C9R_decision": "HOLD_C9A_PREFREEZE_REVIEW_REQUIRED",
-  "corrected_external_outcome_unlock_authorized": false
+  "corrected_external_outcome_unlock_authorized": false,
+  "layout_only_repair": "Supplementary Figure S8: 170 x 215 mm to 170 x 155 mm"
 }

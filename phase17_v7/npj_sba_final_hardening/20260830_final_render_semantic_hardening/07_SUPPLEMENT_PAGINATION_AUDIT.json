@@ -1,0 +1,129 @@
+{
+  "created_at": "2026-08-30T21:48:23+08:00",
+  "status": "PASS_SUPPLEMENT_PAGINATION_COHERENCE",
+  "checks": {
+    "wps_17_pages": true,
+    "libreoffice_17_pages": true,
+    "wps_all_supplementary_figures_same_page": true,
+    "libreoffice_all_supplementary_figures_same_page": true,
+    "wps_s8_same_page": true,
+    "libreoffice_s8_same_page": true
+  },
+  "failed_checks": [],
+  "wps": {
+    "pdf": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_final_hardening\\20260830_final_render_semantic_hardening\\documents\\Supplementary_Information.pdf",
+    "pages": 17,
+    "figures": {
+      "S1": {
+        "heading_page": 8,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      },
+      "S2": {
+        "heading_page": 9,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      },
+      "S3": {
+        "heading_page": 10,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      },
+      "S4": {
+        "heading_page": 11,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      },
+      "S5": {
+        "heading_page": 12,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      },
+      "S6": {
+        "heading_page": 13,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      },
+      "S7": {
+        "heading_page": 14,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      },
+      "S8": {
+        "heading_page": 15,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      },
+      "S9": {
+        "heading_page": 16,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      },
+      "S10": {
+        "heading_page": 17,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      }
+    },
+    "all_heading_figure_pairs_same_page": true,
+    "s8_same_page": true
+  },
+  "libreoffice": {
+    "pdf": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_final_hardening\\20260830_final_render_semantic_hardening\\libreoffice_documents\\Supplementary_Information.pdf",
+    "pages": 17,
+    "figures": {
+      "S1": {
+        "heading_page": 8,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      },
+      "S2": {
+        "heading_page": 9,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      },
+      "S3": {
+        "heading_page": 10,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      },
+      "S4": {
+        "heading_page": 11,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      },
+      "S5": {
+        "heading_page": 12,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      },
+      "S6": {
+        "heading_page": 13,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      },
+      "S7": {
+        "heading_page": 14,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      },
+      "S8": {
+        "heading_page": 15,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      },
+      "S9": {
+        "heading_page": 16,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      },
+      "S10": {
+        "heading_page": 17,
+        "image_count_on_heading_page": 1,
+        "same_page": true
+      }
+    },
+    "all_heading_figure_pairs_same_page": true,
+    "s8_same_page": true
+  }
+}

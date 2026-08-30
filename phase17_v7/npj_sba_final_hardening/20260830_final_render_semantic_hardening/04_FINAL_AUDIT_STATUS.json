@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-08-30T11:07:04+08:00",
+  "created_at": "2026-08-30T22:04:21+08:00",
   "status": "PASS_NPJ_SBA_FINAL_HARDENING_AUTHOR_APPROVAL_REQUIRED",
   "checks": {
     "source_gate_pass": true,
@@ -29,7 +29,9 @@
     "wps_all_markers_resolved": true,
     "cross_renderer_page_counts_match": true,
     "cross_renderer_all_pages_within_canvas": true,
-    "supplement_is_one_18_page_pdf": true,
+    "supplement_is_one_17_page_pdf": true,
+    "supplement_pagination_gate_pass": true,
+    "supplement_all_figure_heading_pairs_same_page_both_renderers": true,
     "accessibility_zero_findings": true,
     "statistics_reporting_map_complete": true,
     "statistics_map_contains_hold_boundaries": true,
@@ -45,7 +47,7 @@
   "page_counts": {
     "Cover_Letter.pdf": 1,
     "Manuscript.pdf": 31,
-    "Supplementary_Information.pdf": 18
+    "Supplementary_Information.pdf": 17
   },
   "figure_pages": {
     "Figure_1.pdf": 1,
@@ -73,12 +75,12 @@
   },
   "package": {
     "receipt": {
-      "created_at": "2026-08-30T11:07:03+08:00",
+      "created_at": "2026-08-30T21:48:51+08:00",
       "status": "PASS_NPJ_SBA_FINAL_HARDENING_AUTHOR_APPROVAL_REQUIRED",
       "package_directory": "04_submission/npj_systems_biology_and_applications/SLE_Bcell_npj_Systems_Biology_and_Applications",
       "package_zip": "04_submission/npj_systems_biology_and_applications/SLE_Bcell_npj_Systems_Biology_and_Applications.zip",
-      "package_zip_bytes": 15221543,
-      "package_zip_sha256": "F4F8C49380A32A49BA4BFAF4235D979964779757CCD362A8AEA0D4D07B8D8BFD",
+      "package_zip_bytes": 15196223,
+      "package_zip_sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1",
       "manifest_files_verified": 20,
       "deterministic_double_build": true,
       "main_figures": 5,
@@ -96,8 +98,8 @@
     "zip_crc_valid": true
   },
   "manual_visual_review": {
-    "wps_all_50_pages_reviewed": true,
-    "libreoffice_all_50_pages_cross_reviewed": true,
+    "wps_all_49_pages_reviewed": true,
+    "libreoffice_all_49_pages_cross_reviewed": true,
     "all_15_figure_contact_sheets_and_high_risk_panels_reviewed": true,
     "clipping_overlap_missing_labels": false
   },

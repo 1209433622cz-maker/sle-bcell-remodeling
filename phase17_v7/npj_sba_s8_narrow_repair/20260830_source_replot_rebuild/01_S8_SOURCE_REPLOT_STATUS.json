@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-08-30T21:58:43+08:00",
+  "status": "PASS_S8_SOURCE_REPLOT_LAYOUT_ONLY",
+  "source_data": {
+    "rows": 36,
+    "sha256_before": "26A3F90E3165D8928874F278384B2587CB549DD4FFDE93440AAC4CEEAE06A9A2",
+    "sha256_after": "26A3F90E3165D8928874F278384B2587CB549DD4FFDE93440AAC4CEEAE06A9A2",
+    "byte_identical_to_frozen_baseline": true
+  },
+  "figure": {
+    "pdf": "phase17_v7/npj_sba_final_hardening/20260830_final_render_semantic_hardening/figures/figures/Supplementary_Figure_S8_overlap_depletion.pdf",
+    "png": "phase17_v7/npj_sba_final_hardening/20260830_final_render_semantic_hardening/figures/figures/Supplementary_Figure_S8_overlap_depletion.png",
+    "width_mm": 170.0,
+    "height_mm": 155.0,
+    "pdf_sha256": "1AD5B47752A44B27107E12A4EE94343404B7AB12F59C8D697988AC854A52E665",
+    "png_sha256": "278943D51FCA9DA27BBEE62ED98EEA17DD92C42BAACC7F95E4B84121AE674BE6",
+    "artifact_postflight": {
+      "checks": {
+        "single_page": true,
+        "arial_or_helvetica_compatible": true,
+        "all_visible_text_8pt": true,
+        "minimum_positive_line_width_1pt": true,
+        "all_text_within_page": true
+      },
+      "font_names": [
+        "Arial-BoldMT",
+        "ArialMT"
+      ],
+      "minimum_visible_text_pt": 8.0,
+      "maximum_visible_text_pt": 8.0,
+      "minimum_positive_line_width_pt": 1.0,
+      "visible_text_spans": 131,
+      "vector_drawings_with_positive_width": 110
+    }
+  },
+  "changed_figure_artifacts": [
+    "figures/Supplementary_Figure_S8_overlap_depletion.pdf"
+  ],
+  "authorized_changed_figure_artifacts": [
+    "figures/Supplementary_Figure_S8_overlap_depletion.pdf",
+    "figures/Supplementary_Figure_S8_overlap_depletion.png"
+  ],
+  "unchanged_figure_artifacts": 29,
+  "scientific_reanalysis": false,
+  "plotted_numeric_values_changed": false,
+  "manuscript_changed": false,
+  "public_release_changed": false
+}

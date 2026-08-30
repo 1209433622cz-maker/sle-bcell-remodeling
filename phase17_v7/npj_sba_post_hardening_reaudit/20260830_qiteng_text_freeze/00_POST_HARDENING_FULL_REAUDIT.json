@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-08-30T12:37:03+08:00",
+  "created_at": "2026-08-30T22:01:52+08:00",
   "status": "PASS_NPJ_SBA_POST_HARDENING_REAUDIT_TEXT_FREEZE",
-  "base_commit": "a960fa81c730cd3f6da5f81ace6a9212bc4ede1f",
+  "base_commit": "a6050a779d32324d8085f543221da5ffcb545ace",
   "checks": {
     "authoritative_baseline_a960fa8_is_ancestor": true,
     "readme_r1_wording_corrected": true,
@@ -41,8 +41,8 @@
   "failed_checks": [],
   "manuscript_sha256": "9D9B39E919CF695BA4290C69B0C1665E566E6943F3763C3771DFDE9B7DCAC043",
   "package": {
-    "bytes": 15221543,
-    "sha256": "F4F8C49380A32A49BA4BFAF4235D979964779757CCD362A8AEA0D4D07B8D8BFD",
+    "bytes": 15196223,
+    "sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1",
     "unchanged_by_documentation_patch": true
   },
   "document_object_inventory": {

@@ -33,10 +33,10 @@ Corresponding author:
 Package:
 `04_submission/npj_systems_biology_and_applications/SLE_Bcell_npj_Systems_Biology_and_Applications.zip`
 
-Bytes: `15221543`
+Bytes: `15196223`
 
 SHA-256:
-`F4F8C49380A32A49BA4BFAF4235D979964779757CCD362A8AEA0D4D07B8D8BFD`
+`02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1`
 
 The package contains 20 manifest-controlled files. Its internal verifier passes
 all 20 entries. The author-facing approval applies to the content files below;
@@ -47,20 +47,20 @@ provenance aids and are not default portal uploads.
 
 | Role | Relative path | SHA-256 |
 |---|---|---|
-| Manuscript editable file | `01_Manuscript/Manuscript.docx` | `3B98020C7C77871BEEAD3F5DC774703C7376A305BC362E6DB3E9EF8198490EAF` |
-| Manuscript review rendering | `01_Manuscript/Manuscript.pdf` | `272A3453D47A0545C340ACD6B8B2CABB60028AAF826BA9B54680CAEAE418C79E` |
+| Manuscript editable file | `01_Manuscript/Manuscript.docx` | `8BAE911350274C491B21F47B9626DBD5496B99923F5106EFCE60FC84E984A88F` |
+| Manuscript review rendering | `01_Manuscript/Manuscript.pdf` | `667412A5DB80B9B48880C1E25FB594788A49C71050F871B5FDADC27E5EAF79D1` |
 | Main Figure 1 | `02_Main_Figures/Figure_1.pdf` | `544F65A6DC60B2B498D5B9184C30CC06016BE351A4E3BBA8BAF6E1F694148BF4` |
 | Main Figure 2 | `02_Main_Figures/Figure_2.pdf` | `F45A56B2496AF85E6D30AE0277EFEE53AEDE8344219D35104B243AF62A72C3EA` |
 | Main Figure 3 | `02_Main_Figures/Figure_3.pdf` | `54D584D1747107EE72537FE2D09E5A28177E0A1608519D29307B72203DFDD4C7` |
 | Main Figure 4 | `02_Main_Figures/Figure_4.pdf` | `0FE897BA5559D6125BBD756104687E99A1907CC6B0537569CF76FC6E56E5198B` |
 | Main Figure 5 | `02_Main_Figures/Figure_5.pdf` | `8F7F2FBD687A1EC8A0D0E395AC801DABADFEC89A9C22CDFDBE71188C59CC30CC` |
-| Supplementary Information | `03_Supplementary_Information/Supplementary_Information.pdf` | `A52E255284F68411DF10222A50A9E8AABE4A359BC150E46919108B91AEB37BA4` |
+| Supplementary Information | `03_Supplementary_Information/Supplementary_Information.pdf` | `0882D26BA305C301FBAF08E24EBD4BDDC950045034CE97BE00EABE4485E69CF7` |
 | Supplementary Data 1 | `04_Supplementary_Data/Supplementary_Data_1_Figure_Source_Data.zip` | `79CB89AE4E0D0E14E5C8A9883BC667025478FE45302FF8134247ED869C62576D` |
 | Supplementary Data 2 | `04_Supplementary_Data/Supplementary_Data_2_Regulator_Sensitivity.zip` | `C1F40EB90D344A150D61DE472C9F6B37FA9470CDD2CD0BBC45988D18B8CEA7F8` |
 | Supplementary Data 3 | `04_Supplementary_Data/Supplementary_Data_3_Full_Statistical_Results.zip` | `A3E1F5328BBF8A84C55FF075FD15D50DDB4AF7CA65ED700DE3C7820D1664314D` |
 | Author and declaration record | `05_Administrative/Authors_and_Declarations.md` | `80E80F3956198211CCF90F47F855A78DD6CD4CEA4E67DA102432DCCEF4E8C2A5` |
-| Cover letter editable file | `05_Administrative/Cover_Letter.docx` | `5A161E178712BBA458E6AB72F13F5B3D128DD96853F32D3650550DE39DC055FE` |
-| Cover letter review rendering | `05_Administrative/Cover_Letter.pdf` | `E4F9094B0BFFCB2B7089F89007EF4BE9D2F1519C07B6EEE155A918BC3E771837` |
+| Cover letter editable file | `05_Administrative/Cover_Letter.docx` | `452008E9234FA186416B404DA8B551C4316A995D89BCC70F2354F62FFBAEA6A7` |
+| Cover letter review rendering | `05_Administrative/Cover_Letter.pdf` | `F706B86DE64793DBC422EC5608C139F5C59E1F88702CFEFB1182444BDF531495` |
 
 ## Scientific and publication statements
 

@@ -6,7 +6,7 @@ scientific or target-formatted manuscript baseline.
 
 Current state:
 
-- Technical candidate: frozen and integrity-valid.
+- Technical candidate: refrozen and integrity-valid after the source-level S8 pagination repair.
 - Exact-file approval by Zhi Chen: pending.
 - Exact-file approval by Teng Qi: pending.
 - Portal submission authorization: pending.

@@ -1,39 +1,39 @@
 {
-  "created_at": "2026-08-30T11:06:14+08:00",
+  "created_at": "2026-08-30T21:42:57+08:00",
   "engine": "WPS PDF export followed by Poppler 110-dpi page rendering",
   "document_hashes": [
     {
       "file": "Cover_Letter.pdf",
       "bytes": 68230,
-      "sha256": "E4F9094B0BFFCB2B7089F89007EF4BE9D2F1519C07B6EEE155A918BC3E771837"
+      "sha256": "F706B86DE64793DBC422EC5608C139F5C59E1F88702CFEFB1182444BDF531495"
     },
     {
       "file": "Cover_Letter.docx",
       "bytes": 39535,
-      "sha256": "5A161E178712BBA458E6AB72F13F5B3D128DD96853F32D3650550DE39DC055FE"
+      "sha256": "452008E9234FA186416B404DA8B551C4316A995D89BCC70F2354F62FFBAEA6A7"
     },
     {
       "file": "Manuscript.pdf",
       "bytes": 240950,
-      "sha256": "272A3453D47A0545C340ACD6B8B2CABB60028AAF826BA9B54680CAEAE418C79E"
+      "sha256": "667412A5DB80B9B48880C1E25FB594788A49C71050F871B5FDADC27E5EAF79D1"
     },
     {
       "file": "Manuscript.docx",
       "bytes": 60845,
-      "sha256": "3B98020C7C77871BEEAD3F5DC774703C7376A305BC362E6DB3E9EF8198490EAF"
+      "sha256": "8BAE911350274C491B21F47B9626DBD5496B99923F5106EFCE60FC84E984A88F"
     },
     {
       "file": "Supplementary_Information.pdf",
-      "bytes": 5754495,
-      "sha256": "A52E255284F68411DF10222A50A9E8AABE4A359BC150E46919108B91AEB37BA4"
+      "bytes": 5668048,
+      "sha256": "0882D26BA305C301FBAF08E24EBD4BDDC950045034CE97BE00EABE4485E69CF7"
     },
     {
       "file": "Supplementary_Information.docx",
-      "bytes": 4747342,
-      "sha256": "A08760EBA472E47EEDA53D0655D3AFE917E0CDE5D3AE4F9116E8DD95B86D42AA"
+      "bytes": 4689189,
+      "sha256": "EC6199C2A29D3C599B975942504322C21FE01C08BD843C7FF31FA1C3DFAF86AB"
     }
   ],
-  "pages": 50,
+  "pages": 49,
   "page_checks": [
     {
       "document": "Cover_Letter.pdf",
@@ -414,14 +414,6 @@
     {
       "document": "Supplementary_Information.pdf",
       "page": 16,
-      "text_characters": 34,
-      "outside_page_text": [],
-      "unresolved_markers": false,
-      "document_inline_figures": 10
-    },
-    {
-      "document": "Supplementary_Information.pdf",
-      "page": 17,
       "text_characters": 1031,
       "outside_page_text": [],
       "unresolved_markers": false,
@@ -429,7 +421,7 @@
     },
     {
       "document": "Supplementary_Information.pdf",
-      "page": 18,
+      "page": 17,
       "text_characters": 969,
       "outside_page_text": [],
       "unresolved_markers": false,

@@ -164,7 +164,11 @@ Git-ignored npj SBA package is at
 `04_submission/npj_systems_biology_and_applications/SLE_Bcell_npj_Systems_Biology_and_Applications.zip`;
 its tracked build receipt records 20 verified files, deterministic double-build
 identity and SHA-256
-`F4F8C49380A32A49BA4BFAF4235D979964779757CCD362A8AEA0D4D07B8D8BFD`.
+`02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1`.
+The target package was narrowly refrozen after source-replotting Supplementary
+Figure S8 at 170 x 155 mm; its 36-row source table remains byte-identical and
+all ten supplementary figure heading/figure pairs now co-locate in both WPS
+and LibreOffice renders.
 The historical `04_submission/journal_submission/` directory is preserved;
 Git tracks its reader-facing README, manifests, portal maps and
 11-file REQUIRED upload set, while internal renders and duplicate working assets
@@ -265,7 +269,7 @@ package. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for current entry points.
 QiTeng R2 scientific prose, declarations and ethics are author-confirmed, the
 matching Zenodo/GitHub reproducibility release is complete, and the bounded npj
 SBA adaptation has passed technical hardening. WPS and LibreOffice each rendered
-50 pages (31 manuscript, 18 supplement and one cover-letter page); all pages
+49 pages (31 manuscript, 17 supplement and one cover-letter page); all pages
 were visually reviewed, and all three DOCX accessibility audits returned zero
 high, medium and low findings.
 

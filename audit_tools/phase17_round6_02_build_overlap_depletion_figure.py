@@ -22,6 +22,7 @@ RESULT_PATH = RUN_DIR / "01_OVERLAP_DEPLETION_RESULTS.csv"
 FIGURE_DIR = RUN_DIR / "figures"
 SOURCE_DIR = RUN_DIR / "source_data"
 WIDTH_MM = 170.0
+NPJ_HEIGHT_MM = 155.0
 
 COLORS = {
     "STAT1": "#2C6EAD",
@@ -111,7 +112,14 @@ def forest(axis: plt.Axes, rows: pd.DataFrame, label: str, title: str) -> None:
         axis.axhline(separator, color="#E5E5E5", lw=0.55)
     axis.set_yticks(
         y,
-        [f"{CONTRAST_LABELS[row.contrast]}  {row.regulator}" for row in rows.itertuples()],
+        [
+            (
+                f"{CONTRAST_LABELS[row.contrast]}\n{row.regulator}"
+                if os.environ.get("NPJ_SBA_STYLE") == "1"
+                else f"{CONTRAST_LABELS[row.contrast]}  {row.regulator}"
+            )
+            for row in rows.itertuples()
+        ],
     )
     axis.set_xlabel("ULM activity slope (95% CI)")
     axis.set_title(title, loc="left", pad=4)
@@ -143,9 +151,12 @@ def main() -> None:
     source_path = SOURCE_DIR / "Supplementary_Figure_S8_source_data.csv"
     depleted.to_csv(source_path, index=False, lineterminator="\n")
 
-    if os.environ.get("NPJ_SBA_STYLE") == "1":
-        figure = plt.figure(figsize=(WIDTH_MM / 25.4, 215 / 25.4), constrained_layout=True)
-        grid = figure.add_gridspec(3, 2, height_ratios=(1.0, 0.82, 0.92))
+    npj_style = os.environ.get("NPJ_SBA_STYLE") == "1"
+    if npj_style:
+        figure = plt.figure(
+            figsize=(WIDTH_MM / 25.4, NPJ_HEIGHT_MM / 25.4), constrained_layout=True
+        )
+        grid = figure.add_gridspec(3, 2, height_ratios=(0.95, 0.92, 0.83))
         axes = np.empty((2, 2), dtype=object)
         axes[0, 0] = figure.add_subplot(grid[0, 0])
         axes[0, 1] = figure.add_subplot(grid[0, 1])
@@ -196,8 +207,8 @@ def main() -> None:
     axis.set_xticks(
         np.arange(len(column_order)),
         [f"{CONTRAST_LABELS[c].split()[0]}\n{r}" for c, r in column_order],
-        rotation=35,
-        ha="right",
+        rotation=0 if npj_style else 35,
+        ha="center" if npj_style else "right",
     )
     axis.set_yticks(
         np.arange(len(row_order)),
@@ -205,15 +216,27 @@ def main() -> None:
     )
     axis.set_title("Dedicated six-test BH q values", loc="left", pad=4)
     panel_label(axis, "c")
-    colorbar = figure.colorbar(image, ax=axis, fraction=0.045, pad=0.03)
-    colorbar.set_label("-log10(q)", fontsize=6)
-    colorbar.ax.tick_params(labelsize=5.5, width=0.6, length=2)
+    if npj_style:
+        axis.text(
+            0.995,
+            1.03,
+            "Fill: -log10(q)",
+            transform=axis.transAxes,
+            ha="right",
+            va="bottom",
+            color="#555555",
+        )
+    else:
+        colorbar = figure.colorbar(image, ax=axis, fraction=0.045, pad=0.03)
+        colorbar.set_label("-log10(q)", fontsize=6)
+        colorbar.ax.tick_params(labelsize=5.5, width=0.6, length=2)
 
     axis = axes[1, 1]
     retention = ulm.copy()
-    retention["label"] = retention["contrast"].map(CONTRAST_LABELS) + "  " + retention["regulator"]
+    separator = "\n" if npj_style else "  "
+    retention["label"] = retention["contrast"].map(CONTRAST_LABELS) + separator + retention["regulator"]
     label_order = [
-        f"{CONTRAST_LABELS[contrast]}  {regulator}"
+        f"{CONTRAST_LABELS[contrast]}{separator}{regulator}"
         for contrast in ("gse174188_primary", "gse174188_internal_nonoverlap", "gse135779_childhood")
         for regulator in ("STAT1", "STAT2")
     ]
@@ -235,11 +258,14 @@ def main() -> None:
             zorder=3,
         )
     axis.axvline(100, color="#777777", lw=0.65, ls="--")
-    axis.set_xlim(50, 103)
+    axis.set_xlim(50, 116 if npj_style else 103)
     axis.set_yticks(y_positions, label_order)
     axis.set_xlabel("Frozen targets retained (%)")
     axis.set_title("Regulon target retention", loc="left", pad=4)
-    axis.legend(frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.17))
+    if npj_style:
+        axis.legend(frameon=False, loc="center right", bbox_to_anchor=(0.995, 0.28))
+    else:
+        axis.legend(frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.17))
     style_axis(axis)
     panel_label(axis, "d")
 
@@ -257,6 +283,8 @@ def main() -> None:
     height_mm = float(page.mediabox.height) * 25.4 / 72
     if abs(width_mm - WIDTH_MM) > 0.2:
         raise RuntimeError(f"Unexpected supplementary figure width: {width_mm:.3f} mm")
+    if npj_style and abs(height_mm - NPJ_HEIGHT_MM) > 0.2:
+        raise RuntimeError(f"Unexpected npj supplementary figure height: {height_mm:.3f} mm")
     status = {
         "created_at": datetime.now().astimezone().isoformat(timespec="seconds"),
         "analysis_source_date": "2026-08-25",

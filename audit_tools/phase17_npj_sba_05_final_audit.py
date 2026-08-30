@@ -96,6 +96,7 @@ def main() -> None:
     document = load_json(RUN / "02_DOCUMENT_BUILD_STATUS.json")
     wps = load_json(RUN / "05_WPS_RENDER_AUDIT.json")
     libreoffice = load_json(RUN / "06_LIBREOFFICE_RENDER_AUDIT.json")
+    pagination = load_json(RUN / "07_SUPPLEMENT_PAGINATION_AUDIT.json")
     package_pass, package = audit_package()
     accessibility_pass, accessibility = audit_accessibility()
 
@@ -109,7 +110,7 @@ def main() -> None:
     expected_pages = {
         "Cover_Letter.pdf": 1,
         "Manuscript.pdf": 31,
-        "Supplementary_Information.pdf": 18,
+        "Supplementary_Information.pdf": 17,
     }
     main_figure_pages = {
         f"Figure_{number}.pdf": len(PdfReader(RUN / "portal_figures" / f"Figure_{number}.pdf").pages)
@@ -164,7 +165,11 @@ def main() -> None:
         "wps_all_markers_resolved": wps["all_markers_resolved"] is True,
         "cross_renderer_page_counts_match": libreoffice_pages == expected_pages,
         "cross_renderer_all_pages_within_canvas": libreoffice["all_pages_within_canvas"] is True,
-        "supplement_is_one_18_page_pdf": supplement_pdf_pages == 18,
+        "supplement_is_one_17_page_pdf": supplement_pdf_pages == 17,
+        "supplement_pagination_gate_pass": pagination["status"] == "PASS_SUPPLEMENT_PAGINATION_COHERENCE",
+        "supplement_all_figure_heading_pairs_same_page_both_renderers": all(
+            pagination["checks"].values()
+        ),
         "accessibility_zero_findings": accessibility_pass,
         "statistics_reporting_map_complete": len(reporting_map) == 12,
         "statistics_map_contains_hold_boundaries": {"R1", "C9R"}.issubset(
@@ -204,8 +209,8 @@ def main() -> None:
         "accessibility": accessibility,
         "package": package,
         "manual_visual_review": {
-            "wps_all_50_pages_reviewed": True,
-            "libreoffice_all_50_pages_cross_reviewed": True,
+            "wps_all_49_pages_reviewed": True,
+            "libreoffice_all_49_pages_cross_reviewed": True,
             "all_15_figure_contact_sheets_and_high_risk_panels_reviewed": True,
             "clipping_overlap_missing_labels": False,
         },

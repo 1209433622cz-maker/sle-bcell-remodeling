@@ -1,12 +1,12 @@
 {
-  "created_at": "2026-08-30T11:05:25+08:00",
+  "created_at": "2026-08-30T21:58:43+08:00",
   "analysis_source_date": "2026-08-25",
   "status": "PASS_ROUND6_SUPPLEMENTARY_FIGURE_S8_BUILT",
   "figure_pdf": "phase17_v7/npj_sba_final_hardening/20260830_final_render_semantic_hardening/figures/figures/Supplementary_Figure_S8_overlap_depletion.pdf",
   "figure_png": "phase17_v7/npj_sba_final_hardening/20260830_final_render_semantic_hardening/figures/figures/Supplementary_Figure_S8_overlap_depletion.png",
   "source_data": "phase17_v7/npj_sba_final_hardening/20260830_final_render_semantic_hardening/figures/source_data/Supplementary_Figure_S8_source_data.csv",
   "width_mm": 170.0,
-  "height_mm": 215.0,
+  "height_mm": 155.0,
   "source_rows": 36,
   "all_depleted_directions_up": true
 }

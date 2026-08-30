@@ -37,7 +37,7 @@ PACKAGE_ZIP = (
     / "04_submission/npj_systems_biology_and_applications/"
     "SLE_Bcell_npj_Systems_Biology_and_Applications.zip"
 )
-EXPECTED_PACKAGE_SHA256 = "F4F8C49380A32A49BA4BFAF4235D979964779757CCD362A8AEA0D4D07B8D8BFD"
+EXPECTED_PACKAGE_SHA256 = "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1"
 EXPECTED_TITLE = (
     "Disease-blind reconstruction distinguishes reproducible interferon remodeling from "
     "unstable B-cell state assignments in systemic lupus erythematosus"

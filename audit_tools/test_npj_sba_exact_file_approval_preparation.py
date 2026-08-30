@@ -34,13 +34,17 @@ class NpjSbaExactFileApprovalPreparationTests(unittest.TestCase):
         self.assertFalse(self.status["apc_commitment_authorized"])
 
     def test_package_is_exact_and_science_is_unchanged(self):
-        self.assertEqual(self.status["package_bytes"], 15221543)
+        self.assertEqual(self.status["package_bytes"], 15196223)
         self.assertEqual(
             self.status["package_sha256"],
-            "F4F8C49380A32A49BA4BFAF4235D979964779757CCD362A8AEA0D4D07B8D8BFD",
+            "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1",
         )
         self.assertFalse(self.status["scientific_analysis_rerun"])
-        self.assertFalse(self.status["manuscript_or_figure_changed"])
+        self.assertFalse(self.status["manuscript_text_changed"])
+        self.assertTrue(self.status["supplementary_figure_s8_layout_changed"])
+        self.assertTrue(self.status["manuscript_or_figure_changed"])
+        self.assertTrue(self.status["checks"]["approval_contract_package_identity_exact"])
+        self.assertTrue(self.status["checks"]["approval_contract_content_hashes_match_manifest"])
 
     def test_author_and_external_receipts_remain_pending(self):
         self.assertFalse(self.status["author_approval_complete"])

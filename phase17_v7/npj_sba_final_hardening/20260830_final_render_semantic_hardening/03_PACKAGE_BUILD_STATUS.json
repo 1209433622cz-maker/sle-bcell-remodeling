@@ -1,10 +1,10 @@
 {
-  "created_at": "2026-08-30T11:07:03+08:00",
+  "created_at": "2026-08-30T21:48:51+08:00",
   "status": "PASS_NPJ_SBA_FINAL_HARDENING_AUTHOR_APPROVAL_REQUIRED",
   "package_directory": "04_submission/npj_systems_biology_and_applications/SLE_Bcell_npj_Systems_Biology_and_Applications",
   "package_zip": "04_submission/npj_systems_biology_and_applications/SLE_Bcell_npj_Systems_Biology_and_Applications.zip",
-  "package_zip_bytes": 15221543,
-  "package_zip_sha256": "F4F8C49380A32A49BA4BFAF4235D979964779757CCD362A8AEA0D4D07B8D8BFD",
+  "package_zip_bytes": 15196223,
+  "package_zip_sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1",
   "manifest_files_verified": 20,
   "deterministic_double_build": true,
   "main_figures": 5,

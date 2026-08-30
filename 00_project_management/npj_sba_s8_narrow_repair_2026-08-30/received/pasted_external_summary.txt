@@ -1,0 +1,121 @@
+这一次我不是沿用上一轮的“冻结结论”，而是重新以你刚上传的 **actual npj exact package + QiTeng Academic Writing Skill v0.3.21 + GitHub 当前 `main` + 当前 npj 官方规范**做了一轮 hostile audit。结论出现了一个重要更新。
+
+## 最终导师级判断
+
+**科学内容仍然应该冻结，QiTeng 主文 text freeze 仍然成立；但当前 exact package 暂时不建议直接进入作者批准。**
+
+原因不是发现新的统计错误，而是我在实际 `Supplementary_Information.pdf` 中发现了一个此前机器 gate 没有捕获的真实 reader-facing 问题：
+
+> **Supplementary Figure S8 的标题和完整 legend 在第 15 页，而 S8 图本体被整体推到了第 16 页。**
+
+之前的 gate 检查的是 clipping、overlap、missing labels、page canvas 等，因此它可以技术 PASS；但 npj 当前指南明确提出 figure legend 应与 figure 同页，而且 supplementary figures 同样适用 multi-panel figure guidance。更关键的是，Supplementary Information 不会由期刊重新编辑、排版或校样，而是基本按作者提交版本发布。([Nature][1])
+
+所以我现在把状态从此前的：
+
+**SCIENCE FROZEN → EXACT-FILE APPROVAL**
+
+调整为：
+
+> **SCIENCE FROZEN → S8 LAYOUT NARROW REOPEN → REBUILD SI → NEW EXACT SHA → AUTHOR APPROVAL**
+
+这不是重新打开论文，而是非常窄的 publication-quality 修复。
+
+### 科学部分没有发现需要重跑的理由
+
+核心结构仍然非常强：fine-grained B-cell states 未达到预设稳定性要求；B_CONV/B_ASC 在更严格的 end-to-end reconstruction 中因 B_ASC 的 state-median Jaccard≈0.930 < 0.95 而保留 R1 HOLD；但把实际 boundary exchanges 传播进 composition 与 B_CONV transcription 后，primary composition 仍为 null，而 IFN/ISG effects 仍全部稳定为正。
+
+GSE174188 primary IFN/ISG effect 仍为约 **0.837，95% CI 0.525–1.148，q≈2.98×10^-6**；donor-nonoverlap 约 **1.086，q≈3.61×10^-4**。GSE135779 childhood cohort 的独立 replication 约 **1.042，95% CI 0.681–1.402，q≈2.98×10^-6**。与此同时，4,410 shared genes 的 genome-wide ρ≈0.026，所以稿件正确证明的是 **prespecified IFN program replication**，而不是“全转录组一致”。
+
+corrected source-label-independent mapping 同样不应该再救：elastic-net 在 diagnostic threshold 0.95 下 B_ASC precision≈**0.885 < 0.90**，所以不估计 corrected external disease effect 是正确的科研治理。现有构建代码也明确保留这一逻辑，而不是允许 post-hoc mapper substitution。
+
+因此依旧明确禁止为了 PASS 而降低 Jaccard 门槛、增加有利 seed、用 centroid 事后替代 elastic-net、重新定义 IFN gene set、增加 exploratory trajectory/CellChat 或重选 TF。**R1/C9R 的失败门禁现在是论文可信度的一部分。**
+
+### QiTeng v0.3.21 复核也支持“不再大改正文”
+
+我实际解包并核查了你上传的 v0.3.21，SHA-256 为：
+
+`C18AC4F0254286725B7449EA7B7E8DA89E8235B4FABA75B42A6E362D2AD87D99`
+
+它的核心逻辑仍是：
+
+**KNOWN → INSUFFICIENT → GAP/TENSION → RESPONSE → EVIDENCE → INTERPRETATION → IMPLICATION → BOUNDARY → NEXT TEST**
+
+而且对于已经进入 **STABILIZATION** 的稿件，明确要求 **KEEP dominates**，而不是为了“进一步精修”重新大规模替换措辞。
+
+当前稿件已经形成很成熟的链条：
+
+**identity ceiling → composition null → IFN process → independent replication → transfer HOLD → observational regulator context**
+
+Discussion 也已经完成：
+
+**interpretive delta → literature ownership → contradiction reconciliation → evidence ceiling → prospective implication → limitations → restrained landing**
+
+因此这一次 QiTeng 精修的正确结果仍然是：**不 broad rewrite。**
+
+npj 的 scope 也支持这种 framing：当前官方范围明确包括 computational analysis of complex biological systems、disease modelling、single-cell systems biology 和 systems immunology。([Nature][2])
+
+真正需要防守的 editorial risk 依旧不是统计学，而是不能让编辑把文章误解成“又一个公共 SLE scRNA-seq 证明 IFN 上调”。文章必须始终强调：
+
+> **不同 biological layers 具有不同 reproducibility ceilings。**
+
+这才是 systems-biology novelty。
+
+## 我已经实际完成了 S8 的源级重绘验证
+
+我没有压缩旧 PDF，也没有修改已有 q 值或结果，而是直接使用冻结的：
+
+`Supplementary_Figure_S8_source_data.csv`
+
+其 SHA-256 仍为：
+
+`26A3F90E3165D8928874F278384B2587CB549DD4FFDE93440AAC4CEEAE06A9A2`
+
+重新构建了一个 **170 × 155 mm** 的 compact S8，而当前仓库的 S8 builder 在 npj branch 下创建的是 **170 × 215 mm**。
+
+新的候选图保持：
+
+**单页矢量 PDF、Helvetica/Helvetica-Bold、全部可见文字 8.0 pt、最细矢量线 1.0 pt、无文字裁切。**
+
+这正好符合 npj 当前对同一 sans-serif 字体、≥1 pt 线宽、RGB/vector 以及 publication size 下 optimum 8 pt 的要求。([Nature][1])
+
+更关键的是，我按照当前项目 document builder 实际使用的 **6.35-inch figure insertion width**、当前 Supplementary 的页边距、10.5 pt 正文、完整原始 S8 legend 又制作了一个同页 proof。当前 builder 的确固定以 6.35 inch 插入 supplementary figures。
+
+结果证明：
+
+> **S8 heading + 完整 legend + 四个 panel 可以干净地放在同一页。**
+
+所以这个问题已经有了明确、低风险、source-driven 的解决方案。
+
+### 更新后的下一阶段
+
+现在最合理的推进顺序只有这一条：
+
+1. **仅解冻 S8 layout**，把 compact layout 集成回现有 `phase17_round6_02_build_overlap_depletion_figure.py`，所有 numerical source 保持不变；随后重新运行现有 npj figure builder，继续要求 15/15 figure-source CSV byte-identical。
+2. 用现有 target Markdown 和 document builder **重新生成 Supplementary Information**，重点确认 S8 legend + figure 同页，同时 S7→S8、S8→S9 无异常分页。
+3. 再做 WPS/LibreOffice 双渲染和全页视觉 QA；不只查 clipping，还增加“supplementary heading/legend/figure co-location”规则，防止同类问题复发。
+4. 重建 deterministic npj package，重新跑 20/20 manifest、ZIP CRC、figure artifact 和 document audit，得到一个**新的 exact package SHA**。
+5. **旧 SHA `F4F8...BFD` 不再作为推荐作者批准对象**；等新 SHA 冻结后，再完成两位作者 exact-file approval、Reporting Summary、JCR Q1、CUHK-Shenzhen APC/OA 书面确认和 portal authorization。
+6. 最后进行 portal dry-run，检查系统生成 review PDF 后再授权正式提交。
+
+换句话说，论文现在的科学完成度依然约 **95%**；真正需要修的是最后约 5% 中非常具体的一项出版工程问题，而不是再去“制造更多 biology”。
+
+我已经把本轮 exact-package 全量复核、QiTeng v0.3.21 判断、所有关键统计值、freeze/unfreeze matrix、S8 根因以及下一阶段 gate 写成详细行动记录：
+
+[下载完整导师级复核报告](sandbox:/mnt/data/NPJ_SBA_QiTeng_v0321_exact_package_reaudit_2026-08-30.md)
+
+这是本轮从冻结源数据重新生成的 S8 compact 候选图：
+
+[下载 Supplementary Figure S8 compact vector PDF](sandbox:/mnt/data/Supplementary_Figure_S8_compact_candidate.pdf)
+
+这是使用当前 SI 实际页边距、字号、完整 legend 和插图宽度做出的同页排版验证：
+
+[下载 S8 same-page layout proof PDF](sandbox:/mnt/data/S8_same_page_layout_proof.pdf)
+
+同时我把报告、候选图、PNG、机器 artifact audit、同页 proof 和重绘参考脚本整理成了一个窄修复证据包：
+
+[下载 S8 narrow-repair evidence bundle](sandbox:/mnt/data/NPJ_SBA_S8_narrow_repair_evidence_2026-08-30.zip)
+
+**当前最值得做的下一阶段已经非常明确：不是再加分析，而是把 S8 源级重排正式集成进现有 pipeline → 重建 SI → 全量渲染回归 → 生成新 exact SHA。完成这一关后，我才建议进入真正的作者批准和 portal dry-run。**
+
+[1]: https://www.nature.com/npjsba/for-authors-and-referees/submission-guidelines "https://www.nature.com/npjsba/for-authors-and-referees/submission-guidelines"
+[2]: https://www.nature.com/npjsba/aims "https://www.nature.com/npjsba/aims"

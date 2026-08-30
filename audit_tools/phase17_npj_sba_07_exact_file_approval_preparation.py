@@ -7,6 +7,7 @@ import csv
 import hashlib
 import json
 from pathlib import Path
+import re
 import subprocess
 from zipfile import ZipFile
 
@@ -18,8 +19,8 @@ DEFAULT_MANAGEMENT = ROOT / "00_project_management/npj_sba_exact_file_approval_2
 DEFAULT_RUN = ROOT / "phase17_v7/npj_sba_submission_gate/20260830_exact_file_approval_preparation"
 PACKAGE_ROOT = ROOT / "04_submission/npj_systems_biology_and_applications/SLE_Bcell_npj_Systems_Biology_and_Applications"
 PACKAGE_ZIP = PACKAGE_ROOT.with_suffix(".zip")
-EXPECTED_PACKAGE_BYTES = 15221543
-EXPECTED_PACKAGE_SHA = "F4F8C49380A32A49BA4BFAF4235D979964779757CCD362A8AEA0D4D07B8D8BFD"
+EXPECTED_PACKAGE_BYTES = 15196223
+EXPECTED_PACKAGE_SHA = "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1"
 
 FORM_SPECS = {
     "Nature_Portfolio_Reporting_Summary_dynamic.pdf": {
@@ -164,6 +165,13 @@ def main() -> None:
     )
 
     approval_text = (management / "Exact_File_Author_Approval.md").read_text(encoding="utf-8")
+    approval_rows = {
+        path: value
+        for path, value in re.findall(
+            r"\|[^\n|]+\|\s*`([^`]+)`\s*\|\s*`([0-9A-F]{64})`\s*\|",
+            approval_text,
+        )
+    }
     retired_status_text = (management / "Retired_Editorial_Policy_Checklist_Status.md").read_text(encoding="utf-8")
     checks = {
         "baseline_d2e36a4_is_ancestor": git_baseline_is_ancestor(),
@@ -171,6 +179,17 @@ def main() -> None:
         "package_sha_exact": sha256(PACKAGE_ZIP) == EXPECTED_PACKAGE_SHA,
         "package_manifest_20_valid": package_manifest_valid(manifest_rows),
         "package_zip_crc_valid": ZipFile(PACKAGE_ZIP).testzip() is None,
+        "approval_contract_package_identity_exact": (
+            f"Bytes: `{EXPECTED_PACKAGE_BYTES}`" in approval_text
+            and f"`{EXPECTED_PACKAGE_SHA}`" in approval_text
+        ),
+        "approval_contract_content_hashes_match_manifest": (
+            len(approval_rows) == 14
+            and all(
+                path in manifest_by_path and manifest_by_path[path]["sha256"] == value
+                for path, value in approval_rows.items()
+            )
+        ),
         **form_checks,
         "reporting_summary_is_xfa_dynamic_form": dynamic_is_xfa and len(dynamic.pages) == 1,
         "reporting_summary_flat_reference_is_7_pages": len(flat.pages) == 7,
@@ -244,7 +263,9 @@ def main() -> None:
         "submission_authorized": False,
         "apc_commitment_authorized": False,
         "scientific_analysis_rerun": False,
-        "manuscript_or_figure_changed": False,
+        "manuscript_text_changed": False,
+        "supplementary_figure_s8_layout_changed": True,
+        "manuscript_or_figure_changed": True,
         "github_release_changed": False,
         "zenodo_changed": False,
         "next_gate": "EXPLICIT_EXACT_FILE_AUTHOR_APPROVAL_AND_EXTERNAL_RECEIPT_INGESTION",

@@ -19,7 +19,7 @@
       "tables": 10,
       "inline_shapes": 10,
       "placeholders": 0,
-      "bytes": 4747276
+      "bytes": 4689123
     },
     {
       "source": "phase17_v7/npj_sba_final_hardening/20260830_final_render_semantic_hardening/sources/Cover_Letter.md",
@@ -52,15 +52,15 @@
   "files": {
     "Manuscript.docx": {
       "bytes": 60845,
-      "sha256": "3B98020C7C77871BEEAD3F5DC774703C7376A305BC362E6DB3E9EF8198490EAF"
+      "sha256": "8BAE911350274C491B21F47B9626DBD5496B99923F5106EFCE60FC84E984A88F"
     },
     "Supplementary_Information.docx": {
-      "bytes": 4747342,
-      "sha256": "A08760EBA472E47EEDA53D0655D3AFE917E0CDE5D3AE4F9116E8DD95B86D42AA"
+      "bytes": 4689189,
+      "sha256": "EC6199C2A29D3C599B975942504322C21FE01C08BD843C7FF31FA1C3DFAF86AB"
     },
     "Cover_Letter.docx": {
       "bytes": 39535,
-      "sha256": "5A161E178712BBA458E6AB72F13F5B3D128DD96853F32D3650550DE39DC055FE"
+      "sha256": "452008E9234FA186416B404DA8B551C4316A995D89BCC70F2354F62FFBAEA6A7"
     }
   },
   "scientific_reanalysis": false,
