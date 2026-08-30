@@ -61,6 +61,17 @@ class S8NarrowRepairTest(unittest.TestCase):
         self.assertTrue(self.pagination["wps"]["figures"]["S8"]["same_page"])
         self.assertTrue(self.pagination["libreoffice"]["figures"]["S8"]["same_page"])
 
+    def test_both_renderers_embed_the_expected_s1_to_s10_figures(self):
+        for renderer in ("wps", "libreoffice"):
+            self.assertTrue(self.pagination[renderer]["all_expected_figure_fingerprints_match"])
+            for number in range(1, 11):
+                figure_id = f"S{number}"
+                identity = self.pagination[renderer]["figures"][figure_id]["image_identity"]
+                self.assertEqual(identity["best_source_match"], figure_id)
+                self.assertTrue(identity["expected_figure_match"])
+                self.assertLessEqual(identity["normalized_mae_to_expected"], 0.01)
+                self.assertGreaterEqual(identity["identity_margin"], 0.05)
+
     def test_supplement_is_single_17_page_pdf(self):
         path = RUN / "documents/Supplementary_Information.pdf"
         self.assertEqual(len(PdfReader(path).pages), 17)

@@ -81,10 +81,11 @@ try {
     Copy-Item -LiteralPath (Join-Path $LibreOfficePages "document_render_audit.json") `
         -Destination (Join-Path $Run "06_LIBREOFFICE_RENDER_AUDIT.json") -Force
 
-    Write-Host "[7/12] Requiring heading/figure co-location in both renderers..."
+    Write-Host "[7/12] Requiring heading/figure co-location and expected-image identity in both renderers..."
     & $BundledPython ".\audit_tools\phase17_npj_sba_09_supplement_pagination_audit.py" `
         --wps-pdf (Join-Path $Documents "Supplementary_Information.pdf") `
         --libreoffice-pdf (Join-Path $LibreOfficeDocuments "Supplementary_Information.pdf") `
+        --source-dir (Join-Path $Run "figures\figures") `
         --output (Join-Path $Run "07_SUPPLEMENT_PAGINATION_AUDIT.json")
     if ($LASTEXITCODE -ne 0) { throw "Supplement pagination audit failed" }
 

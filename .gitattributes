@@ -50,3 +50,5 @@ phase17_v7/npj_sba_submission_gate/** -text whitespace=blank-at-eol,blank-at-eof
 00_project_management/npj_sba_s8_narrow_repair_2026-08-30/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 00_project_management/npj_sba_s8_narrow_repair_2026-08-30/received/** -whitespace
 phase17_v7/npj_sba_s8_narrow_repair/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+00_project_management/npj_sba_post_s8_advisor_audit_2026-08-31/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+00_project_management/npj_sba_post_s8_advisor_audit_2026-08-31/received/** -whitespace

@@ -1,4 +1,4 @@
-"""Regression tests for the npj Systems Biology and Applications target refreeze."""
+"""Regression tests for the authoritative npj final-hardening refreeze."""
 
 import csv
 import json
@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 RUN = Path(
     os.environ.get(
         "NPJ_SBA_RUN_DIR",
-        ROOT / "phase17_v7/npj_sba_target_refreeze/20260830_target_specific_refreeze",
+        ROOT / "phase17_v7/npj_sba_final_hardening/20260830_final_render_semantic_hardening",
     )
 ).resolve()
 PACKAGE = ROOT / "04_submission/npj_systems_biology_and_applications/SLE_Bcell_npj_Systems_Biology_and_Applications"

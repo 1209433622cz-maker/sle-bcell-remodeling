@@ -1,0 +1,300 @@
+这轮我把你的“本轮已完成”当作一个新的 **post-repair refreeze candidate**，重新从四个层面做了独立复核：当前 GitHub `main`、你上传的 S8/Supplementary/Manuscript/Cover Letter 实体文件、此前冻结结果与 figure source-data、以及 QiTeng Academic Writing Skill v0.3.21。结论比上一轮更明确：**S8 缺陷已经真正关闭，科学内容不应再解冻，项目应该正式进入作者/机构/投稿系统门禁阶段。**
+
+## 一、最终导师级结论
+
+我确认 GitHub 当前最新提交确实是 `427456201582bbd82f3ef233609852b7bcb20e9b`，提交信息为 `Repair npj supplement S8 pagination`。 仓库中的正式行动记录将当前状态定义为 `PASS_NPJ_SBA_S8_NARROW_REPAIR_EXACT_PACKAGE_REFROZEN_AUTHOR_AND_INSTITUTION_RECEIPTS_REQUIRED`，并明确记录：科学正文、R1/C9R、冻结 source-data 和 Zenodo 科学版本均未改变，只重新打开 S8 布局。
+
+因此我现在给这个项目的状态定义为：
+
+**SCIENCE FROZEN → QITENG TEXT FROZEN → FIGURES FROZEN → EXACT PACKAGE TECHNICALLY REFROZEN → AUTHOR/INSTITUTION/PORTAL GATE**
+
+也就是说，**现在继续增加生信分析、重新聚类、寻找新的 pathway、重新定义 TF、增加 CellChat/trajectory、修改 B_ASC 阈值或者继续大规模润色正文，净收益都已经为负。**
+
+---
+
+## 二、S8 修复：这次我确认是真正解决，而不是“看起来解决”
+
+你上传的最终 S8 我重新计算 SHA-256，得到：
+
+`1AD5B47752A44B27107E12A4EE94343404B7AB12F59C8D697988AC854A52E665`
+
+与 GitHub 行动记录中的最终 S8 哈希完全一致。项目记录明确说明它从原来的 `170 × 215 mm` 改为 `170 × 155 mm`，并保持 36 行冻结 source-data 的 SHA-256 为：
+
+`26A3F90E3165D8928874F278384B2587CB549DD4FFDE93440AAC4CEEAE06A9A2`。
+
+我又独立做了 PDF artifact-level preflight。结果是：
+
+| 检查项                 |                 结果 |
+| ------------------- | -----------------: |
+| 页面数                 |                  1 |
+| 宽度                  |           170.0 mm |
+| 高度                  |           155.0 mm |
+| 字体                  | Arial / Arial Bold |
+| 可见字体大小              |          全部 8.0 pt |
+| 最小正矢量线宽             |             1.0 pt |
+| 文字越界                |                  0 |
+| PDF 类型              |            真矢量、非扫描 |
+| 面板                  |             a-d 完整 |
+| 数据/q值/target counts |              未发现改变 |
+
+而且图本身现在的组织明显比旧版本合理：a/b 保留完整 forest，c 保留六组 exact BH q values，d 保留 target retention；没有通过缩小字体“挤进去”，而是通过 label 换行、删除冗余 colorbar、重新利用 d panel 空白完成压缩。
+
+**我认可当前 S8 为最终稿，不建议再动。**
+
+---
+
+## 三、17页 Supplementary Information 已通过真实页面检查
+
+我重新计算你上传的 `Supplementary_Information.pdf`：
+
+`0882D26BA305C301FBAF08E24EBD4BDDC950045034CE97BE00EABE4485E69CF7`
+
+与 GitHub refreeze 记录完全一致。
+
+实际文件现在是 **17 页**。最关键的 page 15 已经变成：
+
+**S8 标题 → 完整 legend → S8 四个 panel 同页**
+
+而不是以前的 page 15 legend / page 16 figure 分离。S9 和 S10 也顺延到 page 16、17，版式正常。
+
+我还把新旧 SI 做了逐页文本比较：
+
+* page 1-14：完全一致；
+* 新 page 15：保留原 S8 legend，同时加入 compact S8；
+* 旧 page 17 → 新 page 16：S9 内容一致，只改变页码；
+* 旧 page 18 → 新 page 17：S10 内容一致，只改变页码。
+
+所以这次修复确实是一个**非常纯粹的 layout delta**，没有顺手改变 Supplementary Tables、统计数字或者解释。
+
+当前 npj 官方指南也明确要求 supplementary information 为单一 merged PDF，并说明 SI 不会被期刊编辑、排版或 proof，因此这次修复是有实际投稿价值的。([Nature][1])
+
+---
+
+## 四、我独立确认 Manuscript 和 Cover Letter 没有被“顺手改掉”
+
+这是这轮一个很有价值的独立检查。
+
+你上传的新 `Manuscript(2).pdf` 和旧 exact package 中的 Manuscript PDF **二进制哈希不同**，因为进行了重新渲染；但是我进行了两种比较：
+
+**文本层：完全一致。**
+
+**渲染层：31/31 页 pixel-identical，100 dpi 比较 changed pages = 0。**
+
+因此“正文仅重新渲染校验、文本未改”这个说法成立。当前正文仍保持 31 页，标题、140-word abstract、Results、Methods、Discussion、32 篇参考文献、figure legends 都没有被 S8 repair 波及。正文仍然明确把核心结论限定为 process-level IFN association，而不是 universal taxonomy、causal regulator 或 clinical utility。
+
+Cover Letter 也是同样结果：文本完全相同，1/1 页面视觉比较完全一致。其最重要的一句话仍然是把文章定位成：
+
+**hard-state reproducibility/transfer limits vs reproducible IFN/ISG process-level signal**
+
+而不是“我们又发现了 SLE 的 IFN signature”。
+
+这个 framing 和期刊当前 scope 高度一致，因为 npj SBA 官方明确覆盖 computational analysis/modeling of complex biological systems、disease modeling、single-cell systems biology 和 systems immunology。([Nature][2])
+
+---
+
+## 五、15张图的 Nature/npj 全局质量我又重新复核了一遍
+
+我用之前冻结的 14 张图 + 当前新 S8 重构了“当前应该存在的 15 figure set”，重新对所有 PDF 做了 artifact-level QA。
+
+**15/15 全部满足：**
+
+170.0 mm 宽、单页 vector PDF、Arial/Arial Bold、全部 visible text 8 pt、最小正线宽 1 pt、0 个文本越界。
+
+这和 npj 当前 figure guideline 的 8 pt 推荐完全吻合。官方指南明确写明在预计发表尺寸下 optimum font size 是 8 pt，并优先 vector files。([Nature][1])
+
+视觉上我现在不会再建议重画任何 main figure：
+
+**Figure 1** 的工作是建立 evidence hierarchy；
+
+**Figure 2** 负责 composition null；
+
+**Figure 3** 负责 GSE174188 IFN/ISG 主结果；
+
+**Figure 4** 负责 source-label-defined independent replication；
+
+**Figure 5** 负责把 regulator / M5911 / GSE23307 放在“interpretation evidence”层，而不是伪装成 causal mechanism。
+
+这个图序现在与正文 Result sequence 基本是一一对应的，属于非常成熟的组图结构。
+
+---
+
+## 六、QiTeng v0.3.21 再审：现在最大的正确动作就是“不再改”
+
+我重新读取了你上传的 QiTeng v0.3.21。它最核心的要求不是“不断改句子”，而是：
+
+`KNOWN → INSUFFICIENT → GAP/TENSION → RESPONSE → EVIDENCE → INTERPRETATION → IMPLICATION → BOUNDARY → NEXT TEST`
+
+同时明确规定：稿件进入 **STABILIZATION** 后，**KEEP should dominate**。
+
+现在这篇文章的主结构已经非常接近这个状态机的理想形态：
+
+**Introduction**
+
+single-cell inferential problem → SLE context dependence → exact reproducibility gap → disease-blind staged response
+
+**Results**
+
+identity ceiling → composition null → IFN signal → independent replication → source-independent transfer HOLD → regulator context
+
+**Discussion**
+
+central interpretive delta → reconciliation with SLE literature → replication boundary → regulator boundary → unsupported narratives removed → prospective translation → limitations → restrained landing
+
+更重要的是，所有 claim strength 都没有跨越 evidence level。
+
+IFN/ISG 可以说 **replicated / reproducible association**；
+
+STAT1/STAT2 只能说 **convergent observational regulatory context**；
+
+B_CONV/B_ASC 只能说 **analysis scaffold**；
+
+现在没有任何地方被提升成 direct mechanism、universal taxonomy、predictive biomarker 或 clinical utility。
+
+因此这轮 QiTeng 审核的结果不是继续产生 R3/R4/R5，而是：
+
+> **冻结正文。**
+
+除非后续出现“明确事实错误、编辑要求、审稿意见或 portal 转换产生语义错误”，否则不要再重新打开 prose。
+
+---
+
+## 七、科学方法设计也已经到了“不能为了完美而继续跑”的阶段
+
+当前最强的一点其实不是所有分析都 PASS，而是你保留了两个关键失败。
+
+**R1 HOLD**：end-to-end reconstruction 的 B_ASC state-median Jaccard≈0.930，低于预设 0.95。
+
+**C9R HOLD**：corrected elastic-net external mapping 的 B_ASC precision≈0.885，低于预设 0.90。
+
+这两个结果直接阻止了两种最容易被审稿人攻击的 overclaim：
+
+“这个 B-cell taxonomy 可以普遍迁移。”
+
+以及：
+
+“external replication 已经是 source-label-independent。”
+
+正文现在明确写出这些边界。
+
+与此同时，真正的 IFN disease signal 经 assignment uncertainty propagation 仍然没有被推翻，独立 childhood cohort 仍复制 frozen IFN program，而 genome-wide ρ≈0.026 又防止你把 program replication 夸大成 transcriptome-wide replication。
+
+这是现在整篇文章最成熟、最难得的一点。
+
+**我不会为了提高“图好看”或“结果更多”而建议重新跑任何核心分析。**
+
+---
+
+## 八、我发现的唯一一个需要你注意的 provenance 小问题
+
+你这轮上传的：
+
+`20260830_final_render_semantic_hardening(1).zip`
+
+实际上仍然是 **S8 repair 之前的 hardening baseline archive**。
+
+我打开后确认它内部还是旧的 **18页 Supplementary Information** 和旧高版 S8。
+
+这本身没有问题——它可以继续作为 provenance baseline。
+
+但它绝对不能和当前 final submission evidence 混在一起。
+
+所以它的正确角色应该理解为：
+
+**PRE-S8-REPAIR BASELINE / ARCHIVAL EVIDENCE ONLY**
+
+而不是 current submission package。
+
+这轮你没有把真正的新 exact package ZIP 二进制上传给我。因此：
+
+`02A3855F...BA83A1`
+
+以及 `20/20 PASS` 我可以通过当前 GitHub tracked build/audit record确认；仓库确实已经把 expected package hash、bytes 和 gate 全部改到了新值。
+
+但我**没有在本轮环境里直接重新 hash 那个 15,196,223-byte ZIP 本体**。
+
+所以在两位作者签字批准前，我仍然建议最后本地执行一次：
+
+**实际 ZIP → SHA-256 → 必须等于 `02A385...BA83A1`。**
+
+这是现在唯一值得再做的一次 byte-level 检查。
+
+---
+
+## 九、下一阶段我做一个小调整：Reporting Summary 不必阻塞 portal dry-run
+
+你原来的下一阶段方向总体正确，但我核查了 npj 当前官方指南后，可以进一步优化顺序。
+
+官方现在写的是：Life Sciences research article 的 **Nature Portfolio Reporting Summary 会要求随 peer-review 后的 revised manuscript 提交**；两份表格都鼓励作者 initial submission 时提前提供。Editorial Policy Checklist 则是在文章送 peer review 时需要交给编辑。([Nature][3])
+
+所以 Reporting Summary 很值得现在提前完成，但它并不是必须阻止你进行 **initial portal metadata dry-run** 的技术 blocker。
+
+另外，npj SBA 当前 Original Research APC 官方价格是：
+
+**US$3,490 / £2,690 / €2,990**
+
+金额以**接受日期**确定，另可能有税费。([Nature][4])
+
+所以当前真正合理的顺序是：
+
+1. 最后一次本地 hash 新 exact ZIP；
+2. 两位作者分别批准 `02A385...BA83A1`；
+3. 同步准备 Reporting Summary + Editorial Policy Checklist；
+4. 归档官方 JCR / CUHK-Shenzhen APC-OA 证明；
+5. 做 portal metadata dry-run；
+6. 通讯作者单独授权正式 submission 和 APC commitment；
+7. 上传 exact files；
+8. 保存 portal-generated review PDF、upload manifest 和 submission receipt；
+9. 将 portal PDF 与 approved manuscript 做最后一次 semantic + visual diff；
+10. 才点击最终提交。
+
+---
+
+## 十、当前完成度
+
+| 维度                                    |     我本轮重新评估 |
+| ------------------------------------- | ----------: |
+| 科学问题设计                                |  **9.6/10** |
+| Systems biology framing               |  **9.5/10** |
+| identity/composition/transcription 分层 |  **9.8/10** |
+| 统计与 multiplicity                      |  **9.6/10** |
+| 独立生物学重复                               |  **8.6/10** |
+| 机制深度                                  |  **6.8/10** |
+| Evidence/claim calibration            |  **9.9/10** |
+| Reproducibility/provenance            |  **9.9/10** |
+| QiTeng 写作架构                           |  **9.7/10** |
+| Main figures                          |  **9.5/10** |
+| Supplementary figures                 |  **9.6/10** |
+| SI publication readiness              |  **9.8/10** |
+| npj SBA scope fit                     |  **9.3/10** |
+| **科学完成度**                             |    **≈98%** |
+| **正文/图件完成度**                          |    **≈99%** |
+| **行政/portal完成度**                      | **≈85–90%** |
+
+现在论文真正剩下的短板已经**不是论文内容**。
+
+最大的 remaining uncertainty 是编辑层面的 novelty perception：
+
+> 编辑是否理解你贡献的是“跨 inferential layers 的 reproducibility hierarchy”，而不是“公开 SLE 数据再次发现 IFN”。
+
+目前 title、abstract、Introduction 和 cover letter 已经足够防守这一点，我不建议为了这一风险再继续扩写。
+
+---
+
+## 最终下一阶段目标
+
+我的最终判断和你的本轮结论基本一致，但进一步收敛成一句话：
+
+> **停止新增分析、停止正文改写、冻结当前 S8 和 17页 SI；下一阶段只做 exact-ZIP byte confirmation → 双作者批准 → Reporting/Policy forms → JCR/APC-OA receipts → portal dry-run → post-upload semantic QA → 通讯作者正式授权提交。**
+
+我还特别检查了当前新 pagination QA 脚本。它已经比以前强很多，会检查 S1-S10 的 heading page 是否实际绘制 image XObject。 不过它目前验证的是“标题页存在 image”，而不是对 image 本身做 expected-figure fingerprint 匹配。这是一个**P3 工程改进点**，不是当前 submission blocker，因为我已经独立人工确认当前 17页 PDF 中 S1-S10 全部正确。不要为了修这个测试脚本再次重开 exact package。
+
+本轮完整导师级行动报告已经生成：
+
+[下载本轮完整 Post-S8 Refreeze Audit](sandbox:/mnt/data/NPJ_SBA_post_S8_refreeze_full_advisor_audit_2026-08-31.md)
+
+**至此我认为 scientific development phase 可以正式关闭。下一轮最有价值的工作不是“再跑一个分析”，而是把 `02A385...BA83A1` 这一个 exact package 安全、可审计地送进 npj SBA portal。**
+
+[1]: https://www.nature.com/npjsba/for-authors-and-referees/submission-guidelines "Submission guidelines | npj Systems Biology and Applications"
+[2]: https://www.nature.com/npjsba/aims?utm_source=chatgpt.com "Aims & Scope | npj Systems Biology and Applications"
+[3]: https://www.nature.com/npjsba/for-authors-and-referees/submission-guidelines?utm_source=chatgpt.com "Submission guidelines | npj Systems Biology and Applications"
+[4]: https://www.nature.com/npjsba/apc?utm_source=chatgpt.com "Article Processing Charges | npj Systems Biology and Applications"

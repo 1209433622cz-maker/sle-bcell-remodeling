@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-08-30T22:01:52+08:00",
+  "created_at": "2026-08-31T02:31:44+08:00",
   "status": "PASS_NPJ_SBA_POST_HARDENING_REAUDIT_TEXT_FREEZE",
-  "base_commit": "a6050a779d32324d8085f543221da5ffcb545ace",
+  "base_commit": "427456201582bbd82f3ef233609852b7bcb20e9b",
   "checks": {
     "authoritative_baseline_a960fa8_is_ancestor": true,
     "readme_r1_wording_corrected": true,

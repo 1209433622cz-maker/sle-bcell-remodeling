@@ -119,6 +119,8 @@ The frozen evidence chain is:
 - [Portal submission runbook](00_project_management/npj_sba_exact_file_approval_2026-08-30/Portal_Submission_Runbook.md)
 - [Exact-file approval preparation gate](phase17_v7/npj_sba_submission_gate/20260830_exact_file_approval_preparation/00_EXACT_FILE_APPROVAL_PREPARATION.json)
 - [Exact-file approval and official-forms action record](00_project_management/action_record_2026-08-30_npj_sba_exact_file_approval_and_official_forms_preparation.md)
+- [Post-S8 full advisor audit and portal-gate action record](00_project_management/action_record_2026-08-31_npj_sba_post_s8_full_advisor_audit_and_portal_gate.md)
+- [Current npj requirement reconciliation](00_project_management/npj_sba_post_s8_advisor_audit_2026-08-31/official_npj_requirement_reconciliation_2026-08-31.md)
 - [Current release manuscript source](04_submission/zenodo_release/manuscript/Manuscript.md)
 - [Current release manuscript DOCX](04_submission/zenodo_release/manuscript/Manuscript.docx)
 - [Current release manuscript PDF](04_submission/zenodo_release/manuscript/Manuscript.pdf)
