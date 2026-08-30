@@ -1,0 +1,13 @@
+﻿Priority,ID,Task,Execution rule,Domain
+P0,VERSION-01,Use latest authoritative package,Do not sign/upload the user-uploaded older build (internal package SHA 414BD522...); use latest GitHub/local final package SHA F4F8C493... or its documentation-only successor.,Version control
+P0,README-02,Fix R1 wording,Change `End-to-end resampling formally holds because...0.930 below 0.95` to `formally remains on HOLD` / `did not meet the criterion`. No scientific values change.,Repository
+P0,VISUAL-03,Latest Figure 5 human sign-off,"Review latest three-row Figure 5, especially d/e and portal scaling; do not judge from the superseded uploaded ZIP.",Figures
+P1,VISUAL-04,Check S8 portal scaling,Confirm readability in portal-generated PDF; no rerender unless actual scaling/clipping problem appears.,Figures
+P0,AUTHOR-05,Exact-file author approval,"Both authors approve exact latest manuscript, supplement, figures, cover letter and package hashes.",Author gate
+P0,JCR-06,Archive official JCR Q1 receipt,"Record metric year, category/categories, rank/denominator and quartile from Clarivate/institution.",Institutional
+P0,APC-07,Confirm CUHK-Shenzhen OA/APC,Obtain explicit institutional eligibility/coverage or funding confirmation; do not infer from CUHK Hong Kong agreement.,Institutional
+P0,FORM-08,Complete official Reporting Summary,Use current Nature Portfolio form; do not treat Markdown draft as final.,Submission forms
+P0,FORM-09,Complete Editorial Policy Checklist,Use current official form and have both authors review.,Submission forms
+P0,PORTAL-10,Portal preflight,"Upload only authorized exact files, inspect generated PDF, confirm author order/DOI/data/code/figures/supplement/forms.",Submission
+P0,RECEIPT-11,Freeze submission receipt,"Save manuscript number, timestamp, portal-generated PDF and actual uploaded-file hashes.",Submission
+STOP,SCIENCE,No new pre-submission analysis,"No new cohort, mapper, threshold, seed, TF/regulon, gene set, R1 rescue or C9R rescue before first submission.",Governance

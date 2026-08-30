@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-08-30T12:37:03+08:00",
+  "status": "PASS_NPJ_SBA_POST_HARDENING_REAUDIT_TEXT_FREEZE",
+  "base_commit": "a960fa81c730cd3f6da5f81ace6a9212bc4ede1f",
+  "checks": {
+    "authoritative_baseline_a960fa8_is_ancestor": true,
+    "readme_r1_wording_corrected": true,
+    "readme_current_target_title_exact": true,
+    "manuscript_byte_identical_to_head": true,
+    "title_exact": true,
+    "title_15_words": true,
+    "abstract_140_words": true,
+    "references_first_appearance_1_to_32": true,
+    "qiteng_central_claim_visible": true,
+    "qiteng_source_label_ownership_visible": true,
+    "qiteng_null_compiler_visible": true,
+    "qiteng_r1_boundary_inherited": true,
+    "qiteng_c9r_boundary_inherited": true,
+    "qiteng_causal_and_clinical_ceiling_visible": true,
+    "final_hardening_gate_pass": true,
+    "all_final_hardening_checks_true": true,
+    "r1_hold_unchanged": true,
+    "c9r_hold_unchanged": true,
+    "corrected_outcome_unlock_false": true,
+    "no_scientific_reanalysis": true,
+    "package_sha_unchanged": true,
+    "package_bytes_unchanged": true,
+    "package_crc_valid": true,
+    "package_manifest_20_verified": true,
+    "package_deterministic_double_build": true,
+    "fifteen_figure_sources_byte_identical": true,
+    "figure_export_contract_pass": true,
+    "all_figures_single_page_170mm": true,
+    "supplementary_docx_has_10_drawings_and_labels": true,
+    "main_and_cover_docx_have_no_embedded_scientific_drawings": true,
+    "exact_file_author_approval_pending": true,
+    "official_jcr_q1_receipt_pending": true,
+    "institutional_apc_receipt_pending": true,
+    "submission_not_authorized": true
+  },
+  "failed_checks": [],
+  "manuscript_sha256": "9D9B39E919CF695BA4290C69B0C1665E566E6943F3763C3771DFDE9B7DCAC043",
+  "package": {
+    "bytes": 15221543,
+    "sha256": "F4F8C49380A32A49BA4BFAF4235D979964779757CCD362A8AEA0D4D07B8D8BFD",
+    "unchanged_by_documentation_patch": true
+  },
+  "document_object_inventory": {
+    "Cover_Letter.docx": {
+      "drawings": 0,
+      "inline_drawings": 0,
+      "anchored_drawings": 0,
+      "tables": 0,
+      "supplementary_figure_labels": 0
+    },
+    "Manuscript.docx": {
+      "drawings": 0,
+      "inline_drawings": 0,
+      "anchored_drawings": 0,
+      "tables": 0,
+      "supplementary_figure_labels": 0
+    },
+    "Supplementary_Information.docx": {
+      "drawings": 10,
+      "inline_drawings": 10,
+      "anchored_drawings": 0,
+      "tables": 10,
+      "supplementary_figure_labels": 10
+    }
+  },
+  "figure_count": 15,
+  "visual_review_recorded": true,
+  "scientific_reanalysis_performed": false,
+  "manuscript_rewritten": false,
+  "zenodo_updated": false,
+  "github_release_updated": false,
+  "submission_authorized": false,
+  "next_gate": "NPJ_SBA_EXACT_FILE_AUTHOR_APPROVAL_AND_INSTITUTIONAL_RECEIPTS",
+  "official_sources_checked": {
+    "aims_scope": "https://www.nature.com/npjsba/aims",
+    "submission_guidelines": "https://www.nature.com/npjsba/for-authors-and-referees/submisions",
+    "apc": "https://www.nature.com/npjsba/apc",
+    "journal_metrics": "https://www.nature.com/npjsba/journal-impact"
+  },
+  "qiteng_source_archive": {
+    "path": "H:/QiTeng_Academic_Writing_Skill_v0.3.21_Full_Release_2026-08-26.zip",
+    "sha256": "C18AC4F0254286725B7449EA7B7E8DA89E8235B4FABA75B42A6E362D2AD87D99",
+    "policy": "Writing authority only; subordinate to verified science and current official journal requirements."
+  }
+}

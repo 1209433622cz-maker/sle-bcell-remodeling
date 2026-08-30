@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-08-30T12:37:03+08:00",
+  "status": "PASS_FIFTEEN_FIGURE_VISUAL_REAUDIT",
+  "all_15_figures_reviewed": true,
+  "high_risk_figure5_reviewed": true,
+  "high_risk_supplementary_s8_reviewed": true,
+  "clipping_overlap_missing_labels": false,
+  "contact_sheets": [
+    "figure_contact_sheet_1.png",
+    "figure_contact_sheet_2.png",
+    "figure_contact_sheet_3.png"
+  ],
+  "figures": {
+    "Figure1_disease_blind_identity_scope.pdf": {
+      "pdf_sha256": "544F65A6DC60B2B498D5B9184C30CC06016BE351A4E3BBA8BAF6E1F694148BF4",
+      "png_sha256": "6ACEA57B1C84DADB9B354413EDC2A80647017130727F260951987F9321CDA31A",
+      "pages": 1,
+      "width_mm": 170.0,
+      "height_mm": 130.677
+    },
+    "Figure2_sample_level_composition.pdf": {
+      "pdf_sha256": "F45A56B2496AF85E6D30AE0277EFEE53AEDE8344219D35104B243AF62A72C3EA",
+      "png_sha256": "416CC02C4D255BBC138ED0FF6698B473055013CAF374ED91287E3E714914E672",
+      "pages": 1,
+      "width_mm": 170.0,
+      "height_mm": 134.274
+    },
+    "Figure3_gse174188_bconv_transcription.pdf": {
+      "pdf_sha256": "54D584D1747107EE72537FE2D09E5A28177E0A1608519D29307B72203DFDD4C7",
+      "png_sha256": "12F2D0472E2C578A2AF8BE4194E8A2F946E20A3FDDB76AD50FB3D5B8882434C7",
+      "pages": 1,
+      "width_mm": 170.0,
+      "height_mm": 137.87
+    },
+    "Figure4_independent_ifn_replication.pdf": {
+      "pdf_sha256": "0FE897BA5559D6125BBD756104687E99A1907CC6B0537569CF76FC6E56E5198B",
+      "png_sha256": "CB3AB86C06F0661EBA828A7C701E8E8E7BE13ADAC22D0303FB6B7ABAF23BA979",
+      "pages": 1,
+      "width_mm": 170.0,
+      "height_mm": 137.87
+    },
+    "Figure5_regulatory_evidence.pdf": {
+      "pdf_sha256": "8F7F2FBD687A1EC8A0D0E395AC801DABADFEC89A9C22CDFDBE71188C59CC30CC",
+      "png_sha256": "0AAD33065DF49FD200E7E7EAE81AFC46B9C617FACE921E306ECD0809B25C3E9C",
+      "pages": 1,
+      "width_mm": 170.0,
+      "height_mm": 211.001
+    },
+    "Supplementary_Figure_S1_source_integrity_qc.pdf": {
+      "pdf_sha256": "CFB27CCBBAB2B4FC051A25877433A140B737CF8270B90493BEAFB71E3D332B2E",
+      "png_sha256": "F253495D071042D21A33545B762AC23D5A524098E35036D0933819B858A4B285",
+      "pages": 1,
+      "width_mm": 170.0,
+      "height_mm": 123.484
+    },
+    "Supplementary_Figure_S2_representation_diagnostics.pdf": {
+      "pdf_sha256": "62DEECBE343F0B9E9D8D933A2640C823F2F3B42A7B7EB9137F0ED442B5351D4C",
+      "png_sha256": "B14C984062ED65B57954614434DB7F6E3582F8CFE9C56BACEC567DC630F5D03E",
+      "pages": 1,
+      "width_mm": 170.0,
+      "height_mm": 125.882
+    },
+    "Supplementary_Figure_S3_identity_adjudication.pdf": {
+      "pdf_sha256": "465B2459A35531A8A71036FE39D474B11CE16E268BBBD46438858F1B77744315",
+      "png_sha256": "0F30F831215DB54ABB6D9ABB1437299A63BCA2E0070E4B9311CCDEC0A977BF44",
+      "pages": 1,
+      "width_mm": 170.0,
+      "height_mm": 125.882
+    },
+    "Supplementary_Figure_S4_composition_diagnostics.pdf": {
+      "pdf_sha256": "76A1CCA871711272A0729406AEBA7D41A04F0BF7BEAF1DDADDDCA5010BB3436B",
+      "png_sha256": "4C3245FA758F1D2269AD640081B155467B0551670085E628E22E2D3778C8C5B8",
+      "pages": 1,
+      "width_mm": 170.0,
+      "height_mm": 125.882
+    },
+    "Supplementary_Figure_S5_pseudobulk_diagnostics.pdf": {
+      "pdf_sha256": "882CCA7C7085108593F9894A03A51D9A75B4882F5D1068C3672AB0312713CBD2",
+      "png_sha256": "C629ECF828F847D23F5D0858A4D3C2778DD06B372696D21732DBDBD96AB07F05",
+      "pages": 1,
+      "width_mm": 170.0,
+      "height_mm": 128.279
+    },
+    "Supplementary_Figure_S6_external_validation_diagnostics.pdf": {
+      "pdf_sha256": "B771CFEC0500F602D6592903F632A28CE152A6383D5AB01D5814737AF6E43E1D",
+      "png_sha256": "F445496B679609CE38BBBB3D24A4F236AD4832CB4F5E6B537045651C39186732",
+      "pages": 1,
+      "width_mm": 170.0,
+      "height_mm": 128.279
+    },
+    "Supplementary_Figure_S7_regulator_correlation_sensitivity.pdf": {
+      "pdf_sha256": "B6F0CA415C74099771E6341FC0642317F71B4959719BE97E732B93AFBDC87ACB",
+      "png_sha256": "532BBAC1D07226466A4D51FDD64DDF2D097005202FA4484B04152C5BCF85894F",
+      "pages": 1,
+      "width_mm": 170.0,
+      "height_mm": 125.882
+    },
+    "Supplementary_Figure_S8_overlap_depletion.pdf": {
+      "pdf_sha256": "1BE2F0152C0B51CFCED8BD1DD79D34C5F80FD4AC490D30BA712E723994766D81",
+      "png_sha256": "3D2AB72C12EC8D2E3F322DE669B0DCEF6532AEB5F40161C029E6988BAE71F1A9",
+      "pages": 1,
+      "width_mm": 170.0,
+      "height_mm": 215.0
+    },
+    "Supplementary_Figure_S9_identity_boundary_and_propagation.pdf": {
+      "pdf_sha256": "5C27FC282CCD14F1413728D340CC24C38657A5129EFF83F544E41B3E2ECE9A2A",
+      "png_sha256": "29078D47BAAD6BFB739994E8F8166C4DA7C0950DF117CCE2771AA97C0E891437",
+      "pages": 1,
+      "width_mm": 170.0,
+      "height_mm": 160.0
+    },
+    "Supplementary_Figure_S10_reference_calibration_boundary.pdf": {
+      "pdf_sha256": "502A9D6F4DAE6DC81517D2E7599945EAB4D2AC0BC1D60800B97E8141BBA6F2AC",
+      "png_sha256": "9A40CC8896D43BC3ADFA1A90A99DB5BD9CD3FDBD28B038442AEB900EBD353339",
+      "pages": 1,
+      "width_mm": 170.0,
+      "height_mm": 110.0
+    }
+  }
+}

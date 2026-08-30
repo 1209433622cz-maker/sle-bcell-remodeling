@@ -47,8 +47,8 @@ publish a new Zenodo version.
 
 Author-confirmed scientific manuscript title:
 
-**Disease-blind single-cell reconstruction distinguishes unstable B-cell state assignments
-from reproducible interferon remodeling in systemic lupus erythematosus**
+**Disease-blind reconstruction distinguishes reproducible interferon remodeling from
+unstable B-cell state assignments in systemic lupus erythematosus**
 
 The author has confirmed [QiTeng R2 as the scientific manuscript baseline](00_project_management/qiteng_r2_freeze_2026-08-29/Scientific_Freeze.md),
 including its declarations and ethics statement. The exact files use
@@ -67,8 +67,8 @@ The frozen evidence chain is:
   and 88 libraries.
 - Frozen-representation resampling supports a broad conventional-B (`B_CONV`)
   and antibody-secreting-cell (`B_ASC`) analysis partition, not stable hard
-  naive-memory outcome subtypes. End-to-end resampling formally holds because
-  B_ASC median Jaccard is 0.930, below the unchanged 0.95 criterion.
+  naive-memory outcome subtypes. End-to-end resampling did not meet the frozen
+  state-overlap criterion because B_ASC median Jaccard was 0.930, below 0.95.
 - Boundary propagation retains the primary B_ASC null across all 20 replicates
   and retains positive primary and donor-nonoverlap B_CONV IFN/ISG effects.
 - Primary B_ASC relative abundance is null: odds ratio 0.947, 95% CI
@@ -103,6 +103,8 @@ The frozen evidence chain is:
 - [npj SBA cover letter PDF](phase17_v7/npj_sba_final_hardening/20260830_final_render_semantic_hardening/documents/Cover_Letter.pdf)
 - [Final-hardening machine-readable gate](phase17_v7/npj_sba_final_hardening/20260830_final_render_semantic_hardening/04_FINAL_AUDIT_STATUS.json)
 - [Final-hardening action record](00_project_management/action_record_2026-08-30_npj_sba_final_render_semantic_hardening.md)
+- [Post-hardening QiTeng full reaudit](00_project_management/action_record_2026-08-30_npj_sba_post_hardening_qiteng_full_reaudit.md)
+- [Post-hardening machine-readable gate](phase17_v7/npj_sba_post_hardening_reaudit/20260830_qiteng_text_freeze/00_POST_HARDENING_FULL_REAUDIT.json)
 - [Current release manuscript source](04_submission/zenodo_release/manuscript/Manuscript.md)
 - [Current release manuscript DOCX](04_submission/zenodo_release/manuscript/Manuscript.docx)
 - [Current release manuscript PDF](04_submission/zenodo_release/manuscript/Manuscript.pdf)

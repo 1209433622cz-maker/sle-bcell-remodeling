@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-08-30T12:37:03+08:00",
+  "status": "PASS_QITENG_Q1_TEXT_FREEZE",
+  "mode": "FULL_MANUSCRIPT + QITENG_Q1",
+  "output_purpose": "TARGET_JOURNAL_SUBMISSION",
+  "central_claim": "Process-level IFN remodeling is more reproducible than the tested hard B-cell state assignments when identity, composition and transcription are separated into inferential layers.",
+  "evidence_tiers": {
+    "process_level_ifn": "E2_ROBUST_ASSOCIATION",
+    "stat1_stat2_regulatory_context": "E1_ASSOCIATION",
+    "causal_mechanism": "NOT_ESTABLISHED",
+    "clinical_utility": "NOT_ESTABLISHED"
+  },
+  "section_contracts": {
+    "Introduction": "tension -> gap -> disease-blind response",
+    "Results": "identity ceiling -> composition null -> IFN replication -> transfer HOLD -> observational context",
+    "Discussion": "interpretive delta -> ownership -> alternatives -> prospective next test -> restrained landing",
+    "Methods": "source/unit -> model -> multiplicity -> validation class -> reproducibility boundary"
+  },
+  "broad_prose_rewrite_authorized": false,
+  "text_freeze_recommended": true,
+  "allowed_pre_submission_text_changes": [
+    "verified factual correction",
+    "current journal compliance adjustment",
+    "exact wording consistency repair",
+    "editor- or reviewer-requested revision"
+  ],
+  "checks": {
+    "title_exact": true,
+    "title_15_words": true,
+    "abstract_140_words": true,
+    "references_first_appearance_1_to_32": true,
+    "qiteng_central_claim_visible": true,
+    "qiteng_source_label_ownership_visible": true,
+    "qiteng_null_compiler_visible": true,
+    "qiteng_r1_boundary_inherited": true,
+    "qiteng_c9r_boundary_inherited": true,
+    "qiteng_causal_and_clinical_ceiling_visible": true
+  }
+}
