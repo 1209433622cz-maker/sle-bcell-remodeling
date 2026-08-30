@@ -1,0 +1,70 @@
+{
+  "created_at": "2026-08-31T04:37:57+08:00",
+  "status": "PASS_FULL_MAIN_FIGURE_SCIENTIFIC_CANDIDATE_ASSEMBLED",
+  "figures": {
+    "Figure1": {
+      "pdf_sha256": "97227D1EE742053A519E33407A63A4383ED469541D558EFC9566C416CD4BC494",
+      "png_sha256": "717855E87962750BB8DF5FA4AFF127470D0F94CEDFC81D5BB686D31EB58FE229",
+      "source_data_sha256": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805",
+      "width_mm": 170.0,
+      "height_mm": 130.677
+    },
+    "Figure2": {
+      "pdf_sha256": "F9B652B2CC84D213ED9A80459A8AC5CA960DB0260D7E9FB4A2C83271EABC9194",
+      "png_sha256": "2415FCE81FDF9BF7C56E77494485CA79E3D063DCF390E6450E2E60E965200CE5",
+      "source_data_sha256": "DAA6DDBAB469E0D510AB578BEE0A21AA73FA2D71184739E3F361C3EA6EC8DFE2",
+      "width_mm": 170.0,
+      "height_mm": 134.274
+    },
+    "Figure3": {
+      "pdf_sha256": "F8EDBF94AB3B545CD6DC4ECB29E7E4AFA890A38834296643BB516A3F3C0A4035",
+      "png_sha256": "913B19C5D0E9513A95EA71CAD73CA88788CEA147B50B0DEF274B35F841CA1BCA",
+      "source_data_sha256": "DEFABF8C16D879362E3AD197C857A9197CD6D0691B20FDFA4AC97BEFF3710BC8",
+      "width_mm": 170.0,
+      "height_mm": 137.87
+    },
+    "Figure4": {
+      "pdf_sha256": "328944493A1C8BAC2D8BE90EF561D08B6C07E008996897E785A853267AA7B0F9",
+      "png_sha256": "3424D846876C549487F9DD76D64A433A074541FF4712FCE680FB375DC6094258",
+      "source_data_sha256": "F3604F40DAEDB0DD01617BB223A8762323C8AAC7F16185292367B9A13FEC4755",
+      "width_mm": 170.0,
+      "height_mm": 137.87
+    },
+    "Figure5": {
+      "pdf_sha256": "B40EEC04B7F5439F980D93B423360E506D5532E8838364B702C61B01F845BA84",
+      "png_sha256": "A3A458563BA2C661E376DFDFCD77D143CC39B634A985C50308838441A59E814F",
+      "source_data_sha256": "A482D9D4F001B076B496C63857A8B3ADB65816CD0AA18B60C8B17B2DDB211B5B",
+      "width_mm": 170.0,
+      "height_mm": 211.001
+    }
+  },
+  "figures2to4_rebuilt_from_frozen_inputs": {
+    "assertions": 29,
+    "assertions_pass": true,
+    "source_sha256": {
+      "Figure2_source_data.csv": "DAA6DDBAB469E0D510AB578BEE0A21AA73FA2D71184739E3F361C3EA6EC8DFE2",
+      "Figure3_source_data.csv": "DEFABF8C16D879362E3AD197C857A9197CD6D0691B20FDFA4AC97BEFF3710BC8",
+      "Figure4_source_data.csv": "F3604F40DAEDB0DD01617BB223A8762323C8AAC7F16185292367B9A13FEC4755"
+    }
+  },
+  "selected_replacements": [
+    "Figure1a",
+    "Figure5a",
+    "Figure5e"
+  ],
+  "retained_panels": [
+    "Figure1b-d",
+    "Figure2a-d",
+    "Figure3a-d",
+    "Figure4a-d",
+    "Figure5b-d"
+  ],
+  "figure5_original_rows_preserved": 29,
+  "figure5_declared_gene_rows_appended": 24,
+  "prior_manuscript_sha256": "787778461F4BF47C00578DE11999D1708865E970DEBBADD5295CE8EACEE2BC2E",
+  "candidate_manuscript_sha256": "3890EA6D4F0188081954DCD1054CA5E535920DD47DF27A8BA52C28F9D2F836F3",
+  "manuscript_change_this_round": "Figure 5e legend only",
+  "scientific_estimates_changed": false,
+  "new_inference_added": false,
+  "exact_submission_package_modified": false
+}

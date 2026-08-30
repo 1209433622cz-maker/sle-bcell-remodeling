@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-08-31T04:39:36+08:00",
+  "status": "PASS_CANDIDATE_MANUSCRIPT_DOCX_BUILT_RENDER_QA_REQUIRED",
+  "source": "phase17_v7/npj_sba_full_main_figure_refinement/20260831_figure5e_and_figures2to4_adjudication/recommended_full_main_figure_set/sources/Manuscript_full_main_figure_candidate.md",
+  "source_sha256": "3890EA6D4F0188081954DCD1054CA5E535920DD47DF27A8BA52C28F9D2F836F3",
+  "output": "phase17_v7/npj_sba_full_main_figure_refinement/20260831_figure5e_and_figures2to4_adjudication/recommended_full_main_figure_set/documents/Manuscript_scientific_candidate.docx",
+  "output_sha256": "77DA55B5509FEF66CEE0D756D9FC1C8D7BEC243C0207F2FC08D7CB3D9B3B42B0",
+  "output_bytes": 60984,
+  "builder_result": {
+    "source": "phase17_v7/npj_sba_full_main_figure_refinement/20260831_figure5e_and_figures2to4_adjudication/recommended_full_main_figure_set/sources/Manuscript_full_main_figure_candidate.md",
+    "output": "phase17_v7/npj_sba_full_main_figure_refinement/20260831_figure5e_and_figures2to4_adjudication/recommended_full_main_figure_set/documents/Manuscript_scientific_candidate.docx",
+    "paragraphs": 150,
+    "tables": 0,
+    "inline_shapes": 0,
+    "placeholders": 0,
+    "bytes": 60951
+  },
+  "checks": {
+    "title_exact": true,
+    "article_type_present": true,
+    "new_figure1a_legend": true,
+    "new_figure5a_legend": true,
+    "new_figure5e_legend": true,
+    "fine_state_boundary": true,
+    "causal_boundary": true,
+    "ai_disclosure_present": true,
+    "current_doi_present": true,
+    "no_old_doi": true,
+    "no_embedded_figures": true
+  },
+  "scientific_estimates_changed": false,
+  "exact_submission_package_modified": false
+}

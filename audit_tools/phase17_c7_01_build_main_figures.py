@@ -1290,11 +1290,15 @@ def build_figure5(
     parallel_evidence_branches: bool = False,
     three_evidence_branches: bool = False,
     panel_a_variant: str | None = None,
+    panel_e_variant: str | None = None,
 ) -> None:
     c6_dir = root / "phase17_v7/gateC6B/20260815_regulatory_evidence"
     regulators = read_csv(c6_dir / "01_CONFIRMATORY_REGULATOR_RESULTS.csv")
     donor = read_csv(c6_dir / "18_GSE23307_LOG2P1_DONOR_PROGRAM_EFFECTS.csv")
     gsea = read_csv(c6_dir / "19_MSIGDB_M5911_PRERANKED_GSEA.csv")
+    gene_effects = None
+    if panel_e_variant == "paired_gene_dot":
+        gene_effects = read_csv(c6_dir / "17_GSE23307_LOG2P1_PAIRED_GENE_EFFECTS.csv")
     assert_equal("Figure5.confirmatory_regulator_tests", len(regulators), 24)
     assert_equal("Figure5.ifn_regulator_tests", int(regulators["family"].eq("IFN_confirmatory").sum()), 12)
     assert_equal("Figure5.proliferation_control_tests", int(regulators["family"].eq("proliferation_control").sum()), 12)
@@ -1303,6 +1307,18 @@ def build_figure5(
     assert_equal("Figure5.panel_d.source_rows", len(gsea), 3)
     assert_equal("Figure5.panel_e.source_rows", len(donor), 2)
     assert_equal("Figure5.panel_e.donors_with_12_positive_genes", int(donor["positive_genes"].eq(12).sum()), 2)
+    if gene_effects is not None:
+        assert_equal("Figure5.panel_e.gene_level_rows", len(gene_effects), 24)
+        assert_equal("Figure5.panel_e.gene_level_donors", gene_effects["donor_id"].nunique(), 2)
+        assert_equal("Figure5.panel_e.genes_per_donor", sorted(gene_effects.groupby("donor_id").size().tolist()), [12, 12])
+        assert_equal("Figure5.panel_e.positive_gene_effects", int(gene_effects["positive"].astype(str).str.lower().eq("true").sum()), 24)
+        calculated_means = gene_effects.groupby("donor_id")["paired_log2p1_effect"].mean()
+        expected_means = donor.set_index("donor_id")["mean_paired_log2p1_effect"]
+        assert_true(
+            "Figure5.panel_e.gene_means_reproduce_donor_summary",
+            bool(np.allclose(calculated_means.loc[expected_means.index], expected_means, atol=1e-12, rtol=0)),
+            f"maximum absolute difference={float(np.max(np.abs(calculated_means.loc[expected_means.index] - expected_means))):.3g}",
+        )
 
     regulator_source = regulators.assign(
         panel=np.where(regulators["family"].eq("IFN_confirmatory"), "B", "C"),
@@ -1340,15 +1356,33 @@ def build_figure5(
             "n_or_targets": donor["positive_genes"],
         }
     )
-    source = pd.concat([regulator_source, gsea_source, donor_source], ignore_index=True)
+    source_frames = [regulator_source, gsea_source, donor_source]
+    if gene_effects is not None:
+        gene_source = pd.DataFrame(
+            {
+                "panel": "E",
+                "series": "GSE23307_paired_gene_log2p1_effect",
+                "category": gene_effects["donor_id"].astype(str) + "|" + gene_effects["gene_symbol"].astype(str),
+                "estimate": gene_effects["paired_log2p1_effect"],
+                "ci_low": np.nan,
+                "ci_high": np.nan,
+                "p_value": "not_calculated_n_equals_2",
+                "q_value": np.nan,
+                "n_or_targets": 1,
+            }
+        )
+        source_frames.append(gene_source)
+    source = pd.concat(source_frames, ignore_index=True)
     write_source(source_dir / "Figure5_source_data.csv", source)
 
     if three_evidence_branches:
         figure = plt.figure(figsize=(7.09, 8.8), constrained_layout=True)
+        bottom_height = 1.17 if panel_e_variant == "paired_gene_dot" else 0.92
+        middle_height = 2.05 if panel_e_variant == "paired_gene_dot" else 2.30
         grid = figure.add_gridspec(
             3,
             2,
-            height_ratios=[0.62, 2.30, 0.92],
+            height_ratios=[0.62, middle_height, bottom_height],
             width_ratios=[1.08, 0.92],
         )
         design_axis = figure.add_subplot(grid[0, :])
@@ -1628,15 +1662,34 @@ def build_figure5(
     style_axis(gsea_axis)
     panel_label(gsea_axis, "d", x=-0.08, y=1.08)
 
-    donor_axis.bar(np.arange(2), donor["mean_paired_log2p1_effect"], width=0.58, color=["#CC6666", COLORS["purple"]], edgecolor="none")
-    donor_axis.set_xticks(np.arange(2), donor["donor_id"])
-    donor_axis.set_ylabel("Paired effect")
-    donor_axis.set_ylim(0, donor["mean_paired_log2p1_effect"].max() * 1.25)
-    donor_axis.set_title("IFN-beta response", loc="left", pad=4)
-    for index, row in donor.iterrows():
-        donor_axis.text(index, row["mean_paired_log2p1_effect"] + 0.10, f"{int(row['positive_genes'])}/12", ha="center", fontsize=6)
-    style_axis(donor_axis)
-    panel_label(donor_axis, "e", x=-0.08, y=1.08)
+    if panel_e_variant == "paired_gene_dot":
+        assert gene_effects is not None
+        gene_order = gene_effects.loc[gene_effects["donor_id"].eq("HI1"), "gene_symbol"].tolist()
+        pivot = gene_effects.pivot(index="gene_symbol", columns="donor_id", values="paired_log2p1_effect").loc[gene_order]
+        y_values = np.arange(len(gene_order))[::-1]
+        for y_value, (_, row) in zip(y_values, pivot.iterrows(), strict=True):
+            donor_axis.plot([row["HI1"], row["HI2"]], [y_value, y_value], color="#C7CCD1", lw=0.7, zorder=1)
+        donor_axis.scatter(pivot["HI1"], y_values + 0.09, s=13, color="#CC6666", linewidths=0, label="HI1", zorder=3)
+        donor_axis.scatter(pivot["HI2"], y_values - 0.09, s=13, color=COLORS["purple"], linewidths=0, label="HI2", zorder=3)
+        donor_axis.axvline(0, color="#777777", lw=0.7, ls="--")
+        donor_axis.set_yticks(y_values, gene_order)
+        donor_axis.set_xlim(0, 6.2)
+        donor_axis.set_xlabel("IFN-beta minus control (log2[x+1])")
+        donor_axis.set_title("IFN-beta paired gene effects", loc="left", pad=4)
+        donor_axis.legend(frameon=False, fontsize=6, loc="upper left")
+        donor_axis.text(0.98, 0.03, "n=2; descriptive", transform=donor_axis.transAxes, ha="right", va="bottom", color="#555555")
+        style_axis(donor_axis)
+        panel_label(donor_axis, "e", x=-0.08, y=1.08)
+    else:
+        donor_axis.bar(np.arange(2), donor["mean_paired_log2p1_effect"], width=0.58, color=["#CC6666", COLORS["purple"]], edgecolor="none")
+        donor_axis.set_xticks(np.arange(2), donor["donor_id"])
+        donor_axis.set_ylabel("Paired effect")
+        donor_axis.set_ylim(0, donor["mean_paired_log2p1_effect"].max() * 1.25)
+        donor_axis.set_title("IFN-beta response", loc="left", pad=4)
+        for index, row in donor.iterrows():
+            donor_axis.text(index, row["mean_paired_log2p1_effect"] + 0.10, f"{int(row['positive_genes'])}/12", ha="center", fontsize=6)
+        style_axis(donor_axis)
+        panel_label(donor_axis, "e", x=-0.08, y=1.08)
     control_axis.text(0.98, -0.19, "* global 24-test BH q<0.05", transform=control_axis.transAxes, ha="right", va="top", fontsize=5.8, color="#444444")
     save_figure(figure, figure_dir, "Figure5_regulatory_evidence")
 

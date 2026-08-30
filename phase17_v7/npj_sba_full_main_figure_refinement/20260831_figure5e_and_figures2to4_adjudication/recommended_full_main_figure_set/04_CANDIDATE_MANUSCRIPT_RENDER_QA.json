@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-08-31T07:29:21+08:00",
+  "status": "PASS_CANDIDATE_MANUSCRIPT_RENDER_AND_VISUAL_QA",
+  "docx": "phase17_v7/npj_sba_full_main_figure_refinement/20260831_figure5e_and_figures2to4_adjudication/recommended_full_main_figure_set/documents/Manuscript_scientific_candidate.docx",
+  "docx_sha256": "77DA55B5509FEF66CEE0D756D9FC1C8D7BEC243C0207F2FC08D7CB3D9B3B42B0",
+  "pdf": "phase17_v7/npj_sba_full_main_figure_refinement/20260831_figure5e_and_figures2to4_adjudication/recommended_full_main_figure_set/documents/Manuscript_scientific_candidate.pdf",
+  "pdf_sha256": "D1435EC34ACDD8FB70FFA6B59AE363CD9028EAB4391F0254E0DAD333A837490C",
+  "pdf_bytes": 244728,
+  "page_count": 32,
+  "checks": {
+    "page_count_32": true,
+    "no_blank_pages": true,
+    "title_on_page_1": true,
+    "data_availability_on_page_24": true,
+    "references_start_on_page_25": true,
+    "figure_legends_start_on_page_29": true,
+    "figure5e_boundary_on_page_32": true,
+    "new_figure1a_legend_present": true,
+    "new_figure5a_legend_present": true,
+    "new_figure5e_legend_present": true,
+    "current_doi_present": true,
+    "old_doi_absent": true,
+    "no_isolated_render_artifact_x": true,
+    "a11y_zero_high_medium_low": true
+  },
+  "visual_review": {
+    "all_pages_reviewed_in_contact_sheets": true,
+    "contact_sheets": [
+      "phase17_v7/npj_sba_full_main_figure_refinement/20260831_figure5e_and_figures2to4_adjudication/recommended_full_main_figure_set/document_render_qa/contact_sheet_manuscript_01-08.png",
+      "phase17_v7/npj_sba_full_main_figure_refinement/20260831_figure5e_and_figures2to4_adjudication/recommended_full_main_figure_set/document_render_qa/contact_sheet_manuscript_09-16.png",
+      "phase17_v7/npj_sba_full_main_figure_refinement/20260831_figure5e_and_figures2to4_adjudication/recommended_full_main_figure_set/document_render_qa/contact_sheet_manuscript_17-24.png",
+      "phase17_v7/npj_sba_full_main_figure_refinement/20260831_figure5e_and_figures2to4_adjudication/recommended_full_main_figure_set/document_render_qa/contact_sheet_manuscript_25-32.png"
+    ],
+    "high_risk_pages_reviewed_at_page_resolution": [
+      1,
+      24,
+      25,
+      29,
+      30,
+      31,
+      32
+    ],
+    "clipping_or_overlap_detected": false,
+    "page_32_whitespace_assessment": "acceptable double-spaced figure-legend close; no format compression applied"
+  },
+  "scientific_estimates_changed": false,
+  "exact_submission_package_modified": false
+}
