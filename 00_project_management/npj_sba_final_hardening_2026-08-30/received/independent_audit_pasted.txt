@@ -1,0 +1,336 @@
+本轮我没有直接沿用你上传的 `PASS_NPJ_SBA_TARGET_SPECIFIC_REFREEZE_AUTHOR_APPROVAL_REQUIRED`，而是重新检查了最新 GitHub、专项 ZIP、Manuscript、Supplement、Cover Letter、机器可读统计映射和实际导出的 PDF 图件。结论比上一轮更严格：
+
+> **科学主体已经完成，但当前 exact files 还不应该交两位作者签字。**
+> 我建议把当前状态临时降为
+> **`HOLD_NPJ_SBA_PREAPPROVAL_TECHNICAL_HARDENING_REQUIRED`**
+> 并插入最后一次非常窄的 **`NPJ_SBA_FINAL_SEMANTIC_AND_RENDER_HARDENING`**。
+> 这不是科学结果失败，而是我发现了两个此前自动门禁漏掉的真实技术问题。
+
+GitHub 当前 `main` 已经推进到 `0c7361022510b47e8cc7ae82baafd4b6dcff7c8e`；其中 `1257119...` 是正式的 npj target-specific refreeze commit，后续提交只保存审计 evidence bytes。  当前仓库机器门禁仍记录为 `PASS_NPJ_SBA_TARGET_SPECIFIC_REFREEZE_AUTHOR_APPROVAL_REQUIRED`，并正确保持 R1/C9R HOLD、外部 outcome unlock=false、作者批准/JCR/APC 均 pending。
+
+## 一、科学部分：我认为已经到“停止扩展”的节点
+
+当前 manuscript 的科学逻辑已经明显成熟。新标题已经压到 15 words，摘要改成无结构短摘要，结构也已经转成 Introduction → Results → Discussion → Methods → Data availability → Code availability → Acknowledgements → Author contributions → Competing interests → References → Figure legends。 Supplement 也已经把标题同步，删掉 Supplementary Methods，并整合成 Tables S1–S9/S4B + Figures S1–S10 的单一补充文件。 Cover Letter 的定位现在也正确：卖点是 systems-biology evidence hierarchy，而不是“首次发现 SLE IFN”。
+
+从导师角度，当前最强主轴仍然是：
+
+> **当 identity、composition 和 within-compartment transcription 被分开作为不同推断层时，hard state assignment 的稳定性/可迁移性存在明确边界，而 process-level IFN/ISG remodeling 在 biological-unit-aware inference、不确定性传播和独立数据集中更稳健。**
+
+这比“发现 IFN”强得多，也更符合 npj Systems Biology and Applications 的 systems biology / single-cell systems biology 定位。期刊编辑流程也明确强调 novelty、significance 和 overall technical quality，而不是仅看结果是否都是阳性。([Nature][1])
+
+所以我的判断没有改变：**首投前不要再新增 cohort、mapper、TF/regulon、gene-set family、threshold/seed 搜索，也不要尝试救 R1 或 C9R。** 新分析现在增加的是 post-hoc 风险，而不是说服力。
+
+## 二、专项 ZIP 本身：完整性是 100% PASS
+
+我重新计算你上传的最终专项 ZIP：
+
+`SLE_Bcell_npj_Systems_Biology_and_Applications.zip`
+
+得到：
+
+`SHA-256 = 8E56CD61DBA88098B2015CC5E539036BFEAC7E1BA9E90C753AC8CD142C62FA7F`
+
+与行动记录完全一致。
+
+独立验证结果为：
+
+| 检查                     |                  独立结果 |
+| ---------------------- | --------------------: |
+| ZIP entries            |                    21 |
+| manifest-managed files |                    20 |
+| Manifest SHA/size      |        **20/20 PASS** |
+| ZIP CRC                |              **PASS** |
+| Manuscript DOCX SHA    |  `6E453291...2688C97` |
+| Supplement DOCX SHA    |  `D3B04CAA...589C811` |
+| Cover Letter DOCX SHA  | `8133DEBD...0A4730B6` |
+
+而且更重要的是，target package 里的三个科学 archive 与前一版 journal-neutral package **逐字节完全相同**：
+
+| archive                  | SHA-256               | 与旧科学包         |
+| ------------------------ | --------------------- | ------------- |
+| Figure Source Data       | `79CB89AE...C62576D`  | **identical** |
+| Regulator Sensitivity    | `C1F40EB9...B8CEA7F8` | **identical** |
+| Full Statistical Results | `A3E1F532...1664314D` | **identical** |
+
+因此这次 npj 改稿没有任何隐藏的统计漂移。这一点非常好。
+
+---
+
+# 三、真正的新 P0：npj 图件 style contract 有代码级 bug
+
+这是这轮最重要的发现。
+
+当前 `publication_style_contract.py` 的 `apply_npj_sba_style()` 先正确执行：
+
+* text → 8 pt；
+* positive line width → `>=1.0 pt`；
+
+但紧接着**在同一个 npj 函数里又执行了一遍旧 generic Nature contract**：
+
+* non-panel text 又被压回 5–7 pt；
+* line width 又被 clip 成 0.25–1.0 pt。
+
+也就是说：
+
+> **前半段刚执行完 npj style，后半段又把它部分撤销。**
+
+这解释了为什么机器记录声称 minimum line width=1 pt， 但我直接解析真正导出的 PDF 后得到：
+
+| Figure |     实际宽度 |   实际字体 |     导出后的最细线 |
+| ------ | -------: | -----: | ----------: |
+| Fig. 1 | 170.0 mm | 7–8 pt | **0.60 pt** |
+| Fig. 2 | 170.0 mm | 7–8 pt |     1.00 pt |
+| Fig. 3 | 170.0 mm | 7–8 pt |     1.00 pt |
+| Fig. 4 | 170.0 mm | 7–8 pt |     1.00 pt |
+| Fig. 5 | 170.0 mm | 7–8 pt | **0.90 pt** |
+
+Fig. 1 的 `<1 pt` 不是只有不可见装饰，还包括 workflow box border、arrow 等对象。
+
+而 npj 官方 Guide to Authors 明确写的是：
+
+> final figure 的 thinnest lines 不应小于 1 point。([Nature][2])
+
+官方原页也能直接看到该要求。
+
+### 为什么 88/88 tests 没抓到？
+
+因为现在的 figure builder 只验证：
+
+* 15 张图存在；
+* width≈170 mm；
+* single-page；
+* source-data hashes unchanged。
+
+final audit 也只是验证 `figure_count`、source identity 和 five-main single-page，没有解析**导出后 PDF 的实际 line-width/font operator**。 当前单元测试同样只检查 source data identity，没有 figure-style artifact-level test。
+
+所以这是：
+
+> **declared-contract PASS ≠ rendered-artifact PASS**
+
+非常典型，而且值得现在修。
+
+需要强调：npj 明确说**初投稿不要求完全遵守最终格式**，所以这个问题本身不至于导致 desk reject。([Nature][3]) 但既然你现在是在做“target-specific final refreeze”，而且马上准备 exact-file author approval，我认为没有理由把这个已知实现 bug 带入最终签字文件。
+
+---
+
+# 四、第二个新 P0：统计 reporting map 出现“claim 与 decision 相反”
+
+我直接检查了 package 内：
+
+`npj_statistics_reporting_map.csv`
+
+发现机器 decision 大体正确，但有四条 human-readable `claim` 写成了相反方向。
+
+| ID            | 当前 claim                          | 当前 decision                                | 应改                                              |
+| ------------- | --------------------------------- | ------------------------------------------ | ----------------------------------------------- |
+| R1            | “reproducibility criterion held”  | HOLD                                       | 应写 criterion **not met**                        |
+| C3_PRIMARY    | “B_ASC composition differs”       | NOT_SUPPORTED                              | 应写 difference **not supported**                 |
+| C5_GENOMEWIDE | “effects agree across datasets”   | WEAK_RHO_0.026                             | 应写 concordance **weak**                         |
+| TF_DEPLETION  | “evidence is overlap-independent” | NOT_SUPPORTED_FOR_BROAD_M5911_INDEPENDENCE | 应写 broad overlap-independence **not supported** |
+
+这不会改变 manuscript 数值，但它是一个**机器可读 reproducibility artifact 的语义自相矛盾**。
+
+尤其这个 CSV 已经被打进最终 package，因此 reviewer 或第三方审计者真的有可能打开。
+
+正确做法不是手改 CSV，而是修改 source builder，并新增回归测试，防止：
+
+> HOLD / NOT_SUPPORTED row 的 claim 再出现 “held / differs / agree / independent” 之类正向陈述。
+
+---
+
+# 五、第三个 P0：GitHub 首页又落后一轮
+
+这次 target-specific refreeze 已经真实存在，但最新 root README 仍然写：
+
+> `No target-specific submission package has been created.`
+> `no journal is formally selected...`
+
+这显然已经过时。
+
+同样，当前 `REPRODUCIBILITY.md` 仍写：
+
+> `No target journal is fixed.`
+
+并且旧 release-environment 段落还说 LibreOffice unavailable/no cross-renderer verification，而新一轮已经完成 WPS + LibreOffice 51-page cross-render。
+
+这件事比普通 repo housekeeping 更重要，因为当前 manuscript 的 Code Availability 会直接把 reviewer 指向 GitHub。
+
+所以 README/REPRODUCIBILITY 应在最终签字前同步成：
+
+> target = npj Systems Biology and Applications
+> target-specific refreeze built
+> scientific baseline unchanged
+> technical hardening / exact author approval pending
+> WPS + LibreOffice verified
+> JCR/APC institutional receipt pending
+
+不动 Zenodo、不动 v1.1.0 tag、不动科学 release。
+
+---
+
+# 六、我还建议顺手做 3 个非常小的 reader-facing 修正
+
+因为所有图本来就要由于 style bug **从源码重渲染**，现在正好把语义做到最严谨。
+
+第一，Figure 2b 现在写：
+
+> `No primary B_ASC enrichment`
+
+但你的 CI 是 0.636–1.410，正文也正确写了：
+
+> interval does not establish equivalent abundance or exclude an increase. 
+
+因此图上最好改成：
+
+> **Primary B_ASC enrichment not supported**
+
+避免把“未发现证据”写成“证明不存在”。
+
+第二，GSE135779 的标题/图标题进一步加 `source-label-defined`。当前主文已经在方法和限制中反复说明这一边界，但 Results heading、Figure 1 workflow 和 Figure 4 标题仍容易让 hostile reviewer 把“independent dataset”误读成“source-label-independent identity transfer”。建议统一成：
+
+> **Independent GSE135779 provides source-label-defined replication of IFN/ISG despite low genome-wide concordance**
+
+以及：
+
+> **GSE135779 source-label-defined replication**
+
+这样 C9R 的失败与 primary replication 的成立就几乎不可能再被混淆。
+
+第三，Introduction 当前：
+
+> “neither interferon activity nor plasmablast biology is novel”
+
+科学上没错，但对编辑稍微有一点“主动削弱 novelty”。
+
+建议改成：
+
+> **interferon activity and plasmablast biology are well established in SLE, but both are strongly context dependent.**
+
+这样仍然诚实，而且更自然地把 novelty 转向：
+
+> inferential hierarchy / robustness architecture。
+
+---
+
+# 七、Figure/Supplement 的整体水平其实已经很高
+
+我重新看了五张主图，整体布局现在已经达到较成熟的 Nature-family 风格：
+
+* **Fig. 1**：study/evidence hierarchy 比过去清楚很多；
+* **Fig. 2**：primary null 与 flare secondary 被明确隔离；
+* **Fig. 3**：IFN program 和 gene coherence 的层次清晰；
+* **Fig. 4**：program replication 与 genome-wide `rho=0.026` 并置非常有效；
+* **Fig. 5**：regulator、M5911、GSE23307 三条并行证据链避免了“伪因果箭头”。
+
+Supplement 18 页也已经很完整，特别是 S7/S8/S9/S10 已经把最容易被 reviewer 攻击的 regulator correlation、overlap depletion、R1 HOLD、external calibration 都显式展示出来。
+
+**不用新增 S11/S12，也不用增加新分析图。**
+
+---
+
+# 八、Reporting Summary / Editorial Policy Checklist 还没有真正完成
+
+当前 package 内是 Markdown draft。
+
+但 Nature Partner Journal 官方 Guide 明确要求 Life Sciences research articles 提供：
+
+* **completed Reporting Summary**；
+* **all authors Editorial Policy Checklist**。([Nature][2])
+
+因此最终 portal gate 仍应把 Markdown draft 转录进**当期官方表单**。
+
+这里特别建议对 sex/gender 字段如实填：
+
+> public metadata across the relevant contrasts did not provide a uniform sex covariate sufficient for a consistent prespecified cross-cohort analysis.
+
+不要因为表单要求而临时做一个 post-hoc sex subgroup 分析。
+
+---
+
+# 九、期刊本身仍然适合首投
+
+截至现在，npj Systems Biology and Applications 官方页面给出的：
+
+* 2025 JIF：**4.4**
+* 5-year JIF：**4.2**
+* median first editorial decision：**8 days**
+* median submission-to-acceptance：**155 days**。([Nature][4])
+
+期刊也明确属于 SCIE。([Nature][5])
+
+但 Nature 官网这些信息仍**不能替代你要求的 JCR Q1 证明**。所以 official/institutional JCR receipt 继续保留 pending 是正确的。
+
+当前 Original Research APC 是：
+
+> **£2,690 / US$3,490 / €2,990**，另视地区税费。([Nature][6])
+
+Springer Nature 公共页面确实列出 **The Chinese University of Hong Kong** 具有 Nature Portfolio OA coverage，([Springer Nature][7]) 但当前 affiliation 是 **The Chinese University of Hong Kong, Shenzhen**，不能自动推定资格，所以继续让 CUHK-Shenzhen 图书馆/科研管理确认是正确做法。
+
+---
+
+## 当前重新评分
+
+| 模块                                  |    本轮独立判断 |
+| ----------------------------------- | --------: |
+| Scientific design                   |   **98%** |
+| Statistical rigor                   |   **98%** |
+| R1/C9R 边界                           |   **99%** |
+| Manuscript logic                    |   **98%** |
+| npj manuscript structure            |   **99%** |
+| Supplement structure                |   **98%** |
+| Source-data integrity               |  **100%** |
+| Package byte integrity              |  **100%** |
+| 主图视觉质量                              |   **97%** |
+| npj exported-line style             |   **88%** |
+| Statistics-map semantic correctness |   **82%** |
+| GitHub current-state documentation  |   **80%** |
+| Official Nature forms               |   **待完成** |
+| JCR Q1 receipt                      |   **待完成** |
+| APC/OA receipt                      |   **待完成** |
+| Exact-file author approval          |   **待完成** |
+| **整体首投 readiness**                  | **约 92%** |
+
+## 下一阶段我建议改成
+
+不是现在就：
+
+`NPJ_SBA_EXACT_FILE_AUTHOR_APPROVAL_AND_INSTITUTIONAL_RECEIPTS`
+
+而是先插入：
+
+> **`NPJ_SBA_FINAL_SEMANTIC_AND_RENDER_HARDENING`**
+
+一次完成下面这一组工作即可：
+
+1. 修 `publication_style_contract.py` 的 npj branch 回退；
+2. 增加真正解析 exported PDF 的 font/line-width postflight；
+3. **从冻结 source data 重渲染全部 15 张图**；
+4. 保证 15/15 source CSV SHA 不变；
+5. 顺带修 Fig. 2 null wording、Fig. 1/4 source-label-defined wording；
+6. 修统计 reporting map builder + regression tests；
+7. 更新 README / REPRODUCIBILITY；
+8. 重建 manuscript/supplement/cover；
+9. WPS + LibreOffice 再验；
+10. deterministic package rebuild，生成一套**新的 exact hashes**。
+
+之后再正式进入：
+
+> **`NPJ_SBA_EXACT_FILE_AUTHOR_APPROVAL_AND_INSTITUTIONAL_RECEIPTS`**
+
+这样两位作者签的是**真正终局版本**，而不是现在这套已经发现可修问题、马上要 supersede 的 hash。
+
+本轮详细行动记录已经单独产出：
+
+[下载本轮 npj SBA 专项冻结后独立全量审计报告](sandbox:/mnt/data/SLE_Bcell_npj_SBA_post_refreeze_independent_audit_2026-08-30.md)
+
+[下载最终 technical hardening 执行矩阵](sandbox:/mnt/data/SLE_Bcell_npj_SBA_final_hardening_action_matrix_2026-08-30.csv)
+
+**最重要的判断只有一句：现在完全不值得再增加新的生物信息学分析；最值得做的是修掉这个真实的 figure-style implementation bug 和 machine-readable semantic bug，然后从源码重渲染、重建、再签字。**
+
+[1]: https://www.nature.com/npjsba/for-authors-and-referees/editorial-process?utm_source=chatgpt.com "Editorial process | npj Systems Biology and Applications"
+[2]: https://www.nature.com/documents/npj-gta.pdf "Guide to Authors"
+[3]: https://www.nature.com/npjsba/for-authors-and-referees?utm_source=chatgpt.com "For Authors and Referees | npj Systems Biology and Applications"
+[4]: https://www.nature.com/npjsba/journal-impact?utm_source=chatgpt.com "Journal Metrics | npj Systems Biology and Applications"
+[5]: https://www.nature.com/npjsba/journal-information?utm_source=chatgpt.com "Journal Information | npj Systems Biology and Applications"
+[6]: https://www.nature.com/npjsba/apc?utm_source=chatgpt.com "Article Processing Charges | npj Systems Biology and Applications"
+[7]: https://www.springernature.com/cn/open-science/oa-agreements/hong-kong?utm_source=chatgpt.com "Open access agreement for Hong Kong | Open science | Springer Nature"

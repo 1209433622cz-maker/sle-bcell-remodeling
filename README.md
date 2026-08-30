@@ -18,8 +18,9 @@ framed as an analysis scaffold rather than a universally reproducible taxonomy.
 Propagating every observed broad-state boundary exchange retained the primary
 composition null and both tested GSE174188 B_CONV IFN/ISG effects. The local
 legacy journal package is an earlier WPS-audited snapshot and must not be
-submitted; the current journal-neutral manuscript is preserved in the verified
-public reproducibility release described below.
+submitted. The scientific archive remains frozen in the verified public
+reproducibility release described below, while a separately governed Article
+package has now been hardened for npj Systems Biology and Applications.
 A post-freeze code audit invalidated the subsequent C9 PASS: reference and external
 normalization differed, and failed confidence calibration incorrectly authorized
 outcome access. The corrected full run processed all 363,083 cells but stopped
@@ -35,6 +36,14 @@ was administratively withdrawn after verified replacement and remains visible as
 a citation-preserving tombstone. The concept DOI
 [doi:10.5281/zenodo.22086891](https://doi.org/10.5281/zenodo.22086891) resolves to
 the current version.
+
+The selected first-submission target is **npj Systems Biology and Applications**
+(`Article`). The target-specific final-hardening gate is
+`PASS_NPJ_SBA_FINAL_HARDENING_AUTHOR_APPROVAL_REQUIRED`. This technical PASS is
+not submission authorization: exact-file author approval, an official current
+JCR Q1 receipt and institutional APC/OA verification remain pending. The target
+adaptation did not rerun scientific analyses, alter the public v1.1.0 release or
+publish a new Zenodo version.
 
 Author-confirmed scientific manuscript title:
 
@@ -85,6 +94,15 @@ The frozen evidence chain is:
 
 ## Current manuscript and submission files
 
+- [npj SBA final-hardened manuscript source](phase17_v7/npj_sba_final_hardening/20260830_final_render_semantic_hardening/sources/Manuscript.md)
+- [npj SBA final-hardened manuscript DOCX](phase17_v7/npj_sba_final_hardening/20260830_final_render_semantic_hardening/documents/Manuscript.docx)
+- [npj SBA final-hardened manuscript PDF](phase17_v7/npj_sba_final_hardening/20260830_final_render_semantic_hardening/documents/Manuscript.pdf)
+- [npj SBA supplementary information DOCX](phase17_v7/npj_sba_final_hardening/20260830_final_render_semantic_hardening/documents/Supplementary_Information.docx)
+- [npj SBA supplementary information PDF](phase17_v7/npj_sba_final_hardening/20260830_final_render_semantic_hardening/documents/Supplementary_Information.pdf)
+- [npj SBA cover letter DOCX](phase17_v7/npj_sba_final_hardening/20260830_final_render_semantic_hardening/documents/Cover_Letter.docx)
+- [npj SBA cover letter PDF](phase17_v7/npj_sba_final_hardening/20260830_final_render_semantic_hardening/documents/Cover_Letter.pdf)
+- [Final-hardening machine-readable gate](phase17_v7/npj_sba_final_hardening/20260830_final_render_semantic_hardening/04_FINAL_AUDIT_STATUS.json)
+- [Final-hardening action record](00_project_management/action_record_2026-08-30_npj_sba_final_render_semantic_hardening.md)
 - [Current release manuscript source](04_submission/zenodo_release/manuscript/Manuscript.md)
 - [Current release manuscript DOCX](04_submission/zenodo_release/manuscript/Manuscript.docx)
 - [Current release manuscript PDF](04_submission/zenodo_release/manuscript/Manuscript.pdf)
@@ -125,8 +143,13 @@ The frozen evidence chain is:
 Git history and the immutable public release preserve superseded submission
 drafts. The `01_manuscript/` source links still identify the earlier corrected
 candidate; the separate QiTeng R2 and release-manuscript links identify the
-confirmed scientific prose and DOI-integrated archive files. No target-specific
-submission package has been created. The historical `04_submission/journal_submission/` directory is preserved;
+confirmed scientific prose and DOI-integrated archive files. The generated,
+Git-ignored npj SBA package is at
+`04_submission/npj_systems_biology_and_applications/SLE_Bcell_npj_Systems_Biology_and_Applications.zip`;
+its tracked build receipt records 20 verified files, deterministic double-build
+identity and SHA-256
+`F4F8C49380A32A49BA4BFAF4235D979964779757CCD362A8AEA0D4D07B8D8BFD`.
+The historical `04_submission/journal_submission/` directory is preserved;
 Git tracks its reader-facing README, manifests, portal maps and
 11-file REQUIRED upload set, while internal renders and duplicate working assets
 remain ignored. Markdown, scripts and machine-readable analysis outputs remain
@@ -223,16 +246,17 @@ with portable hash checks. It is not authorized for submission. Historical
 one-click release writers are retired to protect the revised sources and old
 package. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for current entry points.
 
-QiTeng R2 scientific prose, declarations and ethics are author-confirmed, and the
-matching Zenodo/GitHub reproducibility release is complete. The next stage is
-JCR Q1 journal selection and one bounded target-specific adaptation. Fit-first
-preference is npj Systems Biology and Applications, with Communications Biology
-second, but no journal is formally selected until a current institutional or
-Clarivate JCR profile establishes the required category rank and quartile and
-APC feasibility is understood.
+QiTeng R2 scientific prose, declarations and ethics are author-confirmed, the
+matching Zenodo/GitHub reproducibility release is complete, and the bounded npj
+SBA adaptation has passed technical hardening. WPS and LibreOffice each rendered
+50 pages (31 manuscript, 18 supplement and one cover-letter page); all pages
+were visually reviewed, and all three DOCX accessibility audits returned zero
+high, medium and low findings.
 
 Do not tune C9 thresholds, substitute the centroid mapper, rescue R1, add a new
-cohort or reopen exploratory analysis before first submission. After target
-freeze, adapt only the title, abstract, section order, declarations, figure
-dimensions and cover letter required by that journal; then rebuild, verify and
-obtain exact-file author approval before any portal action.
+cohort or reopen exploratory analysis before first submission. The next gate is
+`NPJ_SBA_EXACT_FILE_AUTHOR_APPROVAL_AND_INSTITUTIONAL_RECEIPTS`: both authors must
+approve the exact final DOCX/PDF/package hashes, and the project must retain an
+official current JCR Q1 record plus institutional APC/OA confirmation. Only then
+should the npj portal metadata be dry-run and submission authorization be
+considered; the present package must not yet be uploaded.

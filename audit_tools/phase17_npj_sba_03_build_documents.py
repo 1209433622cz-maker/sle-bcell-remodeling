@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from pathlib import Path
 
 from docx import Document
@@ -12,7 +13,12 @@ import phase17_c8s_04_build_documents as documents
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RUN = ROOT / "phase17_v7/npj_sba_target_refreeze/20260830_target_specific_refreeze"
+RUN = Path(
+    os.environ.get(
+        "NPJ_SBA_RUN_DIR",
+        ROOT / "phase17_v7/npj_sba_target_refreeze/20260830_target_specific_refreeze",
+    )
+).resolve()
 SOURCES = RUN / "sources"
 OUTPUT = RUN / "documents"
 FIGURE_DIR = RUN / "figures/figures"
@@ -44,7 +50,7 @@ def patch_properties(path: Path, title: str, subject: str) -> None:
     document.core_properties.author = "Zhi Chen; Teng Qi"
     document.core_properties.title = title
     document.core_properties.subject = subject
-    document.core_properties.comments = "Generated reproducibly from the npj SBA target-refrozen Markdown source."
+    document.core_properties.comments = "Generated reproducibly from the npj SBA final-hardened Markdown source."
     document.save(path)
 
 

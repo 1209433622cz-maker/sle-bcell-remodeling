@@ -8,6 +8,7 @@ from datetime import datetime
 import hashlib
 import io
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -16,7 +17,12 @@ import zipfile
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RUN = ROOT / "phase17_v7/npj_sba_target_refreeze/20260830_target_specific_refreeze"
+RUN = Path(
+    os.environ.get(
+        "NPJ_SBA_RUN_DIR",
+        ROOT / "phase17_v7/npj_sba_target_refreeze/20260830_target_specific_refreeze",
+    )
+).resolve()
 OUTPUT_ROOT = ROOT / "04_submission/npj_systems_biology_and_applications"
 PACKAGE_NAME = "SLE_Bcell_npj_Systems_Biology_and_Applications"
 PACKAGE_DIR = OUTPUT_ROOT / PACKAGE_NAME
@@ -37,7 +43,7 @@ TITLE = (
 DOI = "10.5281/zenodo.22151739"
 R1_HOLD = "HOLD_FULL_PIPELINE_TWO_COMPARTMENT_REPRODUCIBILITY"
 C9R_HOLD = "HOLD_C9A_PREFREEZE_REVIEW_REQUIRED"
-STATUS = "PASS_NPJ_SBA_TARGET_SPECIFIC_REFREEZE_AUTHOR_APPROVAL_REQUIRED"
+STATUS = "PASS_NPJ_SBA_FINAL_HARDENING_AUTHOR_APPROVAL_REQUIRED"
 
 
 def require(condition: bool, message: str) -> None:
@@ -76,7 +82,7 @@ def csv_bytes(fieldnames: list[str], rows: list[dict[str, str]]) -> bytes:
 def readme_text() -> str:
     return f"""# Read me first
 
-This package is the target-specific technical refreeze for an Article submission to
+This package is the final technical hardening candidate for an Article submission to
 npj Systems Biology and Applications:
 
 {TITLE}
@@ -121,6 +127,7 @@ def metadata(packaging_commit: str) -> dict:
         "title_word_count": 15,
         "abstract_word_count": 140,
         "scientific_baseline": "QiTeng R2",
+        "reader_facing_baseline": "QiTeng npj final hardening",
         "reproducibility_archive_doi": DOI,
         "scientific_release_content_commit": "f1859ff8498d5569a1d5027b36ed18c8b7c7536f",
         "packaging_parent_commit": packaging_commit,

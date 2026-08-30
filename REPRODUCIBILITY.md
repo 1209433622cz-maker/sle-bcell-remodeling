@@ -28,6 +28,27 @@ the published ZIP. Current administrative truth is represented by the two
 post-release verification files above and the updated receipt on `main` at
 `00_project_management/qiteng_r2_freeze_2026-08-29/author_freeze.json`.
 
+## Current npj SBA submission candidate
+
+The selected first-submission target is npj Systems Biology and Applications
+(`Article`). The bounded target adaptation is separate from the immutable public
+reproducibility release and performed no scientific reanalysis. Its current gate
+is `PASS_NPJ_SBA_FINAL_HARDENING_AUTHOR_APPROVAL_REQUIRED`; R1 and corrected C9R
+remain HOLD, and no corrected external disease outcome was unlocked.
+
+Run the complete target hardening workflow from the repository root:
+
+```powershell
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_6013RP_phase17_npj_sba_final_hardening.ps1
+```
+
+The final run is
+`phase17_v7/npj_sba_final_hardening/20260830_final_render_semantic_hardening`.
+The generated ZIP is deliberately ignored by Git; its tracked receipt records
+20 verified files, deterministic double-build identity and SHA-256
+`F4F8C49380A32A49BA4BFAF4235D979964779757CCD362A8AEA0D4D07B8D8BFD`.
+
 ## Repository boundary
 
 This repository contains analysis code, study-design documents, environment
@@ -94,8 +115,11 @@ python .\02_analysis\scripts\01_check_scanpy_env.py
 Earlier releases used a dedicated submission environment. The correction figures
 were rebuilt with the installed Python 3.13.7 plotting runtime (NumPy 2.3.3,
 pandas 2.3.3, Matplotlib 3.10.7), and DOCX generation used the bundled document
-runtime. WPS renders the current documents; LibreOffice is not available on this
-workstation and no new cross-renderer verification is claimed. Historical locks:
+runtime. The final npj SBA documents were rendered independently with WPS and
+LibreOffice. Both produced 31 manuscript pages, 18 supplementary pages and one
+cover-letter page; all 50 pages from each renderer were visually reviewed, page
+bounds and unresolved markers passed, and the three DOCX accessibility audits
+reported zero high, medium and low findings. Historical locks:
 
 - `audit_tools/environment_submission.yml`
 - `audit_tools/environment_submission_win64.txt`
@@ -182,7 +206,8 @@ External reviewer identity remains unverified. Journal choice, target-formatted
 exact files and actual submission remain separate decisions. Both older review
 ZIPs remain immutable; use their own bundled verifiers for their schemas.
 
-The user specified JCR Q1. Figure 1c now labels the 0.990 guide as the minimum
+The user specified JCR Q1 and selected npj Systems Biology and Applications as
+the first-submission target. Figure 1c now labels the 0.990 guide as the minimum
 mapping-agreement criterion in both the candidate figure and manuscript legend.
 All figure source tables remain byte-identical. The earlier approved snapshot is
 preserved unchanged. Integrity and semantic checks do not grant final approval,
@@ -191,7 +216,7 @@ establish a journal's quartile, or authorize a DOI release or submission.
 The historical release builders are retired on the current branch: they rewrite
 canonical prose and delete the previous package. Do not use them for this review.
 The new builder writes only a new, empty output directory and checks source hashes.
-After WPS rendering, build with:
+For the historical correction-review bundle only, build with:
 
 ```powershell
 powershell -ExecutionPolicy Bypass `
@@ -242,7 +267,9 @@ reference-cell predictions and per-cell external predictions remain local.
 
 The recorded author identities, declarations and licences are retained. QiTeng R2
 is the confirmed scientific baseline and its journal-neutral reproducibility
-archive is public. No target journal is fixed. Target-specific title, abstract,
-layout, figure dimensions, cover letter and exact-file hashes still require a
-new final approval before submission. Technical bundle or release verification
-does not authorize portal upload, APC commitment or journal submission.
+archive is public. The npj SBA target-specific title, abstract, layout, figures,
+supplement and cover letter have passed technical hardening, but their exact
+DOCX/PDF/package hashes still require a new final approval from both authors.
+The official current JCR Q1 profile and institutional APC/OA receipt also remain
+pending. Technical bundle or release verification does not authorize portal
+upload, APC commitment or journal submission.

@@ -5,6 +5,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import os
 import re
 from pathlib import Path
 
@@ -12,9 +13,19 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASE_MANUSCRIPT = ROOT / "04_submission/zenodo_release/manuscript/Manuscript.md"
 BASE_SUPPLEMENT = ROOT / "01_manuscript/Supplementary_Information.md"
-RUN = ROOT / "phase17_v7/npj_sba_target_refreeze/20260830_target_specific_refreeze"
+RUN = Path(
+    os.environ.get(
+        "NPJ_SBA_RUN_DIR",
+        ROOT / "phase17_v7/npj_sba_target_refreeze/20260830_target_specific_refreeze",
+    )
+).resolve()
 SOURCES = RUN / "sources"
-MANAGEMENT = ROOT / "00_project_management/npj_sba_target_refreeze_2026-08-30"
+MANAGEMENT = Path(
+    os.environ.get(
+        "NPJ_SBA_MANAGEMENT_DIR",
+        ROOT / "00_project_management/npj_sba_target_refreeze_2026-08-30",
+    )
+).resolve()
 TITLE = (
     "Disease-blind reconstruction distinguishes reproducible interferon remodeling from unstable B-cell state assignments "
     "in systemic lupus erythematosus"
@@ -106,6 +117,48 @@ def nature_references(reference_text: str) -> str:
             formatted = f"{author_text} {title}. {journal} **{volume}**, {pages} ({year}). https://doi.org/{doi}."
         output.append(f"{number}. {formatted}")
     return "\n\n".join(output)
+
+
+def harden_manuscript(text: str) -> str:
+    """Apply audited reader-facing hardening without changing scientific results."""
+
+    replacements = {
+        "Running title: Replicated IFN remodeling in SLE B cells":
+            "Running title: Reproducible IFN remodeling in SLE B cells",
+        "This distinction is especially important in SLE because neither interferon activity nor plasmablast biology is novel, and both vary with disease context.":
+            "This distinction is especially important in SLE because interferon activity and plasmablast biology are well established yet strongly context dependent.",
+        "The central transcriptional result was then tested in independent GSE135779 and challenged by identity-uncertainty propagation, cross-dataset gene-level comparison and prespecified regulatory and response-based analyses. The intended contribution is thus an evidence hierarchy: to distinguish the B-cell features that survive increasingly stringent reconstruction and validation from those that remain cohort-specific, representation-dependent or mechanistically unproven.":
+            "The central transcriptional result was then tested in the independent GSE135779 cohort using a source-label-defined broad B-cell analogue and challenged by identity-uncertainty propagation, cross-dataset gene-level comparison and prespecified regulatory and response-based analyses. This design tests an evidence hierarchy: which B-cell features survive increasingly stringent reconstruction and validation, and which remain cohort-specific, representation-dependent or mechanistically unproven.",
+        "### Independent GSE135779 replicates IFN/ISG despite low genome-wide concordance":
+            "### Independent GSE135779 provides source-label-defined IFN/ISG replication despite low genome-wide concordance",
+        "The independent GSE135779 analysis strengthens that process-level interpretation while also defining its limits.":
+            "The independent, source-label-defined GSE135779 analysis strengthens that process-level interpretation while also defining its limits.",
+        "### Independent GSE135779 validation":
+            "### Source-label-defined GSE135779 validation",
+        "GSE174188 internal validation and GSE135779 independent replication are displayed in parallel":
+            "GSE174188 internal validation and GSE135779 source-label-defined independent replication are displayed in parallel",
+        "### Figure 4 | GSE135779 independently replicates the frozen IFN/ISG program":
+            "### Figure 4 | GSE135779 provides source-label-defined replication of the frozen IFN/ISG program",
+        "Standardized discovery and internal GSE174188 effects beside independent GSE135779 effects.":
+            "Standardized discovery and internal GSE174188 effects beside source-label-defined independent GSE135779 effects.",
+    }
+    for old, new in replacements.items():
+        if text.count(old) != 1:
+            raise RuntimeError(f"Expected one hardening target, found {text.count(old)}: {old[:80]}")
+        text = text.replace(old, new)
+
+    old_ending = (
+        "Several limitations define the remaining evidence gap. Public metadata did not provide a common set of sex, treatment and detailed clinical covariates across all contrasts. End-to-end resampling failed the B_ASC overlap criterion, and propagation of observed assignment exchanges remains a same-data sensitivity rather than proof of taxonomy transfer. The adult external stratum was small, two adult metadata donors lacked corresponding source matrices, and the GSE174188 internal validation remains accession-internal despite removal of donor overlap. External replication relies on source labels to define a broad conventional-B analog; after correcting a normalization mismatch, the source-label-independent remapping sensitivity failed its B_ASC reference-calibration criterion and therefore did not estimate a corrected disease effect. CollecTRI results depend on curated prior knowledge and gene coverage, correlation-aware and overlap-depletion analyses reuse the same disease contrasts, and discovery STAT2 remains the explicit CAMERA exception. The GSE23307 perturbation comprises only two healthy donors. These constraints leave direct binding, matched patient perturbation, prospective clinical validation and transferable state taxonomy unresolved.\n\n"
+        "Taken together, the study supports a restrained model of SLE B-cell remodeling: the prespecified IFN/ISG association was reproduced across these cohorts, whereas the tested hard state policies had defined stability and transfer limits. These are distinct assessments, not a common-scale comparison of reproducibility. Retaining failed stability and calibration criteria limits the scope of the replicated process-level association and keeps mechanistic and clinical claims within the available evidence.\n\n"
+        "SLE is associated with an IFN/ISG transcriptional shift supported in disease-blind GSE174188 B_CONV analyses and independently replicated in a source-label-defined GSE135779 conventional-B analog. The tested state assignments retained stability limits, and corrected source-label-independent mapping failed calibration without estimating a disease effect. Same-data uncertainty propagation and qualified regulatory and response analyses support this bounded process-level interpretation; they do not establish a universal taxonomy, generalized B_ASC expansion, causal regulator, unique upstream stimulus or clinical utility."
+    )
+    new_ending = (
+        "Several limitations define the remaining evidence gap. Public metadata did not provide a common set of sex, treatment and detailed clinical covariates across all contrasts. End-to-end resampling failed the B_ASC overlap criterion, so propagation of observed assignment exchanges remains a same-data sensitivity rather than evidence of taxonomy transfer. The adult external stratum was small, two adult metadata donors lacked corresponding source matrices, and the GSE174188 donor-nonoverlap validation remains accession-internal. External replication therefore depends on source labels; after correction of the normalization mismatch, source-label-independent remapping failed B_ASC calibration and no corrected disease effect was estimated. Regulatory analyses reuse the same disease contrasts and depend on curated priors and gene coverage, with discovery STAT2 remaining the explicit CAMERA exception. GSE23307 includes only two healthy donors. Direct binding, matched patient perturbation, prospective clinical validation and transferable state taxonomy therefore remain unresolved.\n\n"
+        "Taken together, the study supports a restrained model of SLE B-cell remodeling: a prespecified IFN/ISG transcriptional shift is reproducible at the process level across the analysed cohorts, whereas the tested hard state assignments retain defined stability and transfer limits. Retaining the failed reconstruction and calibration criteria narrows, rather than weakens, the conclusion: the data support a bounded interferon association, not a universal B-cell taxonomy, generalized B_ASC expansion, causal regulator, unique upstream stimulus or established clinical utility."
+    )
+    if text.count(old_ending) != 1:
+        raise RuntimeError("Expected one pre-hardening Discussion ending")
+    return text.replace(old_ending, new_ending)
 
 
 def build_manuscript(base: str) -> str:
@@ -208,7 +261,8 @@ The authors declare no competing interests.
 
 {legends}
 """
-    return text.replace("## Background", "## Introduction").strip() + "\n"
+    text = text.replace("## Background", "## Introduction")
+    return harden_manuscript(text).strip() + "\n"
 
 
 def build_supplement(base: str) -> str:
@@ -242,7 +296,8 @@ def cover_letter() -> str:
 
 30 August 2026
 
-Editors  
+Editors
+
 npj Systems Biology and Applications
 
 Dear Editors,
@@ -259,10 +314,14 @@ Thank you for your consideration.
 
 Sincerely,
 
-Teng Qi  
-Corresponding author  
-School of Medicine, The Chinese University of Hong Kong, Shenzhen  
-tengqi@link.cuhk.edu.cn  
+Teng Qi
+
+Corresponding author
+
+School of Medicine, The Chinese University of Hong Kong, Shenzhen
+
+tengqi@link.cuhk.edu.cn
+
 ORCID: https://orcid.org/0009-0007-7648-4776
 """
 
@@ -333,16 +392,16 @@ Status: `TECHNICAL_DRAFT_EXACT_FILE_AUTHOR_APPROVAL_REQUIRED`
 
 def statistics_map() -> list[dict[str, str]]:
     return [
-        {"claim_id":"R1","location":"Results 1; Fig. 1; Fig. S9","claim":"End-to-end broad-state reproducibility criterion held","unit_n":"150,402 cells; 20 resamples","test":"Prespecified ARI/agreement/Jaccard thresholds","sidedness":"not tested","p_value":"NA","q_value":"NA","confidence_interval":"NA","multiplicity":"five fixed criteria","decision":R1_HOLD,"source":"phase17_v7/round6_q1_robustness/20260827_r1_hold_integration/06_AUDIT_AND_PROPAGATION_PREP_STATUS.json"},
-        {"claim_id":"C3_PRIMARY","location":"Results 2; Fig. 2","claim":"Primary B_ASC composition differs in managed SLE","unit_n":"43 controls; 47 SLE sample-cohort strata","test":"Beta-binomial Wald","sidedness":"two-sided","p_value":"0.787","q_value":"0.787","confidence_interval":"OR 0.636-1.410","multiplicity":"BH across three frozen base contrasts","decision":"NOT_SUPPORTED","source":"phase17_v7/gateC3A/20260815_frozen_abundance/09_GATE_C3A_ADVISOR_DECISION.json"},
+        {"claim_id":"R1","location":"Results 1; Fig. 1; Fig. S9","claim":"End-to-end broad-state reproducibility did not meet the frozen state-specific criterion because B_ASC median Jaccard was below 0.95","unit_n":"150,402 cells; 20 resamples","test":"Prespecified ARI/agreement/Jaccard thresholds","sidedness":"not tested","p_value":"NA","q_value":"NA","confidence_interval":"NA","multiplicity":"five fixed criteria","decision":R1_HOLD,"source":"phase17_v7/round6_q1_robustness/20260827_r1_hold_integration/06_AUDIT_AND_PROPAGATION_PREP_STATUS.json"},
+        {"claim_id":"C3_PRIMARY","location":"Results 2; Fig. 2","claim":"The primary B_ASC composition analysis did not support a difference in source-defined managed SLE","unit_n":"43 controls; 47 SLE sample-cohort strata","test":"Beta-binomial Wald","sidedness":"two-sided","p_value":"0.787","q_value":"0.787","confidence_interval":"OR 0.636-1.410","multiplicity":"BH across three frozen base contrasts","decision":"NOT_SUPPORTED","source":"phase17_v7/gateC3A/20260815_frozen_abundance/09_GATE_C3A_ADVISOR_DECISION.json"},
         {"claim_id":"C4_IFN_PRIMARY","location":"Results 3; Fig. 3","claim":"GSE174188 primary B_CONV IFN/ISG program is higher in SLE","unit_n":"89 pseudobulk strata","test":"OLS with HC3 covariance","sidedness":"two-sided","p_value":"7.33e-07","q_value":"2.98e-06","confidence_interval":"0.525-1.148","multiplicity":"BH across four frozen programs","decision":"SUPPORTED","source":"phase17_v7/gateC4B/20260815_edger_transcription/15_GATE_C4B_ADVISOR_DECISION.json"},
         {"claim_id":"C4_IFN_NONOVERLAP","location":"Results 3; Fig. 3","claim":"Donor-nonoverlap internal IFN/ISG effect is positive","unit_n":"54 pseudobulk strata","test":"OLS with HC3 covariance","sidedness":"two-sided","p_value":"9.01e-05","q_value":"3.61e-04","confidence_interval":"0.573-1.599","multiplicity":"BH across four frozen programs","decision":"SUPPORTED_INTERNAL","source":"phase17_v7/gateC4B/20260815_edger_transcription/15_GATE_C4B_ADVISOR_DECISION.json"},
-        {"claim_id":"C5_IFN_CHILD","location":"Results 4; Fig. 4","claim":"GSE135779 childhood IFN/ISG program replicates","unit_n":"11 controls; 32 SLE donors","test":"OLS with HC3 covariance","sidedness":"two-sided","p_value":"7.45e-07","q_value":"2.98e-06","confidence_interval":"0.681-1.402","multiplicity":"BH across four frozen programs","decision":"SUPPORTED_INDEPENDENT_SOURCE_LABEL_DEFINED","source":"phase17_v7/gateC5B/20260815_gse135779_external_validation/17_GATE_C5B_ADVISOR_DECISION.json"},
-        {"claim_id":"C5_GENOMEWIDE","location":"Results 4; Fig. 4","claim":"Genome-wide effects agree across datasets","unit_n":"4,410 shared tested genes","test":"Spearman correlation","sidedness":"descriptive","p_value":"NA","q_value":"NA","confidence_interval":"NA","multiplicity":"none","decision":"WEAK_RHO_0.026","source":"phase17_v7/gateC5B/20260815_gse135779_external_validation/17_GATE_C5B_ADVISOR_DECISION.json"},
-        {"claim_id":"C9R","location":"Results 5; Fig. S10","claim":"Corrected source-label-independent mapper qualifies for outcome estimation","unit_n":"258 reference donors; 56 external matrices","test":"Prespecified coverage and per-state precision calibration","sidedness":"not tested","p_value":"NA","q_value":"NA","confidence_interval":"NA","multiplicity":"fixed calibration family","decision":C9R_HOLD,"source":"phase17_v7/gateC9R/20260828_corrected_external_mapping/15_GATE_C9A_PREFREEZE_DECISION.json"},
+        {"claim_id":"C5_IFN_CHILD","location":"Results 4; Fig. 4","claim":"GSE135779 childhood IFN/ISG program replicates in a source-label-defined broad B-cell analogue","unit_n":"11 controls; 32 SLE donors","test":"OLS with HC3 covariance","sidedness":"two-sided","p_value":"7.45e-07","q_value":"2.98e-06","confidence_interval":"0.681-1.402","multiplicity":"BH across four frozen programs","decision":"SUPPORTED_INDEPENDENT_SOURCE_LABEL_DEFINED","source":"phase17_v7/gateC5B/20260815_gse135779_external_validation/17_GATE_C5B_ADVISOR_DECISION.json"},
+        {"claim_id":"C5_GENOMEWIDE","location":"Results 4; Fig. 4","claim":"Genome-wide cross-dataset effect concordance was weak (Spearman rho=0.026)","unit_n":"4,410 shared tested genes","test":"Spearman correlation","sidedness":"descriptive","p_value":"NA","q_value":"NA","confidence_interval":"NA","multiplicity":"none","decision":"WEAK_RHO_0.026","source":"phase17_v7/gateC5B/20260815_gse135779_external_validation/17_GATE_C5B_ADVISOR_DECISION.json"},
+        {"claim_id":"C9R","location":"Results 5; Fig. S10","claim":"Corrected source-label-independent mapping did not satisfy the frozen calibration gate; no corrected disease outcome was estimated","unit_n":"258 reference donors; 56 external matrices","test":"Prespecified coverage and per-state precision calibration","sidedness":"not tested","p_value":"NA","q_value":"NA","confidence_interval":"NA","multiplicity":"fixed calibration family","decision":C9R_HOLD,"source":"phase17_v7/gateC9R/20260828_corrected_external_mapping/15_GATE_C9A_PREFREEZE_DECISION.json"},
         {"claim_id":"TF_ULM","location":"Results 6; Fig. 5","claim":"STAT1/STAT2 slopes are positive across three contrasts","unit_n":"6 regulator-by-contrast tests","test":"Signed-target slope t test","sidedness":"two-sided","p_value":"see Supplementary Data 2","q_value":"global 24-test BH","confidence_interval":"see Supplementary Data 2","multiplicity":"BH across 24 tests","decision":"CONVERGENT_OBSERVATIONAL","source":"phase17_v7/gateC5B/20260815_gse135779_external_validation/regulatory"},
         {"claim_id":"TF_CORRELATED","location":"Results 6; Table S4; Fig. S7","claim":"Correlation-aware STAT1/STAT2 direction is retained","unit_n":"6 tests per method","test":"CAMERA and FRY","sidedness":"positive-direction","p_value":"see Supplementary Data 2","q_value":"CAMERA 5/6; FRY 6/6 q<0.05","confidence_interval":"NA","multiplicity":"separate BH family of six per method","decision":"SUPPORTED_WITH_DISCOVERY_STAT2_EXCEPTION","source":"phase17_v7/gateC6B/20260819_regulatory_sensitivity"},
-        {"claim_id":"TF_DEPLETION","location":"Results 6; Table S4B; Fig. S8","claim":"STAT1/STAT2 evidence is overlap-independent","unit_n":"6 tests per branch and method","test":"ULM, CAMERA and FRY after fixed depletion","sidedness":"two-sided ULM; positive CAMERA/FRY","p_value":"see Supplementary Data 2","q_value":"branch-specific BH","confidence_interval":"see Supplementary Data 2","multiplicity":"six tests per branch and method","decision":"NOT_SUPPORTED_FOR_BROAD_M5911_INDEPENDENCE","source":"phase17_v7/round6_q1_robustness/20260825_overlap_depletion/01_OVERLAP_DEPLETION_RESULTS.csv"},
+        {"claim_id":"TF_DEPLETION","location":"Results 6; Table S4B; Fig. S8","claim":"Narrow 12-gene depletion retained support, whereas broader M5911 depletion did not support overlap-independent STAT1/STAT2 regulation","unit_n":"6 tests per branch and method","test":"ULM, CAMERA and FRY after fixed depletion","sidedness":"two-sided ULM; positive CAMERA/FRY","p_value":"see Supplementary Data 2","q_value":"branch-specific BH","confidence_interval":"see Supplementary Data 2","multiplicity":"six tests per branch and method","decision":"NOT_SUPPORTED_FOR_BROAD_M5911_INDEPENDENCE","source":"phase17_v7/round6_q1_robustness/20260825_overlap_depletion/01_OVERLAP_DEPLETION_RESULTS.csv"},
         {"claim_id":"M5911","location":"Results 6; Fig. 5","claim":"M5911 is positively enriched in three contrasts","unit_n":"3 ranked contrasts","test":"10,000-permutation preranked test","sidedness":"positive-direction","p_value":"see Supplementary Data 3","q_value":"descriptive BH across three contrasts","confidence_interval":"NA","multiplicity":"three contrasts","decision":"ORTHOGONAL_RESPONSE_SUPPORT","source":"phase17_v7/gateC5B/20260815_gse135779_external_validation/orthogonal"},
         {"claim_id":"GSE23307","location":"Results 6; Fig. 5","claim":"IFN-beta increases the 12-gene arm","unit_n":"2 healthy donors","test":"Mean paired log2(x+1) difference","sidedness":"not tested","p_value":"NA","q_value":"NA","confidence_interval":"NA","multiplicity":"none","decision":"DESCRIPTIVE_ONLY","source":"phase17_v7/gateC5B/20260815_gse135779_external_validation/orthogonal"},
     ]
@@ -382,7 +441,7 @@ def main() -> None:
         writer.writerows(rows)
     status = {
         "created_at": "2026-08-30",
-        "status": "PASS_NPJ_SBA_SOURCES_BUILT_SCIENCE_FROZEN",
+        "status": "PASS_NPJ_SBA_HARDENED_SOURCES_BUILT_SCIENCE_FROZEN",
         "selected_target": "npj Systems Biology and Applications",
         "content_type": "Article",
         "title_words": len(TITLE.split()),
@@ -391,6 +450,8 @@ def main() -> None:
         "supplementary_methods_removed": True,
         "scientific_reanalysis": False,
         "numerical_results_reselected": False,
+        "reader_facing_hardening": True,
+        "discussion_duplicate_landing_removed": True,
         "R1_decision": R1_HOLD,
         "C9R_decision": C9R_HOLD,
         "corrected_external_outcome_unlock_authorized": False,

@@ -284,7 +284,7 @@ CAMERA and FRY directions were positive in all six tests. CAMERA passed BH corre
 
 ## Supplementary Figure S4 | Composition-model diagnostics
 
-**a,** Total and zero-ASC sample-cohort strata in the three base contrasts. **b,** Primary B_ASC odds ratios under support, explicit non-B and residual-risk policies using observed-information and HC1 covariance. **c,** Firth-logistic ASC-presence sensitivity. **d,** Positive-only abundance sensitivity using HC3 uncertainty. The two-part models are sensitivity analyses and do not replace the frozen beta-binomial primary model.
+**a,** Total and zero-ASC sample-cohort strata in the three base contrasts. **b,** Primary B_ASC odds ratios under support, explicit non-B and residual-risk policies using observed-information covariance (blue) and HC1 covariance (red). **c,** Firth-logistic ASC-presence sensitivity. **d,** Positive-only abundance sensitivity using HC3 uncertainty. The two-part models are sensitivity analyses and do not replace the frozen beta-binomial primary model.
 
 [[SUPPLEMENTARY_FIGURE:S4]]
 

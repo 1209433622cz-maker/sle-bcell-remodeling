@@ -1,0 +1,18 @@
+﻿Priority,ID,Task,Execution rule,Domain
+P0,FIG-CODE-01,修 npj style branch 回退 bug,删除/隔离 apply_npj_sba_style 后半段 generic 5–7 pt / 0.25–1 pt clamp；不得手改 PDF,Figures
+P0,FIG-QA-02,增加 exported-PDF postflight,逐张解析实际 PDF font family/font size/min positive line width/page size；不要只验证 Matplotlib object contract,Figures
+P0,FIG-RERUN-03,重渲染 15 张图,从冻结 source CSV 重跑 5 主图 + S1–S10；要求 15/15 source data SHA 不变,Figures
+P1,FIG-SEM-04,修 Figure 2 null wording,`No primary B_ASC enrichment` -> `Primary B_ASC enrichment not supported`,Figures
+P1,EXT-SEM-05,强化 source-label-defined 外部复制表述,Results heading、Fig1 node、Fig4 panel/title/legend 显式加入 source-label-defined,Claims
+P1,INTRO-06,降低自我削弱式 novelty 表述,`neither ... is novel` 改为 `well established but context dependent`；不改变科学边界,Writing
+P0,STATMAP-07,修 reporting map claim/decision 反向,修 R1/C3/C5_GENOMEWIDE/TF_DEPLETION claim；由 builder 生成,Statistics QA
+P0,STATMAP-08,增加语义回归测试,HOLD/NOT_SUPPORTED row 禁止出现相反肯定 claim；对关键 4 rows exact assertion,Statistics QA
+P0,REPO-09,更新 README,标记 npj 已选、target package 已建、当前处于 technical hardening/author approval 前,Repository
+P0,REPO-10,更新 REPRODUCIBILITY,同步 npj target、WPS+LibreOffice cross-render、当前 package 状态；保留 scientific freeze,Repository
+P0,DOC-11,重建文档与 package,源文件重建 Manuscript/Supplement/Cover、双渲染 QA、deterministic ZIP、新 SHA,Documents
+P0,FORM-12,完成官方 Reporting Summary,将 Markdown draft 转录到当期官方 Nature Portfolio form，并由两位作者复核,Administrative
+P0,FORM-13,完成官方 Editorial Policy Checklist,使用当期官方表单，不以 Markdown draft 代替,Administrative
+P0,JCR-14,归档 official JCR Q1 receipt,保存 metric year/category/rank/denominator/quartile；Nature JIF 页面不能替代,Institutional
+P0,APC-15,取得 CUHK-Shenzhen APC/OA receipt,不可因 CUHK Hong Kong agreement 自动推定 Shenzhen eligibility,Institutional
+P0,AUTHOR-16,exact-file author approval,仅对 hardening 后的新 hashes 签字，不签当前 superseded hashes,Author gate
+STOP,SCIENCE,停止首投前探索性计算,不得新增 cohort/mapper/threshold/TF/gene-set 或救 R1/C9R,Governance

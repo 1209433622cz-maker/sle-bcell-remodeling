@@ -1,0 +1,450 @@
+{
+  "created_at": "2026-08-30",
+  "status": "PASS_NPJ_SBA_SOURCE_RERENDER_ARTIFACT_CONTRACT_PENDING_VISUAL_REVIEW",
+  "figure_count": 15,
+  "main_figures": 5,
+  "supplementary_figures": 10,
+  "format": "single-page vector PDF",
+  "width_mm": 170.0,
+  "style_contract": {
+    "font_family": "Arial",
+    "target_visible_text_pt": 8.0,
+    "panel_labels": "bold lower-case 8 pt",
+    "minimum_positive_line_width_pt": 1.0,
+    "color_mode": "RGB",
+    "background": "white"
+  },
+  "source_tables_byte_identical": true,
+  "source_data": {
+    "Figure1_source_data.csv": {
+      "sha256": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Figure2_source_data.csv": {
+      "sha256": "DAA6DDBAB469E0D510AB578BEE0A21AA73FA2D71184739E3F361C3EA6EC8DFE2",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Figure3_source_data.csv": {
+      "sha256": "DEFABF8C16D879362E3AD197C857A9197CD6D0691B20FDFA4AC97BEFF3710BC8",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Figure4_source_data.csv": {
+      "sha256": "F3604F40DAEDB0DD01617BB223A8762323C8AAC7F16185292367B9A13FEC4755",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Figure5_source_data.csv": {
+      "sha256": "21925F6916DDAF97760CF73622ED8E4B4CCBE5AE0B3B53C721FDF607C1C6F9A4",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S10_source_data.csv": {
+      "sha256": "FF4309EBAF761A0563F018AE1BE07212EF2CB2241E79DF12C374BCB1426A60FF",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S1_source_data.csv": {
+      "sha256": "A140D1D900A3EA869551097146AFFD3872BC7AC78E9E9712E4BDAC834A57CB68",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S2_source_data.csv": {
+      "sha256": "E46FE5B33B11D45319DD80C3D669AEEB83F2517095CD0C1FD5EEFA1F57C58731",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S3_source_data.csv": {
+      "sha256": "133E973C2753F4946A24739C049308152299A915A3FC6754B30AD0521F979C96",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S4_source_data.csv": {
+      "sha256": "7BA2660E5A50ADCF28407BCC92A91C791576DD69A9A1ABA9618DEB045C3A4E19",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S5_source_data.csv": {
+      "sha256": "F6682D636C1FF3A1784E0B9E8AEFF5C5D1BB075176312E87FCB938F65C4DA897",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S6_source_data.csv": {
+      "sha256": "A1D1DCBF9D20BA01D0022D4DA0F73A618776D34A687E764F18AB83439204DBF6",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S7_source_data.csv": {
+      "sha256": "D92140A17B96E6B77F5EEBF322A5D77A5E6F2132EDD54CC9C3E73521E5352CA3",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S8_source_data.csv": {
+      "sha256": "26A3F90E3165D8928874F278384B2587CB549DD4FFDE93440AAC4CEEAE06A9A2",
+      "byte_identical_to_corrected_candidate": true
+    },
+    "Supplementary_Figure_S9_source_data.csv": {
+      "sha256": "46EE840F86CA33AA4F5FCE0A37EEFCB4DB23831533BBFA20400BAE50744F5D42",
+      "byte_identical_to_corrected_candidate": true
+    }
+  },
+  "figures": {
+    "Figure_1.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 130.677,
+      "bytes": 57135,
+      "sha256": "544F65A6DC60B2B498D5B9184C30CC06016BE351A4E3BBA8BAF6E1F694148BF4"
+    },
+    "Figure_2.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 134.274,
+      "bytes": 48935,
+      "sha256": "F45A56B2496AF85E6D30AE0277EFEE53AEDE8344219D35104B243AF62A72C3EA"
+    },
+    "Figure_3.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 137.87,
+      "bytes": 53054,
+      "sha256": "54D584D1747107EE72537FE2D09E5A28177E0A1608519D29307B72203DFDD4C7"
+    },
+    "Figure_4.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 137.87,
+      "bytes": 53099,
+      "sha256": "0FE897BA5559D6125BBD756104687E99A1907CC6B0537569CF76FC6E56E5198B"
+    },
+    "Figure_5.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 211.001,
+      "bytes": 56558,
+      "sha256": "8F7F2FBD687A1EC8A0D0E395AC801DABADFEC89A9C22CDFDBE71188C59CC30CC"
+    },
+    "Supplementary_Figure_S10.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 110.0,
+      "bytes": 42812,
+      "sha256": "502A9D6F4DAE6DC81517D2E7599945EAB4D2AC0BC1D60800B97E8141BBA6F2AC"
+    },
+    "Supplementary_Figure_S1.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 123.484,
+      "bytes": 49343,
+      "sha256": "CFB27CCBBAB2B4FC051A25877433A140B737CF8270B90493BEAFB71E3D332B2E"
+    },
+    "Supplementary_Figure_S2.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 125.882,
+      "bytes": 49907,
+      "sha256": "62DEECBE343F0B9E9D8D933A2640C823F2F3B42A7B7EB9137F0ED442B5351D4C"
+    },
+    "Supplementary_Figure_S3.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 125.882,
+      "bytes": 50340,
+      "sha256": "465B2459A35531A8A71036FE39D474B11CE16E268BBBD46438858F1B77744315"
+    },
+    "Supplementary_Figure_S4.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 125.882,
+      "bytes": 46479,
+      "sha256": "76A1CCA871711272A0729406AEBA7D41A04F0BF7BEAF1DDADDDCA5010BB3436B"
+    },
+    "Supplementary_Figure_S5.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 128.279,
+      "bytes": 50872,
+      "sha256": "882CCA7C7085108593F9894A03A51D9A75B4882F5D1068C3672AB0312713CBD2"
+    },
+    "Supplementary_Figure_S6.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 128.279,
+      "bytes": 47577,
+      "sha256": "B771CFEC0500F602D6592903F632A28CE152A6383D5AB01D5814737AF6E43E1D"
+    },
+    "Supplementary_Figure_S7.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 125.882,
+      "bytes": 48335,
+      "sha256": "B6F0CA415C74099771E6341FC0642317F71B4959719BE97E732B93AFBDC87ACB"
+    },
+    "Supplementary_Figure_S8.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 215.0,
+      "bytes": 49922,
+      "sha256": "1BE2F0152C0B51CFCED8BD1DD79D34C5F80FD4AC490D30BA712E723994766D81"
+    },
+    "Supplementary_Figure_S9.pdf": {
+      "width_mm": 170.0,
+      "height_mm": 160.0,
+      "bytes": 52935,
+      "sha256": "5C27FC282CCD14F1413728D340CC24C38657A5129EFF83F544E41B3E2ECE9A2A"
+    }
+  },
+  "artifact_postflight": {
+    "Figure_1.pdf": {
+      "checks": {
+        "single_page": true,
+        "arial_or_helvetica_compatible": true,
+        "all_visible_text_8pt": true,
+        "minimum_positive_line_width_1pt": true,
+        "all_text_within_page": true
+      },
+      "font_names": [
+        "Arial-BoldMT",
+        "ArialMT"
+      ],
+      "minimum_visible_text_pt": 8.0,
+      "maximum_visible_text_pt": 8.0,
+      "minimum_positive_line_width_pt": 1.0,
+      "visible_text_spans": 70,
+      "vector_drawings_with_positive_width": 116
+    },
+    "Figure_2.pdf": {
+      "checks": {
+        "single_page": true,
+        "arial_or_helvetica_compatible": true,
+        "all_visible_text_8pt": true,
+        "minimum_positive_line_width_1pt": true,
+        "all_text_within_page": true
+      },
+      "font_names": [
+        "Arial-BoldMT",
+        "ArialMT"
+      ],
+      "minimum_visible_text_pt": 8.0,
+      "maximum_visible_text_pt": 8.0,
+      "minimum_positive_line_width_pt": 1.0,
+      "visible_text_spans": 58,
+      "vector_drawings_with_positive_width": 82
+    },
+    "Figure_3.pdf": {
+      "checks": {
+        "single_page": true,
+        "arial_or_helvetica_compatible": true,
+        "all_visible_text_8pt": true,
+        "minimum_positive_line_width_1pt": true,
+        "all_text_within_page": true
+      },
+      "font_names": [
+        "Arial-BoldMT",
+        "ArialMT"
+      ],
+      "minimum_visible_text_pt": 8.0,
+      "maximum_visible_text_pt": 8.0,
+      "minimum_positive_line_width_pt": 1.0,
+      "visible_text_spans": 61,
+      "vector_drawings_with_positive_width": 101
+    },
+    "Figure_4.pdf": {
+      "checks": {
+        "single_page": true,
+        "arial_or_helvetica_compatible": true,
+        "all_visible_text_8pt": true,
+        "minimum_positive_line_width_1pt": true,
+        "all_text_within_page": true
+      },
+      "font_names": [
+        "Arial-BoldMT",
+        "ArialMT"
+      ],
+      "minimum_visible_text_pt": 8.0,
+      "maximum_visible_text_pt": 8.0,
+      "minimum_positive_line_width_pt": 1.0,
+      "visible_text_spans": 63,
+      "vector_drawings_with_positive_width": 118
+    },
+    "Figure_5.pdf": {
+      "checks": {
+        "single_page": true,
+        "arial_or_helvetica_compatible": true,
+        "all_visible_text_8pt": true,
+        "minimum_positive_line_width_1pt": true,
+        "all_text_within_page": true
+      },
+      "font_names": [
+        "Arial-BoldMT",
+        "ArialMT"
+      ],
+      "minimum_visible_text_pt": 8.0,
+      "maximum_visible_text_pt": 8.0,
+      "minimum_positive_line_width_pt": 1.0,
+      "visible_text_spans": 89,
+      "vector_drawings_with_positive_width": 94
+    },
+    "Supplementary_Figure_S10.pdf": {
+      "checks": {
+        "single_page": true,
+        "arial_or_helvetica_compatible": true,
+        "all_visible_text_8pt": true,
+        "minimum_positive_line_width_1pt": true,
+        "all_text_within_page": true
+      },
+      "font_names": [
+        "Arial-BoldMT",
+        "ArialMT"
+      ],
+      "minimum_visible_text_pt": 8.0,
+      "maximum_visible_text_pt": 8.0,
+      "minimum_positive_line_width_pt": 1.0,
+      "visible_text_spans": 54,
+      "vector_drawings_with_positive_width": 75
+    },
+    "Supplementary_Figure_S1.pdf": {
+      "checks": {
+        "single_page": true,
+        "arial_or_helvetica_compatible": true,
+        "all_visible_text_8pt": true,
+        "minimum_positive_line_width_1pt": true,
+        "all_text_within_page": true
+      },
+      "font_names": [
+        "Arial-BoldMT",
+        "ArialMT"
+      ],
+      "minimum_visible_text_pt": 8.0,
+      "maximum_visible_text_pt": 8.0,
+      "minimum_positive_line_width_pt": 1.0,
+      "visible_text_spans": 75,
+      "vector_drawings_with_positive_width": 65
+    },
+    "Supplementary_Figure_S2.pdf": {
+      "checks": {
+        "single_page": true,
+        "arial_or_helvetica_compatible": true,
+        "all_visible_text_8pt": true,
+        "minimum_positive_line_width_1pt": true,
+        "all_text_within_page": true
+      },
+      "font_names": [
+        "Arial-BoldMT",
+        "ArialMT"
+      ],
+      "minimum_visible_text_pt": 8.0,
+      "maximum_visible_text_pt": 8.0,
+      "minimum_positive_line_width_pt": 1.0,
+      "visible_text_spans": 69,
+      "vector_drawings_with_positive_width": 95
+    },
+    "Supplementary_Figure_S3.pdf": {
+      "checks": {
+        "single_page": true,
+        "arial_or_helvetica_compatible": true,
+        "all_visible_text_8pt": true,
+        "minimum_positive_line_width_1pt": true,
+        "all_text_within_page": true
+      },
+      "font_names": [
+        "Arial-BoldMT",
+        "ArialMT"
+      ],
+      "minimum_visible_text_pt": 8.0,
+      "maximum_visible_text_pt": 8.0,
+      "minimum_positive_line_width_pt": 1.0,
+      "visible_text_spans": 65,
+      "vector_drawings_with_positive_width": 106
+    },
+    "Supplementary_Figure_S4.pdf": {
+      "checks": {
+        "single_page": true,
+        "arial_or_helvetica_compatible": true,
+        "all_visible_text_8pt": true,
+        "minimum_positive_line_width_1pt": true,
+        "all_text_within_page": true
+      },
+      "font_names": [
+        "Arial-BoldMT",
+        "ArialMT"
+      ],
+      "minimum_visible_text_pt": 8.0,
+      "maximum_visible_text_pt": 8.0,
+      "minimum_positive_line_width_pt": 1.0,
+      "visible_text_spans": 53,
+      "vector_drawings_with_positive_width": 114
+    },
+    "Supplementary_Figure_S5.pdf": {
+      "checks": {
+        "single_page": true,
+        "arial_or_helvetica_compatible": true,
+        "all_visible_text_8pt": true,
+        "minimum_positive_line_width_1pt": true,
+        "all_text_within_page": true
+      },
+      "font_names": [
+        "Arial-BoldMT",
+        "ArialMT"
+      ],
+      "minimum_visible_text_pt": 8.0,
+      "maximum_visible_text_pt": 8.0,
+      "minimum_positive_line_width_pt": 1.0,
+      "visible_text_spans": 70,
+      "vector_drawings_with_positive_width": 138
+    },
+    "Supplementary_Figure_S6.pdf": {
+      "checks": {
+        "single_page": true,
+        "arial_or_helvetica_compatible": true,
+        "all_visible_text_8pt": true,
+        "minimum_positive_line_width_1pt": true,
+        "all_text_within_page": true
+      },
+      "font_names": [
+        "Arial-BoldMT",
+        "ArialMT"
+      ],
+      "minimum_visible_text_pt": 8.0,
+      "maximum_visible_text_pt": 8.0,
+      "minimum_positive_line_width_pt": 1.0,
+      "visible_text_spans": 57,
+      "vector_drawings_with_positive_width": 118
+    },
+    "Supplementary_Figure_S7.pdf": {
+      "checks": {
+        "single_page": true,
+        "arial_or_helvetica_compatible": true,
+        "all_visible_text_8pt": true,
+        "minimum_positive_line_width_1pt": true,
+        "all_text_within_page": true
+      },
+      "font_names": [
+        "Arial-BoldMT",
+        "ArialMT"
+      ],
+      "minimum_visible_text_pt": 8.0,
+      "maximum_visible_text_pt": 8.0,
+      "minimum_positive_line_width_pt": 1.0,
+      "visible_text_spans": 107,
+      "vector_drawings_with_positive_width": 75
+    },
+    "Supplementary_Figure_S8.pdf": {
+      "checks": {
+        "single_page": true,
+        "arial_or_helvetica_compatible": true,
+        "all_visible_text_8pt": true,
+        "minimum_positive_line_width_1pt": true,
+        "all_text_within_page": true
+      },
+      "font_names": [
+        "Arial-BoldMT",
+        "ArialMT"
+      ],
+      "minimum_visible_text_pt": 8.0,
+      "maximum_visible_text_pt": 8.0,
+      "minimum_positive_line_width_pt": 1.0,
+      "visible_text_spans": 117,
+      "vector_drawings_with_positive_width": 115
+    },
+    "Supplementary_Figure_S9.pdf": {
+      "checks": {
+        "single_page": true,
+        "arial_or_helvetica_compatible": true,
+        "all_visible_text_8pt": true,
+        "minimum_positive_line_width_1pt": true,
+        "all_text_within_page": true
+      },
+      "font_names": [
+        "Arial-BoldMT",
+        "ArialMT"
+      ],
+      "minimum_visible_text_pt": 8.0,
+      "maximum_visible_text_pt": 8.0,
+      "minimum_positive_line_width_pt": 1.0,
+      "visible_text_spans": 89,
+      "vector_drawings_with_positive_width": 265
+    }
+  },
+  "artifact_postflight_all_pass": true,
+  "scientific_reanalysis": false,
+  "plotted_numeric_values_changed": false,
+  "R1_decision": "HOLD_FULL_PIPELINE_TWO_COMPARTMENT_REPRODUCIBILITY",
+  "C9R_decision": "HOLD_C9A_PREFREEZE_REVIEW_REQUIRED",
+  "corrected_external_outcome_unlock_authorized": false
+}

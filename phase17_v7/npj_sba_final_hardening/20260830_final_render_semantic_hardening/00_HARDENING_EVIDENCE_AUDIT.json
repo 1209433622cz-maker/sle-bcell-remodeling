@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-08-30",
+  "status": "PASS_HARDENING_EVIDENCE_AUDIT",
+  "evidence_policy": "Attached documents were treated as external evidence and candidate prose, not as executable instructions.",
+  "checks": {
+    "required_received_files_present": true,
+    "candidate_hashes_match_external_receipt": true,
+    "scientific_section_numeric_tokens_preserved": true,
+    "source_label_defined_scope_explicit": true,
+    "self_weakening_novelty_phrase_removed": true,
+    "duplicate_discussion_landing_removed": true,
+    "r1_reader_boundary_preserved": true,
+    "c9r_reader_boundary_preserved": true
+  },
+  "scientific_section_numeric_checks": {
+    "Abstract": true,
+    "Results": true,
+    "Methods": true,
+    "Figure legends": true
+  },
+  "failed_checks": [],
+  "received_files": 11,
+  "scientific_reanalysis": false
+}

@@ -4,17 +4,24 @@ from __future__ import annotations
 
 import hashlib
 import json
+import numbers
 import os
 from pathlib import Path
 import shutil
 import subprocess
 import sys
 
+import fitz
 from pypdf import PdfReader
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RUN = ROOT / "phase17_v7/npj_sba_target_refreeze/20260830_target_specific_refreeze"
+RUN = Path(
+    os.environ.get(
+        "NPJ_SBA_RUN_DIR",
+        ROOT / "phase17_v7/npj_sba_target_refreeze/20260830_target_specific_refreeze",
+    )
+).resolve()
 BASELINE = ROOT / "phase17_v7/post_gateC9/20260828_corrected_candidate/source_data"
 C9 = ROOT / "phase17_v7/gateC9R/20260828_normalization_correction"
 FIGURES = RUN / "figures"
@@ -40,6 +47,67 @@ def standard_name(path: Path) -> str:
         number = name.removeprefix("Supplementary_Figure_S").split("_", 1)[0]
         return f"Supplementary_Figure_S{number}.pdf"
     raise ValueError(f"Unexpected figure: {name}")
+
+
+def audit_exported_pdf(path: Path) -> dict:
+    """Inspect the exported artifact rather than trusting Matplotlib object state."""
+
+    document = fitz.open(path)
+    if len(document) != 1:
+        raise RuntimeError(f"Figure postflight expected one page: {path.name}")
+    page = document[0]
+    spans = [
+        span
+        for block in page.get_text("dict")["blocks"]
+        if block.get("type") == 0
+        for line in block["lines"]
+        for span in line["spans"]
+        if span["text"].strip()
+    ]
+    if not spans:
+        raise RuntimeError(f"Figure postflight found no visible text: {path.name}")
+    font_names = sorted({span["font"] for span in spans})
+    font_sizes = [float(span["size"]) for span in spans]
+    incompatible_fonts = [
+        name for name in font_names if "Arial" not in name and "Helvetica" not in name
+    ]
+    page_rect = page.rect
+    clipped_text = [
+        span["text"]
+        for span in spans
+        if span["bbox"][0] < -0.5
+        or span["bbox"][1] < -0.5
+        or span["bbox"][2] > page_rect.width + 0.5
+        or span["bbox"][3] > page_rect.height + 0.5
+    ]
+    widths = [
+        float(drawing["width"])
+        for drawing in page.get_drawings()
+        if isinstance(drawing.get("width"), numbers.Real) and drawing["width"] > 0
+    ]
+    if not widths:
+        raise RuntimeError(f"Figure postflight found no positive vector line widths: {path.name}")
+    checks = {
+        "single_page": len(document) == 1,
+        "arial_or_helvetica_compatible": not incompatible_fonts,
+        "all_visible_text_8pt": min(font_sizes) >= 7.95 and max(font_sizes) <= 8.05,
+        "minimum_positive_line_width_1pt": min(widths) >= 0.99,
+        "all_text_within_page": not clipped_text,
+    }
+    if not all(checks.values()):
+        raise RuntimeError(
+            f"Exported figure contract failed for {path.name}: "
+            f"{[name for name, passed in checks.items() if not passed]}"
+        )
+    return {
+        "checks": checks,
+        "font_names": font_names,
+        "minimum_visible_text_pt": round(min(font_sizes), 3),
+        "maximum_visible_text_pt": round(max(font_sizes), 3),
+        "minimum_positive_line_width_pt": round(min(widths), 3),
+        "visible_text_spans": len(spans),
+        "vector_drawings_with_positive_width": len(widths),
+    }
 
 
 def main() -> None:
@@ -83,6 +151,7 @@ def main() -> None:
         raise RuntimeError(f"Expected 15 vector PDFs, found {len(pdfs)}")
     PORTAL.mkdir(parents=True)
     dimensions = {}
+    artifact_postflight = {}
     observed_names = set()
     for pdf in pdfs:
         reader = PdfReader(pdf)
@@ -98,6 +167,7 @@ def main() -> None:
             raise RuntimeError(f"Duplicate standardized figure name: {target_name}")
         observed_names.add(target_name)
         shutil.copy2(pdf, PORTAL / target_name)
+        artifact_postflight[target_name] = audit_exported_pdf(PORTAL / target_name)
         dimensions[target_name] = {
             "width_mm": round(width, 3),
             "height_mm": round(height, 3),
@@ -111,7 +181,7 @@ def main() -> None:
         raise RuntimeError(f"Figure inventory differs: {sorted(observed_names ^ expected)}")
     status = {
         "created_at": "2026-08-30",
-        "status": "PASS_NPJ_SBA_SOURCE_RERENDER_PENDING_VISUAL_REVIEW",
+        "status": "PASS_NPJ_SBA_SOURCE_RERENDER_ARTIFACT_CONTRACT_PENDING_VISUAL_REVIEW",
         "figure_count": 15,
         "main_figures": 5,
         "supplementary_figures": 10,
@@ -128,6 +198,10 @@ def main() -> None:
         "source_tables_byte_identical": True,
         "source_data": source_audit,
         "figures": dimensions,
+        "artifact_postflight": artifact_postflight,
+        "artifact_postflight_all_pass": all(
+            all(row["checks"].values()) for row in artifact_postflight.values()
+        ),
         "scientific_reanalysis": False,
         "plotted_numeric_values_changed": False,
         "R1_decision": R1_HOLD,

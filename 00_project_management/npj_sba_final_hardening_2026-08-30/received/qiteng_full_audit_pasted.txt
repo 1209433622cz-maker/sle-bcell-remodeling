@@ -1,0 +1,310 @@
+本轮我把工作分成了三个层面重新做了一遍：**科学证据链复核、QiTeng v0.3.21 写作层终局精修、npj/Nature 图件与发布工程敌意审计**。同时重新读取了最新 GitHub `main`，并以 Zenodo `10.5281/zenodo.22151739` 作为冻结科学 release 的参照。当前 GitHub 最新仍是 `0c7361022510b47e8cc7ae82baafd4b6dcff7c8e`，其中 `1257119...` 已完成 npj target-specific refreeze。
+
+## 一、本轮导师级总判定
+
+我的结论比仓库现有自动门禁再严格一级：
+
+> **科学主体已经冻结，不应该再增加新的生信探索；但目前还不应让两位作者对现有 npj package hashes 做最终签字。**
+
+仓库当前机器状态仍然是：
+
+`PASS_NPJ_SBA_TARGET_SPECIFIC_REFREEZE_AUTHOR_APPROVAL_REQUIRED`
+
+并且正确保持了 R1 HOLD、C9R HOLD、corrected external outcome unlock=false，以及 author approval/JCR/APC/submission 全部 pending。
+
+但独立复核后，我建议当前人工状态定义为：
+
+> **`HOLD_NPJ_SBA_PREAPPROVAL_TECHNICAL_HARDENING_REQUIRED`**
+
+这是**技术冻结前 HOLD，不是科学 HOLD**。
+
+原因只有两个真正的 P0，而且都可以通过源代码重跑解决：
+
+1. npj figure style 实现有实际代码回退 bug；
+2. machine-readable statistics reporting map 有几条 claim 与 decision 语义相反。
+
+因此下一阶段应该是一次极窄的 **final render + semantic hardening**，不是继续做 biology。
+
+---
+
+# 二、科学设计现在已经足够成熟，不建议新增分析
+
+从 PI/生信导师角度，目前文章真正具有竞争力的不是“SLE 有 IFN”，而是：
+
+> **在 disease-blind reconstruction 下，把 identity、composition、within-compartment transcription 分成不同 inferential layers 后，它们表现出不同的 reproducibility ceiling。hard state assignments 的稳定性和迁移性有限，而 IFN/ISG process-level remodeling 在不确定性传播和独立队列中更稳定。**
+
+这与 npj Systems Biology and Applications 当前明确涵盖的：
+
+* computational analysis/modeling of complex biological systems；
+* disease modeling；
+* single-cell systems biology；
+* systems immunology
+
+高度吻合。([Nature][1])
+
+目前证据链也已经闭合：150,402 个 GSE174188 B-lineage cells → fine-state instability → broad scaffold → R1 B_ASC-specific HOLD → primary composition null → B_CONV IFN/ISG positive → internal donor-nonoverlap positive → independent GSE135779 source-label-defined replication → genome-wide rho=0.026 → corrected label-independent mapping calibration HOLD → observational STAT1/STAT2/M5911/GSE23307 context。当前 Supplement S1–S10 已经把这些关键 QC、negative gate 和敏感性证据覆盖完整。
+
+因此我仍然明确反对首投前增加：
+
+> 新 cohort、新 clustering、替代 mapper、新 TF database、新 gene-set family、重新选择 threshold/seed、R1 rescue、C9R rescue 或 corrected external disease outcome。
+
+这些工作的边际收益已经小于 post-hoc selection 风险。
+
+---
+
+# 三、本轮已经真实使用 QiTeng Academic Writing Skill v0.3.21 完成精修
+
+这次不是普通英文润色。我实际按 v0.3.21 的几个核心控制器处理了整篇稿件：
+
+`KNOWN → GAP/TENSION → RESPONSE → EVIDENCE → INTERPRETATION → IMPLICATION → BOUNDARY → NEXT TEST`
+
+并执行了：
+
+* Claim-strength governor：当前最高仍停留在 robust association / convergent evidence，不跨到 causal/clinical claim；
+* Original Research Results router：effect → uncertainty → multiplicity → robustness → boundary；
+* Discussion router：finding → context → explanation → implication → boundary；
+* Salience & Detail Economy：删除重复防御性 caveat，但不删除真正改变结论边界的信息；
+* Control-plane / Manuscript-plane firewall：不把内部 HOLD/gate/audit 语言写成读者正文；
+* Figure Claim Gate：视觉标题不能强于统计证据；
+* Figure Object Persistence Gate：确认主文原本就没有嵌入 figure objects，因此文本重构没有造成图对象丢失。
+
+### 精修后的几个关键变化
+
+最值得保留的是 Introduction 原先这句：
+
+> “neither interferon activity nor plasmablast biology is novel”
+
+我改成：
+
+> **“interferon activity and plasmablast biology are well established yet strongly context dependent.”**
+
+这不是包装 novelty，而是避免编辑第一眼看到作者主动把自己的生物学价值写低，同时把 novelty 正确转移到 **inferential hierarchy**。
+
+Introduction 最后也不再使用弱一些的：
+
+> “The intended contribution is…”
+
+而改成一个明确 research task：
+
+> **“This design tests an evidence hierarchy: which B-cell features survive increasingly stringent reconstruction and validation, and which remain cohort-specific, representation-dependent or mechanistically unproven.”**
+
+GSE135779 的证据所有权也进一步统一成：
+
+> **source-label-defined replication**
+
+这与当前 C9R calibration failure 的事实严格一致。原稿其实已经明确说明 corrected remapping 未达到 calibration criterion、没有计算 corrected disease outcome。
+
+---
+
+# 四、Discussion 是本轮文字层改善最大的位置
+
+之前 npj target manuscript 在 Discussion 尾部事实上还残留了一次“旧 Conclusions 被折入 Discussion 后产生的第二个结论落点”。
+
+我没有再增加结论，而是把：
+
+> **Discussion 1,081 words → 996 words**
+
+减少 **85 words**，主要来自重复 caveat consolidation 和重复 ending 删除。
+
+新的最终 landing 是：
+
+> **“Taken together, the study supports a restrained model of SLE B-cell remodeling: a prespecified IFN/ISG transcriptional shift is reproducible at the process level across the analysed cohorts, whereas the tested hard state assignments retain defined stability and transfer limits. Retaining the failed reconstruction and calibration criteria narrows, rather than weakens, the conclusion: the data support a bounded interferon association, not a universal B-cell taxonomy, generalized B_ASC expansion, causal regulator, unique upstream stimulus or established clinical utility.”**
+
+我认为这比旧版更接近 QiTeng 后期稿件的特点：
+
+> **不是多写，而是让最后一句真正承担论文结论。**
+
+---
+
+# 五、新 manuscript 已经实际生成并完成完整 QA
+
+这次生成的是一个新的 **pre-approval hardened manuscript candidate**，不是覆盖旧稿。
+
+关键 QA：
+
+| 项目                       |                            结果 |
+| ------------------------ | ----------------------------: |
+| Abstract                 |                 **140 words** |
+| References               |                   **32，保持不变** |
+| 引文首次出现顺序                 |               **1 → 32 连续单调** |
+| Introduction             |                     462 words |
+| Results                  |                   2,077 words |
+| Discussion               |                 **996 words** |
+| Methods                  |                   2,222 words |
+| DOCX pages               |                        **31** |
+| Accessibility            | **0 high / 0 medium / 0 low** |
+| tracked/object loss      |                           未发现 |
+| 数值结果                     |                       **未修改** |
+| P/q/CI/sample size       |                       **未修改** |
+| DOI/author/CRediT/ethics |                       **未修改** |
+
+尤其是 DOCX QA，本轮不是只看 contact sheet。我已经把 **31/31 张 1547×2002 的渲染页逐页打开检查**，包括 references 和 figure legends 页面；没有发现 clipping、overlap、missing glyph、异常分页、页眉页脚漂移或参考文献断裂。PDF preflight 同样为 31 pages、openable、unencrypted、non-scanned。
+
+新文件 SHA-256：
+
+* DOCX：`2ABC2B66D12D50DF9ABB2571F85D083E2A6998CAC782EF87E3EEFEAEE7D7CB90`
+* PDF：`8AADBC11006765D0492FB829C8D42CFC593051C47A65C4ACD74DD4B75DDAD8B2`
+* MD：`07EBF141C59604DE42A3DE312F9115D89141331765718172C696D302F8C27115`
+
+### 本轮精修稿
+
+[下载 QiTeng-hardened Manuscript DOCX](sandbox:/mnt/data/SLE_Bcell_Manuscript_QiTeng_npj_Hardened_2026-08-30.docx)
+
+[下载 QiTeng-hardened Manuscript PDF](sandbox:/mnt/data/SLE_Bcell_Manuscript_QiTeng_npj_Hardened_2026-08-30.pdf)
+
+[下载对应 Markdown 源稿](sandbox:/mnt/data/SLE_Bcell_Manuscript_QiTeng_npj_Hardened_2026-08-30.md)
+
+---
+
+# 六、目前最大的 P0 仍然是图件源码，不是稿件
+
+仓库当前 `apply_npj_sba_style()` 存在一个我认为必须修掉的逻辑错误。
+
+代码先：
+
+> 将文字设为 8 pt
+> 将正线宽提升至 ≥1 pt
+
+但在同一个函数后半段，又运行了旧的 generic style clamp：
+
+> non-panel text → 5–7 pt
+> line width → 0.25–1.0 pt。
+
+所以 npj 样式被自己部分撤销。
+
+我直接审计真正导出的 main PDFs，得到：
+
+| 图        |   实际字体 | 实际最细 vector line |
+| -------- | -----: | ---------------: |
+| Figure 1 | 7–8 pt |      **0.60 pt** |
+| Figure 2 | 7–8 pt |          1.00 pt |
+| Figure 3 | 7–8 pt |          1.00 pt |
+| Figure 4 | 7–8 pt |          1.00 pt |
+| Figure 5 | 7–8 pt |      **0.90 pt** |
+
+而 npj 的当前投稿指南要求 final artwork 关注 Arial/Helvetica、RGB、color accessibility，并明确要求最终最细线条至少约 1 pt；同时官方也说明初投稿本身无需完全特殊格式化。([Nature][2])
+
+所以这**不是 desk-reject 级科学问题**，但对于我们已经做到 exact-file refreeze 的阶段，它应该修。
+
+正确做法完全符合你的原则：
+
+> **不改现有 PDF；修 figure source code，然后从冻结 source tables 重画 Figure 1–5 + S1–S10 全部 15 张。**
+
+并强制要求：
+
+> **15/15 source CSV SHA byte-identical。**
+
+---
+
+# 七、统计报告还有一个真实机器语义 bug
+
+目前 `npj_statistics_reporting_map.csv` 里面有几条明显的 human-readable claim / machine decision 反向：
+
+例如：
+
+> R1 claim = “reproducibility criterion held”
+> decision = `HOLD_FULL_PIPELINE...`
+
+以及：
+
+> C3 claim = “Primary B_ASC composition differs...”
+> decision = `NOT_SUPPORTED`
+
+> C5 genome-wide claim = “effects agree...”
+> decision = `WEAK_RHO_0.026`
+
+> C9R claim = “mapper qualifies...”
+> decision = HOLD
+
+> TF depletion claim = “overlap-independent”
+> decision = `NOT_SUPPORTED_FOR_BROAD_M5911_INDEPENDENCE`。
+
+正文没有犯这个错误，问题只在 machine-readable integrity layer。
+
+因此也应该：
+
+> **修改 builder → regenerate CSV → 加 exact semantic regression tests。**
+
+不能手改最终 CSV。
+
+---
+
+# 八、README / REPRODUCIBILITY 也需要同步一次
+
+当前 README 仍然说：
+
+> “No target-specific submission package has been created”
+> “no journal is formally selected”
+
+但实际上 npj target-specific refreeze 已经完成。
+
+REPRODUCIBILITY 也仍然保留了“No target journal is fixed”等上一阶段状态。
+
+而 manuscript 的 Code Availability 会把 reviewer 直接带到 GitHub。
+
+因此最终签字前应同步这两个 reader-facing 文件，但：
+
+> **不要改 v1.1.0 tag，不要改 Zenodo 22151739，不要修改 frozen scientific release。**
+
+---
+
+# 九、我对 npj 首投竞争力的当前判断
+
+npj Systems Biology and Applications 目前 2025 JIF 为 **4.4**、5-year JIF **4.2**，median first editorial decision **8 days**、median submission-to-acceptance **155 days**。([Nature][3]) 期刊继续明确覆盖 single-cell systems biology 和 systems immunology，因此目标选择没有必要变化。([Nature][1])
+
+当前完成度我重新评为：
+
+| 模块                                      |        当前 |
+| --------------------------------------- | --------: |
+| Scientific design                       |   **98%** |
+| Statistical rigor                       |   **98%** |
+| R1/C9R boundary discipline              |   **99%** |
+| QiTeng manuscript argument architecture |   **99%** |
+| Abstract/target structure               |   **99%** |
+| Supplement scientific coverage          |   **98%** |
+| Source-data integrity                   |  **100%** |
+| Main-figure argument architecture       |   **97%** |
+| npj exported-artifact style compliance  |   **88%** |
+| Machine-readable claim semantics        |   **82%** |
+| GitHub reader-facing current state      |   **80%** |
+| **Overall first-submission readiness**  | **约 93%** |
+
+---
+
+# 十、下一阶段正式目标
+
+我建议下一阶段正式冻结成：
+
+> **`NPJ_SBA_FINAL_RENDER_AND_SEMANTIC_HARDENING`**
+
+执行顺序应严格是：
+
+1. 修复 `publication_style_contract.py` 的 npj branch，不允许后续 generic clamp 回退；
+2. 新增 **exported PDF artifact-level QA**，真正解析 font、line width、page size，而不是只相信 JSON 中声明的 style contract；
+3. 从冻结 source tables **重新渲染全部 15 张图**；
+4. 保证全部 source-data hashes 不变，同时把 Figure 2 改为 `Primary B_ASC enrichment not supported`，Figure 1/4 明确 `source-label-defined replication`；
+5. 修复 statistics reporting map 的 R1/C3/C5/C9R/TF-depletion 语义与 regression tests；
+6. 将本轮 QiTeng hardened manuscript 同步进 target builder，更新 README/REPRODUCIBILITY；
+7. 重新构建 Manuscript、Supplement、Cover Letter，并重新做 WPS/LibreOffice、a11y、deterministic-package QA；
+8. **只有这时才生成新的 exact hashes 给两位作者签字**；随后再归档官方 JCR-Q1 receipt、CUHK-Shenzhen APC/OA receipt 和 Nature Portfolio 表单，最后才授权 portal submission。
+
+当前 `Systems immunology` Collection 仍开放，但官方页面显示 deadline 为 **2026-09-12**；因为本稿并不是 multi-omics、dynamical modeling 或 agentic-AI 项目，我仍建议按普通 **Article** 首投，不为了 Collection 临时追加分析。([Nature][4])
+
+---
+
+## 本轮交付文件
+
+[本轮详细行动记录 MD](sandbox:/mnt/data/action_record_2026-08-30_qiteng_npj_final_hardening.md)
+
+[QiTeng 全量修改 Ledger CSV](sandbox:/mnt/data/SLE_Bcell_QiTeng_npj_edit_ledger_2026-08-30.csv)
+
+[NPJ final hardening 源码修复规格 MD](sandbox:/mnt/data/SLE_Bcell_npj_SBA_final_hardening_patch_spec_2026-08-30.md)
+
+[完整导师级全量审计报告 MD](sandbox:/mnt/data/SLE_Bcell_npj_SBA_QiTeng_full_advisor_audit_2026-08-30.md)
+
+这一轮**没有修改 GitHub 或 Zenodo**，因为当前最安全的做法是先把新的 manuscript candidate 和需要修改的源码范围完全冻结；也没有制作新的 submission package。现在的最优动作已经不是再跑一个新生信分析，而是**把 figure source-code bug、statistics-map semantic bug 和新 QiTeng 稿一次性整合后重新构建终局版本**。
+
+[1]: https://www.nature.com/npjsba/aims?utm_source=chatgpt.com "Aims & Scope | npj Systems Biology and Applications"
+[2]: https://www.nature.com/npjsba/for-authors-and-referees/submisions?utm_source=chatgpt.com "For authors | npj Systems Biology and Applications"
+[3]: https://www.nature.com/npjsba/journal-impact?utm_source=chatgpt.com "Journal Metrics | npj Systems Biology and Applications"
+[4]: https://www.nature.com/npjsba/calls-for-papers?utm_source=chatgpt.com "Calls for papers | npj Systems Biology and Applications"

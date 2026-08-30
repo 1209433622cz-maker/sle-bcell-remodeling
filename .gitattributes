@@ -39,3 +39,6 @@ phase17_v7/post_gateC9/** -text whitespace=blank-at-eol,blank-at-eof,space-befor
 00_project_management/npj_sba_target_refreeze_2026-08-30/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 00_project_management/npj_sba_target_refreeze_2026-08-30/received/** -whitespace
 phase17_v7/npj_sba_target_refreeze/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+00_project_management/npj_sba_final_hardening_2026-08-30/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+00_project_management/npj_sba_final_hardening_2026-08-30/received/** -whitespace
+phase17_v7/npj_sba_final_hardening/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

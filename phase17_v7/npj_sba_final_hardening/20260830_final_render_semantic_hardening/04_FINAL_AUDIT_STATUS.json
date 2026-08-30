@@ -1,0 +1,105 @@
+{
+  "created_at": "2026-08-30T11:07:04+08:00",
+  "status": "PASS_NPJ_SBA_FINAL_HARDENING_AUTHOR_APPROVAL_REQUIRED",
+  "checks": {
+    "source_gate_pass": true,
+    "target_exact": true,
+    "article_type_exact": true,
+    "title_exact": true,
+    "title_at_most_15_words": true,
+    "abstract_at_most_150_words": true,
+    "reference_identity_count_retained": true,
+    "required_main_structure": true,
+    "forbidden_main_headings_absent": true,
+    "supplementary_methods_absent": true,
+    "legacy_additional_file_labels_absent": true,
+    "current_doi_foregrounded": true,
+    "r1_hold_preserved": true,
+    "c9r_hold_preserved": true,
+    "external_outcome_unlock_false": true,
+    "no_scientific_reanalysis": true,
+    "figure_gate_pass": true,
+    "figure_exported_artifact_contract_pass": true,
+    "figure_source_tables_byte_identical": true,
+    "all_figure_sources_individually_identical": true,
+    "five_main_vector_pdfs_single_page": true,
+    "document_build_checks_pass": true,
+    "wps_page_counts_exact": true,
+    "wps_all_pages_within_canvas": true,
+    "wps_all_markers_resolved": true,
+    "cross_renderer_page_counts_match": true,
+    "cross_renderer_all_pages_within_canvas": true,
+    "supplement_is_one_18_page_pdf": true,
+    "accessibility_zero_findings": true,
+    "statistics_reporting_map_complete": true,
+    "statistics_map_contains_hold_boundaries": true,
+    "statistics_map_claims_match_decisions": true,
+    "package_integrity_pass": true,
+    "exact_file_author_approval_pending": true,
+    "submission_not_authorized": true,
+    "apc_not_authorized": true,
+    "official_jcr_q1_receipt_pending": true,
+    "institutional_apc_verification_pending": true
+  },
+  "failed_checks": [],
+  "page_counts": {
+    "Cover_Letter.pdf": 1,
+    "Manuscript.pdf": 31,
+    "Supplementary_Information.pdf": 18
+  },
+  "figure_pages": {
+    "Figure_1.pdf": 1,
+    "Figure_2.pdf": 1,
+    "Figure_3.pdf": 1,
+    "Figure_4.pdf": 1,
+    "Figure_5.pdf": 1
+  },
+  "accessibility": {
+    "Manuscript": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "Supplementary_Information": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "Cover_Letter": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    }
+  },
+  "package": {
+    "receipt": {
+      "created_at": "2026-08-30T11:07:03+08:00",
+      "status": "PASS_NPJ_SBA_FINAL_HARDENING_AUTHOR_APPROVAL_REQUIRED",
+      "package_directory": "04_submission/npj_systems_biology_and_applications/SLE_Bcell_npj_Systems_Biology_and_Applications",
+      "package_zip": "04_submission/npj_systems_biology_and_applications/SLE_Bcell_npj_Systems_Biology_and_Applications.zip",
+      "package_zip_bytes": 15221543,
+      "package_zip_sha256": "F4F8C49380A32A49BA4BFAF4235D979964779757CCD362A8AEA0D4D07B8D8BFD",
+      "manifest_files_verified": 20,
+      "deterministic_double_build": true,
+      "main_figures": 5,
+      "single_supplementary_pdf": true,
+      "supplementary_data_archives": 3,
+      "new_scientific_analysis_performed": false,
+      "R1_decision": "HOLD_FULL_PIPELINE_TWO_COMPARTMENT_REPRODUCIBILITY",
+      "C9R_decision": "HOLD_C9A_PREFREEZE_REVIEW_REQUIRED",
+      "corrected_external_outcome_unlock_authorized": false,
+      "exact_package_author_approved": false,
+      "submission_authorized": false,
+      "apc_commitment_authorized": false
+    },
+    "verifier_stdout": "PASS: 20 files verified; exact-file author approval and submission authorization remain pending",
+    "zip_crc_valid": true
+  },
+  "manual_visual_review": {
+    "wps_all_50_pages_reviewed": true,
+    "libreoffice_all_50_pages_cross_reviewed": true,
+    "all_15_figure_contact_sheets_and_high_risk_panels_reviewed": true,
+    "clipping_overlap_missing_labels": false
+  },
+  "next_gate": "NPJ_SBA_EXACT_FILE_AUTHOR_APPROVAL_AND_INSTITUTIONAL_RECEIPTS"
+}

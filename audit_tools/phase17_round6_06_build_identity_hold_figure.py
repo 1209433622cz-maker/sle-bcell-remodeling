@@ -161,7 +161,8 @@ def main() -> None:
             ha="left",
             clip_on=False,
         )
-    axis.set_yticks(y, metric_rows["metric"])
+    display_metrics = metric_rows["metric"].replace({"Minimum mapped ARI": "Min. mapped ARI"})
+    axis.set_yticks(y, display_metrics)
     axis.set_xlim(0.885, 1.006)
     axis.set_xlabel("Observed value (dot); frozen criterion (tick)")
     axis.set_title("Four global criteria pass; state overlap holds", loc="left", pad=4)
@@ -239,11 +240,12 @@ def main() -> None:
     axis.axhline(1, color=COLORS["gray"], ls="--", lw=0.8)
     axis.axhline(baseline["odds_ratio"], color=COLORS["orange"], lw=0.9)
     axis.text(
-        20.4,
-        baseline["odds_ratio"] - 0.025,
-        "frozen OR",
+        0.98,
+        0.06,
+        "Orange line: frozen OR",
+        transform=axis.transAxes,
         ha="right",
-        va="top",
+        va="bottom",
         fontsize=5.2,
         color=COLORS["orange"],
     )
@@ -282,7 +284,7 @@ def main() -> None:
     axis.set_xlabel("Boundary-exchange replicate")
     axis.set_ylabel("IFN/ISG effect")
     axis.legend(frameon=False, fontsize=5.1, loc="lower right")
-    axis.set_title("B_CONV IFN effects are retained", loc="left", pad=4)
+    axis.set_title("B_CONV IFN effects retained", loc="left", pad=4)
     style_axis(axis)
     panel_label(axis, "e", x=-0.28)
 

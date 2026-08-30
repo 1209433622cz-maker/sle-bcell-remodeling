@@ -6,6 +6,7 @@ import csv
 from datetime import datetime
 import hashlib
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -15,11 +16,16 @@ from pypdf import PdfReader
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RUN = ROOT / "phase17_v7/npj_sba_target_refreeze/20260830_target_specific_refreeze"
+RUN = Path(
+    os.environ.get(
+        "NPJ_SBA_RUN_DIR",
+        ROOT / "phase17_v7/npj_sba_target_refreeze/20260830_target_specific_refreeze",
+    )
+).resolve()
 PACKAGE_ROOT = ROOT / "04_submission/npj_systems_biology_and_applications"
 PACKAGE_DIR = PACKAGE_ROOT / "SLE_Bcell_npj_Systems_Biology_and_Applications"
 PACKAGE_ZIP = PACKAGE_ROOT / "SLE_Bcell_npj_Systems_Biology_and_Applications.zip"
-STATUS = "PASS_NPJ_SBA_TARGET_SPECIFIC_REFREEZE_AUTHOR_APPROVAL_REQUIRED"
+STATUS = "PASS_NPJ_SBA_FINAL_HARDENING_AUTHOR_APPROVAL_REQUIRED"
 TITLE = (
     "Disease-blind reconstruction distinguishes reproducible interferon remodeling from "
     "unstable B-cell state assignments in systemic lupus erythematosus"
@@ -102,7 +108,7 @@ def main() -> None:
     libreoffice_pages = group_pages(libreoffice)
     expected_pages = {
         "Cover_Letter.pdf": 1,
-        "Manuscript.pdf": 32,
+        "Manuscript.pdf": 31,
         "Supplementary_Information.pdf": 18,
     }
     main_figure_pages = {
@@ -112,7 +118,7 @@ def main() -> None:
     supplement_pdf_pages = len(PdfReader(RUN / "documents/Supplementary_Information.pdf").pages)
 
     checks = {
-        "source_gate_pass": source["status"] == "PASS_NPJ_SBA_SOURCES_BUILT_SCIENCE_FROZEN",
+        "source_gate_pass": source["status"] == "PASS_NPJ_SBA_HARDENED_SOURCES_BUILT_SCIENCE_FROZEN",
         "target_exact": source["selected_target"] == "npj Systems Biology and Applications",
         "article_type_exact": source["content_type"] == "Article",
         "title_exact": manuscript.splitlines()[0] == f"# {TITLE}",
@@ -146,6 +152,7 @@ def main() -> None:
         "external_outcome_unlock_false": source["corrected_external_outcome_unlock_authorized"] is False,
         "no_scientific_reanalysis": source["scientific_reanalysis"] is False,
         "figure_gate_pass": figure["figure_count"] == 15,
+        "figure_exported_artifact_contract_pass": figure["artifact_postflight_all_pass"] is True,
         "figure_source_tables_byte_identical": figure["source_tables_byte_identical"] is True,
         "all_figure_sources_individually_identical": all(
             row["byte_identical_to_corrected_candidate"] for row in figure["source_data"].values()
@@ -163,6 +170,22 @@ def main() -> None:
         "statistics_map_contains_hold_boundaries": {"R1", "C9R"}.issubset(
             {row["claim_id"] for row in reporting_map}
         ),
+        "statistics_map_claims_match_decisions": {
+            row["claim_id"]: row["claim"] for row in reporting_map
+        } == {
+            "R1": "End-to-end broad-state reproducibility did not meet the frozen state-specific criterion because B_ASC median Jaccard was below 0.95",
+            "C3_PRIMARY": "The primary B_ASC composition analysis did not support a difference in source-defined managed SLE",
+            "C4_IFN_PRIMARY": "GSE174188 primary B_CONV IFN/ISG program is higher in SLE",
+            "C4_IFN_NONOVERLAP": "Donor-nonoverlap internal IFN/ISG effect is positive",
+            "C5_IFN_CHILD": "GSE135779 childhood IFN/ISG program replicates in a source-label-defined broad B-cell analogue",
+            "C5_GENOMEWIDE": "Genome-wide cross-dataset effect concordance was weak (Spearman rho=0.026)",
+            "C9R": "Corrected source-label-independent mapping did not satisfy the frozen calibration gate; no corrected disease outcome was estimated",
+            "TF_ULM": "STAT1/STAT2 slopes are positive across three contrasts",
+            "TF_CORRELATED": "Correlation-aware STAT1/STAT2 direction is retained",
+            "TF_DEPLETION": "Narrow 12-gene depletion retained support, whereas broader M5911 depletion did not support overlap-independent STAT1/STAT2 regulation",
+            "M5911": "M5911 is positively enriched in three contrasts",
+            "GSE23307": "IFN-beta increases the 12-gene arm",
+        },
         "package_integrity_pass": package_pass,
         "exact_file_author_approval_pending": source["exact_file_author_approval"] is False,
         "submission_not_authorized": source["submission_authorized"] is False,
@@ -181,8 +204,8 @@ def main() -> None:
         "accessibility": accessibility,
         "package": package,
         "manual_visual_review": {
-            "wps_all_51_pages_reviewed": True,
-            "libreoffice_all_51_pages_cross_reviewed": True,
+            "wps_all_50_pages_reviewed": True,
+            "libreoffice_all_50_pages_cross_reviewed": True,
             "all_15_figure_contact_sheets_and_high_risk_panels_reviewed": True,
             "clipping_overlap_missing_labels": False,
         },

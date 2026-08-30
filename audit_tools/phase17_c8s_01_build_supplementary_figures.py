@@ -167,15 +167,17 @@ def build_s1(root: Path, figure_dir: Path, source_dir: Path) -> None:
     axes[1, 0].set_ylim(0, 108)
     axes[1, 0].set_ylabel("Hard-QC B-lineage cells (%)")
     for bar, pct, count in zip(bars, percentages, [negative, risk]):
+        label_inside = pct > 50
         axes[1, 0].text(
             bar.get_x() + bar.get_width() / 2,
-            bar.get_height() + 2,
+            bar.get_height() - 5 if label_inside else bar.get_height() + 2,
             f"{pct:.2f}%\n({count:,})",
             ha="center",
-            va="bottom",
+            va="top" if label_inside else "bottom",
             fontsize=5.5,
+            color="white" if label_inside else COLORS["dark"],
         )
-    axes[1, 0].set_title("Primary cells retained; risk calls are sensitivity-only", loc="left")
+    axes[1, 0].set_title("Hard-QC cell retention", loc="left")
     style_axis(axes[1, 0]); panel_label(axes[1, 0], "c")
 
     ordered = libraries.sort_values("score_q95").reset_index(drop=True)
@@ -185,8 +187,21 @@ def build_s1(root: Path, figure_dir: Path, source_dir: Path) -> None:
     axes[1, 1].plot(x, ordered["threshold"], color=COLORS["red"], lw=0.8, label="Library threshold")
     axes[1, 1].set_xlabel("Libraries ordered by score 95th percentile")
     axes[1, 1].set_ylabel("Residual-risk score")
-    axes[1, 1].legend(frameon=False, ncol=3, loc="upper left")
-    axes[1, 1].set_title("All 88 library checkpoints completed", loc="left")
+    axes[1, 1].set_xlim(1, len(ordered) + 18)
+    for label, column, color in (
+        ("Median", "score_median", COLORS["blue"]),
+        ("95th percentile", "score_q95", COLORS["teal"]),
+        ("Threshold", "threshold", COLORS["red"]),
+    ):
+        axes[1, 1].text(
+            len(ordered) + 2,
+            float(ordered[column].iloc[-1]),
+            label,
+            color=color,
+            va="center",
+            ha="left",
+        )
+    axes[1, 1].set_title("Library-level checkpoint profiles", loc="left")
     style_axis(axes[1, 1]); panel_label(axes[1, 1], "d")
 
     write_source(
@@ -221,7 +236,7 @@ def build_s2(root: Path, figure_dir: Path, source_dir: Path) -> None:
     axes[0, 0].set_xticks(x, field_labels)
     axes[0, 0].set_ylabel("Mean same-group neighbour fraction")
     axes[0, 0].legend(frameon=False)
-    axes[0, 0].set_title("Harmony reduces technical neighbourhood concentration", loc="left")
+    axes[0, 0].set_title("Technical-neighbourhood concentration", loc="left")
     style_axis(axes[0, 0]); panel_label(axes[0, 0], "a")
 
     representations = ["unintegrated_pca", "harmony_pca"]
@@ -234,7 +249,7 @@ def build_s2(root: Path, figure_dir: Path, source_dir: Path) -> None:
         axes[0, 1].scatter(rng.normal(index, 0.045, len(values)), values, s=5, alpha=0.35, color=[COLORS["blue"], COLORS["red"]][index - 1], linewidths=0)
     axes[0, 1].set_xticks([1, 2], ["Unintegrated", "Harmony"])
     axes[0, 1].set_ylabel("Bridge-pair cosine distance")
-    axes[0, 1].set_title("Cross-cohort bridge consistency", loc="left")
+    axes[0, 1].set_title("Bridge consistency", loc="left")
     style_axis(axes[0, 1]); panel_label(axes[0, 1], "b")
 
     selected = concordance.loc[concordance["comparison"].isin(["primary_all_cells_vs_singlet_sensitivity", "primary_all_cells_vs_isg_excluded"])].copy()
@@ -397,7 +412,6 @@ def build_s4(root: Path, figure_dir: Path, source_dir: Path) -> None:
     axes[0, 1].set_yticks(y, primary["label"])
     axes[0, 1].set_xlim(0.5, 2.05)
     axes[0, 1].set_xlabel("B_ASC relative-abundance odds ratio")
-    axes[0, 1].legend(frameon=False, loc="upper right")
     axes[0, 1].set_title("Primary null is stable to covariance and cell policy", loc="left")
     style_axis(axes[0, 1]); panel_label(axes[0, 1], "b")
 
@@ -555,17 +569,35 @@ def build_s7(root: Path, figure_dir: Path, source_dir: Path) -> None:
 
     figure, axes = plt.subplots(2, 2, figsize=(7.09, 5.25), constrained_layout=True)
     labels = [f"{row.contrast.replace('gse174188_', '').replace('gse135779_', '')}\n{row.regulator}" for row in sensitivity.itertuples()]
+    compact_labels = [
+        f"{ {'primary': 'D', 'internal_nonoverlap': 'N', 'childhood': 'C'}[row.contrast.replace('gse174188_', '').replace('gse135779_', '')] }\n{row.regulator}"
+        for row in sensitivity.itertuples()
+    ]
     colors = [COLORS["red"] if row.camera_q_core6 >= 0.05 else COLORS["blue"] if row.regulator == "STAT1" else COLORS["teal"] for row in sensitivity.itertuples()]
     x = -np.log10(sensitivity["camera_q_core6"])
     y = -np.log10(sensitivity["fry_q_core6"])
     axes[0, 0].scatter(x, y, c=colors, s=22)
-    label_y = [5.8, 4.1, 5.3, 6.7, 4.3, 4.8]
-    for index, (xv, yv, label) in enumerate(zip(x, y, labels, strict=True)):
-        display = label.replace("internal_nonoverlap", "Nonoverlap").replace("primary", "Discovery").replace("childhood", "Childhood").replace("\n", " ")
-        label_x = 0.96 if index == 1 else 1.72
-        axes[0, 0].annotate(display, (xv, yv), xytext=(label_x, label_y[index]),
-                            fontsize=5.1, va="center",
-                            arrowprops={"arrowstyle":"-", "lw":0.5, "color":"#777777"})
+    point_labels = ["D1", "D2", "N1", "N2", "C1", "C2"]
+    point_offsets = [(5, 5), (5, -13), (-17, 5), (5, 5), (-17, -13), (5, -13)]
+    for xv, yv, label, offset in zip(x, y, point_labels, point_offsets, strict=True):
+        axes[0, 0].annotate(
+            label,
+            (xv, yv),
+            xytext=offset,
+            textcoords="offset points",
+            va="center",
+            ha="center",
+        )
+    axes[0, 0].text(
+        0.98,
+        0.15,
+        "D/N/C: discovery/nonoverlap/childhood\n1/2: STAT1/STAT2",
+        transform=axes[0, 0].transAxes,
+        ha="right",
+        va="bottom",
+        color="#444444",
+        linespacing=1.15,
+    )
     axes[0, 0].set_xlim(0.82, 2.65)
     axes[0, 0].set_ylim(1.0, 7.0)
     threshold = -np.log10(0.05)
@@ -577,7 +609,7 @@ def build_s7(root: Path, figure_dir: Path, source_dir: Path) -> None:
     style_axis(axes[0, 0]); panel_label(axes[0, 0], "a")
 
     axes[0, 1].bar(np.arange(6), sensitivity["camera_inter_gene_correlation"], color=colors)
-    axes[0, 1].set_xticks(np.arange(6), labels, rotation=35, ha="right")
+    axes[0, 1].set_xticks(np.arange(6), compact_labels)
     axes[0, 1].set_ylabel("Estimated inter-gene correlation")
     axes[0, 1].set_title("Residual-estimated regulon correlation", loc="left")
     style_axis(axes[0, 1]); panel_label(axes[0, 1], "b")
@@ -585,7 +617,7 @@ def build_s7(root: Path, figure_dir: Path, source_dir: Path) -> None:
     matrix = -np.log10(sensitivity[["camera_q_core6", "fry_q_core6"]].to_numpy())
     image = axes[1, 0].imshow(matrix, aspect="auto", cmap="YlGnBu")
     axes[1, 0].set_xticks([0, 1], ["CAMERA", "FRY"])
-    axes[1, 0].set_yticks(np.arange(6), labels)
+    axes[1, 0].set_yticks(np.arange(6), compact_labels)
     for row in range(matrix.shape[0]):
         for col in range(matrix.shape[1]):
             axes[1, 0].text(col, row, f"q={sensitivity.iloc[row][['camera_q_core6', 'fry_q_core6'][col]]:.3g}", ha="center", va="center", fontsize=5.2, color="white" if matrix[row, col] > 2.4 else COLORS["dark"])
@@ -595,7 +627,7 @@ def build_s7(root: Path, figure_dir: Path, source_dir: Path) -> None:
     panel_label(axes[1, 0], "c")
 
     axes[1, 1].bar(np.arange(6), sensitivity["matched_signed_targets"], color=colors)
-    axes[1, 1].set_xticks(np.arange(6), labels, rotation=35, ha="right")
+    axes[1, 1].set_xticks(np.arange(6), compact_labels)
     axes[1, 1].set_ylabel("Frozen matched signed targets")
     axes[1, 1].set_title("Target counts match the frozen ULM family", loc="left")
     style_axis(axes[1, 1]); panel_label(axes[1, 1], "d")

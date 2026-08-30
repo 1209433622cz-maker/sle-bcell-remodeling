@@ -1,4 +1,4 @@
-"""Render every WPS PDF page and record document structure and page bounds."""
+"""Render every PDF page and record document structure and page bounds."""
 
 import argparse
 from datetime import datetime
@@ -26,6 +26,10 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--document-dir",type=Path,required=True)
     parser.add_argument("--output-dir",type=Path,required=True)
+    parser.add_argument(
+        "--engine-label",
+        default="WPS PDF export followed by Poppler 110-dpi page rendering",
+    )
     args=parser.parse_args()
     output=args.output_dir.resolve()
     output.mkdir(parents=True,exist_ok=True)
@@ -74,7 +78,7 @@ def main():
             sheet.save(output/f"{pdf.stem}_contact_{start//6+1}.png")
     (output/"document_render_audit.json").write_text(json.dumps({
         "created_at":datetime.now().astimezone().isoformat(timespec="seconds"),
-        "engine":"WPS PDF export followed by Poppler 110-dpi page rendering",
+        "engine":args.engine_label,
         "document_hashes":hashes,
         "pages":len(rows),"page_checks":rows,
         "all_pages_within_canvas":all(not row["outside_page_text"] for row in rows),

@@ -1,0 +1,10 @@
+﻿ID,Location,Issue,Evidence tier,Action,Rationale
+QW-01,Introduction,Novelty framing,E0/E2 boundary,"Replace self-deprecating ""not novel"" wording with ""well established yet strongly context dependent""",Preserves honesty while routing novelty to inferential hierarchy
+QW-02,Introduction,Aim/contribution landing,E2,"Replace ""intended contribution"" with an explicit evidence-hierarchy research task",QiTeng AIM/APPROACH -> contribution move; stronger section landing
+QW-03,Results heading,External replication ownership,E2,"Add ""source-label-defined"" to GSE135779 replication heading",Prevents independent-cohort evidence from being misread as label-independent taxonomy transfer
+QW-04,Discussion,External replication ownership,E2,Add source-label-defined qualifier to opening of GSE135779 interpretation paragraph,Carries the C9R boundary forward only where it changes interpretation
+QW-05,Discussion,Limitation economy,E1/E2,"Compress repeated caveats while retaining metadata, R1, C9R, regulator and n=2 boundaries",Applies QiTeng salience-detail economy: epistemic honesty without caveat accumulation
+QW-06,Discussion ending,Duplicate conclusion,E2,Collapse two near-duplicate final paragraphs into one bounded landing paragraph,Removes redundant old Conclusions residue; strengthens final argument state
+QW-07,Methods heading,Evidence ownership,E2,Rename external-validation Methods subsection as source-label-defined GSE135779 validation,Methods-Results terminology lock
+QW-08,Figure legends,Evidence ownership,E2,Qualify Figure 1/4 external replication as source-label-defined,Visual/text claim alignment
+QW-09,Running title,Terminology lock,E2,Replicated -> Reproducible,Aligns terminology with paper thesis

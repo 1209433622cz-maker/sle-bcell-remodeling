@@ -49,6 +49,12 @@ _phase17_review_pack/
 !04_submission/journal_submission/submission_docs/PORTAL_UPLOAD_POLICY.txt
 phase17_v7/gateC8BRP/**/visual_qa/
 
+# npj SBA final hardening: retain final artifacts and receipts, not render caches.
+phase17_v7/npj_sba_final_hardening/**/document_pages/
+phase17_v7/npj_sba_final_hardening/**/libreoffice_documents/
+phase17_v7/npj_sba_final_hardening/**/libreoffice_pages/
+phase17_v7/npj_sba_final_hardening/**/libreoffice_render/
+
 # Correction review: keep compact evidence, not per-cell or rendered QA caches.
 phase17_v7/gateC9R/**/03_REFERENCE_LIBRARY_SIZE_AUDIT.csv
 phase17_v7/gateC9R/**/08_REFERENCE_OOF_PREDICTIONS.csv
