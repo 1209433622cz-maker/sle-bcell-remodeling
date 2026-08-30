@@ -55,6 +55,7 @@ phase17_v7/npj_sba_final_hardening/**/libreoffice_documents/
 phase17_v7/npj_sba_final_hardening/**/libreoffice_pages/
 phase17_v7/npj_sba_final_hardening/**/libreoffice_render/
 phase17_v7/npj_sba_post_hardening_reaudit/**/visual_qa/
+tmp/
 
 # Correction review: keep compact evidence, not per-cell or rendered QA caches.
 phase17_v7/gateC9R/**/03_REFERENCE_LIBRARY_SIZE_AUDIT.csv

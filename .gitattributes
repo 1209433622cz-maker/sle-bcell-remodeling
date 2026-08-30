@@ -45,3 +45,5 @@ phase17_v7/npj_sba_final_hardening/** -text whitespace=blank-at-eol,blank-at-eof
 00_project_management/npj_sba_post_hardening_reaudit_2026-08-30/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 00_project_management/npj_sba_post_hardening_reaudit_2026-08-30/received/** -whitespace
 phase17_v7/npj_sba_post_hardening_reaudit/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+00_project_management/npj_sba_exact_file_approval_2026-08-30/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+phase17_v7/npj_sba_submission_gate/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

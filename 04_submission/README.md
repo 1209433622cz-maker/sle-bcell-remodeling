@@ -34,9 +34,12 @@ The ZIP is intentionally ignored by Git; its exact size, SHA-256 and verificatio
 state are recorded under
 `00_project_management/current_submission_package_2026-08-30/`.
 
-This package is complete for review but is **not authorized for portal upload**.
-The target journal, official JCR Q1 evidence, APC/OA route, target-specific format
-adaptation and approval of the exact final hashes remain pending. The bundled
+This package is complete for journal-neutral review but is **not authorized for
+portal upload**. The selected target is now npj Systems Biology and Applications,
+and the separate target-specific package is under
+`npj_systems_biology_and_applications/`. Journal adaptation is complete; official
+JCR Q1 evidence, the CUHK-Shenzhen APC/OA route and approval of the exact final
+hashes remain pending. The bundled
 `00_READ_ME_FIRST.md`, `Submission_Readiness.md` and self-verifier preserve this
 boundary.
 
@@ -47,7 +50,11 @@ without changing any numbers. Their governance records remain historical evidenc
 `author_confirmed_review/`, `author_review/`, `correction_review/` and their ZIPs
 are preserved snapshots; they are not final upload materials.
 The user requires JCR Q1. Current-year category, rank and quartile evidence,
-journal-specific formatting and final-file approval remain separate tasks.
+institutional APC/OA confirmation and exact-file approval remain separate tasks.
+The current Nature Portfolio Editorial Policy Checklist PDF states that the form
+has been retired; it must not be uploaded as a completed form. The Reporting
+Summary response map and official dynamic PDF are staged under
+`00_project_management/npj_sba_exact_file_approval_2026-08-30/`.
 
 `journal_submission/` and `journal_submission.zip` remain historical snapshots.
 Do not mix their portal files with the revised documents or overwrite them.

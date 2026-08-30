@@ -1,0 +1,15 @@
+{
+  "checked_date": "2026-08-30",
+  "reporting_summary": {
+    "status": "CURRENT_DYNAMIC_XFA_AUTHOR_COMPLETION_REQUIRED",
+    "dynamic_sha256": "6B529F32B850373216528FFEB55283A28711186C06FB1F65F4CC8447AC236E03",
+    "flat_reference_pages": 7,
+    "adobe_reader_required": true
+  },
+  "editorial_policy_checklist": {
+    "status": "RETIRED_NO_LONGER_REQUIRED",
+    "official_sha256": "77852E16C76936DC9BB946B1D7819B0DB30F53E396AA6ED5DBBE559EE3691FE1",
+    "upload": false,
+    "repository_markdown_role": "internal policy audit only"
+  }
+}

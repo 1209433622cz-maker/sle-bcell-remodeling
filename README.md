@@ -45,6 +45,14 @@ JCR Q1 receipt and institutional APC/OA verification remain pending. The target
 adaptation did not rerun scientific analyses, alter the public v1.1.0 release or
 publish a new Zenodo version.
 
+The next-gate preparation status is
+`PASS_TECHNICAL_PREPARATION_AUTHOR_AND_INSTITUTION_RECEIPTS_REQUIRED`. The exact
+author-approval contract, current Nature Portfolio Reporting Summary response
+map, institutional JCR/APC request and 12-item portal manifest are prepared.
+The current official Editorial Policy Checklist PDF states that the form is no
+longer required; the historical Markdown checklist is retained only as an
+internal policy audit and is not a portal upload.
+
 Author-confirmed scientific manuscript title:
 
 **Disease-blind reconstruction distinguishes reproducible interferon remodeling from
@@ -105,6 +113,12 @@ The frozen evidence chain is:
 - [Final-hardening action record](00_project_management/action_record_2026-08-30_npj_sba_final_render_semantic_hardening.md)
 - [Post-hardening QiTeng full reaudit](00_project_management/action_record_2026-08-30_npj_sba_post_hardening_qiteng_full_reaudit.md)
 - [Post-hardening machine-readable gate](phase17_v7/npj_sba_post_hardening_reaudit/20260830_qiteng_text_freeze/00_POST_HARDENING_FULL_REAUDIT.json)
+- [Exact-file author approval contract](00_project_management/npj_sba_exact_file_approval_2026-08-30/Exact_File_Author_Approval.md)
+- [Reporting Summary response map](00_project_management/npj_sba_exact_file_approval_2026-08-30/Nature_Portfolio_Reporting_Summary_Response_Map.md)
+- [Institutional JCR and APC evidence request](00_project_management/npj_sba_exact_file_approval_2026-08-30/Institutional_JCR_APC_Evidence_Request.md)
+- [Portal submission runbook](00_project_management/npj_sba_exact_file_approval_2026-08-30/Portal_Submission_Runbook.md)
+- [Exact-file approval preparation gate](phase17_v7/npj_sba_submission_gate/20260830_exact_file_approval_preparation/00_EXACT_FILE_APPROVAL_PREPARATION.json)
+- [Exact-file approval and official-forms action record](00_project_management/action_record_2026-08-30_npj_sba_exact_file_approval_and_official_forms_preparation.md)
 - [Current release manuscript source](04_submission/zenodo_release/manuscript/Manuscript.md)
 - [Current release manuscript DOCX](04_submission/zenodo_release/manuscript/Manuscript.docx)
 - [Current release manuscript PDF](04_submission/zenodo_release/manuscript/Manuscript.pdf)
