@@ -246,6 +246,7 @@ def build_figure1(
     publication_source_data: bool = False,
     explicit_threshold_semantics: bool = False,
     nature_evidence_hierarchy: bool = False,
+    panel_a_variant: str | None = None,
 ) -> None:
     c2b3 = read_json(
         root
@@ -395,7 +396,110 @@ def build_figure1(
     axis = axes[0, 0]
     axis.set_axis_off()
     panel_label(axis, "a", x=-0.06, y=1.03)
-    if nature_evidence_hierarchy:
+    if panel_a_variant == "workflow_scope":
+        axis.set_title("Workflow and identity scope", loc="left", pad=4)
+        node_style = {
+            "transform": axis.transAxes,
+            "ha": "center",
+            "va": "center",
+            "linespacing": 1.12,
+            "bbox": {
+                "boxstyle": "round,pad=0.22",
+                "facecolor": "white",
+                "linewidth": 0.8,
+            },
+        }
+        top_nodes = (
+            (0.13, "B-lineage input\n150,402 cells", COLORS["internal"]),
+            (0.50, "Disease-blind\nresampling (b-d)", COLORS["secondary"]),
+            (0.87, "Stable scope\nB_CONV / B_ASC", COLORS["teal"]),
+        )
+        for x_value, label, color in top_nodes:
+            style = dict(node_style)
+            style["bbox"] = dict(node_style["bbox"], edgecolor=color)
+            axis.text(x_value, 0.78, label, **style)
+        for start, end in ((0.26, 0.37), (0.63, 0.74)):
+            axis.annotate(
+                "",
+                xy=(end, 0.78),
+                xytext=(start, 0.78),
+                xycoords=axis.transAxes,
+                arrowprops={"arrowstyle": "-|>", "lw": 0.75, "color": COLORS["dark"]},
+            )
+        for x_value in (0.48, 0.82):
+            axis.annotate(
+                "",
+                xy=(x_value, 0.54),
+                xytext=(0.87, 0.67),
+                xycoords=axis.transAxes,
+                arrowprops={"arrowstyle": "-|>", "lw": 0.75, "color": COLORS["dark"]},
+            )
+        for x_value, label, color in (
+            (0.48, "B_ASC\nsample fractions", COLORS["sle"]),
+            (0.82, "B_CONV\ndonor pseudobulk", COLORS["ifn"]),
+        ):
+            style = dict(node_style)
+            style["bbox"] = dict(node_style["bbox"], edgecolor=color)
+            axis.text(x_value, 0.45, label, **style)
+        axis.text(
+            0.03,
+            0.45,
+            "Separated\nanalyses",
+            transform=axis.transAxes,
+            ha="left",
+            va="center",
+            fontweight="bold",
+            linespacing=1.08,
+        )
+        axis.text(
+            0.50,
+            0.20,
+            "Authorized output: broad-compartment analyses",
+            transform=axis.transAxes,
+            ha="center",
+            va="center",
+            fontweight="bold",
+            color=COLORS["teal"],
+        )
+        axis.text(
+            0.50,
+            0.07,
+            "Boundary: no hard fine-state assignments",
+            transform=axis.transAxes,
+            ha="center",
+            va="center",
+            fontweight="bold",
+            color="#555555",
+        )
+    elif panel_a_variant == "evidence_matrix":
+        axis.set_title("Evidence roles and claim boundaries", loc="left", pad=4)
+        columns = (0.02, 0.28, 0.61)
+        axis.text(columns[0], 0.90, "Layer", transform=axis.transAxes, fontweight="bold", va="center")
+        axis.text(columns[1], 0.90, "Unit", transform=axis.transAxes, fontweight="bold", va="center")
+        axis.text(columns[2], 0.90, "Authorized output", transform=axis.transAxes, fontweight="bold", va="center")
+        matrix_rows = (
+            (0.73, "Identity", "Cell\nresampling", "B_CONV / B_ASC", COLORS["secondary"]),
+            (0.54, "Composition", "Sample\nstrata", "B_ASC abundance", COLORS["sle"]),
+            (0.35, "Transcription", "Donor\npseudobulk", "B_CONV programs", COLORS["ifn"]),
+            (0.16, "Replication", "Nonoverlap +\nexternal", "IFN reproducibility", COLORS["external"]),
+        )
+        for y_value, layer, design, inference, color in matrix_rows:
+            axis.plot([0.01, 0.98], [y_value + 0.09, y_value + 0.09], transform=axis.transAxes, color="#DDDDDD", lw=0.55)
+            axis.plot([0.015, 0.015], [y_value - 0.07, y_value + 0.07], transform=axis.transAxes, color=color, lw=1.3)
+            axis.text(columns[0] + 0.03, y_value, layer, transform=axis.transAxes, fontweight="bold", va="center")
+            axis.text(columns[1], y_value, design, transform=axis.transAxes, va="center")
+            axis.text(columns[2], y_value, inference, transform=axis.transAxes, va="center")
+        axis.text(
+            0.98,
+            0.005,
+            "Boundary: fine states not assigned",
+            transform=axis.transAxes,
+            ha="right",
+            va="bottom",
+            color="#555555",
+            fontweight="bold",
+        )
+    elif nature_evidence_hierarchy:
         npj_layout = os.environ.get("NPJ_SBA_STYLE") == "1"
         if npj_layout:
             rows = (
@@ -1185,6 +1289,7 @@ def build_figure5(
     proliferation_specificity_comparators: bool = False,
     parallel_evidence_branches: bool = False,
     three_evidence_branches: bool = False,
+    panel_a_variant: str | None = None,
 ) -> None:
     c6_dir = root / "phase17_v7/gateC6B/20260815_regulatory_evidence"
     regulators = read_csv(c6_dir / "01_CONFIRMATORY_REGULATOR_RESULTS.csv")
@@ -1267,7 +1372,100 @@ def build_figure5(
 
     design_axis.set_axis_off()
     panel_label(design_axis, "a", x=-0.09, y=1.08)
-    if three_evidence_branches:
+    if panel_a_variant == "convergence_boundary":
+        branch_x = (0.17, 0.50, 0.83)
+        branch_titles = (
+            "Regulator activity",
+            "Response-set enrichment",
+            "Perturbation context",
+        )
+        branch_details = (
+            "STAT1/STAT2: 6/6 positive\n3 observational contrasts",
+            "M5911: 3/3 enriched\n10,000 permutations",
+            "IFN-beta: 2/2 donors\n12/12 genes positive",
+        )
+        branch_roles = (
+            "global 24-test family",
+            "orthogonal concordance",
+            "descriptive only",
+        )
+        for x_value, title, detail, role in zip(branch_x, branch_titles, branch_details, branch_roles, strict=True):
+            design_axis.text(
+                x_value,
+                0.79,
+                title,
+                transform=design_axis.transAxes,
+                ha="center",
+                va="center",
+                fontweight="bold",
+            )
+            design_axis.text(
+                x_value,
+                0.56,
+                detail,
+                transform=design_axis.transAxes,
+                ha="center",
+                va="center",
+                linespacing=1.12,
+            )
+            design_axis.text(
+                x_value,
+                0.37,
+                role,
+                transform=design_axis.transAxes,
+                ha="center",
+                va="center",
+                color="#555555",
+            )
+        design_axis.text(
+            0.50,
+            0.20,
+            "Supported: convergent observational evidence for IFN-centred regulation",
+            transform=design_axis.transAxes,
+            ha="center",
+            va="center",
+            fontweight="bold",
+            color=COLORS["ifn"],
+        )
+        design_axis.text(
+            0.50,
+            0.025,
+            "Not established: causal TF, direct binding or a unique upstream ligand",
+            transform=design_axis.transAxes,
+            ha="center",
+            va="bottom",
+            fontweight="bold",
+            color="#444444",
+        )
+        design_axis.set_title("Evidence convergence and claim boundary", loc="left", pad=4)
+    elif panel_a_variant == "quantitative_matrix":
+        design_axis.set_title("Quantitative evidence summary", loc="left", pad=4)
+        x_positions = (0.02, 0.27, 0.55, 0.78)
+        for x_value, header in zip(x_positions, ("Evidence", "Coverage", "Observed result", "Role"), strict=True):
+            design_axis.text(x_value, 0.88, header, transform=design_axis.transAxes, fontweight="bold", va="center")
+        matrix_rows = (
+            (0.67, "STAT1/STAT2", "3 contrasts", "6/6 positive; q<0.05", "global 24-test family", COLORS["internal"]),
+            (0.43, "M5911", "3 contrasts", "3/3 NES >3.0", "orthogonal concordance", COLORS["external"]),
+            (0.19, "IFN-beta", "2 donors", "12/12 in each donor", "descriptive context", COLORS["purple"]),
+        )
+        for y_value, evidence, coverage, result, role, color in matrix_rows:
+            design_axis.plot([0.01, 0.98], [y_value + 0.105, y_value + 0.105], transform=design_axis.transAxes, color="#DDDDDD", lw=0.55)
+            design_axis.plot([0.015, 0.015], [y_value - 0.075, y_value + 0.075], transform=design_axis.transAxes, color=color, lw=1.3)
+            design_axis.text(x_positions[0] + 0.025, y_value, evidence, transform=design_axis.transAxes, va="center", fontweight="bold")
+            design_axis.text(x_positions[1], y_value, coverage, transform=design_axis.transAxes, va="center")
+            design_axis.text(x_positions[2], y_value, result, transform=design_axis.transAxes, va="center")
+            design_axis.text(x_positions[3], y_value, role, transform=design_axis.transAxes, va="center")
+        design_axis.text(
+            0.98,
+            0.015,
+            "Boundary: observational convergence; no causal or uniquely upstream claim",
+            transform=design_axis.transAxes,
+            ha="right",
+            va="bottom",
+            color="#444444",
+            fontweight="bold",
+        )
+    elif three_evidence_branches:
         branch_x = (0.17, 0.50, 0.83)
         branch_titles = (
             "Regulator robustness",

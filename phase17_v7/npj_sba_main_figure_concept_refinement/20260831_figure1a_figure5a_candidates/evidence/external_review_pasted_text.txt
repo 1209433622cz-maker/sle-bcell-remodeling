@@ -1,0 +1,625 @@
+可以，我理解你的取向已经从“尽快投稿”切回到“继续把**手稿文本与图件做到更强**”，只是仍以 **npj Systems Biology and Applications** 的审稿口味作为导向，而不是以 portal 流程为导向。这个转向是合理的。因为当前项目的科学边界、R1/C9R HOLD、S8 修复、17 页补充材料和 exact package 都已经稳定，所以如果现在继续优化，**最值得重新打开的就是主文叙事与主图结构，而不是再去处理投稿手续**。当前冻结状态与 figure/SI 技术完成度都已经被记录为通过。
+
+你点得很准确：**Figure 1a** 和 **Figure 5a** 确实是现在最值得讨论的两个 panel。它们共同的问题不是“错”，而是：
+
+> **概念是对的，但信息表达密度和“读者一眼抓主旨”的能力还不够强。**
+
+尤其对 npj SBA 这种偏 systems/computational 的期刊来说，**图的“论证结构可视化能力”**非常重要。官方要求也支持我们继续以白底、Arial-compatible sans serif、8 pt 可见字体、至少 1 pt 正线宽和清晰 multipart figure 去做精修。
+
+---
+
+# 一、先给总判断：这次应该如何“重新打开”
+
+我建议的原则是：
+
+## 1）不打开核心生物学结论
+
+不要重新定义：
+
+* R1；
+* C9R；
+* B_CONV/B_ASC 结论边界；
+* IFN/ISG 主结论；
+* STAT1/STAT2 的证据等级。
+
+这些边界正是论文可信度的来源。行动记录已经明确说明：当前主线仍然是 **identity ceiling → composition null → IFN replication → corrected-transfer HOLD → observational regulatory context**，并且 no new scientific rerun was required。
+
+## 2）可以打开“表达层”和“panel-level figure architecture”
+
+也就是：
+
+* **Figure 1a 重画/重构**
+* **Figure 5a 重画/替换**
+* 配套的 **Figure legend**
+* Results/Discussion 中与这两个 panel 强绑定的少量桥接句
+
+## 3）优先“从冻结 source 或冻结结果重构新 panel”，而不是直接修旧图
+
+这也符合你说的：
+
+> 优先选择重跑分析和画图来解决问题，而不是改现有结果文件。
+
+这里要注意，所谓“重跑”，对 1a 和 5a 来说，**不是重跑 biology**，而是：
+
+* 从现有冻结结果、source data、decision records 重新生成**更好的 panel**；
+* 必要时新增一个 figure-building script；
+* 但不去改数值结论。
+
+---
+
+# 二、Figure 1 全图的角色先重新定义
+
+Figure 1 现在本质上承担的是：
+
+> **告诉读者：这篇文章不是在“发现一个 SLE B-cell subtype”，而是在搭建一个 evidence hierarchy，逐层验证什么能重复、什么不能重复。**
+
+当前 Figure 1b–d 其实都比较有价值：
+
+* **1b**：解释为什么最后选择 frozen broad partition；
+* **1c**：展示 two-compartment resampling stability；
+* **1d**：明确 state-specific scope gate / B_ASC 问题。
+
+所以 Figure 1 的真正短板几乎全部集中在 **1a**。
+
+---
+
+# 三、Figure 1a：为什么你会不满意 —— 我同意，而且问题比较具体
+
+我看当前 1a 的核心内容是四层：
+
+* Discovery
+* Analysis
+* Replication
+* Context
+
+并附上：
+
+* 150,402 B-lineage cells
+* B_ASC composition / B_CONV pseudobulk + programs
+* internal + GSE135779 replication
+* regulator robustness / M5911 / GSE23307
+
+这个 panel 的**概念没有错**，但它有 5 个明显不足：
+
+## 问题 1：它更像“摘要提纲”，不像“工作流图”
+
+现在 1a 更像一个带彩色竖线的目录。
+它告诉我“有四层”，但没有清楚告诉我：
+
+* 数据从哪里进入；
+* disease-blind reconstruction 在哪里发生；
+* 哪些 branch 属于 main inference；
+* 哪些 branch 属于 replication；
+* 哪些 branch 只是 context；
+* 哪些 claim 被明确禁止。
+
+而这篇稿子最重要的就是这些边界。
+
+## 问题 2：它没有把“identity / composition / transcription”这三个 inferential layers 视觉化
+
+但正文和 cover letter 最重要的 framing 恰恰就是这一点：
+这篇稿最核心的价值不是数据量，而是**inferential separation**。
+
+现在 1a 没有把这一点做成读者一眼能懂的视觉结构。
+
+## 问题 3：它与 1b–d 的衔接还不够强
+
+1b–d 都在讲“为什么 broad scaffold 被保留、为什么 state claim 要收缩”。
+但 1a 还没有非常清楚地把 1b–d 放入整篇故事中。
+
+## 问题 4：它缺少“claim ceiling”
+
+现在读者看完 1a，不一定马上知道：
+
+* broad partition 是 scaffold，不是 universal taxonomy；
+* external corrected transfer 没有升级为主结论；
+* regulatory branch 不是 mechanism proof。
+
+## 问题 5：文字略多，但信息密度仍不够高
+
+这是最不讨喜的一种状态：
+**text-heavy，但论证关系仍靠读者自己脑补。**
+
+---
+
+# 四、Figure 1a 的三种改法：保留 / 修改 / 替换
+
+---
+
+## 方案 A：**保留概念，重画为“左到右工作流 + 证据层级图”**
+
+### 这是我最推荐的方案
+
+### 核心结构
+
+把当前 1a 从“四行目录”改成“五段流程”：
+
+**Input**
+GSE174188 discovery scaffold
+→ 150,402 B-lineage cells / 259 donors / 271 biological samples / 88 libraries
+
+**Stage 1: disease-blind identity reconstruction**
+→ broad B_CONV / B_ASC scaffold retained
+→ fine-grained state claims restricted
+
+**Stage 2: inferential branches**
+分成两条主 branch：
+
+* composition branch → B_ASC abundance
+* transcription branch → B_CONV IFN/ISG programs
+
+**Stage 3: replication / robustness**
+
+* internal donor-nonoverlap
+* GSE135779 source-label-defined replication
+
+**Stage 4: contextual analyses**
+
+* regulator robustness
+* M5911 response-set concordance
+* GSE23307 IFN-beta perturbation context
+
+### 同时增加一个底部“claim boundary strip”
+
+底部用小型标签明确写：
+
+* **Supported:** reproducible IFN/ISG process signal
+* **Bounded:** B_CONV/B_ASC as analysis scaffold
+* **Not claimed:** universal taxonomy / corrected transfer / causal regulation
+
+### 优点
+
+* 直接把整篇文章的 systems-biology 逻辑视觉化；
+* 与 npj SBA 的读者口味更一致；
+* 与 1b–d 的逻辑衔接更强；
+* 最容易同步 Results opening paragraph 和 Figure legend；
+* 不需要新分析，只需要重新构图。
+
+### 我对这个方案的评价
+
+**最平衡、最稳妥、最值得执行。**
+
+---
+
+## 方案 B：**改成“证据矩阵（evidence matrix）”**
+
+### 更学术，但可读性有风险
+
+### 结构
+
+行：
+
+* identity
+* composition
+* transcription
+* transfer
+* regulatory context
+
+列：
+
+* discovery
+* internal robustness
+* external replication
+* allowed interpretation
+
+在格子里用：
+
+* PASS / HOLD / context only
+* 或打钩/横杠/空心圆
+
+### 优点
+
+* 非常 systems paper；
+* 直接表现 evidence hierarchy；
+* 非常适合 reviewer 快速读图。
+
+### 缺点
+
+* 对普通读者不如流程图直观；
+* 如果做不好，会显得像“审计表”而不是“主图”；
+* 容易与 supplement / action-record 气质过于接近。
+
+### 评价
+
+如果你偏爱**更冷静、更方法学风格**，可以考虑。
+但就主文 Figure 1a 来说，我还是认为**方案 A 更好**。
+
+---
+
+## 方案 C：**完全替换成“study design schematic”**
+
+### 更像 Nature-style workflow 图
+
+### 结构
+
+画成典型的：
+dataset → QC → reconstruction → branch analyses → replication → context
+
+### 优点
+
+* 很清爽；
+* 非常容易看懂；
+* 期刊友好。
+
+### 缺点
+
+* 如果只做 workflow，会损失“evidence hierarchy”的思想深度；
+* 容易变成普通流程图，反而削弱你这篇稿最独特的 conceptual asset。
+
+### 评价
+
+只能作为备选，不是我首推。
+
+---
+
+# 五、我对 Figure 1 整体的建议：哪些保留，哪些修改
+
+| Panel         | 建议          | 原因                            |
+| ------------- | ----------- | ----------------------------- |
+| **Figure 1a** | **替换 / 重画** | 当前最弱，值得重构                     |
+| Figure 1b     | 保留，轻度润色     | 逻辑价值高，需更清晰标题/注释               |
+| Figure 1c     | 保留          | 这是 broad partition 稳定性的核心证据之一 |
+| Figure 1d     | 保留，轻度压缩注释   | 非常关键，明确 B_ASC scope gate      |
+
+### 对 1b 的小建议
+
+现在 “Frozen-representation policy selection” 概念是对的，但可以在视觉上更强调：
+
+* why 2-compartment selected
+* median ARI vs minimum ARI
+* 其他 state solutions 不达标
+
+让它更像“decision panel”，少一点普通散点图感。
+
+### 对 1d 的小建议
+
+当前 “B_ASC markers: DERL3, JCHAIN, MZB1, TNFRSF17, XBP1; sample support = 1.00”
+这段信息有价值，但文本略挤。可改成：
+
+* 一个更紧凑的 annotation box；
+* 或拆成 “markers” 与 “support” 两行；
+* 保留不变，不建议删除。
+
+---
+
+# 六、Figure 5 全图的角色，也需要先重新定义
+
+Figure 5 现在承担的是：
+
+> **告诉读者：regulator evidence 是“支持 IFN-centred regulatory context”的，而不是证明机制。**
+
+这个 Figure 的读者任务其实非常难，因为它要同时防止两种误读：
+
+1. “STAT1/STAT2 就是 causal upstream regulators”
+2. “Figure 5 只是一些散碎补充结果”
+
+而现在的 5a 没有很好解决这个任务。
+
+---
+
+# 七、Figure 5a：为什么它现在不够好 —— 我基本同意你的不满意
+
+当前 5a 标题是 “Evidence architecture”，内容分成三块：
+
+* Regulator robustness
+* Response-set concordance
+* Perturbation context
+
+并附文字：
+
+* 3 contrasts; ULM/CAMERA/FRY; global BH across 24 tests
+* MSigDB M5911; 3 ranked disease contrasts
+* GSE23307 IFN-beta; n=2 descriptive only
+
+### 它的问题比 1a 更明显：
+
+## 问题 1：它几乎是“纯文字面板”
+
+这在主文图里偏弱。
+尤其在你这篇论文里，Figure 5 已经处于较后的位置，读者此时更希望看到**信息浓缩与证据定性**，而不是再读一个文字框。
+
+## 问题 2：它没有直接告诉读者“Figure 5 证明到哪里为止”
+
+它说了有什么证据模块，但没有清楚写出：
+
+* 支持什么；
+* 不支持什么；
+* 为什么这不是 mechanism proof。
+
+而这一点正是 Figure 5 最应该完成的任务。
+
+## 问题 3：它与 5b–e 的关系不够紧
+
+5b–e 已经是具体数据：
+
+* 5b IFN regulators
+* 5c proliferation comparators
+* 5d M5911 enrichment
+* 5e IFN-beta response
+
+那么 5a 作为入口 panel，就应该起“**读图导航 + claim calibration**”的作用。
+现在它像总目录，但不像解释框架。
+
+## 问题 4：图像感弱，学术冲击力不够
+
+对于主文后段的“机制边界图”，最好让读者一眼感觉：
+
+> “这里是在收束证据，而不是在罗列补充分析。”
+
+当前 5a 还没有这种力量。
+
+---
+
+# 八、Figure 5a 的三种改法：我比 Figure 1a 更倾向“替换”
+
+---
+
+## 方案 A：**替换为“regulatory evidence ladder / claim boundary panel”**
+
+### 这是我最推荐的方案
+
+### 核心结构
+
+把 5a 画成两栏式：
+
+### 左栏：Evidence modules
+
+* ULM robustness across 3 contrasts
+* CAMERA / FRY correlation-aware support
+* M5911 response-set concordance
+* GSE23307 perturbational context (n=2, descriptive)
+
+### 右栏：Allowed conclusion
+
+一个加粗结论框：
+
+* **Supported:** IFN-centred regulatory context
+
+下面灰色虚线框写：
+
+* **Not established:** causal regulation
+* **Not established:** unique upstream IFN ligand
+* **Not established:** predictive biomarker / clinical utility
+
+### 可以用箭头/粗细表示证据汇合
+
+例如四个左栏模块都流向一个右栏结论框，
+但右下角再放两个灰色 crossed boxes 表示“不能越界”。
+
+### 为什么我最推荐
+
+因为这张图最缺的不是“又多一个数据点”，而是**读者对证据等级的直观把握**。
+
+这会让 Figure 5 整体从：
+“杂而后补”
+
+变成：
+
+“收束而有边界”。
+
+---
+
+## 方案 B：**替换为“数据型 summary heatmap / matrix”**
+
+### 如果你想更 data-driven，这是最强替换方案
+
+### 结构建议
+
+行：
+
+* STAT1/STAT2 ULM
+* CAMERA/FRY support
+* M5911 concordance
+* GSE23307 IFN-beta response
+
+列：
+
+* Discovery
+* Nonoverlap
+* Childhood
+* Interpretation class
+
+格子中用：
+
+* effect direction
+* significance symbol
+* context-only marker
+
+最后在最右边加一个结论小框：
+
+* IFN-centred regulatory context
+* not mechanism
+
+### 优点
+
+* 比纯文字更像主文图；
+* 直接从现有 S7 / S8 结果抽象，不需要新 biology；
+* 很适合 systems/computational 风格。
+
+### 缺点
+
+* 如果同时保留 5b–e，可能会和后面数据 panel 稍微重复；
+* 设计难度比方案 A 大。
+
+### 评价
+
+如果你追求“更高级、更 Nature-style、信息更浓”，
+这个方案可能是**最有潜力的最终版本**。
+
+---
+
+## 方案 C：**保留当前三块结构，但彻底重排为更强 infographic**
+
+### 这是最省事，但我不推荐作为终版
+
+比如你可以保留：
+
+* regulator robustness
+* response-set concordance
+* perturbation context
+
+但改成更图形化的三列卡片。
+
+### 问题
+
+它还是容易停留在“解释型目录”，而不是“证据收束型主图”。
+
+### 评价
+
+如果只是短期过渡可行；
+如果你追求“尽可能完美”，不够。
+
+---
+
+# 九、我对 Figure 5 整体的建议：哪些保留，哪些修改
+
+| Panel         | 建议      | 原因                                      |
+| ------------- | ------- | --------------------------------------- |
+| **Figure 5a** | **替换**  | 当前信息价值最低，最应重做                           |
+| Figure 5b     | 保留，轻度润色 | 是 regulator 主证据 panel                   |
+| Figure 5c     | 保留，轻度润色 | 非 IFN specificity comparator 很重要        |
+| Figure 5d     | 保留      | 简短但有用，概括 M5911 concordance              |
+| Figure 5e     | 保留      | 作为 descriptive perturbation context 很合适 |
+
+### 对 5b 的小建议
+
+* 现在 core / extended regulators 分组是对的；
+* 可更强调 “three contrasts” 的横向分层；
+* 用更清楚的细分背景或分组间距；
+* 星号注释可以更紧凑。
+
+### 对 5c 的小建议
+
+* 灰度现在略淡，可增加对比度；
+* 让 negative comparators 与 IFN module 的区分更清晰；
+* 标题可以更明确一点，例如突出 “specificity comparators”。
+
+### 对 5d / 5e 的判断
+
+这两个 panel 虽然简短，但它们的作用很清楚：
+
+* 5d 是 response-set concordance 的浓缩；
+* 5e 是 perturbation context 的边界化呈现。
+
+所以我不建议因为重做 5a 而轻易删除 5d/5e。
+
+---
+
+# 十、和图同步，正文哪些地方应该跟着精修
+
+如果我们真的把 1a 和 5a 重做，我建议不是大改全文，而是做 **四个窄位置的文本同步**。
+
+---
+
+## A. Results 开头（Figure 1 对应）
+
+建议在 Figure 1 出现之前/之后，加一句更强的 framing，例如：
+
+> To separate identity reconstruction, disease abundance, within-state transcription and downstream contextual interpretation, we organized the analysis into an explicit evidence hierarchy before evaluating any disease claim.
+
+这个句子能让新的 1a 和全文更一致。
+
+---
+
+## B. Figure 1 legend
+
+当前 legend 很可能更偏“描述各 panel 内容”。
+重画 1a 后，legend 第一两句应该升级为：
+
+* Figure 1 establishes the study design and evidence hierarchy.
+* Disease-blind reconstruction first defines the analysis scaffold; composition and transcription are then evaluated separately, followed by independent replication and bounded contextual analyses.
+
+这样会更有 QiTeng 风格。
+
+---
+
+## C. Figure 5 legend
+
+如果 5a 改成 claim boundary / evidence ladder，那么 legend 第一段必须明确说：
+
+* Figure 5 summarizes convergent regulatory evidence supporting an IFN-centred context.
+* These analyses do not establish causal regulation, a unique upstream ligand, or clinical utility.
+
+这样可以把“边界”写死。
+
+---
+
+## D. Discussion 第一段或中后段
+
+现在正文已经把 regulator 说得比较克制，但如果 5a 重构后，可以把 Discussion 中关于 regulatory evidence 的一段再整理得更像：
+
+> convergent support from ULM, correlation-aware methods, response-set concordance and descriptive IFN-beta perturbation points to an IFN-centred regulatory context, while the current data remain insufficient for causal attribution.
+
+这个改动很小，但会明显增强 Figure 5 与正文的一致性。
+
+---
+
+# 十一、如果只允许做“一轮最有价值的精修”，我建议你这样排序
+
+## 第一优先级（必须做）
+
+1. **重画 Figure 1a**
+2. **重画/替换 Figure 5a**
+3. 同步修改 Figure 1 / Figure 5 legends
+4. 同步修改 Results opening + Discussion 中 regulator 边界的 2–4 句
+
+## 第二优先级（建议做）
+
+5. 轻度润色 1b / 1d 的注释密度
+6. 轻度润色 5b / 5c 的视觉层级与分组
+
+## 第三优先级（可选）
+
+7. 整体 contact sheet 再做一轮“跨图一致性”检查：
+
+   * 标题句式是否一致
+   * panel letter 位置是否统一
+   * 颜色语义是否统一
+   * “discovery / nonoverlap / childhood” 的顺序是否全篇一致
+   * “source-label-defined”“descriptive only”“context” 这些标签词是否固定化
+
+---
+
+# 十二、我给你的明确建议：保留、修改、替换的最终结论
+
+## Figure 1
+
+* **1a：替换**
+* 1b：保留，轻度精修
+* 1c：保留
+* 1d：保留，轻度精修
+
+## Figure 5
+
+* **5a：替换**
+* 5b：保留，轻度精修
+* 5c：保留，轻度精修
+* 5d：保留
+* 5e：保留
+
+### 我最推荐的两项最终方案
+
+* **Figure 1a → workflow + evidence hierarchy**
+* **Figure 5a → evidence ladder / claim boundary panel（或者更 data-driven 的 summary matrix）**
+
+---
+
+# 十三、完成这一轮后，下一阶段目标是什么？
+
+如果你按现在的方向继续推进，**下一阶段不应该是投稿门禁**，而应该是：
+
+> **Main-text / main-figure narrow reopening focused on conceptual sharpening**
+
+也就是：
+
+1. 基于冻结 scientific results，重构 **Figure 1a**；
+2. 基于冻结 regulatory / overlap-depletion / perturbation outputs，重构 **Figure 5a**；
+3. 同步修 Figure legends；
+4. 同步修正文中与这两个图强绑定的桥接句；
+5. 重新生成 contact sheet，做整套主图 narrative QA；
+6. 再判断是否需要进入下一轮更小范围的“main figure narrative polish”。
+
+---
+
+如果你愿意，下一步我可以**直接进入更实操的一步**：
+我替你写出一份非常具体的 **Figure 1a 重构方案草图说明 + Figure 5a 替换方案草图说明**（按“图上每个框/箭头/文字该写什么”的粒度），这样你就可以直接按这个蓝图去重画或让我继续帮你收敛文本逻辑。

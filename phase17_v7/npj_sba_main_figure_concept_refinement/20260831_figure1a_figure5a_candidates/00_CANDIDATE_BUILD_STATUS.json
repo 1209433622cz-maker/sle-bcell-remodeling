@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-08-31T04:20:16+08:00",
+  "status": "PASS_SOURCE_DRIVEN_CANDIDATES_READY_FOR_VISUAL_ADJUDICATION",
+  "exact_package_sha256_confirmed": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1",
+  "exact_package_modified": false,
+  "author_confirmations_recorded": {
+    "order": [
+      "Zhi Chen",
+      "Teng Qi"
+    ],
+    "corresponding_author": "Teng Qi",
+    "identity_email_orcid_affiliation": "AUTHOR_CONFIRMED_CORRECT",
+    "author_contributions": "AUTHOR_CONFIRMED_ACCURATE",
+    "funding": "NONE_CONFIRMED",
+    "competing_interests": "NONE_CONFIRMED",
+    "ai_disclosure": "AUTHOR_CONFIRMED_COMPLETE_ACCURATE",
+    "new_human_subjects_or_restricted_identifiable_data": "NONE_CONFIRMED"
+  },
+  "baseline_source_sha256": {
+    "Figure1_source_data.csv": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805",
+    "Figure5_source_data.csv": "21925F6916DDAF97760CF73622ED8E4B4CCBE5AE0B3B53C721FDF607C1C6F9A4"
+  },
+  "attachment_sha256": "8EA074256F681E75FBF6BBB1C667F1B40D3E217CDBB187558618544432C30C66",
+  "scientific_estimates_changed": false,
+  "rerun_scope": "source-driven redraw only; no biological model refit",
+  "candidates": [
+    {
+      "candidate": "Figure1A_workflow_scope",
+      "panel": "Figure1a",
+      "variant": "workflow_scope",
+      "pdf": "phase17_v7/npj_sba_main_figure_concept_refinement/20260831_figure1a_figure5a_candidates/Figure1A_workflow_scope/figures/Figure1_disease_blind_identity_scope.pdf",
+      "png": "phase17_v7/npj_sba_main_figure_concept_refinement/20260831_figure1a_figure5a_candidates/Figure1A_workflow_scope/figures/Figure1_disease_blind_identity_scope.png",
+      "source_sha256": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805",
+      "assertions": 9,
+      "all_assertions_pass": true,
+      "semantic_boundary_present": true,
+      "width_mm": 170.0,
+      "height_mm": 130.677,
+      "single_page": true
+    },
+    {
+      "candidate": "Figure1B_evidence_matrix",
+      "panel": "Figure1a",
+      "variant": "evidence_matrix",
+      "pdf": "phase17_v7/npj_sba_main_figure_concept_refinement/20260831_figure1a_figure5a_candidates/Figure1B_evidence_matrix/figures/Figure1_disease_blind_identity_scope.pdf",
+      "png": "phase17_v7/npj_sba_main_figure_concept_refinement/20260831_figure1a_figure5a_candidates/Figure1B_evidence_matrix/figures/Figure1_disease_blind_identity_scope.png",
+      "source_sha256": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805",
+      "assertions": 9,
+      "all_assertions_pass": true,
+      "semantic_boundary_present": true,
+      "width_mm": 170.0,
+      "height_mm": 130.677,
+      "single_page": true
+    },
+    {
+      "candidate": "Figure5A_convergence_boundary",
+      "panel": "Figure5a",
+      "variant": "convergence_boundary",
+      "pdf": "phase17_v7/npj_sba_main_figure_concept_refinement/20260831_figure1a_figure5a_candidates/Figure5A_convergence_boundary/figures/Figure5_regulatory_evidence.pdf",
+      "png": "phase17_v7/npj_sba_main_figure_concept_refinement/20260831_figure1a_figure5a_candidates/Figure5A_convergence_boundary/figures/Figure5_regulatory_evidence.png",
+      "source_sha256": "21925F6916DDAF97760CF73622ED8E4B4CCBE5AE0B3B53C721FDF607C1C6F9A4",
+      "assertions": 9,
+      "all_assertions_pass": true,
+      "semantic_boundary_present": true,
+      "width_mm": 170.0,
+      "height_mm": 211.001,
+      "single_page": true
+    },
+    {
+      "candidate": "Figure5B_quantitative_matrix",
+      "panel": "Figure5a",
+      "variant": "quantitative_matrix",
+      "pdf": "phase17_v7/npj_sba_main_figure_concept_refinement/20260831_figure1a_figure5a_candidates/Figure5B_quantitative_matrix/figures/Figure5_regulatory_evidence.pdf",
+      "png": "phase17_v7/npj_sba_main_figure_concept_refinement/20260831_figure1a_figure5a_candidates/Figure5B_quantitative_matrix/figures/Figure5_regulatory_evidence.png",
+      "source_sha256": "21925F6916DDAF97760CF73622ED8E4B4CCBE5AE0B3B53C721FDF607C1C6F9A4",
+      "assertions": 9,
+      "all_assertions_pass": true,
+      "semantic_boundary_present": true,
+      "width_mm": 170.0,
+      "height_mm": 211.001,
+      "single_page": true
+    }
+  ]
+}

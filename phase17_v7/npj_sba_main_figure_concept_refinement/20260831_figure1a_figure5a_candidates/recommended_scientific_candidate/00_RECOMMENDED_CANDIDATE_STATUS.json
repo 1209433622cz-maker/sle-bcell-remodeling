@@ -1,0 +1,32 @@
+{
+  "created_at": "2026-08-31T04:20:17+08:00",
+  "status": "PASS_RECOMMENDED_SCIENTIFIC_CANDIDATE_REFROZEN",
+  "selection": {
+    "Figure1": {
+      "candidate": "Figure1A_workflow_scope",
+      "pdf_sha256": "97227D1EE742053A519E33407A63A4383ED469541D558EFC9566C416CD4BC494",
+      "png_sha256": "717855E87962750BB8DF5FA4AFF127470D0F94CEDFC81D5BB686D31EB58FE229",
+      "source_data_sha256": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805"
+    },
+    "Figure5": {
+      "candidate": "Figure5B_quantitative_matrix",
+      "pdf_sha256": "5AD3267734CAF8543DC0430CA40A89E3C2184EDC64F05B08E3992AE4D6734F21",
+      "png_sha256": "33318D28BFA6A1E1E54470CA7ADD09B410815D5C8B95CE447931CB4E371A60BE",
+      "source_data_sha256": "21925F6916DDAF97760CF73622ED8E4B4CCBE5AE0B3B53C721FDF607C1C6F9A4"
+    }
+  },
+  "selection_rationale": {
+    "Figure1a": "workflow_scope directly links panels b-d to the broad identity scaffold and downstream biological units without duplicating Figure 4 validation",
+    "Figure5a": "quantitative_matrix states coverage, observed result and inferential role without causal arrows or equal-weight ambiguity"
+  },
+  "panels_retained_without_numeric_change": [
+    "Figure1b-d",
+    "Figure5b-e"
+  ],
+  "baseline_manuscript_sha256": "9D9B39E919CF695BA4290C69B0C1665E566E6943F3763C3771DFDE9B7DCAC043",
+  "candidate_manuscript_sha256": "787778461F4BF47C00578DE11999D1708865E970DEBBADD5295CE8EACEE2BC2E",
+  "manuscript_edits": 2,
+  "edits_limited_to_legends": true,
+  "scientific_estimates_changed": false,
+  "exact_submission_package_modified": false
+}
