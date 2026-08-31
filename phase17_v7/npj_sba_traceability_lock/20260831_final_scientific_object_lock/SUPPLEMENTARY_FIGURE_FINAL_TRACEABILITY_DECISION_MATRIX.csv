@@ -1,0 +1,11 @@
+﻿figure,decision,evidence_role,rationale
+S1,KEEP,source integrity and processing-cohort QC,Source Data and manuscript claim ownership agree; no replacement trigger identified.
+S2,KEEP,representation and cross-cohort diagnostics,Source Data and manuscript claim ownership agree; no replacement trigger identified.
+S3,KEEP,identity-policy adjudication,Source Data and manuscript claim ownership agree; no replacement trigger identified.
+S4,KEEP,composition diagnostics and sensitivity,Source Data and manuscript claim ownership agree; no replacement trigger identified.
+S5,KEEP,pseudobulk diagnostics,Source Data and manuscript claim ownership agree; no replacement trigger identified.
+S6,KEEP,external-validation diagnostics,Source Data and manuscript claim ownership agree; no replacement trigger identified.
+S7,KEEP,correlation-aware regulator sensitivity,Source Data and manuscript claim ownership agree; no replacement trigger identified.
+S8,KEEP,IFN-overlap-depletion boundary,Source Data and manuscript claim ownership agree; no replacement trigger identified.
+S9,KEEP,end-to-end identity propagation boundary,Source Data and manuscript claim ownership agree; no replacement trigger identified.
+S10,KEEP,reference-calibration and transfer boundary,Source Data and manuscript claim ownership agree; no replacement trigger identified.

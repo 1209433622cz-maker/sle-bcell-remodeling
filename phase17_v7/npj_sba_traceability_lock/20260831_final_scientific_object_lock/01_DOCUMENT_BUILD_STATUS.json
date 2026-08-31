@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-08-31T23:11:26+08:00",
+  "status": "PASS_TRACEABILITY_LOCK_DOCX_BUILT_DUAL_RENDER_REQUIRED",
+  "build_results": [
+    {
+      "source": "phase17_v7/npj_sba_traceability_lock/20260831_final_scientific_object_lock/sources/Manuscript_final_scientific_lock.md",
+      "output": "phase17_v7/npj_sba_traceability_lock/20260831_final_scientific_object_lock/documents/Manuscript_final_scientific_lock.docx",
+      "paragraphs": 150,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 60616
+    },
+    {
+      "source": "phase17_v7/npj_sba_traceability_lock/20260831_final_scientific_object_lock/sources/Supplementary_Information_final_scientific_lock.md",
+      "output": "phase17_v7/npj_sba_traceability_lock/20260831_final_scientific_object_lock/documents/Supplementary_Information_final_scientific_lock.docx",
+      "paragraphs": 69,
+      "tables": 10,
+      "inline_shapes": 10,
+      "placeholders": 0,
+      "bytes": 4745885
+    }
+  ],
+  "checks": {
+    "manuscript": {
+      "title_exact": true,
+      "abstract_145_words": true,
+      "no_inline_figures": true,
+      "figure1_boundary_present": true,
+      "figure5_boundary_present": true
+    },
+    "supplement": {
+      "ten_figures_embedded": true,
+      "title_exact": true,
+      "archive_scope_present": true,
+      "old_archive_claim_absent": true,
+      "dataset_specific_unit_present_twice": true,
+      "umbrella_unit_absent": true,
+      "current_doi_present": true
+    }
+  },
+  "object_inventory": {
+    "manuscript_inline_shapes": 0,
+    "supplement_inline_shapes": 10
+  },
+  "files": {
+    "Manuscript_final_scientific_lock.docx": {
+      "bytes": 60659,
+      "sha256": "18FCDD46E01B990D73756388A50269F1268E8F234A24E854665EAEB71E04AAE9"
+    },
+    "Supplementary_Information_final_scientific_lock.docx": {
+      "bytes": 4745941,
+      "sha256": "77D41CD77B047A5860C2DD4339BAE1A743927D16712E1413692323297672AE29"
+    }
+  },
+  "scientific_estimates_changed": false,
+  "source_data_changed": false,
+  "figures_changed": false
+}

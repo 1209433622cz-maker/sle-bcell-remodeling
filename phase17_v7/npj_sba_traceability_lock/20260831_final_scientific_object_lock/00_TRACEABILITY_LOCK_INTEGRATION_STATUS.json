@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-08-31T23:02:40+08:00",
+  "status": "PASS_TRACEABILITY_SOURCE_FIX_DOCUMENT_REBUILD_REQUIRED",
+  "checks": {
+    "manuscript_source_byte_identical_to_prior": true,
+    "archive_scope_fixed": true,
+    "gene_unit_fixed": true,
+    "program_unit_fixed": true,
+    "final_matrix_24_pass_rows": true,
+    "source_data_15_locked_objects": true,
+    "figure_exports_30_locked_objects": true,
+    "main_panels_21_keep": true,
+    "supplementary_figures_10_keep": true,
+    "package_sha_unchanged": true
+  },
+  "scientific_object_decision": {
+    "main_panels_keep": 21,
+    "supplementary_figures_keep": 10,
+    "panels_modified": 0,
+    "panels_replaced": 0,
+    "new_analysis": 0
+  },
+  "source_text_fixes": 3,
+  "scientific_estimates_changed": false,
+  "source_data_changed": false,
+  "figures_changed": false,
+  "release_or_zenodo_changed": false,
+  "submission_package_changed": false,
+  "submission_package_sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1",
+  "files": {
+    "Manuscript_final_scientific_lock.md": {
+      "path": "phase17_v7/npj_sba_traceability_lock/20260831_final_scientific_object_lock/sources/Manuscript_final_scientific_lock.md",
+      "bytes": 57422,
+      "sha256": "E2B77ED42A1DAC90977DE3BAE434E982B07BB65AB515FB116B005F143987CD6C"
+    },
+    "Supplementary_Information_final_scientific_lock.md": {
+      "path": "phase17_v7/npj_sba_traceability_lock/20260831_final_scientific_object_lock/sources/Supplementary_Information_final_scientific_lock.md",
+      "bytes": 18505,
+      "sha256": "9C4A24ED7641492D2D546249621174DEC56CB3F09EC62E343EAE1082682552AA"
+    },
+    "TRACEABILITY_SOURCE_EDIT_LEDGER.csv": {
+      "path": "phase17_v7/npj_sba_traceability_lock/20260831_final_scientific_object_lock/sources/TRACEABILITY_SOURCE_EDIT_LEDGER.csv",
+      "bytes": 1450,
+      "sha256": "EEE55982A00CA6EE4356BAAEB67022C1EA099813B90E4AC5C5FE36603A7A5E2B"
+    },
+    "FINAL_CORE_CLAIM_NUMERICAL_TRACEABILITY_MATRIX.csv": {
+      "path": "phase17_v7/npj_sba_traceability_lock/20260831_final_scientific_object_lock/FINAL_CORE_CLAIM_NUMERICAL_TRACEABILITY_MATRIX.csv",
+      "bytes": 15405,
+      "sha256": "F12F34CE79701A55CB739CBBACB313FCD7534B8B1499C5B5B8B73A8B45D1E277"
+    },
+    "SOURCE_DATA_FINAL_LOCK_MANIFEST.csv": {
+      "path": "phase17_v7/npj_sba_traceability_lock/20260831_final_scientific_object_lock/SOURCE_DATA_FINAL_LOCK_MANIFEST.csv",
+      "bytes": 4314,
+      "sha256": "3B29FCD5C75988D5AABF428E791D6D1FA5A751DCBDE434CED68A0FF15ACDDCD3"
+    },
+    "FIGURE_FINAL_LOCK_MANIFEST.csv": {
+      "path": "phase17_v7/npj_sba_traceability_lock/20260831_final_scientific_object_lock/FIGURE_FINAL_LOCK_MANIFEST.csv",
+      "bytes": 9413,
+      "sha256": "1155E8DE83AA55189E728FEEF1887E97D11EDA5901F7CA556866FAB79010EE29"
+    },
+    "MAIN_PANEL_FINAL_TRACEABILITY_DECISION_MATRIX.csv": {
+      "path": "phase17_v7/npj_sba_traceability_lock/20260831_final_scientific_object_lock/MAIN_PANEL_FINAL_TRACEABILITY_DECISION_MATRIX.csv",
+      "bytes": 2367,
+      "sha256": "9CC67CC7478E10F63AED4E04CE53B41195FE8869AC7659F465B382795456744B"
+    },
+    "SUPPLEMENTARY_FIGURE_FINAL_TRACEABILITY_DECISION_MATRIX.csv": {
+      "path": "phase17_v7/npj_sba_traceability_lock/20260831_final_scientific_object_lock/SUPPLEMENTARY_FIGURE_FINAL_TRACEABILITY_DECISION_MATRIX.csv",
+      "bytes": 1351,
+      "sha256": "AE6A4BBAE68A17C54FE296E10820175CED25053F96AED4162B74E884D5449BA0"
+    }
+  }
+}

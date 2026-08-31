@@ -1,0 +1,367 @@
+本轮我按照你给出的下一阶段目标完成了 **`FINAL_SCIENTIFIC_OBJECT_AND_NUMERICAL_TRACEABILITY_LOCK` 的独立反向审计**。整个过程仍然只针对科学内容、图件、分析对象和数值追溯关系，没有推进投稿包、Release 或 Zenodo，也没有增加新队列、mapper、TF、gene set 或 post-hoc sensitivity。GitHub 当前科学呈现冻结点也已核实为 commit `154e342e03af870cff44ccdbffc61b5a42e41740`。
+
+## 本轮最终判断
+
+目前还**不建议直接宣布 `FINAL_SCIENTIFIC_OBJECT_AND_NUMERICAL_TRACEABILITY_LOCKED`**。
+
+更准确的状态是：
+
+> **`TRACEABILITY_LOCK_PENDING_2_SOURCE_TEXT_FIXES__NO_NUMERICAL_RERUN_REQUIRED`**
+
+原因非常明确：我没有发现新的统计错误、效应值错误、样本数错误、P/q 值错误或需要重新设计主图的错误；但是发现了 **2 个真正的“科学对象/可复现对象”级文本不一致**。它们都应该从 Supplementary 源文本修正并重新生成文档，而不是手工修改当前 DOCX/PDF。
+
+---
+
+## 一、数值层：目前主干证据链是锁得住的
+
+我把核心结论反向追到了 commit `154e342` 下的实际 Source Data，而不是只比较正文和表格。
+
+其中几个最重要的交叉检查如下。
+
+| 科学对象                        |       手稿当前值 |   Source Data 实际值 | 判断   |
+| --------------------------- | ----------: | ----------------: | ---- |
+| Figure 1 frozen minimum ARI |       0.990 |         0.9902067 | PASS |
+| frozen minimum agreement    |      0.9998 |         0.9998338 | PASS |
+| state-median Jaccard        |       0.991 |         0.9913710 | PASS |
+| end-to-end minimum ARI      |       0.930 |         0.9296968 | PASS |
+| B_ASC median Jaccard        |       0.930 |         0.9303233 | PASS |
+| Primary B_ASC OR            |       0.947 |         0.9466532 | PASS |
+| B_ASC 95% CI                | 0.636–1.410 | 0.635705–1.409699 | PASS |
+| Primary B_ASC P             |       0.787 |          0.787279 | PASS |
+| Primary IFN/ISG             |       0.837 |         0.8365565 | PASS |
+| IFN 95% CI                  | 0.525–1.148 | 0.525430–1.147683 | PASS |
+| IFN q                       |   2.98×10⁻⁶ |       2.9770×10⁻⁶ | PASS |
+| GSE135779 childhood         |       1.042 |         1.0417570 | PASS |
+| childhood CI                | 0.681–1.402 | 0.681166–1.402348 | PASS |
+| childhood q                 |   2.98×10⁻⁶ |       2.9755×10⁻⁶ | PASS |
+| Elastic-net coverage        |      94.20% |         0.9419580 | PASS |
+| B_ASC precision             |      88.52% |         0.8852097 | PASS |
+| GSE23307 donor 1            |       3.294 |          3.293571 | PASS |
+| GSE23307 donor 2            |       3.666 |          3.665669 | PASS |
+
+Figure 1 的 fixed-representation 数值可以直接回到 `Figure1_source_data.csv`。 Figure 2 的 43 control / 47 managed SLE、OR、CI、P、HC1 sensitivity、flare q 和 donor-nonoverlap n=53 都能直接回到对应 frozen contrast 行。
+
+Figure 3 也是完全一致：主 IFN/ISG effect `0.8365564764`、CI、q、89 个 pseudobulk、43/46 分组以及 internal/nonoverlap effect 都与手稿一致。
+
+这里还专门复核了此前很容易被审稿人抓住的 **90 composition strata vs 89 transcription pseudobulks**。现在不存在冲突：Figure 2 是 43+47=90 个 composition strata，而 Figure 3 primary 是 43+46=89；正文已经明确解释是一个 managed-SLE stratum 在 B_CONV assignment 后只有 44 cells，没有达到 50-cell pseudobulk threshold。当前手稿对此解释是充分且正确的。
+
+---
+
+## 二、Figure 4 外部验证：数值和“证据等级”同时通过
+
+Figure 4 是这一轮重点，因为这里既容易出现 donor 数错误，也容易把“program replication”写成“global transcriptome replication”。
+
+Source Data 中：
+
+* childhood = **11 HC + 32 SLE**
+* effect = **1.04175695**
+* CI = **0.68116559–1.40234831**
+* q = **2.9755×10⁻⁶**
+* combined = **0.99597390**
+* adult = **0.96841602**
+* adult CI 跨 0
+* min20 = **0.96492985**
+* min100 = **0.93870578**
+
+全部与正文一致。
+
+43 次 childhood donor deletion 的范围也可以直接追到 Source Data：
+
+> `0.9865758–1.0937454`
+
+八个 source-label omission 则是：
+
+> `1.0191059–1.0512864`
+
+和正文中的 `0.987–1.094`、`1.019–1.051` 精确对应。
+
+因此 Figure 4c 现在最重要的逻辑仍然应该保留：
+
+> **10 个共同 tested IFN genes 同方向 ≠ 4,410 genes 的全转录组一致性。**
+
+正文把 genome-wide Spearman `ρ=0.026` 明确解释成一个边界，而不是削弱 program-level replication，这个处理是正确的。当前稿件没有必要进一步加图或者重跑外部验证。
+
+---
+
+## 三、S9：此前最危险的 identity uncertainty 现在数值闭环
+
+Supplementary Figure S9 的 end-to-end Source Data 是完整的。
+
+它明确记录：
+
+* median mapped ARI = `0.9629724`
+* minimum mapped ARI = `0.9296968`
+* median agreement = `0.99936835`
+* minimum agreement = `0.99876995`
+* minimum state-median Jaccard = `0.93032334 < 0.95`
+* 第 1 次 replicate B_ASC Jaccard = `0.87175043`
+
+因此正文的：
+
+> median/min ARI 0.963/0.930
+> B_ASC median Jaccard 0.930
+> minimum 0.872
+
+都是正确 rounding。
+
+我还重新计算式地检查了正文里的：
+
+> “median of 76 of 120,320 sampled cells exchanged broad-state assignment per replicate”
+
+S9 每个 replicate 分别有 B_CONV→B_ASC 和 B_ASC→B_CONV 两类 exchange，20 个 replicate 的双向总数中位数确实是 **76**。
+
+下游 propagation 也没有隐藏不一致：
+
+> primary IFN range ≈ `0.83610–0.84461`
+> nonoverlap ≈ `1.05932–1.08666`
+
+所以正文的：
+
+> `0.836–0.845` 和 `1.059–1.087`
+
+完全成立。
+
+**S9 不应再重画。**
+
+---
+
+## 四、S10：corrected mapping boundary 也完全锁住
+
+S10 Source Data 中 elastic-net diagnostic threshold 0.95 对应：
+
+* coverage `0.94195804196`
+* B_CONV precision `0.99644950871`
+* B_ASC precision `0.88520971302`
+* eligible = `False`
+
+centroid 则是：
+
+* coverage `0.95`
+* B_CONV precision `0.9923743779`
+* B_ASC precision `1.0`
+* eligible = `True`
+
+与 Supplementary Table S9 和正文完全一致。
+
+所以现在这段逻辑非常牢：
+
+> required elastic-net calibration fails → outcome access stops → centroid cannot replace required mapper post hoc → no corrected disease effect exists.
+
+不应该为了得到一个“漂亮的 corrected external effect”而继续重跑 mapper。
+
+**S10 保留。**
+
+---
+
+## 五、Figure 5 / S7 / S8：regulator 层没有发现新的统计漏洞
+
+Figure 5 Source Data 中六个核心 STAT1/STAT2 ULM 都是正值，而且全局 24-test q 均 <0.05。M5911 三个 NES 和 GSE23307 两位 donor 的所有 24 个 gene-level effect 也与当前图、正文完全一致。
+
+S7 中 discovery STAT2 的 CAMERA exception 也精确成立：
+
+> inter-gene correlation = `0.1225027`
+> CAMERA q = `0.1354722`
+> FRY q = `4.90918×10⁻⁵`
+
+而不是正文为了增强结论而挑方法。
+
+S8 的 M5911 depletion 进一步确认：
+
+> discovery STAT2 只剩 8/14 targets
+> ULM = `0.3906577`
+> CI `−0.745046–1.526362`
+> q `0.500111`
+> CAMERA q `0.622868`
+> FRY q `0.099466`
+
+因此当前 manuscript 使用的：
+
+> “partly coupled to the broader interferon-response transcriptome”
+
+是非常合适的 ceiling，而不是“STAT1/STAT2 independent regulatory program”。
+
+**Figure 5a-e、S7、S8 全部保留。**
+
+---
+
+# 六、真正发现的第一个问题：Supplementary Table S7 的 biological unit 仍不够精确
+
+当前 Supplementary Table S7 写的是：
+
+> `Gene-level expression | Donor/sample pseudobulk`
+> `Four frozen programs | Donor/sample pseudobulk`
+
+
+
+单独看并不算完全错误，但经过这次 traceability lock，它已经不够严格。
+
+因为 Methods 明确规定：
+
+> GSE174188 raw counts are summed **by sample-cohort stratum within B_CONV**，
+
+而 GSE135779 的 biological unit 是 **donor**。当前主文对 GSE174188 experimental unit 的定义已经非常明确。
+
+所以建议 Table S7 精确改成：
+
+> **Sample-cohort pseudobulk (GSE174188); donor pseudobulk (GSE135779)**
+
+分别用于：
+
+* Gene-level expression
+* Four frozen programs
+
+这个修复很重要，因为我们刚花一轮把 Figure 1a 的：
+
+> `donor pseudobulk`
+
+纠正成：
+
+> `sample-cohort pseudobulk`
+
+如果 Table S7 仍留着 `Donor/sample pseudobulk`，就等于在 Supplementary 重新引入了一个模糊层。
+
+### 裁决
+
+**必须改。**
+
+但：
+
+> **不需要重跑任何分析，不需要重画 Figure 1。**
+
+应该修改 canonical Supplementary Markdown source → 重新构建 DOCX/PDF。
+
+---
+
+# 七、第二个问题更隐蔽：Supplementary Table S6 的 Zenodo “exact match” 描述现在已经不再严格成立
+
+当前 Table S6 仍写：
+
+> `Zenodo ...; matches the frozen manuscript, figures and statistical outputs`
+
+
+
+但本轮 scientific-presentation freeze 的 repository action record 已明确记录：
+
+* Figure 1 raster changed；
+* Figure 5 raster changed；
+* manuscript presentation changed；
+* 15/15 Source Data 不变；
+* scientific estimates 不变；
+* **GitHub Release 和 Zenodo 没有 republish。**
+
+因此这句话如果被理解为“Zenodo 当前版本与**现在这版** manuscript + figures 完全一致”，就已经不是字面事实。
+
+这不是生物学错误，但属于你现在正在做的 **scientific object traceability** 的典型错误。
+
+正确做法不是现在更新 Zenodo——你明确要求不推进 Release/Zenodo，我同意。
+
+应该只把 Table S6 改得更准确：
+
+> **Zenodo …; version-specific archive of released analysis code, Source Data and statistical outputs**
+
+这样保留 Zenodo 的真实角色，同时不再声称它与目前刚重绘的 Figure 1/5 和新版 manuscript 呈现完全同一对象。
+
+### 裁决
+
+**必须修 reader-facing provenance wording。**
+
+但：
+
+> **不更新 Zenodo、不重打 release、不碰投稿 ZIP。**
+
+---
+
+# 八、现阶段所有子图的最终裁决
+
+经过这次数字反追踪以后，我没有找到任何理由重新打开主图。
+
+| 图           | 当前裁决                        | 本轮是否重画 |
+| ----------- | --------------------------- | -----: |
+| Figure 1a   | KEEP — 已纠正 inferential unit |      否 |
+| Figure 1b-d | KEEP                        |      否 |
+| Figure 2a-d | KEEP                        |      否 |
+| Figure 3a-d | KEEP                        |      否 |
+| Figure 4a-d | KEEP                        |      否 |
+| Figure 5a   | KEEP — evidence role 已正确分层  |      否 |
+| Figure 5b-e | KEEP                        |      否 |
+| S1-S6       | KEEP                        |      否 |
+| S7          | KEEP                        |      否 |
+| S8          | KEEP                        |      否 |
+| S9          | KEEP                        |      否 |
+| S10         | KEEP                        |      否 |
+
+也就是说：
+
+> **21/21 main panels：KEEP**
+> **10/10 Supplementary figures：KEEP**
+> **0 panel replacement**
+> **0 new analysis**
+> **0 statistical rerun justified**
+
+这和上一轮的 `SCIENTIFIC_PRESENTATION_FROZEN` 判断是一致的，而不是机械延续——本轮是重新从 Source Data 数值层验证后得出的结论。
+
+当前 15 份 Source Data 也确实被 integration status 记录为 byte-identical。
+
+---
+
+# 九、本轮已经生成可直接用于下一次 canonical integration 的材料
+
+### 1. 核心 claim-to-source 数值追溯矩阵
+
+共 **24 个 traceability objects**，包括：
+
+* claim owner
+* manuscript anchor
+* Source Data 路径
+* panel/series/category/analysis_id 定位方式
+* biological unit
+* reported value
+* source value
+* exact/rounded/derived status
+* 是否需要修复
+
+[下载 CORE_CLAIM_NUMERICAL_TRACEABILITY_MATRIX](sandbox:/mnt/data/traceability_lock_2026-08-31/CORE_CLAIM_NUMERICAL_TRACEABILITY_MATRIX_2026-08-31.csv)
+
+### 2. 精确 source-level patch
+
+只包含：
+
+* Table S6 一处 provenance wording；
+* Table S7 两处 biological-unit wording。
+
+**没有任何数值修改。**
+
+[下载 TRACEABILITY_LOCK_SOURCE_PATCH](sandbox:/mnt/data/traceability_lock_2026-08-31/TRACEABILITY_LOCK_SOURCE_PATCH_2026-08-31.diff)
+
+### 3. 本轮详细行动报告
+
+[下载 FINAL_SCIENTIFIC_OBJECT_AND_NUMERICAL_TRACEABILITY_LOCK 审计报告](sandbox:/mnt/data/traceability_lock_2026-08-31/FINAL_SCIENTIFIC_OBJECT_AND_NUMERICAL_TRACEABILITY_LOCK_AUDIT_2026-08-31.md)
+
+### 4. 完整本轮工作包
+
+[下载完整 Traceability Lock 包](sandbox:/mnt/data/FINAL_SCIENTIFIC_OBJECT_AND_NUMERICAL_TRACEABILITY_LOCK_2026-08-31.zip)
+
+---
+
+# 下一阶段目标
+
+现在不应该重新打开 Figures 1–5，也不应该去寻找新的 biological story。
+
+下一阶段应当极窄地进入：
+
+> **`TRACEABILITY_TEXT_FIX_REBUILD_AND_FINAL_LOCK`**
+
+工作只剩：
+
+1. 把 Table S6/S7 的这 3 行 source-level patch 集成进 canonical Supplementary source；
+2. **从源文件重新生成 Supplementary DOCX/PDF**，不手改现有输出；
+3. 再核一次 15/15 Source Data SHA，必须保持完全不变；
+4. 运行现有 regression suite；
+5. WPS + LibreOffice 双渲染复核 Table S6/S7 的换行、列宽和分页；
+6. 再生成一次 zero-defect traceability matrix。
+
+如果这一步通过，我认为就可以正式给科学内容层下最终状态：
+
+> **`FINAL_SCIENTIFIC_OBJECT_AND_NUMERICAL_TRACEABILITY_LOCKED`**
+
+并且此后除非出现一个**新的、可定位的事实/数值错误**，否则应停止继续精修主文和图件，避免因为追求“再漂亮一点”而破坏现在已经非常稳定的证据层级。
