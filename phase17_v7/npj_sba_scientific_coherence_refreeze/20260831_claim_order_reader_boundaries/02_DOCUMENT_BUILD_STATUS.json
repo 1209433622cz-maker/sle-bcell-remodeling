@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-08-31T12:26:49+08:00",
+  "status": "PASS_SCIENTIFIC_COHERENCE_DOCX_BUILT_DUAL_RENDER_REQUIRED",
+  "build_results": [
+    {
+      "source": "phase17_v7/npj_sba_scientific_coherence_refreeze/20260831_claim_order_reader_boundaries/sources/Manuscript_scientific_coherence_refreeze_candidate.md",
+      "output": "phase17_v7/npj_sba_scientific_coherence_refreeze/20260831_claim_order_reader_boundaries/documents/Manuscript_scientific_coherence_refreeze_candidate.docx",
+      "paragraphs": 150,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 61003
+    },
+    {
+      "source": "phase17_v7/npj_sba_scientific_coherence_refreeze/20260831_claim_order_reader_boundaries/sources/Supplementary_Information_scientific_coherence_refreeze_candidate.md",
+      "output": "phase17_v7/npj_sba_scientific_coherence_refreeze/20260831_claim_order_reader_boundaries/documents/Supplementary_Information_scientific_coherence_refreeze_candidate.docx",
+      "paragraphs": 69,
+      "tables": 10,
+      "inline_shapes": 10,
+      "placeholders": 0,
+      "bytes": 4745857
+    }
+  ],
+  "object_inventory": {
+    "manuscript_inline_shapes": 0,
+    "supplement_inline_shapes": 10,
+    "supplement_expected_figures": 10,
+    "supplement_object_count_matches": true
+  },
+  "files": {
+    "Manuscript_scientific_coherence_refreeze_candidate.docx": {
+      "bytes": 61069,
+      "sha256": "749F6FBD3761B1AEBEF6BBDA8751803469AF0808EF1C2407492BEA5E3D8D96A7"
+    },
+    "Supplementary_Information_scientific_coherence_refreeze_candidate.docx": {
+      "bytes": 4745893,
+      "sha256": "C653549C959FB8A72C3EE8C1436B7B356236E52151FC9DF2D23ABBA1E98AB4EB"
+    }
+  },
+  "checks": {
+    "manuscript": {
+      "title_exact": true,
+      "article_type_present": true,
+      "abstract_145_words": true,
+      "comparative_landing": true,
+      "composition_null_language_absent": true,
+      "figure1_retained_analysis_scope": true,
+      "first_evidence_owners_present": true,
+      "source_label_independent_heading": true,
+      "causal_boundary": true,
+      "current_doi_present": true,
+      "old_doi_absent": true,
+      "no_embedded_figures": true
+    },
+    "supplement": {
+      "ten_figures_embedded": true,
+      "reader_facing_s3_heading": true,
+      "criterion_not_hold": true,
+      "composition_not_null": true,
+      "ulm_ownership": true,
+      "s9_legend_synchronized": true,
+      "s10_source_label_independent": true,
+      "internal_c9_pass_absent": true,
+      "current_doi_present": true,
+      "old_doi_absent": true
+    }
+  },
+  "scientific_estimates_changed": false,
+  "source_data_changed": false,
+  "exact_submission_package_modified": false
+}

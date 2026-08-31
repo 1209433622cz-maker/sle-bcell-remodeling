@@ -25,6 +25,7 @@ def build_s10(
     source_dir: Path,
     *,
     semantic_harmonization: bool = False,
+    reader_facing_criterion_labels: bool = False,
 ) -> None:
     decision = json.loads((c9 / "15_GATE_C9A_PREFREEZE_DECISION.json").read_text())
     if decision["outcome_unlock_authorized"]:
@@ -87,7 +88,13 @@ def build_s10(
     axes[0, 1].set_ylim(.80, 1.02)
     axes[0, 1].set_ylabel("Reference precision")
     axes[0, 1].set_title(
-        "Primary mapper misses B_ASC gate" if semantic_harmonization else "Frozen precision gate",
+        (
+            "Elastic-net B_ASC precision below criterion"
+            if reader_facing_criterion_labels
+            else "Primary mapper misses B_ASC gate"
+        )
+        if semantic_harmonization
+        else "Frozen precision gate",
         loc="left",
     )
     if semantic_harmonization:
@@ -122,7 +129,13 @@ def build_s10(
     axes[1, 0].set_ylim(0.77 if semantic_harmonization else 0,1.02)
     axes[1, 0].set_ylabel("Reference cells retained")
     axes[1, 0].set_title(
-        "Coverage passes for both mappers" if semantic_harmonization else "Frozen coverage gate",
+        (
+            "Coverage criterion met by both mappers"
+            if reader_facing_criterion_labels
+            else "Coverage passes for both mappers"
+        )
+        if semantic_harmonization
+        else "Frozen coverage gate",
         loc="left",
     )
     if semantic_harmonization:

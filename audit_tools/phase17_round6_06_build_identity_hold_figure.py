@@ -33,6 +33,11 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--integration-dir", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path)
+    parser.add_argument(
+        "--reader-facing-criteria",
+        action="store_true",
+        help="Replace internal PASS/HOLD vocabulary with prespecified-criterion language.",
+    )
     return parser.parse_args()
 
 
@@ -151,10 +156,15 @@ def main() -> None:
         color = COLORS["teal"] if row["pass"] else COLORS["orange"]
         axis.plot(row["observed"], y_value, "o", color=color, ms=4.5, zorder=3)
         npj_style = os.environ.get("NPJ_SBA_STYLE") == "1"
+        status_label = (
+            ("met" if row["pass"] else "not met")
+            if args.reader_facing_criteria
+            else ("PASS" if row["pass"] else "HOLD")
+        )
         axis.text(
             0.972 if npj_style else 1.006,
             y_value,
-            "PASS" if row["pass"] else "HOLD",
+            status_label,
             fontsize=5.5,
             color=color,
             va="center",
@@ -164,8 +174,18 @@ def main() -> None:
     display_metrics = metric_rows["metric"].replace({"Minimum mapped ARI": "Min. mapped ARI"})
     axis.set_yticks(y, display_metrics)
     axis.set_xlim(0.885, 1.006)
-    axis.set_xlabel("Observed value (dot); frozen criterion (tick)")
-    axis.set_title("Four global criteria pass; state overlap holds", loc="left", pad=4)
+    axis.set_xlabel(
+        "Observed value (dot); prespecified criterion (tick)"
+        if args.reader_facing_criteria
+        else "Observed value (dot); frozen criterion (tick)"
+    )
+    axis.set_title(
+        "Four global criteria met; state overlap not met"
+        if args.reader_facing_criteria
+        else "Four global criteria pass; state overlap holds",
+        loc="left",
+        pad=4,
+    )
     style_axis(axis)
     panel_label(axis, "a", x=-0.22)
 
@@ -184,14 +204,27 @@ def main() -> None:
             label=label,
         )
     axis.axhline(0.95, color=COLORS["gray"], ls="--", lw=0.8)
-    axis.text(20.4, 0.9515, "frozen criterion", ha="right", va="bottom", fontsize=5.3)
+    axis.text(
+        20.4,
+        0.9515,
+        "prespecified criterion" if args.reader_facing_criteria else "frozen criterion",
+        ha="right",
+        va="bottom",
+        fontsize=5.3,
+    )
     axis.set_xlim(0.5, 20.5)
     axis.set_ylim(0.855, 1.006)
     axis.set_xticks([1, 5, 10, 15, 20])
     axis.set_xlabel("End-to-end resampling replicate")
     axis.set_ylabel("State Jaccard")
     axis.legend(frameon=False, fontsize=5.8, loc="lower right")
-    axis.set_title("The formal HOLD is B_ASC-specific", loc="left", pad=4)
+    axis.set_title(
+        "Unmet overlap criterion is B_ASC-specific"
+        if args.reader_facing_criteria
+        else "The formal HOLD is B_ASC-specific",
+        loc="left",
+        pad=4,
+    )
     style_axis(axis)
     panel_label(axis, "b", x=-0.20)
 
@@ -254,7 +287,13 @@ def main() -> None:
     axis.set_ylim(0.42, 1.48)
     axis.set_xlabel("Boundary-exchange replicate")
     axis.set_ylabel("Primary B_ASC odds ratio (95% CI)")
-    axis.set_title("Primary composition remains null", loc="left", pad=4)
+    axis.set_title(
+        "Composition inference unchanged"
+        if args.reader_facing_criteria
+        else "Primary composition remains null",
+        loc="left",
+        pad=4,
+    )
     style_axis(axis)
     panel_label(axis, "d", x=-0.28)
 
@@ -349,6 +388,7 @@ def main() -> None:
         "width_mm": round(width_mm, 3),
         "height_mm": round(height_mm, 3),
         "source_rows": len(source_data),
+        "reader_facing_criteria": args.reader_facing_criteria,
         "checks": checks,
     }
     (output / "13_SUPPLEMENTARY_FIGURE_S9_STATUS.json").write_text(

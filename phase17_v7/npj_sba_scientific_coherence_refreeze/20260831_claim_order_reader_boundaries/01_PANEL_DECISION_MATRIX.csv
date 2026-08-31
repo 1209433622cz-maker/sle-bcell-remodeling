@@ -1,0 +1,8 @@
+﻿set,panel,decision,rationale
+Main,Figure 1a,KEEP,Retained-scope workflow is scientifically aligned; legend terminology is refined.
+Main,Figures 1b-d and 2-5,KEEP,Distinct evidence ownership and no material visual defect.
+Supplement,S1-S8,KEEP,"Each panel retains a nonredundant QC, robustness or sensitivity role."
+Supplement,"S9a,b,d",MODIFY_SELECTED,Replace internal PASS/HOLD/null labels with prespecified-criterion and inference language.
+Supplement,"S9c,e",KEEP,Boundary exchange and IFN propagation displays remain interpretable.
+Supplement,"S10b,c",MODIFY_SELECTED,Replace gate/pass titles with explicit precision and coverage criteria.
+Supplement,"S10a,d",KEEP,Normalization and diagnostic-fold roles remain clear.
