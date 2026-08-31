@@ -247,6 +247,7 @@ def build_figure1(
     explicit_threshold_semantics: bool = False,
     nature_evidence_hierarchy: bool = False,
     panel_a_variant: str | None = None,
+    retained_scaffold_language: bool = False,
 ) -> None:
     c2b3 = read_json(
         root
@@ -409,10 +410,15 @@ def build_figure1(
                 "linewidth": 0.8,
             },
         }
+        scope_label = (
+            "Retained analysis\nscaffold\nB_CONV / B_ASC"
+            if retained_scaffold_language
+            else "Stable scope\nB_CONV / B_ASC"
+        )
         top_nodes = (
             (0.13, "B-lineage input\n150,402 cells", COLORS["internal"]),
             (0.50, "Disease-blind\nresampling (b-d)", COLORS["secondary"]),
-            (0.87, "Stable scope\nB_CONV / B_ASC", COLORS["teal"]),
+            (0.87, scope_label, COLORS["teal"]),
         )
         for x_value, label, color in top_nodes:
             style = dict(node_style)
@@ -451,20 +457,30 @@ def build_figure1(
             fontweight="bold",
             linespacing=1.08,
         )
+        retained_output = (
+            "Retained scope: broad-compartment analyses"
+            if retained_scaffold_language
+            else "Authorized output: broad-compartment analyses"
+        )
         axis.text(
             0.50,
             0.20,
-            "Authorized output: broad-compartment analyses",
+            retained_output,
             transform=axis.transAxes,
             ha="center",
             va="center",
             fontweight="bold",
             color=COLORS["teal"],
         )
+        boundary_label = (
+            "Boundary: hard fine-state assignments unsupported"
+            if retained_scaffold_language
+            else "Boundary: no hard fine-state assignments"
+        )
         axis.text(
             0.50,
             0.07,
-            "Boundary: no hard fine-state assignments",
+            boundary_label,
             transform=axis.transAxes,
             ha="center",
             va="center",
@@ -1291,6 +1307,7 @@ def build_figure5(
     three_evidence_branches: bool = False,
     panel_a_variant: str | None = None,
     panel_e_variant: str | None = None,
+    evidence_ownership_language: bool = False,
 ) -> None:
     c6_dir = root / "phase17_v7/gateC6B/20260815_regulatory_evidence"
     regulators = read_csv(c6_dir / "01_CONFIRMATORY_REGULATOR_RESULTS.csv")
@@ -1477,8 +1494,9 @@ def build_figure5(
         x_positions = (0.02, 0.27, 0.55, 0.78)
         for x_value, header in zip(x_positions, ("Evidence", "Coverage", "Observed result", "Role"), strict=True):
             design_axis.text(x_value, 0.88, header, transform=design_axis.transAxes, fontweight="bold", va="center")
+        regulator_label = "ULM STAT1/STAT2" if evidence_ownership_language else "STAT1/STAT2"
         matrix_rows = (
-            (0.67, "STAT1/STAT2", "3 contrasts", "6/6 positive; q<0.05", "global 24-test family", COLORS["internal"]),
+            (0.67, regulator_label, "3 contrasts", "6/6 positive; q<0.05", "global 24-test family", COLORS["internal"]),
             (0.43, "M5911", "3 contrasts", "3/3 NES >3.0", "orthogonal concordance", COLORS["external"]),
             (0.19, "IFN-beta", "2 donors", "12/12 in each donor", "descriptive context", COLORS["purple"]),
         )

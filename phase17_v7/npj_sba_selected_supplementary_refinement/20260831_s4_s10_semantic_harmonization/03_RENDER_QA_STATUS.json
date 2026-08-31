@@ -1,0 +1,120 @@
+{
+  "created_at": "2026-08-31T11:25:04+08:00",
+  "status": "PASS_SCIENTIFIC_HARMONIZATION_DOCUMENT_RENDER_AND_VISUAL_QA",
+  "documents": {
+    "Manuscript_scientific_harmonization_candidate.pdf": {
+      "bytes": 245280,
+      "sha256": "7F17F2C8AB393DF6C86488C0B175F1BEE5EDB1034A34DC4AB0D16E3170D7C50D",
+      "pages": 32
+    },
+    "Supplementary_Information_scientific_harmonization_candidate.pdf": {
+      "bytes": 2713086,
+      "sha256": "D7DBB0151AE79F9A47027996FE94E93057612E7264703C376336857CDF1686CB",
+      "pages": 16
+    }
+  },
+  "checks": {
+    "manuscript": {
+      "page_count_32": true,
+      "no_blank_pages": true,
+      "title_on_page_1": true,
+      "data_availability_on_page_24": true,
+      "references_start_on_page_25": true,
+      "figure_legends_start_on_page_29": true,
+      "figure5_boundary_on_page_32": true,
+      "anti_pseudoreplication_present": true,
+      "figure5_ulm_ownership_present": true,
+      "isolated_x_absent": true,
+      "a11y_zero": true
+    },
+    "supplement": {
+      "page_count_16": true,
+      "no_blank_pages": true,
+      "table_s7_on_page_4": true,
+      "table_s9_on_page_5": true,
+      "s1_on_page_7": true,
+      "s4_on_page_10": true,
+      "s10_on_page_16": true,
+      "log_scale_semantics_present": true,
+      "mapper_semantics_present": true,
+      "balanced_accuracy_diagnostic_only": true,
+      "a11y_zero": true
+    },
+    "global": {
+      "package_sha_unchanged": true,
+      "four_manuscript_contact_sheets": true,
+      "three_supplement_contact_sheets": true
+    }
+  },
+  "visual_review": {
+    "all_48_pages_reviewed": true,
+    "manuscript_pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "supplement_pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "clipping_overlap_or_missing_glyphs": false,
+    "supplement_whitespace_repair": "Removed the forced pre-Table-S7 page break; the supplement contracted from 17 to 16 pages.",
+    "render_intermediates_removed_after_finalization": true,
+    "contact_sheets": [
+      "phase17_v7/npj_sba_selected_supplementary_refinement/20260831_s4_s10_semantic_harmonization/qa/final_contact_sheets/contact_sheet_manuscript_final_01-08.png",
+      "phase17_v7/npj_sba_selected_supplementary_refinement/20260831_s4_s10_semantic_harmonization/qa/final_contact_sheets/contact_sheet_manuscript_final_09-16.png",
+      "phase17_v7/npj_sba_selected_supplementary_refinement/20260831_s4_s10_semantic_harmonization/qa/final_contact_sheets/contact_sheet_manuscript_final_17-24.png",
+      "phase17_v7/npj_sba_selected_supplementary_refinement/20260831_s4_s10_semantic_harmonization/qa/final_contact_sheets/contact_sheet_manuscript_final_25-32.png",
+      "phase17_v7/npj_sba_selected_supplementary_refinement/20260831_s4_s10_semantic_harmonization/qa/final_contact_sheets/contact_sheet_supplement_final_01-06.png",
+      "phase17_v7/npj_sba_selected_supplementary_refinement/20260831_s4_s10_semantic_harmonization/qa/final_contact_sheets/contact_sheet_supplement_final_07-12.png",
+      "phase17_v7/npj_sba_selected_supplementary_refinement/20260831_s4_s10_semantic_harmonization/qa/final_contact_sheets/contact_sheet_supplement_final_13-16.png"
+    ]
+  },
+  "package_sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1",
+  "scientific_estimates_changed": false,
+  "source_data_changed": false,
+  "exact_submission_package_modified": false
+}

@@ -368,7 +368,13 @@ def build_s3(root: Path, figure_dir: Path, source_dir: Path) -> None:
     save_figure(figure, figure_dir, "Supplementary_Figure_S3_identity_adjudication")
 
 
-def build_s4(root: Path, figure_dir: Path, source_dir: Path) -> None:
+def build_s4(
+    root: Path,
+    figure_dir: Path,
+    source_dir: Path,
+    *,
+    log_ratio_two_part: bool = False,
+) -> None:
     gate = root / "phase17_v7/gateC3A/20260815_frozen_abundance"
     base = read_csv(gate / "02_base_and_nonoverlap_contrasts.csv")
     sensitivity = read_csv(gate / "04_mandatory_sensitivity_contrasts.csv")
@@ -426,7 +432,20 @@ def build_s4(root: Path, figure_dir: Path, source_dir: Path) -> None:
             axis.errorbar(row["effect_ratio"], y[index], xerr=[[row["effect_ratio"] - row["ci_low"]], [row["ci_high"] - row["effect_ratio"]]], fmt="o", color=[COLORS["blue"], COLORS["teal"], COLORS["gold"]][index], ms=3.2, lw=0.8, capsize=1.5)
         axis.axvline(1, color=COLORS["grey"], lw=0.6, ls="--")
         axis.set_yticks(y, subset["label"])
-        axis.set_xlabel("Effect ratio (95% CI)")
+        if log_ratio_two_part:
+            axis.set_xscale("log")
+            if component == "ASC presence":
+                ticks = [0.05, 0.2, 1.0, 5.0, 20.0, 60.0]
+                axis.set_xlim(0.04, 70.0)
+                axis.set_xticks(ticks, ["0.05", "0.2", "1", "5", "20", "60"])
+            else:
+                ticks = [0.5, 1.0, 2.0, 5.0]
+                axis.set_xlim(0.5, 6.5)
+                axis.set_xticks(ticks, ["0.5", "1", "2", "5"])
+            axis.minorticks_off()
+            axis.set_xlabel("Effect ratio (95% CI; log scale)")
+        else:
+            axis.set_xlabel("Effect ratio (95% CI)")
         axis.set_title(title, loc="left")
         style_axis(axis); panel_label(axis, panel)
 

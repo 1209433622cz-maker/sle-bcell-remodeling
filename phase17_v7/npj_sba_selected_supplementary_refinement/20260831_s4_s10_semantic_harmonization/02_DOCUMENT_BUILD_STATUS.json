@@ -1,0 +1,67 @@
+{
+  "created_at": "2026-08-31T11:20:09+08:00",
+  "status": "PASS_SCIENTIFIC_HARMONIZATION_DOCX_BUILT_RENDER_QA_REQUIRED",
+  "build_results": [
+    {
+      "source": "phase17_v7/npj_sba_selected_supplementary_refinement/20260831_s4_s10_semantic_harmonization/sources/Manuscript_scientific_harmonization_candidate.md",
+      "output": "phase17_v7/npj_sba_selected_supplementary_refinement/20260831_s4_s10_semantic_harmonization/documents/Manuscript_scientific_harmonization_candidate.docx",
+      "paragraphs": 150,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 61010
+    },
+    {
+      "source": "phase17_v7/npj_sba_selected_supplementary_refinement/20260831_s4_s10_semantic_harmonization/sources/Supplementary_Information_scientific_harmonization_candidate.md",
+      "output": "phase17_v7/npj_sba_selected_supplementary_refinement/20260831_s4_s10_semantic_harmonization/documents/Supplementary_Information_scientific_harmonization_candidate.docx",
+      "paragraphs": 69,
+      "tables": 10,
+      "inline_shapes": 10,
+      "placeholders": 0,
+      "bytes": 4753941
+    }
+  ],
+  "files": {
+    "Manuscript_scientific_harmonization_candidate.docx": {
+      "bytes": 61050,
+      "sha256": "44096CDBD892248AF436F12C55B19728A54590C3FBC159105E8E2E845B10B856"
+    },
+    "Supplementary_Information_scientific_harmonization_candidate.docx": {
+      "bytes": 4754028,
+      "sha256": "E80E376EBFC38930AA1B24DDF150C8DB00BFF77FFC2DA5CA679155B50EF37381"
+    }
+  },
+  "checks": {
+    "manuscript": {
+      "title_exact": true,
+      "article_type_present": true,
+      "retained_scaffold_language": true,
+      "fine_state_boundary": true,
+      "source_matrix_language": true,
+      "statistical_implementation_language": true,
+      "anti_pseudoreplication_boundary": true,
+      "camera_capitalized": true,
+      "british_analogue": true,
+      "figure1_legend_scope": true,
+      "figure5_ulm_ownership": true,
+      "figure5_positive_arm": true,
+      "causal_boundary": true,
+      "current_doi_present": true,
+      "old_doi_absent": true,
+      "no_embedded_figures": true
+    },
+    "supplement": {
+      "ten_figures_embedded": true,
+      "s4_log_scale_legend": true,
+      "s4_null_value_defined": true,
+      "s10_mapper_colour": true,
+      "s10_state_shape": true,
+      "s10_balanced_accuracy_diagnostic": true,
+      "current_doi_present": true,
+      "old_doi_absent": true
+    }
+  },
+  "scientific_estimates_changed": false,
+  "source_data_changed": false,
+  "exact_submission_package_modified": false
+}

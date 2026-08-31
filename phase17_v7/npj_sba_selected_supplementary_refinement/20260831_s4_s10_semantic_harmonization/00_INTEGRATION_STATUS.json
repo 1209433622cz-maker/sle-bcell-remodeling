@@ -1,0 +1,446 @@
+{
+  "created_at": "2026-08-31T11:13:24+08:00",
+  "status": "PASS_SELECTED_SUPPLEMENTARY_REPLOT_AND_SEMANTIC_HARMONIZATION_BUILT",
+  "selected_figure_changes": [
+    "Figure1a language",
+    "Figure5a ULM ownership",
+    "S4c-d log ratio",
+    "S10a-d semantic redesign"
+  ],
+  "frozen_figures": [
+    "Figure1b-d",
+    "Figure2-4",
+    "Figure5b-e",
+    "S1-S3",
+    "S4a-b",
+    "S5-S9"
+  ],
+  "main_builder_assertions": 52,
+  "main_builder_assertions_pass": true,
+  "supplementary_builder_assertions": 29,
+  "supplementary_builder_assertions_pass": true,
+  "source_data": {
+    "Figure1_source_data.csv": {
+      "sha256": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805",
+      "byte_identical": true
+    },
+    "Figure2_source_data.csv": {
+      "sha256": "DAA6DDBAB469E0D510AB578BEE0A21AA73FA2D71184739E3F361C3EA6EC8DFE2",
+      "byte_identical": true
+    },
+    "Figure3_source_data.csv": {
+      "sha256": "DEFABF8C16D879362E3AD197C857A9197CD6D0691B20FDFA4AC97BEFF3710BC8",
+      "byte_identical": true
+    },
+    "Figure4_source_data.csv": {
+      "sha256": "F3604F40DAEDB0DD01617BB223A8762323C8AAC7F16185292367B9A13FEC4755",
+      "byte_identical": true
+    },
+    "Figure5_source_data.csv": {
+      "sha256": "A482D9D4F001B076B496C63857A8B3ADB65816CD0AA18B60C8B17B2DDB211B5B",
+      "byte_identical": true
+    },
+    "Supplementary_Figure_S10_source_data.csv": {
+      "sha256": "FF4309EBAF761A0563F018AE1BE07212EF2CB2241E79DF12C374BCB1426A60FF",
+      "byte_identical": true
+    },
+    "Supplementary_Figure_S1_source_data.csv": {
+      "sha256": "A140D1D900A3EA869551097146AFFD3872BC7AC78E9E9712E4BDAC834A57CB68",
+      "byte_identical": true
+    },
+    "Supplementary_Figure_S2_source_data.csv": {
+      "sha256": "E46FE5B33B11D45319DD80C3D669AEEB83F2517095CD0C1FD5EEFA1F57C58731",
+      "byte_identical": true
+    },
+    "Supplementary_Figure_S3_source_data.csv": {
+      "sha256": "133E973C2753F4946A24739C049308152299A915A3FC6754B30AD0521F979C96",
+      "byte_identical": true
+    },
+    "Supplementary_Figure_S4_source_data.csv": {
+      "sha256": "7BA2660E5A50ADCF28407BCC92A91C791576DD69A9A1ABA9618DEB045C3A4E19",
+      "byte_identical": true
+    },
+    "Supplementary_Figure_S5_source_data.csv": {
+      "sha256": "F6682D636C1FF3A1784E0B9E8AEFF5C5D1BB075176312E87FCB938F65C4DA897",
+      "byte_identical": true
+    },
+    "Supplementary_Figure_S6_source_data.csv": {
+      "sha256": "A1D1DCBF9D20BA01D0022D4DA0F73A618776D34A687E764F18AB83439204DBF6",
+      "byte_identical": true
+    },
+    "Supplementary_Figure_S7_source_data.csv": {
+      "sha256": "D92140A17B96E6B77F5EEBF322A5D77A5E6F2132EDD54CC9C3E73521E5352CA3",
+      "byte_identical": true
+    },
+    "Supplementary_Figure_S8_source_data.csv": {
+      "sha256": "26A3F90E3165D8928874F278384B2587CB549DD4FFDE93440AAC4CEEAE06A9A2",
+      "byte_identical": true
+    },
+    "Supplementary_Figure_S9_source_data.csv": {
+      "sha256": "46EE840F86CA33AA4F5FCE0A37EEFCB4DB23831533BBFA20400BAE50744F5D42",
+      "byte_identical": true
+    }
+  },
+  "figures": {
+    "Figure1_disease_blind_identity_scope.pdf": {
+      "sha256": "1F381EADE5DACC9FF8B64FF7A5891F1170C3321D150E6ED8E4B4EF8E19B0AC8D",
+      "width_mm": 170.0,
+      "height_mm": 130.677,
+      "postflight": {
+        "checks": {
+          "single_page": true,
+          "arial_or_helvetica_compatible": true,
+          "all_visible_text_8pt": true,
+          "minimum_positive_line_width_1pt": true,
+          "all_text_within_page": true
+        },
+        "font_names": [
+          "Arial-BoldMT",
+          "ArialMT"
+        ],
+        "minimum_visible_text_pt": 8.0,
+        "maximum_visible_text_pt": 8.0,
+        "minimum_positive_line_width_pt": 1.0,
+        "visible_text_spans": 73,
+        "vector_drawings_with_positive_width": 125
+      }
+    },
+    "Figure2_sample_level_composition.pdf": {
+      "sha256": "5EB675232ADFB389F675FC8B62F16BC47F289462EDE83F896759F47A0AACAC8D",
+      "width_mm": 170.0,
+      "height_mm": 134.274,
+      "postflight": {
+        "checks": {
+          "single_page": true,
+          "arial_or_helvetica_compatible": true,
+          "all_visible_text_8pt": true,
+          "minimum_positive_line_width_1pt": true,
+          "all_text_within_page": true
+        },
+        "font_names": [
+          "Arial-BoldMT",
+          "ArialMT"
+        ],
+        "minimum_visible_text_pt": 8.0,
+        "maximum_visible_text_pt": 8.0,
+        "minimum_positive_line_width_pt": 1.0,
+        "visible_text_spans": 58,
+        "vector_drawings_with_positive_width": 82
+      }
+    },
+    "Figure3_gse174188_bconv_transcription.pdf": {
+      "sha256": "80F11A9E84417FE2D213B3D4EF2FB5BC7D0CC6C99856169574E299BDF7FF13EC",
+      "width_mm": 170.0,
+      "height_mm": 137.87,
+      "postflight": {
+        "checks": {
+          "single_page": true,
+          "arial_or_helvetica_compatible": true,
+          "all_visible_text_8pt": true,
+          "minimum_positive_line_width_1pt": true,
+          "all_text_within_page": true
+        },
+        "font_names": [
+          "Arial-BoldMT",
+          "ArialMT"
+        ],
+        "minimum_visible_text_pt": 8.0,
+        "maximum_visible_text_pt": 8.0,
+        "minimum_positive_line_width_pt": 1.0,
+        "visible_text_spans": 61,
+        "vector_drawings_with_positive_width": 101
+      }
+    },
+    "Figure4_independent_ifn_replication.pdf": {
+      "sha256": "6669ED2F0C4421C61DE65DC1906BB74AF1B4067DFCA870822A3C0529EF698011",
+      "width_mm": 170.0,
+      "height_mm": 137.87,
+      "postflight": {
+        "checks": {
+          "single_page": true,
+          "arial_or_helvetica_compatible": true,
+          "all_visible_text_8pt": true,
+          "minimum_positive_line_width_1pt": true,
+          "all_text_within_page": true
+        },
+        "font_names": [
+          "Arial-BoldMT",
+          "ArialMT"
+        ],
+        "minimum_visible_text_pt": 8.0,
+        "maximum_visible_text_pt": 8.0,
+        "minimum_positive_line_width_pt": 1.0,
+        "visible_text_spans": 63,
+        "vector_drawings_with_positive_width": 118
+      }
+    },
+    "Figure5_regulatory_evidence.pdf": {
+      "sha256": "7B80DBDC01386F42FE229B10D37F84D0534B0F54271B1C44C2E90006E5BA9C68",
+      "width_mm": 170.0,
+      "height_mm": 211.001,
+      "postflight": {
+        "checks": {
+          "single_page": true,
+          "arial_or_helvetica_compatible": true,
+          "all_visible_text_8pt": true,
+          "minimum_positive_line_width_1pt": true,
+          "all_text_within_page": true
+        },
+        "font_names": [
+          "Arial-BoldMT",
+          "ArialMT"
+        ],
+        "minimum_visible_text_pt": 8.0,
+        "maximum_visible_text_pt": 8.0,
+        "minimum_positive_line_width_pt": 1.0,
+        "visible_text_spans": 111,
+        "vector_drawings_with_positive_width": 123
+      }
+    },
+    "Supplementary_Figure_S10_reference_calibration_boundary.pdf": {
+      "sha256": "609029FF8A26878222632F9460123E64D2F2FE80F35A0569F856E52B7D082D76",
+      "width_mm": 170.0,
+      "height_mm": 110.0,
+      "postflight": {
+        "checks": {
+          "single_page": true,
+          "arial_or_helvetica_compatible": true,
+          "all_visible_text_8pt": true,
+          "minimum_positive_line_width_1pt": true,
+          "all_text_within_page": true
+        },
+        "font_names": [
+          "Arial-BoldMT",
+          "ArialMT"
+        ],
+        "minimum_visible_text_pt": 8.0,
+        "maximum_visible_text_pt": 8.0,
+        "minimum_positive_line_width_pt": 1.0,
+        "visible_text_spans": 58,
+        "vector_drawings_with_positive_width": 78
+      }
+    },
+    "Supplementary_Figure_S1_source_integrity_qc.pdf": {
+      "sha256": "433676E2E84A54BD9CE14E56651BBD84C339699FAA85CD5FC0EDDF32C13DB31E",
+      "width_mm": 170.0,
+      "height_mm": 123.484,
+      "postflight": {
+        "checks": {
+          "single_page": true,
+          "arial_or_helvetica_compatible": true,
+          "all_visible_text_8pt": true,
+          "minimum_positive_line_width_1pt": true,
+          "all_text_within_page": true
+        },
+        "font_names": [
+          "Arial-BoldMT",
+          "ArialMT"
+        ],
+        "minimum_visible_text_pt": 8.0,
+        "maximum_visible_text_pt": 8.0,
+        "minimum_positive_line_width_pt": 1.0,
+        "visible_text_spans": 75,
+        "vector_drawings_with_positive_width": 65
+      }
+    },
+    "Supplementary_Figure_S2_representation_diagnostics.pdf": {
+      "sha256": "9ADE94D8AC35199B6B7FA1173BE2E0CAE9F6E0504FB544C1F45AD20A9440DA34",
+      "width_mm": 170.0,
+      "height_mm": 125.882,
+      "postflight": {
+        "checks": {
+          "single_page": true,
+          "arial_or_helvetica_compatible": true,
+          "all_visible_text_8pt": true,
+          "minimum_positive_line_width_1pt": true,
+          "all_text_within_page": true
+        },
+        "font_names": [
+          "Arial-BoldMT",
+          "ArialMT"
+        ],
+        "minimum_visible_text_pt": 8.0,
+        "maximum_visible_text_pt": 8.0,
+        "minimum_positive_line_width_pt": 1.0,
+        "visible_text_spans": 69,
+        "vector_drawings_with_positive_width": 95
+      }
+    },
+    "Supplementary_Figure_S3_identity_adjudication.pdf": {
+      "sha256": "82B03D744EBF104B5C4EE4514A70D9792B84F69810B13087DA9EFD67AD90059F",
+      "width_mm": 170.0,
+      "height_mm": 125.882,
+      "postflight": {
+        "checks": {
+          "single_page": true,
+          "arial_or_helvetica_compatible": true,
+          "all_visible_text_8pt": true,
+          "minimum_positive_line_width_1pt": true,
+          "all_text_within_page": true
+        },
+        "font_names": [
+          "Arial-BoldMT",
+          "ArialMT"
+        ],
+        "minimum_visible_text_pt": 8.0,
+        "maximum_visible_text_pt": 8.0,
+        "minimum_positive_line_width_pt": 1.0,
+        "visible_text_spans": 65,
+        "vector_drawings_with_positive_width": 106
+      }
+    },
+    "Supplementary_Figure_S4_composition_diagnostics.pdf": {
+      "sha256": "7F12DA78A37994EA4C60782225150C53641582DBB8F2FEBDFBF5BA41AAC9896B",
+      "width_mm": 170.0,
+      "height_mm": 125.882,
+      "postflight": {
+        "checks": {
+          "single_page": true,
+          "arial_or_helvetica_compatible": true,
+          "all_visible_text_8pt": true,
+          "minimum_positive_line_width_1pt": true,
+          "all_text_within_page": true
+        },
+        "font_names": [
+          "Arial-BoldMT",
+          "ArialMT"
+        ],
+        "minimum_visible_text_pt": 8.0,
+        "maximum_visible_text_pt": 8.0,
+        "minimum_positive_line_width_pt": 1.0,
+        "visible_text_spans": 51,
+        "vector_drawings_with_positive_width": 112
+      }
+    },
+    "Supplementary_Figure_S5_pseudobulk_diagnostics.pdf": {
+      "sha256": "26229FD84A2108E2811A7411D57B677D6245B8286EBBEEBD3C7C8F6B3BCB4E78",
+      "width_mm": 170.0,
+      "height_mm": 128.279,
+      "postflight": {
+        "checks": {
+          "single_page": true,
+          "arial_or_helvetica_compatible": true,
+          "all_visible_text_8pt": true,
+          "minimum_positive_line_width_1pt": true,
+          "all_text_within_page": true
+        },
+        "font_names": [
+          "Arial-BoldMT",
+          "ArialMT"
+        ],
+        "minimum_visible_text_pt": 8.0,
+        "maximum_visible_text_pt": 8.0,
+        "minimum_positive_line_width_pt": 1.0,
+        "visible_text_spans": 70,
+        "vector_drawings_with_positive_width": 138
+      }
+    },
+    "Supplementary_Figure_S6_external_validation_diagnostics.pdf": {
+      "sha256": "7D22C2C06B0A30BE0C2743DC88708CE7BFC3F76D456C2E08256659EF08FFBD40",
+      "width_mm": 170.0,
+      "height_mm": 128.279,
+      "postflight": {
+        "checks": {
+          "single_page": true,
+          "arial_or_helvetica_compatible": true,
+          "all_visible_text_8pt": true,
+          "minimum_positive_line_width_1pt": true,
+          "all_text_within_page": true
+        },
+        "font_names": [
+          "Arial-BoldMT",
+          "ArialMT"
+        ],
+        "minimum_visible_text_pt": 8.0,
+        "maximum_visible_text_pt": 8.0,
+        "minimum_positive_line_width_pt": 1.0,
+        "visible_text_spans": 57,
+        "vector_drawings_with_positive_width": 118
+      }
+    },
+    "Supplementary_Figure_S7_regulator_correlation_sensitivity.pdf": {
+      "sha256": "32D48228CE11BC5A17FED0CDD991E728B4A2889B6EBCEB4D400E501E40163982",
+      "width_mm": 170.0,
+      "height_mm": 125.882,
+      "postflight": {
+        "checks": {
+          "single_page": true,
+          "arial_or_helvetica_compatible": true,
+          "all_visible_text_8pt": true,
+          "minimum_positive_line_width_1pt": true,
+          "all_text_within_page": true
+        },
+        "font_names": [
+          "Arial-BoldMT",
+          "ArialMT"
+        ],
+        "minimum_visible_text_pt": 8.0,
+        "maximum_visible_text_pt": 8.0,
+        "minimum_positive_line_width_pt": 1.0,
+        "visible_text_spans": 107,
+        "vector_drawings_with_positive_width": 75
+      }
+    },
+    "Supplementary_Figure_S8_overlap_depletion.pdf": {
+      "sha256": "360EE4CAD7DF56BDFE352E92062FDAF55E0862B1E2E3D7947B1B24984FACA7ED",
+      "width_mm": 170.0,
+      "height_mm": 155.0,
+      "postflight": {
+        "checks": {
+          "single_page": true,
+          "arial_or_helvetica_compatible": true,
+          "all_visible_text_8pt": true,
+          "minimum_positive_line_width_1pt": true,
+          "all_text_within_page": true
+        },
+        "font_names": [
+          "Arial-BoldMT",
+          "ArialMT"
+        ],
+        "minimum_visible_text_pt": 8.0,
+        "maximum_visible_text_pt": 8.0,
+        "minimum_positive_line_width_pt": 1.0,
+        "visible_text_spans": 131,
+        "vector_drawings_with_positive_width": 110
+      }
+    },
+    "Supplementary_Figure_S9_identity_boundary_and_propagation.pdf": {
+      "sha256": "5C27FC282CCD14F1413728D340CC24C38657A5129EFF83F544E41B3E2ECE9A2A",
+      "width_mm": 170.0,
+      "height_mm": 160.0,
+      "postflight": {
+        "checks": {
+          "single_page": true,
+          "arial_or_helvetica_compatible": true,
+          "all_visible_text_8pt": true,
+          "minimum_positive_line_width_1pt": true,
+          "all_text_within_page": true
+        },
+        "font_names": [
+          "Arial-BoldMT",
+          "ArialMT"
+        ],
+        "minimum_visible_text_pt": 8.0,
+        "maximum_visible_text_pt": 8.0,
+        "minimum_positive_line_width_pt": 1.0,
+        "visible_text_spans": 89,
+        "vector_drawings_with_positive_width": 265
+      }
+    }
+  },
+  "manuscript": {
+    "path": "phase17_v7/npj_sba_selected_supplementary_refinement/20260831_s4_s10_semantic_harmonization/sources/Manuscript_scientific_harmonization_candidate.md",
+    "sha256": "DB08541AED571F702F0F935ABF271E3B537B0941E3A97C50A2A429F2C1829183",
+    "narrow_edits": 9
+  },
+  "supplementary_information": {
+    "path": "phase17_v7/npj_sba_selected_supplementary_refinement/20260831_s4_s10_semantic_harmonization/sources/Supplementary_Information_scientific_harmonization_candidate.md",
+    "sha256": "8787AC43063BD761AB3A0AA7BBB8C339F9077296597019F6268DE7BB41CA9D30",
+    "legend_edits": 2
+  },
+  "external_proof_policy": "External PDFs were inspected as proposals but not copied or used as numerical sources.",
+  "scientific_estimates_changed": false,
+  "new_inference_added": false,
+  "exact_submission_package_modified": false,
+  "exact_submission_package_sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1"
+}

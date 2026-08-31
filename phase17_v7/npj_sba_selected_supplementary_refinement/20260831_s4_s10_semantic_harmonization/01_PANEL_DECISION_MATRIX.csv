@@ -1,0 +1,11 @@
+﻿set,panel,decision,rationale
+Main,Figure1a,MODIFY_SELECTED,Replace audit-style authorization wording with retained-scaffold language.
+Main,Figure1b-d,KEEP,Identity metrics retain distinct evidence ownership.
+Main,Figure2-4,KEEP,No semantic or information-density defect identified.
+Main,Figure5a,MODIFY_SELECTED,Name ULM as the method owning the six-test result.
+Main,Figure5b-e,KEEP,Data selection and numerical content remain frozen.
+Supplement,S1-S3,KEEP,"Distinct QC, representation and identity-adjudication roles."
+Supplement,S4a-b,KEEP,Current displays own zero-ASC and covariance/cell-policy diagnostics.
+Supplement,S4c-d,MODIFY_SELECTED,Log-ratio axes reveal all intervals without truncation.
+Supplement,S5-S9,KEEP,No material semantic or information-density defect identified.
+Supplement,S10a-d,REPLACE_SELECTED,Unify mapper/state encoding and remove a non-gating balanced-accuracy guide.
