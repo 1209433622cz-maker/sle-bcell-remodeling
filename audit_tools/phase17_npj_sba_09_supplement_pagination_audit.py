@@ -198,13 +198,14 @@ def main() -> None:
     parser.add_argument("--libreoffice-pdf", type=Path, required=True)
     parser.add_argument("--source-dir", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--expected-pages", type=int, default=17)
     args = parser.parse_args()
     sources = load_expected_sources(args.source_dir.resolve())
     wps = inspect(args.wps_pdf.resolve(), sources)
     libreoffice = inspect(args.libreoffice_pdf.resolve(), sources)
     checks = {
-        "wps_17_pages": wps["pages"] == 17,
-        "libreoffice_17_pages": libreoffice["pages"] == 17,
+        f"wps_{args.expected_pages}_pages": wps["pages"] == args.expected_pages,
+        f"libreoffice_{args.expected_pages}_pages": libreoffice["pages"] == args.expected_pages,
         "wps_all_supplementary_figures_same_page": wps["all_heading_figure_pairs_same_page"],
         "libreoffice_all_supplementary_figures_same_page": libreoffice["all_heading_figure_pairs_same_page"],
         "wps_s8_same_page": wps["s8_same_page"],

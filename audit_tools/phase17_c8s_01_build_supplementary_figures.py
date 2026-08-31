@@ -515,7 +515,13 @@ def build_s5(root: Path, figure_dir: Path, source_dir: Path) -> None:
     save_figure(figure, figure_dir, "Supplementary_Figure_S5_pseudobulk_diagnostics")
 
 
-def build_s6(root: Path, figure_dir: Path, source_dir: Path) -> None:
+def build_s6(
+    root: Path,
+    figure_dir: Path,
+    source_dir: Path,
+    *,
+    replication_terminology: bool = False,
+) -> None:
     gate = root / "phase17_v7/gateC5B/20260815_gse135779_external_validation"
     models = read_csv(gate / "05_MODEL_SUMMARY.csv")
     programs = read_csv(gate / "07_PROGRAM_RESULTS.csv")
@@ -534,7 +540,12 @@ def build_s6(root: Path, figure_dir: Path, source_dir: Path) -> None:
     axes[0, 0].set_xticks(x, models["label"], rotation=35, ha="right")
     axes[0, 0].set_ylabel("Donors")
     axes[0, 0].legend(frameon=False)
-    axes[0, 0].set_title("External validation support by stratum", loc="left")
+    axes[0, 0].set_title(
+        "GSE135779 donor support by analysis"
+        if replication_terminology
+        else "External validation support by stratum",
+        loc="left",
+    )
     style_axis(axes[0, 0]); panel_label(axes[0, 0], "a")
 
     primary_programs = programs.loc[programs["analysis_name"].eq("childhood_min50") & programs["analysis_family"].eq("primary_confirmatory")].copy()
@@ -551,7 +562,12 @@ def build_s6(root: Path, figure_dir: Path, source_dir: Path) -> None:
     axes[1, 0].axvline(0, color=COLORS["grey"], lw=0.6, ls="--")
     axes[1, 0].set_yticks(y, source_ifn["omitted_source_label"])
     axes[1, 0].set_xlabel("IFN/ISG effect after source-label omission")
-    axes[1, 0].set_title("Mapping-label omission sensitivity", loc="left")
+    axes[1, 0].set_title(
+        "Source-label omission sensitivity"
+        if replication_terminology
+        else "Mapping-label omission sensitivity",
+        loc="left",
+    )
     style_axis(axes[1, 0]); panel_label(axes[1, 0], "c")
 
     donor_primary = donor_loo.loc[donor_loo["analysis_family"].eq("primary_confirmatory")].copy()
@@ -576,7 +592,12 @@ def build_s6(root: Path, figure_dir: Path, source_dir: Path) -> None:
             donor_primary.assign(panel="d", source_table="donor_loo"),
         ],
     )
-    save_figure(figure, figure_dir, "Supplementary_Figure_S6_external_validation_diagnostics")
+    basename = (
+        "Supplementary_Figure_S6_replication_robustness_diagnostics"
+        if replication_terminology
+        else "Supplementary_Figure_S6_external_validation_diagnostics"
+    )
+    save_figure(figure, figure_dir, basename)
 
 
 def build_s7(root: Path, figure_dir: Path, source_dir: Path) -> None:

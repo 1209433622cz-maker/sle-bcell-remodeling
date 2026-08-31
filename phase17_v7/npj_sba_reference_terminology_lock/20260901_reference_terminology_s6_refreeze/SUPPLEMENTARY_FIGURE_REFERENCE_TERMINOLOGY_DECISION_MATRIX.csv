@@ -1,0 +1,11 @@
+﻿figure,decision,evidence_role,rationale
+S1,KEEP,source integrity and processing-cohort QC,"No source-data, semantic, claim-ownership or legibility defect was demonstrated."
+S2,KEEP,representation and cross-cohort diagnostics,"No source-data, semantic, claim-ownership or legibility defect was demonstrated."
+S3,KEEP,identity-policy adjudication,"No source-data, semantic, claim-ownership or legibility defect was demonstrated."
+S4,KEEP,composition diagnostics and sensitivity,"No source-data, semantic, claim-ownership or legibility defect was demonstrated."
+S5,KEEP,pseudobulk diagnostics,"No source-data, semantic, claim-ownership or legibility defect was demonstrated."
+S6,MODIFY_SOURCE_REDRAW,GSE135779 replication and robustness diagnostics,Frozen Source Data were re-read without numerical change; validation/mapping-label wording was replaced by replication/source-label wording.
+S7,KEEP,correlation-aware regulator sensitivity,"No source-data, semantic, claim-ownership or legibility defect was demonstrated."
+S8,KEEP,IFN-overlap-depletion boundary,"No source-data, semantic, claim-ownership or legibility defect was demonstrated."
+S9,KEEP,end-to-end identity propagation boundary,"No source-data, semantic, claim-ownership or legibility defect was demonstrated."
+S10,KEEP,reference-calibration and transfer boundary,"No source-data, semantic, claim-ownership or legibility defect was demonstrated."

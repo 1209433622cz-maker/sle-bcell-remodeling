@@ -1,0 +1,157 @@
+我已经按你限定的边界进入 `FINAL_REFERENCE_CLAIM_SUPPORT_AND_TERMINOLOGY_LOCK`，没有碰投稿包、Release、Zenodo，也没有重新打开任何数值分析。GitHub 的当前科学锁点已核实为 `fd33dd6a45a0ecfd7ed867ade829a4072ec0ba2d`，canonical manuscript/supplement source 也与上传的最终 31/16 页文档对应。主稿当前对 sample-cohort、external source-label-defined replication、observational regulator evidence 等核心边界已经写得相当严格。 Supplementary Table S7 中此前的 biological-unit 问题也确实已经修正。
+
+这轮尚未到“可以直接冻结”的程度，因为我找到了 **3 类值得修正的问题，其中 1 个足以让我重新打开一个补图，但没有任何问题要求重新跑生物学/统计分析。**
+
+### 1. 32 篇参考文献：主体 claim-support 关系是稳的
+
+我逐条把正文实际引用的句子反向映射到 32 篇参考文献，并优先用 PubMed、NCBI GEO、Bioconductor/原始方法论文核对，而不是仅凭题名判断。
+
+生物学背景引用目前没有发现 central claim 被文献“托不住”的情况。例如，Banchereau 的原始研究确实将 plasmablast signature 与 pediatric SLE disease activity 联系起来；Chiche 确实报告了不同 IFN modules 的 activation thresholds；van Dooren 确实描述了高 disease activity、Sm/RNP autoantibodies 与较高 plasmablast/memory ratio 的亚群；Sayadi 也明确支持 antimalarial treatment/low disease activity 下持续 IFN signaling 并伴随 polygenic-risk 差异。([PubMed][1])
+
+“几类 interferon 都具有促进 B-cell activation/differentiation 的能力”这一句也成立：IFN-α、IFN-λ 和 type-I IFN/DN2 三组实验文献分别提供了对应支持。([PubMed][2]) 因此这里**不应该为了增加引用数量继续扩充 Introduction/Discussion**。
+
+方法文献绝大部分同样准确。Scanpy、Harmony、Leiden、voom、CAMERA、CollecTRI/decoupleR 的引用和使用语义都成立。([PubMed][3])
+
+三个需要处理的 reference-level 点是：
+
+**Ref. 24 edgeR：建议补一个真正对应当前 pipeline 的方法引用。** 当前 Methods 写的是 `filterByExpr + TMM + robust quasi-likelihood`，而 Ref. 24 是 2010 年最初的 edgeR package paper。它当然支持“使用 edgeR”本身，但并不是这整套后续 quasi-likelihood workflow 最精确的 citation。当前句子见主文 Methods。 更准确的办法不是改分析，而是保留 Ref. 24，再新增 Chen, Lun & Smyth 2016 的 edgeR quasi-likelihood pipeline 作为 Ref. 33；该论文明确覆盖 RNA-seq filtering、normalization 和 edgeR QL workflow。([PubMed][4])
+
+**Ref. 30 FRY：数据和方法没错，但一句话的 attribution 可以更严谨。** 当前写成 `FRY [30] provided a rotation-based directional test`。ROAST 原论文描述的是 rotation gene-set test；limma 文档更精确地定义 `fry` 为 `mroast` 的 fast approximation，而且可以给 directional result。([PubMed][5]) 所以我建议改成类似：
+
+`FRY [27,30] provided a self-contained directional gene-set test as a fast approximation to the ROAST rotation framework.`
+
+这样不会暗示 2010 ROAST paper 本身已经直接描述了后来 `fry()` 的全部实现。
+
+**Ref. 31 是纯 bibliographic exactness 问题。** 当前写作：
+
+`The Molecular Signatures Database Hallmark Gene Set Collection`
+
+而原论文准确题名是：
+
+`The Molecular Signatures Database (MSigDB) hallmark gene set collection.` ([PubMed][6])
+
+这三项均不改变任何 scientific claim。
+
+---
+
+## 2. 术语锁还有几处应该统一
+
+当前最大的 remaining inconsistency 是稿件已经建立了非常严格的 evidence vocabulary，但少数早期措辞还残留着旧层级。
+
+我建议 source-level 统一：
+
+* Abstract：`donor-aware inference` → **`biological-unit-aware inference`**。因为 GSE174188 的 primary unit 是 sample-cohort，而 GSE135779 才是 donor；当前 Methods 对这一点已经明确定义。
+* `43 reference and 46 SLE strata` → **`43 control strata and 46 strata from source-defined managed SLE`**。
+* `internal validation estimate/contrast` → **`internal replication estimate/contrast`**；同 accession 的证据不再正面称作 validation。
+* `neither retained ... internal validation` → **`internal replication support`**。
+* `GSE135779 served as the independent SLE validation dataset` → **`independent SLE replication dataset`**。
+* Methods heading `Source-label-defined GSE135779 validation` → **`Source-label-defined GSE135779 replication`**。
+* `source-metadata managed SLE / source-metadata flare` → **`source-defined managed SLE / source-defined flare`**。
+* Discussion 的 `justify an IFN-centred regulatory interpretation` → **`support an IFN-centred regulatory context`**，与 Figure 5 的 observational ceiling 完全统一。
+* Supplementary Table S1 的 `Discovery and internal validation` / `Independent SLE validation` → **internal replication / independent SLE replication**。
+* Supplementary Table S5 的 `Independent GSE135779 validation` → **source-label-defined GSE135779 replication**。
+* Supplementary S9 note 中残留的 `source-label-based` → **`source-label-defined`**。
+
+值得强调的是，我**不建议全局删除 validation 一词**。例如“这些 calibration folds are not independent validation”以及 generic 的 reconstruction/validation 描述本身是正确的；CRediT 的 `Validation` 也必须保留。这里应该锁定 evidence-class 用语，而不是机械 search-and-replace。
+
+---
+
+# 3. 图件重新裁决：发现一个值得真正 source-redraw 的对象——Supplementary Figure S6
+
+这是这轮最重要的新发现。
+
+Supplementary PDF 第 12 页现在同时出现：
+
+* `Supplementary Figure S6 | Independent-validation diagnostics`
+* 图内标题 `Independent-validation diagnostics`
+* panel a：`External validation support by stratum`
+* panel c：`Mapping-label omission sensitivity`
+
+
+
+但同一版主稿的 Figure 4 已经非常严格地称之为：
+
+> `GSE135779 provides source-label-defined replication`
+
+而 Methods/Results 又明确说明 source-label-independent calibration failed，因此 external evidence 的准确类别是 **source-label-defined independent replication**，而不是未经限定的 external validation。
+
+panel c 更明显：它实际删除的是 **source B-cell labels**；Source Data 字段也直接叫 `omitted_source_label`，不是 mapping label。当前冻结的 S6 Source Data 对此非常明确，而且 SHA 与最终锁定对象一致。
+
+所以我把本轮图件裁决从原来的 S1–S10 全 KEEP 精化为：
+
+> **S1–S5 KEEP**
+> **S6 MODIFY / SOURCE-REDRAW**
+> **S7–S10 KEEP**
+> **所有 21 个 main panels KEEP**
+> **0 REPLACE / 0 DELETE / 0 new panel**
+
+这里的 S6 MODIFY **不是重新分析，也不是改现有 PDF**。我已经用锁定的 S6 Source Data 从源数据重新绘制了一个 candidate，并且首先验证了重建的 CSV SHA-256：
+
+`A1D1DCBF9D20BA01D0022D4DA0F73A618776D34A687E764F18AB83439204DBF6`
+
+与最终 Source Data lock manifest 的 S6 SHA **逐字节一致**。
+
+新的语义设计是：
+
+* 总标题：**`GSE135779 replication and robustness diagnostics`**
+* a：**`GSE135779 support by analysis`**
+* b：`Childhood primary program family` — KEEP
+* c：**`Source-label omission sensitivity`**
+* d：`Childhood donor influence` — KEEP
+
+所有 donor counts、effects、CI、LOO ranges、坐标轴信息均由冻结 S6 Source Data 重新读取，没有修改数字。
+
+[查看 S6 source-redraw PDF](sandbox:/mnt/data/Supplementary_Figure_S6_replication_robustness_diagnostics.pdf)
+
+[查看 S6 source-redraw PNG](sandbox:/mnt/data/Supplementary_Figure_S6_replication_robustness_diagnostics.png)
+
+[重绘生成脚本](sandbox:/mnt/data/rerun_s6_replication_terminology.py)
+
+[重绘使用的锁定 S6 Source Data](sandbox:/mnt/data/Supplementary_Figure_S6_source_data.csv)
+
+我还做了基本 postflight：单页 vector PDF，字体嵌入为 Arimo/Arial-compatible；可见文字最低 **8 pt**、最高 9 pt。也就是说这不是“在旧图片上换几个字”，而是真正重新从冻结 Source Data 生成。
+
+---
+
+## 4. 其他子图为什么仍然不打开
+
+我特别重新看了 Supplement S4–S10，而不是因为 S6 出现问题就顺手全部重画。
+
+例如 S4 panel b 目前标题有 `Primary null is stable to covariance and cell policy`。从语言理想程度而言，我会更喜欢 `Primary interpretation is stable...`，因为正文明确说 CI 不能证明 abundance equivalence。
+
+但这里我**不建议重开 S4**：`null` 在这里描述的是未拒绝 primary null/result，并没有制造新的生物学结论；而且 legend 已明确说明 sensitivity 不替代 frozen beta-binomial primary model。它属于“可以更漂亮”，不是新的可定位 scientific-object inconsistency。按照你设定的冻结规则，应 KEEP。
+
+S7、S8、S9、S10 的 evidence labels 目前反而已经非常成熟：correlation-aware sensitivity、overlap depletion、assignment sensitivity、calibration boundary 都各自拥有清楚的 evidence class，没有必要再碰。
+
+---
+
+# 当前状态与下一阶段
+
+因此我现在**不会把本轮状态宣布成 `FINAL_REFERENCE_CLAIM_SUPPORT_AND_TERMINOLOGY_LOCKED`**，因为已经明确识别出应该集成的 source-level 文本修改和一个 S6 source-redraw。
+
+更准确的状态是：
+
+> **`REFERENCE_TERMINOLOGY_LOCK_READY_FOR_SOURCE_INTEGRATION`**
+
+科学分析层仍然保持：
+
+> **`FINAL_SCIENTIFIC_OBJECT_AND_NUMERICAL_TRACEABILITY_LOCKED`**
+
+没有任何结果迫使我们重新打开 statistics、Source Data、cohort、mapper 或 TF analysis。
+
+下一阶段应非常窄地定义为：
+
+> **`REFERENCE_TERMINOLOGY_SOURCE_INTEGRATION_AND_S6_REFREEZE`**
+
+只做四件事：把上述 terminology fixes 集成至 canonical Markdown；给 edgeR QL workflow 增加精确方法引用并修正 Ref. 31 标题；用冻结 Source Data 替换 S6 为新的 source-redraw；然后重新生成 manuscript/Supplementary 并做一次 terminology/reference regression + 双渲染 QA。
+
+**不应该**重新打开 Figure 1–5、S1–S5/S7–S10，不应该增加新 sensitivity，不应该重新跑 disease-effect analysis，也不应该碰投稿包、Release 或 Zenodo。
+
+这一轮的主要价值不是把稿子“投稿化”，而是把目前已经锁住的科学结论进一步压缩成一个非常一致的证据语言体系：**identity 是 disease-blind scaffold；GSE174188 是 sample-cohort inference + internal replication；GSE135779 是 source-label-defined independent replication；regulator 是 observational；M5911 是 response-set concordance；GSE23307 是 descriptive perturbational context。**这条链一旦在正文、Supplement 和 S6 图内同时完全一致，文本科学层基本就真正闭环了。
+
+[1]: https://pubmed.ncbi.nlm.nih.gov/27040498/?utm_source=chatgpt.com "Personalized Immunomonitoring Uncovers Molecular Networks that Stratify Lupus Patients."
+[2]: https://pubmed.ncbi.nlm.nih.gov/33633721/?utm_source=chatgpt.com "Interferon α Enhances B Cell Activation Associated With FOXM1 Induction: Potential Novel Therapeutic Strategy for Targeting the Plasmablasts of Systemic Lupus Erythematosus - PubMed"
+[3]: https://pubmed.ncbi.nlm.nih.gov/29409532/?utm_source=chatgpt.com "SCANPY: large-scale single-cell gene expression data analysis - PubMed"
+[4]: https://pubmed.ncbi.nlm.nih.gov/19910308/?utm_source=chatgpt.com "edgeR: a Bioconductor package for differential expression analysis of digital gene expression data - PubMed"
+[5]: https://pubmed.ncbi.nlm.nih.gov/20610611/?utm_source=chatgpt.com "ROAST: rotation gene set tests for complex microarray experiments - PubMed"
+[6]: https://pubmed.ncbi.nlm.nih.gov/26771021/?dopt=Abstract&utm_source=chatgpt.com "The Molecular Signatures Database (MSigDB) hallmark gene set collection - PubMed"

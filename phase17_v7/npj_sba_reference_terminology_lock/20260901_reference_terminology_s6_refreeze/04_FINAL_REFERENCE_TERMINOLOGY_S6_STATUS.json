@@ -1,0 +1,122 @@
+{
+  "created_at": "2026-09-01T03:16:43+08:00",
+  "status": "REFERENCE_TERMINOLOGY_AND_S6_SCIENTIFIC_REFREEZE_LOCKED",
+  "checks": {
+    "manuscript_page_count_plausible": true,
+    "supplement_page_count_plausible": true,
+    "dual_render_page_counts_compatible": true,
+    "all_pages_nonblank": true,
+    "wps_all_text_within_canvas": true,
+    "lo_all_text_within_canvas": true,
+    "all_markers_resolved": true,
+    "supplement_pagination_audit_pass": true,
+    "biological_unit_aware_source_present": true,
+    "internal_replication_source_present": true,
+    "gse135779_replication_source_present": true,
+    "regulatory_context_source_present": true,
+    "rendered_semantic_anchors_present": true,
+    "s6_legend_present": true,
+    "old_s6_legend_absent": true,
+    "references_1_to_33": true,
+    "s6_width_170mm": true,
+    "s6_height_expected": true,
+    "s6_minimum_text_at_least_6pt": true,
+    "s6_arial_embedded": true,
+    "s6_panel_a_title": true,
+    "s6_panel_c_title": true,
+    "s6_old_terms_absent": true,
+    "s6_source_byte_identical": true,
+    "s6_only_supplementary_modify": true,
+    "accessibility_no_high_or_medium": true,
+    "contact_sheets_created": true,
+    "affected_pages_review_set_complete": true,
+    "package_sha_unchanged": true
+  },
+  "documents": {
+    "Manuscript_reference_terminology_s6_refreeze.pdf": {
+      "bytes": 241159,
+      "sha256": "37988A6B23CA82D4FB69756F61A222565BBD3963059B4E0BABF2A21975C58C92",
+      "pages": 31,
+      "render_engine": "WPS"
+    },
+    "Supplementary_Information_reference_terminology_s6_refreeze.pdf": {
+      "bytes": 5671558,
+      "sha256": "80712159D62F1E6943B8B23E015E26A5B1D83947049057957E6A363E745E0A4A",
+      "pages": 16,
+      "render_engine": "WPS"
+    }
+  },
+  "libreoffice_cross_render": {
+    "Manuscript_reference_terminology_s6_refreeze.pdf": {
+      "bytes": 245021,
+      "sha256": "C3486C316373FE76410EC80AD3B36542C58AD2CB4B28420C0B353C564E74F801",
+      "pages": 32
+    },
+    "Supplementary_Information_reference_terminology_s6_refreeze.pdf": {
+      "bytes": 2692995,
+      "sha256": "285519BC9C9E438663D6579640F4A2E948D75AE3B7FF313B2AB0563BC18F04AC",
+      "pages": 16
+    }
+  },
+  "s6": {
+    "bytes": 47153,
+    "sha256": "F76A84E04A56669FB48A06CBAEC415646EB12C56547069485E8D5DB3AA2A5027",
+    "source_data_sha256": "A1D1DCBF9D20BA01D0022D4DA0F73A618776D34A687E764F18AB83439204DBF6",
+    "width_mm": 169.99999999999028,
+    "height_mm": 128.2792665726389,
+    "minimum_character_size_pt": 6.0,
+    "font_lines": [
+      "ELUGPM+ArialMT                       CID TrueType      Identity-H       yes yes yes     15  0",
+      "ELUGPM+Arial-BoldMT                  CID TrueType      Identity-H       yes yes yes     22  0"
+    ]
+  },
+  "visual_review": {
+    "wps_contact_sheets": [
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/wps_pages/Manuscript_reference_terminology_s6_refreeze_contact_1.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/wps_pages/Manuscript_reference_terminology_s6_refreeze_contact_2.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/wps_pages/Manuscript_reference_terminology_s6_refreeze_contact_3.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/wps_pages/Manuscript_reference_terminology_s6_refreeze_contact_4.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/wps_pages/Manuscript_reference_terminology_s6_refreeze_contact_5.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/wps_pages/Manuscript_reference_terminology_s6_refreeze_contact_6.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/wps_pages/Supplementary_Information_reference_terminology_s6_refreeze_contact_1.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/wps_pages/Supplementary_Information_reference_terminology_s6_refreeze_contact_2.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/wps_pages/Supplementary_Information_reference_terminology_s6_refreeze_contact_3.png"
+    ],
+    "libreoffice_contact_sheets": [
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/lo_pages/Manuscript_reference_terminology_s6_refreeze_contact_1.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/lo_pages/Manuscript_reference_terminology_s6_refreeze_contact_2.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/lo_pages/Manuscript_reference_terminology_s6_refreeze_contact_3.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/lo_pages/Manuscript_reference_terminology_s6_refreeze_contact_4.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/lo_pages/Manuscript_reference_terminology_s6_refreeze_contact_5.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/lo_pages/Manuscript_reference_terminology_s6_refreeze_contact_6.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/lo_pages/Supplementary_Information_reference_terminology_s6_refreeze_contact_1.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/lo_pages/Supplementary_Information_reference_terminology_s6_refreeze_contact_2.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/lo_pages/Supplementary_Information_reference_terminology_s6_refreeze_contact_3.png"
+    ],
+    "affected_pages_at_180_dpi": [
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/affected_pages/lo_main-32.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/affected_pages/lo_supp-12.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/affected_pages/wps_main-31.png",
+      "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/qa/affected_pages/wps_supp-12.png"
+    ],
+    "clipping_overlap_missing_glyph_or_object_mismatch": false
+  },
+  "scientific_estimates_changed": false,
+  "source_data_changed": false,
+  "main_panels": {
+    "keep": 21,
+    "modify": 0,
+    "replace": 0
+  },
+  "supplementary_figures": {
+    "keep": 9,
+    "modify_source_redraw": 1,
+    "replace": 0
+  },
+  "release_or_zenodo_changed": false,
+  "submission_package_changed": false,
+  "submission_package_sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1",
+  "final_file_manifest": "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/05_FINAL_FILE_MANIFEST.csv",
+  "action_report": "00_project_management/action_record_2026-09-01_reference_terminology_s6_refreeze.md",
+  "next_stage": "FINAL_INTEGRATED_READER_SIMULATION_AND_REDUNDANCY_PRUNE"
+}

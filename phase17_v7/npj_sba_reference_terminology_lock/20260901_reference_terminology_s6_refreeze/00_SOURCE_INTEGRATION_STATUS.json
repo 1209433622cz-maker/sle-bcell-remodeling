@@ -1,0 +1,133 @@
+{
+  "created_at": "2026-09-01T02:52:46+08:00",
+  "status": "PASS_REFERENCE_TERMINOLOGY_S6_SOURCE_INTEGRATION_DOCUMENT_REBUILD_REQUIRED",
+  "checks": {
+    "manuscript_prohibited_terms_absent": true,
+    "supplement_prohibited_terms_absent": true,
+    "generic_validation_boundary_retained": true,
+    "credit_validation_retained": true,
+    "prospective_clinical_validation_retained": true,
+    "edgeR_workflow_reference_present": true,
+    "s6_source_sha_locked": true,
+    "main_panel_decisions_21_keep": true,
+    "supplement_s6_only_modified": true,
+    "package_sha_unchanged": true
+  },
+  "reference_validation": {
+    "checks": {
+      "references_1_to_33_contiguous": true,
+      "citations_within_1_to_33": true,
+      "all_references_cited": true,
+      "first_appearance_1_to_33": true
+    },
+    "first_appearance": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ]
+  },
+  "s6_checks": {
+    "builder_assertions_pass": true,
+    "source_matches_prior": true,
+    "source_matches_received": true,
+    "one_s6_pdf": true,
+    "one_s6_png": true,
+    "fifteen_figure_pdfs": true,
+    "fifteen_figure_pngs": true,
+    "fifteen_source_csvs": true
+  },
+  "source_edits": 21,
+  "reference_count": 33,
+  "main_panels": {
+    "keep": 21,
+    "modify": 0,
+    "replace": 0
+  },
+  "supplementary_figures": {
+    "keep": 9,
+    "modify_source_redraw": 1,
+    "replace": 0
+  },
+  "scientific_estimates_changed": false,
+  "source_data_changed": false,
+  "release_or_zenodo_changed": false,
+  "submission_package_changed": false,
+  "submission_package_sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1",
+  "files": {
+    "Manuscript_reference_terminology_s6_refreeze.md": {
+      "path": "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/sources/Manuscript_reference_terminology_s6_refreeze.md",
+      "bytes": 57790,
+      "sha256": "EA3741073B08DA111202A67424F51C7E9FF8D2E9B94E3257FF26EB24086BFFF4"
+    },
+    "Supplementary_Information_reference_terminology_s6_refreeze.md": {
+      "path": "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/sources/Supplementary_Information_reference_terminology_s6_refreeze.md",
+      "bytes": 18533,
+      "sha256": "0B81AA84A134EF9DB00AC281DC84508938EE8B070E65D8FC6081850E87700C73"
+    },
+    "Supplementary_Figure_S6_replication_robustness_diagnostics.pdf": {
+      "path": "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/figures/figures/Supplementary_Figure_S6_replication_robustness_diagnostics.pdf",
+      "bytes": 47153,
+      "sha256": "F76A84E04A56669FB48A06CBAEC415646EB12C56547069485E8D5DB3AA2A5027"
+    },
+    "Supplementary_Figure_S6_replication_robustness_diagnostics.png": {
+      "path": "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/figures/figures/Supplementary_Figure_S6_replication_robustness_diagnostics.png",
+      "bytes": 400006,
+      "sha256": "EC2118003D6D459831D118C53B318448B936E806C23E44D87A125EAEDA53F2D0"
+    },
+    "Supplementary_Figure_S6_source_data.csv": {
+      "path": "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/figures/source_data/Supplementary_Figure_S6_source_data.csv",
+      "bytes": 6249,
+      "sha256": "A1D1DCBF9D20BA01D0022D4DA0F73A618776D34A687E764F18AB83439204DBF6"
+    },
+    "REFERENCE_TERMINOLOGY_SOURCE_EDIT_LEDGER.csv": {
+      "path": "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/REFERENCE_TERMINOLOGY_SOURCE_EDIT_LEDGER.csv",
+      "bytes": 4149,
+      "sha256": "BD77CFD433CDBEF9EA115BCE9DF1FC4CE29B6879D61156CD8B28E4682D4E8C86"
+    },
+    "MAIN_PANEL_REFERENCE_TERMINOLOGY_DECISION_MATRIX.csv": {
+      "path": "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/MAIN_PANEL_REFERENCE_TERMINOLOGY_DECISION_MATRIX.csv",
+      "bytes": 2409,
+      "sha256": "381D688953CCAD7AC061B331AC7FCA4EFD03484C58D5E95FAD69AB3CA8366771"
+    },
+    "SUPPLEMENTARY_FIGURE_REFERENCE_TERMINOLOGY_DECISION_MATRIX.csv": {
+      "path": "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/SUPPLEMENTARY_FIGURE_REFERENCE_TERMINOLOGY_DECISION_MATRIX.csv",
+      "bytes": 1422,
+      "sha256": "DF077D242827E89004852003C6296E6702BB00258B1B491C0335E352FB6DF76B"
+    },
+    "REFERENCE_CLAIM_SUPPORT_VERIFICATION_MATRIX.csv": {
+      "path": "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/REFERENCE_CLAIM_SUPPORT_VERIFICATION_MATRIX.csv",
+      "bytes": 663,
+      "sha256": "F4EEC25AAC19714275F87F32BAD5724AF5F1FC329AB1DABCD3C7C049C46557E0"
+    }
+  }
+}

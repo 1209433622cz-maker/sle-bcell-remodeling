@@ -1,0 +1,22 @@
+﻿scope,edit,old_text,new_text,estimate_changed
+Manuscript,Abstract biological-unit scope,disease-blind B-lineage reconstruction and donor-aware inference,disease-blind B-lineage reconstruction and biological-unit-aware inference,False
+Manuscript,Composition internal evidence class,The internal validation estimate remained below one,The internal replication estimate remained below one,False
+Manuscript,Pseudobulk group terminology,comprising 43 reference and 46 SLE strata,comprising 43 control and 46 source-defined managed-SLE strata,False
+Manuscript,Internal contrast evidence class,the full internal GSE174188 validation contrast,the full internal GSE174188 replication contrast,False
+Manuscript,Internal program evidence class,but neither retained multiplicity-supported internal validation.,but neither was multiplicity-supported in the internal replication analysis.,False
+Manuscript,Regulator evidence ceiling,"Collectively, these analyses justify an IFN-centred regulatory interpretation","Collectively, these analyses support an IFN-centred regulatory context",False
+Manuscript,Limitations internal evidence class,the GSE174188 donor-nonoverlap validation remains accession-internal,the GSE174188 donor-nonoverlap replication remains accession-internal,False
+Manuscript,Dataset role,served as the independent SLE validation dataset,served as the independent SLE replication dataset,False
+Manuscript,Primary source-defined label,processing-cohort-4 source-metadata managed SLE versus normal,processing-cohort-4 source-defined managed SLE versus normal,False
+Manuscript,Secondary source-defined label,the source-metadata flare category,the source-defined flare category,False
+Manuscript,External-method heading,### Source-label-defined GSE135779 validation,### Source-label-defined GSE135779 replication,False
+Manuscript,edgeR workflow citation,Genes were filtered with edgeR [24] filterByExpr,"Genes were filtered with edgeR [24,25] filterByExpr",False
+Manuscript,FRY implementation attribution,"CAMERA [30] estimated inter-gene correlation from model residuals and performed a competitive rank test, whereas FRY [31] provided a rotation-based directional test.","CAMERA [30] estimated inter-gene correlation from model residuals and performed a competitive rank test, whereas FRY [28,31] provided a fast self-contained approximation to the directional mroast/ROAST gene-set test.",False
+Manuscript,MSigDB exact title,"32. Liberzon, A. et al. The Molecular Signatures Database Hallmark Gene Set Collection.","32. Liberzon, A. et al. The Molecular Signatures Database (MSigDB) hallmark gene set collection.",False
+References,Add exact edgeR quasi-likelihood workflow reference,No workflow-specific reference after reference 24,"25. Chen, Y., Lun, A. T. L. & Smyth, G. K. From reads to genes to pathways: differential expression analysis of RNA-Seq experiments using Rsubread and the edgeR quasi-likelihood pipeline. F1000Res. **5**, 1438 (2016). https://doi.org/10.12688/f1000research.8987.2.",False
+Supplementary Information,Table S1 GSE174188 evidence class,| GSE174188 | Discovery and internal validation |,| GSE174188 | Discovery and internal replication |,False
+Supplementary Information,Table S1 GSE135779 evidence class,| GSE135779 | Independent SLE validation |,| GSE135779 | Independent SLE replication |,False
+Supplementary Information,Table S5 Figure 4 evidence class,| Figure 4 | Independent GSE135779 validation and influence analyses |,| Figure 4 | Source-label-defined GSE135779 replication and influence analyses |,False
+Supplementary Information,Table S8 source-label terminology,The original source-label-based pseudobulk effect,The original source-label-defined pseudobulk effect,False
+Supplementary Information,Supplementary Figure S6 title,## Supplementary Figure S6 | Independent-validation diagnostics,## Supplementary Figure S6 | GSE135779 replication and robustness diagnostics,False
+Supplementary Figure S6,Source redraw from frozen Source Data,Independent-validation / external-validation / mapping-label terminology,GSE135779 replication / donor support / source-label terminology,False

@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-09-01T02:54:53+08:00",
+  "status": "PASS_REFERENCE_TERMINOLOGY_S6_DOCX_BUILT_DUAL_RENDER_REQUIRED",
+  "build_results": [
+    {
+      "source": "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/sources/Manuscript_reference_terminology_s6_refreeze.md",
+      "output": "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/documents/Manuscript_reference_terminology_s6_refreeze.docx",
+      "paragraphs": 151,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 60775
+    },
+    {
+      "source": "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/sources/Supplementary_Information_reference_terminology_s6_refreeze.md",
+      "output": "phase17_v7/npj_sba_reference_terminology_lock/20260901_reference_terminology_s6_refreeze/documents/Supplementary_Information_reference_terminology_s6_refreeze.docx",
+      "paragraphs": 69,
+      "tables": 10,
+      "inline_shapes": 10,
+      "placeholders": 0,
+      "bytes": 4689427
+    }
+  ],
+  "checks": {
+    "manuscript": {
+      "title_exact": true,
+      "abstract_145_words": true,
+      "no_inline_figures": true,
+      "references_1_to_33": true,
+      "biological_unit_aware_abstract": true,
+      "edgeR_workflow_reference": true,
+      "regulatory_context_boundary": true
+    },
+    "supplement": {
+      "ten_figures_embedded": true,
+      "title_exact": true,
+      "s6_replication_title_present": true,
+      "s6_old_title_absent": true,
+      "internal_replication_present": true,
+      "independent_replication_present": true
+    }
+  },
+  "object_inventory": {
+    "manuscript_inline_shapes": 0,
+    "supplement_inline_shapes": 10
+  },
+  "files": {
+    "Manuscript_reference_terminology_s6_refreeze.docx": {
+      "bytes": 60816,
+      "sha256": "847B4F7D4D9C1B254ED9D4918E133E1525E5BD79752F388D7B8FAC9F60A6ED3E"
+    },
+    "Supplementary_Information_reference_terminology_s6_refreeze.docx": {
+      "bytes": 4689468,
+      "sha256": "136344B4F50B993DC3E0FF54D5A5333CD39DEFEA36E3F703233306E86FEA54F9"
+    }
+  },
+  "scientific_estimates_changed": false,
+  "source_data_changed": false,
+  "supplementary_figure_s6_source_redrawn": true
+}

@@ -1,0 +1,5 @@
+﻿issue,decision,primary_source,support
+edgeR quasi-likelihood workflow,ADD_METHOD_REFERENCE,https://pubmed.ncbi.nlm.nih.gov/27508061/,"Filtering, normalization and edgeR quasi-likelihood workflow"
+FRY implementation attribution,REWORD_METHOD,https://bioconductor.org/packages/release/bioc/manuals/limma/man/limma.pdf,fry is a fast approximation to mroast; the test is self-contained and directional
+ROAST framework,RETAIN_PRIMARY_REFERENCE,https://pubmed.ncbi.nlm.nih.gov/20610611/,Rotation gene-set framework and uni-/bi-directional testing
+MSigDB hallmark title,CORRECT_BIBLIOGRAPHIC_TITLE,https://pubmed.ncbi.nlm.nih.gov/26771021/,Exact published title
