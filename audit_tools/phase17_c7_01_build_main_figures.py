@@ -397,7 +397,107 @@ def build_figure1(
     axis = axes[0, 0]
     axis.set_axis_off()
     panel_label(axis, "a", x=-0.06, y=1.03)
-    if panel_a_variant == "workflow_scope":
+    if panel_a_variant == "reader_path_units":
+        axis.set_title("Inference workflow and identity scope", loc="left", pad=4)
+        node_style = {
+            "transform": axis.transAxes,
+            "ha": "center",
+            "va": "center",
+            "linespacing": 1.08,
+            "bbox": {
+                "boxstyle": "round,pad=0.20",
+                "facecolor": "white",
+                "linewidth": 0.8,
+            },
+        }
+        top_nodes = (
+            (0.18, "Input\n150,402 B-lineage cells", COLORS["internal"]),
+            (0.70, "Disease-blind identity\nstress tests (b-d)", COLORS["secondary"]),
+        )
+        for x_value, label, color in top_nodes:
+            style = dict(node_style)
+            style["bbox"] = dict(node_style["bbox"], edgecolor=color)
+            axis.text(x_value, 0.83, label, fontsize=6.85, **style)
+        axis.annotate(
+            "",
+            xy=(0.52, 0.83),
+            xytext=(0.35, 0.83),
+            xycoords=axis.transAxes,
+            arrowprops={"arrowstyle": "-|>", "lw": 0.75, "color": COLORS["dark"]},
+        )
+        scaffold_style = dict(node_style)
+        scaffold_style["bbox"] = dict(node_style["bbox"], edgecolor=COLORS["teal"])
+        axis.text(
+            0.50,
+            0.65,
+            "Retained analysis scaffold: B_CONV / B_ASC",
+            fontsize=6.9,
+            fontweight="bold",
+            **scaffold_style,
+        )
+        axis.annotate(
+            "",
+            xy=(0.55, 0.70),
+            xytext=(0.67, 0.77),
+            xycoords=axis.transAxes,
+            arrowprops={"arrowstyle": "-|>", "lw": 0.75, "color": COLORS["dark"]},
+        )
+        inference_style = dict(node_style)
+        inference_style["bbox"] = dict(node_style["bbox"], edgecolor=COLORS["dark"])
+        axis.text(
+            0.50,
+            0.49,
+            "Disease fields joined after identity adjudication",
+            fontsize=6.75,
+            fontweight="bold",
+            **inference_style,
+        )
+        axis.annotate(
+            "",
+            xy=(0.50, 0.55),
+            xytext=(0.50, 0.60),
+            xycoords=axis.transAxes,
+            arrowprops={"arrowstyle": "-|>", "lw": 0.75, "color": COLORS["dark"]},
+        )
+        branch_nodes = (
+            (0.27, "Composition\nB_ASC sample-cohort\nfractions", COLORS["sle"]),
+            (0.73, "Transcription\nB_CONV sample-cohort\npseudobulk", COLORS["ifn"]),
+        )
+        for x_value, label, color in branch_nodes:
+            style = dict(node_style)
+            style["bbox"] = dict(node_style["bbox"], edgecolor=color)
+            axis.text(x_value, 0.30, label, fontsize=6.15, **style)
+        for end in ((0.32, 0.38), (0.68, 0.38)):
+            axis.annotate(
+                "",
+                xy=end,
+                xytext=(0.50, 0.44),
+                xycoords=axis.transAxes,
+                arrowprops={"arrowstyle": "-|>", "lw": 0.75, "color": COLORS["dark"]},
+            )
+        axis.text(
+            0.50,
+            0.11,
+            "Retained: broad-compartment disease analyses",
+            transform=axis.transAxes,
+            ha="center",
+            va="center",
+            fontsize=7.15,
+            fontweight="bold",
+            color=COLORS["teal"],
+        )
+        axis.text(
+            0.50,
+            0.015,
+            "Boundary: hard fine-state assignments unsupported",
+            transform=axis.transAxes,
+            ha="center",
+            va="center",
+            fontsize=6.8,
+            fontweight="bold",
+            color="#555555",
+        )
+    elif panel_a_variant == "workflow_scope":
         axis.set_title("Workflow and identity scope", loc="left", pad=4)
         node_style = {
             "transform": axis.transAxes,
@@ -1396,10 +1496,11 @@ def build_figure5(
         figure = plt.figure(figsize=(7.09, 8.8), constrained_layout=True)
         bottom_height = 1.17 if panel_e_variant == "paired_gene_dot" else 0.92
         middle_height = 2.05 if panel_e_variant == "paired_gene_dot" else 2.30
+        top_height = 0.82 if panel_a_variant == "interpretive_roles" else 0.62
         grid = figure.add_gridspec(
             3,
             2,
-            height_ratios=[0.62, middle_height, bottom_height],
+            height_ratios=[top_height, middle_height, bottom_height],
             width_ratios=[1.08, 0.92],
         )
         design_axis = figure.add_subplot(grid[0, :])
@@ -1423,7 +1524,85 @@ def build_figure5(
 
     design_axis.set_axis_off()
     panel_label(design_axis, "a", x=-0.09, y=1.08)
-    if panel_a_variant == "convergence_boundary":
+    if panel_a_variant == "interpretive_roles":
+        design_axis.set_title("Evidence classes and interpretive roles", loc="left", pad=4, fontsize=8.2)
+        x_positions = (0.02, 0.27, 0.55, 0.78)
+        headers = ("Evidence", "Coverage", "Observed result", "Interpretive role")
+        for x_value, header in zip(x_positions, headers, strict=True):
+            design_axis.text(
+                x_value,
+                0.89,
+                header,
+                transform=design_axis.transAxes,
+                fontweight="bold",
+                va="center",
+                fontsize=7.4,
+            )
+        matrix_rows = (
+            (
+                0.67,
+                "ULM STAT1/STAT2",
+                "3 contrasts",
+                "6/6 positive;\n24-test q<0.05",
+                "confirmatory\nobservational",
+                COLORS["internal"],
+            ),
+            (
+                0.43,
+                "M5911",
+                "3 contrasts",
+                "3/3 NES >3.0",
+                "response-set\nconcordance",
+                COLORS["external"],
+            ),
+            (
+                0.19,
+                "IFN-beta",
+                "2 donors",
+                "12/12 positive\nin each donor",
+                "descriptive\ncontext",
+                COLORS["purple"],
+            ),
+        )
+        for y_value, evidence, coverage, result, role, color in matrix_rows:
+            design_axis.plot(
+                [0.01, 0.98],
+                [y_value + 0.105, y_value + 0.105],
+                transform=design_axis.transAxes,
+                color="#DDDDDD",
+                lw=0.55,
+            )
+            design_axis.plot(
+                [0.015, 0.015],
+                [y_value - 0.075, y_value + 0.075],
+                transform=design_axis.transAxes,
+                color=color,
+                lw=1.3,
+            )
+            design_axis.text(
+                x_positions[0] + 0.025,
+                y_value,
+                evidence,
+                transform=design_axis.transAxes,
+                va="center",
+                fontweight="bold",
+                fontsize=7.2,
+            )
+            design_axis.text(x_positions[1], y_value, coverage, transform=design_axis.transAxes, va="center", fontsize=7.1)
+            design_axis.text(x_positions[2], y_value, result, transform=design_axis.transAxes, va="center", fontsize=7.1)
+            design_axis.text(x_positions[3], y_value, role, transform=design_axis.transAxes, va="center", fontsize=7.1)
+        design_axis.text(
+            0.98,
+            0.015,
+            "Boundary: observational convergence; no causal regulator, direct binding or unique upstream stimulus",
+            transform=design_axis.transAxes,
+            ha="right",
+            va="bottom",
+            color="#444444",
+            fontweight="bold",
+            fontsize=7.1,
+        )
+    elif panel_a_variant == "convergence_boundary":
         branch_x = (0.17, 0.50, 0.83)
         branch_titles = (
             "Regulator activity",

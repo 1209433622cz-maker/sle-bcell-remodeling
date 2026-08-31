@@ -1,0 +1,22 @@
+﻿figure,panel,decision,rationale
+Figure 1,a,MODIFY,Correct sample-cohort units and expose identity-to-disease reader path.
+Figure 1,b,KEEP,Policy comparison retains unique identity-stability ownership.
+Figure 1,c,KEEP,Replicate-wise broad-partition stability remains necessary.
+Figure 1,d,KEEP,State-specific Jaccard and marker support remain necessary.
+Figure 2,a,KEEP,"No numerical, semantic or legibility defect demonstrated."
+Figure 2,b,KEEP,"No numerical, semantic or legibility defect demonstrated."
+Figure 2,c,KEEP,"No numerical, semantic or legibility defect demonstrated."
+Figure 2,d,KEEP,"No numerical, semantic or legibility defect demonstrated."
+Figure 3,a,KEEP,"No numerical, semantic or legibility defect demonstrated."
+Figure 3,b,KEEP,"No numerical, semantic or legibility defect demonstrated."
+Figure 3,c,KEEP,"No numerical, semantic or legibility defect demonstrated."
+Figure 3,d,KEEP,"No numerical, semantic or legibility defect demonstrated."
+Figure 4,a,KEEP,"No numerical, semantic or legibility defect demonstrated."
+Figure 4,b,KEEP,"No numerical, semantic or legibility defect demonstrated."
+Figure 4,c,KEEP,"No numerical, semantic or legibility defect demonstrated."
+Figure 4,d,KEEP,"No numerical, semantic or legibility defect demonstrated."
+Figure 5,a,MODIFY,Separate multiplicity metadata from parallel interpretive roles.
+Figure 5,b,KEEP,Owns core and extended IFN-regulator estimates.
+Figure 5,c,KEEP,Owns proliferation-specificity comparators.
+Figure 5,d,KEEP,Owns M5911 response-set enrichment.
+Figure 5,e,KEEP,Owns descriptive two-donor IFN-beta response context.

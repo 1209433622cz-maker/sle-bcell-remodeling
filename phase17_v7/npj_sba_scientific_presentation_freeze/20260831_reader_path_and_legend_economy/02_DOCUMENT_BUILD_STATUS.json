@@ -1,0 +1,68 @@
+{
+  "created_at": "2026-08-31T21:22:59+08:00",
+  "status": "PASS_SCIENTIFIC_PRESENTATION_DOCX_BUILT_DUAL_RENDER_REQUIRED",
+  "build_results": [
+    {
+      "source": "phase17_v7/npj_sba_scientific_presentation_freeze/20260831_reader_path_and_legend_economy/sources/Manuscript_scientific_presentation_freeze_candidate.md",
+      "output": "phase17_v7/npj_sba_scientific_presentation_freeze/20260831_reader_path_and_legend_economy/documents/Manuscript_scientific_presentation_freeze_candidate.docx",
+      "paragraphs": 150,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 60616
+    },
+    {
+      "source": "phase17_v7/npj_sba_scientific_presentation_freeze/20260831_reader_path_and_legend_economy/sources/Supplementary_Information_scientific_presentation_freeze_candidate.md",
+      "output": "phase17_v7/npj_sba_scientific_presentation_freeze/20260831_reader_path_and_legend_economy/documents/Supplementary_Information_scientific_presentation_freeze_candidate.docx",
+      "paragraphs": 69,
+      "tables": 10,
+      "inline_shapes": 10,
+      "placeholders": 0,
+      "bytes": 4745857
+    }
+  ],
+  "object_inventory": {
+    "manuscript_inline_shapes": 0,
+    "supplement_inline_shapes": 10,
+    "supplement_expected_figures": 10,
+    "supplement_object_count_matches": true
+  },
+  "files": {
+    "Manuscript_scientific_presentation_freeze_candidate.docx": {
+      "bytes": 60669,
+      "sha256": "71591F156B963EF21CCE44D952296CA9255075569C9BDD2827829813CFF13E24"
+    },
+    "Supplementary_Information_scientific_presentation_freeze_candidate.docx": {
+      "bytes": 4745889,
+      "sha256": "26C8A395C82B2689205F86DFCC73E4BCE88E6728D4A5B6936199B26E63D7999C"
+    }
+  },
+  "checks": {
+    "manuscript": {
+      "title_exact": true,
+      "article_type_present": true,
+      "abstract_145_words": true,
+      "figure1_bounded_scaffold_title": true,
+      "figure1_sample_cohort_units": true,
+      "figure5_regulatory_context_title": true,
+      "figure5_parallel_roles": true,
+      "figure5_causal_boundary": true,
+      "current_doi_present": true,
+      "old_doi_absent": true,
+      "no_embedded_figures": true
+    },
+    "supplement": {
+      "ten_figures_embedded": true,
+      "title_synchronized": true,
+      "corrected_calibration_failure_present": true,
+      "calibration_hold_absent": true,
+      "formal_hold_absent": true,
+      "internal_c9_pass_absent": true,
+      "current_doi_present": true,
+      "old_doi_absent": true
+    }
+  },
+  "scientific_estimates_changed": false,
+  "source_data_changed": false,
+  "exact_submission_package_modified": false
+}
