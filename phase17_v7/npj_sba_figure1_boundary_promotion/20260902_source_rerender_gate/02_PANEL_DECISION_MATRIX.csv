@@ -1,0 +1,60 @@
+﻿tier,object,scientific_decision,artwork_action,rationale
+Main,Figure 1a,KEEP,SOURCE_RERENDER_SAME_ROLE,Workflow role retained; rerendered only because the composite figure changed.
+Main,Figure 1b,KEEP,SOURCE_RERENDER_SAME_ROLE,Policy-selection role and frozen values retained.
+Main,Figure 1c,KEEP_RELOCATED,CURRENT_1D_TO_1C,Frozen state-Jaccard summary replaces the redundant replicate-series slot.
+Main,Figure 1d,SOURCE_REPLACEMENT,S4_BOUNDARY_SUMMARY,End-to-end B_ASC overlap boundary promoted from frozen S4 Source Data.
+Main,Figure 2a,KEEP,KEEP_EXACT,Main scientific panel retained without change.
+Main,Figure 2b,KEEP,KEEP_EXACT,Main scientific panel retained without change.
+Main,Figure 2c,KEEP,KEEP_EXACT,Main scientific panel retained without change.
+Main,Figure 2d,KEEP,KEEP_EXACT,Main scientific panel retained without change.
+Main,Figure 3a,KEEP,KEEP_EXACT,Main scientific panel retained without change.
+Main,Figure 3b,KEEP,KEEP_EXACT,Main scientific panel retained without change.
+Main,Figure 3c,KEEP,KEEP_EXACT,Main scientific panel retained without change.
+Main,Figure 3d,KEEP,KEEP_EXACT,Main scientific panel retained without change.
+Main,Figure 4a,KEEP,KEEP_EXACT,Main scientific panel retained without change.
+Main,Figure 4b,KEEP,KEEP_EXACT,Main scientific panel retained without change.
+Main,Figure 4c,KEEP,KEEP_EXACT,Main scientific panel retained without change.
+Main,Figure 4d,KEEP,KEEP_EXACT,Main scientific panel retained without change.
+Main,Figure 5a,KEEP,KEEP_EXACT,Main scientific panel retained without change.
+Main,Figure 5b,KEEP,KEEP_EXACT,Main scientific panel retained without change.
+Main,Figure 5c,KEEP,KEEP_EXACT,Main scientific panel retained without change.
+Main,Figure 5d,KEEP,KEEP_EXACT,Main scientific panel retained without change.
+Main,Figure 5e,KEEP,KEEP_EXACT,Main scientific panel retained without change.
+Supplementary,Supplementary Figure S1a,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S1b,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S1c,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S1d,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S2a,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S2b,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S2c,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S2d,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S3a,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S3b,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S4a,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S4b,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S4c,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S4d,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S4e,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S5a,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S5b,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S5c,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S5d,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S6a,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S6b,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S6c,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S7a,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S7b,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S7c,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S7d,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S8a,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S8b,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S8c,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S8d,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S9a,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S9b,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S9c,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S9d,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S10a,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S10b,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S10c,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.
+Supplementary,Supplementary Figure S10d,KEEP,DISPLAY_ID_RENUMBER_ONLY,Scientific panel retained byte-identically; display identifier follows first-citation order.

@@ -1,0 +1,342 @@
+我继续按“**科学内容与图件优先、暂不推进投稿工程**”做了新一轮 hostile audit。这次没有机械接受 `59/59 KEEP` 的既有结论，而是重新问了一遍：**主图是否真的把论文最重要的科学转折放在了读者第一视野里？**
+
+结论发生了一处很窄、但我认为值得真正重开的变化：
+
+> **当前手稿科学上已经成立，但 Figure 1 的信息层级仍有一个可实质改善点。**
+>
+> 我建议从完全冻结暂时切换到
+> **`FIGURE1_BOUNDARY_PROMOTION_SOURCE_RERENDER_GATE`**，
+> 只重开 Figure 1，其他 Figure 2–5 与 S1–S10 全部继续冻结。
+
+当前 claim-owner 修复本身已经正确：S4a/S4b 分别落在 correlation-aware 与 overlap-depletion 段落，S3 回到 quantitative synthesis，S5–S8 回到 reproducibility/provenance。  GitHub 当前 commit 也确认为 `a92209af...`，提交信息就是 `Align supplementary table claim ownership`。
+
+## 这一轮为什么重新打开 Figure 1
+
+当前标题和 Abstract 的真正科学矛盾是：
+
+**固定表示下 broad B-cell scaffold 看起来很稳定，但完整 end-to-end reconstruction 后 B_ASC overlap 失败；然而这种身份不确定性又没有推翻主要疾病结论。**
+
+Abstract 已经把这个放在最前面：end-to-end resampling 未满足 ASC overlap criterion，但传播 assignment exchanges 后 composition interpretation 和 B_CONV IFN/ISG 结论仍保持。
+
+Results 也是非常清楚的两阶段逻辑：
+
+* frozen 50-dimensional Harmony representation 下 broad partition 通过；
+* end-to-end reconstruction 后 B_ASC median Jaccard = 0.930、minimum = 0.872，低于 0.95 criterion；
+* B_CONV 则保持极高稳定性；
+* 传播这些边界交换后 disease-level conclusions 没有改变。
+
+问题在于，**当前主 Figure 1b–d 几乎全部都在画“frozen representation 为什么通过”**。Figure legend 自己也明确说 b–d 都是 representation held fixed，而真正的 end-to-end reconstruction 放在 Supplementary Fig. S4。
+
+也就是说：
+
+**正文最重要的“边界”在主图里没有真正出现。**
+
+这并不是错误，但对于追求非常强的 Nature/npj 式 narrative hierarchy，我认为它比继续调整文字更值得处理。
+
+---
+
+## Figure 1：我现在建议从 4/4 KEEP 改成“2 KEEP + 1 relocation + 1 source replacement”
+
+### Figure 1a — KEEP
+
+仍然保留。
+
+它的职责不是装饰性 workflow，而是告诉读者：
+
+**identity adjudication → 然后才 join disease fields → 然后才做 composition / transcription。**
+
+这与论文方法学主张高度一致。
+
+我仍然反对把它替换成 UMAP、细胞图标、Sankey 或所谓“机制网络”。
+
+### Figure 1b — KEEP
+
+继续负责：
+
+**fine-state policies → broad two-compartment scaffold 的选择。**
+
+它回答的是“为什么最终不是 five-state/four-state/three-state”。
+
+不能删。
+
+### 当前 Figure 1c — 建议退出 main figure
+
+当前 1c 是 20 次 frozen-representation resample 的：
+
+* mapped ARI
+* mapping agreement
+
+它本身完全正确，但与 1b、当前 1d 在科学职责上有明显重叠：
+
+三者都在回答：
+
+> broad partition 在 representation fixed 时很稳定。
+
+这恰好是当前 Figure 1 最“重复”的位置。
+
+所以我不建议手修它，而建议：
+
+**保留 Source Data 和数值 provenance，但不继续占用一个 main-panel slot。**
+
+### 当前 Figure 1d → 新 Figure 1c
+
+当前 1d 的 state-level Jaccard 是更好的 frozen-representation owner：
+
+* B_CONV minimum/median ≈ 0.9998/0.9999
+* B_ASC minimum/median ≈ 0.981/0.991
+* 均处于 0.95 state-median gate 之上。
+
+所以它应该成为新 **Figure 1c：Frozen representation PASS**。
+
+### 新 Figure 1d — 从 frozen end-to-end Source Data 重跑
+
+这一格才放真正的 central boundary：
+
+* B_CONV end-to-end minimum/median Jaccard
+  ≈ **0.998760 / 0.999363**
+* B_ASC end-to-end minimum/median Jaccard
+  ≈ **0.871750 / 0.930323**
+* prespecified criterion = **0.95**
+
+这样主图会变成非常清楚的四步：
+
+**a. inference boundary**
+→ **b. policy selection**
+→ **c. frozen representation PASS**
+→ **d. end-to-end B_ASC HOLD**
+
+这比当前：
+
+**workflow → policy selection → another frozen metric → another frozen metric**
+
+明显更强。
+
+---
+
+## 我已经用当前冻结 Source Data 实际重跑了候选图
+
+这一点不是靠我手填 manuscript 数字画示意图。
+
+我在现有审计工作区定位到了与当前 GitHub manifest **SHA-256 完全一致**的两个冻结 Source Data：
+
+* `Figure1_source_data.csv`
+  `F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805`
+* 当前 `Supplementary_Figure_S4_source_data.csv`
+  `46EE840F86CA33AA4F5FCE0A37EEFCB4DB23831533BBFA20400BAE50744F5D42`
+
+GitHub 当前冻结 manifest 也记录了这两份 source-data 对象的相同哈希。
+
+据此已经做了一张**非 canonical、仅用于架构比较的 source-rerun candidate**：
+
+[查看 Figure 1 boundary-promotion candidate v3](sandbox:/mnt/data/sle_figure1_bounded_scaffold_candidate/Figure1_boundary_promotion_candidate_v3.png)
+
+以及候选所使用的 exact values：
+
+[Figure 1 candidate source values](sandbox:/mnt/data/sle_figure1_bounded_scaffold_candidate/Figure1_candidate_state_jaccard_source_values.csv)
+
+[Source hash provenance](sandbox:/mnt/data/sle_figure1_bounded_scaffold_candidate/SOURCE_HASH_PROVENANCE.txt)
+
+这张目前还是**architecture prototype**，不是要求直接替换现有正式 Figure 1。最终版仍应回到项目自己的 Nature typography/render pipeline 重新生成 PDF+PNG。
+
+---
+
+# Figure 2–5：这一轮仍然不建议动
+
+### Figure 2：4/4 KEEP
+
+四个 panel 职责非常干净：
+
+* a observed abundance + adjusted means
+* b contrasts
+* c mandatory sensitivities
+* d 90 sample deletions
+
+没有哪个 panel 是纯重复。
+
+尤其 Figure 2 的作用不是证明 B_ASC “不存在差异”，而是把 **lack of statistical support** 表达得非常克制；正文也明确说 CI 不代表等效，也不能排除增加。
+
+不建议重画。
+
+### Figure 3：4/4 KEEP
+
+它已经形成很好的证据阶梯：
+
+**program-level → robustness → gene-level → specificity controls**
+
+特别是 3c 和 3d 不应该为了“更漂亮”换成 volcano plot 或 pathway bubble plot。
+
+volcano 会让文章重新退回“找差异基因”的常规生信叙事，反而弱化 frozen-program 的设计。
+
+### Figure 4：4/4 KEEP
+
+目前 Figure 4 的信息职责几乎是全稿最完整的一组：
+
+* a external IFN effect
+* b discovery ↔ external
+* c 4,410 genes genome-wide discordance + 10/10 IFN concordance
+* d donor/source-label influence
+
+正文明确将 `rho=0.026` 和 program replication 区分开，而不是掩盖 genome-wide 不一致。
+
+这是文章可信度的重要来源，不建议简化。
+
+### Figure 5：5/5 KEEP
+
+我仍然维持此前判断，而且这次更加确定：
+
+**5a 不能改成 causal network。**
+
+当前文字已经非常克制地把 CollecTRI、M5911、GSE23307 分层，并明确：
+
+* observational ranked statistics
+* response signature
+* two-donor healthy perturbation
+* no unique ligand
+* no direct TF binding
+* no causal regulation in SLE。
+
+如果把 5a 做成：
+
+`IFN → STAT1/2 → B cell remodeling`
+
+会在视觉上偷偷把 association 提升成 mechanism。
+
+因此 Figure 5a 的“证据等级图”比机制网络更成熟。
+
+---
+
+# Supplementary S1–S10：38/38 KEEP
+
+这次我不建议再裁 supplementary。
+
+尤其四张必须继续保留：
+
+* **S2**：representation / bridge / ISG-exclusion diagnostics；
+* **S4**：完整 end-to-end reconstruction + propagation；
+* **S8**：corrected external mapping calibration failure；
+* **S9/S10**：correlation-aware 与 overlap-depletion regulator sensitivity。
+
+值得强调的是：
+
+**即使新 Figure 1d 从 S4 的 Source Data 生成，也不应该删除 S4b。**
+
+主图新 1d 只负责 summary：
+
+> frozen PASS → end-to-end B_ASC HOLD
+
+而 S4 仍负责完整审计：
+
+* five criteria；
+* all 20 Jaccard replicates；
+* boundary exchanges；
+* composition propagation；
+* IFN propagation。
+
+这是合理的 main-summary / supplement-detail 层级，不是重复。
+
+---
+
+## 当前 59/59 KEEP 应该怎样重新解释
+
+GitHub 当前 matrix 仍记录 21 个 main + 38 个 supplementary 全部 KEEP。 当前机器状态也确认：
+
+* 45 frozen assets unchanged；
+* 21 + 38 panels retained；
+* 0 new / replacement；
+* 31-page WPS/LO；
+* 180/180 tests。
+
+我认为这些结论证明的是：
+
+> **当前版本没有错误。**
+
+但它并不意味着：
+
+> **当前 main-figure information hierarchy 已经是理论最优。**
+
+因此本轮我建议把裁决细化成：
+
+| 对象            | 新裁决                        |
+| ------------- | -------------------------- |
+| Figure 1a     | KEEP                       |
+| Figure 1b     | KEEP                       |
+| 当前 Figure 1c  | **REPLACE IN MAIN**        |
+| 当前 Figure 1d  | **RELOCATE → new 1c**      |
+| new Figure 1d | **SOURCE-RERUN CANDIDATE** |
+| Figure 2a–d   | KEEP                       |
+| Figure 3a–d   | KEEP                       |
+| Figure 4a–d   | KEEP                       |
+| Figure 5a–e   | KEEP                       |
+| S1–S10        | KEEP                       |
+
+所以不是“大规模解冻”，而是**只找到一个值得真正试验的 panel slot**。
+
+---
+
+# 手稿文字不应该再泛化润色
+
+如果 Figure 1 candidate 最终通过，正文只需要极窄的 source-linked 改动：
+
+当前 frozen partition 那一段从：
+
+`(Fig. 1a-d)`
+
+调整为：
+
+`(Fig. 1a-c)`
+
+而 end-to-end paragraph 首次呈现结果的位置改成类似：
+
+`(Fig. 1d; Supplementary Fig. S4)`
+
+然后 Figure 1 legend 重新定义 c/d。
+
+除此之外：
+
+* Abstract 不改；
+* Discussion 不改；
+* 所有数字不改；
+* threshold 不改；
+* S4 不改；
+* Source Data 不改；
+* Figure 2–5 不改。
+
+这符合你要求的原则：
+
+**发现图形层级问题 → 从冻结源重画解决，而不是继续在文字上打补丁。**
+
+---
+
+# 下一阶段目标
+
+这一次我不建议直接返回 maintenance freeze。
+
+下一阶段应当非常窄地进入：
+
+## `FIGURE1_BOUNDARY_PROMOTION_SOURCE_RERENDER_GATE`
+
+任务只有一件事：
+
+用项目当前正式绘图代码与 typography contract，基于上述两个**哈希锁定的 frozen Source Data**，重绘正式 Figure 1 candidate，然后和当前 Figure 1 做 actual-size hostile comparison。
+
+只有同时满足：
+
+* 新 Figure 1 明显更快传递
+  **policy selection → frozen PASS → end-to-end B_ASC boundary**；
+* 字体、线宽、marker、留白仍符合当前 Nature 风格；
+* 不产生新 statistical claim；
+* S4 仍保留详细 ownership；
+* manuscript 31-page rendering 不恶化；
+* 全量 regression 通过；
+
+才采用。
+
+否则就应该**把 candidate 丢掉，当前 Figure 1 byte-identically 恢复**。
+
+我已经把这一轮详细审计和执行门整理好：
+
+* [本轮详细行动记录](sandbox:/mnt/data/sle_figure1_boundary_promotion_audit/action_record_2026-09-02_figure1_boundary_promotion_hostile_audit.md)
+* [Panel reopen 决策矩阵](sandbox:/mnt/data/sle_figure1_boundary_promotion_audit/PANEL_REOPEN_DECISION_MATRIX.csv)
+* [Figure 1 source-rerender gate](sandbox:/mnt/data/sle_figure1_boundary_promotion_audit/FIGURE1_BOUNDARY_PROMOTION_SOURCE_RERENDER_GATE.md)
+
+**我认为这是目前为止少数仍然真正值得动的地方。**它不是为了让图“更漂亮”，而是让主 Figure 1 自己就能回答标题提出的核心问题：**为什么这个 B-cell scaffold 可以用于 disease inference，却不能被升级成稳定、可迁移的 taxonomy。**

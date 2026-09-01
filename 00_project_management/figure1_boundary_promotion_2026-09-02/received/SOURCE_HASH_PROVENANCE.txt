@@ -1,0 +1,3 @@
+Figure1 source SHA-256: F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805
+End-to-end source SHA-256: 46EE840F86CA33AA4F5FCE0A37EEFCB4DB23831533BBFA20400BAE50744F5D42
+The second file is the pre-reader-path display-name copy of the current Supplementary Figure S4 source data; its SHA-256 matches the current GitHub frozen manifest.

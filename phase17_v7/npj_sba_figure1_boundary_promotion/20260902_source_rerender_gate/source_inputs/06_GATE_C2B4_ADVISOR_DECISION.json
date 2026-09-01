@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-08-15T14:00:31+08:00",
+  "decision": "PASS_C2B4_TWO_COMPARTMENT_FREEZE_OUTCOME_UNLOCK_AUTHORIZED",
+  "disease_blind": true,
+  "source_c2b3_decision_preserved": "HOLD_GATE_C2B3_REVIEW_REQUIRED",
+  "identity_model": "two_compartment_with_continuous_within_conventional_programs",
+  "frozen_neutral_ids": [
+    "B_CONV",
+    "B_ASC"
+  ],
+  "outcome_unlock_authorized": true,
+  "outcome_unlock_scope": "two-compartment composition and prespecified continuous within-conventional programs",
+  "hard_naive_memory_composition_authorized": false,
+  "platelet_overlay_identity_authorized": false,
+  "thresholds": {
+    "median_mapped_ari": 0.95,
+    "minimum_mapped_ari": 0.9,
+    "median_mapping_agreement": 0.995,
+    "minimum_mapping_agreement": 0.99,
+    "minimum_state_median_jaccard": 0.95,
+    "asc_marker_sample_support": 0.9
+  },
+  "two_compartment_metrics": {
+    "median_mapped_ari": 0.9955532945978536,
+    "minimum_mapped_ari": 0.9902066569784328,
+    "median_mapping_agreement": 0.9999251994680851,
+    "minimum_mapping_agreement": 0.9998337765957447,
+    "minimum_state_median_jaccard": 0.9913709736725989,
+    "minimum_state_minimum_jaccard": 0.9810964083175804
+  },
+  "checks": {
+    "c2b3_integrity": {
+      "pass": true,
+      "detail": "30/30 manifest rows verified"
+    },
+    "source_hold_preserved": {
+      "pass": true,
+      "detail": "original five/four/three-state HOLD remains unchanged"
+    },
+    "representation_contract": {
+      "pass": true,
+      "detail": "schema=2; PCs=50/50"
+    },
+    "transition_reconstruction_equivalence": {
+      "pass": true,
+      "detail": "maximum agreement delta=1.110e-16"
+    },
+    "two_compartment_replicates": {
+      "pass": true,
+      "detail": "20/20 replicates"
+    },
+    "two_compartment_median_mapped_ari": {
+      "pass": true,
+      "detail": "0.996 >= 0.950"
+    },
+    "two_compartment_minimum_mapped_ari": {
+      "pass": true,
+      "detail": "0.990 >= 0.900"
+    },
+    "two_compartment_median_mapping_agreement": {
+      "pass": true,
+      "detail": "0.9999 >= 0.9950"
+    },
+    "two_compartment_minimum_mapping_agreement": {
+      "pass": true,
+      "detail": "0.9998 >= 0.9900"
+    },
+    "two_compartment_state_jaccard": {
+      "pass": true,
+      "detail": "0.991 >= 0.950"
+    },
+    "asc_marker_panel": {
+      "pass": true,
+      "detail": "required markers present: DERL3, JCHAIN, MZB1, TNFRSF17, XBP1"
+    },
+    "asc_marker_sample_support": {
+      "pass": true,
+      "detail": "minimum required-marker support=1.000"
+    },
+    "asc_cluster_sample_support": {
+      "pass": true,
+      "detail": "cluster median support=1.000"
+    },
+    "disease_blind_contract": {
+      "pass": true,
+      "detail": "transition, marker and candidate evidence remain disease blind"
+    }
+  },
+  "next_if_pass": "begin Gate C3 sample-level two-compartment composition and continuous-program design",
+  "next_if_hold": "run independent full-graph seed decomposition before any outcome unlock"
+}

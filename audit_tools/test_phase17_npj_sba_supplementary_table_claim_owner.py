@@ -13,6 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RUN = ROOT / "phase17_v7/npj_sba_supplementary_table_claim_owner/20260902_semantic_micropass"
 PARENT = ROOT / "phase17_v7/npj_sba_supplementary_citation_refreeze/20260901_first_citation_order"
+CURRENT = ROOT / "phase17_v7/npj_sba_figure1_boundary_promotion/20260902_source_rerender_gate"
 
 
 def sha256(path: Path) -> str:
@@ -30,10 +31,10 @@ class SupplementaryTableClaimOwnerTests(unittest.TestCase):
         self.assertEqual(self.integration["failed_checks"], [])
         self.assertTrue(all(self.integration["checks"].values()))
 
-    def test_root_main_matches_exact_candidate(self) -> None:
+    def test_root_main_matches_current_scientific_candidate(self) -> None:
         self.assertEqual(
             sha256(ROOT / "01_manuscript/Manuscript.md"),
-            sha256(RUN / "sources/Manuscript_claim_owner_semantic_micropass.md"),
+            sha256(CURRENT / "sources/Manuscript_figure1_boundary_promotion.md"),
         )
 
     def test_supplement_remains_immutable(self) -> None:

@@ -1,0 +1,21 @@
+panel,series,category,estimate,secondary_value,detail
+a,study_design,GSE174188 source B lineage,152981.0,30172.0,cells before hard QC; genes
+a,study_design,GSE174188 hard-QC retained,150402.0,259.0,cells; donors
+a,study_design,metadata hierarchy,271.0,332.0,samples; sample-cohort strata; 88 libraries
+b,median mapped ARI,5-state,0.88025846129991,0.9633103390957448,20 disease-blind resamples
+b,minimum mapped ARI,5-state,0.3515652858292529,0.7840342420212766,20 disease-blind resamples
+b,median mapped ARI,4-state,0.8998827476719911,0.9731798537234042,20 disease-blind resamples
+b,minimum mapped ARI,4-state,0.3376965588701118,0.7935339095744681,20 disease-blind resamples
+b,median mapped ARI,3-state,0.9002473450764503,0.9743475731382978,20 disease-blind resamples
+b,minimum mapped ARI,3-state,0.3248987221875242,0.7948886303191489,20 disease-blind resamples
+b,median mapped ARI,2-compartment,0.9955532945978536,0.9999251994680852,20 disease-blind resamples
+b,minimum mapped ARI,2-compartment,0.9902066569784328,0.9998337765957448,20 disease-blind resamples
+c,minimum Jaccard,B_CONV,0.9998323301084824,0.95,fixed representation; state-median criterion=0.95
+c,median Jaccard,B_CONV,0.999924551078872,0.95,fixed representation; state-median criterion=0.95
+c,minimum Jaccard,B_ASC,0.9810964083175804,0.95,fixed representation; state-median criterion=0.95
+c,median Jaccard,B_ASC,0.9913709736725989,0.95,fixed representation; state-median criterion=0.95
+d,minimum Jaccard,B_CONV,0.9987595755736964,0.95,end-to-end reconstruction; state-median criterion=0.95
+d,median Jaccard,B_CONV,0.9993629961060673,0.95,end-to-end reconstruction; state-median criterion=0.95
+d,minimum Jaccard,B_ASC,0.8717504332755632,0.95,end-to-end reconstruction; state-median criterion=0.95
+d,median Jaccard,B_ASC,0.9303233364573571,0.95,end-to-end reconstruction; state-median criterion=0.95
+c,B_ASC marker support,DERL3|JCHAIN|MZB1|TNFRSF17|XBP1,5.0,1.0,required markers present; minimum required-marker sample support

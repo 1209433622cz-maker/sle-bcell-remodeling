@@ -1,0 +1,11 @@
+﻿object,scientific_decision,artwork_action,rationale
+Figure 1a,KEEP,KEEP exact scientific role,Workflow/identity-to-disease boundary is unique.
+Figure 1b,KEEP,KEEP,Policy selection is unique and necessary.
+Figure 1c (current),REPLACE_IN_MAIN_CANDIDATE,Remove from main; preserve source data,Redundant frozen-representation detail relative to 1b/1d; main slot better used for the central end-to-end boundary.
+Figure 1d (current),RELOCATE,Become new Figure 1c,Best compact owner of frozen state-level PASS.
+Figure 1d (new),NEW_SUMMARY_FROM_FROZEN_SOURCE,Rerun from current S4 source data,Expose B_ASC-specific end-to-end HOLD in the main figure.
+Figure 2a-d,KEEP,KEEP,All four panels own distinct composition evidence.
+Figure 3a-d,KEEP,KEEP,All four panels own distinct transcription/robustness evidence.
+Figure 4a-d,KEEP,KEEP,All four panels own distinct external-replication evidence.
+Figure 5a-e,KEEP,KEEP,Evidence-class panel plus regulator/response evidence should remain.
+Supplementary S1-S10,KEEP,KEEP,No supplementary replacement justified; S4 remains complete end-to-end audit.
