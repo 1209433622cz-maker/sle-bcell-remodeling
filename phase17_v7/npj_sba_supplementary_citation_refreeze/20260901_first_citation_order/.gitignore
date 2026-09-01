@@ -1,0 +1,10 @@
+# Regenerable pagination candidates and renderer workspaces.
+qa/pagination_candidates/
+qa/final_lo_render/
+qa/lo_render/
+qa/wps_pages/
+qa/lo_pages/
+
+# Keep final contact sheets and audit JSON, not per-page raster intermediates.
+qa/final_wps_pages/*/
+qa/final_lo_pages/*/

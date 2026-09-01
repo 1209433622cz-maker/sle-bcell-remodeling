@@ -1,0 +1,96 @@
+--- Supplementary_Information_before.md
++++ Supplementary_Information_after.md
+@@ -80,9 +80,9 @@
+ | Figure 3 | Raw-count pseudobulk transcription with explicit tested-gene symbols | Figure3_source_data.csv |
+ | Figure 4 | Source-label-defined GSE135779 replication and influence analyses | Figure4_source_data.csv |
+ | Figure 5 | Regulatory and orthogonal response evidence | Figure5_source_data.csv |
+-| Supplementary Figure S8 | STAT1/STAT2 IFN-overlap-depletion sensitivity | Supplementary_Figure_S8_source_data.csv |
+-| Supplementary Figure S9 | End-to-end identity boundary and downstream propagation | Supplementary_Figure_S9_source_data.csv |
+-| Supplementary Figure S10 | Corrected reference calibration and unresolved external transfer | Supplementary_Figure_S10_source_data.csv |
++| Supplementary Figure S4 | End-to-end identity boundary and downstream propagation | Supplementary_Figure_S4_source_data.csv |
++| Supplementary Figure S8 | Corrected reference calibration and unresolved external transfer | Supplementary_Figure_S8_source_data.csv |
++| Supplementary Figure S10 | STAT1/STAT2 IFN-overlap-depletion sensitivity | Supplementary_Figure_S10_source_data.csv |
+ 
+ ## Supplementary Table S6 | Reproducibility record
+ 
+@@ -160,47 +160,35 @@
+ 
+ ## Supplementary Figure S3 | Fine-state failure and transition structure
+ 
+-**a,** Median and minimum cluster Jaccard values localize instability to fine-state membership across the five-, four- and three-state policies considered before broad adjudication. **b,** Mean transition matrix from original resolution-0.4 clusters to mapped reference clusters across frozen-representation resamples. These diagnostics explain the transition to the broad B_CONV/B_ASC analysis scaffold; broad-state pass criteria are shown in Fig. 1 and end-to-end reconstruction is shown in Supplementary Fig. S9. Highly variable genes, principal components and Harmony coordinates were not recomputed in this figure.
++**a,** Median and minimum cluster Jaccard values localize instability to fine-state membership across the five-, four- and three-state policies considered before broad adjudication. **b,** Mean transition matrix from original resolution-0.4 clusters to mapped reference clusters across frozen-representation resamples. These diagnostics explain the transition to the broad B_CONV/B_ASC analysis scaffold; broad-state pass criteria are shown in Fig. 1 and end-to-end reconstruction is shown in Supplementary Fig. S4. Highly variable genes, principal components and Harmony coordinates were not recomputed in this figure.
+ 
+ [[SUPPLEMENTARY_FIGURE:S3]]
+ 
+-## Supplementary Figure S4 | Composition-model diagnostics
++## Supplementary Figure S4 | End-to-end reconstruction exposes a B_ASC-specific boundary without changing the disease conclusions
++
++**a,** Observed values and prespecified criteria for five end-to-end two-compartment checks; four met their criteria and minimum state-median Jaccard did not. **b,** State Jaccard across 20 complete reconstruction replicates localizes the unmet overlap criterion to B_ASC, while B_CONV remains above 0.95. **c,** Counts of sampled cells exchanged across the B_CONV/B_ASC boundary. **d,** Primary B_ASC composition odds ratios and 95% confidence intervals after each observed boundary exchange; the dashed guide marks one and the orange line marks the frozen estimate. **e,** Primary and donor-nonoverlap B_CONV IFN/ISG effects after boundary-cell raw counts were propagated through frozen TMM logCPM and HC3 models; dotted lines mark the frozen effects. All propagation analyses reuse GSE174188 and quantify assignment sensitivity rather than independent replication.
++
++[[SUPPLEMENTARY_FIGURE:S4]]
++
++## Supplementary Figure S5 | Composition-model diagnostics
+ 
+ **a,** Total and zero-ASC sample-cohort strata in the three base contrasts. **b,** Primary B_ASC odds ratios under support, explicit non-B and residual-risk policies using observed-information and HC1 covariance. **c,** Firth-logistic ASC-presence sensitivity. **d,** Positive-only abundance sensitivity using HC3 uncertainty. Panels c-d use logarithmic ratio axes with the null fixed at one; the two-part models are sensitivity analyses and do not replace the frozen beta-binomial primary model.
+ 
+-[[SUPPLEMENTARY_FIGURE:S4]]
+-
+-## Supplementary Figure S5 | Pseudobulk and ranked-list diagnostics
++[[SUPPLEMENTARY_FIGURE:S5]]
++
++## Supplementary Figure S6 | Pseudobulk and ranked-list diagnostics
+ 
+ **a,** Numbers of filterByExpr-tested and BH-significant genes across seven GSE174188 branches. **b,** Common and median tagwise edgeR dispersions. **c,** Mitochondrial, ribosomal, haemoglobin and immunoglobulin fractions among increasingly long primary ranked lists. IFN/ISG estimates across the frozen GSE174188 branches are owned by Fig. 3b and are not repeated here.
+ 
+-[[SUPPLEMENTARY_FIGURE:S5]]
+-
+-## Supplementary Figure S6 | GSE135779 replication and robustness diagnostics
++[[SUPPLEMENTARY_FIGURE:S6]]
++
++## Supplementary Figure S7 | GSE135779 replication and robustness diagnostics
+ 
+ **a,** Control and SLE donor counts across the five GSE135779 models. **b,** Four-program childhood estimates. **c,** Childhood IFN/ISG estimates after omission of each source B-cell label. **d,** Full childhood program effects and ranges across donor-deletion analyses.
+ 
+-[[SUPPLEMENTARY_FIGURE:S6]]
+-
+-## Supplementary Figure S7 | Correlation-aware regulator sensitivity
+-
+-**a,** CAMERA and FRY six-test BH concordance for STAT1 and STAT2. Dashed guides indicate q=0.05. **b,** CAMERA residual-estimated inter-gene correlations. **c,** Exact CAMERA and FRY BH q values. **d,** Matched signed-target counts, which equal the frozen ULM family (STAT1: 98, 129 and 161; STAT2: 14, 19 and 20).
+-
+ [[SUPPLEMENTARY_FIGURE:S7]]
+ 
+-## Supplementary Figure S8 | STAT1/STAT2 IFN-overlap-depletion sensitivity
+-
+-**a,** ULM slopes and 95% confidence intervals after removal of the frozen 12-gene IFN/ISG positive arm. **b,** Corresponding estimates after removal of all 97 M5911 genes; discovery STAT2 retains eight targets and its interval crosses zero. Labels report remaining matched targets. **c,** Exact branch- and method-specific Benjamini-Hochberg q values across the six regulator-by-contrast tests. **d,** Percentage of frozen matched targets retained after each depletion. All method-level directions remain positive, but M5911 depletion produces substantial attenuation and does not support an overlap-independent interpretation.
+-
+-[[SUPPLEMENTARY_FIGURE:S8]]
+-
+-## Supplementary Figure S9 | End-to-end reconstruction exposes a B_ASC-specific boundary without changing the disease conclusions
+-
+-**a,** Observed values and prespecified criteria for five end-to-end two-compartment checks; four met their criteria and minimum state-median Jaccard did not. **b,** State Jaccard across 20 complete reconstruction replicates localizes the unmet overlap criterion to B_ASC, while B_CONV remains above 0.95. **c,** Counts of sampled cells exchanged across the B_CONV/B_ASC boundary. **d,** Primary B_ASC composition odds ratios and 95% confidence intervals after each observed boundary exchange; the dashed guide marks one and the orange line marks the frozen estimate. **e,** Primary and donor-nonoverlap B_CONV IFN/ISG effects after boundary-cell raw counts were propagated through frozen TMM logCPM and HC3 models; dotted lines mark the frozen effects. All propagation analyses reuse GSE174188 and quantify assignment sensitivity rather than independent replication.
+-
+-[[SUPPLEMENTARY_FIGURE:S9]]
+-
+-## Supplementary Figure S10 | Reference calibration limits source-label-independent external transfer
++## Supplementary Figure S8 | Reference calibration limits source-label-independent external transfer
+ 
+ **a,** Median and interquartile range of full-library divided by selected-feature
+ counts among 13,000 B_CONV and 1,300 B_ASC reference training cells. This ratio
+@@ -217,4 +205,17 @@
+ B_ASC precision failure prevents outcome access; centroid success is not a
+ replacement analysis. No corrected external disease result is shown.
+ 
++[[SUPPLEMENTARY_FIGURE:S8]]
++
++## Supplementary Figure S9 | Correlation-aware regulator sensitivity
++
++**a,** CAMERA and FRY six-test BH concordance for STAT1 and STAT2. Dashed guides indicate q=0.05. **b,** CAMERA residual-estimated inter-gene correlations. **c,** Exact CAMERA and FRY BH q values. **d,** Matched signed-target counts, which equal the frozen ULM family (STAT1: 98, 129 and 161; STAT2: 14, 19 and 20).
++
++[[SUPPLEMENTARY_FIGURE:S9]]
++
++## Supplementary Figure S10 | STAT1/STAT2 IFN-overlap-depletion sensitivity
++
++**a,** ULM slopes and 95% confidence intervals after removal of the frozen 12-gene IFN/ISG positive arm. **b,** Corresponding estimates after removal of all 97 M5911 genes; discovery STAT2 retains eight targets and its interval crosses zero. Labels report remaining matched targets. **c,** Exact branch- and method-specific Benjamini-Hochberg q values across the six regulator-by-contrast tests. **d,** Percentage of frozen matched targets retained after each depletion. All method-level directions remain positive, but M5911 depletion produces substantial attenuation and does not support an overlap-independent interpretation.
++
+ [[SUPPLEMENTARY_FIGURE:S10]]
++

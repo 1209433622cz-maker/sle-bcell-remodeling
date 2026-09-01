@@ -1,0 +1,92 @@
+{
+  "created_at": "2026-09-01T20:52:49+08:00",
+  "status": "PASS_SUPPLEMENTARY_CITATION_DOCX_CANDIDATES_BUILT_RENDER_REQUIRED",
+  "build_results": {
+    "manuscript": {
+      "source": "phase17_v7/npj_sba_supplementary_citation_refreeze/20260901_first_citation_order/sources/Manuscript_first_citation_order_refreeze.md",
+      "output": "phase17_v7/npj_sba_supplementary_citation_refreeze/20260901_first_citation_order/documents/Manuscript_scientific_maintenance_freeze.docx",
+      "paragraphs": 151,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 60781
+    },
+    "standard_supplement": {
+      "source": "phase17_v7/npj_sba_supplementary_citation_refreeze/20260901_first_citation_order/sources/Supplementary_Information_first_citation_order_refreeze.md",
+      "output": "phase17_v7/npj_sba_supplementary_citation_refreeze/20260901_first_citation_order/qa/pagination_candidates/Supplementary_Information_standard_candidate.docx",
+      "paragraphs": 70,
+      "tables": 10,
+      "inline_shapes": 10,
+      "placeholders": 0,
+      "bytes": 3762499
+    },
+    "compact_supplement": {
+      "source": "phase17_v7/npj_sba_supplementary_citation_refreeze/20260901_first_citation_order/sources/Supplementary_Information_first_citation_order_refreeze.md",
+      "output": "phase17_v7/npj_sba_supplementary_citation_refreeze/20260901_first_citation_order/qa/pagination_candidates/Supplementary_Information_compact_candidate.docx",
+      "paragraphs": 70,
+      "tables": 10,
+      "inline_shapes": 10,
+      "placeholders": 0,
+      "bytes": 3762499
+    }
+  },
+  "layout_repairs": {
+    "manuscript": {
+      "redundant_spacers_removed": 0,
+      "renderer_divergent_s8_breaks_removed": 0,
+      "main_legend_headings_compacted": 5
+    },
+    "standard_supplement": {
+      "redundant_spacers_removed": 1,
+      "renderer_divergent_s8_breaks_removed": 1,
+      "main_legend_headings_compacted": 0,
+      "s1_breaks_removed": 0
+    },
+    "compact_supplement": {
+      "redundant_spacers_removed": 1,
+      "renderer_divergent_s8_breaks_removed": 1,
+      "main_legend_headings_compacted": 0,
+      "s1_breaks_removed": 1
+    }
+  },
+  "checks": {
+    "manuscript_title_exact": true,
+    "abstract_145_words": true,
+    "references_1_to_33": true,
+    "main_has_no_inline_figures": true,
+    "first_citation_order_s1_to_s10": true,
+    "four_functional_table_anchors_present": true,
+    "standard_has_ten_figures": true,
+    "compact_has_ten_figures": true,
+    "standard_has_ten_grid_objects": true,
+    "compact_has_ten_grid_objects": true,
+    "standard_alt_titles_s1_to_s10": true,
+    "compact_alt_titles_s1_to_s10": true,
+    "supplement_heading_sequence_s1_to_s10": true,
+    "standard_s8_table_break_repaired": true,
+    "compact_s8_table_break_repaired": true,
+    "compact_s1_break_removed_once": true,
+    "five_main_legend_headings_compacted": true
+  },
+  "failed_checks": [],
+  "files": {
+    "Manuscript_scientific_maintenance_freeze.docx": {
+      "path": "phase17_v7/npj_sba_supplementary_citation_refreeze/20260901_first_citation_order/documents/Manuscript_scientific_maintenance_freeze.docx",
+      "bytes": 60826,
+      "sha256": "4611E28570AF3D766F20B9563366B2C7FAE913739A2A3DA8A2DFF82F992961E1"
+    },
+    "Supplementary_Information_standard_candidate.docx": {
+      "path": "phase17_v7/npj_sba_supplementary_citation_refreeze/20260901_first_citation_order/qa/pagination_candidates/Supplementary_Information_standard_candidate.docx",
+      "bytes": 3762513,
+      "sha256": "D0BE8B5E92186A77A276196CC4920E304F6ECC3D471A85906488A1266406A945"
+    },
+    "Supplementary_Information_compact_candidate.docx": {
+      "path": "phase17_v7/npj_sba_supplementary_citation_refreeze/20260901_first_citation_order/qa/pagination_candidates/Supplementary_Information_compact_candidate.docx",
+      "bytes": 3762514,
+      "sha256": "299DCF9B00545E12458EC4EEBA68E01BED661B4606C912677FE1903D518CF419"
+    }
+  },
+  "scientific_estimates_changed": false,
+  "figures_redrawn": false,
+  "source_data_values_changed": false
+}

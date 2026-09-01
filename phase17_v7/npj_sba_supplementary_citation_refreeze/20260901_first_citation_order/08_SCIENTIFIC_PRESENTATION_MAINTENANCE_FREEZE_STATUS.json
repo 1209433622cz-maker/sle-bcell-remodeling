@@ -1,0 +1,128 @@
+{
+  "created_at": "2026-09-02T00:37:06+08:00",
+  "status": "SCIENTIFIC_PRESENTATION_MAINTENANCE_FREEZE",
+  "checks": {
+    "integration_pass": true,
+    "document_build_pass": true,
+    "compact_15_page_candidate_selected": true,
+    "selected_docx_hash_matches_final": true,
+    "root_main_is_exact_source_transform": true,
+    "root_supplement_is_exact_source_transform": true,
+    "root_sources_match_run_sources": true,
+    "first_citation_order_is_s1_to_s10": true,
+    "supplement_headings_are_s1_to_s10": true,
+    "supplementary_tables_s1_to_s9_cited": true,
+    "thirty_display_objects_byte_identical": true,
+    "all_ten_display_pairs_present": true,
+    "all_21_main_panels_kept": true,
+    "all_38_supplementary_panels_kept": true,
+    "zero_new_or_replacement_panels": true,
+    "figure_1a_and_5a_keep_exact": true,
+    "wps_and_libreoffice_main_are_31_pages": true,
+    "wps_and_libreoffice_supplement_are_15_pages": true,
+    "supplement_pagination_and_fingerprints_pass": true,
+    "all_rendered_pages_nonblank": true,
+    "all_rendered_text_within_canvas": true,
+    "all_render_markers_resolved": true,
+    "eighteen_contact_sheets_cover_92_pages": true,
+    "post_reselection_supplement_matches_inspected_render": true,
+    "both_docx_accessibility_audits_zero": true,
+    "supplement_alt_titles_are_s1_to_s10": true,
+    "five_main_legend_headings_have_6_2_pt_spacing": true,
+    "submission_package_unchanged": true,
+    "manual_visual_qa_confirmed": true,
+    "full_regression_suite_confirmed": true
+  },
+  "failed_checks": [],
+  "manual_visual_qa": {
+    "confirmed": true,
+    "contact_sheets_inspected": 18,
+    "rendered_pages_inspected": 92,
+    "wps_pages_inspected": 46,
+    "libreoffice_pages_inspected": 46,
+    "blank_pages_found": false,
+    "clipping_or_overlap_found": false,
+    "missing_glyphs_or_figures_found": false,
+    "supplement_post_reselection_contact_hashes_match": true
+  },
+  "first_citation_order_before": [
+    "S1",
+    "S2",
+    "S3",
+    "S9",
+    "S4",
+    "S5",
+    "S6",
+    "S10",
+    "S7",
+    "S8"
+  ],
+  "first_citation_order_after": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8",
+    "S9",
+    "S10"
+  ],
+  "supplementary_table_citation_coverage": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "scientific_estimates_changed": false,
+  "statistical_models_rerun": false,
+  "figures_redrawn": false,
+  "figure_pixels_changed": false,
+  "source_data_values_changed": false,
+  "main_text_functional_anchor_edits": 4,
+  "display_objects_renumbered": 30,
+  "new_panels": 0,
+  "replacement_panels": 0,
+  "main_panels_keep": 21,
+  "supplementary_panels_keep": 38,
+  "documents": {
+    "wps_main": {
+      "path": "phase17_v7/npj_sba_supplementary_citation_refreeze/20260901_first_citation_order/documents/Manuscript_scientific_maintenance_freeze.pdf",
+      "pages": 31,
+      "sha256": "3744A4CCC48C6F889D900DF88316E913832B2994182AE5E1DCB624D5FE4F9902"
+    },
+    "lo_main": {
+      "path": "phase17_v7/npj_sba_supplementary_citation_refreeze/20260901_first_citation_order/qa/libreoffice_documents/Manuscript_scientific_maintenance_freeze.pdf",
+      "pages": 31,
+      "sha256": "B8BEDCBD37B1AEF4E7A6065C397777270AD454FF715772B5DDBDD9F5B37E0743"
+    },
+    "wps_supplement": {
+      "path": "phase17_v7/npj_sba_supplementary_citation_refreeze/20260901_first_citation_order/documents/Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "pages": 15,
+      "sha256": "417DA08BA22B0978982245638C607ADE55FB7E99F4050E7DBFD669326B0948A5"
+    },
+    "lo_supplement": {
+      "path": "phase17_v7/npj_sba_supplementary_citation_refreeze/20260901_first_citation_order/qa/libreoffice_documents/Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "pages": 15,
+      "sha256": "8D7565D47F7D07A254FFB49555DC70DE1494FDC208C3A3904AF9B6BFC78ABAE8"
+    }
+  },
+  "submission_package_sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1",
+  "regression_tests": {
+    "confirmed_pass": true,
+    "tests_run": 170,
+    "failures": 0,
+    "errors": 0
+  },
+  "submission_package_changed": false,
+  "github_release_changed": false,
+  "zenodo_changed": false,
+  "action_record": "00_project_management/action_record_2026-09-02_supplementary_first_citation_order_refreeze.md",
+  "next_stage": "SCIENTIFIC_PRESENTATION_MAINTENANCE_FREEZE"
+}

@@ -1,0 +1,400 @@
+{
+  "created_at": "2026-09-02T00:22:12+08:00",
+  "engine": "LibreOffice PDF export followed by Poppler 110-dpi page rendering",
+  "document_hashes": [
+    {
+      "file": "Manuscript_scientific_maintenance_freeze.pdf",
+      "bytes": 244261,
+      "sha256": "B8BEDCBD37B1AEF4E7A6065C397777270AD454FF715772B5DDBDD9F5B37E0743"
+    },
+    {
+      "file": "Manuscript_scientific_maintenance_freeze.docx",
+      "bytes": 60826,
+      "sha256": "4611E28570AF3D766F20B9563366B2C7FAE913739A2A3DA8A2DFF82F992961E1"
+    },
+    {
+      "file": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "bytes": 2188157,
+      "sha256": "8D7565D47F7D07A254FFB49555DC70DE1494FDC208C3A3904AF9B6BFC78ABAE8"
+    },
+    {
+      "file": "Supplementary_Information_scientific_maintenance_freeze.docx",
+      "bytes": 3762559,
+      "sha256": "0C2B9622B5E26750B39AC572137D54F714A123F4AA061807BE2A0C029837E5E2"
+    }
+  ],
+  "pages": 46,
+  "page_checks": [
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 1,
+      "text_characters": 1771,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 2,
+      "text_characters": 2151,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 3,
+      "text_characters": 2085,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 4,
+      "text_characters": 1979,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 5,
+      "text_characters": 2157,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 6,
+      "text_characters": 2153,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 7,
+      "text_characters": 2117,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 8,
+      "text_characters": 2210,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 9,
+      "text_characters": 2204,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 10,
+      "text_characters": 2135,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 11,
+      "text_characters": 2138,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 12,
+      "text_characters": 2278,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 13,
+      "text_characters": 2177,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 14,
+      "text_characters": 2124,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 15,
+      "text_characters": 1923,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 16,
+      "text_characters": 2124,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 17,
+      "text_characters": 1894,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 18,
+      "text_characters": 2115,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 19,
+      "text_characters": 2172,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 20,
+      "text_characters": 1890,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 21,
+      "text_characters": 2024,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 22,
+      "text_characters": 2073,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 23,
+      "text_characters": 2072,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 24,
+      "text_characters": 1811,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 25,
+      "text_characters": 1355,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 26,
+      "text_characters": 1783,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 27,
+      "text_characters": 1701,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 28,
+      "text_characters": 1560,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 29,
+      "text_characters": 1913,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 30,
+      "text_characters": 2211,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_scientific_maintenance_freeze.pdf",
+      "page": 31,
+      "text_characters": 2141,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 1,
+      "text_characters": 2070,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 2,
+      "text_characters": 2042,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 3,
+      "text_characters": 1977,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 4,
+      "text_characters": 2418,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 5,
+      "text_characters": 2435,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 6,
+      "text_characters": 1010,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 7,
+      "text_characters": 523,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 8,
+      "text_characters": 720,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 9,
+      "text_characters": 1017,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 10,
+      "text_characters": 575,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 11,
+      "text_characters": 461,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 12,
+      "text_characters": 366,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 13,
+      "text_characters": 1212,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 14,
+      "text_characters": 402,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 15,
+      "text_characters": 725,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    }
+  ],
+  "all_pages_within_canvas": true,
+  "all_markers_resolved": true,
+  "visual_review": "Page images require human/model visual inspection; structural checks alone are insufficient"
+}

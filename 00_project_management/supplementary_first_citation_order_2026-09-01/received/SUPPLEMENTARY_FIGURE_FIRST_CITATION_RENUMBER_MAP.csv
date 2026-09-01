@@ -1,0 +1,11 @@
+﻿old_display_id,new_display_id,scientific_role,reader_path_reason
+S1,S1,Source integrity and hard-QC diagnostics,first cited in first Results subsection
+S2,S2,Representation and bridge diagnostics,first cited in first Results subsection
+S3,S3,Fine-state failure and transition structure,first cited in first Results subsection
+S9,S4,End-to-end reconstruction and boundary propagation,currently cited immediately after S3; renumber to preserve first-citation order
+S4,S5,Composition-model diagnostics,cited in B_ASC composition subsection
+S5,S6,Pseudobulk and ranked-list diagnostics,cited in GSE174188 transcription subsection
+S6,S7,GSE135779 replication and robustness diagnostics,cited in external replication subsection
+S10,S8,Reference calibration / source-label-independent transfer boundary,cited before regulatory sensitivity material
+S7,S9,Correlation-aware regulator sensitivity,cited in regulatory subsection
+S8,S10,STAT1/STAT2 overlap-depletion sensitivity,cited after regulator correlation sensitivity

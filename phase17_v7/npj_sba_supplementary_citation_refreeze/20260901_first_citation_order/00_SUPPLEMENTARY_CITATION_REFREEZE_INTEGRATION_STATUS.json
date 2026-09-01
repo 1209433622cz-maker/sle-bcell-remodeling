@@ -1,0 +1,111 @@
+{
+  "created_at": "2026-09-01T20:50:33+08:00",
+  "status": "PASS_SUPPLEMENTARY_CITATION_REFREEZE_INTEGRATION_DOCX_REQUIRED",
+  "checks": {
+    "external_inputs_archived_byte_identically": true,
+    "external_map_matches_independent_map": true,
+    "old_first_citation_order_reproduced": true,
+    "new_first_citation_order_is_s1_to_s10": true,
+    "all_supplementary_tables_cited": true,
+    "supplement_headings_are_s1_to_s10": true,
+    "supplement_markers_are_s1_to_s10": true,
+    "all_remapped_files_byte_identical": true,
+    "all_ten_display_pairs_audited": true,
+    "ten_supplementary_pdfs": true,
+    "ten_supplementary_pngs": true,
+    "ten_supplementary_source_csvs": true,
+    "four_functional_anchors_only": true,
+    "root_main_matches_candidate": true,
+    "root_supplement_matches_candidate": true,
+    "submission_package_unchanged": true
+  },
+  "failed_checks": [],
+  "archived_inputs": {
+    "SUPPLEMENTARY_FIGURE_FIRST_CITATION_RENUMBER_MAP.csv": {
+      "source": "C:\\Users\\Administrator\\Downloads\\SUPPLEMENTARY_FIGURE_FIRST_CITATION_RENUMBER_MAP.csv",
+      "archived": "00_project_management/supplementary_first_citation_order_2026-09-01/received/SUPPLEMENTARY_FIGURE_FIRST_CITATION_RENUMBER_MAP.csv",
+      "bytes": 1027,
+      "sha256": "A42234B7F47C4F0130686CBE81C40ECE9071376D7E9A3B11753CA2C9E2B3F057",
+      "byte_identical": true
+    },
+    "SUPPLEMENTARY_RENUMBER_AND_CROSS_REFERENCE_PATCH_SPEC.md": {
+      "source": "C:\\Users\\Administrator\\Downloads\\SUPPLEMENTARY_RENUMBER_AND_CROSS_REFERENCE_PATCH_SPEC.md",
+      "archived": "00_project_management/supplementary_first_citation_order_2026-09-01/received/SUPPLEMENTARY_RENUMBER_AND_CROSS_REFERENCE_PATCH_SPEC.md",
+      "bytes": 4223,
+      "sha256": "A650855CFF0CD99D1019FBED05946533EE2703034E07F8436557B074ADD7C681",
+      "byte_identical": true
+    },
+    "action_record_2026-09-01_supplementary_first_citation_order_hostile_audit.md": {
+      "source": "C:\\Users\\Administrator\\Downloads\\action_record_2026-09-01_supplementary_first_citation_order_hostile_audit.md",
+      "archived": "00_project_management/supplementary_first_citation_order_2026-09-01/received/action_record_2026-09-01_supplementary_first_citation_order_hostile_audit.md",
+      "bytes": 4126,
+      "sha256": "2BE5C4B591AF0D9CEC858509A33EDE1D6007448F1802DC8062AB8E60C837C615",
+      "byte_identical": true
+    },
+    "pasted_supplementary_first_citation_review_2026-09-01.txt": {
+      "source": "C:\\Users\\Administrator\\.codex\\attachments\\cd4dfb08-d4d7-446b-bd05-48e23990615f\\pasted-text.txt",
+      "archived": "00_project_management/supplementary_first_citation_order_2026-09-01/received/pasted_supplementary_first_citation_review_2026-09-01.txt",
+      "bytes": 9617,
+      "sha256": "BF5B4DB41479E28A10A43FB4964574613BD24C4376006CB71B6883DAA3E013F3",
+      "byte_identical": true
+    }
+  },
+  "renumber_map": {
+    "S1": "S1",
+    "S2": "S2",
+    "S3": "S3",
+    "S9": "S4",
+    "S4": "S5",
+    "S5": "S6",
+    "S6": "S7",
+    "S10": "S8",
+    "S7": "S9",
+    "S8": "S10"
+  },
+  "first_citation_order_before": [
+    "S1",
+    "S2",
+    "S3",
+    "S9",
+    "S4",
+    "S5",
+    "S6",
+    "S10",
+    "S7",
+    "S8"
+  ],
+  "first_citation_order_after": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8",
+    "S9",
+    "S10"
+  ],
+  "supplementary_table_citation_coverage": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8",
+    "S9"
+  ],
+  "main_text_anchor_edits": 4,
+  "scientific_estimates_changed": false,
+  "statistical_models_rerun": false,
+  "figures_redrawn": false,
+  "figure_pixels_changed": false,
+  "source_data_values_changed": false,
+  "new_panels": 0,
+  "replacement_panels": 0,
+  "main_panels_keep": 21,
+  "supplementary_panels_keep": 38,
+  "submission_package_sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1"
+}

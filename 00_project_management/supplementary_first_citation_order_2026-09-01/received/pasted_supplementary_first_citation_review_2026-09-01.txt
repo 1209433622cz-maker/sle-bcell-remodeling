@@ -1,0 +1,169 @@
+这一轮我继续按你要求把边界锁在**手稿文本、图件科学表达、Supplementary reader path**，没有把它转成投稿工程。先确认：你刚完成的 `S4/S4B → S4a/S4b` 修复是正确的，GitHub `main` 当前确实是 `b03348db30c07abc4deca8438062270feb4c6c21`，提交说明为 `Repair supplementary table reader path`。 上传的 Supplementary 现在也已经清楚呈现为一个 `Supplementary Table S4 | Regulator-sensitivity summaries`，内部再分 a/b，Table S5 的 `asserted 43/47` 也已经改为 reader-facing 表述。
+
+你这一轮记录的“主文、全部图件、15 个 Source Data 不变，21 个主图 panel 和 38 个补图 panel 全部 KEEP”我认可；当前 freeze 状态也明确记录 figures/source data/main manuscript 全部未变化。
+
+## 但我找到了一个比 S4B 更重要的 reader-path 缺陷
+
+目前主文第一次遇到 Supplementary Figures 的顺序并不是：
+
+`S1 → S2 → S3 → S4 → … → S10`
+
+而实际上是：
+
+**`S1 → S2 → S3 → S9 → S4 → S5 → S6 → S10 → S7 → S8`**
+
+这是从当前 canonical manuscript 直接读出来的：identity 部分先依次引用 S1、S2、S3，随后立刻跳到 end-to-end sensitivity 的 **S9**；composition 才回到 S4，pseudobulk 到 S5，external replication 到 S6；corrected mapping 又跳到 **S10**，最后 regulatory 部分才回到 S7/S8。
+
+更关键的是，当前所谓 `READER_PATH_AND_CROSS_REFERENCE_AUDIT` 实际只检查了：
+
+`source_figure_numbers = [1...10]`
+
+以及渲染器里 S1–S10 是否存在，并**没有检查主文第一次引用顺序**。
+
+所以前一轮的 QA 没有“做错”，而是**测试覆盖范围没有包括 first-citation order**。
+
+这不是纯投稿格式洁癖。它直接影响读者的科学阅读路径：读完 S3 后被要求跳到 Supplement 第 15 页 S9，随后再返回第 10 页 S4；读完 S6 后又跳到 S10，再返回 S7/S8。你现在整篇稿件最大的优点恰恰是 evidence hierarchy，因此这种来回跳页和最终叙事并不匹配。
+
+Nature Portfolio 的相关格式指南普遍要求 Supplementary items 按顺序编号/引用；npj SBA 初投稿本身目前并不要求严格格式化，所以我不会把它包装成“现在不改就不能投”的硬性问题，但作为 Nature/npj 风格科学阅读路径，它确实值得修。([Nature][1])
+
+---
+
+## 我建议的 Supplementary Figure 最终重编号
+
+这一次**不重画任何图，也不改变一个数据点**。只做 display ID / cross-reference refreeze。
+
+| 当前编号    | 建议最终编号 | 科学职责                                             |
+| ------- | -----: | ------------------------------------------------ |
+| S1      |     S1 | source integrity / hard QC                       |
+| S2      |     S2 | representation / bridge                          |
+| S3      |     S3 | fine-state failure / transition                  |
+| **S9**  | **S4** | end-to-end reconstruction boundary + propagation |
+| S4      |     S5 | composition-model diagnostics                    |
+| S5      |     S6 | pseudobulk / ranked-list diagnostics             |
+| S6      |     S7 | GSE135779 robustness                             |
+| **S10** | **S8** | corrected external mapping calibration boundary  |
+| S7      |     S9 | correlation-aware regulator sensitivity          |
+| S8      |    S10 | IFN-overlap depletion                            |
+
+这样主文会自然变成：
+
+**S1 → S2 → S3 → S4 → S5 → S6 → S7 → S8 → S9 → S10**
+
+而且科学顺序反而更加漂亮：
+
+identity QC
+→ representation
+→ fine-state failure
+→ **end-to-end boundary**
+→ composition
+→ pseudobulk
+→ independent replication
+→ **transfer-calibration boundary**
+→ regulator robustness
+→ overlap-depletion ceiling.
+
+这和你现在正文的 evidence hierarchy 几乎一一对应。
+
+### 实现方式必须是 source-level，不允许手工改 PDF
+
+我不建议 Photoshop、Acrobat 改编号，也不建议修改冻结 CSV 内容。
+
+正确方案是：
+
+旧图 image bytes 保持完全一致；在新的 refreeze 目录按照 old→new map 生成 display copies；10 个 Supplementary Source Data CSV 也按同样 map **只重命名/复制、字节内容不变**；随后从 canonical Markdown 重建主文和 Supplementary。
+
+必须同步修改的对象包括：
+
+主文所有 Supplementary Fig 引用、Figure 1 legend 中目前的 `Supplementary Fig. S9`、S3 自身 legend 中的 S9 cross-reference、Supplementary Figure headings、Table S5 source-data map、DOCX image alt title、manifest，以及相关测试。
+
+这符合你一直坚持的原则：**从可复现 source object 重建，而不是编辑现有结果输出。**
+
+---
+
+# 另外还有一个真实但次一级的问题：Supplementary Tables S1–S8 目前基本是“reader-orphaned”
+
+当前主文中，我只找到明确的：
+
+**`Supplementary Table S9`**
+
+引用；S1–S8 没有被主文明确 anchor。
+
+它们的内容本身都值得保留，不建议删：
+
+S1 是 dataset roles / inferential unit；S2 是 claim boundaries；S3 是 quantitative anchors；S4 是 regulator exact summaries；S5 是 figure-source mapping；S6 是 reproducibility record；S7 是 statistics/multiplicity map；S8 是 archive map。
+
+我不建议为了它们写 8 个生硬的句子。更适合 QiTeng 风格的是只增加少数功能性锚点，例如：
+
+Introduction/early Results 可以一次 anchor S1/S2；
+
+Results 末尾可用一句很短的话 anchor S3；
+
+regulatory paragraphs 在 S7/S8 图旁同时 anchor Supplementary Table S4；
+
+Reproducibility/Provenance 用一句话统一 anchor S5–S8。
+
+这样既解决“表为什么存在”的问题，也不会让正文变成 Supplementary 目录。
+
+---
+
+## 所有既有 panel 的科学裁决仍然不变
+
+Figure 1a **KEEP**。它依然是身份推断与疾病推断之间的 boundary owner，换成 UMAP 或漂亮的流程图会削弱文章核心。
+
+Figure 5a **KEEP**。它依然承担 evidence class / causal ceiling 的职责；换成 TF network 或 IFN→STAT→ISG 因果箭头反而会诱导 overclaim。
+
+Figures 2–4 全部 KEEP；S1–S10 的**科学 panel 内容也全部 KEEP**。这里建议改的是 Supplementary display numbering，不是换 panel。
+
+npj Systems Biology and Applications 当前 scope 本身明确包括 **single-cell systems biology** 和 **systems immunology**。因此现在完全没有必要为了“更像 systems biology”再强行加 network model、mapper、TF、multi-omics 或新 cohort；现有的 disease-blind reconstruction → uncertainty propagation → program replication → regulator/context boundary 已经属于合理的 systems-level computational framing。([Nature][2])
+
+---
+
+# 还有一个低优先级版面点：Supplementary 第 6 页
+
+当前 PDF 的第 6 页只有 Table S9 后面的 explanatory paragraph，随后由于 builder 对每个 Supplementary Figure 强制 `page break`，S1 才从第 7 页开始。视觉上第 6 页约有大面积空白。
+
+我不会直接要求压缩字体或 table spacing。
+
+但是下一轮可以做一个**候选性 pagination experiment**：
+
+仅取消 S1 前的 manual page break，看 Table S9 尾段 + S1 标题、legend 和完整图是否能够在 WPS 与 LibreOffice 中稳定同页。
+
+如果两个 renderer 都能完整容纳，那么 Supplement 可以从 16 页自然收敛到约 15 页；如果任何一个 renderer 出现拆图、拥挤或跨页，则保持现在 16 页。
+
+这个属于 P2，不应压过 first-citation-order 问题。
+
+---
+
+# 下一阶段目标
+
+我建议不是继续“润色”，而进入一次明确且可终止的：
+
+## `SUPPLEMENTARY_FIRST_CITATION_ORDER_AND_TABLE_ANCHOR_REFREEZE`
+
+只做这 6 件事：
+
+1. 按上面的 map 完成 Supplementary Figure **display-only 重编号**；
+2. 保证图像像素、Source Data 内容、统计结果全部不变；
+3. 同步主文、图注、Supplement、Table S5、manifest 与 alt-title；
+4. 用极少量 QiTeng 风格句子给 Supplementary Tables S1–S8 建立 evidence owner；
+5. 新增 first-citation-order regression：主文正文第一次出现的 Supplementary Figures 必须严格为 `S1...S10`；
+6. 可选测试 page 6→15-page compact candidate，但绝不通过缩字或压表强行实现。
+
+如果这一轮通过，我认为应当再次、而且更有依据地返回：
+
+**`SCIENTIFIC_PRESENTATION_MAINTENANCE_FREEZE`**
+
+并真正停止主动改图和正文。
+
+我已经把这次发现整理成可直接执行的文件：
+
+[完整 old→new Supplementary Figure 重编号矩阵](sandbox:/mnt/data/sle_reader_path_next_audit/SUPPLEMENTARY_FIGURE_FIRST_CITATION_RENUMBER_MAP.csv)
+
+[精确 source-level patch specification](sandbox:/mnt/data/sle_reader_path_next_audit/SUPPLEMENTARY_RENUMBER_AND_CROSS_REFERENCE_PATCH_SPEC.md)
+
+[本轮详细 hostile audit 行动记录](sandbox:/mnt/data/sle_reader_path_next_audit/action_record_2026-09-01_supplementary_first_citation_order_hostile_audit.md)
+
+这一轮之后，我认为继续新增生信分析的边际收益已经明显低于**把最终 evidence hierarchy 在编号和交叉引用层彻底对齐**的收益。
+
+[1]: https://www.nature.com/natsynth/submission-guidelines/aip-and-formatting?utm_source=chatgpt.com "AIP and formatting | Nature Synthesis"
+[2]: https://www.nature.com/npjsba/aims?utm_source=chatgpt.com "Aims & Scope | npj Systems Biology and Applications"

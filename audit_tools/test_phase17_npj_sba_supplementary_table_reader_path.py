@@ -46,14 +46,14 @@ class SupplementaryTableReaderPathTests(unittest.TestCase):
         self.assertFalse(status["manual_visual_qa"]["blank_pages_found"])
         self.assertFalse(status["manual_visual_qa"]["clipping_or_overlap_found"])
 
-    def test_root_sources_match_latest_candidate(self) -> None:
+    def test_historical_sources_remain_immutable(self) -> None:
         self.assertEqual(
-            (ROOT / "01_manuscript/Manuscript.md").read_bytes(),
-            (RUN / "sources/Manuscript_scientific_maintenance_freeze.md").read_bytes(),
+            sha256(RUN / "sources/Manuscript_scientific_maintenance_freeze.md"),
+            "9A70A71A82ECFCCD5B6D65ABC5418D83E214521297663CD83878E3D2E7E25A27",
         )
         self.assertEqual(
-            (ROOT / "01_manuscript/Supplementary_Information.md").read_bytes(),
-            (RUN / "sources/Supplementary_Information_s4_reader_path_micropass.md").read_bytes(),
+            sha256(RUN / "sources/Supplementary_Information_s4_reader_path_micropass.md"),
+            "0E2C43BD591115767B4B90BE6852071D340C79F02E64CAFF2BB9EDE69283C96B",
         )
 
     def test_reader_facing_numbering_is_unambiguous(self) -> None:

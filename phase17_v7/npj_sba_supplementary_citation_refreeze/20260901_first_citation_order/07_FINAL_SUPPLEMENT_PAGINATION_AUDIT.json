@@ -1,0 +1,577 @@
+{
+  "created_at": "2026-09-02T00:23:46+08:00",
+  "status": "PASS_SUPPLEMENT_PAGINATION_COHERENCE",
+  "checks": {
+    "wps_15_pages": true,
+    "libreoffice_15_pages": true,
+    "wps_all_supplementary_figures_same_page": true,
+    "libreoffice_all_supplementary_figures_same_page": true,
+    "wps_s8_same_page": true,
+    "libreoffice_s8_same_page": true,
+    "wps_all_expected_figure_fingerprints_match": true,
+    "libreoffice_all_expected_figure_fingerprints_match": true,
+    "wps_s8_expected_figure_match": true,
+    "libreoffice_s8_expected_figure_match": true
+  },
+  "failed_checks": [],
+  "wps": {
+    "pdf": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\documents\\Supplementary_Information_scientific_maintenance_freeze.pdf",
+    "pages": 15,
+    "figures": {
+      "S1": {
+        "heading_page": 6,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM45"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S1_source_integrity_qc.png",
+          "expected_source_sha256": "2B2A010C31D4326F9BD41E75E60EC52DF7044B2E388F447B6C47F79AAA204EBD",
+          "expected_pixel_dimensions": [
+            4015,
+            2916
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            2767
+          ],
+          "embedded_image_sha256": "62DAF6DA2BC633CD8E891D0BB097B22FC74687C889F846A579E263149CFD8B0B",
+          "normalized_mae_to_expected": 0.00074694,
+          "best_source_match": "S1",
+          "second_best_normalized_mae": 0.09943313,
+          "identity_margin": 0.09868619,
+          "aspect_ratio_delta": 5.639e-05,
+          "expected_figure_match": true
+        }
+      },
+      "S2": {
+        "heading_page": 7,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM49"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S2_representation_diagnostics.png",
+          "expected_source_sha256": "67B1445C90BE1058B3F455C70209655BE5712E79CDBAC461AFC662C2084A20F7",
+          "expected_pixel_dimensions": [
+            4015,
+            2973
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            2821
+          ],
+          "embedded_image_sha256": "79D69C47EE4CB40FCB15DD5E290982B78E4394721A9D309E2455085D6302FE25",
+          "normalized_mae_to_expected": 0.00074471,
+          "best_source_match": "S2",
+          "second_best_normalized_mae": 0.15004843,
+          "identity_margin": 0.14930372,
+          "aspect_ratio_delta": 9.718e-05,
+          "expected_figure_match": true
+        }
+      },
+      "S3": {
+        "heading_page": 8,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM53"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S3_fine_state_failure_transition_structure.png",
+          "expected_source_sha256": "6B4A8CB52293E14D9B8B608BE93726E64E52E9F1D37BB1715E043AB44E144097",
+          "expected_pixel_dimensions": [
+            4015,
+            2031
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            1927
+          ],
+          "embedded_image_sha256": "14C6B10498D4543FCE07AAF97969F2457CD5A4E97EE1B15CBA33F48567F4D6EB",
+          "normalized_mae_to_expected": 0.00075396,
+          "best_source_match": "S3",
+          "second_best_normalized_mae": 0.08253046,
+          "identity_margin": 0.0817765,
+          "aspect_ratio_delta": 0.00030789,
+          "expected_figure_match": true
+        }
+      },
+      "S4": {
+        "heading_page": 9,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM57"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S4_identity_boundary_and_propagation.png",
+          "expected_source_sha256": "F6857DA2B61D27E8E2EB1DFE98703C16A83F5D72B03AEF785CE9B9E87BDF7F5C",
+          "expected_pixel_dimensions": [
+            4015,
+            3779
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            3586
+          ],
+          "embedded_image_sha256": "8BA7F39350DF867AD13653633EBDD4C2B69084A9478CFD1320FA4CB177D12CFE",
+          "normalized_mae_to_expected": 0.00061578,
+          "best_source_match": "S4",
+          "second_best_normalized_mae": 0.05292338,
+          "identity_margin": 0.05230761,
+          "aspect_ratio_delta": 1.476e-05,
+          "expected_figure_match": true
+        }
+      },
+      "S5": {
+        "heading_page": 10,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM61"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S5_composition_diagnostics.png",
+          "expected_source_sha256": "7B92B1D1FE2598352BB70A377449901D911C68BAF905EFC91A755641E6F0DD7C",
+          "expected_pixel_dimensions": [
+            4015,
+            2973
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            2821
+          ],
+          "embedded_image_sha256": "D328CC71BEB2D9EDC7B972B28586A8139A8135213A76E16D3E96FC4E0DF69C4B",
+          "normalized_mae_to_expected": 0.00085457,
+          "best_source_match": "S5",
+          "second_best_normalized_mae": 0.05993102,
+          "identity_margin": 0.05907645,
+          "aspect_ratio_delta": 9.718e-05,
+          "expected_figure_match": true
+        }
+      },
+      "S6": {
+        "heading_page": 11,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM65"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S6_pseudobulk_ranked_list_diagnostics.png",
+          "expected_source_sha256": "47C9A02403F4D6B68E07D0A2F272A0D2965DCF799F9AD07680F99BFF1E09D0C5",
+          "expected_pixel_dimensions": [
+            4015,
+            2456
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            2331
+          ],
+          "embedded_image_sha256": "407DE321B4E5E0C8339E36B556327AF42438407E4437AE6AAB0F92273B3ABA64",
+          "normalized_mae_to_expected": 0.00078301,
+          "best_source_match": "S6",
+          "second_best_normalized_mae": 0.05943508,
+          "identity_margin": 0.05865207,
+          "aspect_ratio_delta": 0.00028035,
+          "expected_figure_match": true
+        }
+      },
+      "S7": {
+        "heading_page": 12,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM69"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S7_replication_robustness_diagnostics.png",
+          "expected_source_sha256": "EC2118003D6D459831D118C53B318448B936E806C23E44D87A125EAEDA53F2D0",
+          "expected_pixel_dimensions": [
+            4015,
+            3030
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            2875
+          ],
+          "embedded_image_sha256": "34A3F940AEAB914A0872AF443407C868FE68F2ECF38E78D19D25862D0297B034",
+          "normalized_mae_to_expected": 0.00062328,
+          "best_source_match": "S7",
+          "second_best_normalized_mae": 0.08227587,
+          "identity_margin": 0.08165259,
+          "aspect_ratio_delta": 0.00013488,
+          "expected_figure_match": true
+        }
+      },
+      "S8": {
+        "heading_page": 13,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM73"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S8_reference_calibration_boundary.png",
+          "expected_source_sha256": "A0C2E06A09AB40693B9FC55278C87A667EAF15E0FE9D3ADD61A6694AFCA939D0",
+          "expected_pixel_dimensions": [
+            4015,
+            2598
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            2465
+          ],
+          "embedded_image_sha256": "323C4EED8FBE3953BDBC38800770F5A74BFC9F6F2F9D968D8C5740ABCC1F44C0",
+          "normalized_mae_to_expected": 0.00038999,
+          "best_source_match": "S8",
+          "second_best_normalized_mae": 0.05274291,
+          "identity_margin": 0.05235293,
+          "aspect_ratio_delta": 0.00021939,
+          "expected_figure_match": true
+        }
+      },
+      "S9": {
+        "heading_page": 14,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM77"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S9_regulator_correlation_sensitivity.png",
+          "expected_source_sha256": "69112DAB612AF5E97CED97D3899624D30CAFDC02C2D127431C71000C1E4B3D44",
+          "expected_pixel_dimensions": [
+            4015,
+            2973
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            2821
+          ],
+          "embedded_image_sha256": "7D9AE22B573F540240841F94D90D1F9A4C803C31D2511331D8AEBD46F522D5E3",
+          "normalized_mae_to_expected": 0.00088002,
+          "best_source_match": "S9",
+          "second_best_normalized_mae": 0.16085748,
+          "identity_margin": 0.15997745,
+          "aspect_ratio_delta": 9.718e-05,
+          "expected_figure_match": true
+        }
+      },
+      "S10": {
+        "heading_page": 15,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM81"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S10_overlap_depletion.png",
+          "expected_source_sha256": "51B0218546AE23D448B7767C7F620AAA7AA5A84F9FD9749C5320DE7F1F00EB31",
+          "expected_pixel_dimensions": [
+            4015,
+            3661
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            3474
+          ],
+          "embedded_image_sha256": "053365D5455507407E949B122D50B21D85360847BF035B46C71F0266ECCA10F8",
+          "normalized_mae_to_expected": 0.00088585,
+          "best_source_match": "S10",
+          "second_best_normalized_mae": 0.13711392,
+          "identity_margin": 0.13622808,
+          "aspect_ratio_delta": 2.359e-05,
+          "expected_figure_match": true
+        }
+      }
+    },
+    "all_heading_figure_pairs_same_page": true,
+    "all_expected_figure_fingerprints_match": true,
+    "s8_same_page": true,
+    "s8_expected_figure_match": true
+  },
+  "libreoffice": {
+    "pdf": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\qa\\libreoffice_documents\\Supplementary_Information_scientific_maintenance_freeze.pdf",
+    "pages": 15,
+    "figures": {
+      "S1": {
+        "heading_page": 6,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im746"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S1_source_integrity_qc.png",
+          "expected_source_sha256": "2B2A010C31D4326F9BD41E75E60EC52DF7044B2E388F447B6C47F79AAA204EBD",
+          "expected_pixel_dimensions": [
+            4015,
+            2916
+          ],
+          "embedded_pixel_dimensions": [
+            1906,
+            1384
+          ],
+          "embedded_image_sha256": "F06C08FA6377621FB9282274B7BF419D824D5064F836902657FFFC9535C1940D",
+          "normalized_mae_to_expected": 0.00138953,
+          "best_source_match": "S1",
+          "second_best_normalized_mae": 0.09936691,
+          "identity_margin": 0.09797738,
+          "aspect_ratio_delta": 0.00028148,
+          "expected_figure_match": true
+        }
+      },
+      "S2": {
+        "heading_page": 7,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im756"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S2_representation_diagnostics.png",
+          "expected_source_sha256": "67B1445C90BE1058B3F455C70209655BE5712E79CDBAC461AFC662C2084A20F7",
+          "expected_pixel_dimensions": [
+            4015,
+            2973
+          ],
+          "embedded_pixel_dimensions": [
+            1903,
+            1409
+          ],
+          "embedded_image_sha256": "4D8533D4CB8E1403A02878305998068E643F8B378B2D34CD1303A2830FC14793",
+          "normalized_mae_to_expected": 0.0013478,
+          "best_source_match": "S2",
+          "second_best_normalized_mae": 0.15008425,
+          "identity_margin": 0.14873645,
+          "aspect_ratio_delta": 0.00011554,
+          "expected_figure_match": true
+        }
+      },
+      "S3": {
+        "heading_page": 8,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im766"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S3_fine_state_failure_transition_structure.png",
+          "expected_source_sha256": "6B4A8CB52293E14D9B8B608BE93726E64E52E9F1D37BB1715E043AB44E144097",
+          "expected_pixel_dimensions": [
+            4015,
+            2031
+          ],
+          "embedded_pixel_dimensions": [
+            1903,
+            963
+          ],
+          "embedded_image_sha256": "B9E5AD69786E8CDF7AB1B4C6836022714CDB833F9D6320E9DA35E10737F32291",
+          "normalized_mae_to_expected": 0.0012965,
+          "best_source_match": "S3",
+          "second_best_normalized_mae": 0.08249312,
+          "identity_margin": 0.08119662,
+          "aspect_ratio_delta": 0.00074239,
+          "expected_figure_match": true
+        }
+      },
+      "S4": {
+        "heading_page": 9,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im776"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S4_identity_boundary_and_propagation.png",
+          "expected_source_sha256": "F6857DA2B61D27E8E2EB1DFE98703C16A83F5D72B03AEF785CE9B9E87BDF7F5C",
+          "expected_pixel_dimensions": [
+            4015,
+            3779
+          ],
+          "embedded_pixel_dimensions": [
+            1906,
+            1794
+          ],
+          "embedded_image_sha256": "81AD9DBC45CAF67D40F8ECF9E854F7E2B199B6353F382108021959C5F4AE628D",
+          "normalized_mae_to_expected": 0.00097951,
+          "best_source_match": "S4",
+          "second_best_normalized_mae": 0.05286043,
+          "identity_margin": 0.05188092,
+          "aspect_ratio_delta": 2.006e-05,
+          "expected_figure_match": true
+        }
+      },
+      "S5": {
+        "heading_page": 10,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im786"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S5_composition_diagnostics.png",
+          "expected_source_sha256": "7B92B1D1FE2598352BB70A377449901D911C68BAF905EFC91A755641E6F0DD7C",
+          "expected_pixel_dimensions": [
+            4015,
+            2973
+          ],
+          "embedded_pixel_dimensions": [
+            1903,
+            1409
+          ],
+          "embedded_image_sha256": "AEE330436AE464B97FB3AC7217EBCDD88AD2436F0F75AEA9B6C4EDAC5ACF2394",
+          "normalized_mae_to_expected": 0.00132203,
+          "best_source_match": "S5",
+          "second_best_normalized_mae": 0.0601912,
+          "identity_margin": 0.05886917,
+          "aspect_ratio_delta": 0.00011554,
+          "expected_figure_match": true
+        }
+      },
+      "S6": {
+        "heading_page": 11,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im796"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S6_pseudobulk_ranked_list_diagnostics.png",
+          "expected_source_sha256": "47C9A02403F4D6B68E07D0A2F272A0D2965DCF799F9AD07680F99BFF1E09D0C5",
+          "expected_pixel_dimensions": [
+            4015,
+            2456
+          ],
+          "embedded_pixel_dimensions": [
+            1906,
+            1166
+          ],
+          "embedded_image_sha256": "AD8580575A8ED22C18201053A44220B818D87BCC8BA0B464CD74D3A17AAC0D01",
+          "normalized_mae_to_expected": 0.00113462,
+          "best_source_match": "S6",
+          "second_best_normalized_mae": 0.05930591,
+          "identity_margin": 0.05817129,
+          "aspect_ratio_delta": 0.00012362,
+          "expected_figure_match": true
+        }
+      },
+      "S7": {
+        "heading_page": 12,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im806"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S7_replication_robustness_diagnostics.png",
+          "expected_source_sha256": "EC2118003D6D459831D118C53B318448B936E806C23E44D87A125EAEDA53F2D0",
+          "expected_pixel_dimensions": [
+            4015,
+            3030
+          ],
+          "embedded_pixel_dimensions": [
+            1905,
+            1438
+          ],
+          "embedded_image_sha256": "1F8BD174876D659B3ED5E7585E1BF3A50C36E9323C09114F1271737A13389C14",
+          "normalized_mae_to_expected": 0.00121193,
+          "best_source_match": "S7",
+          "second_best_normalized_mae": 0.08209651,
+          "identity_margin": 0.08088459,
+          "aspect_ratio_delta": 0.0003259,
+          "expected_figure_match": true
+        }
+      },
+      "S8": {
+        "heading_page": 13,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im816"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S8_reference_calibration_boundary.png",
+          "expected_source_sha256": "A0C2E06A09AB40693B9FC55278C87A667EAF15E0FE9D3ADD61A6694AFCA939D0",
+          "expected_pixel_dimensions": [
+            4015,
+            2598
+          ],
+          "embedded_pixel_dimensions": [
+            1903,
+            1231
+          ],
+          "embedded_image_sha256": "ACD97C4B281D41DDBB4DBE71F5AE059A7155324B5A13A79B5EC432649BEA0267",
+          "normalized_mae_to_expected": 0.00095454,
+          "best_source_match": "S8",
+          "second_best_normalized_mae": 0.05268722,
+          "identity_margin": 0.05173268,
+          "aspect_ratio_delta": 0.00047809,
+          "expected_figure_match": true
+        }
+      },
+      "S9": {
+        "heading_page": 14,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im826"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S9_regulator_correlation_sensitivity.png",
+          "expected_source_sha256": "69112DAB612AF5E97CED97D3899624D30CAFDC02C2D127431C71000C1E4B3D44",
+          "expected_pixel_dimensions": [
+            4015,
+            2973
+          ],
+          "embedded_pixel_dimensions": [
+            1903,
+            1409
+          ],
+          "embedded_image_sha256": "E0CD6A17A561C7002A29144D6547FE4EFB1AF9B07AE6E43351E37DB620262236",
+          "normalized_mae_to_expected": 0.00158013,
+          "best_source_match": "S9",
+          "second_best_normalized_mae": 0.16088245,
+          "identity_margin": 0.15930232,
+          "aspect_ratio_delta": 0.00011554,
+          "expected_figure_match": true
+        }
+      },
+      "S10": {
+        "heading_page": 15,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im836"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_supplementary_citation_refreeze\\20260901_first_citation_order\\figures\\figures\\Supplementary_Figure_S10_overlap_depletion.png",
+          "expected_source_sha256": "51B0218546AE23D448B7767C7F620AAA7AA5A84F9FD9749C5320DE7F1F00EB31",
+          "expected_pixel_dimensions": [
+            4015,
+            3661
+          ],
+          "embedded_pixel_dimensions": [
+            1906,
+            1738
+          ],
+          "embedded_image_sha256": "342ECE59FEB061C0C1D0C4D4843F4BBACF5A84965E2F931E79940F4272EC0153",
+          "normalized_mae_to_expected": 0.00163758,
+          "best_source_match": "S10",
+          "second_best_normalized_mae": 0.13718094,
+          "identity_margin": 0.13554336,
+          "aspect_ratio_delta": 3.206e-05,
+          "expected_figure_match": true
+        }
+      }
+    },
+    "all_heading_figure_pairs_same_page": true,
+    "all_expected_figure_fingerprints_match": true,
+    "s8_same_page": true,
+    "s8_expected_figure_match": true
+  }
+}
