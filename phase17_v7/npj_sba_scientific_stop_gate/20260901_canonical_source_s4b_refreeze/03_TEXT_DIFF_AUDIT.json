@@ -1,0 +1,26 @@
+{
+  "wps_manuscript": {
+    "old_pdf_contains_old_phrase": true,
+    "new_pdf_contains_new_phrase": true,
+    "new_pdf_excludes_old_phrase": true,
+    "line_number_reflow_expected": true,
+    "expected_only_change": true
+  },
+  "lo_manuscript": {
+    "old_pdf_contains_old_phrase": true,
+    "new_pdf_contains_new_phrase": true,
+    "new_pdf_excludes_old_phrase": true,
+    "line_number_reflow_expected": true,
+    "expected_only_change": true
+  },
+  "wps_supplement": {
+    "old_phrase_count": 1,
+    "new_phrase_count": 1,
+    "expected_only_change": true
+  },
+  "lo_supplement": {
+    "old_phrase_count": 1,
+    "new_phrase_count": 1,
+    "expected_only_change": true
+  }
+}

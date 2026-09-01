@@ -1,0 +1,280 @@
+这一轮我按你要求继续把范围锁在**手稿文本、图件科学表达、正文—图—补充材料的阅读逻辑**，没有把工作转向投稿包。基于你上传的最终 31 页主文、16 页补充材料、本轮行动记录，以及 GitHub 当前 `main` 的 `02d716e6` 科学 refreeze，我完成了 `FINAL_TEXT_FIGURE_CROSS_REFERENCE_AND_SEMANTIC_STOP_GATE` 的独立复核。当前 commit 确实是 `02d716e6b1f0...`，提交说明为 “Lock integrated reader path and S3 S5 display prune”。
+
+## 本轮核心结论
+
+当前版本已经非常接近科学呈现层的真正终点，但我**暂时不建议宣布最终 STOP LOCK**。
+
+新的状态更准确应为：
+
+`STOP_GATE_NOT_YET_LOCKED__THREE_LOCALIZED_DEFECTS_FOUND`
+
+原因不是需要新增分析，也不是主图逻辑有问题，而是我在最终语义门中发现了 **3 个非常局部、但值得在彻底冻结前修掉的问题**。
+
+上一轮的核心成果仍然成立：21 个主图子图全部保留；Supplementary 最终展示 38 个子图；旧 S3a、S3d、S5d 三个数值重复面板被正确删除；Source Data、模型和估计值均未改变。 当前机器状态也确认 S3/S5 字体、尺寸、Source Data hash、双渲染和可访问性均通过。
+
+### 1. 目前最大的真实问题不是 PDF，而是 GitHub 的 author-facing canonical source 已经发生漂移
+
+这是本轮最重要的新发现。
+
+`01_manuscript/README.md` 明确声明：
+
+* `Manuscript.md` 是 **current main manuscript source**
+* `Supplementary_Information.md` 是 **current supplementary information source**
+* 这两个稳定文件名是唯一 author-facing entry points。
+
+但 GitHub 当前 `01_manuscript/Manuscript.md` **并不是你现在上传的 refreeze 主文**。它仍然保留旧版本特征，包括：
+
+* 旧标题 `Disease-blind single-cell reconstruction separates...`
+* structured abstract：Background / Methods / Results / Conclusions
+* Keywords
+* `independent validation`
+* `Background` 而不是现在的 `Introduction`
+* `internal validation`
+* `independent SLE validation dataset`
+
+这些旧措辞目前仍真实存在于 `main` 的 author-facing source 中。
+
+而真正当前的 phase17 source 已经是你上传 PDF 对应的新版本：标题为 `Disease-blind reconstruction distinguishes reproducible interferon remodeling...`，使用 unstructured abstract，并已采用 `reconstruction and replication tests` 等最终术语。 当前 PDF 也与这个新版本一致。
+
+Supplementary 同样存在这个问题。根目录的 `01_manuscript/Supplementary_Information.md` 仍包含旧 Supplementary Methods 1–6、`Discovery and internal validation`、`Independent SLE validation` 等旧状态。 而真正当前的 refreeze Supplement 已经采用 `Discovery and internal replication`、`Independent SLE replication`，并对应现在的 16 页 S1–S10 结构。 
+
+这不是普通仓库整理问题。因为 README 明确说这两个 root Markdown 是 current author-facing entry points，而且后续构建流程会使用它们。也就是说，如果以后再次从 `01_manuscript` 构建，**有可能把已经清理掉的 validation 术语和旧正文重新带回来。**
+
+因此我把它列为当前唯一 **HIGH priority** 缺陷。
+
+正确处理方式不是修改 PDF/DOCX，也不是逐句修旧源文件，而是：
+
+**把当前 phase17 refreeze source 同步回 `01_manuscript/Manuscript.md` 和 `01_manuscript/Supplementary_Information.md`。**
+
+这是源级 scientific presentation hygiene，不属于投稿包推进。
+
+---
+
+## 2. 主文还有一个很小、但确实值得修的术语漏洞
+
+当前 GSE135779 Results 中写的是：
+
+> `The childhood analysis included 43 donors ... with at least 50 mapped cells per donor.`
+
+它出现在一个已经明确说明为 **source-label-defined broad B-cell analogue** 的段落中。
+
+问题是，全文后面又专门使用 mapping / remapping 指代独立的 **source-label-independent mapping sensitivity**。
+
+所以 `mapped cells` 在这里会制造一个非常细微但真实的认知歧义：
+
+读者可能误以为 childhood replication 的细胞也是通过后面的 mapper 得到的。
+
+我建议只改这一句为：
+
+> **The childhood analysis included 43 donors (11 controls and 32 SLE) with at least 50 eligible cells in the source-label-defined broad-B analogue per donor.**
+
+不改变任何 n、effect、CI、q、模型或解释。
+
+需要强调：不要因为这一处而全局删除 `validation`。例如：
+
+* Author contributions 中 CRediT 的 `Validation`
+* `not independent validation of the full feature-selection and tuning pipeline`
+* `not prospective validation`
+
+这些都是正确语境，不应机械替换。
+
+---
+
+# 3. 目前唯一仍值得重绘的图：Supplementary Fig. S4b
+
+S3/S5 我现在认为可以真正停止再动。
+
+新的 S3 第 9 页已经完成角色纯化：只保留 fine-state failure localization 和 transition matrix，而且与 Fig. 1/S9 的证据所有权清楚分离。
+
+新的 S5 第 11 页也已经变成真正的 pseudobulk diagnostics：
+
+* tested/significant genes
+* edgeR dispersion
+* ranked-list technical-family audit
+
+并明确告诉读者 IFN branch estimates 由 Fig. 3b 拥有。
+
+所以这两张图 **KEEP，不再修改。**
+
+但我重新检查 Supplementary Fig. S4 第 10 页时，panel b 内部标题仍然是：
+
+> **Primary null is stable to covariances and cell policy**
+
+这和正文目前非常谨慎的统计边界存在轻微张力：正文明确说 CI **不能证明 equivalent abundance**。
+
+`null is stable` 虽然不是统计学错误，但会给一个 hostile reviewer 留下“作者是否在把 non-significance 写成等价性”的语言攻击点。
+
+因此我建议**从冻结 Source Data 重新绘制 S4，仅改 panel b 标题**：
+
+> **Primary B_ASC estimate across covariance and cell policies**
+
+其余全部保持：
+
+* point estimates 不动
+* CI 不动
+* HC1 不动
+* support/cell policies 不动
+* null guide 不动
+* palette 不动
+* geometry 不动
+* Arial ≥6 pt 不动
+
+也就是说，这是一次**真正意义上的 source redraw title-only repair**，而不是修 PDF。
+
+S4a、S4c、S4d 全部 KEEP。
+
+---
+
+# 4. 还有一个很小的 Supplementary 文本语义点
+
+Supplementary Table S5 当前标题叫：
+
+> `Main-figure source-data map`
+
+但表里除了 Fig. 1–5，还列了 Supplementary Figs. S8–S10。
+
+不是科学错误，但标题和表内容不完全匹配。
+
+如果下一轮同步 canonical source，我建议顺手改成：
+
+> **Supplementary Table S5 | Selected figure source-data map**
+
+不需要增加 S1–S7 七行，也不值得因此扩大 Supplement。
+
+这个是 **LOW / optional**。
+
+---
+
+## 所有图件的最终裁决
+
+| 图件        | 当前裁决                                   |
+| --------- | -------------------------------------- |
+| Fig. 1a–d | KEEP                                   |
+| Fig. 2a–d | KEEP                                   |
+| Fig. 3a–d | KEEP                                   |
+| Fig. 4a–d | KEEP                                   |
+| Fig. 5a–e | KEEP                                   |
+| S1        | KEEP                                   |
+| S2        | KEEP                                   |
+| S3        | **KEEP 当前 2-panel 版本**                 |
+| S4a       | KEEP                                   |
+| **S4b**   | **MODIFY TITLE BY SOURCE REDRAW ONLY** |
+| S4c–d     | KEEP                                   |
+| S5        | **KEEP 当前 3-panel 版本**                 |
+| S6        | KEEP                                   |
+| S7        | KEEP                                   |
+| S8        | KEEP                                   |
+| S9        | KEEP                                   |
+| S10       | KEEP                                   |
+| 替换主图      | **0**                                  |
+| 新增 panel  | **0**                                  |
+| 新增分析      | **0**                                  |
+
+尤其是 **Figure 1a 和 Figure 5a**，我再次审查后仍然没有理由替换。
+
+---
+
+# 正文—图件—补图引用门已经通过
+
+当前旧 S3a/S3d/S5d 删除之后，我没有发现正文残留指向旧面板。
+
+现有阅读链条是完整的：
+
+**Identity**
+
+S1 → S2 → S3 → Fig.1 → S9
+
+**Composition**
+
+Fig.2 → S4
+
+**Primary transcription**
+
+Fig.3 → S5
+
+**External replication**
+
+Fig.4 → S6 → S10 boundary
+
+**Regulatory context**
+
+Fig.5 → S7 → S8
+
+这已经非常接近理想状态。
+
+而且现在证据 owner 是唯一的：
+
+* broad frozen identity → Fig.1
+* fine-state failure → S3
+* end-to-end boundary → S9
+* branch-wise GSE174188 IFN effect → Fig.3b
+* pseudobulk diagnostics → S5
+* source-label-defined external replication → Fig.4
+* replication robustness detail → S6
+* mapper failure → S10
+* regulator convergence → Fig.5
+* correlation/depletion limits → S7/S8
+
+因此**不应再恢复任何被裁掉的 panel。**
+
+---
+
+# 目前论文的科学逻辑状态
+
+现在整篇稿件最强的地方已经不是“结果多”，而是 evidence hierarchy 足够清楚：
+
+**disease-blind identity reconstruction**
+→ broad representation-level solution passes
+→ full end-to-end reconstruction reveals B_ASC-specific instability
+→ propagate the actual boundary uncertainty
+→ composition conclusion remains unsupported rather than “equivalent”
+→ B_CONV IFN/ISG remains stable
+→ independent GSE135779 reproduces the process under a source-label-defined analogue
+→ genome-wide agreement remains weak
+→ source-label-independent remapping fails calibration
+→ regulatory / response evidence converges but stays observational
+→ causal / taxonomy / clinical claims remain explicitly outside the evidence ceiling.
+
+这套结构目前已经不值得再通过“增加东西”改善。当前 PDF 最后的 Discussion 也已经收敛成：
+
+> `the data support a bounded process-level interferon association within explicit identity and transfer limits.`
+
+这一句作为全文终点是合适的。
+
+---
+
+# 下一阶段
+
+我建议下一轮不要叫“再优化论文”，而明确限定为：
+
+## `CANONICAL_SOURCE_SYNC__S4B_NEUTRAL_TITLE__FINAL_SEMANTIC_REFREEZE`
+
+只做四个实质动作：
+
+1. **同步 `01_manuscript` 两个 author-facing canonical Markdown 到当前 refreeze source**；
+2. 修掉 GSE135779 的 `mapped cells` 一句话；
+3. 从冻结 Source Data 重绘 **S4b title-only**；
+4. 可选地把 Supplementary Table S5 标题改为 `Selected figure source-data map`。
+
+完成后再跑：
+
+* panel-letter regression
+* old terminology regression
+* root-source ↔ frozen-source semantic parity
+* 21 main / 38 Supplementary owner uniqueness
+* WPS / LibreOffice 双渲染
+* source-data hash invariance
+* PDF actual-size visual QA
+
+如果全部通过，我认为就应该正式赋予：
+
+**`SCIENTIFIC_PRESENTATION_STOP_GATE_LOCKED`**
+
+到那时应停止主动改正文和图件。除非以后发现**可定位、可证明的科学缺陷**，否则不再增加 cohort、mapper、TF、敏感性分析、新 panel，也不再为了“看起来还能改”继续打磨。
+
+本轮我已经把完整 stop-gate 审计和精确 patch specification 固化为文件：
+
+* [Final semantic stop-gate audit](sandbox:/mnt/data/sle_semantic_stop_gate/FINAL_TEXT_FIGURE_CROSS_REFERENCE_AND_SEMANTIC_STOP_GATE_AUDIT_2026-09-01.md)
+* [Localized patch specification](sandbox:/mnt/data/sle_semantic_stop_gate/LOCALIZED_PATCH_SPEC_2026-09-01.md)
+
+所以目前最值得推进的不是新的生信分析，而是**最后一次 canonical-source 同步 + S4b 极窄 source redraw**。做完这一轮，我认为科学呈现层就应该真正停手。

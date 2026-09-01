@@ -1,0 +1,5 @@
+﻿object,decision,change,scientific_estimates_changed
+01_manuscript/Manuscript.md,MODIFY,Synchronize from current refreeze and replace ambiguous mapped-cells sentence,False
+01_manuscript/Supplementary_Information.md,MODIFY,Synchronize from current refreeze and rename Table S5 as selected-figure map,False
+Supplementary Figure S4b,MODIFY_TITLE_ONLY,B_ASC estimate across covariance and cell policies,False
+All other main and Supplementary panels,KEEP,None,False

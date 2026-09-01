@@ -1,0 +1,153 @@
+{
+  "created_at": "2026-09-01T10:48:58+08:00",
+  "status": "SCIENTIFIC_PRESENTATION_STOP_GATE_LOCKED",
+  "checks": {
+    "integration_pass": true,
+    "document_build_pass": true,
+    "previous_scientific_refreeze_locked": true,
+    "wps_main_31_pages": true,
+    "lo_main_32_pages": true,
+    "supplement_16_pages_both": true,
+    "all_pages_nonblank": true,
+    "wps_all_text_within_canvas": true,
+    "lo_all_text_within_canvas": true,
+    "all_render_markers_resolved": true,
+    "supplement_pagination_and_fingerprints_pass": true,
+    "approved_source_diffs_and_pdf_semantics": true,
+    "root_manuscript_phase17_byte_parity": true,
+    "root_supplement_phase17_byte_parity": true,
+    "source_label_defined_wording_present": true,
+    "ambiguous_mapped_cells_absent": true,
+    "selected_figure_table_title_present": true,
+    "s4_new_title_present": true,
+    "s4_old_title_absent": true,
+    "s4_dimensions_unchanged": true,
+    "s4_text_minimum_6pt": true,
+    "s4_font_arial_embedded": true,
+    "all_15_source_data_files_byte_identical": true,
+    "s4_source_hash_unchanged": true,
+    "accessibility_zero_findings": true,
+    "contact_sheets_complete": true,
+    "affected_pages_complete": true,
+    "submission_package_unchanged": true
+  },
+  "failed_checks": [],
+  "scientific_estimates_changed": false,
+  "statistical_models_rerun": false,
+  "source_data_changed": false,
+  "new_panels": 0,
+  "replacement_panels": 0,
+  "main_panels": {
+    "keep": 21,
+    "modify": 0,
+    "replace": 0
+  },
+  "supplementary_panels": {
+    "final_display": 38,
+    "title_only_modify": 1,
+    "replace": 0
+  },
+  "figure_s4": {
+    "path": "phase17_v7/npj_sba_scientific_stop_gate/20260901_canonical_source_s4b_refreeze/figures/figures/Supplementary_Figure_S4_composition_diagnostics.pdf",
+    "sha256": "FD7A792FA8631B47C152915A3E33CF1CD3A5AC237B5C660D3FC9B71DEBFFBA88",
+    "width_mm": 169.99999999999028,
+    "height_mm": 125.88152327222166,
+    "minimum_character_size_pt": 8.0,
+    "text": "Primary C4 Internal C2 Flare C3\n0\n20\n40\n60\n80Sample-cohort strata\na Zero-ASC strata motivate count-aware modeling\nAll strata\nZero ASC\n0.6 0.8 1.0 1.2 1.4 1.6 1.8 2.0\nB_ASC relative-abundance odds ratio\nBase >=50\n>=20 cells\n>=100 cells\nExclude non-B\nRisk-negative\nb B_ASC estimate across covariance and cell policies\n0.05 0.2 1 5 20 60\nEffect ratio (95% CI; log scale)\nPrimary C4\nInternal C2\nFlare C3\nc Two-part ASC-presence component\n0.5 1 2 5\nEffect ratio (95% CI; log scale)\nPrimary C4\nInternal C2\nFlare C3\nd Two-part positive-abundance component",
+    "arial_present": true,
+    "fonts_embedded_subset_unicode": true
+  },
+  "documents": {
+    "wps_manuscript": {
+      "path": "phase17_v7/npj_sba_scientific_stop_gate/20260901_canonical_source_s4b_refreeze/documents/Manuscript_scientific_stop_gate.pdf",
+      "pages": 31,
+      "sha256": "66DF596734E805F4472909EC84B24D1B31FB4297EBC11DEB4642BED962D22B72"
+    },
+    "wps_supplement": {
+      "path": "phase17_v7/npj_sba_scientific_stop_gate/20260901_canonical_source_s4b_refreeze/documents/Supplementary_Information_scientific_stop_gate.pdf",
+      "pages": 16,
+      "sha256": "980522483A5DBEEC18B5A8DD147995CFDE7F8859945D1C9638DEE145633D4272"
+    },
+    "lo_manuscript": {
+      "path": "phase17_v7/npj_sba_scientific_stop_gate/20260901_canonical_source_s4b_refreeze/qa/libreoffice_documents/Manuscript_scientific_stop_gate.pdf",
+      "pages": 32,
+      "sha256": "7FAB6D1105AFDB445C301015D1B5A0AF4C707CD511904B6CCDA25C46FCBAE92E"
+    },
+    "lo_supplement": {
+      "path": "phase17_v7/npj_sba_scientific_stop_gate/20260901_canonical_source_s4b_refreeze/qa/libreoffice_documents/Supplementary_Information_scientific_stop_gate.pdf",
+      "pages": 16,
+      "sha256": "F7F4EB180EC07D9F6144226E641FA452B78F33EFF55530D0798A2EB5FABA759C"
+    }
+  },
+  "text_diff_audit": {
+    "wps_manuscript": {
+      "old_pdf_contains_old_phrase": true,
+      "new_pdf_contains_new_phrase": true,
+      "new_pdf_excludes_old_phrase": true,
+      "line_number_reflow_expected": true,
+      "expected_only_change": true
+    },
+    "lo_manuscript": {
+      "old_pdf_contains_old_phrase": true,
+      "new_pdf_contains_new_phrase": true,
+      "new_pdf_excludes_old_phrase": true,
+      "line_number_reflow_expected": true,
+      "expected_only_change": true
+    },
+    "wps_supplement": {
+      "old_phrase_count": 1,
+      "new_phrase_count": 1,
+      "expected_only_change": true
+    },
+    "lo_supplement": {
+      "old_phrase_count": 1,
+      "new_phrase_count": 1,
+      "expected_only_change": true
+    }
+  },
+  "source_hashes": {
+    "Figure1_source_data.csv": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805",
+    "Figure2_source_data.csv": "DAA6DDBAB469E0D510AB578BEE0A21AA73FA2D71184739E3F361C3EA6EC8DFE2",
+    "Figure3_source_data.csv": "DEFABF8C16D879362E3AD197C857A9197CD6D0691B20FDFA4AC97BEFF3710BC8",
+    "Figure4_source_data.csv": "F3604F40DAEDB0DD01617BB223A8762323C8AAC7F16185292367B9A13FEC4755",
+    "Figure5_source_data.csv": "A482D9D4F001B076B496C63857A8B3ADB65816CD0AA18B60C8B17B2DDB211B5B",
+    "Supplementary_Figure_S10_source_data.csv": "FF4309EBAF761A0563F018AE1BE07212EF2CB2241E79DF12C374BCB1426A60FF",
+    "Supplementary_Figure_S1_source_data.csv": "A140D1D900A3EA869551097146AFFD3872BC7AC78E9E9712E4BDAC834A57CB68",
+    "Supplementary_Figure_S2_source_data.csv": "E46FE5B33B11D45319DD80C3D669AEEB83F2517095CD0C1FD5EEFA1F57C58731",
+    "Supplementary_Figure_S3_source_data.csv": "133E973C2753F4946A24739C049308152299A915A3FC6754B30AD0521F979C96",
+    "Supplementary_Figure_S4_source_data.csv": "7BA2660E5A50ADCF28407BCC92A91C791576DD69A9A1ABA9618DEB045C3A4E19",
+    "Supplementary_Figure_S5_source_data.csv": "F6682D636C1FF3A1784E0B9E8AEFF5C5D1BB075176312E87FCB938F65C4DA897",
+    "Supplementary_Figure_S6_source_data.csv": "A1D1DCBF9D20BA01D0022D4DA0F73A618776D34A687E764F18AB83439204DBF6",
+    "Supplementary_Figure_S7_source_data.csv": "D92140A17B96E6B77F5EEBF322A5D77A5E6F2132EDD54CC9C3E73521E5352CA3",
+    "Supplementary_Figure_S8_source_data.csv": "26A3F90E3165D8928874F278384B2587CB549DD4FFDE93440AAC4CEEAE06A9A2",
+    "Supplementary_Figure_S9_source_data.csv": "46EE840F86CA33AA4F5FCE0A37EEFCB4DB23831533BBFA20400BAE50744F5D42"
+  },
+  "canonical_sources": {
+    "root_manuscript_sha256": "AA23CCA25DE9968A45504698B39DEE1BBD1A80ECE8E019DD4D35BD02180E652A",
+    "root_supplement_sha256": "BE43C5C87760BDF6A47EF84E46D8447EE65FA7FFF4D196C7D951CC26EB05FC66",
+    "exact_phase17_parity": true
+  },
+  "visual_qa": {
+    "contact_sheets_reviewed": 18,
+    "affected_pages_reviewed": 6,
+    "wps_and_libreoffice": true,
+    "clipping_or_overlap_found": false
+  },
+  "accessibility": {
+    "Manuscript_scientific_stop_gate.json": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "Supplementary_Information_scientific_stop_gate.json": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    }
+  },
+  "submission_package_sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1",
+  "submission_package_changed": false,
+  "github_release_changed": false,
+  "zenodo_changed": false,
+  "next_stage": "SCIENTIFIC_PRESENTATION_MAINTENANCE_FREEZE"
+}

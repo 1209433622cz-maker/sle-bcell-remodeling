@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-09-01T10:44:34+08:00",
+  "status": "PASS_SCIENTIFIC_STOP_GATE_DOCX_BUILT_DUAL_RENDER_REQUIRED",
+  "build_results": [
+    {
+      "source": "phase17_v7/npj_sba_scientific_stop_gate/20260901_canonical_source_s4b_refreeze/sources/Manuscript_scientific_stop_gate.md",
+      "output": "phase17_v7/npj_sba_scientific_stop_gate/20260901_canonical_source_s4b_refreeze/documents/Manuscript_scientific_stop_gate.docx",
+      "paragraphs": 151,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 60748
+    },
+    {
+      "source": "phase17_v7/npj_sba_scientific_stop_gate/20260901_canonical_source_s4b_refreeze/sources/Supplementary_Information_scientific_stop_gate.md",
+      "output": "phase17_v7/npj_sba_scientific_stop_gate/20260901_canonical_source_s4b_refreeze/documents/Supplementary_Information_scientific_stop_gate.docx",
+      "paragraphs": 69,
+      "tables": 10,
+      "inline_shapes": 10,
+      "placeholders": 0,
+      "bytes": 4301585
+    }
+  ],
+  "checks": {
+    "manuscript": {
+      "title_exact": true,
+      "abstract_145_words": true,
+      "no_inline_figures": true,
+      "references_1_to_33": true,
+      "replication_tests_wording": true,
+      "final_boundary_sentence": true,
+      "old_final_exclusion_list_absent": true,
+      "source_label_defined_childhood_wording": true,
+      "ambiguous_mapped_cells_wording_absent": true
+    },
+    "supplement": {
+      "ten_figures_embedded": true,
+      "title_exact": true,
+      "s3_new_title_present": true,
+      "s3_old_title_absent": true,
+      "s3_two_panel_legend": true,
+      "s5_owner_sentence_present": true,
+      "s5_old_d_legend_absent": true,
+      "selected_figure_source_map_title": true
+    }
+  },
+  "object_inventory": {
+    "manuscript_inline_shapes": 0,
+    "supplement_inline_shapes": 10
+  },
+  "files": {
+    "Manuscript_scientific_stop_gate.docx": {
+      "bytes": 60803,
+      "sha256": "75544030712D6C1905FCAFD4795B898B4160665B49E923094A60D63E19B53703"
+    },
+    "Supplementary_Information_scientific_stop_gate.docx": {
+      "bytes": 4301656,
+      "sha256": "5515AE0F29716C819D18EE243ED184A2164AFBA77F32F948BA3EEBE885A8F2D2"
+    }
+  },
+  "scientific_estimates_changed": false,
+  "source_data_changed": false,
+  "display_only_redraws": [
+    "Supplementary Figure S4b title"
+  ]
+}

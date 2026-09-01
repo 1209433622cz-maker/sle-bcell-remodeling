@@ -374,6 +374,7 @@ def build_s4(
     source_dir: Path,
     *,
     log_ratio_two_part: bool = False,
+    panel_b_title: str = "Primary null is stable to covariance and cell policy",
 ) -> None:
     gate = root / "phase17_v7/gateC3A/20260815_frozen_abundance"
     base = read_csv(gate / "02_base_and_nonoverlap_contrasts.csv")
@@ -418,7 +419,7 @@ def build_s4(
     axes[0, 1].set_yticks(y, primary["label"])
     axes[0, 1].set_xlim(0.5, 2.05)
     axes[0, 1].set_xlabel("B_ASC relative-abundance odds ratio")
-    axes[0, 1].set_title("Primary null is stable to covariance and cell policy", loc="left")
+    axes[0, 1].set_title(panel_b_title, loc="left")
     style_axis(axes[0, 1]); panel_label(axes[0, 1], "b")
 
     for axis, component, title, panel in [
