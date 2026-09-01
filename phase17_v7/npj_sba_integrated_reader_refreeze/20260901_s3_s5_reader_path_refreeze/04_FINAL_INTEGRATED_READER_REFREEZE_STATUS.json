@@ -1,0 +1,153 @@
+{
+  "created_at": "2026-09-01T10:06:16+08:00",
+  "status": "INTEGRATED_READER_PATH_AND_DISPLAY_PRUNE_SCIENTIFIC_REFREEZE_LOCKED",
+  "checks": {
+    "source_integration_pass": true,
+    "document_build_pass": true,
+    "previous_scientific_lock_intact": true,
+    "wps_main_31_pages": true,
+    "lo_main_32_pages": true,
+    "supplement_16_pages_both_renderers": true,
+    "all_pages_nonblank": true,
+    "wps_all_text_within_canvas": true,
+    "lo_all_text_within_canvas": true,
+    "all_render_markers_resolved": true,
+    "supplement_pagination_and_fingerprints_pass": true,
+    "main_replication_tests_wording_present": true,
+    "final_process_boundary_present": true,
+    "old_final_exclusion_list_absent": true,
+    "s3_legend_and_ownership_present": true,
+    "s5_legend_and_ownership_present": true,
+    "rendered_s3_s5_legends_present": true,
+    "old_s3_s5_legend_content_absent": true,
+    "s3_exact_dimensions": true,
+    "s5_exact_dimensions": true,
+    "figure_text_minimum_6pt": true,
+    "figure_fonts_arial_embedded": true,
+    "s3_final_panel_titles_present": true,
+    "s3_removed_panel_titles_absent": true,
+    "s5_final_panel_titles_present": true,
+    "s5_removed_panel_title_absent": true,
+    "all_frozen_source_hashes_unchanged": true,
+    "exact_duplicate_verification_pass": true,
+    "panel_matrix_62_rows_21_main_keep": true,
+    "exactly_three_duplicate_prunes": true,
+    "display_mapping_exact": true,
+    "accessibility_zero_findings": true,
+    "contact_sheets_complete": true,
+    "affected_pages_complete": true,
+    "submission_package_unchanged": true
+  },
+  "failed_checks": [],
+  "scientific_estimates_changed": false,
+  "statistical_models_rerun": false,
+  "source_data_changed": false,
+  "new_panels_created": 0,
+  "replacement_panels": 0,
+  "main_panels": {
+    "keep": 21,
+    "modify": 0,
+    "replace": 0
+  },
+  "supplementary_panels": {
+    "final_display": 38,
+    "pruned_exact_duplicates": 3,
+    "replace": 0
+  },
+  "duplicate_verification": {
+    "s3a_vs_figure1b_exact": true,
+    "s3a_compared_cells": 16,
+    "s3d_vs_figure1d_exact": true,
+    "s3d_compared_cells": 8,
+    "s5d_vs_figure3b_exact": true,
+    "s5d_compared_rows": 7,
+    "s5d_compared_columns": [
+      "analysis_name",
+      "effect",
+      "ci_low",
+      "ci_high",
+      "q_value_primary4"
+    ]
+  },
+  "source_hashes": {
+    "Figure1_source_data.csv": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805",
+    "Supplementary_Figure_S3_source_data.csv": "133E973C2753F4946A24739C049308152299A915A3FC6754B30AD0521F979C96",
+    "Figure3_source_data.csv": "DEFABF8C16D879362E3AD197C857A9197CD6D0691B20FDFA4AC97BEFF3710BC8",
+    "Supplementary_Figure_S5_source_data.csv": "F6682D636C1FF3A1784E0B9E8AEFF5C5D1BB075176312E87FCB938F65C4DA897"
+  },
+  "figures": {
+    "S3": {
+      "path": "phase17_v7/npj_sba_integrated_reader_refreeze/20260901_s3_s5_reader_path_refreeze/figures/figures/Supplementary_Figure_S3_fine_state_failure_transition_structure.pdf",
+      "sha256": "ECB80FF10A95FFEE71F86A5D940EADA465D523143AA5EE9216BB41CA1C885934",
+      "width_mm": 169.99999999999028,
+      "height_mm": 86.00000000001583,
+      "minimum_character_size_pt": 6.0,
+      "text": "0.0 0.2 0.4 0.6 0.8 1.0\nCluster Jaccard\n5-state C0\n5-state C1\n5-state C2\n5-state C3\n5-state C4\n4-state C0\n4-state C1\n4-state C3\n4-state C4\n3-state C0\n3-state C1\n3-state C3\na Failure localizes to fine-state membership\nMedian Minimum\n0 1 2 3 4\nMapped reference cluster\n0\n1\n2\n3\n4\nOriginal reference cluster\nb Mean r=0.4 transition matrix\n0.0\n0.2\n0.4\n0.6\n0.8\n1.0\nMean fraction",
+      "font_lines": [
+        "ELUGPM+ArialMT                       CID TrueType      Identity-H       yes yes yes     17  0",
+        "ELUGPM+Arial-BoldMT                  CID TrueType      Identity-H       yes yes yes     24  0"
+      ],
+      "arial_present": true,
+      "fonts_embedded_subset_unicode": true
+    },
+    "S5": {
+      "path": "phase17_v7/npj_sba_integrated_reader_refreeze/20260901_s3_s5_reader_path_refreeze/figures/figures/Supplementary_Figure_S5_pseudobulk_ranked_list_diagnostics.pdf",
+      "sha256": "AA2A6F9D0BCD49B4B26D311C479AA74E39BCCC5D7830447DB3026ACF79C5F0CF",
+      "width_mm": 169.99999999999028,
+      "height_mm": 104.00000000000027,
+      "minimum_character_size_pt": 6.0,
+      "text": "Primary >=20 >=100\nRisk-negative\nInternal\nNonoverlap\nFlare\n0\n2000\n4000\n6000\n8000\nGenes\na filterByExpr-tested and significant genes\nTested BH q<0.05\nPrimary >=20 >=100\nRisk-negative\nInternal\nNonoverlap\nFlare\n0.030\n0.035\n0.040\n0.045\nDispersion\nb edgeR dispersion diagnostics\nCommon Median tagwise\n100 200 300 400 500\nTop-ranked genes\n0\n2\n4\n6\n8\nTechnical-family fraction (%)\nc Ranked-list technical-family audit\nMitochondrial Ribosomal Haemoglobin Immunoglobulin",
+      "font_lines": [
+        "ELUGPM+ArialMT                       CID TrueType      Identity-H       yes yes yes     21  0",
+        "ELUGPM+Arial-BoldMT                  CID TrueType      Identity-H       yes yes yes     28  0"
+      ],
+      "arial_present": true,
+      "fonts_embedded_subset_unicode": true
+    }
+  },
+  "documents": {
+    "wps_manuscript": {
+      "path": "phase17_v7/npj_sba_integrated_reader_refreeze/20260901_s3_s5_reader_path_refreeze/documents/Manuscript_integrated_reader_refreeze.pdf",
+      "pages": 31,
+      "sha256": "49F9571664412B5B3B2FA19BDAC05E471DC9287E79DCCC45AC14711B499DBBC9"
+    },
+    "lo_manuscript": {
+      "path": "phase17_v7/npj_sba_integrated_reader_refreeze/20260901_s3_s5_reader_path_refreeze/qa/libreoffice_documents/Manuscript_integrated_reader_refreeze.pdf",
+      "pages": 32,
+      "sha256": "EF4A1B797A06975E0E9880796672D7B4AB022B0EA089C072905D753A3BEF8722"
+    },
+    "wps_supplement": {
+      "path": "phase17_v7/npj_sba_integrated_reader_refreeze/20260901_s3_s5_reader_path_refreeze/documents/Supplementary_Information_integrated_reader_refreeze.pdf",
+      "pages": 16,
+      "sha256": "B374F8FF812BB208C6A81BFF2B10D396996CE04631B53DE680704F6481E57701"
+    },
+    "lo_supplement": {
+      "path": "phase17_v7/npj_sba_integrated_reader_refreeze/20260901_s3_s5_reader_path_refreeze/qa/libreoffice_documents/Supplementary_Information_integrated_reader_refreeze.pdf",
+      "pages": 16,
+      "sha256": "C71AA0078A7EEFD8AF9DE9648859C4C1CAC1546F397B99F21477DB36436A8DBE"
+    }
+  },
+  "visual_qa": {
+    "contact_sheets_reviewed": 18,
+    "affected_pages_reviewed": 10,
+    "wps_and_libreoffice": true,
+    "clipping_or_overlap_found": false
+  },
+  "accessibility": {
+    "Manuscript_integrated_reader_refreeze.json": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "Supplementary_Information_integrated_reader_refreeze.json": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    }
+  },
+  "submission_package_sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1",
+  "submission_package_changed": false,
+  "github_release_changed": false,
+  "zenodo_changed": false,
+  "next_stage": "FINAL_TEXT_FIGURE_CROSS_REFERENCE_AND_SEMANTIC_STOP_GATE"
+}

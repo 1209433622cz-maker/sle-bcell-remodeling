@@ -1,0 +1,98 @@
+{
+  "created_at": "2026-09-01T04:01:51+08:00",
+  "status": "PASS_S3_S5_SOURCE_REDRAW_AND_TEXT_INTEGRATION_DOCUMENT_REBUILD_REQUIRED",
+  "checks": {
+    "manuscript_matches_reviewed_candidate": true,
+    "supplement_matches_reviewed_candidate": true,
+    "manuscript_only_two_replacements": true,
+    "supplement_only_s3_s5_legend_replacements": true,
+    "s3a_vs_figure1b_exact": true,
+    "s3d_vs_figure1d_exact": true,
+    "s5d_vs_figure3b_exact": true,
+    "all_four_frozen_source_hashes_unchanged": true,
+    "s3_width_170mm": true,
+    "s5_width_170mm": true,
+    "s3_two_display_panels": true,
+    "s5_three_display_panels": true,
+    "decision_matrix_valid": true,
+    "submission_package_unchanged": true
+  },
+  "duplicate_verification": {
+    "s3a_vs_figure1b_exact": true,
+    "s3a_compared_cells": 16,
+    "s3d_vs_figure1d_exact": true,
+    "s3d_compared_cells": 8,
+    "s5d_vs_figure3b_exact": true,
+    "s5d_compared_rows": 7,
+    "s5d_compared_columns": [
+      "analysis_name",
+      "effect",
+      "ci_low",
+      "ci_high",
+      "q_value_primary4"
+    ]
+  },
+  "source_hash_checks": {
+    "Figure1_source_data.csv": true,
+    "Supplementary_Figure_S3_source_data.csv": true,
+    "Figure3_source_data.csv": true,
+    "Supplementary_Figure_S5_source_data.csv": true
+  },
+  "arial_path": "C:\\Windows\\Fonts\\arial.ttf",
+  "figures": {
+    "S3": {
+      "pdf": "phase17_v7/npj_sba_integrated_reader_refreeze/20260901_s3_s5_reader_path_refreeze/figures/figures/Supplementary_Figure_S3_fine_state_failure_transition_structure.pdf",
+      "png": "phase17_v7/npj_sba_integrated_reader_refreeze/20260901_s3_s5_reader_path_refreeze/figures/figures/Supplementary_Figure_S3_fine_state_failure_transition_structure.png",
+      "pdf_sha256": "ECB80FF10A95FFEE71F86A5D940EADA465D523143AA5EE9216BB41CA1C885934",
+      "png_sha256": "6B4A8CB52293E14D9B8B608BE93726E64E52E9F1D37BB1715E043AB44E144097",
+      "width_mm": 169.99999999999028,
+      "height_mm": 86.00000000001583,
+      "minimum_visible_text_pt": 6.0
+    },
+    "S5": {
+      "pdf": "phase17_v7/npj_sba_integrated_reader_refreeze/20260901_s3_s5_reader_path_refreeze/figures/figures/Supplementary_Figure_S5_pseudobulk_ranked_list_diagnostics.pdf",
+      "png": "phase17_v7/npj_sba_integrated_reader_refreeze/20260901_s3_s5_reader_path_refreeze/figures/figures/Supplementary_Figure_S5_pseudobulk_ranked_list_diagnostics.png",
+      "pdf_sha256": "AA2A6F9D0BCD49B4B26D311C479AA74E39BCCC5D7830447DB3026ACF79C5F0CF",
+      "png_sha256": "47C9A02403F4D6B68E07D0A2F272A0D2965DCF799F9AD07680F99BFF1E09D0C5",
+      "width_mm": 169.99999999999028,
+      "height_mm": 104.00000000000027,
+      "minimum_visible_text_pt": 6.0
+    }
+  },
+  "sources": {
+    "Manuscript_integrated_reader_refreeze.md": {
+      "bytes": 57718,
+      "sha256": "FC7E747023C443641258C58DFDDF254EBC875F117B6A94D9FB0B908F48937A41"
+    },
+    "Supplementary_Information_integrated_reader_refreeze.md": {
+      "bytes": 18627,
+      "sha256": "8FB651C6AC858408494ECAB8B8F8C5691DC938E1A5DBE129D156172117BE624A"
+    }
+  },
+  "panel_mapping": "phase17_v7/npj_sba_integrated_reader_refreeze/20260901_s3_s5_reader_path_refreeze/S3_S5_DISPLAY_PANEL_MAPPING.csv",
+  "panel_decision_matrix": {
+    "path": "phase17_v7/npj_sba_integrated_reader_refreeze/20260901_s3_s5_reader_path_refreeze/FINAL_INTEGRATED_READER_PANEL_DECISION_MATRIX.csv",
+    "rows": 62,
+    "main_21_keep": true,
+    "exactly_three_pruned_panels": true
+  },
+  "scientific_estimates_changed": false,
+  "statistical_models_rerun": false,
+  "source_data_changed": false,
+  "display_panels_pruned": [
+    "S3a",
+    "S3d",
+    "S5d"
+  ],
+  "main_panels": {
+    "keep": 21,
+    "modify": 0,
+    "replace": 0
+  },
+  "supplementary_panels": {
+    "keep_or_renumber": 38,
+    "prune_exact_duplicate": 3,
+    "replace": 0
+  },
+  "submission_package_sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1"
+}

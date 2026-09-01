@@ -1,0 +1,238 @@
+本轮我严格按你的要求继续停留在**手稿文本 + 图件科学表达层**，没有推进投稿包、Release、Zenodo，也没有重新打开已经锁定的统计模型。GitHub 当前科学版本 `078e403` 与你上传的主文、补充材料和 S6 refreeze 版本是一致的；此前的 `REFERENCE_TERMINOLOGY_AND_S6_SCIENTIFIC_REFREEZE_LOCKED` 在**数值和分析对象层仍然成立**。行动记录也明确规定下一步应做 final reader simulation，而不是新增分析。
+
+这次真正有价值的新结论是：**按“逐页最终阅读顺序”而不是逐图孤立检查后，我不再同意 S1–S10 除 S6 外全部原样 KEEP。发现了 3 个可以机器级确认的重复证据所有者，因此 S3 和 S5 应当重新从冻结 Source Data 绘制并裁剪。**
+
+## 一、本轮最终图件裁决发生了两处实质变化
+
+| 图件            | 新裁决                                | 处理                                     |
+| ------------- | ---------------------------------- | -------------------------------------- |
+| Main Fig. 1–5 | **21/21 KEEP**                     | 不重绘、不替换                                |
+| S1            | KEEP                               | QC 独立信息                                |
+| S2            | KEEP                               | representation/bridge 独立信息             |
+| **S3**        | **MODIFY / SOURCE-REDRAW / PRUNE** | **4 panels → 2 panels**                |
+| S4            | KEEP                               | 保留 covariance / two-part 独立诊断          |
+| **S5**        | **MODIFY / SOURCE-REDRAW / PRUNE** | **4 panels → 3 panels**                |
+| S6            | KEEP 当前 refreeze                   | 不再修改                                   |
+| S7            | KEEP                               | correlation-aware 层不可替代                |
+| S8            | KEEP                               | depletion boundary 不重复                 |
+| S9            | KEEP                               | end-to-end failure + propagation 是关键边界 |
+| S10           | KEEP                               | corrected calibration failure 是唯一证据所有者 |
+
+完整逐子图不是只检查到 figure level，而是已经做成了 **62 行 panel-level 决策矩阵**。
+
+### S3：现在确实存在两个不该继续占据 Supplement 空间的重复 panel
+
+当前 Supplementary Fig. S3 在第 9 页有四个 panel：a 是 5/4/3/2-state policy 的 median/worst-case ARI，b 是 fine-state Jaccard failure localization，c 是 transition matrix，d 是 B_CONV/B_ASC Jaccard adjudication。
+
+我直接比较了冻结 Source Data，而不是根据肉眼“看起来相似”判断：
+
+**S3a = Main Fig. 1b：精确重复。**
+
+四个 identity policies 的：
+
+* median mapped ARI
+* minimum mapped ARI
+* median mapping agreement
+* minimum mapping agreement
+
+均逐值一致。Main Fig. 1b 已经是这个证据的正式主图 owner；主文 Figure 1 legend 也明确把 candidate identity-policy stability 定义给 Fig. 1b。
+
+**S3d = Main Fig. 1d：精确重复。**
+
+B_CONV/B_ASC 的 median/minimum Jaccard 也是逐值相同。Main Fig. 1d 已经拥有 broad-state stability + marker support 的最终解释权。
+
+因此我建议把 S3 从：
+
+`a / b / c / d`
+
+收敛为：
+
+**new S3a ← old S3b**
+fine-state cluster-Jaccard failure localization
+
+**new S3b ← old S3c**
+mean transition matrix
+
+而 **old S3a、old S3d 从展示层删除，不删除冻结 Source Data**。
+
+新的标题我建议：
+
+**Supplementary Figure S3 | Fine-state failure and transition structure**
+
+这样 S3 的角色终于变得非常清楚：它不再“再证明一次 Fig. 1 已经证明的东西”，而只回答一个 Supplement 真正应该回答的问题：
+
+> **为什么 fine-state solution 失败，以及它如何过渡到 broad scaffold。**
+
+这比目前 S3 的信息密度和逻辑功能都明显更强。
+
+---
+
+## 二、S5d 也应该删除：它与 Main Fig. 3b 是逐值完全相同的数据
+
+当前 S5 第 11 页：
+
+* a = filterByExpr tested / BH significant gene counts
+* b = edgeR dispersions
+* c = ranked-list technical-family audit
+* d = IFN/ISG effects across frozen branches
+
+前三者都是真正的 pseudobulk diagnostics；但 panel d 已经跨越了“diagnostic”角色，重新绘制了一遍主结果。
+
+我对 **Figure 3b 和 S5d** 的七个 branch 做了机器比较：
+
+`analysis_name + effect + ci_low + ci_high + q_value_primary4`
+
+结果为：
+
+**7/7 rows exact equality = TRUE**
+
+因此这不是“概念类似”，而是**同一统计对象被两个 panel 重复拥有**。
+
+主 Figure 3b 本身已经被正式定义为：
+
+> IFN/ISG estimates across support thresholds, residual-risk restriction, internal replication, donor-nonoverlap internal replication and secondary flare contrast. 
+
+所以 S5d 不再有独立科学任务。
+
+最终建议：
+
+**S5a KEEP**
+**S5b KEEP**
+**S5c KEEP**
+**S5d PRUNE**
+
+S5 变成一个真正纯粹的：
+
+**Pseudobulk and ranked-list diagnostics**
+
+而不是“3 个诊断 panel + 1 个重复主结果 panel”。
+
+最适合的重新排版不是补一个新 panel，而是 **2+1 geometry**：
+
+上排 a/b；下排 c 横跨整宽。
+
+这样还能解决当前第 11 页 S5 图下方明显的大面积空白，使 Supplement 的视觉密度更接近 Nature 系列文章的 supplementary presentation。
+
+---
+
+## 三、我重新审了几个“看起来可能重复、但实际上不应删”的对象
+
+**S4b 必须 KEEP。** 它和 Fig. 2c 都讨论 primary composition sensitivity，但 S4b 多出真正独立的信息：**model-based/observed-information 与 HC1 covariance 的并行结果**。因此它不是数字重复，只是同一主张的 uncertainty decomposition。当前 S4 第 10 页的四面板结构合理。
+
+如果这轮一起做极窄的标题优化，我更喜欢把 panel b 当前的：
+
+`Primary null is stable to covariance and cell policy`
+
+改成：
+
+**`Model-based and HC1 uncertainty across primary policies`**
+
+这样比“null is stable”更中性，也与正文反复强调“CI 不证明 equivalence”更契合。但这只是标题 polish，不构成必须重绘的 scientific defect。
+
+**S6 当前版本继续 KEEP。** 你这轮 refreeze 后的 S6 已经清除了 validation/mapping-label 旧术语，四个 panel 分工明确：
+
+a donor support、b four-program family、c source-label omission、d donor influence。
+
+虽然 S6c/d 与 Fig. 4d 属于同一个 robustness family，但并不重复：Fig. 4d 是压缩后的主结果 owner，而 S6 把 8 个 source labels 和 4 个 childhood programs 展开，因此 Supplement 中有独立价值。
+
+S7/S8 也不建议删。Supplementary Tables S4/S4B 是**精确数值 owner**，S7/S8 是**视觉结构 owner**：前者回答具体 q 值和 target count，后者回答跨方法 concordance 和 depletion attenuation pattern。这是合理的 table–figure complementarity。
+
+S9 更不能动。它是当前论文最重要的“负结果如何约束结论”的图之一：B_ASC end-to-end overlap criterion failure 和 boundary propagation 同时存在，正好支撑全文“process more reproducible than hard taxonomy”的逻辑。
+
+S10 也继续 KEEP，因为它是 corrected source-label-independent remapping failure 的唯一完整图形 owner，并且直接解释为什么不能进一步声称 taxonomy transfer。
+
+---
+
+# 四、正文只发现两处值得继续动，不应该再大改
+
+目前 Abstract 已经非常成熟：它在一段中同时给出了 identity failure、composition boundary、external source-label-defined IFN replication、failed corrected remapping 和 observational TF ceiling，最后落到“process-level > hard state assignment”。这个 Abstract 我现在建议 **KEEP，不再继续压缩**。
+
+第一处小修位于 Introduction 最后一段。目前写：
+
+> `which B-cell features survive increasingly stringent reconstruction and validation`
+
+虽然这里的 `validation` 是 generic 用法，本身不算错误，但经历了上一轮严格的 evidence-class lock 后，读者第一次顺读时仍可能把它误读成“每一层都有 independent validation”。
+
+因此我给 candidate 改成：
+
+> **`which B-cell features survive increasingly stringent reconstruction and replication tests`**
+
+这与目前全稿建立的 terminology hierarchy 更一致。原句位于 Introduction 到 Results 的过渡位置。
+
+第二处是真正的 prose redundancy：Discussion 最后一段已经完成中心总结后，又重复列出：
+
+`not a universal B-cell taxonomy, generalized B_ASC expansion, causal regulator, unique upstream stimulus or established clinical utility`
+
+这些 boundary 前面已经分别由 composition、regulator、clinical implication、limitations 各自明确拥有。
+
+最终收束更适合改成：
+
+> **`Retaining the failed reconstruction and calibration criteria narrows, rather than weakens, the conclusion: the data support a bounded process-level interferon association within explicit identity and transfer limits.`**
+
+我认为这个版本明显更强。它不是“删除免责声明”，而是把已经证明过的五个否定重新压缩成论文自己的正面科学命题。
+
+其余 Discussion 我**不建议继续 prune**。尤其开头的“difference in reproducibility across biological layers, not a new B-cell taxonomy”和后面的“tempting but unsupported narratives”虽然和 Results 有语义重合，但承担的是 interpretation/synthesis，而不是重复报告数据，应保留。
+
+---
+
+# 五、这轮我没有去修改冻结 Source Data
+
+这一点非常重要。
+
+S3/S5 的正确实现方式不是删除 CSV 行，也不是 Photoshop/crop 旧图，而是：
+
+**冻结 Source Data保持 byte-identical → plotting code只读取要保留的 source panels → 重新排版输出 → 单独产生 display-panel mapping。**
+
+也就是说：
+
+`S3b → final S3a`
+`S3c → final S3b`
+
+以及：
+
+`S5a/b/c → final S5a/b/c`
+
+而原 S3a/S3d/S5d 数据依然保留在 provenance 中。
+
+这正好符合你一直强调的原则：**优先从源数据重跑图，而不是修改已有结果输出对象。**
+
+GitHub 当前 plotting style contract 仍规定 6.8-inch/约 170-mm working width、6-pt base font，并优先 Arial/Helvetica；我也据此为 S3/S5 写了 source-redraw runner。
+
+但我**没有在这个环境伪装生成最终图**：这里无法保证真正的 Arial，而你上一轮已经明确拒绝 Arimo fallback。新 runner 因此设计为：
+
+**如果找不到真正 Arial，就直接报错退出，而不是偷偷替代字体。**
+
+这是比输出一个“看起来差不多”的候选图更严格的处理。
+
+---
+
+## 本轮产出
+
+* [62 子图最终阅读路径裁决矩阵](sandbox:/mnt/data/integrated_reader_simulation/FINAL_INTEGRATED_READER_PANEL_DECISION_MATRIX.csv)
+* [S3 / S5 source-redraw 精确设计规范](sandbox:/mnt/data/integrated_reader_simulation/S3_S5_SOURCE_REDRAW_SPEC.md)
+* [S3 / S5 冻结 Source Data 重绘 runner](sandbox:/mnt/data/integrated_reader_simulation/rerun_s3_s5_reader_prune_from_frozen_source.py)
+* [主文 reader-prune candidate Markdown](sandbox:/mnt/data/integrated_reader_simulation/Manuscript_integrated_reader_prune_candidate.md)
+* [补充材料 reader-prune candidate Markdown](sandbox:/mnt/data/integrated_reader_simulation/Supplementary_Information_integrated_reader_prune_candidate.md)
+* [本轮详细行动记录](sandbox:/mnt/data/integrated_reader_simulation/action_record_2026-09-01_integrated_reader_simulation_and_redundancy_prune.md)
+
+---
+
+# 当前状态与下一阶段
+
+本轮最准确的状态不是再宣布一个“全部完成”的假锁，而是：
+
+**`INTEGRATED_READER_SIMULATION_COMPLETE__S3_S5_SOURCE_REDRAW_REQUIRED`**
+
+而原来的**科学数值/统计分析锁仍然保持**：
+
+**`REFERENCE_TERMINOLOGY_AND_S6_SCIENTIFIC_REFREEZE_LOCKED`**
+
+换句话说，**我们重新打开的只是展示层的 S3/S5，不是 biological/statistical object。**
+
+下一阶段我建议严格限定为：
+
+## `S3_S5_SOURCE_REDRAW_AND_FINAL_READER_PATH_REFREEZE`
+
+只做四件事：在项目原生 Arial 环境用冻结 Source Data 重绘 S3（4→2）和 S5（4→3）；集成上面两处正文句子和两处 Supplement legend；重新生成主文/Supplement；最后再做一次 31/16 页级的实际尺寸 reader-path QA。
+
+如果那一轮通过，我认为就可以把**科学展示层真正冻结**。现阶段没有任何证据支持增加 cohort、重新做 mapper、增加 TF、加 sensitivity、换主图或加入新 panel，更不应该因此提前进入投稿工程。

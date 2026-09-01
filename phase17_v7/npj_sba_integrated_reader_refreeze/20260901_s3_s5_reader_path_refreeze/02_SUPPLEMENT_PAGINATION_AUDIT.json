@@ -1,0 +1,577 @@
+{
+  "created_at": "2026-09-01T04:11:48+08:00",
+  "status": "PASS_SUPPLEMENT_PAGINATION_COHERENCE",
+  "checks": {
+    "wps_16_pages": true,
+    "libreoffice_16_pages": true,
+    "wps_all_supplementary_figures_same_page": true,
+    "libreoffice_all_supplementary_figures_same_page": true,
+    "wps_s8_same_page": true,
+    "libreoffice_s8_same_page": true,
+    "wps_all_expected_figure_fingerprints_match": true,
+    "libreoffice_all_expected_figure_fingerprints_match": true,
+    "wps_s8_expected_figure_match": true,
+    "libreoffice_s8_expected_figure_match": true
+  },
+  "failed_checks": [],
+  "wps": {
+    "pdf": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\documents\\Supplementary_Information_integrated_reader_refreeze.pdf",
+    "pages": 16,
+    "figures": {
+      "S1": {
+        "heading_page": 7,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM48"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S1_source_integrity_qc.png",
+          "expected_source_sha256": "F253495D071042D21A33545B762AC23D5A524098E35036D0933819B858A4B285",
+          "expected_pixel_dimensions": [
+            4015,
+            2916
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            2767
+          ],
+          "embedded_image_sha256": "08B9EF69B5ED9000B0D1D77728E9B0B8325E64E720705F186BC150091F4392AA",
+          "normalized_mae_to_expected": 0.00075596,
+          "best_source_match": "S1",
+          "second_best_normalized_mae": 0.10456375,
+          "identity_margin": 0.1038078,
+          "aspect_ratio_delta": 5.639e-05,
+          "expected_figure_match": true
+        }
+      },
+      "S2": {
+        "heading_page": 8,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM52"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S2_representation_diagnostics.png",
+          "expected_source_sha256": "B14C984062ED65B57954614434DB7F6E3582F8CFE9C56BACEC567DC630F5D03E",
+          "expected_pixel_dimensions": [
+            4015,
+            2973
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            2821
+          ],
+          "embedded_image_sha256": "845DBC6F5BA2F0319BE5894AA64E3683717E2EFA84B1D7EB51E3FB73B7A308E6",
+          "normalized_mae_to_expected": 0.00073761,
+          "best_source_match": "S2",
+          "second_best_normalized_mae": 0.15587398,
+          "identity_margin": 0.15513637,
+          "aspect_ratio_delta": 9.718e-05,
+          "expected_figure_match": true
+        }
+      },
+      "S3": {
+        "heading_page": 9,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM56"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S3_fine_state_failure_transition_structure.png",
+          "expected_source_sha256": "6B4A8CB52293E14D9B8B608BE93726E64E52E9F1D37BB1715E043AB44E144097",
+          "expected_pixel_dimensions": [
+            4015,
+            2031
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            1927
+          ],
+          "embedded_image_sha256": "14C6B10498D4543FCE07AAF97969F2457CD5A4E97EE1B15CBA33F48567F4D6EB",
+          "normalized_mae_to_expected": 0.00075396,
+          "best_source_match": "S3",
+          "second_best_normalized_mae": 0.08659484,
+          "identity_margin": 0.08584088,
+          "aspect_ratio_delta": 0.00030789,
+          "expected_figure_match": true
+        }
+      },
+      "S4": {
+        "heading_page": 10,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM60"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S4_composition_diagnostics.png",
+          "expected_source_sha256": "0015D660DCAE8AF8106FE9C4C54D22DADFA3C1A952B54730BED47EB4346827C4",
+          "expected_pixel_dimensions": [
+            4015,
+            2973
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            2821
+          ],
+          "embedded_image_sha256": "6BFDA9561204E320A5839CB83D2305B1ED1450AAC874B1B77C65875222CA4ECE",
+          "normalized_mae_to_expected": 0.00085888,
+          "best_source_match": "S4",
+          "second_best_normalized_mae": 0.06934559,
+          "identity_margin": 0.06848671,
+          "aspect_ratio_delta": 9.718e-05,
+          "expected_figure_match": true
+        }
+      },
+      "S5": {
+        "heading_page": 11,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM64"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S5_pseudobulk_ranked_list_diagnostics.png",
+          "expected_source_sha256": "47C9A02403F4D6B68E07D0A2F272A0D2965DCF799F9AD07680F99BFF1E09D0C5",
+          "expected_pixel_dimensions": [
+            4015,
+            2456
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            2331
+          ],
+          "embedded_image_sha256": "407DE321B4E5E0C8339E36B556327AF42438407E4437AE6AAB0F92273B3ABA64",
+          "normalized_mae_to_expected": 0.00078301,
+          "best_source_match": "S5",
+          "second_best_normalized_mae": 0.06692573,
+          "identity_margin": 0.06614272,
+          "aspect_ratio_delta": 0.00028035,
+          "expected_figure_match": true
+        }
+      },
+      "S6": {
+        "heading_page": 12,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM68"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S6_replication_robustness_diagnostics.png",
+          "expected_source_sha256": "EC2118003D6D459831D118C53B318448B936E806C23E44D87A125EAEDA53F2D0",
+          "expected_pixel_dimensions": [
+            4015,
+            3030
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            2875
+          ],
+          "embedded_image_sha256": "34A3F940AEAB914A0872AF443407C868FE68F2ECF38E78D19D25862D0297B034",
+          "normalized_mae_to_expected": 0.00062328,
+          "best_source_match": "S6",
+          "second_best_normalized_mae": 0.08574115,
+          "identity_margin": 0.08511787,
+          "aspect_ratio_delta": 0.00013488,
+          "expected_figure_match": true
+        }
+      },
+      "S7": {
+        "heading_page": 13,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM72"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S7_regulator_correlation_sensitivity.png",
+          "expected_source_sha256": "532BBAC1D07226466A4D51FDD64DDF2D097005202FA4484B04152C5BCF85894F",
+          "expected_pixel_dimensions": [
+            4015,
+            2973
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            2821
+          ],
+          "embedded_image_sha256": "646FCF8250C71F13BF4279274A56B57B3BC8CA0DEAB99154CAB35C40111C256B",
+          "normalized_mae_to_expected": 0.00088904,
+          "best_source_match": "S7",
+          "second_best_normalized_mae": 0.16404726,
+          "identity_margin": 0.16315822,
+          "aspect_ratio_delta": 9.718e-05,
+          "expected_figure_match": true
+        }
+      },
+      "S8": {
+        "heading_page": 14,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM76"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S8_overlap_depletion.png",
+          "expected_source_sha256": "278943D51FCA9DA27BBEE62ED98EEA17DD92C42BAACC7F95E4B84121AE674BE6",
+          "expected_pixel_dimensions": [
+            4015,
+            3661
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            3474
+          ],
+          "embedded_image_sha256": "5EE59CAD5FEBD33B22C3297D7F4FD0EB859A9BF61D9474EFF84BD8A6FB5C661A",
+          "normalized_mae_to_expected": 0.00092989,
+          "best_source_match": "S8",
+          "second_best_normalized_mae": 0.14205282,
+          "identity_margin": 0.14112294,
+          "aspect_ratio_delta": 2.359e-05,
+          "expected_figure_match": true
+        }
+      },
+      "S9": {
+        "heading_page": 15,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM80"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S9_identity_boundary_and_propagation.png",
+          "expected_source_sha256": "700D2FC36EA5BB1FFF3DE2D6D04B4780EA762CEC0038AA5A2E0FE01F6799EBD2",
+          "expected_pixel_dimensions": [
+            4015,
+            3779
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            3586
+          ],
+          "embedded_image_sha256": "8684C753CD9BDC39171F142CE9EEBE1785C9B6297DC381699BF6A643FC388EAE",
+          "normalized_mae_to_expected": 0.00060892,
+          "best_source_match": "S9",
+          "second_best_normalized_mae": 0.07079017,
+          "identity_margin": 0.07018125,
+          "aspect_ratio_delta": 1.476e-05,
+          "expected_figure_match": true
+        }
+      },
+      "S10": {
+        "heading_page": 16,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/IM84"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S10_reference_calibration_boundary.png",
+          "expected_source_sha256": "9B20C6E4E73575A0FA871A839EC09456EBF9DFB624E70342229A59952FE9F372",
+          "expected_pixel_dimensions": [
+            4015,
+            2598
+          ],
+          "embedded_pixel_dimensions": [
+            3810,
+            2465
+          ],
+          "embedded_image_sha256": "34905E3E0AF2FF0B58BE7AA63B93236F39932259C791CB558D5B8849CDA95FFE",
+          "normalized_mae_to_expected": 0.00041089,
+          "best_source_match": "S10",
+          "second_best_normalized_mae": 0.06699131,
+          "identity_margin": 0.06658042,
+          "aspect_ratio_delta": 0.00021939,
+          "expected_figure_match": true
+        }
+      }
+    },
+    "all_heading_figure_pairs_same_page": true,
+    "all_expected_figure_fingerprints_match": true,
+    "s8_same_page": true,
+    "s8_expected_figure_match": true
+  },
+  "libreoffice": {
+    "pdf": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\qa\\libreoffice_documents\\Supplementary_Information_integrated_reader_refreeze.pdf",
+    "pages": 16,
+    "figures": {
+      "S1": {
+        "heading_page": 7,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im748"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S1_source_integrity_qc.png",
+          "expected_source_sha256": "F253495D071042D21A33545B762AC23D5A524098E35036D0933819B858A4B285",
+          "expected_pixel_dimensions": [
+            4015,
+            2916
+          ],
+          "embedded_pixel_dimensions": [
+            1906,
+            1384
+          ],
+          "embedded_image_sha256": "9C04D64E995388ECFB21A5B00B1E2815CAD2E944D724197FA5EDCDCCA2A333FF",
+          "normalized_mae_to_expected": 0.00123379,
+          "best_source_match": "S1",
+          "second_best_normalized_mae": 0.10468941,
+          "identity_margin": 0.10345563,
+          "aspect_ratio_delta": 0.00028148,
+          "expected_figure_match": true
+        }
+      },
+      "S2": {
+        "heading_page": 8,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im758"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S2_representation_diagnostics.png",
+          "expected_source_sha256": "B14C984062ED65B57954614434DB7F6E3582F8CFE9C56BACEC567DC630F5D03E",
+          "expected_pixel_dimensions": [
+            4015,
+            2973
+          ],
+          "embedded_pixel_dimensions": [
+            1903,
+            1409
+          ],
+          "embedded_image_sha256": "3509AD0CCD71BA38A8B320859BBA61BBF061DDBB4C8713D95C77A489CBFD6025",
+          "normalized_mae_to_expected": 0.00126099,
+          "best_source_match": "S2",
+          "second_best_normalized_mae": 0.15590062,
+          "identity_margin": 0.15463963,
+          "aspect_ratio_delta": 0.00011554,
+          "expected_figure_match": true
+        }
+      },
+      "S3": {
+        "heading_page": 9,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im768"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S3_fine_state_failure_transition_structure.png",
+          "expected_source_sha256": "6B4A8CB52293E14D9B8B608BE93726E64E52E9F1D37BB1715E043AB44E144097",
+          "expected_pixel_dimensions": [
+            4015,
+            2031
+          ],
+          "embedded_pixel_dimensions": [
+            1903,
+            963
+          ],
+          "embedded_image_sha256": "B9E5AD69786E8CDF7AB1B4C6836022714CDB833F9D6320E9DA35E10737F32291",
+          "normalized_mae_to_expected": 0.0012965,
+          "best_source_match": "S3",
+          "second_best_normalized_mae": 0.08656181,
+          "identity_margin": 0.08526532,
+          "aspect_ratio_delta": 0.00074239,
+          "expected_figure_match": true
+        }
+      },
+      "S4": {
+        "heading_page": 10,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im778"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S4_composition_diagnostics.png",
+          "expected_source_sha256": "0015D660DCAE8AF8106FE9C4C54D22DADFA3C1A952B54730BED47EB4346827C4",
+          "expected_pixel_dimensions": [
+            4015,
+            2973
+          ],
+          "embedded_pixel_dimensions": [
+            1903,
+            1409
+          ],
+          "embedded_image_sha256": "FC42EFBC01565164079C2CF03AC606013ABD4817CCB6217AC5822FB5A46FB8BE",
+          "normalized_mae_to_expected": 0.0011189,
+          "best_source_match": "S4",
+          "second_best_normalized_mae": 0.06941093,
+          "identity_margin": 0.06829204,
+          "aspect_ratio_delta": 0.00011554,
+          "expected_figure_match": true
+        }
+      },
+      "S5": {
+        "heading_page": 11,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im788"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S5_pseudobulk_ranked_list_diagnostics.png",
+          "expected_source_sha256": "47C9A02403F4D6B68E07D0A2F272A0D2965DCF799F9AD07680F99BFF1E09D0C5",
+          "expected_pixel_dimensions": [
+            4015,
+            2456
+          ],
+          "embedded_pixel_dimensions": [
+            1906,
+            1166
+          ],
+          "embedded_image_sha256": "AD8580575A8ED22C18201053A44220B818D87BCC8BA0B464CD74D3A17AAC0D01",
+          "normalized_mae_to_expected": 0.00113462,
+          "best_source_match": "S5",
+          "second_best_normalized_mae": 0.06682496,
+          "identity_margin": 0.06569034,
+          "aspect_ratio_delta": 0.00012362,
+          "expected_figure_match": true
+        }
+      },
+      "S6": {
+        "heading_page": 12,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im798"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S6_replication_robustness_diagnostics.png",
+          "expected_source_sha256": "EC2118003D6D459831D118C53B318448B936E806C23E44D87A125EAEDA53F2D0",
+          "expected_pixel_dimensions": [
+            4015,
+            3030
+          ],
+          "embedded_pixel_dimensions": [
+            1905,
+            1438
+          ],
+          "embedded_image_sha256": "1F8BD174876D659B3ED5E7585E1BF3A50C36E9323C09114F1271737A13389C14",
+          "normalized_mae_to_expected": 0.00121193,
+          "best_source_match": "S6",
+          "second_best_normalized_mae": 0.08571099,
+          "identity_margin": 0.08449906,
+          "aspect_ratio_delta": 0.0003259,
+          "expected_figure_match": true
+        }
+      },
+      "S7": {
+        "heading_page": 13,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im808"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S7_regulator_correlation_sensitivity.png",
+          "expected_source_sha256": "532BBAC1D07226466A4D51FDD64DDF2D097005202FA4484B04152C5BCF85894F",
+          "expected_pixel_dimensions": [
+            4015,
+            2973
+          ],
+          "embedded_pixel_dimensions": [
+            1903,
+            1409
+          ],
+          "embedded_image_sha256": "12345EE56869CB97097A596D6DBBD7F4B7AE050FC81902BAA94F47420D87AAC5",
+          "normalized_mae_to_expected": 0.00152859,
+          "best_source_match": "S7",
+          "second_best_normalized_mae": 0.16396349,
+          "identity_margin": 0.1624349,
+          "aspect_ratio_delta": 0.00011554,
+          "expected_figure_match": true
+        }
+      },
+      "S8": {
+        "heading_page": 14,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im818"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S8_overlap_depletion.png",
+          "expected_source_sha256": "278943D51FCA9DA27BBEE62ED98EEA17DD92C42BAACC7F95E4B84121AE674BE6",
+          "expected_pixel_dimensions": [
+            4015,
+            3661
+          ],
+          "embedded_pixel_dimensions": [
+            1906,
+            1738
+          ],
+          "embedded_image_sha256": "3A8DFED63E6156964F825510F616C03C2E50C20B802EB50A5DE89EC822FF5C92",
+          "normalized_mae_to_expected": 0.0015495,
+          "best_source_match": "S8",
+          "second_best_normalized_mae": 0.1419882,
+          "identity_margin": 0.1404387,
+          "aspect_ratio_delta": 3.206e-05,
+          "expected_figure_match": true
+        }
+      },
+      "S9": {
+        "heading_page": 15,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im828"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S9_identity_boundary_and_propagation.png",
+          "expected_source_sha256": "700D2FC36EA5BB1FFF3DE2D6D04B4780EA762CEC0038AA5A2E0FE01F6799EBD2",
+          "expected_pixel_dimensions": [
+            4015,
+            3779
+          ],
+          "embedded_pixel_dimensions": [
+            1906,
+            1794
+          ],
+          "embedded_image_sha256": "C3F73A0A7C609B25B1C84FD12A9295A8E4235C73D118AF384D9B51BA940F578A",
+          "normalized_mae_to_expected": 0.00109065,
+          "best_source_match": "S9",
+          "second_best_normalized_mae": 0.07070496,
+          "identity_margin": 0.06961431,
+          "aspect_ratio_delta": 2.006e-05,
+          "expected_figure_match": true
+        }
+      },
+      "S10": {
+        "heading_page": 16,
+        "image_count_on_heading_page": 1,
+        "same_page": true,
+        "image_identity": {
+          "painted_image_resources": [
+            "/Im838"
+          ],
+          "expected_source": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\npj_sba_integrated_reader_refreeze\\20260901_s3_s5_reader_path_refreeze\\figures\\figures\\Supplementary_Figure_S10_reference_calibration_boundary.png",
+          "expected_source_sha256": "9B20C6E4E73575A0FA871A839EC09456EBF9DFB624E70342229A59952FE9F372",
+          "expected_pixel_dimensions": [
+            4015,
+            2598
+          ],
+          "embedded_pixel_dimensions": [
+            1903,
+            1231
+          ],
+          "embedded_image_sha256": "C27CA1B5508AE58C77C1C321C911703183B171314CC5E3542EE644C88D4E2C48",
+          "normalized_mae_to_expected": 0.00088361,
+          "best_source_match": "S10",
+          "second_best_normalized_mae": 0.06701724,
+          "identity_margin": 0.06613363,
+          "aspect_ratio_delta": 0.00047809,
+          "expected_figure_match": true
+        }
+      }
+    },
+    "all_heading_figure_pairs_same_page": true,
+    "all_expected_figure_fingerprints_match": true,
+    "s8_same_page": true,
+    "s8_expected_figure_match": true
+  }
+}
