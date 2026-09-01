@@ -1,0 +1,4 @@
+﻿edit_id,object,before,after,scientific_value_changed
+T1,Supplementary Information,## Supplementary Table S4 | Correlation-aware core-regulator sensitivity,"## Supplementary Table S4 | Regulator-sensitivity summaries |  | **a, Correlation-aware core-regulator sensitivity**",False
+T2,Supplementary Information,## Supplementary Table S4B | IFN-overlap-depletion summary,"**b, IFN-overlap-depletion summary**",False
+T3,Supplementary Information,Sample-level composition and asserted 43/47 primary groups,Sample-level composition in the 43-control/47-managed-SLE primary comparison,False

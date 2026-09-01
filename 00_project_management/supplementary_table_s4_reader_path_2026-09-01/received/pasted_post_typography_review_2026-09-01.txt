@@ -1,0 +1,252 @@
+我重新按“**仍然以科学呈现为第一优先，而不是推进投稿**”的标准，对这轮 Nature/npj typography micropass、当前主文、Supplementary，以及 GitHub `main` 做了独立复核。结论是：**这轮重绘是成功的，不能因为还想继续优化就把已经稳定的科学对象重新打开。** GitHub 当前确实已经到 `9a9a4cd4afcac3e784b945d3af7f433b7f71a238`，提交内容就是本轮 `Refine scientific artwork typography`。
+
+当前 machine freeze 也支持这一点：15/15 Source Data byte-identical、0 个新 panel、0 个替换 panel，主图 21/21 KEEP、补图 38/38 KEEP，WPS/LibreOffice、分页、指纹与可访问性全部通过。 本轮行动记录同样明确说明 12 张图由 source-driven workflow 重跑，S3/S5/S6 byte-identical，统计模型和数值均未改变。
+
+## 我对本轮重绘的判断
+
+这次 typography 修复应当**完全保留**。
+
+之前统一把所有文字强制成 8 pt 的问题确实被修掉了。现在 Figure 1–5、S1/S2/S4/S7–S10 已恢复多级文字层级，例如 Figure 1 已从单一 8 pt 变成 5.5–8 pt 的多层级结构，Figure 2/3/4/5 也重新出现了轴标签、刻度、panel title 和 panel letter 的区分；同时普通 `<1 pt` 的规则线重新被允许。
+
+新的 shared style contract 现在只做三件合理的事：保持 Arial、panel letter 设为 8 pt、把低于 5.5 pt 的对象抬到可读底线，同时只把真正低于 0.5 pt 的 hairline 提升到 0.5 pt。它已经不再破坏各 figure builder 自己的视觉层级。
+
+因此我**不建议再进行第二次全图 typography 重绘**。像 Figure 1 出现 6.15、6.75、6.85 pt 这类小数级字号差异，从代码洁癖角度还能继续“量化”，但已经没有足够的读者收益来抵偿 12 张图再次重跑带来的 regression 风险。当前实际尺寸视觉 QA 已经通过，这里应该停止。
+
+---
+
+# Figure 1a 和 Figure 5a：继续 KEEP
+
+这是你之前最在意的两块，我这轮仍然没有发现“替换方案明显优于现版”的证据。
+
+**Figure 1a** 的价值不是展示结果，而是定义整个手稿的 inference boundary：
+
+disease-blind reconstruction
+→ identity adjudication
+→ disease fields joined
+→ B_ASC composition / B_CONV transcription
+
+如果把它替换成更漂亮的 UMAP、cluster schematic 或细胞图标流程图，视觉上可能更“像单细胞论文”，但反而会模糊本文真正的新意——**疾病效应必须晚于 identity formation**。所以 1a 的正确方向仍然是 KEEP，而不是换图。
+
+**Figure 5a** 也是类似情况。它不是一张为了“凑 Figure 5”的装饰性 overview，而是在主动告诉读者：
+
+ULM STAT1/STAT2 = confirmatory observational evidence
+M5911 = response-set concordance
+GSE23307 = descriptive perturbational context
+≠ direct binding / unique ligand / causal regulation
+
+这实际上是 Figure 5 最重要的“防 overclaim 面板”。如果换成 TF network 或漂亮的 IFN→STAT1→ISG 因果箭头图，视觉会更炫，但会使整篇文章的证据等级倒退。
+
+因此当前 panel matrix 的 21/21 main KEEP 判断我认可。
+
+---
+
+## S1–S10 也没有进一步删 panel 的必要
+
+S3 和 S5 已经在上一阶段真正完成了“去重复”，现在分别是 2 panel 和 3 panel，继续删只会损失诊断逻辑。
+
+S7 我又重点看了一遍。它的 b–d 与 Supplementary Table S4 确实共享 inter-gene correlation、q values、matched target counts 等数据，但这里属于**有意义的双模态表达**：Table S4 负责精确数值检索，S7 负责让读者快速看出 STAT2 的高相关、CAMERA exception 和 target-count imbalance。因此这不是过去 S3a/Fig.1b 那种同一个统计对象被两个 figure panel 重复拥有的问题，不建议再裁。当前 Supplementary 对其定义也非常清楚。
+
+S8、S9、S10 更不应该动。S9 和 S10 实际上是全文两个最重要的 negative-boundary figures：一个限制 taxonomy reconstruction，一个限制 source-label-independent transfer；删掉或弱化它们都会使文章看起来像在回避失败结果。
+
+所以目前：
+
+| 对象          | 当前决定            |
+| ----------- | --------------- |
+| Figure 1a–d | KEEP            |
+| Figure 2a–d | KEEP            |
+| Figure 3a–d | KEEP            |
+| Figure 4a–d | KEEP            |
+| Figure 5a–e | KEEP            |
+| S1–S2       | KEEP            |
+| S3          | KEEP 当前 2-panel |
+| S4          | KEEP            |
+| S5          | KEEP 当前 3-panel |
+| S6          | KEEP            |
+| S7          | KEEP            |
+| S8          | KEEP            |
+| S9          | KEEP            |
+| S10         | KEEP            |
+| 新增 panel    | **0**           |
+| 替换 panel    | **0**           |
+| 新增分析        | **0**           |
+
+---
+
+# 但是我这轮发现了一个新的、真实的 Supplementary reader-facing 缺陷
+
+它不在图里，而在 Supplementary Table 编号。
+
+当前 Supplementary overview 明确写：
+
+> `This single Supplementary Information file contains Tables S1-S9 and Figures S1-S10`
+
+但实际标题顺序是：
+
+**S1 → S2 → S3 → S4 → S4B → S5 → S6 → S7 → S8 → S9**。
+
+也就是说，reader-facing 文档实际上显示了一个没有 `S4A` 配对的独立：
+
+> `Supplementary Table S4B | IFN-overlap-depletion summary`
+
+当前上传的 Supplementary 也是这个结构。
+
+这不是统计错误，也不是 claim 错误，但它是目前我认为**最值得突破 maintenance freeze 再修一次的局部呈现问题**。
+
+审稿人第一次读 Supplement 时会自然地产生两个疑问：
+
+“为什么有 S4B，却没有 S4A？”
+
+以及：
+
+“到底是 S1–S9 九张表，还是实际上有十个 table objects？”
+
+这和我们前面反复清理 Supplementary numbering 的原则不一致。
+
+---
+
+## 我不建议简单把 S4B 改成 S5
+
+因为那样后面的：
+
+S5 → S6
+S6 → S7
+S7 → S8
+S8 → S9
+S9 → S10
+
+全部要整体后移。
+
+更糟的是主文现在明确引用：
+
+`Supplementary Table S9 and Supplementary Fig. S10`
+
+来承载 corrected external mapping boundary。
+
+为了修一个局部编号问题而触碰后面全部 table references，没有必要。
+
+### 最干净的处理方案
+
+把现有 S4 和 S4B真正整理成**同一个 Supplementary Table S4 的两个 section**：
+
+**Supplementary Table S4 | Regulator-sensitivity summaries**
+
+然后内部：
+
+**a, Correlation-aware core-regulator sensitivity**
+
+**b, IFN-overlap-depletion summary**
+
+这样：
+
+* Supplementary overview 的 `Tables S1-S9` 重新完全成立；
+* S5–S9 完全不用改号；
+* main-text `Supplementary Table S9` 不动；
+* 任何数值都不变；
+* Table S4 与 S7/S8 的关系也更清楚——S4 集中承担 regulator exact summaries，S7/S8 负责图形模式。
+
+这是我目前认为**唯一值得再做的一次真正 reader-facing structural repair**。
+
+---
+
+# 还有一个非常小的 Table S5 用词
+
+当前 Table S5 的 Figure 2 evidence basis 写：
+
+> `Sample-level composition and asserted 43/47 primary groups`
+
+`asserted` 更像测试脚本或 QA contract 的语言，不太像最终 Supplementary prose。
+
+建议改成：
+
+**`Sample-level composition and 43-control/47-managed-SLE primary groups`**
+
+或者更简洁：
+
+**`Sample-level composition in the 43-control/47-managed-SLE primary comparison`**
+
+我偏向第二个。
+
+这是纯 reader-facing wording，不改变任何证据。
+
+---
+
+## 正文这次已经不建议再进行 QiTeng 泛化精修
+
+本轮两个：
+
+`independent validation → independent replication`
+
+的修改我认为是正确的。
+
+现在 Results 已经写成：
+
+> `Because both analyses originate from the same accession, they provide internal replication rather than independent replication.`
+
+
+
+Methods 也已经统一为：
+
+> `These analyses quantify same-data sensitivity to identity uncertainty; they are not independent replication.`
+
+
+
+这使全文 evidence taxonomy 很干净：
+
+**discovery → internal replication → independent replication → sensitivity → calibration boundary**
+
+而真正属于 methodological validation 的句子，比如 mapper calibration、prospective clinical validation 和 CRediT `Validation` 仍然被保留，这是正确的。
+
+除此以外，我不建议再改 title、abstract、Discussion 或结尾。
+
+尤其最后：
+
+> `the data support a bounded process-level interferon association within explicit identity and transfer limits.`
+
+仍然是目前非常好的全文终点。
+
+---
+
+# 当前科学完成度判断
+
+如果把“科学真实性、统计合理性、claim ceiling、Figure ownership、Nature artwork、reader path”拆开评分，我会给当前科学候选大致：
+
+**科学分析完整度：96–98%**
+
+**统计/证据边界严谨度：98%**
+
+**主图科学呈现：97–98%**
+
+**Supplementary 科学呈现：96–97%**
+
+**全文逻辑闭环：98%**
+
+现在已经不是“还缺一个分析”的状态，而是**只有极少数 reader-facing structural irregularity 仍值得修**。
+
+---
+
+# 下一阶段
+
+因此下一阶段我不建议再叫 manuscript polishing，也不建议再叫 artwork refinement。
+
+最合适的是一次非常窄的：
+
+## `SUPPLEMENTARY_TABLE_S4_READER_PATH_MICROPASS`
+
+只做：
+
+1. 将 **S4 + S4B** 合并为一个 Supplementary Table S4 的 a/b 两个 section；
+2. 把 Table S5 的 `asserted 43/47 primary groups` 改成 reader-facing 表达；
+3. **只重建 Supplementary Information**；
+4. 检查 S1–S9 Table numbering 连续性、S1–S10 Figure numbering、全部正文 cross-reference；
+5. 确认 Supplementary 的差异严格只有 table heading / wording；
+6. **15 Source Data、全部图件、主文统计与主文正文其他部分全部不动。**
+
+完成以后应该立即回到：
+
+**`SCIENTIFIC_PRESENTATION_MAINTENANCE_FREEZE`**
+
+我不支持继续加 cohort、mapper、regulator、sensitivity，也不支持再换 Figure 1a/5a。当前最优策略已经从“继续加强结果”转变成了**消灭最后的 reader-facing inconsistency，然后停止科学呈现层修改**。
+
+我也把这轮独立复核整理成了详细 Markdown：
+
+[下载本轮 Post-typography maintenance audit](sandbox:/mnt/data/SLE_Bcell_Post_Typography_Maintenance_Audit_2026-09-01.md)

@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import unittest
 from pathlib import Path
@@ -11,6 +12,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RUN = ROOT / "phase17_v7/npj_sba_nature_artwork_micropass/20260901_role_aware_typography_refreeze"
+
+
+def sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest().upper()
 
 
 class NatureArtworkMicropassTests(unittest.TestCase):
@@ -27,14 +32,14 @@ class NatureArtworkMicropassTests(unittest.TestCase):
         self.assertEqual(status["new_panels"], 0)
         self.assertEqual(status["replacement_panels"], 0)
 
-    def test_root_sources_match_latest_scientific_sources(self) -> None:
+    def test_historical_sources_remain_immutable(self) -> None:
         self.assertEqual(
-            (ROOT / "01_manuscript/Manuscript.md").read_bytes(),
-            (RUN / "sources/Manuscript_nature_artwork_micropass.md").read_bytes(),
+            sha256(RUN / "sources/Manuscript_nature_artwork_micropass.md"),
+            "9A70A71A82ECFCCD5B6D65ABC5418D83E214521297663CD83878E3D2E7E25A27",
         )
         self.assertEqual(
-            (ROOT / "01_manuscript/Supplementary_Information.md").read_bytes(),
-            (RUN / "sources/Supplementary_Information_nature_artwork_micropass.md").read_bytes(),
+            sha256(RUN / "sources/Supplementary_Information_nature_artwork_micropass.md"),
+            "BE43C5C87760BDF6A47EF84E46D8447EE65FA7FFF4D196C7D951CC26EB05FC66",
         )
 
     def test_twelve_redraws_and_three_exact_keeps_are_audited(self) -> None:

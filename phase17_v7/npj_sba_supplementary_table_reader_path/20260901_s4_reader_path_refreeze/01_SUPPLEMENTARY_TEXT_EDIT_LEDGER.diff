@@ -1,0 +1,31 @@
+--- Supplementary_Information_before.md
++++ Supplementary_Information_after.md
+@@ -43,7 +43,9 @@
+ | M5911 enrichment | NES 3.187, 3.050 and 3.527 |
+ | GSE23307 perturbation | donor effects 3.294 and 3.666; 12/12 genes positive in each |
+ 
+-## Supplementary Table S4 | Correlation-aware core-regulator sensitivity
++## Supplementary Table S4 | Regulator-sensitivity summaries
++
++**a, Correlation-aware core-regulator sensitivity**
+ 
+ | Contrast | Regulator | Matched targets | Inter-gene correlation | CAMERA BH q | FRY BH q |
+ |---|---|---:|---:|---:|---:|
+@@ -56,7 +58,7 @@
+ 
+ CAMERA and FRY directions were positive in all six tests. CAMERA passed BH correction in five of six; the explicit exception was GSE174188 primary STAT2 (q=0.1355). FRY passed BH correction in all six.
+ 
+-## Supplementary Table S4B | IFN-overlap-depletion summary
++**b, IFN-overlap-depletion summary**
+ 
+ | Depletion | Method | Positive direction | Dedicated q<0.05 | Main qualification |
+ |---|---|---:|---:|---|
+@@ -74,7 +76,7 @@
+ | Figure | Evidence basis | Machine-readable source |
+ |---|---|---|
+ | Figure 1 | Disease-blind identity stability and two-compartment adjudication | Figure1_source_data.csv |
+-| Figure 2 | Sample-level composition and asserted 43/47 primary groups | Figure2_source_data.csv |
++| Figure 2 | Sample-level composition in the 43-control/47-managed-SLE primary comparison | Figure2_source_data.csv |
+ | Figure 3 | Raw-count pseudobulk transcription with explicit tested-gene symbols | Figure3_source_data.csv |
+ | Figure 4 | Source-label-defined GSE135779 replication and influence analyses | Figure4_source_data.csv |
+ | Figure 5 | Regulatory and orthogonal response evidence | Figure5_source_data.csv |

@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-09-01T19:28:01+08:00",
+  "status": "PASS_SUPPLEMENTARY_TABLE_S4_READER_PATH_INTEGRATION_DOCX_REQUIRED",
+  "checks": {
+    "received_inputs_archived_byte_identically": true,
+    "numbered_tables_are_exactly_s1_to_s9": true,
+    "orphan_s4b_removed": true,
+    "s4_parent_heading_present": true,
+    "s4a_subheading_present": true,
+    "s4b_subheading_present": true,
+    "overview_remains_s1_to_s9": true,
+    "table_s5_reader_wording_present": true,
+    "exactly_three_local_replacements": true,
+    "all_figure_files_byte_identical": true,
+    "all_15_source_data_byte_identical": true,
+    "panel_decision_matrix_byte_identical": true,
+    "main_source_byte_identical": true,
+    "root_main_byte_identical": true,
+    "root_supplement_exact_parity": true,
+    "submission_package_unchanged": true
+  },
+  "failed_checks": [],
+  "archived_inputs": {
+    "SLE_Bcell_Post_Typography_Maintenance_Audit_2026-09-01.md": {
+      "source": "C:\\Users\\Administrator\\Downloads\\SLE_Bcell_Post_Typography_Maintenance_Audit_2026-09-01.md",
+      "archived": "00_project_management/supplementary_table_s4_reader_path_2026-09-01/received/SLE_Bcell_Post_Typography_Maintenance_Audit_2026-09-01.md",
+      "bytes": 6506,
+      "sha256": "C2BA403A7B537252C9E8F922A846492C030C0FAC01D8A9DC1B5710C6AC9D1EC5",
+      "byte_identical": true
+    },
+    "pasted_post_typography_review_2026-09-01.txt": {
+      "source": "C:\\Users\\Administrator\\.codex\\attachments\\104f95f1-d590-41ad-b419-75a0290054a8\\pasted-text.txt",
+      "archived": "00_project_management/supplementary_table_s4_reader_path_2026-09-01/received/pasted_post_typography_review_2026-09-01.txt",
+      "bytes": 10588,
+      "sha256": "F4F4727D472A676A43118EF14A02744BC26DDBCD5523A5815C1E16F1782161C8",
+      "byte_identical": true
+    }
+  },
+  "table_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "text_edits": 3,
+  "figures_changed": false,
+  "source_data_changed": false,
+  "scientific_estimates_changed": false,
+  "statistical_models_rerun": false,
+  "new_panels": 0,
+  "replacement_panels": 0,
+  "submission_package_sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1"
+}

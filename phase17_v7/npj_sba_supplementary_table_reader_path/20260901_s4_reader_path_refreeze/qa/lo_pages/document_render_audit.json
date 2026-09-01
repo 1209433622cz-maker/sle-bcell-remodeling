@@ -1,0 +1,150 @@
+{
+  "created_at": "2026-09-01T19:28:53+08:00",
+  "engine": "LibreOffice PDF export followed by Poppler 110-dpi page rendering",
+  "document_hashes": [
+    {
+      "file": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "bytes": 2188677,
+      "sha256": "5318AEE26920B55DCF198CB751858C606914A9151E1F901A4ED1DF7496DC0C54"
+    },
+    {
+      "file": "Supplementary_Information_scientific_maintenance_freeze.docx",
+      "bytes": 3762647,
+      "sha256": "728CDBE867686E27A0C228F382653663E846C48D6E0ED4D2158F4063D24DB0D2"
+    }
+  ],
+  "pages": 16,
+  "page_checks": [
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 1,
+      "text_characters": 2070,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 2,
+      "text_characters": 2042,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 3,
+      "text_characters": 1977,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 4,
+      "text_characters": 2418,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 5,
+      "text_characters": 2435,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 6,
+      "text_characters": 538,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 7,
+      "text_characters": 505,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 8,
+      "text_characters": 523,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 9,
+      "text_characters": 720,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 10,
+      "text_characters": 575,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 11,
+      "text_characters": 461,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 12,
+      "text_characters": 366,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 13,
+      "text_characters": 402,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 14,
+      "text_characters": 724,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 15,
+      "text_characters": 1018,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    },
+    {
+      "document": "Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "page": 16,
+      "text_characters": 1213,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 10
+    }
+  ],
+  "all_pages_within_canvas": true,
+  "all_markers_resolved": true,
+  "visual_review": "Page images require human/model visual inspection; structural checks alone are insufficient"
+}

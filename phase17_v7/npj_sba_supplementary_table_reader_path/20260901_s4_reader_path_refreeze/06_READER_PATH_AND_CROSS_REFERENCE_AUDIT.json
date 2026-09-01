@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-09-01T19:34:08+08:00",
+  "source_table_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "source_figure_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "main_table_references": [
+    9
+  ],
+  "renderer_checks": {
+    "wps": {
+      "tables_s1_to_s9_present": true,
+      "orphan_s4b_absent": true,
+      "s4a_present": true,
+      "s4b_present": true,
+      "figures_s1_to_s10_present": true
+    },
+    "libreoffice": {
+      "tables_s1_to_s9_present": true,
+      "orphan_s4b_absent": true,
+      "s4a_present": true,
+      "s4b_present": true,
+      "figures_s1_to_s10_present": true
+    }
+  }
+}

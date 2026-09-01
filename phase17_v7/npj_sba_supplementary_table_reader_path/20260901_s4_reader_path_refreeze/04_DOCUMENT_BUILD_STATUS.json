@@ -1,0 +1,41 @@
+{
+  "created_at": "2026-09-01T19:28:03+08:00",
+  "status": "PASS_SUPPLEMENTARY_TABLE_S4_DOCX_BUILT_DUAL_RENDER_REQUIRED",
+  "build_result": {
+    "source": "phase17_v7/npj_sba_supplementary_table_reader_path/20260901_s4_reader_path_refreeze/sources/Supplementary_Information_s4_reader_path_micropass.md",
+    "output": "phase17_v7/npj_sba_supplementary_table_reader_path/20260901_s4_reader_path_refreeze/documents/Supplementary_Information_scientific_maintenance_freeze.docx",
+    "paragraphs": 70,
+    "tables": 10,
+    "inline_shapes": 10,
+    "placeholders": 0,
+    "bytes": 3762566
+  },
+  "checks": {
+    "title_exact": true,
+    "ten_figures_embedded": true,
+    "ten_grid_objects_retained": true,
+    "numbered_tables_are_exactly_s1_to_s9": true,
+    "figures_are_exactly_s1_to_s10": true,
+    "s4_parent_heading_present": true,
+    "s4a_subheading_present": true,
+    "s4b_subheading_present": true,
+    "orphan_s4b_absent": true,
+    "reader_wording_present": true,
+    "implementation_wording_absent": true,
+    "renderer_divergent_s8_page_break_removed": true
+  },
+  "failed_checks": [],
+  "object_inventory": {
+    "inline_shapes": 10,
+    "grid_objects": 10,
+    "numbered_supplementary_tables": 9
+  },
+  "file": {
+    "path": "phase17_v7/npj_sba_supplementary_table_reader_path/20260901_s4_reader_path_refreeze/documents/Supplementary_Information_scientific_maintenance_freeze.docx",
+    "bytes": 3762647,
+    "sha256": "728CDBE867686E27A0C228F382653663E846C48D6E0ED4D2158F4063D24DB0D2"
+  },
+  "main_manuscript_rebuilt": false,
+  "figures_rebuilt": false,
+  "scientific_estimates_changed": false
+}
