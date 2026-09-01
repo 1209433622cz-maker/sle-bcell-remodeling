@@ -1,0 +1,7 @@
+﻿id,object,decision,recommended_location,reason
+A1,Supplementary Tables S1-S2,KEEP,End of Introduction evidence-hierarchy sentence,Semantically aligned with dataset roles and claim boundaries
+A2,Supplementary Table S3,MOVE,Current causal-ceiling sentence -> preceding quantitative synthesis sentence,"S3 owns quantitative anchors, not causal non-identification"
+A3a,Supplementary Table S4a,REFINE,Correlation-aware paragraph,Use exact subtable owner with Supplementary Fig. S9
+A3b,Supplementary Table S4b,ADD PRECISE SUBANCHOR,Overlap-depletion paragraph,Use exact subtable owner with Supplementary Fig. S10
+A4,Supplementary Tables S5-S8,MOVE,Superseded-manuscript sentence -> first Reproducibility sentence,"Tables document current provenance/statistics/archive structure, not superseded-object handling"
+A5,Supplementary Table S9,KEEP,Corrected external-mapping subsection,Directly owns calibration boundary

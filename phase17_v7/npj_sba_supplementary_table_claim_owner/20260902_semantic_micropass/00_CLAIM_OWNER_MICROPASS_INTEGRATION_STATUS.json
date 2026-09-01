@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-09-02T01:39:46+08:00",
+  "status": "PASS_CLAIM_OWNER_MICROPASS_INTEGRATION_DOCX_REQUIRED",
+  "checks": {
+    "external_inputs_archived_byte_identically": true,
+    "six_exact_text_operations": true,
+    "supplementary_table_coverage_s1_to_s9": true,
+    "supplementary_figure_first_citation_order_s1_to_s10": true,
+    "s3_attached_to_quantitative_synthesis": true,
+    "s3_absent_from_causal_nonidentification_sentence": true,
+    "s4a_exact_owner_present": true,
+    "s4b_exact_owner_present": true,
+    "generic_s4_anchor_absent": true,
+    "s5_s8_attached_to_reproducibility_sentence": true,
+    "s5_s8_absent_from_superseded_sentence": true,
+    "title_and_abstract_unchanged": true,
+    "scientific_number_sequence_unchanged": true,
+    "supplementary_information_unchanged": true,
+    "all_frozen_figure_and_source_assets_unchanged": true,
+    "forty_five_frozen_assets_audited": true,
+    "root_main_matches_candidate": true,
+    "submission_package_unchanged": true
+  },
+  "failed_checks": [],
+  "archived_inputs": {
+    "action_record_2026-09-02_post_readerpath_claim_owner_hostile_audit.md": {
+      "source": "C:\\Users\\Administrator\\Downloads\\action_record_2026-09-02_post_readerpath_claim_owner_hostile_audit.md",
+      "archived": "00_project_management/supplementary_table_claim_owner_2026-09-02/received/action_record_2026-09-02_post_readerpath_claim_owner_hostile_audit.md",
+      "bytes": 7894,
+      "sha256": "DE82A4A20B49FAA8BDF998A5008A5EAE72B85853C7494A8BB72BFB22651F048E",
+      "byte_identical": true
+    },
+    "SUPPLEMENTARY_TABLE_CLAIM_OWNER_DECISION_MATRIX.csv": {
+      "source": "C:\\Users\\Administrator\\Downloads\\SUPPLEMENTARY_TABLE_CLAIM_OWNER_DECISION_MATRIX.csv",
+      "archived": "00_project_management/supplementary_table_claim_owner_2026-09-02/received/SUPPLEMENTARY_TABLE_CLAIM_OWNER_DECISION_MATRIX.csv",
+      "bytes": 919,
+      "sha256": "90BB2711FE42AC692A1883DF56B2896439EABC96747F6E7C3867C901C69CE699",
+      "byte_identical": true
+    },
+    "EXACT_TEXT_PATCH_SUPPLEMENTARY_TABLE_CLAIM_OWNER.md": {
+      "source": "C:\\Users\\Administrator\\Downloads\\EXACT_TEXT_PATCH_SUPPLEMENTARY_TABLE_CLAIM_OWNER.md",
+      "archived": "00_project_management/supplementary_table_claim_owner_2026-09-02/received/EXACT_TEXT_PATCH_SUPPLEMENTARY_TABLE_CLAIM_OWNER.md",
+      "bytes": 2039,
+      "sha256": "5436A04152615688CB47A314857C293AB87A280B61BBE7602CF44996DACB62F1",
+      "byte_identical": true
+    },
+    "pasted_post_readerpath_claim_owner_review_2026-09-02.txt": {
+      "source": "C:\\Users\\Administrator\\.codex\\attachments\\7c5ee0bd-3097-4482-b2aa-022f93fcdec2\\pasted-text.txt",
+      "archived": "00_project_management/supplementary_table_claim_owner_2026-09-02/received/pasted_post_readerpath_claim_owner_review_2026-09-02.txt",
+      "bytes": 11234,
+      "sha256": "04F81D1C27A163522FDD07642D4A880D3EFA1BFA50D16B25CA6E8294F990F026",
+      "byte_identical": true
+    }
+  },
+  "claim_owner_defects_repaired": [
+    "A2",
+    "A3",
+    "A4"
+  ],
+  "exact_text_operations": 6,
+  "scientific_estimates_changed": false,
+  "statistical_models_rerun": false,
+  "figures_redrawn": false,
+  "figure_pixels_changed": false,
+  "source_data_values_changed": false,
+  "supplementary_information_changed": false,
+  "new_panels": 0,
+  "replacement_panels": 0,
+  "main_panels_keep": 21,
+  "supplementary_panels_keep": 38,
+  "parent_commit": "b087de3b385e2f6486499466470355e001c75bc1",
+  "submission_package_sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1"
+}

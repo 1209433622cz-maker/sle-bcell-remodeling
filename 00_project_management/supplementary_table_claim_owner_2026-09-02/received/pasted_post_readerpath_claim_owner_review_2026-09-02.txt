@@ -1,0 +1,259 @@
+这一轮我继续严格按“**科学呈现优先、投稿工程暂缓**”复核，而不是因为已经进入 maintenance freeze 就机械停止。GitHub 当前 `main` 已确认是 `b087de3b385e2f6486499466470355e001c75bc1`，commit 为 `Refreeze supplementary reader path`。 当前机器锁也确认首引顺序已经变为严格 `S1→S10`、主文/补充材料分别稳定为 31/15 页、21 个主图 panel 与 38 个补图 panel 全 KEEP、0 新增/0 替换、170/170 回归测试通过。
+
+我的新结论是：
+
+**`MAINTENANCE_FREEZE_SCIENCE_VALID__THREE_TABLE_ANCHOR_SEMANTIC_MISALIGNMENTS_FOUND`**
+
+不是要重新打开生信分析，也不是要再次重画 59 个 panel。当前真正还值得修的是**3 个极窄的 Supplementary Table evidence-owner 语义位置问题**。
+
+## 1. Figure 层：这次仍然 59/59 KEEP
+
+我重新裁决后，不建议恢复任何已删面板，也不建议增加 network、UMAP、TF causal diagram 或新 cohort。
+
+| 对象          | 裁决          | 原因                                                      |
+| ----------- | ----------- | ------------------------------------------------------- |
+| Fig. 1a     | **KEEP**    | 唯一负责 identity → disease inference boundary              |
+| Fig. 1b–d   | KEEP        | frozen-representation stability 的正式 owner               |
+| Fig. 2a–d   | KEEP        | composition 主结果→敏感性→LOO 链完整                             |
+| Fig. 3a–d   | KEEP        | GSE174188 program/gene evidence 唯一 owner                |
+| Fig. 4a–d   | KEEP        | external replication + genome-wide boundary + influence |
+| Fig. 5a     | **KEEP**    | evidence class / causal ceiling，防止过度机制化                 |
+| Fig. 5b–e   | KEEP        | 真正的 regulator / response evidence                       |
+| S1–S10      | **全部 KEEP** | 首引顺序修复后职责已连续，无重复 owner                                  |
+| 新分析/新 panel | **0**       | 没有科学缺口                                                  |
+
+GitHub 当前 panel matrix 本身也是 21 个 main panel 全 `KEEP_EXACT`，38 个 Supplementary panel 仅做 display-ID renumber，没有 scientific replacement。
+
+尤其 **Figure 1a 与 Figure 5a 不应该换掉**。
+
+Figure 1a 如果替换成 UMAP、漂亮的细胞 icon 或复杂 Sankey，视觉可能更“单细胞”，但会削弱本文真正的 methodological message：**identity adjudication precedes disease inference**。
+
+Figure 5a 如果换成 `IFN → STAT1/STAT2 → ISG` 网络图，会看起来更 mechanistic，却反而超过当前证据等级。它现在的价值恰恰是告诉读者：ULM、M5911、GSE23307 是不同层级的 observational/response evidence，并不等价于直接结合或因果调控。当前 Figure 5 legend 也严格维持这一边界。
+
+因此，“为了继续优化而换 1a/5a”现在已经是负收益。
+
+---
+
+# 2. Supplementary 首引顺序这轮确实修好了
+
+当前主文现在依次首次遇到：
+
+**S1 → S2 → S3 → S4 → S5 → S6 → S7 → S8 → S9 → S10**
+
+例如 identity end-to-end 已经改为 S4，composition 是 S5，pseudobulk 是 S6，external replication 是 S7，corrected mapping 是 S8，regulator correlation 是 S9，overlap depletion 是 S10。
+
+当前 15 页 Supplementary 的实际顺序也已经完全对应：
+
+* p6 S1
+* p7 S2
+* p8 S3
+* p9 S4
+* p10 S5
+* p11 S6
+* p12 S7
+* p13 S8
+* p14 S9
+* p15 S10
+
+而且从你上传的实际页面看，标题、图注与图件同页，没有新的拥挤、裁切或错配。
+
+所以这个方向**不能再回滚**。
+
+---
+
+# 3. 新发现的第一个问题：Table S3 被挂到了错误的科学主张上
+
+这是我认为本轮最值得修的一处。
+
+当前 Results 结尾写成：
+
+> `None of these analyses identifies a unique initiating ligand, establishes direct TF binding or demonstrates causal regulation in SLE (Supplementary Table S3).`
+
+
+
+但 Supplementary Table S3 实际是什么？
+
+**`Quantitative anchors and prespecified boundaries`**
+
+里面放的是：
+
+ARI/Jaccard、B_ASC OR、IFN effect、cross-dataset rho、M5911 NES、GSE23307 donor effects 等定量锚点。
+
+它并不是“没有 causal regulator/direct binding”的 evidence owner。
+
+而 GitHub anchor ledger 也明确证明这条 citation 是为了上一轮覆盖率人工加到这句话上的。
+
+### 更准确的改法
+
+把 S3 放到前面的 synthesis sentence：
+
+> **Taken together, these layers support an IFN-centred interpretation of the replicated program while defining its evidential ceiling, with principal quantitative anchors summarized in Supplementary Table S3.**
+
+然后后面的：
+
+> `None of these analyses identifies ... causal regulation in SLE.`
+
+**不挂 S3。**
+
+这样 Table S3 真正拥有 quantitative summary，而 causal ceiling 仍由正文逻辑、Fig. 5 和 Table S2 支撑。
+
+---
+
+# 4. 第二处：Supplementary Table S4 已经有 a/b，却没有精确 claim ownership
+
+当前 Supplementary 已经正确整理成：
+
+**S4a — Correlation-aware core-regulator sensitivity**
+
+**S4b — IFN-overlap-depletion summary**。
+
+但当前正文 correlation-aware 段落只写：
+
+> `(Supplementary Fig. S9; Supplementary Table S4)`
+
+而 overlap-depletion 段落只有：
+
+> `(Supplementary Fig. S10)`
+
+
+
+这意味着 **S4b 仍然没有自己的精确正文 owner**。
+
+最干净的是：
+
+**correlation-aware paragraph**
+
+> `(Supplementary Fig. S9; Supplementary Table S4a)`
+
+**overlap-depletion paragraph**
+
+> `(Supplementary Fig. S10; Supplementary Table S4b)`
+
+这不是格式洁癖，而是我们前面一直强调的：
+
+**一个结果 → 一个明确 evidence owner。**
+
+做完以后 S9/S4a 和 S10/S4b 会形成非常漂亮的 figure–table pair：
+
+图负责 pattern recognition；表负责 exact q / correlation / target-count / attenuation summaries。
+
+---
+
+# 5. 第三处：Tables S5–S8 现在也挂错了句子
+
+当前 Reproducibility 部分写：
+
+> `Superseded manuscripts and figures were retained for provenance but were not used as numerical sources for the present version (Supplementary Tables S5-S8).`
+
+
+
+但是 S5–S8 实际分别是：
+
+* S5：selected figure source-data map
+* S6：reproducibility record
+* S7：statistical tests and multiplicity families
+* S8：full statistical-results archive map。
+
+它们并不直接证明“旧 manuscript 没有被当作 numerical source”。
+
+所以 citation 应该移到上一句：
+
+> **Analyses were organized in timestamped run directories with immutable source objects, deterministic seeds, environment records, machine-readable decisions and SHA-256 manifests (Supplementary Tables S5-S8).**
+
+然后：
+
+> `Superseded manuscripts and figures were retained for provenance but were not used as numerical sources for the present version.`
+
+不挂表格。
+
+这会比现在更自然，而且几乎不增加字数，因此大概率不会重新破坏 31 页双引擎一致性。
+
+---
+
+## 6. 这轮我不建议继续改的地方
+
+**Title：冻结。**
+
+当前标题已经把整篇文章最重要的 contrast 写出来：
+
+reproducible interferon remodeling
+vs.
+less stable B-cell state assignments。
+
+**Abstract：冻结。**
+
+145 词已经非常紧，没有必要再为了删 5–10 个词破坏 identity → propagation → replication → transfer failure → observational regulator 的完整链。
+
+**Discussion：冻结。**
+
+尤其最后：
+
+> `the data support a bounded process-level interferon association within explicit identity and transfer limits.`
+
+仍然是全文最合适的 conclusion endpoint。
+
+**S1–S10：不再裁。**
+
+S3/S6 等产生的页面下部空白并不是科学图件缺陷。为了填满 A4 页面而放大 panel，反而会导致不同补图 apparent font size 不统一。
+
+---
+
+# 7. 对 npj Systems Biology and Applications 的匹配度
+
+我这轮也重新核对了期刊当前 scope。npj Systems Biology and Applications 明确覆盖 **single-cell systems biology** 与 **systems immunology**，并强调 computational/mathematical approaches to complex biological systems。([Nature][1])
+
+所以现在没有必要为了“显得更 systems biology”而强行加一个 network model 或 mechanistic simulation。
+
+本稿目前真正的 systems contribution 是：
+
+**identity reconstruction
+→ reconstruction uncertainty
+→ disease-level propagation
+→ composition
+→ pseudobulk transcription
+→ independent program replication
+→ source-label-independent calibration failure
+→ regulator correlation sensitivity
+→ overlap depletion
+→ response-context convergence**
+
+这本身就是一套明确的 systems-level evidence hierarchy。
+
+Nature 的 artwork guide 同样要求普通图中文字 5–7 pt、panel label 8 pt bold、Arial/Helvetica、紧凑且非装饰性布局。([自然研究图示指南][2]) 你上一阶段已经把 typography contract 修到了这一方向，因此**不应再次全图重跑**。
+
+---
+
+# 当前状态
+
+所以我不会推翻当前：
+
+**`SCIENTIFIC_PRESENTATION_MAINTENANCE_FREEZE`**
+
+它在科学对象层仍然成立。GitHub machine lock 也确认 figure pixels、Source Data values、统计模型均未变化。
+
+但在“极限语义一致性”层，我建议增加一个非常窄的子门：
+
+## `SUPPLEMENTARY_TABLE_CLAIM_OWNER_SEMANTIC_MICROPASS`
+
+只改三类 citation placement：
+
+1. **S3** 从 causal-ceiling sentence 移到 quantitative synthesis；
+2. **S4 → S4a/S4b** 精确分配到 correlation / depletion 两段；
+3. **S5–S8** 从 superseded-manuscript sentence 移到真正的 reproducibility/provenance sentence。
+
+然后只需要：
+
+canonical Markdown 重建 → WPS/LibreOffice 双渲染 → 确认仍 31 页 → 数字 diff = 0 → figures hash = 0 change → Source Data hash = 0 change。
+
+如果通过，我认为这次就应该真正回到**缺陷触发式维护**，不再主动找理由开新分析或换图。
+
+本轮详细文件已经整理好：
+
+* [本轮 hostile audit 行动记录](sandbox:/mnt/data/sle_post_readerpath_claim_owner_audit/action_record_2026-09-02_post_readerpath_claim_owner_hostile_audit.md)
+* [Supplementary Table claim-owner 决策矩阵](sandbox:/mnt/data/sle_post_readerpath_claim_owner_audit/SUPPLEMENTARY_TABLE_CLAIM_OWNER_DECISION_MATRIX.csv)
+* [三处精确文本 patch](sandbox:/mnt/data/sle_post_readerpath_claim_owner_audit/EXACT_TEXT_PATCH_SUPPLEMENTARY_TABLE_CLAIM_OWNER.md)
+
+目前的重点已经不再是“能不能再增加一个漂亮分析”，而是**让每一个 supporting object 只支持它真正拥有的 claim**。做完这三处，科学文本与图件层就基本没有继续主动打开的理由了。
+
+[1]: https://www.nature.com/npjsba/aims?utm_source=chatgpt.com "Aims & Scope | npj Systems Biology and Applications"
+[2]: https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/?utm_source=chatgpt.com "Preparing figures - our specifications | Nature research figure guide"

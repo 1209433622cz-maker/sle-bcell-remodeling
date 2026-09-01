@@ -1,0 +1,38 @@
+{
+  "created_at": "2026-09-02T01:39:57+08:00",
+  "status": "PASS_CLAIM_OWNER_DOCX_BUILT_RENDER_REQUIRED",
+  "build_result": {
+    "source": "phase17_v7/npj_sba_supplementary_table_claim_owner/20260902_semantic_micropass/sources/Manuscript_claim_owner_semantic_micropass.md",
+    "output": "phase17_v7/npj_sba_supplementary_table_claim_owner/20260902_semantic_micropass/documents/Manuscript_claim_owner_semantic_micropass.docx",
+    "paragraphs": 151,
+    "tables": 0,
+    "inline_shapes": 0,
+    "placeholders": 0,
+    "bytes": 60810
+  },
+  "checks": {
+    "title_exact": true,
+    "abstract_145_words": true,
+    "references_1_to_33": true,
+    "main_has_no_inline_figures": true,
+    "five_main_legend_headings_compacted": true,
+    "s1_s2_owner_present": true,
+    "s3_quantitative_owner_present": true,
+    "s3_causal_misowner_absent": true,
+    "s4a_owner_present": true,
+    "s4b_owner_present": true,
+    "generic_s4_owner_absent": true,
+    "s5_s8_reproducibility_owner_present": true,
+    "s5_s8_superseded_misowner_absent": true,
+    "s9_owner_present": true
+  },
+  "failed_checks": [],
+  "document": {
+    "path": "phase17_v7/npj_sba_supplementary_table_claim_owner/20260902_semantic_micropass/documents/Manuscript_claim_owner_semantic_micropass.docx",
+    "bytes": 60860,
+    "sha256": "0F10C12D7A0164F0B2B8A9A39B35C00520F41BE5A028CAF96CC9D5E79FD8EC92"
+  },
+  "scientific_estimates_changed": false,
+  "figures_redrawn": false,
+  "source_data_values_changed": false
+}

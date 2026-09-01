@@ -1,0 +1,7 @@
+﻿object,decision,claim_owner,main_location
+Supplementary Tables S1-S2,KEEP,dataset roles and inferential boundaries,Introduction evidence-hierarchy sentence
+Supplementary Table S3,MOVE,principal quantitative anchors,Results quantitative synthesis sentence
+Supplementary Table S4a,REFINE,correlation-aware regulator sensitivity,Results correlation-aware paragraph
+Supplementary Table S4b,ADD_PRECISE_SUBANCHOR,IFN-overlap depletion,Results overlap-depletion paragraph
+Supplementary Tables S5-S8,MOVE,"source mapping, reproducibility, statistical families and archive",Methods reproducibility opening sentence
+Supplementary Table S9,KEEP,reference-calibrated external mapping boundary,Results corrected-remapping paragraph

@@ -1,0 +1,82 @@
+{
+  "created_at": "2026-09-02T01:46:52+08:00",
+  "status": "SCIENTIFIC_PRESENTATION_MAINTENANCE_FREEZE",
+  "checks": {
+    "integration_pass": true,
+    "document_build_pass": true,
+    "root_main_matches_candidate": true,
+    "supplementary_information_unchanged": true,
+    "all_45_frozen_assets_unchanged": true,
+    "all_21_main_panels_kept": true,
+    "all_38_supplementary_panels_kept": true,
+    "zero_new_or_replacement_panels": true,
+    "wps_main_is_31_pages": true,
+    "libreoffice_main_is_31_pages": true,
+    "wps_render_structurally_clean": true,
+    "libreoffice_render_structurally_clean": true,
+    "twelve_contact_sheets_cover_62_pages": true,
+    "docx_accessibility_zero": true,
+    "submission_package_unchanged": true,
+    "manual_visual_qa_confirmed": true,
+    "full_regression_suite_confirmed": true
+  },
+  "failed_checks": [],
+  "claim_owner_repairs": {
+    "S3": "quantitative synthesis",
+    "S4a": "correlation-aware regulator sensitivity",
+    "S4b": "IFN-overlap depletion",
+    "S5-S8": "reproducibility and provenance opening sentence"
+  },
+  "scientific_estimates_changed": false,
+  "statistical_models_rerun": false,
+  "figures_redrawn": false,
+  "figure_pixels_changed": false,
+  "source_data_values_changed": false,
+  "supplementary_information_changed": false,
+  "new_panels": 0,
+  "replacement_panels": 0,
+  "main_panels_keep": 21,
+  "supplementary_panels_keep": 38,
+  "manual_visual_qa": {
+    "confirmed": true,
+    "contact_sheets_inspected": 12,
+    "rendered_pages_inspected": 62,
+    "blank_pages_found": false,
+    "clipping_or_overlap_found": false,
+    "missing_glyphs_found": false
+  },
+  "documents": {
+    "wps": {
+      "path": "phase17_v7/npj_sba_supplementary_table_claim_owner/20260902_semantic_micropass/documents/Manuscript_claim_owner_semantic_micropass.pdf",
+      "pages": 31,
+      "sha256": "3487C0D69BBC29727E44744CBDD2041A08B7BA5720B14B043719B2F8FCF49B0F"
+    },
+    "libreoffice": {
+      "path": "phase17_v7/npj_sba_supplementary_table_claim_owner/20260902_semantic_micropass/qa/libreoffice_documents/Manuscript_claim_owner_semantic_micropass.pdf",
+      "pages": 31,
+      "sha256": "2777488A0B3959BE7766B2BFB43BD3B86377EEEF3A6A2BE2B8EDF192B157A62A"
+    },
+    "docx": {
+      "path": "phase17_v7/npj_sba_supplementary_table_claim_owner/20260902_semantic_micropass/documents/Manuscript_claim_owner_semantic_micropass.docx",
+      "bytes": 60860,
+      "sha256": "0F10C12D7A0164F0B2B8A9A39B35C00520F41BE5A028CAF96CC9D5E79FD8EC92"
+    }
+  },
+  "regression_tests": {
+    "confirmed_pass": true,
+    "tests_run": 180,
+    "failures": 0,
+    "errors": 0
+  },
+  "submission_package_sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1",
+  "submission_package_changed": false,
+  "github_release_changed": false,
+  "zenodo_changed": false,
+  "action_record": "00_project_management/action_record_2026-09-02_supplementary_table_claim_owner_semantic_micropass.md",
+  "next_stage": "SCIENTIFIC_PRESENTATION_MAINTENANCE_FREEZE",
+  "final_manifest": {
+    "rows": 30,
+    "bytes": 8473337,
+    "path": "phase17_v7/npj_sba_supplementary_table_claim_owner/20260902_semantic_micropass/09_FINAL_FILE_MANIFEST.csv"
+  }
+}

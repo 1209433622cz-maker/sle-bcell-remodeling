@@ -1,0 +1,270 @@
+{
+  "created_at": "2026-09-02T01:41:40+08:00",
+  "engine": "LibreOffice PDF export followed by Poppler 110-dpi page rendering",
+  "document_hashes": [
+    {
+      "file": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "bytes": 244378,
+      "sha256": "2777488A0B3959BE7766B2BFB43BD3B86377EEEF3A6A2BE2B8EDF192B157A62A"
+    },
+    {
+      "file": "Manuscript_claim_owner_semantic_micropass.docx",
+      "bytes": 60860,
+      "sha256": "0F10C12D7A0164F0B2B8A9A39B35C00520F41BE5A028CAF96CC9D5E79FD8EC92"
+    }
+  ],
+  "pages": 31,
+  "page_checks": [
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 1,
+      "text_characters": 1771,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 2,
+      "text_characters": 2151,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 3,
+      "text_characters": 2085,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 4,
+      "text_characters": 1979,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 5,
+      "text_characters": 2157,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 6,
+      "text_characters": 2153,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 7,
+      "text_characters": 2117,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 8,
+      "text_characters": 2210,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 9,
+      "text_characters": 2204,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 10,
+      "text_characters": 2161,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 11,
+      "text_characters": 2091,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 12,
+      "text_characters": 2279,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 13,
+      "text_characters": 2179,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 14,
+      "text_characters": 2222,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 15,
+      "text_characters": 1923,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 16,
+      "text_characters": 2124,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 17,
+      "text_characters": 1894,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 18,
+      "text_characters": 2115,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 19,
+      "text_characters": 2172,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 20,
+      "text_characters": 1890,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 21,
+      "text_characters": 2024,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 22,
+      "text_characters": 2073,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 23,
+      "text_characters": 2071,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 24,
+      "text_characters": 1812,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 25,
+      "text_characters": 1355,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 26,
+      "text_characters": 1783,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 27,
+      "text_characters": 1701,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 28,
+      "text_characters": 1560,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 29,
+      "text_characters": 1913,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 30,
+      "text_characters": 2211,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_claim_owner_semantic_micropass.pdf",
+      "page": 31,
+      "text_characters": 2141,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    }
+  ],
+  "all_pages_within_canvas": true,
+  "all_markers_resolved": true,
+  "visual_review": "Page images require human/model visual inspection; structural checks alone are insufficient"
+}
