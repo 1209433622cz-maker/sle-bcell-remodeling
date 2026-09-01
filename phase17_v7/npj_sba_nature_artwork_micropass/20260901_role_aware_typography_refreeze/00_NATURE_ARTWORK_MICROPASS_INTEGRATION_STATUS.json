@@ -1,0 +1,99 @@
+{
+  "created_at": "2026-09-01T11:27:54+08:00",
+  "status": "PASS_NATURE_ARTWORK_TYPOGRAPHY_MICROPASS_DOCUMENT_REBUILD_REQUIRED",
+  "checks": {
+    "base_stop_gate_locked": true,
+    "received_inputs_archived_byte_identically": true,
+    "baseline_12_flattened_figures_confirmed": true,
+    "three_role_aware_figures_identified": true,
+    "twelve_redraws_have_role_hierarchy": true,
+    "all_figures_arial_and_vector_page": true,
+    "all_redraws_restore_sub_1pt_rules": true,
+    "three_preserved_figures_byte_identical": true,
+    "twelve_confirmed_outliers_redrawn": true,
+    "all_15_source_data_byte_identical": true,
+    "builder_assertions_pass": true,
+    "submission_package_unchanged": true,
+    "exactly_two_changed_lines": true,
+    "independent_replication_boundaries_present": true,
+    "targeted_old_phrases_absent": true,
+    "methodological_validation_retained": true,
+    "root_manuscript_exact_parity": true,
+    "root_supplement_exact_parity": true,
+    "supplement_text_byte_identical": true
+  },
+  "failed_checks": [],
+  "archived_inputs": {
+    "SLE_Bcell_Nature_Artwork_Maintenance_Audit_2026-09-01.md": {
+      "source": "C:\\Users\\Administrator\\Downloads\\SLE_Bcell_Nature_Artwork_Maintenance_Audit_2026-09-01.md",
+      "archived": "00_project_management/nature_artwork_micropass_2026-09-01/received/SLE_Bcell_Nature_Artwork_Maintenance_Audit_2026-09-01.md",
+      "bytes": 7778,
+      "sha256": "9C022D06E4D3B8359B8D0BF92E0279AAEDB12E382F81F393848EAEEBB751F02A",
+      "byte_identical": true
+    },
+    "pasted_nature_artwork_review_2026-09-01.txt": {
+      "source": "C:\\Users\\Administrator\\.codex\\attachments\\9d129382-ae10-4941-aadc-59625c6d8dde\\pasted-text.txt",
+      "archived": "00_project_management/nature_artwork_micropass_2026-09-01/received/pasted_nature_artwork_review_2026-09-01.txt",
+      "bytes": 12724,
+      "sha256": "4F2005E48DF30EDA5CA757599EBF7908A535B291279A16AC98CF994EA0F58B06",
+      "byte_identical": true
+    }
+  },
+  "figure_inventory": {
+    "total": 15,
+    "source_redrawn_typography_only": [
+      "Figure1_disease_blind_identity_scope",
+      "Figure2_sample_level_composition",
+      "Figure3_gse174188_bconv_transcription",
+      "Figure4_independent_ifn_replication",
+      "Figure5_regulatory_evidence",
+      "Supplementary_Figure_S10_reference_calibration_boundary",
+      "Supplementary_Figure_S1_source_integrity_qc",
+      "Supplementary_Figure_S2_representation_diagnostics",
+      "Supplementary_Figure_S4_composition_diagnostics",
+      "Supplementary_Figure_S7_regulator_correlation_sensitivity",
+      "Supplementary_Figure_S8_overlap_depletion",
+      "Supplementary_Figure_S9_identity_boundary_and_propagation"
+    ],
+    "preserved_byte_identically": [
+      "Supplementary_Figure_S3_fine_state_failure_transition_structure",
+      "Supplementary_Figure_S5_pseudobulk_ranked_list_diagnostics",
+      "Supplementary_Figure_S6_replication_robustness_diagnostics"
+    ],
+    "new_panels": 0,
+    "replacement_panels": 0
+  },
+  "panel_inventory": {
+    "main_keep": 21,
+    "main_typography_only": 21,
+    "supplementary_keep": 38,
+    "supplementary_typography_only": 29,
+    "supplementary_keep_exact": 9
+  },
+  "sources": {
+    "manuscript": "phase17_v7/npj_sba_nature_artwork_micropass/20260901_role_aware_typography_refreeze/sources/Manuscript_nature_artwork_micropass.md",
+    "supplement": "phase17_v7/npj_sba_nature_artwork_micropass/20260901_role_aware_typography_refreeze/sources/Supplementary_Information_nature_artwork_micropass.md",
+    "source_data_hashes": {
+      "Figure1_source_data.csv": "F3D45F72422B8469F7DD0A6E888541075A1D090277E9F96D16565B5B44C5B805",
+      "Figure2_source_data.csv": "DAA6DDBAB469E0D510AB578BEE0A21AA73FA2D71184739E3F361C3EA6EC8DFE2",
+      "Figure3_source_data.csv": "DEFABF8C16D879362E3AD197C857A9197CD6D0691B20FDFA4AC97BEFF3710BC8",
+      "Figure4_source_data.csv": "F3604F40DAEDB0DD01617BB223A8762323C8AAC7F16185292367B9A13FEC4755",
+      "Figure5_source_data.csv": "A482D9D4F001B076B496C63857A8B3ADB65816CD0AA18B60C8B17B2DDB211B5B",
+      "Supplementary_Figure_S10_source_data.csv": "FF4309EBAF761A0563F018AE1BE07212EF2CB2241E79DF12C374BCB1426A60FF",
+      "Supplementary_Figure_S1_source_data.csv": "A140D1D900A3EA869551097146AFFD3872BC7AC78E9E9712E4BDAC834A57CB68",
+      "Supplementary_Figure_S2_source_data.csv": "E46FE5B33B11D45319DD80C3D669AEEB83F2517095CD0C1FD5EEFA1F57C58731",
+      "Supplementary_Figure_S3_source_data.csv": "133E973C2753F4946A24739C049308152299A915A3FC6754B30AD0521F979C96",
+      "Supplementary_Figure_S4_source_data.csv": "7BA2660E5A50ADCF28407BCC92A91C791576DD69A9A1ABA9618DEB045C3A4E19",
+      "Supplementary_Figure_S5_source_data.csv": "F6682D636C1FF3A1784E0B9E8AEFF5C5D1BB075176312E87FCB938F65C4DA897",
+      "Supplementary_Figure_S6_source_data.csv": "A1D1DCBF9D20BA01D0022D4DA0F73A618776D34A687E764F18AB83439204DBF6",
+      "Supplementary_Figure_S7_source_data.csv": "D92140A17B96E6B77F5EEBF322A5D77A5E6F2132EDD54CC9C3E73521E5352CA3",
+      "Supplementary_Figure_S8_source_data.csv": "26A3F90E3165D8928874F278384B2587CB549DD4FFDE93440AAC4CEEAE06A9A2",
+      "Supplementary_Figure_S9_source_data.csv": "46EE840F86CA33AA4F5FCE0A37EEFCB4DB23831533BBFA20400BAE50744F5D42"
+    }
+  },
+  "scientific_estimates_changed": false,
+  "statistical_models_rerun": false,
+  "source_data_changed": false,
+  "exact_submission_package_modified": false,
+  "exact_submission_package_sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1"
+}

@@ -1,0 +1,3 @@
+﻿scope,edit,old_text,new_text,scientific_estimate_changed
+Results,Accession-internal evidence boundary,"Because both analyses originate from the same accession, they are internal replication rather than independent validation.","Because both analyses originate from the same accession, they provide internal replication rather than independent replication.",False
+Methods,Same-data uncertainty evidence boundary,These analyses quantify same-data sensitivity to identity uncertainty; they are not independent validation.,These analyses quantify same-data sensitivity to identity uncertainty; they are not independent replication.,False

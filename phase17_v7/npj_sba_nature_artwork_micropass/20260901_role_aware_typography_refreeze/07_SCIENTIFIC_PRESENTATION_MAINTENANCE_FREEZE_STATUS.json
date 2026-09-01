@@ -1,0 +1,85 @@
+{
+  "created_at": "2026-09-01T11:29:50+08:00",
+  "status": "SCIENTIFIC_PRESENTATION_MAINTENANCE_FREEZE",
+  "checks": {
+    "integration_pass": true,
+    "document_build_pass": true,
+    "wps_main_31_pages": true,
+    "lo_main_32_pages": true,
+    "supplement_16_pages_both": true,
+    "all_pages_nonblank": true,
+    "wps_all_text_within_canvas": true,
+    "lo_all_text_within_canvas": true,
+    "all_render_markers_resolved": true,
+    "supplement_pagination_and_fingerprints_pass": true,
+    "all_15_source_data_byte_identical": true,
+    "targeted_replication_boundaries_present": true,
+    "supplement_text_byte_identical": true,
+    "accessibility_zero_findings": true,
+    "document_contact_sheets_complete": true,
+    "figure_contact_sheets_complete": true,
+    "submission_package_unchanged": true
+  },
+  "failed_checks": [],
+  "scientific_estimates_changed": false,
+  "statistical_models_rerun": false,
+  "source_data_changed": false,
+  "new_panels": 0,
+  "replacement_panels": 0,
+  "main_panels": {
+    "keep": 21,
+    "typography_only": 21,
+    "replace": 0
+  },
+  "supplementary_panels": {
+    "keep": 38,
+    "typography_only": 29,
+    "keep_exact": 9,
+    "replace": 0
+  },
+  "documents": {
+    "wps_manuscript": {
+      "path": "phase17_v7/npj_sba_nature_artwork_micropass/20260901_role_aware_typography_refreeze/documents/Manuscript_scientific_maintenance_freeze.pdf",
+      "pages": 31,
+      "sha256": "85D701807F00AEB294ECCFC9CA98C46C9A3762A9BD4B7C276FDC7B88E26FA14D"
+    },
+    "wps_supplement": {
+      "path": "phase17_v7/npj_sba_nature_artwork_micropass/20260901_role_aware_typography_refreeze/documents/Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "pages": 16,
+      "sha256": "D76D755197823DF12777FEA41270461373E1FA16430077899BCAAF2CC1D62A12"
+    },
+    "lo_manuscript": {
+      "path": "phase17_v7/npj_sba_nature_artwork_micropass/20260901_role_aware_typography_refreeze/qa/libreoffice_documents/Manuscript_scientific_maintenance_freeze.pdf",
+      "pages": 32,
+      "sha256": "D188BB4F4FE398B2AA9509672432535CB2E2ACF8D6A8173408AF52991C81D1E9"
+    },
+    "lo_supplement": {
+      "path": "phase17_v7/npj_sba_nature_artwork_micropass/20260901_role_aware_typography_refreeze/qa/libreoffice_documents/Supplementary_Information_scientific_maintenance_freeze.pdf",
+      "pages": 16,
+      "sha256": "172016FC26697FA949DCFBA4A216F562B513AB170DEF316AB56E1C5480596188"
+    }
+  },
+  "visual_qa": {
+    "document_contact_sheets": 18,
+    "figure_contact_sheets": 8,
+    "wps_and_libreoffice": true,
+    "clipping_or_overlap_found": false
+  },
+  "accessibility": {
+    "Manuscript_scientific_maintenance_freeze.json": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "Supplementary_Information_scientific_maintenance_freeze.json": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    }
+  },
+  "submission_package_sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1",
+  "submission_package_changed": false,
+  "github_release_changed": false,
+  "zenodo_changed": false,
+  "next_stage": "SCIENTIFIC_PRESENTATION_MAINTENANCE_FREEZE"
+}

@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-09-01T11:27:55+08:00",
+  "status": "PASS_NATURE_ARTWORK_MICROPASS_DOCX_BUILT_DUAL_RENDER_REQUIRED",
+  "build_results": [
+    {
+      "source": "phase17_v7/npj_sba_nature_artwork_micropass/20260901_role_aware_typography_refreeze/sources/Manuscript_nature_artwork_micropass.md",
+      "output": "phase17_v7/npj_sba_nature_artwork_micropass/20260901_role_aware_typography_refreeze/documents/Manuscript_scientific_maintenance_freeze.docx",
+      "paragraphs": 151,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 60748
+    },
+    {
+      "source": "phase17_v7/npj_sba_nature_artwork_micropass/20260901_role_aware_typography_refreeze/sources/Supplementary_Information_nature_artwork_micropass.md",
+      "output": "phase17_v7/npj_sba_nature_artwork_micropass/20260901_role_aware_typography_refreeze/documents/Supplementary_Information_scientific_maintenance_freeze.docx",
+      "paragraphs": 69,
+      "tables": 10,
+      "inline_shapes": 10,
+      "placeholders": 0,
+      "bytes": 3762539
+    }
+  ],
+  "checks": {
+    "manuscript": {
+      "title_exact": true,
+      "abstract_145_words": true,
+      "no_inline_figures": true,
+      "references_1_to_33": true,
+      "internal_replication_boundary_present": true,
+      "uncertainty_replication_boundary_present": true,
+      "methodological_validation_retained": true
+    },
+    "supplement": {
+      "ten_figures_embedded": true,
+      "title_exact": true,
+      "s3_pruned_title_present": true,
+      "s5_owner_sentence_present": true,
+      "selected_figure_source_map_title": true
+    }
+  },
+  "object_inventory": {
+    "manuscript_inline_shapes": 0,
+    "supplement_inline_shapes": 10
+  },
+  "files": {
+    "Manuscript_scientific_maintenance_freeze.docx": {
+      "bytes": 60813,
+      "sha256": "1FD0750D37C813A6A761CE1CA1CB1C3E5D6E3602BFDF4A102B39122F98AE24D0"
+    },
+    "Supplementary_Information_scientific_maintenance_freeze.docx": {
+      "bytes": 3762614,
+      "sha256": "3C7EE17BCC037B983C1A1A6AA0D5991F12280C54CCC2F5B6E15CBE562E2CB642"
+    }
+  },
+  "scientific_estimates_changed": false,
+  "source_data_changed": false,
+  "display_only_redraws": 12
+}

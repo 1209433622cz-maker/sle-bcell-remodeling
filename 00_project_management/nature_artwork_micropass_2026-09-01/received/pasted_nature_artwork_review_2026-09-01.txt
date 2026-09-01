@@ -1,0 +1,241 @@
+我重新把这一版当作“已经锁定之后仍然要经得住一次 Nature/npj 风格 hostile audit 的对象”来复核，而不是直接接受 `SCIENTIFIC_PRESENTATION_STOP_GATE_LOCKED` 后停止。GitHub 当前 `main` 的确已经推进到 `cb762af3c134...`，commit message 为 `Lock scientific presentation semantic stop gate`。 当前机器状态也确认 canonical source parity、15 个 Source Data 全部 byte-identical、21 个主图子图全 KEEP、补图 38 panels、无 replacement/new panel。
+
+但这次我发现了一个**上一轮科学 stop gate 没有覆盖到、而且确实值得再做一次源级重绘的展示层问题**。
+
+## 新结论
+
+我现在更倾向把状态定义为：
+
+**`SCIENTIFIC_STOP_GATE_SCIENCE_VALID__NATURE_ARTWORK_TYPOGRAPHY_MICROPASS_RECOMMENDED`**
+
+也就是说：
+
+**科学内容不用重开。
+图的科学结构不用重开。
+但 Nature 风格 typography contract 还值得最后修一次。**
+
+原因很具体。
+
+当前 Supplementary Fig. S4 的修订本身是正确的。第 10 页现在已经使用中性的：
+
+`B_ASC estimate across covariance and cell policies`
+
+不再使用容易让人误读成等价性支持的 `Primary null is stable...`。 当前主文第 7 页也已经把 GSE135779 的 `mapped cells` 改成了 `eligible cells in the source-label-defined broad-B analogue`，这次修正完全应该保留。 Table S5 也已经正确改成 `Selected figure source-data map`。
+
+这些都不需要再动。
+
+---
+
+# 但是 S4 暴露出了一个更底层的图形 style-contract 问题
+
+当前最终状态记录明确写着 S4：
+
+**minimum character size = 8.0 pt**。
+
+我继续追到了真正的原因：当前仓库的 `audit_tools/publication_style_contract.py` 中，`apply_npj_sba_style()` 会把**所有可见 Text 对象统一强制设为 8 pt**，并且把所有非零线条宽度至少提升到 1 pt。
+
+这里就是目前最值得修的地方。
+
+Nature Portfolio 当前 figure guide 的推荐不是“所有文字 8 pt”，而是：
+
+**panel letters 8 pt bold；其余 figure text 应在 5–7 pt；Arial/Helvetica；保持可编辑 vector text。** 同时官方建议 panel arrangement 尽量紧凑、减少无意义白空间。
+
+所以现在 S4 并不存在可读性缺陷，但存在一个明显的**Nature-style contract 偏差**：
+
+> panel label 应该 8 pt，
+> 但轴标题、tick、legend、annotation 不应该全部也被粗暴提升到 8 pt。
+
+这也解释了为什么 Supplementary 第 10 页的 S4 肉眼看起来比 S3、S5 等周围补图字号更“重”、更大。S4 科学上已经修对了，但视觉系统尚未完全统一。
+
+npj Systems Biology and Applications 本身在初投稿阶段并不要求严格格式化，所以这**不是投稿合规错误**；但你明确要求把 Nature 风格作为修改方向，因此值得在 scientific-presentation 阶段修，而不是留给投稿工程。
+
+---
+
+## 我对所有既有子图重新做出的裁决
+
+| 图件        | 裁决                                                  | 当前判断                                                                                    |
+| --------- | --------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Fig. 1a–d | KEEP                                                | Fig.1a 仍是疾病盲法 inference boundary 的唯一概念 owner；b–d 为 frozen-representation 稳定性 owner，不应换图 |
+| Fig. 2a–d | KEEP                                                | composition 的主结果—敏感性—LOO 链完整，且正文已经明确“不等价”边界                                             |
+| Fig. 3a–d | KEEP                                                | Fig.3b 继续作为 frozen branch-wise IFN/ISG 唯一 owner，结构已经很干净                                 |
+| Fig. 4a–d | KEEP                                                | 外部 replication、跨队列 gene-level concordance 与 source-label robustness 缺一不可                |
+| Fig. 5a–e | KEEP                                                | 5a 虽然是概念型 panel，但它承担 evidence-class 边界，能防止 b–e 被因果化解读，不建议换成又一张统计图                       |
+| S1–S2     | KEEP                                                | QC / representation diagnostics 均有独立信息                                                  |
+| S3        | KEEP 当前 2-panel                                     | 已经完成正确裁剪；继续删会损失 fine-state failure 的原因解释                                                |
+| **S4**    | **KEEP panel structure；只做 typography source rerun** | 科学内容和新标题已经正确；唯一值得再动的是字体/线宽 contract                                                     |
+| S5        | KEEP 当前 3-panel                                     | 已经是纯 pseudobulk/ranked-list diagnostics，不再重复 Fig.3b                                     |
+| S6        | KEEP                                                | donor support、source-label omission、donor influence 对外部 replication 很重要                 |
+| S7        | KEEP                                                | 虽然 b–d 的数值与 Table S4 有重合，但图负责 pattern recognition，表负责 exact values，暂不值得再裁               |
+| S8        | KEEP                                                | overlap-depletion 是 regulator claim ceiling 的核心证据                                       |
+| S9        | KEEP                                                | 这是全文非常重要的“失败结果也是结果”图，不能弱化                                                               |
+| S10       | KEEP                                                | corrected remapping HOLD 的核心负向证据，必须保留                                                   |
+| 新增 panels | **0**                                               | 没有缺口                                                                                    |
+| 替换 panels | **0**                                               | 没有任何现有 panel 科学上误导                                                                      |
+
+这里我特别重新审查了 **S7 是否还能继续裁**。
+
+Supplementary Table S4 已经列出了六组 CAMERA/FRY q、inter-gene correlation 和 matched targets；S7b/c/d 的确在数字层面重复了这些东西。
+
+但我仍然不建议删除。
+
+因为 S7 的四个 panel 分别让读者一眼看到：
+
+CAMERA vs FRY 方法一致性 → STAT2 为什么是高相关 edge case → 哪一个 test 是 CAMERA exception → STAT2 target coverage 为什么比 STAT1 薄弱。
+
+表格是精确数值 owner；图是**结构认知 owner**。这种重复属于互补，而不是此前 S3a/Fig1b 那种“完全相同统计对象被两个 figure panel 双重拥有”的坏重复。
+
+所以本轮**不再裁 S7**。
+
+---
+
+# Nature 风格最后应该怎样重跑
+
+我不建议把现在的 8 pt 简单统一缩成 7 pt。
+
+正确做法是重写 shared publication-style contract，让它根据文字角色分层：
+
+**panel labels：8 pt bold**
+panel titles：约 7 pt
+axis labels：6.5–7 pt
+tick labels：5.5–6.5 pt
+legends：5.5–6.5 pt
+annotations / q labels：5.5–6.5 pt
+colorbar labels：约 6–6.5 pt
+
+同时继续保持 Arial、vector editable text、白底。
+
+线宽也不要再“一刀切所有非零线条至少 1 pt”。Nature 的建议范围大约是 0.25–1 pt；1 pt 本身没有越界，但把普通 axis、error bar、guide、data line 全推到上限，会损失视觉层级。
+
+更合理的是：
+
+普通 axes/error bars ≈ 0.5–0.8 pt；
+reference lines ≈ 0.5–0.7 pt；
+需要强调的轮廓才接近 1 pt。
+
+这个修改应该通过**重新运行现有 plotting function**完成，而不是编辑 PDF。
+
+---
+
+# 需要先做 batch typography audit，而不是直接重画所有图
+
+这里很关键。
+
+目前我们已经确定：
+
+S4 是 8 pt minimum。
+
+但我不会因此推断 15 张图全部都是 8 pt。
+
+因为前面的 S3/S5 是独立 source redraw，它们走的是不同的绘图路径。因此下一步正确顺序应该是先机器提取：
+
+**每张 final figure PDF 的 minimum + maximum font size，并按 Text role 分类。**
+
+只有确实违反目标 contract 的图才重跑。
+
+所以可能最后出现两种结果：
+
+如果只有 S4 是 outlier → **只重跑 S4**。
+
+如果 S1/S2/S4/S6/S7/S8/S9/S10 中还有图是由统一 8 pt contract 生成 → **只重跑这些受影响对象**。
+
+不允许因此顺便调整数据、轴范围、threshold、统计量或 panel 内容。
+
+---
+
+# 正文我还发现两个非常小的 terminology polish 候选
+
+它们不是科学缺陷，但如果这次真的要把文字也做到极致，可以一起修。
+
+当前 Results 第 7 页写：
+
+`Because both analyses originate from the same accession, they are internal replication rather than independent validation.` 
+
+我更推荐：
+
+**`Because both analyses originate from the same accession, they provide internal replication rather than independent replication.`**
+
+因为全文现在的证据分类已经明确使用：
+
+discovery
+→ internal replication
+→ independent replication
+
+这里突然用 `independent validation` 会轻微打断 taxonomy。
+
+同理，Methods 第 17 页目前写：
+
+`These analyses quantify same-data sensitivity to identity uncertainty; they are not independent validation.` 
+
+可以统一为：
+
+**`...they are not independent replication.`**
+
+这和 Supplementary Fig. S9 图注现在使用的 `assignment sensitivity rather than independent replication` 完全一致。
+
+需要注意，我**不建议全局删 validation**。
+
+例如：
+
+`not independent validation of the full feature-selection and tuning pipeline`
+
+以及：
+
+`not prospective validation`
+
+还有 CRediT 的 `Validation`
+
+这些都属于正确语境，应该继续保留。
+
+---
+
+# 主文核心内容我现在不建议再改
+
+这一点和上一轮判断没有变化。
+
+当前主文已经形成非常清楚的 evidence hierarchy：
+
+disease-blind identity
+→ frozen representation passes
+→ full reconstruction exposes B_ASC-specific instability
+→ propagate assignment uncertainty
+→ composition conclusion remains unsupported, not “equivalent”
+→ B_CONV IFN/ISG survives
+→ source-label-defined independent GSE135779 replication
+→ genome-wide concordance remains weak
+→ source-label-independent remapping fails calibration
+→ STAT1/STAT2 converges observationally but attenuates after broad IFN depletion
+→ causal / taxonomy / clinical ceiling explicitly retained.
+
+主文 Discussion 最后的：
+
+`the data support a bounded process-level interferon association within explicit identity and transfer limits`
+
+我仍然认为是非常合适的终点，不建议再润色它。
+
+---
+
+## 下一阶段
+
+所以我不会把下一阶段定义成“重新打开分析”，也不会定义成投稿工程。
+
+我建议只做一次：
+
+### `NATURE_PORTFOLIO_ARTWORK_TYPOGRAPHY_MICROPASS`
+
+范围严格限定为：
+
+先对 **全部 15 张 final figure PDF** 做字体 size/role 审计；修正 shared style contract；只从冻结 Source Data 重跑实际 outlier 图；验证 15 个 Source Data hash 全不变；验证 plotted numbers/CI/q/threshold 全不变；最后实际尺寸视觉检查。与此同时，可以顺手接受上面两个非常小的 `independent validation → independent replication` 语义一致性修正。
+
+完成这一轮后，如果没有新缺陷，我会重新回到：
+
+**`SCIENTIFIC_PRESENTATION_MAINTENANCE_FREEZE`**
+
+而且这一次就应该真正停止主动修改。
+
+换句话说，现在不是论文科学性还差东西，而是**绘图系统最后还存在一个值得源级修正的 Nature-style typography contract 问题**。这个问题比继续加分析、换 Fig.1a、换 Fig.5a 或继续删 Supplementary panels 都更值得做。
+
+我已经把这轮完整判断和逐图 KEEP/MODIFY/REPLACE 决策整理为独立报告：
+
+[下载本轮 Nature artwork maintenance audit](sandbox:/mnt/data/SLE_Bcell_Nature_Artwork_Maintenance_Audit_2026-09-01.md)
+
+本轮上传的 stop-gate 行动记录也支持科学层已经冻结、S4 是唯一实际修改图且 Source Data 未改变这一判断。

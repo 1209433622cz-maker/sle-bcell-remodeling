@@ -36,14 +36,19 @@ class ScientificStopGateTests(unittest.TestCase):
         self.assertFalse(status["scientific_estimates_changed"])
         self.assertFalse(status["source_data_changed"])
 
-    def test_canonical_sources_match_the_frozen_sources(self) -> None:
-        self.assertEqual(
-            (ROOT / "01_manuscript/Manuscript.md").read_bytes(),
-            (RUN / "sources/Manuscript_scientific_stop_gate.md").read_bytes(),
+    def test_historical_stop_gate_sources_match_the_recorded_hashes(self) -> None:
+        status = json.loads(
+            (RUN / "04_FINAL_SCIENTIFIC_PRESENTATION_STOP_GATE_STATUS.json").read_text(
+                encoding="utf-8"
+            )
         )
         self.assertEqual(
-            (ROOT / "01_manuscript/Supplementary_Information.md").read_bytes(),
-            (RUN / "sources/Supplementary_Information_scientific_stop_gate.md").read_bytes(),
+            sha256(RUN / "sources/Manuscript_scientific_stop_gate.md"),
+            status["canonical_sources"]["root_manuscript_sha256"],
+        )
+        self.assertEqual(
+            sha256(RUN / "sources/Supplementary_Information_scientific_stop_gate.md"),
+            status["canonical_sources"]["root_supplement_sha256"],
         )
 
     def test_s4_source_data_remains_frozen(self) -> None:
