@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-09-08T00:51:17+08:00",
+  "status": "PASS_FIGURE5_REGULATORY_CEILING_DOCUMENT_BUILT_RENDER_REQUIRED",
+  "build_result": {
+    "source": "phase17_v7/npj_sba_figure5_regulatory_ceiling/20260908_canonical_source_integration/sources/Manuscript_figure5_regulatory_ceiling.md",
+    "output": "phase17_v7/npj_sba_figure5_regulatory_ceiling/20260908_canonical_source_integration/documents/Manuscript_Figure5_regulatory_ceiling.docx",
+    "paragraphs": 151,
+    "tables": 0,
+    "inline_shapes": 0,
+    "placeholders": 0,
+    "bytes": 60741
+  },
+  "checks": {
+    "title_exact": true,
+    "abstract_145_words": true,
+    "references_1_to_33": true,
+    "main_has_no_inline_figures": true,
+    "five_main_legend_headings_compacted": true,
+    "figure5d_overlap_depletion_crossref": true,
+    "m5911_owner_is_figure5a": true,
+    "gse23307_owner_is_figure5e": true,
+    "figure5d_legend_exact": true,
+    "supplementary_owner_retained": true,
+    "old_figure5d_legend_removed": true,
+    "figure4_section_unchanged": true
+  },
+  "failed_checks": [],
+  "document": {
+    "path": "phase17_v7/npj_sba_figure5_regulatory_ceiling/20260908_canonical_source_integration/documents/Manuscript_Figure5_regulatory_ceiling.docx",
+    "bytes": 60798,
+    "sha256": "73F81D71B43F268A05F6BAC47CAD96860C58907B7F1B47CFDDE60049DEE942CA"
+  },
+  "scientific_estimates_changed": false,
+  "figure5_redrawn": true,
+  "source_data_values_changed": false
+}

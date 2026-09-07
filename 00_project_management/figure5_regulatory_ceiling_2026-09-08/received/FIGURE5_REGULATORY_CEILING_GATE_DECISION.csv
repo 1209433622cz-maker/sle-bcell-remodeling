@@ -1,0 +1,9 @@
+object,decision,rationale
+Figure 5a,KEEP,Evidence classes + interpretive roles; unique causal-ceiling owner.
+Figure 5b,KEEP,Primary quantitative STAT1/STAT2 + IRF7/IRF9 ULM owner.
+Figure 5c,KEEP,Prespecified proliferation specificity; distinct evidence class.
+Figure 5d (current),REPLACE_IN_MAIN,Correct but low-density; 3 M5911 NES values are already carried by panel a/text/Table S3.
+Figure 5d (candidate),SOURCE_REPLACEMENT_FROM_LOCKED_S10_ULM,"Visualize attenuation after 12-gene vs M5911 depletion, preserving discovery STAT2 CI-cross-zero limitation."
+Figure 5e,KEEP,Orthogonal IFN-beta perturbational context; explicit n=2 descriptive ceiling.
+Supplementary Figure S9,KEEP_FULL_OWNER,"Correlation-aware CAMERA/FRY sensitivity, including discovery STAT2 CAMERA exception."
+Supplementary Figure S10,KEEP_FULL_OWNER,"Complete two-branch ULM/CAMERA/FRY depletion audit, target retention, q values, leave-one-target diagnostics."

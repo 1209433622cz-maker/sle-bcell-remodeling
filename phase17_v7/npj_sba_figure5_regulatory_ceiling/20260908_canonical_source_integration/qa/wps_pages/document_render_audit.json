@@ -1,0 +1,270 @@
+{
+  "created_at": "2026-09-08T00:52:17+08:00",
+  "engine": "WPS",
+  "document_hashes": [
+    {
+      "file": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "bytes": 240710,
+      "sha256": "58C3463C02BA45D176E891A4BDC037B740F0940155A03AE29E4D5ED4EB36A4F8"
+    },
+    {
+      "file": "Manuscript_Figure5_regulatory_ceiling.docx",
+      "bytes": 60798,
+      "sha256": "73F81D71B43F268A05F6BAC47CAD96860C58907B7F1B47CFDDE60049DEE942CA"
+    }
+  ],
+  "pages": 31,
+  "page_checks": [
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 1,
+      "text_characters": 1756,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 2,
+      "text_characters": 2134,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 3,
+      "text_characters": 2067,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 4,
+      "text_characters": 1962,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 5,
+      "text_characters": 2146,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 6,
+      "text_characters": 2136,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 7,
+      "text_characters": 2098,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 8,
+      "text_characters": 2215,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 9,
+      "text_characters": 2195,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 10,
+      "text_characters": 2151,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 11,
+      "text_characters": 1914,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 12,
+      "text_characters": 2261,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 13,
+      "text_characters": 2060,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 14,
+      "text_characters": 2091,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 15,
+      "text_characters": 1966,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 16,
+      "text_characters": 2181,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 17,
+      "text_characters": 2016,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 18,
+      "text_characters": 1801,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 19,
+      "text_characters": 2143,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 20,
+      "text_characters": 1931,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 21,
+      "text_characters": 2070,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 22,
+      "text_characters": 1981,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 23,
+      "text_characters": 2053,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 24,
+      "text_characters": 1748,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 25,
+      "text_characters": 1303,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 26,
+      "text_characters": 1851,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 27,
+      "text_characters": 1680,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 28,
+      "text_characters": 1640,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 29,
+      "text_characters": 1739,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 30,
+      "text_characters": 2291,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure5_regulatory_ceiling.pdf",
+      "page": 31,
+      "text_characters": 2062,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    }
+  ],
+  "all_pages_within_canvas": true,
+  "all_markers_resolved": true,
+  "visual_review": "Page images require human/model visual inspection; structural checks alone are insufficient"
+}

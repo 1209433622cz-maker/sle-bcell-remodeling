@@ -1,0 +1,337 @@
+这轮我继续严格按“科学文本与图件精修优先、来源驱动重绘优先、不推进投稿工程”执行，并且没有把上一轮的 Figure 5d 候选直接当成答案。先独立核查了当前 Figure 4 refreeze、现行 Figure 5 的职责分工、S9/S10 的完整证据层，以及冻结 Source Data，再做 170 mm 组合与半宽可读性测试。
+
+本轮结论已经比较明确：
+
+Figure 5 的主动重绘值得继续一次，但只重开 panel 5d。
+
+最终裁决：5a KEEP / 5b KEEP / 5c KEEP / current 5d REPLACE / 5e KEEP。
+新 5d 应由冻结 S10 的 ULM overlap-depletion 数据重新生成，而不是改旧 M5911 柱图。
+
+当前 Figure 4 的科学层级我也独立确认无须再打开。它现在已经非常完整：4a/4b 负责 source-label-defined replication，4c 显示 4,410 shared genes 中 genome-wide ρ=0.026、但 IFN genes 10/10 同向，4d 则把 required elastic-net calibration failure 直接放入主图；实际 panel d 清楚显示 coverage 0.942、B_CONV precision 0.996 通过，而 B_ASC precision 0.885 未达到 0.90，因此不估计 corrected effect。 这也与本轮 Figure 4 行动记录的冻结裁决完全一致。
+
+Figure 5 的最终子图裁决
+Panel	最终判断	原因
+5a	KEEP	全文唯一的 evidence-class + interpretive ceiling owner
+5b	KEEP	STAT1/STAT2 + IRF7/IRF9 的核心定量证据
+5c	KEEP	proliferation specificity 不与 5b 重复
+5d 当前版	REPLACE	科学正确，但只承载 3 个 M5911 NES，主图信息增量最低
+5d 新版	SOURCE REPLACEMENT	直接显示“12-gene depletion 后保留、broader M5911 depletion 后衰减”的关键证据上限
+5e	KEEP	两位健康供者 IFN-β perturbation 是独立的正交证据层
+S9/S10	KEEP FULL OWNER	继续完整承担 CAMERA/FRY、target retention、q-value 和 depletion diagnostics
+为什么 5a 绝对不能替换
+
+当前主文对 Figure 5 的定义已经非常准确：
+
+“Convergent observational evidence supports an IFN-centred regulatory context”。
+
+而 panel 5a 又明确把 ULM、M5911、IFN-beta 三种 evidence class 分开，并明确说明这些层级不能建立 causal regulator、direct binding 或 unique upstream stimulus。
+
+这其实是 Figure 5 最重要的“刹车”。
+
+如果为了更华丽而把 5a 改成 STAT1/STAT2 → IFN genes 的 network，会产生一个严重的视觉语义问题：
+
+观测性 regulator activity 会被画得像因果机制。
+
+所以 5a 不是“信息少”，而是承担了非常关键的 claim ceiling ownership。
+
+为什么当前 5d 是最合适的替换对象
+
+当前 5d 只有 M5911 三个 NES：
+
+3.187
+3.050
+3.527
+
+而这些数字已经在正文直接报告；M5911 作为证据类别也已经在 5a 中出现。正文还明确将 M5911 定义为 response-level context rather than causal proof。
+
+所以旧 5d 并不是错误，而是：
+
+在 Figure 5 五个 panel 中，unique information gain 最低。
+
+反过来，文章摘要已经把另一个结果提升到了一级结论：
+
+STAT1/STAT2 evidence “weakened after broader interferon-gene depletion.”
+
+Results 又用了完整一段去解释这个限制，但它至今只存在于 Supplementary Figure S10：
+
+移除 12 个 IFN/ISG positive-arm genes 后，6/6 ULM 的 95% CI 仍高于 0；
+broader M5911 depletion 后衰减明显更大；
+discovery STAT2 仅余 8/14 targets；
+ULM slope = 0.391；
+95% CI = −0.745–1.526；
+q = 0.500；
+CAMERA q = 0.623；
+FRY q = 0.099。
+
+Discussion 甚至已经把它提炼成全文关键证据边界：
+
+removing the 12 core IFN genes did not abolish the regulatory signal, but broader M5911 depletion materially weakened discovery STAT2.
+
+因此这和之前 Figure 1、Figure 4 的问题高度一致：
+
+文字已经把某个限制定义成核心结论，但主图没有让读者第一眼看到它。
+
+我已经做了来源级 Figure 5d 重绘测试
+
+这次没有修改当前 Figure 5 PNG。
+
+我从当前 Figure 4 refreeze 包中的冻结：
+
+Figure5_source_data.csv
+Supplementary_Figure_S9_source_data.csv
+Supplementary_Figure_S10_source_data.csv
+
+重新读入，并在绘图前核对 SHA-256：
+
+Figure5 Source Data
+A482D9D4F001B076B496C63857A8B3ADB65816CD0AA18B60C8B17B2DDB211B5B
+S9
+D92140A17B96E6B77F5EEBF322A5D77A5E6F2132EDD54CC9C3E73521E5352CA3
+S10
+26A3F90E3165D8928874F278384B2587CB549DD4FFDE93440AAC4CEEAE06A9A2
+
+也就是说，这一轮的 candidate 完全来自当前冻结 scientific baseline，而不是旧结果或手工摘数。
+
+推荐的新 5d
+
+它只放 ULM，而不是把 ULM、CAMERA、FRY 全塞进一个 panel。
+
+原因很重要：
+
+ULM 有可比较的 slope + 95% CI；
+
+而 CAMERA / FRY 的统计量与 ULM 并不共享同一个定量轴。把三者硬画在一起会让图看起来“信息很多”，实际上会降低统计语义的清晰度。
+
+所以主图只显示：
+
+Discovery STAT1 / STAT2
+Donor-nonoverlap STAT1 / STAT2
+Childhood replication STAT1 / STAT2
+
+两种 marker：
+
+○ remove 12-gene IFN/ISG arm
+□ remove all M5911 genes
+
+以及统一的 x=0 参考线。
+
+其中明确标出：
+
+Discovery STAT2 after M5911 depletion — CI crosses zero
+
+而完整的 ULM/CAMERA/FRY 六测试、多重校正、target-retention、leave-one-target 仍由 S10 + Supplementary Table S4b 完整拥有。
+
+半宽实际可读性测试
+
+我专门按 Figure 5 当前 bottom-left slot 的近似实际大小重新画了一版：
+
+约 86 mm × 68 mm，而不是放大后看。
+
+查看 Figure 5d 半宽可读性测试 PNG
+
+查看矢量 PDF
+
+这个测试结果是我最终决定 PASS 的关键。
+
+六个模型、两种 depletion branch、95% CI、zero line 和 discovery-STAT2 exception 在半宽下仍可直接读取，并不要求把 Figure 5 的底层布局扩大。
+
+因此它不是一个“理论上科学更好、实际排版放不下”的方案。
+
+完整 170 mm Figure 5 架构也做了压力测试
+
+我同时从冻结数据搭了完整 170 mm 组合 proof，以确认 5d 更换后不会破坏 a/b/c/e 的整体阅读路径。
+
+查看完整 Figure 5 170-mm candidate v2
+
+查看完整 Figure 5 candidate PDF
+
+但这里需要非常明确：
+
+这张完整 candidate 只是 architecture/readability proof，不应该直接进入项目。
+
+它没有理由替换项目中已经成熟的 a/b/c/e 正式视觉编码。
+
+正式操作仍应是：
+
+在项目现有 Figure 5 builder 内只替换 5d 的 source-driven drawing routine。
+
+这和前两轮 Figure 1、Figure 4 的原则一致。
+
+新 5d 不应该被画成“失败门”
+
+这一点我专门做了调整。
+
+Figure 4d 适合红/蓝 PASS–FAIL 语义，因为那是一个真正的 prespecified eligibility criterion：
+
+B_ASC precision 0.885 < 0.90 → calibration not met → no corrected effect。
+
+但 Figure 5d 不是一个 gate。
+
+Methods 把它明确定义为 post-freeze sensitivity，并且解释要求联合考虑 direction、attenuation、CI、target retention、q values 和 cross-method consistency，而不是 binary significance rule。
+
+所以新 5d 应该：
+
+不使用红色“FAIL”；
+不写 PASS/HOLD；
+不把 discovery STAT2 跨零解释成 regulator 被“否定”；
+只显示 attenuation / evidential ceiling。
+
+这也更符合全文真正的结论：
+
+regulator pattern 不是 12-gene IFN program 的简单重述，但它又并非独立于 broader interferon transcriptome。
+
+Source Data 这里有一个必须提前处理的细节
+
+正式集成时，我不建议简单地把旧 panel 5d 的三条 M5911 NES row 从 Figure5 Source Data 删除。
+
+因为 5a 仍然显示：
+
+M5911 | 3 contrasts | 3/3 NES >3.0
+
+因此那三条 M5911 NES 仍然是主图可见定量总结的 provenance。
+
+正确处理应该是：
+
+保留原 3 条 M5911 NES source rows；
+把它们的主权从旧 panel D 改为 panel A / evidence-summary provenance；
+新增 new 5d 真正使用的 12 条 ULM depletion rows；
+B/C/E source rows 保持不动；
+S10 原表保持完整不动。
+
+这样 Figure 5 Source Data 才是真正的：
+
+what is visible in the figure → all quantitative source rows are traceable
+
+而不是为了 panel 换位机械删数据。
+
+正文不需要重新大修
+
+这一轮反而再次证明：当前手稿的 regulatory 部分文本已经比较成熟。
+
+正文已经正确地区分：
+
+ULM observational regulator evidence；
+CAMERA/FRY correlation-aware sensitivity；
+overlap depletion；
+M5911 response signature；
+GSE23307 n=2 descriptive perturbation；
+causal interpretation ceiling。
+
+尤其这句话已经非常好：
+
+“The STAT1/STAT2 signal is therefore not reducible to the 12 core program genes, but it remains partly coupled to the broader interferon-response transcriptome.”
+
+所以正式采用 new 5d 时，我只建议做 3 处 claim-owner synchronization：
+
+overlap-depletion paragraph 末尾由
+Supplementary Fig. S10; Supplementary Table S4b
+改成
+Fig. 5d; Supplementary Fig. S10; Supplementary Table S4b
+M5911 NES sentence 不再引用旧 5d。
+M5911 的主图 evidence class ownership 归 5a；完整 quantitative anchor 继续由 Supplementary Table S3 支持。
+只重写 Figure 5d legend。
+
+推荐正式图注为：
+
+d, Post-freeze ULM STAT1/STAT2 sensitivity after removing the 12-gene IFN/ISG positive arm or all 97 M5911 genes; intervals are 95% CIs. The broader M5911 depletion produced stronger attenuation, with discovery STAT2 crossing zero. Complete ULM/CAMERA/FRY depletion results are in Supplementary Fig. S10 and Supplementary Table S4b.
+
+其余：
+
+Title
+Abstract
+Discussion
+Methods
+regulator family
+multiplicity family
+effect estimates
+q values
+causal wording
+
+全部 KEEP。
+
+Figure 5 最终建议结构
+
+采用后，Figure 5 会变成：
+
+5a — evidence classes + interpretive ceiling
+
+↓
+
+5b — IFN-centred regulator activity
+
+5c — proliferation specificity
+
+↓
+
+5d — regulatory signal survives 12-gene removal but attenuates after broader IFN-response depletion
+
+5e — orthogonal IFN-beta perturbational context
+
+这样 Figure 5 就真正形成：
+
+evidence → specificity → robustness → mechanistic ceiling → orthogonal context
+
+而不是当前：
+
+evidence → specificity → another positive response bar → perturbation
+
+这是本轮最重要的结构提升。
+
+本轮 gate 的最终状态
+
+我会把这一轮定为：
+
+PASS_ARCHITECTURE_AND_READABILITY__PROCEED_TO_CANONICAL_SOURCE_INTEGRATION
+
+它的含义不是“新 Figure 5 已经冻结”。
+
+而是：
+
+新 5d 已经在科学职责、来源一致性、统计语义和实际刊宽可读性四方面胜过当前 5d，因此值得进入正式项目 builder 集成。
+
+本轮产物：
+
+Figure 5 gate 详细行动记录
+
+Figure 5 panel 决策矩阵
+
+新 5d 精确 source values
+
+Source Data 哈希记录
+
+本轮完整 gate 包
+
+下一阶段
+
+现在最值得进入的是：
+
+FIGURE5_REGULATORY_CEILING_CANONICAL_INTEGRATION_AND_REFREEZE
+
+而不是继续发散寻找新的分析。
+
+下一轮只允许做：
+
+现有 project builder 中 source-level 替换 5d → Figure5 Source Data ownership 重编排 → 三处精确正文/图注同步 → 170 mm PDF/PNG 重建 → actual-size visual QA → WPS/LibreOffice 双渲染 → 全量回归。
+
+硬性约束：
+
+5a、5b、5c、5e 的科学职责不变；
+S9/S10 不删、不缩、不改；
+不增加新的 regulator；
+不重新选择 gene set；
+不重新定义 multiplicity；
+不重新跑新的 biological analysis；
+不把 discovery STAT2 的 CI crossing zero 隐去；
+不允许 candidate PNG 直接覆盖 canonical artwork。
+
+如果正式 builder 集成后依然保持可读、且只有 Figure 5 PDF/PNG/Source Data 与对应 claim-owner 文本发生预期变化，那么 Figure 5 就可以正式 refreeze。
+
+再下一阶段应当是 SCIENTIFIC_PRESENTATION_FINAL_CROSS_DOCUMENT_FREEZE。
+
+届时不再主动重绘任何 Figure 1–5，只做最终跨文档：
+
+main text ↔ figure ↔ legend ↔ Supplementary ↔ Source Data
+
+逐项 ownership/terminology/numerical consistency 检查。
+
+如果那一轮没有发现局部语义或数值缺陷，我认为这篇论文就应该结束“主动科学重构期”，进入真正的科学呈现冻结，而不是继续为了追求更多图而无限加分析。
