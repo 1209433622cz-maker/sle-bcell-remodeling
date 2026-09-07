@@ -1,0 +1,8 @@
+figure,location,proposed_change,reason
+Figure 4,donor/source-label robustness paragraph,Move main ownership away from current 4d; retain/add Supplementary Fig. S7,S7 already fully owns donor and source-label influence.
+Figure 4,10 jointly tested IFN genes sentence,"Change Fig. 4c,d -> Fig. 4c",Gene-level coherence is panel c; proposed new d will be calibration.
+Figure 4,corrected remapping paragraph,Add Fig. 4d while retaining Supplementary Table S9 and Supplementary Fig. S8,Promotes the calibration decision boundary.
+Figure 4 legend,panel d,Rewrite as required elastic-net calibration gate,Coverage and B_CONV precision pass; B_ASC precision 0.885 < 0.90; no corrected effect.
+Figure 5,overlap-depletion paragraph,Add Fig. 5d,Promotes broader-IFN depletion attenuation into the main reader path.
+Figure 5,M5911/GSE23307 response paragraph,Remove old Fig. 5d ownership from M5911; retain Fig. 5e for GSE23307,"M5911 remains in text, 5a and Table S3; new d owns depletion."
+Figure 5 legend,panel d,Rewrite as ULM slope after 12-gene versus M5911 depletion,Explicitly show discovery STAT2 limiting case; S10 remains detailed owner.

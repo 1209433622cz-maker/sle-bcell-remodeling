@@ -1,0 +1,270 @@
+{
+  "created_at": "2026-09-07T22:41:05+08:00",
+  "engine": "LibreOffice PDF export followed by Poppler 110-dpi page rendering",
+  "document_hashes": [
+    {
+      "file": "Manuscript_Figure4_transfer_boundary.pdf",
+      "bytes": 242654,
+      "sha256": "F4324AD59C9A3E4D8A8BE0B00CA1D7523006A56359A2FF2AA38A4E7B9CD49114"
+    },
+    {
+      "file": "Manuscript_Figure4_transfer_boundary.docx",
+      "bytes": 60813,
+      "sha256": "5E7B29C12181B2DC4EF9B50EA2A86DD60984C0BE0807C3DD5CEC15B263666510"
+    }
+  ],
+  "pages": 31,
+  "page_checks": [
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 1,
+      "text_characters": 1771,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 2,
+      "text_characters": 2151,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 3,
+      "text_characters": 2085,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 4,
+      "text_characters": 1979,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 5,
+      "text_characters": 2074,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 6,
+      "text_characters": 2150,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 7,
+      "text_characters": 2124,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 8,
+      "text_characters": 2145,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 9,
+      "text_characters": 2185,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 10,
+      "text_characters": 2214,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 11,
+      "text_characters": 2047,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 12,
+      "text_characters": 2281,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 13,
+      "text_characters": 2080,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 14,
+      "text_characters": 2111,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 15,
+      "text_characters": 1982,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 16,
+      "text_characters": 2189,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 17,
+      "text_characters": 2043,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 18,
+      "text_characters": 1817,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 19,
+      "text_characters": 2163,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 20,
+      "text_characters": 1949,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 21,
+      "text_characters": 2089,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 22,
+      "text_characters": 1999,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 23,
+      "text_characters": 2069,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 24,
+      "text_characters": 1762,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 25,
+      "text_characters": 1317,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 26,
+      "text_characters": 1864,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 27,
+      "text_characters": 1695,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 28,
+      "text_characters": 1650,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 29,
+      "text_characters": 1757,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 30,
+      "text_characters": 2307,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    },
+    {
+      "document": "Manuscript_Figure4_transfer_boundary.pdf",
+      "page": 31,
+      "text_characters": 2196,
+      "outside_page_text": [],
+      "unresolved_markers": false,
+      "document_inline_figures": 0
+    }
+  ],
+  "all_pages_within_canvas": true,
+  "all_markers_resolved": true,
+  "visual_review": "Page images require human/model visual inspection; structural checks alone are insufficient"
+}

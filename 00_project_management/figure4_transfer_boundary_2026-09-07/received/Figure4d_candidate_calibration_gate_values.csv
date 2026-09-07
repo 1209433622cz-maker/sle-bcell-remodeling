@@ -1,0 +1,4 @@
+metric,observed,criterion,margin,status
+Coverage,0.941958041958042,0.8,0.14195804195804196,criterion met
+B_CONV precision,0.9964495087110892,0.9,0.09644950871108915,criterion met
+B_ASC precision,0.8852097130242825,0.9,-0.014790286975717493,criterion not met

@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-09-07T22:38:46+08:00",
+  "status": "PASS_FIGURE4_TRANSFER_DOCUMENT_BUILT_RENDER_REQUIRED",
+  "build_result": {
+    "source": "phase17_v7/npj_sba_figure4_transfer_boundary/20260907_source_rerender_gate/sources/Manuscript_figure4_transfer_boundary.md",
+    "output": "phase17_v7/npj_sba_figure4_transfer_boundary/20260907_source_rerender_gate/documents/Manuscript_Figure4_transfer_boundary.docx",
+    "paragraphs": 151,
+    "tables": 0,
+    "inline_shapes": 0,
+    "placeholders": 0,
+    "bytes": 60751
+  },
+  "checks": {
+    "title_exact": true,
+    "abstract_145_words": true,
+    "references_1_to_33": true,
+    "main_has_no_inline_figures": true,
+    "five_main_legend_headings_compacted": true,
+    "figure4c_gene_coherence_crossref": true,
+    "figure4d_calibration_crossref": true,
+    "s7_influence_crossref": true,
+    "figure4d_legend_exact": true,
+    "centroid_not_promoted": true,
+    "old_figure4d_legend_removed": true,
+    "figure5_section_unchanged": true
+  },
+  "failed_checks": [],
+  "document": {
+    "path": "phase17_v7/npj_sba_figure4_transfer_boundary/20260907_source_rerender_gate/documents/Manuscript_Figure4_transfer_boundary.docx",
+    "bytes": 60813,
+    "sha256": "5E7B29C12181B2DC4EF9B50EA2A86DD60984C0BE0807C3DD5CEC15B263666510"
+  },
+  "scientific_estimates_changed": false,
+  "figure4_redrawn": true,
+  "source_data_values_changed": false
+}

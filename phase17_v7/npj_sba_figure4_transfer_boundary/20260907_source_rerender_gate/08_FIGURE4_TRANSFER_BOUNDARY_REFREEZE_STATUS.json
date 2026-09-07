@@ -1,0 +1,92 @@
+{
+  "created_at": "2026-09-07T22:49:20+08:00",
+  "status": "SCIENTIFIC_FIGURE4_TRANSFER_BOUNDARY_PROMOTION_REFREEZE",
+  "checks": {
+    "integration_pass": true,
+    "document_build_pass": true,
+    "root_main_matches_candidate": true,
+    "supplementary_information_unchanged": true,
+    "only_three_figure_assets_changed": true,
+    "forty_five_assets_audited": true,
+    "forty_two_assets_byte_identical": true,
+    "all_21_main_panel_slots_retained": true,
+    "all_38_supplementary_panels_kept": true,
+    "figure4d_is_source_replacement": true,
+    "wps_main_is_31_pages": true,
+    "libreoffice_main_is_31_pages": true,
+    "wps_render_structurally_clean": true,
+    "libreoffice_render_structurally_clean": true,
+    "twelve_contact_sheets_cover_62_pages": true,
+    "docx_accessibility_zero": true,
+    "figure_visual_qa_confirmed": true,
+    "manual_document_visual_qa_confirmed": true,
+    "submission_package_unchanged": true,
+    "full_regression_suite_confirmed": true
+  },
+  "failed_checks": [],
+  "scientific_estimates_changed": false,
+  "statistical_models_rerun": false,
+  "source_data_values_changed": false,
+  "mapping_thresholds_changed": false,
+  "mapper_substitution_authorized": false,
+  "figure4": {
+    "pdf": "phase17_v7/npj_sba_figure4_transfer_boundary/20260907_source_rerender_gate/figures/figures/Figure4_independent_ifn_replication.pdf",
+    "pdf_sha256": "B1120AA60E9B03FBE835E9979F0449F67B483B792C9339737CB0CD40C5A2B75F",
+    "png": "phase17_v7/npj_sba_figure4_transfer_boundary/20260907_source_rerender_gate/figures/figures/Figure4_independent_ifn_replication.png",
+    "png_sha256": "6FBF35DE2D5D425E11B46B029D2239AF61084A4685DBA672C19CC59F8C6F9BD7",
+    "source_data_sha256": "F6680C0851E1488E494599E38707E91A74AAE4A757BB5EFAF0FE7ABE8D9A782D",
+    "width_mm": 170.0,
+    "height_mm": 137.87,
+    "panel_a": "KEEP",
+    "panel_b": "KEEP",
+    "panel_c": "KEEP",
+    "panel_d": "SOURCE_REPLACEMENT_FROM_LOCKED_S8_REQUIRED_ELASTIC_NET"
+  },
+  "supplementary_figure_s7": "KEEP_FULL_INFLUENCE_OWNER",
+  "supplementary_figure_s8": "KEEP_FULL_REMAP_OWNER",
+  "documents": {
+    "wps": {
+      "path": "phase17_v7/npj_sba_figure4_transfer_boundary/20260907_source_rerender_gate/documents/Manuscript_Figure4_transfer_boundary.pdf",
+      "pages": 31,
+      "sha256": "0DB51A93BE06F84DD09D47648BA8C6553C336FECA6B73913BC0D5475D074CE51"
+    },
+    "libreoffice": {
+      "path": "phase17_v7/npj_sba_figure4_transfer_boundary/20260907_source_rerender_gate/qa/libreoffice_documents/Manuscript_Figure4_transfer_boundary.pdf",
+      "pages": 31,
+      "sha256": "F4324AD59C9A3E4D8A8BE0B00CA1D7523006A56359A2FF2AA38A4E7B9CD49114"
+    },
+    "docx": {
+      "path": "phase17_v7/npj_sba_figure4_transfer_boundary/20260907_source_rerender_gate/documents/Manuscript_Figure4_transfer_boundary.docx",
+      "bytes": 60813,
+      "sha256": "5E7B29C12181B2DC4EF9B50EA2A86DD60984C0BE0807C3DD5CEC15B263666510"
+    }
+  },
+  "manual_visual_qa": {
+    "confirmed": true,
+    "contact_sheets_inspected": 12,
+    "rendered_pages_inspected": 62,
+    "figure_comparison_inspected": true,
+    "blank_pages_found": false,
+    "clipping_or_overlap_found": false,
+    "missing_glyphs_found": false,
+    "cross_renderer_tail_page_found": false
+  },
+  "regression_tests": {
+    "confirmed_pass": true,
+    "tests_run": 194,
+    "failures": 0,
+    "errors": 0
+  },
+  "submission_package_sha256": "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1",
+  "submission_package_changed": false,
+  "github_release_changed": false,
+  "zenodo_changed": false,
+  "figure5_candidate_status": "ARCHIVED_DEFERRED_TO_ISOLATED_NEXT_GATE",
+  "action_record": "00_project_management/action_record_2026-09-07_figure4_transfer_boundary_source_rerender.md",
+  "next_stage": "FIGURE5_REGULATORY_CEILING_PROMOTION_SOURCE_RERENDER_GATE",
+  "final_manifest": {
+    "rows": 86,
+    "bytes": 18542686,
+    "path": "phase17_v7/npj_sba_figure4_transfer_boundary/20260907_source_rerender_gate/09_FINAL_FILE_MANIFEST.csv"
+  }
+}

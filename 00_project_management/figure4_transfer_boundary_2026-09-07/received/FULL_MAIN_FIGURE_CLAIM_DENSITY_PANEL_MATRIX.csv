@@ -1,0 +1,24 @@
+object,decision,rationale
+Figure 2a,KEEP,Observed distributions + adjusted means are the direct composition anchor.
+Figure 2b,KEEP,Primary/internal/nonoverlap/flare contrast hierarchy is visible and flare multiplicity boundary is explicit.
+Figure 2c,KEEP,Mandatory cell-policy sensitivities are distinct from contrast replication.
+Figure 2d,KEEP,All 90 leave-one-sample-out fits visibly preserve the primary interpretation.
+Figure 3a,KEEP,Establishes the four-program discovery family and why IFN/ISG is prioritized.
+Figure 3b,KEEP,"Combines threshold, residual-risk and internal robustness without overstating independent replication."
+Figure 3c,KEEP,Gene-level positive-arm coherence is a distinct evidence layer.
+Figure 3d,KEEP,Technical/pan-B specificity controls prevent a generic expression-shift interpretation.
+Figure 4a,KEEP,External support thresholds and the underpowered adult stratum define source-label-defined replication scope.
+Figure 4b,KEEP,Direct discovery/internal/external comparison is the main replication bridge.
+Figure 4c,KEEP,Shows the central process-level-vs-genome-wide contrast (10/10 IFN genes despite rho=0.026).
+Figure 4d (current),REPLACE_IN_MAIN_CANDIDATE,Donor/source-label influence is already fully owned by Supplementary Fig. S7; the corrected remapping calibration failure is more central and is currently supplement-only.
+Figure 4d (candidate),SOURCE_REPLACEMENT_FROM_S8,"Promote the required elastic-net calibration gate: coverage and B_CONV precision pass, B_ASC precision fails 0.90; no corrected effect is estimated."
+Figure 5a,KEEP,Unique evidence-class and causal-ceiling owner; should not become a causal network.
+Figure 5b,KEEP,Primary quantitative owner for STAT1/STAT2 plus extended IFN regulators.
+Figure 5c,KEEP,Proliferation comparators provide specificity and should remain visible.
+Figure 5d (current M5911 NES),REPLACE_IN_MAIN_CANDIDATE,Quantitatively low-density; exact NES values remain in text/source data and the M5911 evidence class remains visible in 5a.
+Figure 5d (candidate),SOURCE_REPLACEMENT_FROM_S10,Promote the broader-interferon depletion ceiling that is explicit in the Abstract/Results/Discussion but currently supplement-only.
+Figure 5e,KEEP,Two-donor perturbation is an orthogonal evidence class with explicit n=2 descriptive boundary.
+Supplementary Fig. S7,KEEP_COMPLETE_OWNER,Retain full donor/source-label robustness after current 4d leaves the main figure.
+Supplementary Fig. S8,KEEP_COMPLETE_OWNER,"Retain legacy-denominator repair, both mappers, coverage and donor-fold diagnostics; main 4d would be a compact gate summary only."
+Supplementary Fig. S9,KEEP_COMPLETE_OWNER,Retain CAMERA/FRY correlation-aware exception and target-count verification.
+Supplementary Fig. S10,KEEP_COMPLETE_OWNER,"Retain full three-method, two-depletion-branch diagnostics; main 5d would only summarize ULM attenuation."

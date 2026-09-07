@@ -1,0 +1,338 @@
+本轮已经按你设定的边界完成了 **`FULL_MAIN_FIGURE_CLAIM_DENSITY_HOSTILE_READ`**。我没有推进投稿包、Release、Zenodo，也没有因为“版式更漂亮”而随意重开图件；判断标准仍然是：**这个 panel 是否承担不可替代的科学 claim，主文最重要的边界是否真正进入第一阅读视野，以及是否能够从冻结 Source Data 重新生成，而不是修改旧像素文件。**
+
+我也重新核对了当前 GitHub 基线：`main` 的 Figure 1 boundary-promotion 提交确实是 `d317c4619cfc84134934910cfea87b65ee41e059`，commit message 为 `Promote end-to-end identity boundary in Figure 1`。 因此 **Figure 1 本轮继续冻结，不再主动重开**。上一轮行动记录中设定的下一步正是对 Figure 2–5 做 claim-density hostile read。
+
+## 本轮最终裁决
+
+| 对象           | 裁决                               | 核心判断                                                                                |
+| ------------ | -------------------------------- | ----------------------------------------------------------------------------------- |
+| Figure 2a–d  | **KEEP 4/4**                     | composition 的观察值、contrast hierarchy、mandatory sensitivity、90 次 deletion 各有独立职责      |
+| Figure 3a–d  | **KEEP 4/4**                     | discovery program family、IFN robustness、gene coherence、technical specificity 构成完整阶梯 |
+| Figure 4a    | **KEEP**                         | 外部 childhood/combined/adult/support-threshold scope                                 |
+| Figure 4b    | **KEEP**                         | discovery/internal/external 的直接 replication bridge                                  |
+| Figure 4c    | **KEEP**                         | “10/10 IFN concordant，但 genome-wide ρ=0.026”的核心 process-level claim                 |
+| 当前 Figure 4d | **建议退出主图**                       | 与 Supplementary Fig. S7 的 donor/source-label robustness 高度重合                        |
+| 新 Figure 4d  | **SOURCE-REPLACEMENT CANDIDATE** | 将 corrected source-label-independent calibration failure 提升到主图                      |
+| Figure 5a    | **KEEP**                         | evidence class + causal ceiling，不能换成机制网络                                            |
+| Figure 5b    | **KEEP**                         | STAT1/STAT2 + IRF7/IRF9 baseline regulatory evidence                                |
+| Figure 5c    | **KEEP**                         | proliferation specificity comparator 有独立价值                                          |
+| 当前 Figure 5d | **建议退出主图**                       | 3 个 M5911 NES 的柱图信息密度偏低，数值已由正文和 5a 承担                                               |
+| 新 Figure 5d  | **SOURCE-REPLACEMENT CANDIDATE** | 将 broader-IFN depletion attenuation 提升到主图                                           |
+| Figure 5e    | **KEEP**                         | 2-donor IFN-β perturbation 是独立 evidence class                                       |
+| S7–S10       | **全部 KEEP**                      | 继续作为详细 sensitivity/audit owner                                                      |
+
+### 1. Figure 2：我没有找到值得重开的 panel
+
+Figure 2 现在的结构其实非常成熟。
+
+主结果本身是一个“**缺乏统计支持**”而不是“证明无差异”的结果：primary OR=0.947，95% CI 0.636–1.410，P=0.787；正文还明确写了该区间不能建立 equivalent abundance，也不能排除升高。90 次 leave-one-sample-out 也没有改变解释。
+
+这使得当前 2a–d 的四层设计很合理：
+
+**observed data → contrast hierarchy → cell-policy sensitivity → influence stability**
+
+尤其 2d 不应因为“点很多”而删掉。对于一个 null/unsupported primary result，审稿人最容易攻击的就是“是不是某几个样本把结果拖下来了”，而 90 deletions 正好把这个攻击封住。
+
+Supplementary S5 中的 zero-ASC、two-part model、covariance 等属于模型诊断层，继续留在补充材料更合适，没有理由提升到主图。
+
+**Figure 2：完全冻结。**
+
+---
+
+## 2. Figure 3：同样不建议重开
+
+Figure 3 已经形成非常清晰的四级证据链：
+
+**3a prespecified program family**
+→ **3b IFN/ISG robustness ladder**
+→ **3c frozen positive-arm gene coherence**
+→ **3d technical/pan-B specificity**
+
+正文的科学层级与这四格高度一致：IFN/ISG primary effect 为 0.837，95% CI 0.525–1.148，q=2.98×10⁻⁶，并且在 20/100-cell、residual-risk-negative、89 次 deletion、internal replication 和 donor-nonoverlap 中保持方向；而 naive-memory、APC/HLA 没有同样完整地通过 internal sequence。
+
+我专门考虑过是否把“89/89 deletion positive”提升成一张主图，但最终否决：
+
+它会与 3b 的 robustness 职责高度重复，而且目前冻结 Source Data 并没有给它一个比现有 3b 更好的 main-panel information density。
+
+Supplementary S6 的 filterByExpr、dispersion、technical-family ranked-list audit 也应该继续留在 Supplementary。
+
+**Figure 3：完全冻结。**
+
+---
+
+# 3. Figure 4：这里发现了一个真正类似上一轮 Figure 1 的问题
+
+这是本轮最值得做的发现。
+
+当前 Figure 4 的主故事是：
+
+**source-label-defined external replication 是成立的，但 source-label-independent transfer 并没有通过 calibration。**
+
+然而现在的 Figure 4 只把前半句画进了主图。
+
+正文已经非常明确地把 corrected remapping failure 作为一个独立 Results subsection：corrected pipeline 处理 56 个 matrix、363,083 cells；在 diagnostic threshold 0.95 时 coverage=94.20%，B_CONV precision=99.64%，但 **B_ASC precision=88.52%，低于预设 90% criterion，因此没有计算 corrected external disease outcome**。
+
+而且这个失败已经进入 Abstract，属于文章一级结论，不是边角 sensitivity。
+
+与此同时，当前 4d 是：
+
+> donor and source-label influence
+
+但 Supplementary Figure S7 已经完整拥有：
+
+* 8 个 source-label omission；
+* donor influence；
+* external donor support；
+* childhood program family。
+
+我进一步对照了冻结 CSV，当前 Figure 4d 的八个 source-label omission 数值与 S7 中对应记录完全有来源重叠。因此：
+
+> **当前 4d 科学上正确，但主图 slot 使用效率不再最优。**
+
+### 我建议的新 Figure 4 架构
+
+保持：
+
+**4a** source-label-defined external scope
+**4b** discovery ↔ external replication bridge
+**4c** 4,410 genes genome-wide discordance + 10/10 IFN concordance
+
+把：
+
+**current 4d donor/source-label robustness**
+
+替换成：
+
+**new 4d corrected source-label-independent calibration gate**
+
+这样 Figure 4 会直接形成：
+
+> **replication → cross-dataset coherence → transfer failure**
+
+这比现在的：
+
+> replication → robustness → more robustness
+
+强得多。
+
+我已经没有直接剪贴 S8，而是从冻结的 `Supplementary_Figure_S8_source_data.csv` 独立重新读取并画出候选 panel；源文件 SHA-256 在生成前强制验证。
+
+最终的 panel-only 架构候选是：
+
+[Figure 4d calibration-boundary candidate v3](sandbox:/mnt/data/sle_full_main_figure_claim_density_audit/Figure4d_transfer_calibration_boundary_candidate_v3.png)
+
+对应 PDF：
+
+[Figure 4d candidate PDF](sandbox:/mnt/data/sle_full_main_figure_claim_density_audit/Figure4d_transfer_calibration_boundary_candidate_v3.pdf)
+
+精确来源值：
+
+[Figure 4d source values](sandbox:/mnt/data/sle_full_main_figure_claim_density_audit/Figure4d_candidate_calibration_gate_values.csv)
+
+这张候选图最重要的不是美观，而是它把三个 decision quantities 放在同一个零点判据上：
+
+* coverage：**0.942 ≥ 0.80**
+* B_CONV precision：**0.996 ≥ 0.90**
+* B_ASC precision：**0.885 < 0.90**
+
+于是读者不用翻 Supplementary legend 就知道：
+
+> **为什么 external replication 可以成立，但不能升级为 source-label-independent taxonomy transfer。**
+
+这恰好对应正文强调的限制。独立 external IFN program replication 本身仍很强：childhood effect 1.042，combined 0.996；但 genome-wide ρ 只有 0.026。
+
+---
+
+# 4. Figure 5：发现第二个较小但真实的 claim-density 缺口
+
+Figure 5 的问题与 Figure 4 同类，但优先级略低。
+
+Abstract 已经把这个结论提升到一级：
+
+> STAT1/STAT2 evidence is convergent/observational and **weakened after broader interferon-gene depletion**.
+
+正文也专门用了很长一段去限定它：
+
+* remove 12 frozen IFN genes 后，6/6 ULM 仍保持 positive CI 和 q<0.05；
+* broader M5911 depletion 后明显衰减；
+* discovery STAT2 只剩 8/14 targets；
+* slope=0.391；
+* 95% CI −0.745–1.526；
+* q=0.500；
+* CAMERA q=0.623；
+* FRY q=0.099。
+
+但当前主 Figure 5 完全没有画出这个 attenuation boundary。
+
+它只存在于 Supplementary S10。
+
+这和旧 Figure 1 的问题本质相同：
+
+> **正文把限制讲成中心结论，但读者看主图时却只看到 positive evidence。**
+
+### 哪个 panel 最适合让位？
+
+不是 5a。
+
+5a 绝对继续 KEEP。它负责 evidence class 和 causal ceiling，特别重要；改成 STAT1/2 causal network 会把 observational convergence 偷偷画成 mechanism。
+
+不是 5c。
+
+5c 的 proliferation comparators 有实际 specificity 价值，而且 MYC 在三个 contrast 中都是 negative significant，这种“不是 generic proliferative activation”的信息值得留在主图。
+
+我认为最合适让位的是：
+
+### 当前 5d — M5911 NES bar
+
+它当然科学正确，但只有三个数：
+
+* 3.187
+* 3.050
+* 3.527
+
+这些数已经明确写在正文，M5911 作为 evidence class 也已经存在于 Figure 5a，Supplementary Table S3 又是 quantitative anchor owner。正文明确给出了这些 NES 和 10,000 permutations。
+
+因此当前 5d 属于：
+
+**正确，但主图信息增量相对最低。**
+
+### 推荐 new Figure 5d
+
+我从冻结 S10 Source Data 重画了一个合并 panel：
+
+* circle：remove 12-gene IFN/ISG positive arm；
+* square：remove M5911；
+* 六个 STAT1/STAT2 × contrast；
+* 全部显示 95% CI；
+* 把 discovery STAT2 的 broader-depletion failure 直接标出来。
+
+候选：
+
+[Figure 5d regulatory-ceiling candidate v2](sandbox:/mnt/data/sle_full_main_figure_claim_density_audit/Figure5d_overlap_depletion_boundary_candidate_v2.png)
+
+对应 PDF：
+
+[Figure 5d candidate PDF](sandbox:/mnt/data/sle_full_main_figure_claim_density_audit/Figure5d_overlap_depletion_boundary_candidate_v2.pdf)
+
+完整候选数值：
+
+[Figure 5d depletion source values](sandbox:/mnt/data/sle_full_main_figure_claim_density_audit/Figure5d_candidate_depletion_values.csv)
+
+这个 panel 的优势非常明显：
+
+读者可以一眼看到：
+
+**12-gene removal 并没有消灭 signal**
+但
+**broader IFN-response removal 明显削弱 signal**，
+
+而且最脆弱的 **Discovery STAT2** 的 CI 直接跨过零。
+
+这正好匹配正文当前非常成熟的措辞：
+
+> signal is not reducible to the 12 core program genes, but remains partly coupled to the broader interferon-response transcriptome. 
+
+换句话说，新 5d 不是为了再证明一次 STAT1/2，而是为了把它的**证据上限画出来**。
+
+这是更符合 Nature/npj 风格的做法。
+
+---
+
+# 5. 如果两项最终都通过，全文主图逻辑会明显更完整
+
+现在 Figure 1 已经解决了：
+
+**identity reconstruction pass → end-to-end identity boundary**
+
+如果 Figure 4/5 也按上述原则成功重绘，那么整篇文章的 5 个主图会成为：
+
+**Figure 1**
+identity scaffold + reconstruction ceiling
+
+→ **Figure 2**
+composition result + negative/statistical boundary
+
+→ **Figure 3**
+within-B_CONV IFN program + internal robustness/specificity
+
+→ **Figure 4**
+independent replication + genome-wide discordance + transfer/calibration ceiling
+
+→ **Figure 5**
+regulatory convergence + depletion attenuation + causal ceiling
+
+这时标题：
+
+> reproducible interferon remodeling from less stable B-cell state assignments
+
+和图件逻辑会真正从 Figure 1 一直贯穿 Figure 5。
+
+这也是我目前认为论文最接近“逻辑环环相扣”的结构。
+
+---
+
+## 文本层面本轮没有发现需要重新打开 Abstract/Discussion 的理由
+
+这一点很重要。
+
+本轮 hostile read 反而证明：**现在主要问题不是文字写得不够，而是某些已经写得非常准确的限制没有获得对应的主图 ownership。**
+
+例如 corrected remapping 段已经非常克制：centroid 即便通过 criteria，也没有在结果已查看后被允许替代 required elastic-net mapper。
+
+Figure 5 的 causal ceiling 同样已经写得很好：CollecTRI 是 observational ranked statistics，M5911 是 response signature，GSE23307 只有两个 healthy donors，而且明确声明没有 unique ligand、direct TF binding 或 causal regulation。
+
+所以我不建议为了配合新图而重新润色大片 Results/Discussion。
+
+真正需要的只是 adoption 后极窄的 claim-owner synchronization。
+
+Figure 4 如果采用新 d，只调整 donor/source-label robustness 对 S7 的引用、把 `Fig. 4c,d` 收窄为 `Fig. 4c`，再把 corrected remapping paragraph 锚定到 `Fig. 4d; Supplementary Table S9; Supplementary Fig. S8`。
+
+Figure 5 如果采用新 d，只把 overlap-depletion paragraph 加上 `Fig. 5d`，M5911 不再由旧 5d 拥有，GSE23307 继续由 5e 拥有。
+
+**不改任何 effect、CI、P、q、target count、multiplicity family 或 causal wording。**
+
+---
+
+# 下一阶段判断
+
+我不建议一次性同时把 Figure 4 和 Figure 5 全部改进 canonical baseline。
+
+最合理的下一阶段是：
+
+## `FIGURE4_EXTERNAL_TRANSFER_BOUNDARY_PROMOTION_SOURCE_RERENDER_GATE`
+
+理由是 Figure 4 的缺口优先级最高：
+
+**calibration failure 已进入 Abstract，而且现 4d 又存在明确的 S7 ownership redundancy。**
+
+所以 Figure 4 是一个风险非常低、收益很高的 panel replacement。
+
+正式 gate 应当：
+
+**4a KEEP → 4b KEEP → 4c KEEP → new 4d from locked S8 source**
+
+在项目正式 Nature-style plotting pipeline 里重画 Figure 4 全图，而不是把我这里的 candidate PNG 粘进去。
+
+Figure 4 通过 actual-size、Source Data、交叉引用和 manuscript render QA 后再 refreeze。
+
+随后紧接：
+
+`FIGURE5_REGULATORY_CEILING_PROMOTION_SOURCE_RERENDER_GATE`
+
+只有正式 Figure 5 rerender 在真实 170-mm 宽度下确认 new 5d 比旧 M5911 bar 信息明显更强，才采用；否则 Figure 5 可以独立回滚，不影响 Figure 4。
+
+本轮详细文件已经整理：
+
+[完整 hostile-read 行动记录](sandbox:/mnt/data/sle_full_main_figure_claim_density_audit/action_record_2026-09-02_full_main_figure_claim_density_hostile_read.md)
+
+[完整 panel 决策矩阵](sandbox:/mnt/data/sle_full_main_figure_claim_density_audit/FULL_MAIN_FIGURE_CLAIM_DENSITY_PANEL_MATRIX.csv)
+
+[拟议正文同步 ledger](sandbox:/mnt/data/sle_full_main_figure_claim_density_audit/PROPOSED_TEXT_SYNC_LEDGER.csv)
+
+[Figure 4 正式下一阶段 gate](sandbox:/mnt/data/sle_full_main_figure_claim_density_audit/FIGURE4_EXTERNAL_TRANSFER_BOUNDARY_PROMOTION_SOURCE_RERENDER_GATE.md)
+
+[冻结 Source Data 哈希记录](sandbox:/mnt/data/sle_full_main_figure_claim_density_audit/SOURCE_HASH_PROVENANCE.txt)
+
+[本轮全部产物 ZIP](sandbox:/mnt/data/SLE_FULL_MAIN_FIGURE_CLAIM_DENSITY_HOSTILE_READ_2026-09-02.zip)
+
+因此，**当前不是回到 maintenance freeze 的时候**。Figure 2/3 已达到冻结标准，但我认为 Figure 4d 是现在全文最值得下一步真正来源重绘的 panel；Figure 5d 则是紧随其后的第二优先级。
