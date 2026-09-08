@@ -75,11 +75,11 @@ All 11 depleted ULM models retaining at least ten targets preserved direction in
 
 | Figure | Evidence basis | Machine-readable source |
 |---|---|---|
-| Figure 1 | Disease-blind identity stability, two-compartment adjudication and end-to-end B_ASC boundary | Figure1_source_data.csv |
+| Figure 1 | Disease-blind identity stability and two-compartment adjudication | Figure1_source_data.csv |
 | Figure 2 | Sample-level composition in the 43-control/47-managed-SLE primary comparison | Figure2_source_data.csv |
 | Figure 3 | Raw-count pseudobulk transcription with explicit tested-gene symbols | Figure3_source_data.csv |
-| Figure 4 | Source-label-defined GSE135779 replication, gene-level coherence and required calibration boundary | Figure4_source_data.csv |
-| Figure 5 | Regulatory convergence, IFN-overlap-depletion ceiling and orthogonal response evidence | Figure5_source_data.csv |
+| Figure 4 | Source-label-defined GSE135779 replication and influence analyses | Figure4_source_data.csv |
+| Figure 5 | Regulatory and orthogonal response evidence | Figure5_source_data.csv |
 | Supplementary Figure S4 | End-to-end identity boundary and downstream propagation | Supplementary_Figure_S4_source_data.csv |
 | Supplementary Figure S8 | Corrected reference calibration and unresolved external transfer | Supplementary_Figure_S8_source_data.csv |
 | Supplementary Figure S10 | STAT1/STAT2 IFN-overlap-depletion sensitivity | Supplementary_Figure_S10_source_data.csv |

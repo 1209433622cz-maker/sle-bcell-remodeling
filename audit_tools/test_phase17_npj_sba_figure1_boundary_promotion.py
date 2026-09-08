@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RUN = ROOT / "phase17_v7/npj_sba_figure1_boundary_promotion/20260902_source_rerender_gate"
-CURRENT = ROOT / "phase17_v7/npj_sba_figure5_regulatory_ceiling/20260908_canonical_source_integration"
+CURRENT = ROOT / "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document"
 PACKAGE = ROOT / "04_submission/npj_systems_biology_and_applications/SLE_Bcell_npj_Systems_Biology_and_Applications.zip"
 
 
@@ -73,11 +73,11 @@ class Figure1BoundaryPromotionTests(unittest.TestCase):
     def test_root_text_and_supplement_are_locked(self) -> None:
         self.assertEqual(
             sha256(ROOT / "01_manuscript/Manuscript.md"),
-            sha256(CURRENT / "sources/Manuscript_figure5_regulatory_ceiling.md"),
+            sha256(CURRENT / "sources/Manuscript_scientific_presentation_freeze.md"),
         )
         self.assertEqual(
             sha256(ROOT / "01_manuscript/Supplementary_Information.md"),
-            sha256(RUN / "sources/Supplementary_Information_unchanged.md"),
+            sha256(CURRENT / "sources/Supplementary_Information_scientific_presentation_freeze.md"),
         )
 
     def test_submission_package_is_unchanged(self) -> None:

@@ -1,0 +1,5 @@
+﻿document,object,operation,old,new,scientific_value_changed
+Manuscript,Discussion final landing,REPLACE_ONCE,within explicit identity and transfer limits.,"within explicit identity, transfer and mechanistic limits.",False
+Supplementary Information,Supplementary Table S5 Figure 1,REPLACE_ONCE,| Figure 1 | Disease-blind identity stability and two-compartment adjudication | Figure1_source_data.csv |,"| Figure 1 | Disease-blind identity stability, two-compartment adjudication and end-to-end B_ASC boundary | Figure1_source_data.csv |",False
+Supplementary Information,Supplementary Table S5 Figure 4,REPLACE_ONCE,| Figure 4 | Source-label-defined GSE135779 replication and influence analyses | Figure4_source_data.csv |,"| Figure 4 | Source-label-defined GSE135779 replication, gene-level coherence and required calibration boundary | Figure4_source_data.csv |",False
+Supplementary Information,Supplementary Table S5 Figure 5,REPLACE_ONCE,| Figure 5 | Regulatory and orthogonal response evidence | Figure5_source_data.csv |,"| Figure 5 | Regulatory convergence, IFN-overlap-depletion ceiling and orthogonal response evidence | Figure5_source_data.csv |",False

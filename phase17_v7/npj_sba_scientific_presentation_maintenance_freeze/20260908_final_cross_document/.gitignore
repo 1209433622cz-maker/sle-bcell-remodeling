@@ -1,0 +1,11 @@
+qa/accessibility/
+qa/libreoffice_documents/
+qa/supplement_pagination_audit.json
+qa/lo_render/
+qa/wps_pages/
+qa/lo_pages/
+qa/final_lo_render/
+qa/lr/
+qa/final_wps_pages/*/
+qa/final_lo_pages/*/
+qa/parent_wps_pages/*/

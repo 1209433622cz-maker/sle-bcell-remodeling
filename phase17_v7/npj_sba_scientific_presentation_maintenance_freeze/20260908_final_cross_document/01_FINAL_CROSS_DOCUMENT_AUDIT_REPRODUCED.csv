@@ -1,0 +1,55 @@
+﻿check,pass,detail
+F1d B_ASC median Jaccard source=0.930323,True,0.9303233364573571
+F1d manuscript reports B_ASC median 0.930 and criterion failure,True,text anchor
+F2 primary OR source=0.946653,True,0.9466531606629468
+F2 primary manuscript rounded OR/CI/P aligned,True,text anchor
+F2 flare q source=0.084521 not supported,True,0.084521309341416
+F3 primary IFN source effect=0.836556,True,0.836556476435973
+F3 primary IFN manuscript rounded effect/CI/q aligned,True,text anchor
+F4d coverage passes,True,0.941958041958042 >= 0.8
+F4d B_CONV precision passes,True,0.9964495087110892
+F4d B_ASC precision fails,True,0.8852097130242825
+F4d manuscript blocks corrected disease effect,True,text anchor
+F5d discovery STAT2 M5911-depleted CI crosses zero,True,"0.390658 [-0.745046,1.526362], q=0.500111"
+F5d manuscript aligned with source,True,text anchor
+F5d 12-gene arm: 6/6 ULM CIs >0,True,"n=6, min CI low=0.198950"
+Cross-ref present: Fig. 1d,True,Fig. 1d
+Cross-ref present: Fig. 2a-d,True,Fig. 2a-d
+Cross-ref present: Fig. 3a-c,True,Fig. 3a-c
+Cross-ref present: Fig. 3d,True,Fig. 3d
+"Cross-ref present: Fig. 4a,b",True,"Fig. 4a,b"
+Cross-ref present: Fig. 4c,True,Fig. 4c
+Cross-ref present: Fig. 4d,True,Fig. 4d
+Cross-ref present: Fig. 5a-c,True,Fig. 5a-c
+Cross-ref present: Fig. 5d,True,Fig. 5d
+Cross-ref present: Fig. 5e,True,Fig. 5e
+Cross-ref present: Supplementary Fig. S4,True,Supplementary Fig. S4
+Cross-ref present: Supplementary Fig. S7,True,Supplementary Fig. S7
+Cross-ref present: Supplementary Fig. S8,True,Supplementary Fig. S8
+Cross-ref present: Supplementary Fig. S9,True,Supplementary Fig. S9
+Cross-ref present: Supplementary Fig. S10,True,Supplementary Fig. S10
+Figure 1 legend present,True,Figure 1
+Figure 2 legend present,True,Figure 2
+Figure 3 legend present,True,Figure 3
+Figure 4 legend present,True,Figure 4
+Figure 5 legend present,True,Figure 5
+Supplementary Figure S1 legend present,True,S1
+Supplementary Figure S2 legend present,True,S2
+Supplementary Figure S3 legend present,True,S3
+Supplementary Figure S4 legend present,True,S4
+Supplementary Figure S5 legend present,True,S5
+Supplementary Figure S6 legend present,True,S6
+Supplementary Figure S7 legend present,True,S7
+Supplementary Figure S8 legend present,True,S8
+Supplementary Figure S9 legend present,True,S9
+Supplementary Figure S10 legend present,True,S10
+S5 source map updated: Figure 1,True,"Disease-blind identity stability, two-compartment adjudication and end-to-end B_ASC boundary"
+S5 source map updated: Figure 4,True,"Source-label-defined GSE135779 replication, gene-level coherence and required calibration boundary"
+S5 source map updated: Figure 5,True,"Regulatory convergence, IFN-overlap-depletion ceiling and orthogonal response evidence"
+Discussion landing closes identity-transfer-mechanistic triad,True,final sentence
+Forbidden overclaim absent: universally reproducible taxonomy,True,universally reproducible taxonomy
+Forbidden overclaim absent: causal STAT1/STAT2 regulation,True,causal STAT1/STAT2 regulation
+Forbidden overclaim absent: predictive biomarker is established,True,predictive biomarker is established
+Forbidden overclaim absent: B_ASC is unchanged,True,B_ASC is unchanged
+Main panel inventory is 21 panels,True,21
+Only historical source replacements are F1d/F4d/F5d,True,"['Figure 1d', 'Figure 4d', 'Figure 5d']"

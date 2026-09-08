@@ -1,0 +1,12 @@
+claim_layer,claim,main_owner,full_audit_owner,machine_readable_source,status
+Identity ceiling,Broad B_CONV/B_ASC is an analysis scaffold; B_ASC fails end-to-end overlap criterion,Figure 1d,Supplementary Figure S4,Figure1_source_data.csv / Supplementary_Figure_S4_source_data.csv,KEEP
+Composition boundary,Primary B_ASC abundance difference is not statistically supported; no equivalence claim,Figure 2a-d,Supplementary Figure S5,Figure2_source_data.csv,KEEP
+Process-level discovery,B_CONV IFN/ISG is the most consistently supported prespecified program,Figure 3a-b,Supplementary Figure S6,Figure3_source_data.csv,KEEP
+Gene-level IFN coherence,Frozen IFN-arm genes support the process-level signal,Figure 3c,Supplementary Figure S6 / full stats,Figure3_source_data.csv,KEEP
+External source-label-defined replication,GSE135779 supports the prespecified IFN/ISG program,Figure 4a-b,Supplementary Figure S7,Figure4_source_data.csv,KEEP
+Program-specific vs genome-wide distinction,Ten IFN genes concordant despite genome-wide rho≈0.026,Figure 4c,Full statistical results,Figure4_source_data.csv,KEEP
+Transfer ceiling,Required corrected elastic-net mapper fails B_ASC precision; no corrected external disease effect,Figure 4d,Supplementary Figure S8 / Supplementary Table S9,Figure4_source_data.csv / Supplementary_Figure_S8_source_data.csv,KEEP
+Observational regulator convergence,"STAT1/STAT2 provide convergent observational, not causal, evidence",Figure 5a-b,Supplementary Figure S9 / Table S4a,Figure5_source_data.csv / Supplementary_Figure_S9_source_data.csv,KEEP
+Specificity against proliferation,Regulator pattern is not a generic proliferation signature,Figure 5c,Full statistical results,Figure5_source_data.csv,KEEP
+Regulatory ceiling,Signal survives 12-gene depletion but weakens after broader M5911 depletion; discovery STAT2 crosses zero,Figure 5d,Supplementary Figure S10 / Table S4b,Figure5_source_data.csv / Supplementary_Figure_S10_source_data.csv,KEEP
+Perturbational context,"GSE23307 n=2 is descriptive response context, not causal proof",Figure 5e,Supplementary Table S3,Figure5_source_data.csv,KEEP

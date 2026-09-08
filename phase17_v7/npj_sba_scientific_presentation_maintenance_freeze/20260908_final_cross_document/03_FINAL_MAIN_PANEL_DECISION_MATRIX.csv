@@ -1,0 +1,22 @@
+panel,final_decision,scientific_role,rationale,reopen_rule
+Figure 1a,KEEP,workflow / disease-blind identity -> disease inference,No replacement; already concise and uniquely owns workflow logic,Only reopen for provenance/cross-reference error
+Figure 1b,KEEP,fixed-representation policy-selection ARI,No replacement; needed to show conditional pass before stricter test,Only reopen if source metric mismatch
+Figure 1c,KEEP,fixed-representation state Jaccard,No replacement; paired with 1d creates conditional-vs-end-to-end contrast,Only reopen for actual-size readability
+Figure 1d,KEEP (source replacement already accepted),end-to-end B_ASC-specific boundary,Retain promoted S4 summary; highest information gain for central identity ceiling,Do not return to old panel
+Figure 2a,KEEP,observed B_ASC fractions + adjusted means,Unique descriptive/adjusted bridge,No replacement
+Figure 2b,KEEP,primary/internal/nonoverlap/flare composition hierarchy,Essential negative-boundary hierarchy,No replacement
+Figure 2c,KEEP,composition sensitivity family,Separates null result from fragile-model concern,No replacement
+Figure 2d,KEEP,90 leave-one-sample-out influence,Direct robustness visualization,No replacement
+Figure 3a,KEEP,four prespecified B_CONV programs,Establishes IFN/ISG priority against other frozen programs,No replacement
+Figure 3b,KEEP,IFN/ISG robustness ladder,Central process-level robustness owner,No replacement
+Figure 3c,KEEP,frozen IFN-arm gene coherence,Gene-level support without implying genome-wide concordance,No replacement
+Figure 3d,KEEP,technical / pan-B specificity controls,Prevents generic/technical interpretation,No replacement
+Figure 4a,KEEP,source-label-defined external IFN/ISG analyses,Primary external effect hierarchy,No replacement
+Figure 4b,KEEP,discovery/internal vs external comparison,Reader-facing replication bridge,No replacement
+Figure 4c,KEEP,"4,410 shared genes + ten IFN genes",Makes program-specific replication coexist with weak genome-wide rho,No replacement
+Figure 4d,KEEP (source replacement already accepted),required elastic-net calibration boundary,Retain promoted S8 boundary; blocks source-label-independent overclaim,Do not restore lower-information panel
+Figure 5a,KEEP,evidence classes / interpretive roles,Causal-ceiling owner; must remain non-network schematic,No causal-arrow replacement
+Figure 5b,KEEP,core + extended IFN regulators,Quantitative regulator owner,No replacement
+Figure 5c,KEEP,proliferation specificity comparators,Important specificity control,No replacement
+Figure 5d,KEEP (source replacement already accepted),12-gene vs M5911 depletion regulatory ceiling,Retain S10-derived ULM summary; materially higher information gain than old NES bars,Do not restore old M5911-only panel
+Figure 5e,KEEP,two-donor IFN-beta paired context,Orthogonal descriptive context with explicit n=2 ceiling,No replacement unless new biological replicates exist

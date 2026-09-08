@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RUN = ROOT / "phase17_v7/npj_sba_supplementary_table_claim_owner/20260902_semantic_micropass"
 PARENT = ROOT / "phase17_v7/npj_sba_supplementary_citation_refreeze/20260901_first_citation_order"
-CURRENT = ROOT / "phase17_v7/npj_sba_figure5_regulatory_ceiling/20260908_canonical_source_integration"
+CURRENT = ROOT / "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document"
 
 
 def sha256(path: Path) -> str:
@@ -34,13 +34,13 @@ class SupplementaryTableClaimOwnerTests(unittest.TestCase):
     def test_root_main_matches_current_scientific_candidate(self) -> None:
         self.assertEqual(
             sha256(ROOT / "01_manuscript/Manuscript.md"),
-            sha256(CURRENT / "sources/Manuscript_figure5_regulatory_ceiling.md"),
+            sha256(CURRENT / "sources/Manuscript_scientific_presentation_freeze.md"),
         )
 
     def test_supplement_remains_immutable(self) -> None:
         self.assertEqual(
             sha256(ROOT / "01_manuscript/Supplementary_Information.md"),
-            sha256(PARENT / "sources/Supplementary_Information_first_citation_order_refreeze.md"),
+            sha256(CURRENT / "sources/Supplementary_Information_scientific_presentation_freeze.md"),
         )
 
     def test_s3_claim_owner_is_quantitative_synthesis(self) -> None:

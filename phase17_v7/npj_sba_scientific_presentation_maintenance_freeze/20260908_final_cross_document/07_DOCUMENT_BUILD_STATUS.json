@@ -1,0 +1,69 @@
+{
+  "created_at": "2026-09-08T05:31:34+08:00",
+  "status": "PASS_FINAL_CROSS_DOCUMENT_DOCUMENTS_BUILT_RENDER_REQUIRED",
+  "build_results": {
+    "manuscript": {
+      "source": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/sources/Manuscript_scientific_presentation_freeze.md",
+      "output": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/documents/Manuscript_Scientific_Presentation_Freeze.docx",
+      "paragraphs": 151,
+      "tables": 0,
+      "inline_shapes": 0,
+      "placeholders": 0,
+      "bytes": 60748
+    },
+    "supplement": {
+      "source": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/sources/Supplementary_Information_scientific_presentation_freeze.md",
+      "output": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/documents/Supplementary_Information_Scientific_Presentation_Freeze.docx",
+      "paragraphs": 70,
+      "tables": 10,
+      "inline_shapes": 10,
+      "placeholders": 0,
+      "bytes": 3762542
+    }
+  },
+  "layout_repairs": {
+    "manuscript": {
+      "main_legend_headings_compacted": 5
+    },
+    "supplement": {
+      "redundant_spacers_removed": 1,
+      "renderer_divergent_s8_breaks_removed": 1,
+      "s1_breaks_removed": 1,
+      "s2_breaks_removed": 1,
+      "s5_rows_compacted": 9
+    }
+  },
+  "checks": {
+    "manuscript_title_exact": true,
+    "abstract_145_words": true,
+    "references_1_to_33": true,
+    "main_has_no_inline_figures": true,
+    "five_main_legend_headings_compacted": true,
+    "discussion_landing_exact": true,
+    "supplement_has_ten_figures": true,
+    "supplement_has_ten_grid_objects": true,
+    "supplement_alt_titles_s1_to_s10": true,
+    "supplement_heading_sequence_s1_to_s10": true,
+    "s5_figure1_owner_updated": true,
+    "s5_figure4_owner_updated": true,
+    "s5_figure5_owner_updated": true,
+    "s5_nine_rows_locally_compacted": true,
+    "redundant_s2_break_removed": true
+  },
+  "failed_checks": [],
+  "files": {
+    "Manuscript_Scientific_Presentation_Freeze.docx": {
+      "path": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/documents/Manuscript_Scientific_Presentation_Freeze.docx",
+      "bytes": 60828,
+      "sha256": "18982775B6AADD45DC70B37113F08FBAD6282714495652C31BD319562507E854"
+    },
+    "Supplementary_Information_Scientific_Presentation_Freeze.docx": {
+      "path": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/documents/Supplementary_Information_Scientific_Presentation_Freeze.docx",
+      "bytes": 3762585,
+      "sha256": "91406BC857197B7671D13801FF2133641C9162B7FA5AC1500F3A64AA037AA600"
+    }
+  },
+  "scientific_estimates_changed": false,
+  "figures_redrawn": false,
+  "source_data_values_changed": false
+}
