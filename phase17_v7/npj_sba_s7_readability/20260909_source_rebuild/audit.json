@@ -1,0 +1,24 @@
+{
+  "status": "PASS_S7_READABILITY_MICRO_GATE",
+  "checks": {
+    "all_document_text_identical": true,
+    "all_run_font_sizes_identical": true,
+    "wps_15_pages": true,
+    "wps_changes_only_pages4_to6": true,
+    "wps_s7_long_words_unbroken": true,
+    "lo_15_pages": true,
+    "lo_changes_only_pages4_to6": true,
+    "lo_s7_long_words_unbroken": true,
+    "45_assets_unchanged": true,
+    "main_source_unchanged": true,
+    "supplement_source_unchanged": true,
+    "accessibility_zero": true,
+    "pagination_fingerprints": true,
+    "package_unchanged": true,
+    "visual_confirmed": true
+  },
+  "failed_checks": [],
+  "document_sha256": "57DEDF3D91E13994537A1B775B8405A7D12CCA14F4A0975DE770066CA2BFC716",
+  "wps_pdf_sha256": "E6747F721617560576A44DAE02C9DB4ECE75939D6672237502A70A2F43A08A9D",
+  "lo_pdf_sha256": "9C5ACF804B5CC44A6F332A0FA1D11C07B85C5FD3A4B507EB63052C836A1DA591"
+}
