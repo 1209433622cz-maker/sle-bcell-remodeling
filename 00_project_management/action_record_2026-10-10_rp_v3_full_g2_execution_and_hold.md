@@ -170,5 +170,10 @@ current full-G2 HOLD remains permanent provenance.
 - raw attempt accounting: 50,000 unique attempts and 60,106,000/60,106,000
   successful inner fits;
 - frozen raw run remained Git-ignored and was not staged;
-- `git diff --check` and the final Git push are recorded in the closing command
-  log and repository history.
+- `git diff --check` passed;
+- ordinary Git HTTPS push failed three times because the GitHub connection was
+  reset or timed out. The already authenticated GitHub CLI API remained
+  available, so the exact local tree was uploaded through the official Git Data
+  API and `main` was fast-forwarded. Final local and remote commit:
+  `85c725281a17bffa35b2ec7e202ee691c036beba`; final tree:
+  `ac63e80212d756610e3a744f52e9341c85a13fa4`.
