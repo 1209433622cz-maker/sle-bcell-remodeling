@@ -1,0 +1,24 @@
+﻿revision_id,location,operation,change,new_state,reason,guardrail
+R01,Results,REWRITE/DEFINITION,Define UMI at first Results use,unique molecular identifier (UMI),reader comprehension,no numerical change
+R02,Results,REWRITE/DEFINITION,Define TMM at first Results use,trimmed mean of M values (TMM),reader comprehension,no analytical change
+R03,Results/Methods,REWRITE/TERMINOLOGY,Selected program-level frozen wording -> prespecified,prespecified IFN/ISG / program genes,remove project-internal jargon while preserving pre-specification,frozen reference/partition wording retained where methodologically meaningful
+R04,Results,BOUNDARY,Clarify corrected mapping conclusion,replication remains source-label-defined; calibration failure does not establish source-label-independent transfer,prevent transfer overclaim,no evidence change
+R05,Results/Methods,REWRITE/DEFINITION,Define ULM in reader-facing prose,univariate linear model (ULM),reader comprehension,method unchanged
+R06,Results/Methods,REWRITE/DEFINITION,Define M5911 as MSigDB Hallmark interferon-alpha response set,M5911 explicit definition and 97-gene branch,reader comprehension,gene set unchanged
+R07,Methods,BOUNDARY/TIMING,Replace post-freeze project jargon with transparent timing,added after the core regulator analysis had been fixed,late-stage sensitivity transparency,does not retroactively make branch prespecified
+R08,Methods,BOUNDARY/MULTIPLICITY,Clarify separate six-test depletion sensitivity families,each branch contributes separate ULM/CAMERA/FRY six-test families; original 24-test family not replaced,multiplicity ownership,no q-value recalculation
+R09,Methods,REWRITE/AI,Synchronize AI-assistance scope and author responsibility,local execution against fixed inputs; numerical results from outputs; author-led interpretation/final decisions,policy consistency,no minimization or expansion of actual use
+R10,Methods,REWRITE/PROVENANCE,Replace superseded-file project jargon,reported numerical claims sourced from current machine-generated analysis outputs,human-facing provenance,no source change
+R11,Figure legend 1,REWRITE/DEFINITION,Define adjusted Rand index,adjusted Rand index (ARI),legend self-containment,no figure change
+R12,Figure legend 4,MERGE/COMPRESS,Remove duplicated explanation while retaining all panel owners,calibration summary compressed; adult directional status retained,named redundancy / restore clean pagination,no boundary removed
+R13,Figure legend 5,MERGE/COMPRESS,Compress repeated interpretive prose while retaining ULM/M5911 definitions and mechanistic ceiling,all panels a-e retained; M5911 depletion exception retained,named redundancy / avoid two-line orphan page,no scientific owner removed
+R14,Cover Letter,REWRITE,Reframe central advance as reproducibility hierarchy,IFN replication plus identity/transfer/mechanistic ceilings,editorial significance,no inflated novelty
+R15,Cover Letter,REWRITE,Strengthen systems-biology journal fit,portability under changing representation/annotation/cohort structure,journal-specific relevance,not a format-only claim
+R16,Declarations,REWRITE/CONSISTENCY,Synchronize AI disclosure,scope + local execution + author-led judgment + accountability,cross-file consistency,no new scientific claim
+R17,Reporting Information,REWRITE/CONSISTENCY,Clarify secondary public-data design and AI disclosure,no new recruitment/intervention; author-led decisions,portal consistency,not a signed official form
+R18,README/Package,REWRITE/PROVENANCE,"Update current policy check date, provenance, extracted text and hashes",29 Sep 2026; regenerated reviewer PDF and manifest,package integrity,portal submission not claimed
+R19,Figure 2c,SOURCE LABEL REBUILD,Frozen >=50 -> Primary >=50,reader-facing primary-analysis label,remove internal workflow jargon,Figure2_source_data.csv byte-identical
+R20,Figure 3a,SOURCE LABEL REBUILD,Four frozen programs -> Four prespecified programs,reader-facing design timing,clarify prespecification,Figure3_source_data.csv byte-identical
+R21,Figure 3c,SOURCE LABEL REBUILD,Frozen IFN-arm genes -> Prespecified IFN-arm genes,reader-facing gene-set ownership,clarify design status,Figure3_source_data.csv byte-identical
+R22,Supplementary Tables S4b/S7 and S10 legend,TERMINOLOGY SYNC,internal frozen/post-freeze labels -> prespecified/additional sensitivity,cross-document reader language aligned,remove cross-document terminology split,methods timing and multiplicity boundaries retained
+R23,Supplementary Figure S10,SOURCE LABEL REBUILD,frozen labels -> prespecified labels,reader-facing depletion labels,match legend and Methods,36-row source data byte-identical

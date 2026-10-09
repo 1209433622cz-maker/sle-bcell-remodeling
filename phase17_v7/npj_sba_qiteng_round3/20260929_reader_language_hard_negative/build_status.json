@@ -1,0 +1,34 @@
+{
+  "source_data_byte_identical": {
+    "Figure2_source_data.csv": true,
+    "Figure3_source_data.csv": true
+  },
+  "figure_parent_sha256": {
+    "Figure_2.pdf": "6103EA12DB456078C770E84518A2EC277A1B23FCDA6D48180B74E47A351A73D2",
+    "Figure_3.pdf": "792C5048178B91A7AAC2D4D2CD08AB070FB19C231D625A0B2A3156ABDCE19B8C"
+  },
+  "figure_candidate_sha256": {
+    "Figure_2.pdf": "A28C23E1AC139D568818040CBCBC949C9E1A386E9BCF84C0D5E6F591199D7C3A",
+    "Figure_3.pdf": "64962FF28617E39F4A64DD98E3775B64D2894E9EF429DB42159C32E40A1D5537"
+  },
+  "figure_assertions": 18,
+  "figure_assertions_passed": true,
+  "status": "READER_LANGUAGE_SOURCE_REBUILD_COMPLETE_RENDER_REQUIRED",
+  "manuscript_changed_in_this_gate": false,
+  "statistical_outputs_changed": false,
+  "supplement_docx_sha256": "1B59B86FA65A8AD7F7AE7164D283FAAD32B4E2D4A6CEDCABB72D4AD7A3C577F0",
+  "supplement_source": "01_manuscript\\Supplementary_Information.md",
+  "s7_layout": {
+    "s7_column_widths_mm": [
+      24.13,
+      34.29,
+      30.479999999999997,
+      24.13,
+      29.209999999999997,
+      22.86
+    ],
+    "horizontal_padding_twips": 50
+  },
+  "supplementary_figure_s10_source_data_byte_identical": true,
+  "supplementary_figure_s10_sha256": "97951C70A175A8C2CB9797C44009C937CF7AE3D0B3F360EFC50B68B61A9F6A6C"
+}

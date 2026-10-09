@@ -1,0 +1,10 @@
+{
+  "status": "FINALIZED_QITENG_SCIENTIFIC_SUBMISSION_CANDIDATE_AUDIT_REQUIRED",
+  "package": "04_submission/20260929_qiteng_submission_candidate/SLE_Bcell_Submission_Package",
+  "zip": "04_submission/20260929_qiteng_submission_candidate/SLE_Bcell_Submission_Package_2026-09-29.zip",
+  "zip_bytes": 18958008,
+  "zip_sha256": "EBC9017D24FEACC5628DF978C09FF6D9CD33ABF41BBB7F2CE259A5EC80796709",
+  "manifest_payloads": 38,
+  "review_pdf_pages": 36,
+  "changed_files_vs_round2": 10
+}

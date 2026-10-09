@@ -9,6 +9,8 @@ import json
 import unittest
 from pathlib import Path
 
+from qiteng_reader_language_contract import assert_authorized_supplement_delta
+
 
 ROOT = Path(__file__).resolve().parents[1]
 RUN = ROOT / "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document"
@@ -72,7 +74,7 @@ class ScientificPresentationMaintenanceFreezeTests(unittest.TestCase):
 
     def test_root_sources_and_submission_package_are_locked(self) -> None:
         self.assertEqual(sha256(ROOT / "01_manuscript/Manuscript.md"), sha256(RUN / "sources/Manuscript_scientific_presentation_freeze.md"))
-        self.assertEqual(sha256(ROOT / "01_manuscript/Supplementary_Information.md"), sha256(RUN / "sources/Supplementary_Information_scientific_presentation_freeze.md"))
+        assert_authorized_supplement_delta(self, ROOT / "01_manuscript/Supplementary_Information.md", RUN / "sources/Supplementary_Information_scientific_presentation_freeze.md")
         self.assertEqual(sha256(PACKAGE), "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1")
 
     def test_final_status_and_manifest_when_present(self) -> None:

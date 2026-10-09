@@ -1,0 +1,7 @@
+﻿id,definition,unit,status,boundary
+beta_B,disease association for the historical broad B_CONV score,donor/sample-cohort pseudobulk,HISTORICAL_REPRODUCIBLE,not cell-intrinsic and not composition independent
+delta_beta_ann,paired coefficient difference for annotation branch versus A0,"same donors, same T0",OPEN_PROTOCOL,not an unpaired difference across selected samples
+beta_S,disease association after common-composition standardization,donor-level reconstructed expression object,OPEN_PROTOCOL,not a direct causal disease effect
+delta_beta_comp,paired beta_B minus beta_S on compatible scale and population,"same donors, same T0",OPEN_PROTOCOL,not an automatic mediated proportion
+beta_k,disease association within credible state or continuous identity support,donor-state pseudobulk,OPEN_G1,never a cell-level p value
+beta_E_T,external association under an explicitly named transformation,external donor pseudobulk,PARTLY_HISTORICAL; NEW T_frozen/T_rank OPEN,raw coefficients across scales are not directly comparable

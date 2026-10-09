@@ -1,0 +1,42 @@
+{
+  "status": "PASS_WP1_PREFIT_UNLOCK",
+  "created_at": "2026-10-09T16:51:59.806966+00:00",
+  "disease_coefficients_fitted": false,
+  "A1_operator_and_target": "expression reconstruction on linear CPM: sum_k(pi_ref_k * CPM_ikg), then identical frozen T0 log2(CPM+0.5) and 43-control z standardization",
+  "A1_delta_semantic_label": "joint identity-axis/common-composition standardization sensitivity",
+  "A2_feature_scope": "historical strong-ISG-list exclusion; LY6E retained",
+  "A2_overlap_mapping_hash": "9CF9E19E54175030E518219A64C387162634A3BC35253D9936498B75988D1F13",
+  "A2_support_rule": "at least 50 mapped A2 B_CONV cells per donor stratum",
+  "shared_donors": 68,
+  "shared_donors_by_is_managed": {
+    "0": 31,
+    "1": 37
+  },
+  "shared_donor_ID_hash": "042C3C32912FAECA302B22F426B1DBB259F032EE88ABCEE522FD81231D3C1E08",
+  "shared_covariate_matrix_hash": "878418ECAE53E2F846B079A048B30BB987272534EF442D1512A147A9C9A4F54A",
+  "shared_covariate_matrix_rank": 4,
+  "model_columns": [
+    "intercept",
+    "is_managed",
+    "age_centered",
+    "ethnicity_asian"
+  ],
+  "T0_reference_hash": "0244242AB31441F7D46305A5E69AD77714FBF2A2833EE09D16CF893F3D9E610F",
+  "pi_ref_hash": "D8492404E9EA19F5D6735A2995A4E52B0ED7A867B7B1A0577D0237BBDE131BB4",
+  "bootstrap": {
+    "seed": 20261010,
+    "attempted_replicates": 2000,
+    "sampling": "case-control-stratified donor bootstrap with replacement; one shared draw for A0/A1/A2",
+    "duplicate_handling": "expanded replicate rows; each sampled donor occurrence contributes once",
+    "interval": "paired percentile 95% interval from successful replicates",
+    "failures": "non-finite input/output, missing arm, or design rank <4; every attempt counts; no replenishment",
+    "stop_rule": "HOLD when failures exceed 1% of 2,000 attempted replicates",
+    "conditioning": "A2 mapping, A1 cutpoints, pi_ref, T0 and the 68-donor support set remain fixed"
+  },
+  "sufficient_count_manifest_hash": "276091FDD223F6D3B8734402387E19C793E2C739E34DA7DAF4245693AA56A9BF",
+  "sufficient_count_archive_hash": "CA7B2B8310A8CB01C35564EAD3FC1B330FB9C461FE4E10987AEBA5DCCBE5D7A9",
+  "first_effect_fit_time": "NOT_STARTED",
+  "G2": "NOT_ASSESSED_FULL_PROTOCOL_PENDING",
+  "WP4": "HOLD_CONDITIONAL",
+  "SUBMISSION": "HOLD"
+}

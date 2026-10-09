@@ -1,0 +1,83 @@
+{
+  "audit_date": "2026-10-10",
+  "status": "WP1_PRE_EFFECT_REVIEW_REQUIRED",
+  "received_G0": "PASS_G0",
+  "received_G1": "PASS_G1_TO_WP1_ANNOTATION_SENSITIVITY",
+  "independent_scope": "archive bytes, checkpoint structure, frozen tables, joint support; no disease effects",
+  "final_manifest": {
+    "PASS": 31
+  },
+  "earlier_manifest": {
+    "PASS": 20,
+    "MISMATCH": 5,
+    "EXTERNAL_INPUT_NOT_BUNDLED": 2
+  },
+  "checks_pass": 36,
+  "checks_total": 38,
+  "findings": [
+    {
+      "check": "Earlier_input_manifest_current_local_entries_match",
+      "pass": false,
+      "evidence": "{'PASS': 20, 'MISMATCH': 5, 'EXTERNAL_INPUT_NOT_BUNDLED': 2}"
+    },
+    {
+      "check": "A2_full_IFN12_exclusion_claim_supported",
+      "pass": false,
+      "evidence": "Not a frozen strong-ISG gate. Literal retained program members: LY6E"
+    }
+  ],
+  "A1_primary_strata": 89,
+  "A1_distinct_donors": 89,
+  "A1_marginal_support": {
+    "1": 72,
+    "2": 78,
+    "3": 84,
+    "4": 85,
+    "5": 83
+  },
+  "A1_all_five_bins_supported": 68,
+  "A1_any_bin_unsupported": 21,
+  "common_support_interpretation": "68 is an upper bound before applying A2 eligibility; group counts require ID-linked design",
+  "A2_program_overlap": [
+    "LY6E"
+  ],
+  "checkpoint_info": {
+    "canonical_prepared_X_shape": [
+      150402,
+      3000
+    ],
+    "canonical_final_has_X": false,
+    "canonical_final_layers": [],
+    "obs_columns": [
+      "Processing_Cohort",
+      "analysis_branch_primary",
+      "analysis_branch_singlet_sensitivity",
+      "cell_id",
+      "donor_id",
+      "leiden_harmony_r0_4",
+      "library_uuid",
+      "residual_doublet_auto_call",
+      "residual_doublet_score",
+      "sample_uuid",
+      "source_cell_index"
+    ]
+  },
+  "simulation_summary_max_abs_bias": 0.0023145408266416,
+  "simulation_summary_coverage_range": [
+    0.925,
+    0.97
+  ],
+  "G2": "NOT_ASSESSED_FULL_PROTOCOL_PENDING",
+  "WP4": "HOLD_CONDITIONAL",
+  "SUBMISSION": "HOLD",
+  "disease_coefficients_fitted": false,
+  "bootstrap_replicates_run": 0,
+  "original_six_tests_rerun": false,
+  "source_rebuild_verified": false,
+  "missing_portable_inputs": [
+    "discovery raw-count H5AD",
+    "A0 cell-level reference H5AD",
+    "Stage0B source builder / six tests"
+  ],
+  "source_control_scope": "Original source bytes unchanged; source-coded provenance not inferred from summary flags."
+}

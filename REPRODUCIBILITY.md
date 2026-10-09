@@ -1,5 +1,36 @@
 # Reproducibility and repository scope
 
+## Active RP v3 redesign
+
+The active branch state is `ACTIVE_RP_V3_SCIENTIFIC_REDESIGN` with journal
+submission on hold. The public v1.1.0 release described below remains an
+immutable historical reproducibility snapshot; it does not contain the newer
+RP v3 Stage 0, Stage 0B or WP1 work.
+
+Completed active gates:
+
+- Stage 0: recovered and hashed 21/21 inputs; registered units, chronology,
+  estimands, branches and open parameters.
+- Stage 0B: froze the result-blind A1/A2 and score contracts and returned
+  `PASS_G1_TO_WP1_ANNOTATION_SENSITIVITY`.
+- WP1: used one 68-donor common support set, a frozen rank-4 design and 2,000
+  paired donor-clustered bootstrap replicates; final decision
+  `PASS_WP1_TO_WP2_PREFIT_AND_G2_FREEZE`.
+
+Current one-command entry points are:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_stage0.ps1
+powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_stage0b.ps1
+powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_wp1.ps1
+```
+
+The next permitted work is WP2 prefit identifiability and full G2 simulation
+freeze. No WP2 disease coefficient, manuscript replacement, submission package,
+GitHub Release or Zenodo update is authorized before the G2 contract passes.
+The active numerical and governance summary is in
+`00_project_management/RP_V3_REDESIGN_STATUS.md`.
+
 ## Current correction status
 
 The original C9 PASS is superseded. Corrected calibration processed all 56

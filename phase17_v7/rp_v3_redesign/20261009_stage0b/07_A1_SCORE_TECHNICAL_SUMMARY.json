@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-10-09T23:55:22+08:00",
+  "cells_scored": 150402,
+  "bconv_cells_used_for_quantiles": 149102,
+  "quantile_thresholds": {
+    "q20": -0.596538348704627,
+    "q40": -0.23882753224621675,
+    "q60": 0.10818514473034647,
+    "q80": 0.5626315124480175
+  },
+  "score_min": -2.461238351808275,
+  "score_median": -0.07680997395996211,
+  "score_max": 3.3015872653204372,
+  "finite_fraction": 1.0,
+  "missing_genes": [],
+  "outcome_fields_used": false
+}

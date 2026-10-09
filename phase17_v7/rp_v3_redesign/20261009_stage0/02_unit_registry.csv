@@ -1,0 +1,9 @@
+﻿dataset,level,identifier,n,relationship,status
+GSE174188,cell,H5AD obs index,150402,unique cell; complete donor/sample/library/cohort mapping,VERIFIED
+GSE174188,donor,donor_id,259,11 donors have >1 sample,VERIFIED_REPEATS_EXIST
+GSE174188,sample,sample_uuid,271,53 samples span >1 processing cohort; cohort-specific strata retained,VERIFIED
+GSE174188,library,library_uuid,88,technical library; not an independent disease replicate,VERIFIED
+GSE174188,primary composition stratum,sample_uuid x Processing_Cohort,90,43 control + 47 managed; donors unique in primary contrast,VERIFIED_HISTORICAL
+GSE174188,primary B_CONV pseudobulk,sample_uuid x Processing_Cohort,89,89 donors; one 44-cell managed stratum excluded,VERIFIED_HISTORICAL
+GSE135779,raw sample/donor,sample_id,56,44 childhood + 12 adult; one matrix per donor,VERIFIED
+GSE135779,primary childhood model,sample_id,43,eligible source-label-defined broad B-cell donors,VERIFIED_HISTORICAL_RESULT_KNOWN

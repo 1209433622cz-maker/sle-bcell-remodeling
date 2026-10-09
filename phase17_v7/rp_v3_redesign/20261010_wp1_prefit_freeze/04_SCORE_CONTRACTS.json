@@ -1,0 +1,42 @@
+{
+  "created_at": "2026-10-09T23:53:43+08:00",
+  "status": "FROZEN_FOR_STAGE0B",
+  "program_members": [
+    "IFI44L",
+    "IFI6",
+    "IFIT1",
+    "IFIT2",
+    "IFIT3",
+    "IRF7",
+    "ISG15",
+    "LY6E",
+    "MX1",
+    "MX2",
+    "OAS1",
+    "OAS2"
+  ],
+  "duplicate_symbol_policy": "sum all matching features before normalization",
+  "T0": {
+    "purpose": "same scoring transform across A0, A1 and A2 annotation branches",
+    "input": "sample-cohort B_CONV/state pseudobulk raw counts",
+    "transform": "log2(full-background CPM + 0.5)",
+    "reference": "A0 primary normal-control strata, fixed once",
+    "score": "mean of 12 reference-standardized IFN/ISG genes",
+    "branch_restandardization": false
+  },
+  "T_frozen": {
+    "purpose": "external transfer without external outcome-dependent restandardization",
+    "input": "external source-label B_CONV donor pseudobulk raw counts",
+    "transform": "log2(full measured-library CPM + 0.5)",
+    "reference": "the same discovery A0 normal-control gene means and SDs used by T0",
+    "external_restandardization": false
+  },
+  "T_rank": {
+    "purpose": "platform-robust sensitivity",
+    "background": "fixed disease-blind intersection of discovery and external gene symbols",
+    "background_size": 18873,
+    "ties": "average percentile rank after duplicate-symbol sum",
+    "score": "mean percentile rank of all 12 IFN/ISG genes",
+    "minimum_program_coverage": "12/12"
+  }
+}

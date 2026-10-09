@@ -1,0 +1,27 @@
+priority,category,path,status,future_use,git_policy
+P0,Project navigation,README.md,current,Primary public entry point and active-gate summary,TRACK
+P0,Active governance,00_project_management/RP_V3_REDESIGN_STATUS.md,current,Single-page RP v3 state and next-gate contract,TRACK
+P0,Stage 0 decision,phase17_v7/rp_v3_redesign/20261009_stage0/08_STAGE0_GATE_STATUS.json,canonical,Machine-readable input and initial gate record,TRACK
+P0,Stage 0B decision,phase17_v7/rp_v3_redesign/20261009_stage0b/14_STAGE0B_GATE_STATUS.json,canonical,Disease-blind G0/G1 decision,TRACK
+P0,WP1 prefit contract,phase17_v7/rp_v3_redesign/20261010_wp1_prefit_contract/,canonical,Pre-effect support design operator and hash freeze,TRACK
+P0,WP1 result,phase17_v7/rp_v3_redesign/20261010_wp1_annotation_sensitivity/,canonical,Point estimates bootstrap intervals diagnostic figure and final adjudication,TRACK
+P0,WP1 code,audit_tools/rp_v3_wp1_01_finalize_prefit.py; audit_tools/rp_v3_wp1_02_fit_annotation_sensitivity.py; audit_tools/rp_v3_wp1_03_review.py,canonical,Recompute and independently review WP1,TRACK
+P0,WP1 runner,audit_tools/run_rp_v3_wp1.ps1,canonical,One-command gated WP1 execution,TRACK
+P0,RP v3 tests,audit_tools/test_rp_v3_stage0_freeze.py; audit_tools/test_rp_v3_stage0b.py; audit_tools/test_rp_v3_wp1.py,canonical,Regression protection for completed redesign gates,TRACK
+P0,Full file audit,00_project_management/full_project_audit_2026-10-10/,current,File hashes sizes format health duplicates and portability review,TRACK
+P1,Manuscript baseline,01_manuscript/Manuscript.md,frozen baseline,Future comparison and gated revision source,TRACK
+P1,Supplement baseline,01_manuscript/Supplementary_Information.md,frozen baseline,Future comparison and gated revision source,TRACK
+P1,Presentation status,00_project_management/SCIENTIFIC_PRESENTATION_STATUS.md,current,Separates frozen reader baseline from active redesign,TRACK
+P1,Public release verification,00_project_management/qiteng_r2_release_2026-08-29/,historical canonical,Verify Zenodo 22151739 and GitHub v1.1.0 bytes,TRACK
+P1,R1 identity boundary,phase17_v7/round6_q1_robustness/20260827_r1_hold_integration/,historical canonical,Permanent identity-ceiling evidence,TRACK
+P1,C9R transfer boundary,phase17_v7/gateC9R/20260828_normalization_correction/,historical canonical,Permanent transfer-calibration ceiling evidence,TRACK
+P1,Action records,00_project_management/action_record_*.md,valuable history,Chronology decisions incidents and rationale,TRACK
+P2,Conversation records,05_Record/,historical context,Recover project history only; never override machine-readable gates,TRACK
+P2,GSE174188 raw counts,phase17_v7/gateC2B1/20260810_171000_full_library_doublets/04_full_raw_counts.h5ad,canonical local input,Required for full recomputation,LOCAL_ONLY
+P2,GSE174188 representation,phase17_v7/gateC2B2/20260812_full_representation/06_primary_all_cells_representation.h5ad,canonical local input,Required for historical and RP v3 branches,LOCAL_ONLY
+P2,GSE135779 RAW,Data/processed/GSE135779_nehar_validation/source/GSE135779_RAW.tar,canonical public-data cache,External dataset reconstruction with checksum,LOCAL_ONLY
+P2,A2 H5AD,phase17_v7/rp_v3_redesign/20261009_stage0b/a2_rebuild/08_isg_excluded_representation.h5ad,canonical local intermediate,WP1 and future gated branch work,LOCAL_ONLY
+P3,September submission package,04_submission/20260929_qiteng_submission_candidate/,frozen historical candidate,Reference only while RP v3 and submission HOLD are active,LOCAL_ONLY
+P3,QiTeng QA runtime,phase17_v7/npj_sba_qiteng_round3/20260929_reader_language_hard_negative/qa/,noncanonical cache,Audit provenance only; deep paths and third-party duplicates,IGNORE
+P3,RP v3 interrupted exports,phase17_v7/rp_v3_redesign/20261010_wp1_prefit_export*,noncanonical diagnostics,Incident reconstruction only; canonical prefit is wp1_prefit_freeze,IGNORE
+P3,Workspace archives,6013RP-wyf.zip; phase17_v7/*.zip,local backups,Disaster recovery after independent checksum review,LOCAL_ONLY

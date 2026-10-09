@@ -1,0 +1,6 @@
+{
+  "status": "HOLD_PREFIT_EXPORT",
+  "reason": "Required source absent or SHA256 mismatch; no inference permitted",
+  "disease_coefficients_fitted": false,
+  "partial_outputs": "diagnostic only; not inference inputs"
+}

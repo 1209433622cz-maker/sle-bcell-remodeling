@@ -1,0 +1,23 @@
+﻿gate,severity,item,status,evidence_or_note
+S01,BLOCK,Target-journal current guide,PASS,Official npj Systems Biology and Applications author/editorial-process pages rechecked 2026-09-29; initial flexible formatting and editorial triage criteria confirmed.
+S02,BLOCK,Clean manuscript,PASS,No comments or tracked insertions/deletions; final DOCX accessibility 0/0/0.
+S03,BLOCK,Figure inventory,PASS,Figures 1-5 continuous; 21 main panels have explicit owners.
+S04,BLOCK,Separate figures,PASS,Five separate main-figure PDFs present.
+S05,BLOCK,Legends,PASS,All five legends present; ARI/ULM/M5911 reader definitions improved.
+S06,BLOCK,Supplement inventory,PASS,Supplementary Information plus S1-S10 and three Supplementary Data archives present.
+S07,BLOCK,Figure-text claim consistency,PASS,"No claim-owner change; identity/transfer/mechanistic boundaries align across Results, legends and Discussion."
+S08,BLOCK,Final-size legibility,PASS,All 31 manuscript pages visually audited; main figures previously audited; S7 readability repair retained.
+S09,BLOCK,Resolution/format,PASS_INITIAL,Readable vector PDF figures; initial-submission formatting compatible with current journal guidance.
+S10,BLOCK,Vector/raster integrity,PASS,Main figures are PDF/vector-capable assets; no manual raster replacement performed.
+S11,HIGH,Color accessibility,PASS_CURRENT,Critical ceiling claims do not depend solely on color; no new palette introduced this round.
+S12,BLOCK,Image integrity,PASS,Figures 1-5 and Supplementary Information are byte-identical to baseline; no image manipulation introduced.
+S13,HIGH,Source-data traceability,PASS,"Source-data archives, provenance file and DOI/GitHub references retained; revised human-facing provenance recorded."
+S14,HIGH,Caption de-duplication,PASS,Figure 4/5 legends compressed only where Results/Methods already own explanation; panel interpretation retained.
+S15,HIGH,Panel alignment,PASS,Panel letters and legend ownership remain aligned; 21-panel inventory unchanged.
+S16,HIGH,Editable tables,PASS,Supplementary DOCX retained; no rasterized replacement of tables introduced.
+S17,HIGH,Cover letter,PASS,Journal-specific significance and evidence hierarchy now explicit.
+S18,BLOCK,Declarations,PASS,Funding/COI/ethics/originality/AI language synchronized.
+S19,HIGH,Reporting information,PASS_CURRENT,Prepared reporting text reflects secondary public-data design; official portal/form completion is not claimed.
+S20,BLOCK,Permissions/licensing,PASS_CURRENT,No adapted third-party artwork added; public datasets remain subject to source terms as disclosed.
+S21,MEDIUM,Initial-vs-final export,PASS_INITIAL,Current initial-submission package is readable and complete; no final-acceptance production claim made.
+S22,BLOCK,Portal/package checksum,PASS_LOCAL_PORTAL_PENDING,Local SHA256 manifest rebuilt and Verify_Package.py passes 38 payloads; post-upload portal opening/checksum remains pending until actual human upload.

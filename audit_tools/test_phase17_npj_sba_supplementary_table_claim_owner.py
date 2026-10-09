@@ -9,6 +9,8 @@ import json
 import unittest
 from pathlib import Path
 
+from qiteng_reader_language_contract import assert_authorized_supplement_delta
+
 
 ROOT = Path(__file__).resolve().parents[1]
 RUN = ROOT / "phase17_v7/npj_sba_supplementary_table_claim_owner/20260902_semantic_micropass"
@@ -38,9 +40,10 @@ class SupplementaryTableClaimOwnerTests(unittest.TestCase):
         )
 
     def test_supplement_remains_immutable(self) -> None:
-        self.assertEqual(
-            sha256(ROOT / "01_manuscript/Supplementary_Information.md"),
-            sha256(CURRENT / "sources/Supplementary_Information_scientific_presentation_freeze.md"),
+        assert_authorized_supplement_delta(
+            self,
+            ROOT / "01_manuscript/Supplementary_Information.md",
+            CURRENT / "sources/Supplementary_Information_scientific_presentation_freeze.md",
         )
 
     def test_s3_claim_owner_is_quantitative_synthesis(self) -> None:

@@ -1,0 +1,212 @@
+[
+  {
+    "logical_id": "rp_v3",
+    "role": "active scientific redesign directive",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\rp_v3_redesign\\20261009_stage0\\inputs_readonly\\SLE_Bcell_RP_v3_定向科学重设计研究计划书_20261009.docx",
+    "exists": true,
+    "bytes": 293419,
+    "sha256": "14E7150A1CCB941B72558575C218AA0A6964CD0D90240FD15DD4CAB9F3065F4A",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "project_archive",
+    "role": "historical project snapshot",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\6013RP-wyf.zip",
+    "exists": true,
+    "bytes": 275782573,
+    "sha256": "920F3D96F851DF413073992530D61DA96D853826E1F291B1487DC4654721345C",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "r4_package",
+    "role": "read-only historical reader candidate",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\rp_v3_redesign\\20261009_stage0\\inputs_readonly\\SLE_Bcell_Submission_Package_QiTeng_R4_2026-09-29.zip",
+    "exists": true,
+    "bytes": 17948711,
+    "sha256": "3C7DF801C0A2813E381AE21D854E1D029328D3A2E17200506F879EAA5CCA72AF",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "retrospective_rp",
+    "role": "historical retrospective plan",
+    "required_for": "chronology only",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\rp_v3_redesign\\20261009_stage0\\inputs_readonly\\SLE_Bcell_Retrospective_Doctoral_Research_Proposal.docx",
+    "exists": true,
+    "bytes": 74802,
+    "sha256": "E3E05236443C51CC6A5268CD30ED6885B76CB4D041102A188AAB43D9327EA93B",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "diagnostic_package",
+    "role": "post-result exploratory diagnostics",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\rp_v3_redesign\\20261009_stage0\\inputs_readonly\\SLE_Bcell_独立复算与重设计审计包_20261009.zip",
+    "exists": true,
+    "bytes": 2460790,
+    "sha256": "DB7C7F24E93622520263B1449BA19FA9E1E8F4A143944FE23424A8F6803D41CD",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "gse174188_raw_counts",
+    "role": "discovery B-lineage raw-count matrix",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\gateC2B1\\20260810_171000_full_library_doublets\\04_full_raw_counts.h5ad",
+    "exists": true,
+    "bytes": 270671628,
+    "sha256": "DC3E96BCC53B52D5C53CC0515EE352DC414AE81340032108830408E06F244AD5",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "gse174188_representation",
+    "role": "disease-blind frozen representation",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\gateC2B2\\20260812_full_representation\\06_primary_all_cells_representation.h5ad",
+    "exists": true,
+    "bytes": 114432893,
+    "sha256": "594A040FC483973B38B744D5D0E526633D7F1C91F2544D34C28D35F2084E3AFB",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "gse174188_metadata_audit",
+    "role": "metadata and unit audit",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\gateC3\\20260815_metadata_design\\15_GATE_C3_METADATA_AUDIT.json",
+    "exists": true,
+    "bytes": 3097,
+    "sha256": "DF67E0123D7D9682662D4898AD64C157C6D03743A28084C77D80F591718CA2A2",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "gse174188_model_contract",
+    "role": "historical broad-compartment model contract",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\gateC3\\20260815_metadata_design\\14_MODEL_DESIGN_CONTRACT.json",
+    "exists": true,
+    "bytes": 2610,
+    "sha256": "657F09CDD66C8BA1DAD0190F1EBD83A45CD567CA1080A4FC2004C7117DC9594B",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "gse174188_sample_registry",
+    "role": "sample-level unit registry",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\gateC3\\20260815_metadata_design\\03_sample_design_audit.csv",
+    "exists": true,
+    "bytes": 55881,
+    "sha256": "AA4B1807B328B4B7AB0A0979E42BFC19837A18F814F29B06D9CD1971BB970EA2",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "gse174188_donor_registry",
+    "role": "donor-level unit registry",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\gateC3\\20260815_metadata_design\\07_donor_design_audit.csv",
+    "exists": true,
+    "bytes": 21406,
+    "sha256": "E5DC27D406C3B1E89C9B5E3D0AA1A7D63E59F8EF0AEB9A83CF7897CF33EBD980",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "gse174188_pseudobulk_registry",
+    "role": "sample-cohort compartment registry",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\gateC4A\\20260815_raw_pseudobulk_freeze\\03_pseudobulk_row_metadata.csv",
+    "exists": true,
+    "bytes": 248344,
+    "sha256": "1262AF43E9F572F4B063CD770BACE939AE171781210220B563D1F15FE69909C7",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "gse174188_primary_bconv_design",
+    "role": "89-row primary B_CONV design",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\gateC4A\\20260815_raw_pseudobulk_freeze\\06_primary_bconv_model_matrix.csv",
+    "exists": true,
+    "bytes": 21482,
+    "sha256": "E3CDB2B7038712534D032FF008F7386976BF63EDCD3E07589EE0C97CC3295876",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "program_dictionary",
+    "role": "frozen program membership and direction",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\gateC4A\\20260815_raw_pseudobulk_freeze\\11_program_dictionary.csv",
+    "exists": true,
+    "bytes": 14689,
+    "sha256": "B32D20C3739916BA4FB2C825520E003E72C13EE48EFA678782F0B9AE2B2E9BE0",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "gse135779_raw",
+    "role": "external raw sparse matrices and barcodes",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\Data\\processed\\GSE135779_nehar_validation\\source\\GSE135779_RAW.tar",
+    "exists": true,
+    "bytes": 1299783680,
+    "sha256": "B5764C303AC76873738D6E05B6992277FCD6A14BF5BFCB27331E54DCBCAC619B",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "gse135779_genes",
+    "role": "external feature dictionary",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\Data\\processed\\GSE135779_nehar_validation\\source\\GSE135779_genes.tsv.gz",
+    "exists": true,
+    "bytes": 257271,
+    "sha256": "53D571FC7422E854D4884D6497106EA7C138AD776012598713E7C72B0AF1D23C",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "gse135779_childhood_metadata",
+    "role": "external childhood cell metadata",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\Data\\processed\\GSE135779_nehar_validation\\source\\Meta_cSLE_processed_0809202_small.csv",
+    "exists": true,
+    "bytes": 20902801,
+    "sha256": "5704FC8626A7AEBF113D933D49A6275BE02CE1AC9FDFE7724E92D81DCD897A15",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "gse135779_adult_metadata",
+    "role": "external adult cell metadata",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\Data\\processed\\GSE135779_nehar_validation\\source\\Meta_caSLE_processed_08092021_small.csv",
+    "exists": true,
+    "bytes": 22285464,
+    "sha256": "B3530E5E222BFC0EF81A1F1B63A8FABC345B03A53CD0CF922D39C2950C85E25F",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "gse135779_source_audit",
+    "role": "external 56-sample source audit",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\gateC5A\\20260815_gse135779_source_mapping_freeze\\03_SAMPLE_SOURCE_AUDIT.csv",
+    "exists": true,
+    "bytes": 6096,
+    "sha256": "B4B209269E8F78B5C2EB5E46032E323F38468EFD5D3EC1C7E006D79B70BA42FD",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "gse135779_external_registry",
+    "role": "external pseudobulk unit registry",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\gateC5A\\20260815_gse135779_source_mapping_freeze\\08_EXTERNAL_PSEUDOBULK_ROW_METADATA.csv",
+    "exists": true,
+    "bytes": 47616,
+    "sha256": "C98FDE424A126661D45416CEB2D9251148049445B26358471D44237D1BFE855E",
+    "status": "AVAILABLE_HASHED"
+  },
+  {
+    "logical_id": "gse135779_childhood_design",
+    "role": "43-donor childhood design",
+    "required_for": "Stage0/WP1-WP3",
+    "path": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\gateC5A\\20260815_gse135779_source_mapping_freeze\\13_CHILDHOOD_MIN50_MODEL_MATRIX.csv",
+    "exists": true,
+    "bytes": 5123,
+    "sha256": "DAF675B51CA4996827967B2439C3FA3FBC6C0DCF03F8D76DE8337AB5C30E61F0",
+    "status": "AVAILABLE_HASHED"
+  }
+]

@@ -1,27 +1,55 @@
-# Scientific presentation status
+# Scientific presentation and active redesign status
 
-Effective date: 2026-09-09.
+Effective date: 2026-10-10.
 
-Current state: **SCIENTIFIC_PRESENTATION_MAINTENANCE_ONLY**.
+Overall state: **ACTIVE_RP_V3_SCIENTIFIC_REDESIGN / HOLD_SUBMISSION**.
 
-Supplementary Table S7 readability is closed following source rebuild, dual-renderer checks and the user's independent post-repair review. The accepted scientific/artwork baseline is commit `b1a9d28963fc9d82d407f4e2d1d5a01630ffde46`.
+## Frozen presentation baseline
 
-## Current objects
+The September manuscript, figures and Supplementary Information remain a valid
+scientific-presentation baseline. Their bounded conclusion is reproducible
+process-level B_CONV IFN/ISG remodeling. Identity failure, primary-composition
+non-support, weak genome-wide concordance, corrected transfer-calibration
+failure, observational regulatory evidence and the n=2 perturbation boundary
+remain part of the evidence hierarchy and must not be rescued by retuning.
 
-- Main text: `01_manuscript/Manuscript.md`.
-- Supplementary text: `01_manuscript/Supplementary_Information.md`.
-- Main DOCX/PDF and all scientific figures: `phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/`.
-- Current supplementary DOCX and WPS PDF: `phase17_v7/npj_sba_s7_readability/20260909_source_rebuild/documents/`.
-- Current supplementary LibreOffice PDF and S7 evidence: the same S7 run under `lo_final/`, `audit.json`, `pagination.json`, `a11y.json` and `page_comparison.csv`.
+Canonical editable sources remain:
 
-The S7 supplementary document supersedes the prior supplementary layout only. All 21 main panels retain their accepted roles; the 45 scientific Figure/Source Data assets remain unchanged.
+- `01_manuscript/Manuscript.md`
+- `01_manuscript/Supplementary_Information.md`
 
-## Scope and reopening
+The final September local package is retained under
+`04_submission/20260929_qiteng_submission_candidate/`, but it is not authorized
+for upload while RP v3 is active.
 
-The supported central claim remains reproducible process-level B_CONV IFN/ISG remodeling. Identity reproducibility failure, corrected external calibration failure and observational/mechanistically limited regulator evidence remain part of the interpretation.
+## Active RP v3 state
 
-Reopen an object when a specific numerical error, claim-owner/cross-reference mismatch, provenance failure, actual-size readability defect, new data or testable author scientific feedback warrants it. Record the object, evidence of the problem, proposed source change, before/after checks and stopping criterion. Use source rebuild and rerender where appropriate.
+- Stage 0 recovered 21/21 inputs and froze units, chronology, estimands and
+  branches.
+- Stage 0B closed the protocol fields and passed G0/G1 without inspecting a
+  disease coefficient.
+- WP1 used a 68-donor common support set and passed 11/11 final checks.
+- Current decision: `PASS_WP1_TO_WP2_PREFIT_AND_G2_FREEZE`.
+- WP4: `HOLD_CONDITIONAL`.
+- Submission, manuscript replacement, release and Zenodo: `HOLD`.
 
-No proactive model retuning, additional panel search or submission engineering is currently scheduled. Reconsider the scope when the user supplies a new scientific question or changes the working objective.
+## Reopening rule
 
-This status records accepted work, not a new full scientific audit. The preceding 208-test pass and dual-renderer review remain historical evidence for unchanged artifacts.
+The presentation baseline may be reopened only for a verified numerical error,
+claim-owner or cross-reference mismatch, provenance/hash failure, actual-size
+readability defect, new data, explicit author scientific feedback, a concrete
+portal requirement, or a gated RP v3 result that materially changes the paper.
+
+Any revision must begin from the source, rerender and pass the relevant audit.
+Manual editing of final PDFs is prohibited.
+
+## Next stage
+
+The only active scientific next step is:
+
+`WP2_PREFIT_IDENTIFIABILITY_AND_FULL_G2_SIMULATION_FREEZE`
+
+No WP2 disease-effect estimate may be fitted until the target, composition
+coordinates, support/missing-state rules, estimand scales, simulation truth and
+acceptance criteria are frozen. See `RP_V3_REDESIGN_STATUS.md` and the project
+README for the complete gate definition.

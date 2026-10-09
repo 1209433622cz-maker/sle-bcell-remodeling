@@ -1,0 +1,79 @@
+{
+  "created_at": "2026-10-09T23:55:22+08:00",
+  "status": "PASS_G1_TO_WP1_ANNOTATION_SENSITIVITY",
+  "g0a_input_recovery": "PASS",
+  "g0b_protocol_freeze": "PASS",
+  "g0_overall": "PASS_G0",
+  "g1": "PASS_G1_TO_WP1_ANNOTATION_SENSITIVITY",
+  "wp4": "HOLD_CONDITIONAL",
+  "submission": "HOLD",
+  "disease_effects_inspected": false,
+  "checks": [
+    {
+      "check": "a1_dictionary_complete",
+      "pass": true,
+      "detail": "7 positive + 7 negative genes"
+    },
+    {
+      "check": "a1_scores_finite",
+      "pass": true,
+      "detail": "150,402/150,402"
+    },
+    {
+      "check": "a1_structural_support",
+      "pass": true,
+      "detail": "minimum supported donors=72"
+    },
+    {
+      "check": "a1_future_arm_support",
+      "pass": true,
+      "detail": "minimum normal=33; managed=39"
+    },
+    {
+      "check": "pi_ref_valid",
+      "pass": true,
+      "detail": "sum=1.000000000000"
+    },
+    {
+      "check": "a2_full_cell_rebuild",
+      "pass": true,
+      "detail": "150,402 x 3,000"
+    },
+    {
+      "check": "a2_ifn_exclusion",
+      "pass": true,
+      "detail": "zero strong-ISG features"
+    },
+    {
+      "check": "a2_structural_alignment",
+      "pass": true,
+      "detail": "ARI=0.795; NMI=0.680; clusters=5"
+    },
+    {
+      "check": "t0_computable",
+      "pass": true,
+      "detail": "89 discovery strata; 43 reference controls"
+    },
+    {
+      "check": "external_frozen_score_computable",
+      "pass": true,
+      "detail": "54 external rows; 12/12 genes"
+    },
+    {
+      "check": "rank_score_computable",
+      "pass": true,
+      "detail": "fixed background=18,873"
+    },
+    {
+      "check": "simulation_technical_truth_recovery",
+      "pass": true,
+      "detail": "max |bias|=0.002; coverage=0.925-0.970"
+    },
+    {
+      "check": "result_blind_contract",
+      "pass": true,
+      "detail": "no disease coefficient or between-group score summary estimated"
+    }
+  ],
+  "next_stage": "SCIENTIFIC_REDESIGN_WP1_ANNOTATION_SENSITIVITY"
+}

@@ -1,0 +1,7 @@
+{
+  "mapping_sha256": "9CF9E19E54175030E518219A64C387162634A3BC35253D9936498B75988D1F13",
+  "created_at": "2026-10-09T16:46:01.085349+00:00",
+  "disease_design_parsed": false,
+  "rule": "unique-majority broad-compartment cell overlap; ties/compartment collapse stop",
+  "not_biological_ground_truth": true
+}

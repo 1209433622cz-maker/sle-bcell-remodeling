@@ -1,0 +1,12 @@
+{
+  "created_at": "2026-10-09T16:55:19.554002+00:00",
+  "decision": "PASS_WP1_TO_WP2_PREFIT_AND_G2_FREEZE",
+  "checks_passed": 11,
+  "checks_total": 11,
+  "core_result": "Managed-SLE IFN/ISG coefficient remains positive under all three frozen representations",
+  "A1_boundary": "A1 delta is small but is a joint identity-axis/common-composition sensitivity, not pure annotation or mediation",
+  "A2_boundary": "A2 is nearly identical to A0 and retains LY6E; no equivalence claim is authorized",
+  "G2": "NEXT_PREFIT_FREEZE_REQUIRED",
+  "WP4": "HOLD_CONDITIONAL",
+  "SUBMISSION": "HOLD"
+}

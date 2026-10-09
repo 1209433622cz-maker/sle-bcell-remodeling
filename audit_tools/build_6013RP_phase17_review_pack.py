@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
+r"""
 Build a compact, self-contained Phase 17 review package for the 6013RP-wyf project.
 
 The script is read-only with respect to the project. It selects analysis code,

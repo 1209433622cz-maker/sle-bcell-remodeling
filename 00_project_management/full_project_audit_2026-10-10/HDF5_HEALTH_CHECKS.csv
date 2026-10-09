@@ -1,0 +1,6 @@
+﻿relative_path,bytes,status,detail
+phase17_v7/gateC2B1/20260810_171000_full_library_doublets/04_full_raw_counts.h5ad,270671628,PASS,"root_keys=X,layers,obs,obsm,obsp,uns,var,varm,varp; objects=46; attrs=2"
+phase17_v7/gateC2B2/20260812_full_representation/06_primary_all_cells_representation.h5ad,114432893,PASS,"root_keys=layers,obs,obsm,obsp,uns,var,varm,varp; objects=98; attrs=2"
+phase17_v7/rp_v3_redesign/20261009_stage0b/a2_rebuild/03_a2_prepared.h5ad,90520372,PASS,"root_keys=X,layers,obs,obsm,obsp,uns,var,varm,varp; objects=82; attrs=2"
+phase17_v7/rp_v3_redesign/20261009_stage0b/a2_rebuild/08_isg_excluded_representation.h5ad,81981400,PASS,"root_keys=layers,obs,obsm,obsp,uns,var,varm,varp; objects=79; attrs=2"
+phase17_v7/rp_v3_redesign/20261009_stage0b/a2_repair_cpu/08_isg_excluded_representation.h5ad,81998933,PASS,"root_keys=layers,obs,obsm,obsp,uns,var,varm,varp; objects=78; attrs=2"

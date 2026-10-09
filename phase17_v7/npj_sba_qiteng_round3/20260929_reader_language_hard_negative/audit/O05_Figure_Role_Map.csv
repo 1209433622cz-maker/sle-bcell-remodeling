@@ -1,0 +1,23 @@
+﻿panel,decision,scientific_role,rationale,reopen_rule_or_next_action
+Figure 1a,KEEP,workflow / disease-blind identity -> disease inference,unique workflow owner,none
+Figure 1b,KEEP,fixed-representation policy-selection ARI,shows conditional pass before stricter end-to-end test,none
+Figure 1c,KEEP,fixed-representation state Jaccard,pairs with 1d to show conditional vs end-to-end stability,actual-size readability only
+Figure 1d,KEEP,end-to-end B_ASC-specific identity ceiling,highest-information main owner of reconstruction failure,do not restore old lower-information panel
+Figure 2a,KEEP,observed B_ASC fractions + adjusted means,descriptive/model bridge,none
+Figure 2b,KEEP,composition contrast hierarchy,primary/internal/nonoverlap/flare boundary hierarchy,none
+Figure 2c,KEEP — SOURCE-LANGUAGE REBUILD PASS,composition sensitivity family,separates null result from fragile-model concern,maintenance only; source data locked
+Figure 2d,KEEP,90 leave-one-sample-out influence,direct robustness visualization,none
+Figure 3a,KEEP — SOURCE-LANGUAGE REBUILD PASS,four prespecified B_CONV programs,establishes IFN/ISG priority against other programs,maintenance only; source data locked
+Figure 3b,KEEP,IFN/ISG robustness ladder,central process-level robustness owner,none
+Figure 3c,KEEP — SOURCE-LANGUAGE REBUILD PASS,prespecified IFN-arm gene coherence,gene-level support without implying genome-wide concordance,maintenance only; source data locked
+Figure 3d,KEEP,technical/pan-B specificity controls,prevents generic/technical interpretation,none
+Figure 4a,KEEP,source-label-defined external IFN analyses,primary external hierarchy,none
+Figure 4b,KEEP,discovery/internal vs external comparison,reader-facing replication bridge,none
+Figure 4c,KEEP,"4,410 shared genes + ten IFN genes",program-specific replication vs weak genome-wide rho,none
+Figure 4d,KEEP,required elastic-net calibration boundary,blocks source-label-independent transfer overclaim,do not retune mapper/threshold post outcome
+Figure 5a,KEEP,evidence classes / interpretive roles,causal-ceiling owner,must remain non-causal schematic
+Figure 5b,KEEP,core + extended IFN regulators,quantitative regulator owner,none
+Figure 5c,KEEP,proliferation specificity comparators,specificity control,none
+Figure 5d,KEEP,12-gene vs M5911 depletion ceiling,shows survival of narrow depletion and broader-depletion exception,do not restore old M5911-only summary
+Figure 5e,KEEP,two-donor IFN-beta response context,orthogonal descriptive context with n=2 ceiling,replace only with new biological replicates
+Supplementary Figure S10,KEEP — SOURCE-LANGUAGE REBUILD PASS,full IFN-overlap-depletion sensitivity and regulatory ceiling,preserves exact ULM/CAMERA/FRY exceptions while aligning reader terminology,new data or verified numerical/provenance defect only

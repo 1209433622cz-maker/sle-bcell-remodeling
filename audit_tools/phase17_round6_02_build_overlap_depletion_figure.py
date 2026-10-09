@@ -168,7 +168,7 @@ def main() -> None:
         axes[0, 0],
         ulm.loc[ulm["branch"].eq("frozen_ifn12_depleted")],
         "a",
-        "ULM after frozen 12-gene depletion",
+        "ULM after prespecified 12-gene depletion",
     )
     forest(
         axes[0, 1],
@@ -260,7 +260,7 @@ def main() -> None:
     axis.axvline(100, color="#777777", lw=0.65, ls="--")
     axis.set_xlim(50, 116 if npj_style else 103)
     axis.set_yticks(y_positions, label_order)
-    axis.set_xlabel("Frozen targets retained (%)")
+    axis.set_xlabel("Prespecified targets retained (%)")
     axis.set_title("Regulon target retention", loc="left", pad=4)
     if npj_style:
         axis.legend(frameon=False, loc="center right", bbox_to_anchor=(0.995, 0.28))

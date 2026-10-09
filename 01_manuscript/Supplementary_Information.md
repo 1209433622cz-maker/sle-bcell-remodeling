@@ -62,9 +62,9 @@ CAMERA and FRY directions were positive in all six tests. CAMERA passed BH corre
 
 | Depletion | Method | Positive direction | Dedicated q<0.05 | Main qualification |
 |---|---|---:|---:|---|
-| Frozen 12-gene IFN/ISG arm | ULM | 6/6 | 6/6 | Minimum slope retention 53.5%; all 95% confidence intervals above zero |
-| Frozen 12-gene IFN/ISG arm | CAMERA | 6/6 | 5/6 | Discovery STAT2 q=0.326 |
-| Frozen 12-gene IFN/ISG arm | FRY | 6/6 | 6/6 | Direction and corrected support retained |
+| Prespecified 12-gene IFN/ISG arm | ULM | 6/6 | 6/6 | Minimum slope retention 53.5%; all 95% confidence intervals above zero |
+| Prespecified 12-gene IFN/ISG arm | CAMERA | 6/6 | 5/6 | Discovery STAT2 q=0.326 |
+| Prespecified 12-gene IFN/ISG arm | FRY | 6/6 | 6/6 | Direction and corrected support retained |
 | M5911 | ULM | 6/6 | 5/6 | Discovery STAT2 retained 8/14 targets; slope 0.391, 95% CI -0.745 to 1.526; q=0.500 |
 | M5911 | CAMERA | 6/6 | 2/6 | Broad attenuation across contrasts; discovery STAT2 q=0.623 |
 | M5911 | FRY | 6/6 | 5/6 | Discovery STAT2 q=0.099 |
@@ -100,12 +100,12 @@ All 11 depleted ULM models retaining at least ten targets preserved direction in
 
 | Result family | Biological unit | Test or estimator | Sidedness | Multiplicity | Role |
 |---|---|---|---|---|---|
-| B_ASC composition | Sample-cohort stratum | Beta-binomial Wald | Two-sided | BH across three frozen base contrasts | Primary composition inference |
+| B_ASC composition | Sample-cohort stratum | Beta-binomial Wald | Two-sided | BH across three prespecified base contrasts | Primary composition inference |
 | Gene-level expression | Sample-cohort pseudobulk (GSE174188); donor pseudobulk (GSE135779) | edgeR robust quasi-likelihood F | Two-sided | BH within tested genes per contrast | Gene-level inference |
-| Four frozen programs | Sample-cohort pseudobulk (GSE174188); donor pseudobulk (GSE135779) | OLS with HC3 | Two-sided | BH across four programs per analysis | Program inference |
+| Four prespecified programs | Sample-cohort pseudobulk (GSE174188); donor pseudobulk (GSE135779) | OLS with HC3 | Two-sided | BH across four programs per analysis | Program inference |
 | TF-target activity | Ranked gene statistics | Signed-target slope t test | Two-sided | Global BH across 24 tests | Confirmatory regulatory evidence |
 | STAT1/STAT2 sensitivity | Ranked gene statistics | CAMERA and FRY | Positive-direction | Separate BH families of six per method | Correlation-aware sensitivity |
-| STAT1/STAT2 overlap depletion | Ranked gene statistics and pseudobulk counts | ULM, CAMERA and FRY | Two-sided ULM; positive-direction CAMERA/FRY | Separate BH family of six per branch and method | Post-freeze sensitivity |
+| STAT1/STAT2 overlap depletion | Ranked gene statistics and pseudobulk counts | ULM, CAMERA and FRY | Two-sided ULM; positive-direction CAMERA/FRY | Separate BH family of six per branch and method | Additional sensitivity |
 | End-to-end identity reproducibility | Cell resample within technical library | ARI, AMI, mapping agreement, state Jaccard and recall | Not tested | Five unchanged threshold criteria | Disease-blind robustness boundary |
 | Broad-state boundary propagation | Sample-cohort stratum | Frozen beta-binomial and TMM logCPM/HC3 models | Two-sided intervals | No new multiplicity family; same-data sensitivity | Assignment-uncertainty sensitivity |
 | M5911 | Ranked gene statistics | 10,000-permutation preranked test | Positive-direction | Descriptive BH across three contrasts | Orthogonal support |
@@ -215,6 +215,6 @@ replacement analysis. No corrected external disease result is shown.
 
 ## Supplementary Figure S10 | STAT1/STAT2 IFN-overlap-depletion sensitivity
 
-**a,** ULM slopes and 95% confidence intervals after removal of the frozen 12-gene IFN/ISG positive arm. **b,** Corresponding estimates after removal of all 97 M5911 genes; discovery STAT2 retains eight targets and its interval crosses zero. Labels report remaining matched targets. **c,** Exact branch- and method-specific Benjamini-Hochberg q values across the six regulator-by-contrast tests. **d,** Percentage of frozen matched targets retained after each depletion. All method-level directions remain positive, but M5911 depletion produces substantial attenuation and does not support an overlap-independent interpretation.
+**a,** ULM slopes and 95% confidence intervals after removal of the prespecified 12-gene IFN/ISG positive arm. **b,** Corresponding estimates after removal of all 97 M5911 genes; discovery STAT2 retains eight targets and its interval crosses zero. Labels report remaining matched targets. **c,** Exact branch- and method-specific Benjamini-Hochberg q values across the six regulator-by-contrast tests. **d,** Percentage of matched targets retained after each depletion. All method-level directions remain positive, but M5911 depletion produces substantial attenuation and does not support an overlap-independent interpretation.
 
 [[SUPPLEMENTARY_FIGURE:S10]]

@@ -1,0 +1,17 @@
+﻿field,value,status,blocks
+raw_input,"150,402 x 30,172 GSE174188 raw-count H5AD",FROZEN_VERIFIED,G0
+primary_independent_unit,donor; sample-cohort record retained where historically defined,FROZEN,all new regression
+repeated_donor_policy,donor-clustered paired bootstrap; no pseudo-independence,FROZEN_PRINCIPLE,resampling implementation
+IFN_program,IFI44L;IFI6;IFIT1;IFIT2;IFIT3;IRF7;ISG15;LY6E;MX1;MX2;OAS1;OAS2,FROZEN_MEMBERSHIP,T0/T_frozen
+A1_marker_dictionary,AIM2;BANK1;CCR7;CD27;CD40;CXCR4;FCER2;GPR183;IL4R;LTB;SELL;TCL1A;TNFRSF13B;VPREB3,CANDIDATE_FROM_EXISTING_DISEASE_BLIND_DICTIONARY,A1 score contract
+A1_IFN_overlap,[],VERIFIED,none
+A2_feature_rule,"hvg_isg_excluded; 3,000 HVGs; zero strong-ISG features",HISTORICAL_SPEC_AVAILABLE,A2 rebuild
+state_support_threshold,historical broad B_CONV=50 cells; new state threshold not inherited,OPEN,WP2/G1
+T0,same transform across A0/A1/A2,OPEN,delta_beta_ann
+T_frozen,discovery-control reference preferred,OPEN,WP3
+T_rank,fixed-background percentile rank mean,OPEN,WP3
+pi_ref,common-support composition,OPEN,beta_S/delta_beta_comp
+interpretive_margin_delta,none justified yet; report continuous differences,NO_MARGIN,equivalence/noninferiority wording
+conditional_bootstrap,"2,000 donor-clustered paired replicates planned",PLANNED_NOT_EXECUTED,precision benchmark
+simulation_core,null; composition-only; within-state-only; both same/opposite direction,SCENARIOS_FROZEN; PARAMETERS_OPEN,G2
+new_multiplicity,estimation-first; state IFN family 2K if formal tests are used,PRINCIPLE_FROZEN_K_OPEN,new q values

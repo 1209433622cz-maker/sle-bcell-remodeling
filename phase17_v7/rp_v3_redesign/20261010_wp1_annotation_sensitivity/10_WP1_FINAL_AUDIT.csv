@@ -1,0 +1,12 @@
+check,pass,detail
+provisional_gate_pass,True,PASS_WP1_ANNOTATION_SENSITIVITY_REVIEW_REQUIRED
+shared_population,True,n=68; controls=31; managed=37
+frozen_design,True,"['intercept', 'is_managed', 'age_centered', 'ethnicity_asian']; rank=4"
+bootstrap_contract,True,0.0
+no_formal_testing_or_margin,True,no p values; no equivalence margin
+integrity_manifest,True,9/9
+independent_point_recalculation,True,6.245004513516506e-17
+bootstrap_row_identity,True,rows=2000
+bootstrap_rank_and_success,True,{4: 2000}
+bootstrap_percentiles_recalculated,True,5.876375774871434e-17
+diagnostic_figure_pair,True,PNG and PDF

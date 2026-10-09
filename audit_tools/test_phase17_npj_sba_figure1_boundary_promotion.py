@@ -9,6 +9,8 @@ import json
 import unittest
 from pathlib import Path
 
+from qiteng_reader_language_contract import assert_authorized_supplement_delta
+
 
 ROOT = Path(__file__).resolve().parents[1]
 RUN = ROOT / "phase17_v7/npj_sba_figure1_boundary_promotion/20260902_source_rerender_gate"
@@ -75,9 +77,10 @@ class Figure1BoundaryPromotionTests(unittest.TestCase):
             sha256(ROOT / "01_manuscript/Manuscript.md"),
             sha256(CURRENT / "sources/Manuscript_scientific_presentation_freeze.md"),
         )
-        self.assertEqual(
-            sha256(ROOT / "01_manuscript/Supplementary_Information.md"),
-            sha256(CURRENT / "sources/Supplementary_Information_scientific_presentation_freeze.md"),
+        assert_authorized_supplement_delta(
+            self,
+            ROOT / "01_manuscript/Supplementary_Information.md",
+            CURRENT / "sources/Supplementary_Information_scientific_presentation_freeze.md",
         )
 
     def test_submission_package_is_unchanged(self) -> None:

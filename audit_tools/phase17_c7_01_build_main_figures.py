@@ -1041,7 +1041,7 @@ def build_figure2(root: Path, figure_dir: Path, source_dir: Path) -> None:
         contrasts["analysis_id"].eq("C3A_PRIMARY_C4_MANAGED_VS_NORMAL")
         & contrasts["variant"].eq("frozen_base50")
     ].copy()
-    primary = primary.assign(label="Frozen >=50", color=COLORS["sle"])
+    primary = primary.assign(label="Primary >=50", color=COLORS["sle"])
     sensitivity_primary = sensitivity.loc[
         sensitivity["analysis_id"].eq("C3A_PRIMARY_C4_MANAGED_VS_NORMAL")
     ].copy()
@@ -1170,7 +1170,7 @@ def build_figure3(root: Path, figure_dir: Path, source_dir: Path) -> None:
     figure, axes = plt.subplots(2, 2, figsize=(7.09, 5.75), constrained_layout=True)
     forest(axes[0, 0], primary_programs, "label", "effect", "ci_low", "ci_high", "color")
     axes[0, 0].set_xlabel("Program-score difference")
-    axes[0, 0].set_title("Four frozen programs in discovery", loc="left", pad=4)
+    axes[0, 0].set_title("Four prespecified programs in discovery", loc="left", pad=4)
     axes[0, 0].text(0.98, 0.03, "BH across four programs", transform=axes[0, 0].transAxes, ha="right", fontsize=6)
     panel_label(axes[0, 0], "a")
 
@@ -1206,7 +1206,7 @@ def build_figure3(root: Path, figure_dir: Path, source_dir: Path) -> None:
     axis.set_yticks(y, gene_labels)
     axis.set_xlabel("Gene-level log2 fold change")
     axis.legend(frameon=False, fontsize=6, loc="lower right")
-    axis.set_title("Frozen IFN-arm genes", loc="left", pad=4)
+    axis.set_title("Prespecified IFN-arm genes", loc="left", pad=4)
     style_axis(axis)
     panel_label(axis, "c")
 

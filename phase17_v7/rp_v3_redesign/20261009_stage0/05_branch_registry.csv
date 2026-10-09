@@ -1,0 +1,9 @@
+﻿branch,role,definition,outcome_blind,status,open_item
+A0,historical B_CONV/B_ASC scaffold,"r0.4 clusters 0,1,2,4 vs 3",True,FROZEN_HISTORICAL,retain original identity failure
+A1,continuous identity axis,NAIVE_TO_MEMORY_AXIS dictionary,True,CANDIDATE_DICTIONARY_AVAILABLE,freeze score construction/calibration and support rule
+A2,IFN-excluded alternative representation,"3,000 disease-blind HVGs with zero strong-ISG features",True,HISTORICAL_SPEC_AVAILABLE_REBUILD_REQUIRED,materialized branch H5AD not retained
+T0,common scale for annotation comparisons,"same gene background, normalization, center, scale and direction",,OPEN,reference population and parameters
+T_local,historical within-contrast z score,TMM logCPM; gene z scores within eligible contrast,,FROZEN_HISTORICAL,sensitivity only for new cross-branch comparisons
+T_frozen,discovery-reference external score,12-gene transform frozen from discovery controls,,OPEN,"gene background, normalization, center/scale, zero-variance rules"
+T_rank,fixed-background percentile-rank sensitivity,mean percentile rank of 12 genes in fixed background H,,OPEN,"freeze H, ties, zero and missing-gene handling"
+WP4,conditional regulatory extension,donor-level regulon plus matched depletion,,HOLD_CONDITIONAL,not opened until WP1-WP3 add interpretive value

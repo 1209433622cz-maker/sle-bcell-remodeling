@@ -124,7 +124,9 @@ def bridge_centroid_distances(obs, representation, representation_name: str):
     return pd.DataFrame(rows)
 
 
-def compact_representation(work, branch, resolutions, harmony_max_iter: int):
+def compact_representation(
+    work, branch, resolutions, harmony_max_iter: int, harmony_device: str | None
+):
     import anndata as ad
 
     compact = ad.AnnData(X=None, obs=work.obs.copy(), var=work.var.copy())
@@ -145,6 +147,8 @@ def compact_representation(work, branch, resolutions, harmony_max_iter: int):
         "resolutions": list(resolutions),
         "integration_covariate": "library_uuid",
         "harmony_max_iter": harmony_max_iter,
+        "harmony_device": harmony_device or "auto",
+        "harmony_version": work.uns["phase17_harmony"].get("version", "unknown"),
         "harmony_iterations": work.uns["phase17_harmony"]["iterations"],
         "harmony_converged": work.uns["phase17_harmony"]["converged"],
         "harmony_final_relative_objective_change": work.uns["phase17_harmony"][
@@ -155,7 +159,13 @@ def compact_representation(work, branch, resolutions, harmony_max_iter: int):
     return compact
 
 
-def validate_checkpoint(path: Path, branch_name: str, resolutions, harmony_max_iter: int | None = None):
+def validate_checkpoint(
+    path: Path,
+    branch_name: str,
+    resolutions,
+    harmony_max_iter: int | None = None,
+    harmony_device: str | None = None,
+):
     import anndata as ad
 
     if not path.exists():
@@ -172,6 +182,10 @@ def validate_checkpoint(path: Path, branch_name: str, resolutions, harmony_max_i
                 and metadata.get("harmony_converged") is not None
             )
         )
+        harmony_device_valid = (
+            harmony_device is None
+            or metadata.get("harmony_device") == harmony_device
+        )
         if (
             metadata.get("branch") == branch_name
             and metadata.get("schema_version") == BRANCH_SCHEMA_VERSION
@@ -179,6 +193,7 @@ def validate_checkpoint(path: Path, branch_name: str, resolutions, harmony_max_i
             and required.issubset(checkpoint.obs.columns)
             and "X_pca_harmony" in checkpoint.obsm
             and harmony_diagnostics_valid
+            and harmony_device_valid
         ):
             return checkpoint
     except Exception:
@@ -194,6 +209,7 @@ def fit_branch(
     n_neighbors: int,
     n_pcs: int,
     harmony_max_iter: int,
+    harmony_device: str | None,
 ):
     import scanpy as sc
     import harmonypy
@@ -201,7 +217,7 @@ def fit_branch(
 
     output_path = output / branch["filename"]
     checkpoint = validate_checkpoint(
-        output_path, branch["name"], resolutions, harmony_max_iter
+        output_path, branch["name"], resolutions, harmony_max_iter, harmony_device
     )
     primary_metrics = (
         output / "10_primary_neighbor_mixing.csv",
@@ -256,14 +272,34 @@ def fit_branch(
             work.obsm["X_umap_unintegrated"] = work.obsm["X_umap"].copy()
 
     print(f"[HARMONY] {branch['name']} by library_uuid", flush=True)
+    import inspect
+
+    harmony_kwargs = {
+        "random_state": SEED,
+        "max_iter_harmony": harmony_max_iter,
+    }
+    if "device" in inspect.signature(harmonypy.run_harmony).parameters:
+        harmony_kwargs["device"] = harmony_device
+    elif harmony_device is not None:
+        raise RuntimeError(
+            "The selected harmonypy runtime does not support an explicit device"
+        )
     harmony_out = harmonypy.run_harmony(
         work.obsm["X_pca"].astype(np.float64),
         work.obs,
         "library_uuid",
-        random_state=SEED,
-        max_iter_harmony=harmony_max_iter,
+        **harmony_kwargs,
     )
-    work.obsm["X_pca_harmony"] = harmony_out.Z_corr.T
+    corrected = np.asarray(harmony_out.Z_corr)
+    if corrected.shape[0] == work.n_obs:
+        work.obsm["X_pca_harmony"] = corrected
+    elif corrected.ndim == 2 and corrected.shape[1] == work.n_obs:
+        work.obsm["X_pca_harmony"] = corrected.T
+    else:
+        raise RuntimeError(
+            "Harmony corrected coordinates do not align with cells: "
+            f"coordinates={corrected.shape}, cells={work.n_obs}"
+        )
     objectives = [float(value) for value in harmony_out.objective_harmony]
     if len(objectives) >= 2:
         final_relative_change = (
@@ -276,6 +312,7 @@ def fit_branch(
         final_relative_change = float("nan")
         converged = False
     work.uns["phase17_harmony"] = {
+        "version": getattr(harmonypy, "__version__", "unknown"),
         "iterations": max(0, len(objectives) - 1),
         "converged": converged,
         "final_relative_objective_change": final_relative_change,
@@ -334,7 +371,9 @@ def fit_branch(
                 ]
             ).to_csv(output / "11_primary_bridge_centroid_distances.csv", index=False)
 
-    compact = compact_representation(work, branch, resolutions, harmony_max_iter)
+    compact = compact_representation(
+        work, branch, resolutions, harmony_max_iter, harmony_device
+    )
     print(f"[CHECKPOINT] {output_path}", flush=True)
     compact.write_h5ad(output_path, compression="gzip")
     del work
@@ -451,6 +490,12 @@ def main() -> int:
     parser.add_argument("--n-neighbors", type=int, default=15)
     parser.add_argument("--n-pcs", type=int, default=30)
     parser.add_argument("--harmony-max-iter", type=int, default=20)
+    parser.add_argument(
+        "--harmony-device",
+        choices=("cpu", "cuda", "mps"),
+        default=None,
+        help="Optional explicit harmonypy device; omission preserves auto-detection.",
+    )
     parser.add_argument("--resolutions", default=",".join(str(x) for x in DEFAULT_RESOLUTIONS))
     parser.add_argument(
         "--branches",
@@ -497,6 +542,7 @@ def main() -> int:
                 args.n_neighbors,
                 args.n_pcs,
                 args.harmony_max_iter,
+                args.harmony_device,
             )
         else:
             checkpoint = validate_checkpoint(
@@ -504,6 +550,7 @@ def main() -> int:
                 branch["name"],
                 resolutions,
                 args.harmony_max_iter,
+                args.harmony_device,
             )
             if checkpoint is not None:
                 branch_objects[branch["name"]] = checkpoint

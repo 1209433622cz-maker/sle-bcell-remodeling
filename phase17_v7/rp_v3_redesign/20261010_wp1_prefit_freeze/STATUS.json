@@ -1,0 +1,12 @@
+{
+  "status": "PREFIT_EXPORT_COMPLETE_REVIEW_REQUIRED",
+  "disease_coefficients_fitted": false,
+  "bootstrap_replicates": 0,
+  "A1_operator_selected": false,
+  "A1_weighted_score_not_automatically_RPv3_beta_S": true,
+  "full_IFN_exclusion_claim": false,
+  "A2_retains_program_gene": "LY6E",
+  "WP4": "HOLD_CONDITIONAL",
+  "SUBMISSION": "HOLD",
+  "scope": "No regression; no manuscript/figure changes; no replacement of frozen contracts"
+}

@@ -1,0 +1,8 @@
+{
+  "independent_status.json": true,
+  "A2_cluster_count_recount.csv": true,
+  "manifest_verification.csv": true,
+  "independent_checks.csv": true,
+  "A1_complete_support_membership.csv": true,
+  "identity_IFN_overlap_audit.csv": true
+}

@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-10-09T16:52:30.627351+00:00",
+  "status": "PASS_WP1_ANNOTATION_SENSITIVITY_REVIEW_REQUIRED",
+  "first_effect_fit_time": "2026-10-09T16:52:30.627359+00:00",
+  "analysis_population": 68,
+  "controls": 31,
+  "managed_sle": 37,
+  "design_columns": [
+    "intercept",
+    "is_managed",
+    "age_centered",
+    "ethnicity_asian"
+  ],
+  "design_rank": 4,
+  "A1_operator": "linear CPM reconstruction with frozen pi_ref, followed by frozen T0",
+  "A1_interpretation": "joint identity-axis/common-composition standardization sensitivity",
+  "A2_interpretation": "historical strong-ISG-list-excluded representation; LY6E retained",
+  "bootstrap_seed": 20261010,
+  "attempted_replicates": 2000,
+  "successful_replicates": 2000,
+  "failed_replicates": 0,
+  "failure_rate": 0.0,
+  "failure_threshold": 0.01,
+  "interval_method": "paired percentile",
+  "formal_p_values_reported": false,
+  "equivalence_margin": null,
+  "conditional_on_frozen_objects": [
+    "A2 mapping",
+    "A1 cutpoints",
+    "pi_ref",
+    "T0",
+    "68-donor support set"
+  ],
+  "G2": "NOT_ASSESSED_FULL_PROTOCOL_PENDING",
+  "WP4": "HOLD_CONDITIONAL",
+  "SUBMISSION": "HOLD",
+  "software": {
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.3.3",
+    "pandas": "2.3.3",
+    "statsmodels": "0.14.6"
+  }
+}

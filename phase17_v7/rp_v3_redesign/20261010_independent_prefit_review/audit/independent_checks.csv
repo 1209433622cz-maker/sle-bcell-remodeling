@@ -1,0 +1,39 @@
+check,pass,evidence
+Final_manifest_all_31_members_match,True,{'PASS': 31}
+Earlier_input_manifest_current_local_entries_match,False,"{'PASS': 20, 'MISMATCH': 5, 'EXTERNAL_INPUT_NOT_BUNDLED': 2}"
+A1_has_14_unique_markers,True,14
+A1_signs_7_positive_7_negative,True,"{1: 7, -1: 7}"
+A1_has_no_literal_IFN12_overlap,True,[]
+A1_parameters_match_dictionary,True,exact ordered marker/sign equality
+A1_frozen_SDs_positive_finite,True,0.3784816960848026
+A2_has_3000_frozen_features,True,3000
+A2_strong_ISG_flags_zero,True,0
+A2_immunoglobulin_flags_zero,True,0
+A2_full_IFN12_exclusion_claim_supported,False,Not a frozen strong-ISG gate. Literal retained program members: LY6E
+Prepared_shape_150402_3000,True,"(150402, 3000)"
+A2_unique_cell_IDs_150402,True,150402
+Prepared_final_cell_order_identical,True,prepared/final cell_id order
+A2_frozen_feature_order_exact,True,HDF5 gene_id_index vs frozen CSV var_name
+A2_five_clusters,True,"{'0': 97405, '1': 45489, '2': 5486, '3': 1331, '4': 691}"
+A2_X_pca_shape_and_finiteness,True,"(150402, 50)"
+A2_X_pca_harmony_shape_and_finiteness,True,"(150402, 50)"
+A2_checkpoint_has_no_explicit_outcome_columns,True,"['Processing_Cohort', 'analysis_branch_primary', 'analysis_branch_singlet_sensitivity', 'cell_id', 'donor_id', 'leiden_harmony_r0_4', 'library_uuid', 'residual_doublet_auto_call', 'residual_doublet_score', 'sample_uuid', 'source_cell_index']"
+A2_stored_disease_blind_flag,True,Metadata/column check only; not a complete source-code proof of blinding
+Prepared_nonnegative_finite_expression,True,"prepared normalized X, not raw IFN counts"
+A1_support_unique_stratum_bin,True,445
+A1_support_counts_nonnegative_integers,True,0
+A1_support_flags_match_30_rule,True,>=30
+A1_support_89_units_5_bins,True,"(89, 5)"
+A1_primary_units_are_89_distinct_donors,True,89
+A1_marginal_support_reproduced,True,"{1: 72, 2: 78, 3: 84, 4: 85, 5: 83}"
+A1_marginal_arm_counts_sum,True,Only summary arithmetic; individual disease labels not used
+Pi_arithmetic_matches_own_count_column,True,5.551115123125783e-17
+Pi_all_five_weights_positive_sum_one,True,0.9999999999999998
+T0_ordered_IFN12_and_43_reference,True,12
+T0_SDs_positive_finite,True,0.3141977913857227
+Simulation_summary_five_scenarios_25_rows,True,25
+Simulation_summary_400_replicates_per_row,True,[np.int64(400)]
+Simulation_summary_no_reported_fit_failure,True,0.0
+Simulation_bias_arithmetic,True,1.415425936179826e-16
+Simulation_RMSE_at_least_abs_bias,True,0.0107750745309514
+Simulation_coverage_valid_400_trial_counts,True,"[np.float64(0.925), np.float64(0.97)]"

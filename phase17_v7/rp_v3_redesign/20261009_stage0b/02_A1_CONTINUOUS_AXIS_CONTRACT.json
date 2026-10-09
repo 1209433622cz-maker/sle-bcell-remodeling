@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-10-09T23:53:43+08:00",
+  "status": "FROZEN_FOR_STAGE0B",
+  "outcome_blind": true,
+  "input": "raw non-negative integer single-cell counts",
+  "cell_normalization": "full-library counts normalized to 10,000 then log1p",
+  "gene_standardization": "gene-wise mean and population SD across all 150,402 disease-blind cells",
+  "formula": "mean(z of seven positive genes) minus mean(z of seven negative genes)",
+  "orientation": "positive values indicate the frozen memory-directed marker pole",
+  "hard_subtype_authorized": false,
+  "technical_support_bins": "five global A1 quantile bins; audit scaffold only",
+  "gene_availability_rule": "at least 80% of genes in each sign; observed 7/7 and 7/7",
+  "dictionary_sha256": "B32D20C3739916BA4FB2C825520E003E72C13EE48EFA678782F0B9AE2B2E9BE0"
+}

@@ -1,0 +1,9 @@
+{
+  "external_eligible_rows": 54,
+  "external_program_genes_missing": [],
+  "t_frozen_finite": true,
+  "t_rank_finite_discovery": true,
+  "t_rank_finite_external": true,
+  "disease_coefficients_estimated": false,
+  "external_group_summaries_computed": false
+}

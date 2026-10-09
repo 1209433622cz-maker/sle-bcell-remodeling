@@ -1,0 +1,15 @@
+{
+  "discovery_strata": 89,
+  "normal_reference_strata": 43,
+  "finite_scores": 89,
+  "reference_score_mean": 3.9503284364569525e-16,
+  "reference_score_sd": 0.5576835202447915,
+  "all_score_quantiles": {
+    "0.0": -1.1802214997182727,
+    "0.25": -0.24744350544189617,
+    "0.5": 0.1468229435248359,
+    "0.75": 1.3081997666899496,
+    "1.0": 3.8792831091835676
+  },
+  "disease_coefficient_estimated": false
+}

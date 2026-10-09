@@ -1,0 +1,40 @@
+{
+  "state": "QITENG_R2_GUARDED_REFINEMENT_PASS",
+  "manuscript_pages": 31,
+  "combined_pdf_pages": 36,
+  "visual_qa": "all 31 manuscript pages inspected; cover and declarations inspected",
+  "a11y": {
+    "manuscript": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "cover_letter": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "declarations": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    }
+  },
+  "pdf_preflight": {
+    "pdf_count": 20,
+    "warnings": 0,
+    "errors": 0
+  },
+  "package_verifier": "PASS: 38 payload files verified",
+  "qiteng_docx_qa": {
+    "expected_text_missing": 0,
+    "forbidden_text_hits": 0,
+    "first_appearance_citation_order_pass": true,
+    "known_parser_limitation": "reference_count=0 because Word auto-numbered Reference paragraphs are not recognized; extraction layer confirms 33 references."
+  },
+  "unchanged_scientific_artwork": {
+    "Figures_1_to_5": true,
+    "Supplementary_Information_DOCX_PDF": true
+  },
+  "changed_file_count": 16
+}

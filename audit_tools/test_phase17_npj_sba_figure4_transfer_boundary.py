@@ -9,6 +9,8 @@ import json
 import unittest
 from pathlib import Path
 
+from qiteng_reader_language_contract import assert_authorized_supplement_delta
+
 
 ROOT = Path(__file__).resolve().parents[1]
 RUN = ROOT / "phase17_v7/npj_sba_figure4_transfer_boundary/20260907_source_rerender_gate"
@@ -71,7 +73,7 @@ class Figure4TransferBoundaryTests(unittest.TestCase):
 
     def test_root_text_and_supplement_are_locked(self) -> None:
         self.assertEqual(sha256(ROOT / "01_manuscript/Manuscript.md"), sha256(CURRENT / "sources/Manuscript_scientific_presentation_freeze.md"))
-        self.assertEqual(sha256(ROOT / "01_manuscript/Supplementary_Information.md"), sha256(CURRENT / "sources/Supplementary_Information_scientific_presentation_freeze.md"))
+        assert_authorized_supplement_delta(self, ROOT / "01_manuscript/Supplementary_Information.md", CURRENT / "sources/Supplementary_Information_scientific_presentation_freeze.md")
 
     def test_submission_package_is_unchanged(self) -> None:
         self.assertEqual(sha256(PACKAGE), "02A3855FB1EFEAC790C1138396CF783050D0DE744D23B5B5E0C1E97875BA83A1")

@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-10-09T23:53:43+08:00",
+  "status": "FROZEN_FOR_TECHNICAL_IDENTIFIABILITY_TRIAL",
+  "technical_state_scaffold": "five global quantile bins of continuous A1; not biological subtypes",
+  "minimum_cells_per_donor_bin": 30,
+  "minimum_independent_donors_per_bin_overall": 20,
+  "future_inferential_minimum_donors_per_comparison_arm": 10,
+  "failure_policy": "drop unsupported donor-bin rows and report support; never merge after effect inspection",
+  "common_support": "only bins meeting the prespecified support rule in every compared branch",
+  "pi_ref": "pooled A1-bin composition across eligible A0 normal-control donor strata",
+  "pi_ref_freeze_timing": "computed in the Stage 0B trial before any disease coefficient is estimated",
+  "publication_state_labels_authorized": false
+}

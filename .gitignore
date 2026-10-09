@@ -138,3 +138,23 @@ Thumbs.db
 !.env.example
 credentials.json
 secrets.*
+
+# Third-party writing-skill runtimes, rendered QA pages and duplicated package
+# inputs are local evidence caches. Keep compact audit ledgers and regenerated
+# artwork, but do not place these deep or duplicated trees in Git.
+phase17_v7/npj_sba_qiteng_round3/**/qa/
+phase17_v7/npj_sba_qiteng_round3/**/candidate/
+phase17_v7/npj_sba_qiteng_round3/**/input_r2/
+
+# RP v3 retains compact contracts, gates and scientific outputs in Git. Source
+# render reviews, environment copies, H5AD/NPZ rebuild caches and superseded
+# interrupted exports remain local and are described by the action records.
+phase17_v7/rp_v3_redesign/**/source_review/
+phase17_v7/rp_v3_redesign/**/inputs_readonly/
+phase17_v7/rp_v3_redesign/**/runtime/
+phase17_v7/rp_v3_redesign/**/external_source_rebuild/
+phase17_v7/rp_v3_redesign/**/a2_rebuild/
+phase17_v7/rp_v3_redesign/**/a2_repair_cpu/
+phase17_v7/rp_v3_redesign/20261010_wp1_prefit_export/
+phase17_v7/rp_v3_redesign/20261010_wp1_prefit_export_rerun/
+phase17_v7/rp_v3_redesign/20261010_wp1_prefit_export_final/

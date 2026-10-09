@@ -1,0 +1,302 @@
+{
+  "created_at": "2026-10-09T22:59:10+08:00",
+  "rp_version": "3.0",
+  "submission_status": "HOLD_SUBMISSION",
+  "g0a_input_recovery": "PASS",
+  "g0b_protocol_freeze": "HOLD",
+  "g0_overall": "HOLD_G0_PROTOCOL_FREEZE",
+  "g1_precheck": "HOLD_DEFINITION_AND_IDENTIFIABILITY_TRIAL_REQUIRED",
+  "wp4": "HOLD_CONDITIONAL",
+  "open_protocol_fields": [
+    "state_support_threshold",
+    "T0",
+    "T_frozen",
+    "T_rank",
+    "pi_ref",
+    "conditional_bootstrap",
+    "simulation_core",
+    "new_multiplicity"
+  ],
+  "checks": [
+    {
+      "check": "all_required_inputs_present",
+      "pass": true,
+      "detail": "21/21"
+    },
+    {
+      "check": "r4_internal_manifest",
+      "pass": true,
+      "detail": "38 files"
+    },
+    {
+      "check": "diagnostic_internal_manifest",
+      "pass": true,
+      "detail": "34 files"
+    },
+    {
+      "check": "gse174188_shape",
+      "pass": true,
+      "detail": "[150402, 30172]"
+    },
+    {
+      "check": "gse174188_raw_counts",
+      "pass": true,
+      "detail": "{\"finite\": true, \"minimum\": 1.0, \"maximum\": 7836.0, \"maximum_fractional_distance\": 0.0, \"nonnegative_integer\": true}"
+    },
+    {
+      "check": "gse174188_unit_fields_complete",
+      "pass": true,
+      "detail": "{'donor_id': 259, 'sample_uuid': 271, 'library_uuid': 88, 'Processing_Cohort': 4}"
+    },
+    {
+      "check": "raw_representation_alignment",
+      "pass": true,
+      "detail": "{'same_index': True, 'same_core_metadata': True}"
+    },
+    {
+      "check": "primary_bconv_independent_donors",
+      "pass": true,
+      "detail": "rows=89 donors=89"
+    },
+    {
+      "check": "gse135779_raw_size",
+      "pass": true,
+      "detail": "1299783680"
+    },
+    {
+      "check": "gse135779_raw_sha256",
+      "pass": true,
+      "detail": "B5764C303AC76873738D6E05B6992277FCD6A14BF5BFCB27331E54DCBCAC619B"
+    },
+    {
+      "check": "gse135779_tar_pairs",
+      "pass": true,
+      "detail": "{'members': 112, 'matrix_members': 56, 'barcode_members': 56, 'paired_samples': 56, 'unpaired_matrix': [], 'unpaired_barcodes': []}"
+    },
+    {
+      "check": "gse135779_source_audit",
+      "pass": true,
+      "detail": "samples=56"
+    },
+    {
+      "check": "rp_docx_layout_review",
+      "pass": true,
+      "detail": "36 LibreOffice-rendered pages visually inspected; no clipping/overlap"
+    }
+  ],
+  "docx_review": {
+    "comments_xml": false,
+    "tracked_insertions": 0,
+    "tracked_deletions": 0,
+    "field_instruction_nodes": 25,
+    "rendered_pages": 36,
+    "toc_last_page_field": 37,
+    "layout_status": "PASS_WITH_MAINTENANCE_NOTE"
+  },
+  "r4_integrity": {
+    "status": "PASS",
+    "manifest": "SLE_Bcell_Submission_Package/SHA256SUMS.csv",
+    "checked": 38,
+    "failed": []
+  },
+  "diagnostic_integrity": {
+    "status": "PASS",
+    "manifest": "SHA256SUMS.csv",
+    "checked": 34,
+    "failed": []
+  },
+  "gse174188_raw": {
+    "shape": [
+      150402,
+      30172
+    ],
+    "obs_index_unique": true,
+    "var_index_unique": true,
+    "obs_columns": [
+      "source_cell_index",
+      "donor_id",
+      "sample_uuid",
+      "library_uuid",
+      "Processing_Cohort"
+    ],
+    "var_columns": [
+      "gene_id",
+      "feature_name"
+    ],
+    "obsm_keys": [],
+    "obs_unique": {
+      "donor_id": 259,
+      "sample_uuid": 271,
+      "library_uuid": 88,
+      "Processing_Cohort": 4
+    },
+    "obs_missing": {
+      "source_cell_index": 0,
+      "donor_id": 0,
+      "sample_uuid": 0,
+      "library_uuid": 0,
+      "Processing_Cohort": 0
+    },
+    "relationships": [
+      {
+        "left": "sample_uuid",
+        "right": "donor_id",
+        "left_levels": 271,
+        "left_with_multiple_right": 0,
+        "maximum_right_per_left": 1
+      },
+      {
+        "left": "sample_uuid",
+        "right": "Processing_Cohort",
+        "left_levels": 271,
+        "left_with_multiple_right": 53,
+        "maximum_right_per_left": 3
+      },
+      {
+        "left": "library_uuid",
+        "right": "Processing_Cohort",
+        "left_levels": 88,
+        "left_with_multiple_right": 0,
+        "maximum_right_per_left": 1
+      },
+      {
+        "left": "donor_id",
+        "right": "sample_uuid",
+        "left_levels": 259,
+        "left_with_multiple_right": 11,
+        "maximum_right_per_left": 3
+      }
+    ],
+    "has_X": true,
+    "x_dtype": "float32",
+    "x_stored_values": 103783938,
+    "raw_count_scan": {
+      "finite": true,
+      "minimum": 1.0,
+      "maximum": 7836.0,
+      "maximum_fractional_distance": 0.0,
+      "nonnegative_integer": true
+    }
+  },
+  "gse174188_representation": {
+    "shape": [
+      150402,
+      3000
+    ],
+    "obs_index_unique": true,
+    "var_index_unique": true,
+    "obs_columns": [
+      "source_cell_index",
+      "donor_id",
+      "sample_uuid",
+      "library_uuid",
+      "Processing_Cohort",
+      "residual_doublet_score",
+      "residual_doublet_auto_call",
+      "analysis_branch_primary",
+      "analysis_branch_singlet_sensitivity",
+      "leiden_harmony_r0_2",
+      "leiden_harmony_r0_4",
+      "leiden_harmony_r0_6",
+      "leiden_harmony_r0_8",
+      "leiden_harmony_r1_0",
+      "leiden_harmony_r1_2"
+    ],
+    "var_columns": [
+      "gene_id",
+      "feature_name",
+      "n_cells",
+      "highly_variable",
+      "means",
+      "dispersions",
+      "dispersions_norm",
+      "highly_variable_nbatches",
+      "highly_variable_intersection",
+      "is_mitochondrial",
+      "is_ribosomal",
+      "is_hemoglobin",
+      "is_stress",
+      "is_cell_cycle",
+      "is_immunoglobulin",
+      "is_strong_isg",
+      "hvg_primary",
+      "hvg_isg_excluded",
+      "hvg_union",
+      "mean",
+      "std"
+    ],
+    "obsm_keys": [
+      "X_pca",
+      "X_pca_harmony",
+      "X_umap_harmony",
+      "X_umap_unintegrated"
+    ],
+    "obs_unique": {
+      "donor_id": 259,
+      "sample_uuid": 271,
+      "library_uuid": 88,
+      "Processing_Cohort": 4
+    },
+    "obs_missing": {
+      "source_cell_index": 0,
+      "donor_id": 0,
+      "sample_uuid": 0,
+      "library_uuid": 0,
+      "Processing_Cohort": 0,
+      "residual_doublet_score": 0,
+      "residual_doublet_auto_call": 0,
+      "analysis_branch_primary": 0,
+      "analysis_branch_singlet_sensitivity": 0,
+      "leiden_harmony_r0_2": 0,
+      "leiden_harmony_r0_4": 0,
+      "leiden_harmony_r0_6": 0,
+      "leiden_harmony_r0_8": 0,
+      "leiden_harmony_r1_0": 0,
+      "leiden_harmony_r1_2": 0
+    },
+    "relationships": [
+      {
+        "left": "sample_uuid",
+        "right": "donor_id",
+        "left_levels": 271,
+        "left_with_multiple_right": 0,
+        "maximum_right_per_left": 1
+      },
+      {
+        "left": "sample_uuid",
+        "right": "Processing_Cohort",
+        "left_levels": 271,
+        "left_with_multiple_right": 53,
+        "maximum_right_per_left": 3
+      },
+      {
+        "left": "library_uuid",
+        "right": "Processing_Cohort",
+        "left_levels": 88,
+        "left_with_multiple_right": 0,
+        "maximum_right_per_left": 1
+      },
+      {
+        "left": "donor_id",
+        "right": "sample_uuid",
+        "left_levels": 259,
+        "left_with_multiple_right": 11,
+        "maximum_right_per_left": 3
+      }
+    ],
+    "has_X": false
+  },
+  "gse174188_alignment": {
+    "same_index": true,
+    "same_core_metadata": true
+  },
+  "gse135779_tar": {
+    "members": 112,
+    "matrix_members": 56,
+    "barcode_members": 56,
+    "paired_samples": 56,
+    "unpaired_matrix": [],
+    "unpaired_barcodes": []
+  },
+  "next_stage": "SCIENTIFIC_REDESIGN_STAGE0B_PROTOCOL_AND_MINIMAL_TRIAL"
+}

@@ -1,0 +1,14 @@
+﻿check,pass,detail
+all_required_inputs_present,True,21/21
+r4_internal_manifest,True,38 files
+diagnostic_internal_manifest,True,34 files
+gse174188_shape,True,"[150402, 30172]"
+gse174188_raw_counts,True,"{""finite"": true, ""minimum"": 1.0, ""maximum"": 7836.0, ""maximum_fractional_distance"": 0.0, ""nonnegative_integer"": true}"
+gse174188_unit_fields_complete,True,"{'donor_id': 259, 'sample_uuid': 271, 'library_uuid': 88, 'Processing_Cohort': 4}"
+raw_representation_alignment,True,"{'same_index': True, 'same_core_metadata': True}"
+primary_bconv_independent_donors,True,rows=89 donors=89
+gse135779_raw_size,True,1299783680
+gse135779_raw_sha256,True,B5764C303AC76873738D6E05B6992277FCD6A14BF5BFCB27331E54DCBCAC619B
+gse135779_tar_pairs,True,"{'members': 112, 'matrix_members': 56, 'barcode_members': 56, 'paired_samples': 56, 'unpaired_matrix': [], 'unpaired_barcodes': []}"
+gse135779_source_audit,True,samples=56
+rp_docx_layout_review,True,36 LibreOffice-rendered pages visually inspected; no clipping/overlap

@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-10-09T23:53:43+08:00",
+  "status": "SCENARIOS_AND_OUTPUTS_FROZEN; FULL_ACCEPTANCE_THRESHOLDS_DEFERRED",
+  "seed": 20261009,
+  "technical_replicates_per_scenario": 400,
+  "planned_full_replicates_per_scenario": 2000,
+  "scenarios": [
+    "null",
+    "composition_only",
+    "within_state_only",
+    "composition_and_within_same_direction",
+    "composition_and_within_opposite_direction"
+  ],
+  "estimands": [
+    "broad_compartment_difference",
+    "common_composition_standardized_difference",
+    "state_specific_differences"
+  ],
+  "required_outputs": [
+    "bias",
+    "rmse",
+    "empirical_95pct_coverage",
+    "sign_error",
+    "fit_failure_rate",
+    "truth_recovery_direction"
+  ],
+  "technical_pass_rule": "all scenarios complete; finite outputs; analytic truth reproduced within Monte Carlo tolerance",
+  "full_G2_note": "technical completion does not authorize a G2 PASS or publication inference"
+}

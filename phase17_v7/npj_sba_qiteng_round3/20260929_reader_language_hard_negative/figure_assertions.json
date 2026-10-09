@@ -1,0 +1,120 @@
+[
+  {
+    "check": "Figure2.panel_a.control_raw_points",
+    "actual": 43,
+    "expected": 43,
+    "pass": true
+  },
+  {
+    "check": "Figure2.panel_a.managed_sle_raw_points",
+    "actual": 47,
+    "expected": 47,
+    "pass": true
+  },
+  {
+    "check": "Figure2.panel_a.total_raw_points",
+    "actual": 90,
+    "expected": 90,
+    "pass": true
+  },
+  {
+    "check": "Figure2.panel_a.adjusted_predictions",
+    "actual": 2,
+    "expected": 2,
+    "pass": true
+  },
+  {
+    "check": "Figure2.panel_b.frozen_contrasts",
+    "actual": 5,
+    "expected": 5,
+    "pass": true
+  },
+  {
+    "check": "Figure2.panel_c.mandatory_sensitivities",
+    "actual": 4,
+    "expected": 4,
+    "pass": true
+  },
+  {
+    "check": "Figure2.panel_d.leave_one_out_deletions",
+    "actual": 90,
+    "expected": 90,
+    "pass": true
+  },
+  {
+    "check": "Figure2.panel_a.raw_points_sent_to_scatter",
+    "actual": 90,
+    "expected": 90,
+    "pass": true
+  },
+  {
+    "check": "Figure2_sample_level_composition.minimum_visible_font_pt",
+    "actual": "6.00 pt",
+    "expected": "true",
+    "pass": true
+  },
+  {
+    "check": "Figure3.panel_a.frozen_programs",
+    "actual": 4,
+    "expected": 4,
+    "pass": true
+  },
+  {
+    "check": "Figure3.panel_b.ifn_analyses",
+    "actual": 7,
+    "expected": 7,
+    "pass": true
+  },
+  {
+    "check": "Figure3.panel_c.frozen_ifn_genes",
+    "actual": 12,
+    "expected": 12,
+    "pass": true
+  },
+  {
+    "check": "Figure3.panel_c.primary_gene_level_tested",
+    "actual": 10,
+    "expected": 10,
+    "pass": true
+  },
+  {
+    "check": "Figure3.panel_c.nonoverlap_gene_level_tested",
+    "actual": 11,
+    "expected": 11,
+    "pass": true
+  },
+  {
+    "check": "Figure3.panel_c.primary_filtered_genes",
+    "actual": [
+      "IFIT1",
+      "IFIT2"
+    ],
+    "expected": [
+      "IFIT1",
+      "IFIT2"
+    ],
+    "pass": true
+  },
+  {
+    "check": "Figure3.panel_c.nonoverlap_filtered_genes",
+    "actual": [
+      "IFIT1"
+    ],
+    "expected": [
+      "IFIT1"
+    ],
+    "pass": true
+  },
+  {
+    "check": "Figure3.panel_d.program_control_estimates",
+    "actual": 8,
+    "expected": 8,
+    "pass": true
+  },
+  {
+    "check": "Figure3_gse174188_bconv_transcription.minimum_visible_font_pt",
+    "actual": "6.00 pt",
+    "expected": "true",
+    "pass": true
+  }
+]

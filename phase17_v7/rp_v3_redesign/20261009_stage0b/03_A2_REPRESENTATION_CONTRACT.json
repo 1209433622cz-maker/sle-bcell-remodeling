@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-10-09T23:53:43+08:00",
+  "status": "FROZEN_AND_MATERIALIZED_FOR_STAGE0B",
+  "outcome_blind": true,
+  "feature_policy": "historical hvg_isg_excluded",
+  "features": 3000,
+  "strong_isg_features": 0,
+  "immunoglobulin_features": 0,
+  "technical_nuisance_features": 0,
+  "normalization": "full 16,357-gene filtered background cp10k then log1p; A2 subset afterward",
+  "pca": "randomized PCA, up to 50 components",
+  "integration": "Harmony by library_uuid; max_iter=20; seed=20260806",
+  "neighbors": 15,
+  "identity_resolution": 0.4,
+  "minimal_trial": "one full-cell A2 rebuild; no disease fields; no disease-effect inspection",
+  "prepared_h5ad": "H:\\cuhk-2025fALL\\6013RP-wyf\\phase17_v7\\rp_v3_redesign\\20261009_stage0b\\a2_rebuild\\03_a2_prepared.h5ad",
+  "prepared_h5ad_sha256": "FA23FAB973B96A9B128F251B3F0FF946D03BD34F12B90EC39AECC2A967C12256",
+  "frozen_features_sha256": "887A673CC3E7F7C009AE3059CCA7E5E0C9143C58CAA3AFB20D5C29FC4641B387"
+}
