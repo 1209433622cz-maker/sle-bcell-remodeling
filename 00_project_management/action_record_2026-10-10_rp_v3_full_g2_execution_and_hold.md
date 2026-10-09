@@ -174,6 +174,7 @@ current full-G2 HOLD remains permanent provenance.
 - ordinary Git HTTPS push failed three times because the GitHub connection was
   reset or timed out. The already authenticated GitHub CLI API remained
   available, so the exact local tree was uploaded through the official Git Data
-  API and `main` was fast-forwarded. Final local and remote commit:
-  `85c725281a17bffa35b2ec7e202ee691c036beba`; final tree:
+  API and `main` was fast-forwarded. The synchronized scientific/result commit
+  before this documentation-only follow-up was
+  `85c725281a17bffa35b2ec7e202ee691c036beba`; scientific/result tree:
   `ac63e80212d756610e3a744f52e9341c85a13fa4`.
