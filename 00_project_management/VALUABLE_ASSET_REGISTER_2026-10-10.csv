@@ -7,10 +7,11 @@ P0,WP1 prefit contract,phase17_v7/rp_v3_redesign/20261010_wp1_prefit_contract/,c
 P0,WP1 result,phase17_v7/rp_v3_redesign/20261010_wp1_annotation_sensitivity/,canonical,Point estimates bootstrap intervals diagnostic figure and final adjudication,TRACK
 P0,WP2 effect-free preflight,phase17_v7/rp_v3_redesign/20261010_wp2_effect_free_prefit/,canonical,Support geometry target scenario and acceptance freeze without disease-effect inspection,TRACK
 P0,G2 implementation freeze,phase17_v7/rp_v3_redesign/20261010_g2_implementation_freeze/,canonical,Generator truth receipt domain policy runtime qualification and execution contract,TRACK
+P0,Full G2 adjudication,phase17_v7/rp_v3_redesign/20261010_g2_full_adjudication/,canonical,Complete HOLD decision target and scenario summaries independent readjudication receipt and next-stage contract,TRACK
 P0,G2 executable code,audit_tools/rp_v3_g2_*.py; audit_tools/run_rp_v3_g2_full.ps1,canonical,Full synthetic scheduler adjudicator tests and freeze tooling,TRACK
 P0,WP1 code,audit_tools/rp_v3_wp1_01_finalize_prefit.py; audit_tools/rp_v3_wp1_02_fit_annotation_sensitivity.py; audit_tools/rp_v3_wp1_03_review.py,canonical,Recompute and independently review WP1,TRACK
 P0,WP1 runner,audit_tools/run_rp_v3_wp1.ps1,canonical,One-command gated WP1 execution,TRACK
-P0,RP v3 tests,audit_tools/test_rp_v3_stage0_freeze.py; audit_tools/test_rp_v3_stage0b.py; audit_tools/test_rp_v3_wp1.py,canonical,Regression protection for completed redesign gates,TRACK
+P0,RP v3 tests,audit_tools/test_rp_v3_stage0_freeze.py; audit_tools/test_rp_v3_stage0b.py; audit_tools/test_rp_v3_wp1.py; audit_tools/test_rp_v3_wp2_prefit.py; audit_tools/test_rp_v3_g2.py,canonical,Regression protection for completed redesign gates,TRACK
 P0,Full file audit,00_project_management/full_project_audit_2026-10-10/,current,File hashes sizes format health duplicates and portability review,TRACK
 P1,Manuscript baseline,01_manuscript/Manuscript.md,frozen baseline,Future comparison and gated revision source,TRACK
 P1,Supplement baseline,01_manuscript/Supplementary_Information.md,frozen baseline,Future comparison and gated revision source,TRACK

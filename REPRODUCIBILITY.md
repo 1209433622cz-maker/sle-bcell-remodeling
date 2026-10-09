@@ -5,7 +5,7 @@
 The active branch state is `ACTIVE_RP_V3_SCIENTIFIC_REDESIGN` with journal
 submission on hold. The public v1.1.0 release described below remains an
 immutable historical reproducibility snapshot; it does not contain the newer
-RP v3 Stage 0, Stage 0B, WP1 or WP2 effect-free preflight work.
+RP v3 Stage 0, Stage 0B, WP1, WP2 effect-free preflight or full-G2 work.
 
 Completed active gates:
 
@@ -24,6 +24,11 @@ Completed active gates:
   generator, paired bootstrap, nonlinear truth engine and Windows runtime;
   50/50 pilot attempts, 60,000/60,000 inner fits and 250/250 truth rows passed;
   decision `PASS_G2_IMPLEMENTATION_AND_DOMAIN_FREEZE__READY_FOR_FULL_G2`.
+- Full G2: completed 25/25 scenarios, 50,000 outer attempts and 60,106,000
+  paired-bootstrap fits. A fresh independent readjudication was byte-identical
+  to the official output. The applicable domain returned 90/150 PASS and
+  60/150 HOLD target-scenario cells, so the decision is
+  `HOLD_G2_APPLICABLE_DOMAIN` and real WP2 effects remain locked.
 
 Current one-command entry points are:
 
@@ -35,13 +40,22 @@ powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_wp2_prefit.ps1 
   -OutputDir .\phase17_v7\rp_v3_redesign\wp2_prefit_reproduction
 ```
 
-The next permitted work is full synthetic G2 execution, beginning with R0 and
-then retaining all 25 scenarios. The execution contract now binds the generator,
-independent truth engine, truth receipt, full scheduler, adjudicator, runtime and
-domain policy. No WP2 disease coefficient, manuscript replacement, submission
-package, GitHub Release or Zenodo update is authorized before the complete
-applicable G2 domain passes and receives a separate post-G2 review.
-The active numerical and governance summary is in
+The raw full-G2 run is intentionally Git-ignored because it contains 6,004
+files. Its tracked compact adjudication preserves accounting, all 250
+target-scenario decisions, scenario and target summaries, the independent
+readjudication receipt and a hash manifest. The validated local runtime was
+`D:\bioinfor\python.exe` (Python 3.13.7, NumPy 2.3.3). An attempted front test in
+the Miniforge environment terminated inside NumPy linear algebra before
+simulation; no frozen output was changed.
+
+The next permitted work is only
+`RP_V3_G2_HOLD_DIAGNOSTIC_AND_AMENDMENT_GATE`. It may diagnose interval
+undercoverage and prospectively freeze one replacement implementation, or
+contract the RP v3 scope. No WP2 disease coefficient, manuscript replacement,
+submission package, GitHub Release or Zenodo update is authorized. Threshold
+relaxation, adverse-scenario removal and overwriting the current HOLD are
+prohibited. See
+`phase17_v7/rp_v3_redesign/20261010_g2_full_adjudication/` and
 `00_project_management/RP_V3_REDESIGN_STATUS.md`.
 
 ## Current correction status

@@ -17,20 +17,20 @@ rewritten. The active project is now following the focused redesign specified by
 Research Plan v3. Stage 0 input recovery, Stage 0B protocol/identifiability work,
 WP1 annotation sensitivity, the WP2 effect-free structural preflight and the G2
 implementation/domain freeze are complete. The full 25-scenario G2 operating-
-characteristic run has not yet been executed. Therefore,
+characteristic run is also complete and returned a coverage-driven HOLD. Therefore,
 manuscript replacement, submission, GitHub Release and Zenodo updates remain on
 hold until the redesign produces a fully gated and materially informative result.
 
 Current gate:
 
 ```text
-PASS_G2_IMPLEMENTATION_AND_DOMAIN_FREEZE__READY_FOR_FULL_G2
+HOLD_G2_APPLICABLE_DOMAIN__WP2_REAL_EFFECTS_LOCKED
 ```
 
 Next stage:
 
 ```text
-G2_FULL_EXECUTION_R0_CORE_FIRST
+RP_V3_G2_HOLD_DIAGNOSTIC_AND_AMENDMENT_GATE
 ```
 
 ## Scientific position
@@ -136,7 +136,7 @@ Decision:
 See the [WP2 preflight review](phase17_v7/rp_v3_redesign/20261010_wp2_effect_free_prefit/11_WP2_PREFIT_ADVISOR_REVIEW.md)
 and [machine-readable gate](phase17_v7/rp_v3_redesign/20261010_wp2_effect_free_prefit/06_WP2_PREFIT_GATE_STATUS.json).
 
-### G2 implementation and domain freeze
+### G2 implementation, full execution and adjudication
 
 The sufficient-count generator, actual paired-bootstrap estimator and an
 independent nonlinear truth engine are now hash-bound. Independent Windows
@@ -146,23 +146,31 @@ indices were byte-identical across platforms; the largest floating-point
 difference was `8.88e-16`.
 
 R0, R2 and R4 are frozen as the applicable performance domain. R1 and R3 remain
-mandatory boundary domains and cannot be deleted or rescued. The complete
-chunked scheduler and adjudicator are implemented, but full G2 remains
-`NOT_RUN` and no WP2 real effect is unlocked.
+mandatory boundary domains and cannot be deleted or rescued. The complete grid
+then ran 50,000 outer attempts and 60,106,000 paired-bootstrap fits with no
+numerical failures. Of 150 applicable target-scenario cells, 90 passed and 60
+were held. Coverage passed in 91/150 cells; all 59 coverage failures were
+undercoverage. Bias passed in 149/150, truth precision in 150/150 and registered
+exact-null type-I control in 10/10. None of the ten targets passed all 15
+required applicable scenarios, so no WP2 real effect is unlocked.
 
 Decision:
-`PASS_G2_IMPLEMENTATION_AND_DOMAIN_FREEZE__READY_FOR_FULL_G2`.
+`HOLD_G2_APPLICABLE_DOMAIN`.
 
 See the [G2 implementation review](phase17_v7/rp_v3_redesign/20261010_g2_implementation_freeze/10_G2_IMPLEMENTATION_ADVISOR_REVIEW.md),
 [execution contract](phase17_v7/rp_v3_redesign/20261010_g2_implementation_freeze/08_G2_EXECUTION_CONTRACT.json)
-and [local runbook](phase17_v7/rp_v3_redesign/20261010_g2_implementation_freeze/11_G2_FULL_RUN_RUNBOOK.md).
+and [full-G2 post-adjudication review](phase17_v7/rp_v3_redesign/20261010_g2_full_adjudication/08_G2_POST_ADJUDICATION_REVIEW.md).
 
-## Next gate: full G2 execution
+## Next gate: G2 HOLD diagnosis and prospective amendment
 
-Run the five R0 core scenarios first as an operational checkpoint, then complete
-all 25 frozen scenarios and apply the unchanged target-scenario adjudicator.
-WP2 results may be fitted only after a complete applicable-domain G2 PASS and a
-separate post-G2 review. WP4 remains conditional and submission remains on hold.
+The held percentile-bootstrap implementation cannot be used for real WP2
+effects. The next gate may diagnose undercoverage and prospectively freeze at
+most one scientifically justified replacement implementation. It may not relax
+the acceptance thresholds, remove adverse scenarios, inspect real WP2 responses
+or overwrite the current HOLD. Any G2B must retain the target/scenario contract,
+use a new binding and fresh random streams, and pass a complete adjudication plus
+separate review before an unlock recommendation can be considered. Scope
+contraction remains the required exit if no defensible repair is frozen.
 
 ## Reproduce the active redesign
 
@@ -181,17 +189,23 @@ powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_wp1.ps1
 powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_wp2_prefit.ps1 `
   -OutputDir .\phase17_v7\rp_v3_redesign\wp2_prefit_reproduction
 
-powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_g2_full.ps1 `
+& .\audit_tools\run_rp_v3_g2_full.ps1 `
   -Python D:\bioinfor\python.exe `
   -OutputRoot .\phase17_v7\rp_v3_redesign\g2_full_runs\20261010_full `
-  -Regimes R0 `
-  -ChunkSize 25
+  -Regimes @('R0','R1','R2','R3','R4') `
+  -ChunkSize 25 `
+  -Adjudicate
+
+D:\bioinfor\python.exe `
+  .\audit_tools\rp_v3_g2_04_finalize_full_adjudication.py `
+  --run-root .\phase17_v7\rp_v3_redesign\g2_full_runs\20261010_full `
+  --output-dir .\phase17_v7\rp_v3_redesign\g2_full_adjudication_reproduction
 ```
 
 Run the focused tests:
 
 ```powershell
-C:\ProgramData\miniforge3\envs\sle-bcell\python.exe -m unittest -v `
+D:\bioinfor\python.exe -m unittest -v `
   audit_tools.test_rp_v3_stage0_freeze `
   audit_tools.test_rp_v3_stage0b `
   audit_tools.test_rp_v3_wp1 `
@@ -218,6 +232,7 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 | WP1 result | [`phase17_v7/rp_v3_redesign/20261010_wp1_annotation_sensitivity/`](phase17_v7/rp_v3_redesign/20261010_wp1_annotation_sensitivity/) |
 | WP2 effect-free preflight and G2 registries | [`phase17_v7/rp_v3_redesign/20261010_wp2_effect_free_prefit/`](phase17_v7/rp_v3_redesign/20261010_wp2_effect_free_prefit/) |
 | G2 implementation/domain freeze | [`phase17_v7/rp_v3_redesign/20261010_g2_implementation_freeze/`](phase17_v7/rp_v3_redesign/20261010_g2_implementation_freeze/) |
+| Full G2 adjudication and next-stage contract | [`phase17_v7/rp_v3_redesign/20261010_g2_full_adjudication/`](phase17_v7/rp_v3_redesign/20261010_g2_full_adjudication/) |
 | Reproducibility detail | [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) |
 
 ## Repository layout
