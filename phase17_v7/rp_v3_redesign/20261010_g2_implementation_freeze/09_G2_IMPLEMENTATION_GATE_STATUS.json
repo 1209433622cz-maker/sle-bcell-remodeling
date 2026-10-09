@@ -1,0 +1,20 @@
+{
+  "WP2_REAL_EFFECT_UNLOCK": false,
+  "cross_platform_numeric_tolerance_pass": true,
+  "decision": "PASS_G2_IMPLEMENTATION_AND_DOMAIN_FREEZE__READY_FOR_FULL_G2",
+  "full_G2": "NOT_RUN",
+  "full_scheduler_and_adjudicator_implemented": true,
+  "generator_qualified": true,
+  "independent_truth_qualified": true,
+  "next_stage": "G2_FULL_EXECUTION_R0_CORE_FIRST",
+  "prohibited_until_G2_pass": [
+    "WP2 real disease effects",
+    "WP4",
+    "manuscript replacement",
+    "submission",
+    "release",
+    "Zenodo"
+  ],
+  "truth_precision_passes": "250/250",
+  "windows_technical_pilot": "50/50 attempts accounted; 30 intervals; 20 support stops; 60000/60000 inner fits"
+}

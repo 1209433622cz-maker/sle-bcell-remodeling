@@ -6,6 +6,8 @@ P0,Stage 0B decision,phase17_v7/rp_v3_redesign/20261009_stage0b/14_STAGE0B_GATE_
 P0,WP1 prefit contract,phase17_v7/rp_v3_redesign/20261010_wp1_prefit_contract/,canonical,Pre-effect support design operator and hash freeze,TRACK
 P0,WP1 result,phase17_v7/rp_v3_redesign/20261010_wp1_annotation_sensitivity/,canonical,Point estimates bootstrap intervals diagnostic figure and final adjudication,TRACK
 P0,WP2 effect-free preflight,phase17_v7/rp_v3_redesign/20261010_wp2_effect_free_prefit/,canonical,Support geometry target scenario and acceptance freeze without disease-effect inspection,TRACK
+P0,G2 implementation freeze,phase17_v7/rp_v3_redesign/20261010_g2_implementation_freeze/,canonical,Generator truth receipt domain policy runtime qualification and execution contract,TRACK
+P0,G2 executable code,audit_tools/rp_v3_g2_*.py; audit_tools/run_rp_v3_g2_full.ps1,canonical,Full synthetic scheduler adjudicator tests and freeze tooling,TRACK
 P0,WP1 code,audit_tools/rp_v3_wp1_01_finalize_prefit.py; audit_tools/rp_v3_wp1_02_fit_annotation_sensitivity.py; audit_tools/rp_v3_wp1_03_review.py,canonical,Recompute and independently review WP1,TRACK
 P0,WP1 runner,audit_tools/run_rp_v3_wp1.ps1,canonical,One-command gated WP1 execution,TRACK
 P0,RP v3 tests,audit_tools/test_rp_v3_stage0_freeze.py; audit_tools/test_rp_v3_stage0b.py; audit_tools/test_rp_v3_wp1.py,canonical,Regression protection for completed redesign gates,TRACK
@@ -26,4 +28,6 @@ P3,September submission package,04_submission/20260929_qiteng_submission_candida
 P3,QiTeng QA runtime,phase17_v7/npj_sba_qiteng_round3/20260929_reader_language_hard_negative/qa/,noncanonical cache,Audit provenance only; deep paths and third-party duplicates,IGNORE
 P3,RP v3 interrupted exports,phase17_v7/rp_v3_redesign/20261010_wp1_prefit_export*,noncanonical diagnostics,Incident reconstruction only; canonical prefit is wp1_prefit_freeze,IGNORE
 P3,WP2 external review candidate,phase17_v7/rp_v3_redesign/20261010_wp2_external_candidate/,review input,Retain locally for forensic comparison; project-side preflight is canonical,IGNORE
+P3,G2 external technical candidate,phase17_v7/rp_v3_redesign/20261010_g2_external_candidate/,review input,Retain locally for bundle and cross-platform forensic comparison,IGNORE
+P2,G2 full-run checkpoints,phase17_v7/rp_v3_redesign/g2_full_runs/,future canonical evidence after review,Large resumable synthetic Monte Carlo chunks; retain locally until post-G2 compact freeze,LOCAL_ONLY
 P3,Workspace archives,6013RP-wyf.zip; phase17_v7/*.zip,local backups,Disaster recovery after independent checksum review,LOCAL_ONLY

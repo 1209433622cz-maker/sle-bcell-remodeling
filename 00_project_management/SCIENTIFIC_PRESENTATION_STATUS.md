@@ -31,8 +31,11 @@ for upload while RP v3 is active.
 - WP1 used a 68-donor common support set and passed 11/11 final checks.
 - WP2 effect-free preflight verified five-bin support, p/q measurement geometry
   and an 8/8 ILR design without fitting a disease effect.
+- The G2 generator, independent truth engine, paired-bootstrap estimator,
+  full-run scheduler and adjudicator passed technical and Windows
+  requalification. Full G2 has not been run.
 - Current decision:
-  `PASS_WP2_EFFECT_FREE_PREFLIGHT__HOLD_G2_EXECUTION_IMPLEMENTATION_REQUIRED`.
+  `PASS_G2_IMPLEMENTATION_AND_DOMAIN_FREEZE__READY_FOR_FULL_G2`.
 - WP4: `HOLD_CONDITIONAL`.
 - Submission, manuscript replacement, release and Zenodo: `HOLD`.
 
@@ -50,11 +53,10 @@ Manual editing of final PDFs is prohibited.
 
 The only active scientific next step is:
 
-`G2_GENERATOR_TRUTH_ENGINE_AND_TECHNICAL_PILOT`
+`G2_FULL_EXECUTION_R0_CORE_FIRST`
 
-The target, scenario and acceptance registries are frozen, but no WP2
-disease-effect estimate may be fitted until the sufficient-count generator,
-independent nonlinear-truth engine, truth-precision receipt and actual paired
-bootstrap implementation pass a technical pilot and complete the hashed G2
-execution contract. See `RP_V3_REDESIGN_STATUS.md` and the project README for
-the complete gate definition.
+The target, scenario, acceptance and domain-adjudication rules are frozen. Run
+R0 first, then retain and adjudicate all 25 scenarios. No WP2 disease-effect
+estimate may be fitted until the complete applicable-domain G2 gate passes and
+is separately reviewed. See `RP_V3_REDESIGN_STATUS.md` and the project README
+for the complete gate definition.

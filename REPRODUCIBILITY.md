@@ -20,6 +20,10 @@ Completed active gates:
   partitioning, distinct cell and captured-UMI geometry and an 8/8 four-ILR
   design without fitting a disease effect; decision
   `PASS_WP2_EFFECT_FREE_PREFLIGHT__HOLD_G2_EXECUTION_IMPLEMENTATION_REQUIRED`.
+- G2 implementation/domain freeze: independently requalified the simulation
+  generator, paired bootstrap, nonlinear truth engine and Windows runtime;
+  50/50 pilot attempts, 60,000/60,000 inner fits and 250/250 truth rows passed;
+  decision `PASS_G2_IMPLEMENTATION_AND_DOMAIN_FREEZE__READY_FOR_FULL_G2`.
 
 Current one-command entry points are:
 
@@ -31,12 +35,12 @@ powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_wp2_prefit.ps1 
   -OutputDir .\phase17_v7\rp_v3_redesign\wp2_prefit_reproduction
 ```
 
-The next permitted work is G2 generator/truth-engine implementation and a
-technical pilot. The prefit gate binds the target, 25-scenario and acceptance
-registries, but the G2 execution contract remains deliberately incomplete until
-the generator, independent truth engine and truth-precision receipt are hashed.
-No WP2 disease coefficient, manuscript replacement, submission package, GitHub
-Release or Zenodo update is authorized before the applicable G2 domain passes.
+The next permitted work is full synthetic G2 execution, beginning with R0 and
+then retaining all 25 scenarios. The execution contract now binds the generator,
+independent truth engine, truth receipt, full scheduler, adjudicator, runtime and
+domain policy. No WP2 disease coefficient, manuscript replacement, submission
+package, GitHub Release or Zenodo update is authorized before the complete
+applicable G2 domain passes and receives a separate post-G2 review.
 The active numerical and governance summary is in
 `00_project_management/RP_V3_REDESIGN_STATUS.md`.
 

@@ -1,0 +1,22 @@
+{
+  "candidate_unit_tests": "48/48 PASS",
+  "canonical_integration_tests": "10/10 PASS",
+  "full_G2": "NOT_RUN",
+  "numpy_version": "2.3.3",
+  "pandas_version": "2.3.3",
+  "pilot_attempts": 50,
+  "pilot_inner_bootstraps": 60000,
+  "pilot_inner_failures": 0,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python_executable": "D:\\bioinfor\\python.exe",
+  "python_version": "3.13.7",
+  "status": "PASS_WINDOWS_G2_TECHNICAL_RUNTIME",
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "truth_precision_passes": 250,
+  "truth_precision_rows": 250
+}

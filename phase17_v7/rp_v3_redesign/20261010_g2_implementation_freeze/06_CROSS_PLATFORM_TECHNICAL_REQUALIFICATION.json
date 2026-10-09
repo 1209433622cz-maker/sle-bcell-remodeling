@@ -1,0 +1,38 @@
+{
+  "G2": "NOT_RUN",
+  "candidate_manifest_failures": 0,
+  "candidate_manifest_payloads": 934,
+  "candidate_zip_sha256": "d9fb9e1dbbb889fbab72ad499869844b29e3d7b0ec36bfbd7d48837cdef1afba",
+  "pilot": {
+    "attempts": 50,
+    "exact_bootstrap_index_matches": 30,
+    "exact_generated_array_checks": 200,
+    "inner_bootstraps": 60000,
+    "maximum_interval_endpoint_absolute_difference": 2.220446049250313e-16,
+    "maximum_point_estimate_absolute_difference": 8.881784197001252e-16,
+    "maximum_response_absolute_difference": 8.881784197001252e-16,
+    "pass": true,
+    "status_matches": 50,
+    "support_stops": 20,
+    "supported": 30
+  },
+  "scientific_effects_computed": false,
+  "status": "PASS_CROSS_PLATFORM_TECHNICAL_REQUALIFICATION",
+  "truth": {
+    "matching_final_effort_levels": 25,
+    "matching_statuses": 25,
+    "maximum_absolute_differences": {
+      "mcse_over_typical_se": 4.7704895589362195e-17,
+      "support_probability_arm0": 0.0,
+      "support_probability_arm1": 0.0,
+      "truth": 1.1102230246251565e-16,
+      "truth_mc_95_halfwidth": 1.713039432527097e-17,
+      "truth_mcse": 8.782037597132586e-18,
+      "typical_coefficient_se": 3.469446951953614e-18,
+      "whole68_support_probability": 0.0
+    },
+    "pass": true,
+    "scenario_count": 25,
+    "target_scenario_rows": 250
+  }
+}

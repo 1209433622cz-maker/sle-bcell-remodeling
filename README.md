@@ -15,22 +15,22 @@ The public v1.1.0 archive and the September scientific-presentation baseline are
 retained as historical, reproducible snapshots. They are not being silently
 rewritten. The active project is now following the focused redesign specified by
 Research Plan v3. Stage 0 input recovery, Stage 0B protocol/identifiability work,
-WP1 annotation sensitivity and the WP2 effect-free structural preflight are
-complete. The preflight passed, but the G2 execution implementation remains
-locked. Therefore,
+WP1 annotation sensitivity, the WP2 effect-free structural preflight and the G2
+implementation/domain freeze are complete. The full 25-scenario G2 operating-
+characteristic run has not yet been executed. Therefore,
 manuscript replacement, submission, GitHub Release and Zenodo updates remain on
 hold until the redesign produces a fully gated and materially informative result.
 
 Current gate:
 
 ```text
-PASS_WP2_EFFECT_FREE_PREFLIGHT__HOLD_G2_EXECUTION_IMPLEMENTATION_REQUIRED
+PASS_G2_IMPLEMENTATION_AND_DOMAIN_FREEZE__READY_FOR_FULL_G2
 ```
 
 Next stage:
 
 ```text
-G2_GENERATOR_TRUTH_ENGINE_AND_TECHNICAL_PILOT
+G2_FULL_EXECUTION_R0_CORE_FIRST
 ```
 
 ## Scientific position
@@ -136,21 +136,33 @@ Decision:
 See the [WP2 preflight review](phase17_v7/rp_v3_redesign/20261010_wp2_effect_free_prefit/11_WP2_PREFIT_ADVISOR_REVIEW.md)
 and [machine-readable gate](phase17_v7/rp_v3_redesign/20261010_wp2_effect_free_prefit/06_WP2_PREFIT_GATE_STATUS.json).
 
-## Next gate: G2 implementation and technical pilot
+### G2 implementation and domain freeze
 
-Before any WP2 disease-effect model is fitted, the project must now implement,
-qualify and hash:
+The sufficient-count generator, actual paired-bootstrap estimator and an
+independent nonlinear truth engine are now hash-bound. Independent Windows
+requalification reproduced all 50 pilot statuses, 60,000/60,000 successful
+inner fits and 250/250 truth-precision passes. Generated counts and bootstrap
+indices were byte-identical across platforms; the largest floating-point
+difference was `8.88e-16`.
 
-1. the sufficient-count observation generator;
-2. an independently implemented nonlinear-truth engine;
-3. a truth-precision qualification receipt;
-4. the actual paired 2,000-bootstrap interval implementation;
-5. technical-pilot evidence for complete attempt accounting, deterministic
-   random streams and resumability;
-6. a hash-complete approved G2 execution contract.
+R0, R2 and R4 are frozen as the applicable performance domain. R1 and R3 remain
+mandatory boundary domains and cannot be deleted or rescued. The complete
+chunked scheduler and adjudicator are implemented, but full G2 remains
+`NOT_RUN` and no WP2 real effect is unlocked.
 
-WP2 results may be interpreted only after G2 passes. WP4 remains conditional and
-submission remains on hold.
+Decision:
+`PASS_G2_IMPLEMENTATION_AND_DOMAIN_FREEZE__READY_FOR_FULL_G2`.
+
+See the [G2 implementation review](phase17_v7/rp_v3_redesign/20261010_g2_implementation_freeze/10_G2_IMPLEMENTATION_ADVISOR_REVIEW.md),
+[execution contract](phase17_v7/rp_v3_redesign/20261010_g2_implementation_freeze/08_G2_EXECUTION_CONTRACT.json)
+and [local runbook](phase17_v7/rp_v3_redesign/20261010_g2_implementation_freeze/11_G2_FULL_RUN_RUNBOOK.md).
+
+## Next gate: full G2 execution
+
+Run the five R0 core scenarios first as an operational checkpoint, then complete
+all 25 frozen scenarios and apply the unchanged target-scenario adjudicator.
+WP2 results may be fitted only after a complete applicable-domain G2 PASS and a
+separate post-G2 review. WP4 remains conditional and submission remains on hold.
 
 ## Reproduce the active redesign
 
@@ -168,6 +180,12 @@ powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_stage0b.ps1
 powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_wp1.ps1
 powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_wp2_prefit.ps1 `
   -OutputDir .\phase17_v7\rp_v3_redesign\wp2_prefit_reproduction
+
+powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_g2_full.ps1 `
+  -Python D:\bioinfor\python.exe `
+  -OutputRoot .\phase17_v7\rp_v3_redesign\g2_full_runs\20261010_full `
+  -Regimes R0 `
+  -ChunkSize 25
 ```
 
 Run the focused tests:
@@ -177,7 +195,8 @@ C:\ProgramData\miniforge3\envs\sle-bcell\python.exe -m unittest -v `
   audit_tools.test_rp_v3_stage0_freeze `
   audit_tools.test_rp_v3_stage0b `
   audit_tools.test_rp_v3_wp1 `
-  audit_tools.test_rp_v3_wp2_prefit
+  audit_tools.test_rp_v3_wp2_prefit `
+  audit_tools.test_rp_v3_g2
 ```
 
 Large public matrices and cell-level intermediates are intentionally outside
@@ -198,6 +217,7 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 | WP1 prefit contract | [`phase17_v7/rp_v3_redesign/20261010_wp1_prefit_contract/`](phase17_v7/rp_v3_redesign/20261010_wp1_prefit_contract/) |
 | WP1 result | [`phase17_v7/rp_v3_redesign/20261010_wp1_annotation_sensitivity/`](phase17_v7/rp_v3_redesign/20261010_wp1_annotation_sensitivity/) |
 | WP2 effect-free preflight and G2 registries | [`phase17_v7/rp_v3_redesign/20261010_wp2_effect_free_prefit/`](phase17_v7/rp_v3_redesign/20261010_wp2_effect_free_prefit/) |
+| G2 implementation/domain freeze | [`phase17_v7/rp_v3_redesign/20261010_g2_implementation_freeze/`](phase17_v7/rp_v3_redesign/20261010_g2_implementation_freeze/) |
 | Reproducibility detail | [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) |
 
 ## Repository layout

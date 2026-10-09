@@ -1,0 +1,38 @@
+{
+  "G2": "NOT_RUN",
+  "G2_PASS": false,
+  "WP2_REAL_EFFECT_UNLOCK": false,
+  "WP4": "HOLD_CONDITIONAL",
+  "acceptance_registry_sha256": "5b2d60e574ac6b92e4c3b9acb00d9c1372261b1be83ab045c2c1192ce625b24e",
+  "adjudicable_regimes": [
+    "R0",
+    "R2",
+    "R4"
+  ],
+  "adjudicator_sha256": "055a1f20802eb879cf398381baf441a979acab9f8a721c0e6dcf6e22216c5d02",
+  "approved_for_full_G2_execution": true,
+  "boundary_regimes": [
+    "R1",
+    "R3"
+  ],
+  "calibration_model_sha256": "ecc817549566c1a423237d488313efdba3684965e5c30ff2aa89fc6dc3d7fa0f",
+  "cross_platform_receipt_sha256": "783a76b800ca1b6630a59ac69bd4a8c200b2a44942ff96799b85fd63b37ba083",
+  "domain_policy_sha256": "ed123508f562978fcb7aff16f14c9792c2238b61bd0150a084f33142de501001",
+  "full_grid": "25 scenarios x 2000 outer attempts x 2000 paired bootstraps when supported",
+  "full_runner_sha256": "e5b9b6090186a2d0fd5aeb73d6cc2c7e1d84ce43dc202694e8dd54d0bdad20d5",
+  "independent_truth_code_sha256": "b9193fdc63431da130bf8135ffbabb669ada9ec6e37db184b09666f36784199f",
+  "minimum_supported_for_performance_adjudication": 274,
+  "next_stage": "G2_FULL_EXECUTION_R0_CORE_FIRST",
+  "real_data_access_in_g2_code": false,
+  "scenario_registry_sha256": "d12b2d63edb10df4ef4eb420654e53515c63d5b82696034478f4d1cbd3c51c30",
+  "schema_version": "2.0",
+  "simulation_estimator_sha256": "0973b83fca955fa76d1d9fb47cd8792138ea7ff3b9c2dce1b873f6931b3f6b40",
+  "simulation_generator_sha256": "1a6a2bfd46fc9f9dee9ac27a31c3a7091cfacf29fa1d68b5252832bd76c4d615",
+  "source_commit": "01d4b7f7afe7949b5c5f73cdf480fbc704fd0718",
+  "status": "PASS_G2_IMPLEMENTATION_AND_DOMAIN_FREEZE__READY_FOR_FULL_G2",
+  "submission": "HOLD",
+  "target_registry_sha256": "f3e5fabf339aa3d6add44c77c8a263ee753e6da8f8d622d2c2d31f025acdd6f7",
+  "truth_receipt_sha256": "472b3f2126bf28aa4187e355aeb004e67b66c6f0f8066203d46aeb910462b282",
+  "truth_table_sha256": "52e2847c1aa6e38c4a6260b695a806e201d24ffa5e287ef6d5589f0ebe00d15a",
+  "windows_runtime_receipt_sha256": "57f71d1f18fbe36c8155f5a4343eb7ac768426a3fc992cdfdee366abc39e3288"
+}

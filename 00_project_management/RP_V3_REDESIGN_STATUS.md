@@ -3,7 +3,7 @@
 **Effective date:** 2026-10-10
 **Overall state:** `ACTIVE_RP_V3_SCIENTIFIC_REDESIGN`
 **Submission state:** `HOLD`
-**Current gate:** `PASS_WP2_EFFECT_FREE_PREFLIGHT__HOLD_G2_EXECUTION_IMPLEMENTATION_REQUIRED`
+**Current gate:** `PASS_G2_IMPLEMENTATION_AND_DOMAIN_FREEZE__READY_FOR_FULL_G2`
 
 ## Completed gates
 
@@ -15,6 +15,7 @@
 | WP1 prefit | PASS | 68 donors, 31 controls, 37 managed SLE, frozen four-column design, rank 4/4 |
 | WP1 analysis | `PASS_WP1_TO_WP2_PREFIT_AND_G2_FREEZE` | Three frozen representations, 2,000/2,000 paired bootstraps, 11/11 audit checks |
 | WP2 effect-free preflight | `PASS_WP2_EFFECT_FREE_PREFLIGHT` | Five-bin support, count/library/cell closure, p/q geometry and 8/8 ILR design verified without fitting a disease effect |
+| G2 implementation/domain freeze | `PASS_G2_IMPLEMENTATION_AND_DOMAIN_FREEZE__READY_FOR_FULL_G2` | 934/934 bundle payloads, 48/48 candidate tests, 50-attempt Windows pilot, 250/250 truth precision and 10/10 canonical integration tests |
 
 ## WP1 numerical record
 
@@ -62,22 +63,23 @@ objects. The new `beta_S_cellref` bridge target fixes the cell reference while
 retaining observed captured UMI/cell; it remains neither absolute RNA/cell nor a
 causal composition effect.
 
-## G2 execution-lock requirements
+## G2 implementation/domain-freeze result
 
-The target registry, 25 scenario cells and numerical acceptance table are now
-frozen before G2 results. Before the first WP2 disease coefficient is fitted,
-the execution contract must still bind and qualify:
+The previously missing generator, independent truth and truth-receipt hashes are
+now filled by audited objects. The Windows rerun reproduced all 50 pilot
+statuses, all generated count arrays and all bootstrap index arrays; 60,000
+inner fits succeeded. All 250 independent truth rows met the MCSE rule, with
+cross-platform truth differences no larger than `1.11e-16`.
 
-1. the simulation generator hash;
-2. the independently implemented nonlinear-truth engine hash;
-3. a truth-precision qualification receipt;
-4. an actual paired-bootstrap interval technical pilot with complete attempt
-   accounting and resumability;
-5. a hash-complete, approved G2 execution contract.
+R0/R2/R4 are the applicable performance domain. R1/R3 remain mandatory
+support/stress boundaries and cannot be removed or replenished. The full runner
+stores compact, hash-bound chunks for all registered outer IDs, and the
+adjudicator applies the frozen bias, coverage, type-I and numerical gates.
 
-The next authorized stage is
-`G2_GENERATOR_TRUTH_ENGINE_AND_TECHNICAL_PILOT`. Full G2 remains not run and
-WP2 real disease effects remain locked.
+Decision: `PASS_G2_IMPLEMENTATION_AND_DOMAIN_FREEZE__READY_FOR_FULL_G2`.
+This approves synthetic execution only. Full G2 remains `NOT_RUN`, and WP2 real
+disease effects remain locked. The next authorized stage is
+`G2_FULL_EXECUTION_R0_CORE_FIRST`, followed by the complete 25-scenario grid.
 
 ## Closed workstreams
 

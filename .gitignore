@@ -163,3 +163,8 @@ phase17_v7/rp_v3_redesign/20261010_wp1_prefit_export_final/
 # compact receipts and gate decisions are tracked separately.
 phase17_v7/rp_v3_redesign/20261010_wp2_external_candidate/
 phase17_v7/rp_v3_redesign/20261010_wp2_effect_free_prefit_v1/
+
+# Received G2 evidence and full Monte Carlo checkpoints remain local. The
+# canonical implementation freeze, compact receipts and code stay tracked.
+phase17_v7/rp_v3_redesign/20261010_g2_external_candidate/
+phase17_v7/rp_v3_redesign/g2_full_runs/
