@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-10-10T03:09:20+08:00",
+  "status": "HOLD_G2_EXECUTION_FREEZE_IMPLEMENTATION_INCOMPLETE",
+  "approved_for_execution": false,
+  "WP2_REAL_EFFECT_UNLOCK": false,
+  "G2": "NOT_RUN",
+  "shared_donors": 68,
+  "controls": 31,
+  "managed_SLE": 37,
+  "bins": 5,
+  "min_cells_per_bin": 30,
+  "simulation_outer_replicates": 2000,
+  "inner_paired_bootstraps": 2000,
+  "outer_seed": 2026101002,
+  "truth_seed": 2026101003,
+  "prefit_receipt_sha256": "2C8EEDCD3C86D4D3DD0D93BE4E827C221BBF9AE5EC542CF7958B155D543C79D0",
+  "raw_counts_sha256": "6AE51ABA8A0CBE8B2BE8CE7C717F7672A5DEBBD39F005BCC375D324E334DA457",
+  "branch_assignments_sha256": "D3A9E2BE33A3BDE4D48D67B0A249BC8C1CE0DA1730C0F53C5F68C93F9428E30D",
+  "simulation_generator_sha256": null,
+  "independent_truth_code_sha256": null,
+  "truth_receipt_sha256": null,
+  "calibration_inputs_sha256": "2D4A7F1A507A6CE0DDC557C5EA0B1396B6A795C1FD1C0C22EA71F77D11591D87",
+  "runtime_lock_sha256": "A472CFB3F130C4C29256A2A44001B112CBEEBED5D4D5136084A0A7C1D9515037",
+  "scenario_registry_sha256": "D12B2D63EDB10DF4EF4EB420654E53515C63D5B82696034478F4D1CBD3C51C30",
+  "acceptance_table_sha256": "5B2D60E574AC6B92E4C3B9ACB00D9C1372261B1BE83AB045C2C1192CE625B24E",
+  "target_registry_sha256": "F3E5FABF339AA3D6ADD44C77C8A263EE753E6DA8F8D622D2C2D31F025ACDD6F7",
+  "required_execution_rule": "No WP2 disease effect before a hash-complete G2 contract and applicable-domain PASS",
+  "freeze_readiness": {
+    "ready": false,
+    "missing": [
+      "simulation_generator_sha256",
+      "independent_truth_code_sha256",
+      "truth_receipt_sha256"
+    ],
+    "WP2_REAL_EFFECT_UNLOCK": false,
+    "G2_PASS": false
+  }
+}

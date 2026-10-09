@@ -1,0 +1,7 @@
+metric,rule,scope,failure_policy
+bias_upper95_in_empirical_SD,(abs(bias)+1.96*MCSE_bias)/EmpSD <= 0.10,adjudicable target-scenario cells,HOLD_TARGET_SCENARIO
+coverage,"Wilson 95% interval wholly within [0.925,0.975]",adjudicable target-scenario cells,HOLD_TARGET_SCENARIO
+true_null_type_I,Wilson 95% upper bound <= 0.075,independently registered true-null cells only,HOLD_TARGET_SCENARIO
+numerical_failure,failures/2000 <= 0.01; expected support stops reported separately,all attempted replicates,HOLD_NUMERICAL_IMPLEMENTATION
+oracle_truth_precision,oracle MCSE <= 0.01 * typical coefficient SE,each target-scenario truth receipt,HOLD_TRUTH_PRECISION
+attempt_accounting,all attempt IDs retained; no failed-attempt replacement,all scenarios,INVALID_RUN

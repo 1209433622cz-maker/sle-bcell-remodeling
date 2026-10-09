@@ -5,7 +5,7 @@
 The active branch state is `ACTIVE_RP_V3_SCIENTIFIC_REDESIGN` with journal
 submission on hold. The public v1.1.0 release described below remains an
 immutable historical reproducibility snapshot; it does not contain the newer
-RP v3 Stage 0, Stage 0B or WP1 work.
+RP v3 Stage 0, Stage 0B, WP1 or WP2 effect-free preflight work.
 
 Completed active gates:
 
@@ -16,6 +16,10 @@ Completed active gates:
 - WP1: used one 68-donor common support set, a frozen rank-4 design and 2,000
   paired donor-clustered bootstrap replicates; final decision
   `PASS_WP1_TO_WP2_PREFIT_AND_G2_FREEZE`.
+- WP2 effect-free preflight: verified five-bin support, exact count/library/cell
+  partitioning, distinct cell and captured-UMI geometry and an 8/8 four-ILR
+  design without fitting a disease effect; decision
+  `PASS_WP2_EFFECT_FREE_PREFLIGHT__HOLD_G2_EXECUTION_IMPLEMENTATION_REQUIRED`.
 
 Current one-command entry points are:
 
@@ -23,11 +27,16 @@ Current one-command entry points are:
 powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_stage0.ps1
 powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_stage0b.ps1
 powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_wp1.ps1
+powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_wp2_prefit.ps1 `
+  -OutputDir .\phase17_v7\rp_v3_redesign\wp2_prefit_reproduction
 ```
 
-The next permitted work is WP2 prefit identifiability and full G2 simulation
-freeze. No WP2 disease coefficient, manuscript replacement, submission package,
-GitHub Release or Zenodo update is authorized before the G2 contract passes.
+The next permitted work is G2 generator/truth-engine implementation and a
+technical pilot. The prefit gate binds the target, 25-scenario and acceptance
+registries, but the G2 execution contract remains deliberately incomplete until
+the generator, independent truth engine and truth-precision receipt are hashed.
+No WP2 disease coefficient, manuscript replacement, submission package, GitHub
+Release or Zenodo update is authorized before the applicable G2 domain passes.
 The active numerical and governance summary is in
 `00_project_management/RP_V3_REDESIGN_STATUS.md`.
 

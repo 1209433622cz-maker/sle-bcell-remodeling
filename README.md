@@ -14,21 +14,23 @@ Repository: [1209433622cz-maker/sle-bcell-remodeling](https://github.com/1209433
 The public v1.1.0 archive and the September scientific-presentation baseline are
 retained as historical, reproducible snapshots. They are not being silently
 rewritten. The active project is now following the focused redesign specified by
-Research Plan v3. Stage 0 input recovery, Stage 0B protocol/identifiability work
-and WP1 annotation sensitivity are complete. WP1 passed its declared gate, but
+Research Plan v3. Stage 0 input recovery, Stage 0B protocol/identifiability work,
+WP1 annotation sensitivity and the WP2 effect-free structural preflight are
+complete. The preflight passed, but the G2 execution implementation remains
+locked. Therefore,
 manuscript replacement, submission, GitHub Release and Zenodo updates remain on
 hold until the redesign produces a fully gated and materially informative result.
 
 Current gate:
 
 ```text
-PASS_WP1_TO_WP2_PREFIT_AND_G2_FREEZE
+PASS_WP2_EFFECT_FREE_PREFLIGHT__HOLD_G2_EXECUTION_IMPLEMENTATION_REQUIRED
 ```
 
 Next stage:
 
 ```text
-WP2_PREFIT_IDENTIFIABILITY_AND_FULL_G2_SIMULATION_FREEZE
+G2_GENERATOR_TRUTH_ENGINE_AND_TECHNICAL_PILOT
 ```
 
 ## Scientific position
@@ -107,21 +109,45 @@ See [WP1 adjudication](phase17_v7/rp_v3_redesign/20261010_wp1_annotation_sensiti
 [machine-readable decision](phase17_v7/rp_v3_redesign/20261010_wp1_annotation_sensitivity/11_WP1_FINAL_ADJUDICATION.json)
 and [action record](00_project_management/action_record_2026-10-10_rp_v3_wp1_annotation_sensitivity.md).
 
-## Next gate: WP2 and G2
+### WP2: effect-free composition and identifiability preflight
 
-Before any WP2 disease-effect model is fitted, the project must freeze:
+The canonical WP2 preflight used the frozen 68-donor set and raw sufficient
+statistics without fitting a new disease coefficient or writing grouped
+expression summaries. It passed all support, hash, partition and design checks:
 
-1. the state or continuous-axis target and its relation to A1;
-2. composition coordinates and closure handling;
-3. missing and low-support state rules, with no outcome-driven merging or zero
-   filling;
-4. compatible scales for the broad, common-composition and state-level
-   estimands;
-5. five core simulations plus rarity, depth, mislabeling and RNA-content stress
-   scenarios;
-6. independently computed nonlinear-score truth;
-7. 2,000 replicates per scenario, Monte Carlo intervals and an explicit
-   acceptance table.
+- every donor retained all five A1 bins, with a minimum of 30 cells per bin;
+- A1 bin counts, full captured-library totals and cell counts exactly recover
+  the parent A0 object;
+- captured-UMI-weighted bin CPM reconstructs pooled CPM to `1.137e-13` maximum
+  absolute error;
+- the median absolute difference between cell and captured-UMI fractions is
+  `0.015954`, with a maximum of `0.093275`;
+- the optional base-plus-four-ILR design is rank 8/8, while intercept plus all
+  five raw fractions is closure-redundant at rank 8/9.
+
+The target registry now distinguishes the already observed fixed-profile WP1
+target from a new cell-reference bridge target that retains captured UMI/cell.
+Neither is an absolute-RNA or causal cell-composition effect. The target,
+25-scenario and acceptance registries were frozen before G2 results.
+
+Decision:
+`PASS_WP2_EFFECT_FREE_PREFLIGHT__HOLD_G2_EXECUTION_IMPLEMENTATION_REQUIRED`.
+
+See the [WP2 preflight review](phase17_v7/rp_v3_redesign/20261010_wp2_effect_free_prefit/11_WP2_PREFIT_ADVISOR_REVIEW.md)
+and [machine-readable gate](phase17_v7/rp_v3_redesign/20261010_wp2_effect_free_prefit/06_WP2_PREFIT_GATE_STATUS.json).
+
+## Next gate: G2 implementation and technical pilot
+
+Before any WP2 disease-effect model is fitted, the project must now implement,
+qualify and hash:
+
+1. the sufficient-count observation generator;
+2. an independently implemented nonlinear-truth engine;
+3. a truth-precision qualification receipt;
+4. the actual paired 2,000-bootstrap interval implementation;
+5. technical-pilot evidence for complete attempt accounting, deterministic
+   random streams and resumability;
+6. a hash-complete approved G2 execution contract.
 
 WP2 results may be interpreted only after G2 passes. WP4 remains conditional and
 submission remains on hold.
@@ -140,6 +166,8 @@ Run the completed gates from the repository root:
 powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_stage0.ps1
 powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_stage0b.ps1
 powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_wp1.ps1
+powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_wp2_prefit.ps1 `
+  -OutputDir .\phase17_v7\rp_v3_redesign\wp2_prefit_reproduction
 ```
 
 Run the focused tests:
@@ -148,7 +176,8 @@ Run the focused tests:
 C:\ProgramData\miniforge3\envs\sle-bcell\python.exe -m unittest -v `
   audit_tools.test_rp_v3_stage0_freeze `
   audit_tools.test_rp_v3_stage0b `
-  audit_tools.test_rp_v3_wp1
+  audit_tools.test_rp_v3_wp1 `
+  audit_tools.test_rp_v3_wp2_prefit
 ```
 
 Large public matrices and cell-level intermediates are intentionally outside
@@ -168,6 +197,7 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 | Stage 0B output | [`phase17_v7/rp_v3_redesign/20261009_stage0b/`](phase17_v7/rp_v3_redesign/20261009_stage0b/) |
 | WP1 prefit contract | [`phase17_v7/rp_v3_redesign/20261010_wp1_prefit_contract/`](phase17_v7/rp_v3_redesign/20261010_wp1_prefit_contract/) |
 | WP1 result | [`phase17_v7/rp_v3_redesign/20261010_wp1_annotation_sensitivity/`](phase17_v7/rp_v3_redesign/20261010_wp1_annotation_sensitivity/) |
+| WP2 effect-free preflight and G2 registries | [`phase17_v7/rp_v3_redesign/20261010_wp2_effect_free_prefit/`](phase17_v7/rp_v3_redesign/20261010_wp2_effect_free_prefit/) |
 | Reproducibility detail | [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) |
 
 ## Repository layout

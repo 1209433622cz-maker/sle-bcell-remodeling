@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-10-10T03:09:20+08:00",
+  "decision": "PASS_WP2_EFFECT_FREE_PREFLIGHT__HOLD_G2_EXECUTION_IMPLEMENTATION_REQUIRED",
+  "structural_prefit_pass": true,
+  "WP2_REAL_EFFECT_UNLOCK": false,
+  "G2": "NOT_RUN",
+  "G2_execution_contract_frozen": false,
+  "target_registry_frozen_before_G2_results": true,
+  "scenario_registry_frozen_before_G2_results": true,
+  "acceptance_table_frozen_before_G2_results": true,
+  "p_cell_and_q_UMI_are_distinct_estimands": true,
+  "median_abs_p_minus_q": 0.01595363396955822,
+  "maximum_abs_p_minus_q": 0.09327463200214509,
+  "next_stage": "G2_GENERATOR_TRUTH_ENGINE_AND_TECHNICAL_PILOT",
+  "submission": "HOLD",
+  "WP4": "HOLD_CONDITIONAL"
+}

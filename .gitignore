@@ -158,3 +158,8 @@ phase17_v7/rp_v3_redesign/**/a2_repair_cpu/
 phase17_v7/rp_v3_redesign/20261010_wp1_prefit_export/
 phase17_v7/rp_v3_redesign/20261010_wp1_prefit_export_rerun/
 phase17_v7/rp_v3_redesign/20261010_wp1_prefit_export_final/
+
+# Received WP2 review bundle is retained locally. Canonical project-side tools,
+# compact receipts and gate decisions are tracked separately.
+phase17_v7/rp_v3_redesign/20261010_wp2_external_candidate/
+phase17_v7/rp_v3_redesign/20261010_wp2_effect_free_prefit_v1/

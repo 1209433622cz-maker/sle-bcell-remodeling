@@ -1,0 +1,12 @@
+target_id,operator,novelty,g2_role,interpretation_boundary
+beta_B,"b_X[T0(sum_k q_UMI,k m_k)]",WP1_ALIAS_BETA_A0,REQUIRED_REFERENCE,broad captured-relative-expression association
+beta_S_profile,"b_X[T0(sum_k pi_ref,k m_k)]",WP1_ALIAS_BETA_A1,REQUIRED_REFERENCE,fixed-profile-mixture association; not pure cell composition
+delta_profile,beta_S_profile - beta_B,WP1_ALIAS_DELTA_A1_A0,REQUIRED_REFERENCE,joint identity-axis/profile-mixture sensitivity; not mediation
+beta_S_cellref,"b_X[T0(sum_k q_cellref,k m_k)]",NEW_WP2_BRIDGE_TARGET,REQUIRED_NEW_TARGET,fixed cell reference with observed captured UMI/cell; not absolute RNA
+delta_cellref,beta_S_cellref - beta_B,NEW_WP2_BRIDGE_CONTRAST,REQUIRED_NEW_TARGET,descriptive target contrast; not a mediated proportion
+beta_bin_1,b_X[T0(m_bin_1)],NEW_WP2_AXIS_INTERVAL_TARGET,REQUIRED_NEW_TARGET,relative-expression association within a frozen axis interval; not a hard subtype
+beta_bin_2,b_X[T0(m_bin_2)],NEW_WP2_AXIS_INTERVAL_TARGET,REQUIRED_NEW_TARGET,relative-expression association within a frozen axis interval; not a hard subtype
+beta_bin_3,b_X[T0(m_bin_3)],NEW_WP2_AXIS_INTERVAL_TARGET,REQUIRED_NEW_TARGET,relative-expression association within a frozen axis interval; not a hard subtype
+beta_bin_4,b_X[T0(m_bin_4)],NEW_WP2_AXIS_INTERVAL_TARGET,REQUIRED_NEW_TARGET,relative-expression association within a frozen axis interval; not a hard subtype
+beta_bin_5,b_X[T0(m_bin_5)],NEW_WP2_AXIS_INTERVAL_TARGET,REQUIRED_NEW_TARGET,relative-expression association within a frozen axis interval; not a hard subtype
+beta_cond_ILR,managed coefficient in X plus four frozen cell-fraction ILR coordinates,NEW_OPTIONAL_CONDITIONAL_DIAGNOSTIC,SEPARATE_DIAGNOSTIC_CONTRACT_REQUIRED,conditional association; not equivalent to standardization or a direct effect
