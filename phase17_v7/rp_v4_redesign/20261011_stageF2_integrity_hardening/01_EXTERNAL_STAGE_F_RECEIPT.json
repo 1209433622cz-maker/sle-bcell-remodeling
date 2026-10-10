@@ -1,0 +1,12 @@
+{
+  "payload_manifest_failures": 0,
+  "payload_manifest_rows": 7,
+  "review_decision": "HOLD_STAGE_F_EXACT_CODE_GO__INTEGRITY_HARDENING_REQUIRED",
+  "schema": "RP_V4_STAGE_F_EXTERNAL_REVIEW_RECEIPT_1.0",
+  "stage141_started": false,
+  "stage142_started": false,
+  "zip_bytes": 18208,
+  "zip_crc_pass": true,
+  "zip_filename": "SLE_RPv4_StageF_ExactCode_IntegrityReview_20261011.zip",
+  "zip_sha256": "ec099143d64d6058b3c19e6cfc3be6b2ca6f0015f083a8d4c7ddfd6a8a15d7e8"
+}

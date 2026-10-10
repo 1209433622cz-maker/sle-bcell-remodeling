@@ -6,7 +6,7 @@
 
 **Submission state:** `HOLD`
 
-**Current gate:** `PASS_RPV4_STAGE_E2_AUTHOR_CONTRACT_AND_CANONICAL_PIPELINE_BINDING__HOLD_EXACT_CODE_GO`
+**Current gate:** `PASS_STAGE_F2_INTEGRITY_HARDENING_AND_REBIND__HOLD_POST_COMMIT_EXACT_CODE_GO`
 
 ## Scope
 
@@ -219,21 +219,88 @@ Stage D decision:
 Stage E2 decision:
 `PASS_RPV4_STAGE_E2_AUTHOR_CONTRACT_AND_CANONICAL_PIPELINE_BINDING__HOLD_EXACT_CODE_GO`.
 
+## Stage F exact-code review completed
+
+The independent Stage F package was treated as review evidence rather than as
+a self-authorizing result. Its 18,208-byte ZIP was CRC-clean and all 7/7
+manifest-controlled files matched their declared size and SHA-256. The review
+correctly identified three material integrity gaps in the Stage E2 candidate:
+
+- `audit_tools/rp_v4_g2c_truth.py` was a runtime dependency but was absent from
+  the source-binding manifest;
+- Git HEAD identity did not prove a clean worktree or the exact qualified
+  Windows executable and package versions; and
+- final outputs did not yet have complete chunk/checkpoint, truth payload,
+  accounting and receipt reconciliation.
+
+The external package's focused test command produced 4/5 rather than its
+reported 5/5 on this Windows host because its own newline test hashes a file
+written with platform CRLF while expecting LF bytes. This portability defect
+does not alter the substantive Stage F findings and the external package was
+not modified.
+
+Stage F decision:
+`HOLD_STAGE_F_EXACT_CODE_GO__INTEGRITY_HARDENING_REQUIRED`.
+
+## Stage F2 completed
+
+### Additive integrity hardening
+
+- A new F2 implementation was added without rewriting the Stage E2 historical
+  freeze. Its required source set explicitly includes the previously omitted
+  truth helper, all F2 modules and tests, the Stage C contracts, calibration
+  model and historical truth table.
+- Final authorization now binds exact Git HEAD, a fully clean tracked and
+  untracked worktree, the source-manifest digest, a qualified-runtime receipt,
+  the resolved Python executable and its SHA-256, and the Python/NumPy/SciPy/
+  statsmodels versions.
+- The outer runner uses write-once chunk payloads and sidecar seals, verifies
+  bytes and SHA-256, reconciles complete attempt accounting, rejects extra or
+  unregistered files and produces a hash-bound receipt.
+- The truth runner uses deterministic per-scenario checkpoints and seals,
+  verifies the complete checkpoint inventory, refuses partial files and
+  independently cross-checks the score formula on every batch.
+- The adjudicator verifies both payload systems before reading results and
+  independently enforces `point +/- t(0.975,64) * SE`, df=64, method/data flags,
+  leverage and outcome-lock conditions.
+
+### Windows qualification and freeze
+
+- The combined Stage A, Stage D, Stage E2 and Stage F2 test suite passed 61/61.
+- Non-final outer qualification completed 24 attempts in three sealed chunks;
+  resume and fresh outputs were byte-stable.
+- Non-final truth qualification completed three scenarios and 48 sealed
+  checkpoints; maximum `MCSE / typical SE` was `0.005907133725217648`, and
+  resume and fresh outputs were byte-stable.
+- The qualified executable is `D:\bioinfor\python.exe`, SHA-256
+  `d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca`
+  (Python 3.13.7, NumPy 2.3.3, SciPy 1.16.2, statsmodels 0.14.6).
+- The frozen source-binding SHA-256 is
+  `e69ca282c046e43325ee2ae1f0b53f76bf2ee017771423ace1e866c646bf21a8`;
+  the qualified-runtime receipt SHA-256 is
+  `bc743876f470bca0e2fb9c8df73bd4f07f2d61f5de8600b5b2150e7cb8b4386d`.
+- The canonical integrity manifest passed 10/10. Both final invocations failed
+  closed, and neither stage 141 nor stage 142 created an output directory.
+
+Stage F2 decision:
+`PASS_STAGE_F2_INTEGRITY_HARDENING_AND_REBIND__HOLD_POST_COMMIT_EXACT_CODE_GO`.
+
 ## Current authorization
 
 Allowed:
 
-- review the committed Stage E2 code and source-binding manifest;
-- prepare a new exact-code GO receipt only after the commit hash exists;
-- exercise checkpoint, resume, overwrite refusal and fail-closed adjudication
-  on non-final technical streams;
+- review the committed F2 code, source-binding manifest and qualified-runtime
+  receipt;
+- prepare a new Stage G exact-code GO receipt only after the F2 commit hash is
+  synchronized and both authors approve that exact identity;
+- repeat non-final integrity checks without consuming stage-141/142 streams;
 - estimate final compute/storage requirements without executing the final grid.
 
 Not allowed:
 
 - run the 160,000-attempt final G2C validation before a new exact-code
-  `GO_FOR_FULL_SYNTHETIC_G2C` receipt binds both authors, the committed Git HEAD
-  and the Stage E2 source manifest;
+  `GO_FOR_FULL_SYNTHETIC_G2C` receipt binds both authors, the synchronized F2
+  Git HEAD, source-binding digest and qualified-runtime receipt;
 - consume stage-141 or stage-142 random streams during preflight;
 - change the estimand, t(64) method, DGP registry, thresholds or seed base;
 - fit or inspect real WP2 effects;
@@ -244,12 +311,14 @@ Not allowed:
 
 ## Next gate
 
-`RPV4_STAGE_F__POST_COMMIT_EXACT_CODE_GO_REVIEW`
+`RPV4_STAGE_G__POST_PATCH_EXACT_CODE_AND_RUNTIME_GO_REVIEW`
 
-Stage F must bind both authors to the exact synchronized Git commit and the
-existing source-binding manifest. Only a newly issued receipt may authorize
-stage 141 and stage 142. The current template remains false. Large data download
-and all real outcomes still require separate later approval.
+Stage G must independently recheck the synchronized F2 commit, source-binding
+digest, clean worktree and qualified-runtime receipt, then obtain explicit
+approval from both authors for stage 141 and stage 142 separately. Only a newly
+issued receipt may authorize either final stream. The current template remains
+false. Large data download and all real outcomes still require separate later
+approval.
 
 ## Canonical evidence
 
@@ -266,3 +335,7 @@ and all real outcomes still require separate later approval.
 - [`phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/07_STAGE_E2_GATE_STATUS.json`](../phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/07_STAGE_E2_GATE_STATUS.json)
 - [`phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/09_STAGE_E2_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/09_STAGE_E2_ADVISOR_REVIEW.md)
 - [`phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/10_STAGE_F_GO_NO_GO_CONTRACT.md`](../phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/10_STAGE_F_GO_NO_GO_CONTRACT.md)
+- [`phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/07_STAGE_F2_GATE_STATUS.json`](../phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/07_STAGE_F2_GATE_STATUS.json)
+- [`phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/09_STAGE_F2_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/09_STAGE_F2_ADVISOR_REVIEW.md)
+- [`phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/10_STAGE_G_GO_NO_GO_CONTRACT.md`](../phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/10_STAGE_G_GO_NO_GO_CONTRACT.md)
+- [`00_project_management/action_record_2026-10-11_rp_v4_stageF2_integrity_hardening.md`](action_record_2026-10-11_rp_v4_stageF2_integrity_hardening.md)

@@ -24,23 +24,25 @@ diagnosed the 17 G2B failures and audited official GEO metadata. Stage C froze
 exactly one G2C estimand and one method, independent final random streams, 40
 data-generating scenarios, S0/S1 measurement handling and a fail-closed raw
 input protocol. Stage D canonically integrated the shifted-DGP generator and
-technical pilot. Stage E2 now records both authors' approval of the frozen
-scientific contract and byte-binds the Windows outer runner, independent truth
-runner and result-blind adjudicator. Their non-final stage-132 qualification
-passed, while the exact-code GO remains deliberately unissued. No final G2C run
-or real disease/activity model has been run. Manuscript replacement, submission,
-GitHub Release and Zenodo updates remain on hold.
+technical pilot. Stage E2 recorded both authors' approval of the frozen
+scientific contract. The independent Stage F review then identified an unbound
+truth helper and incomplete runtime/payload integrity checks. Stage F2 repaired
+those issues additively, re-bound the complete local dependency set and passed
+the canonical Windows qualification. The exact post-patch GO remains
+deliberately unissued. No final G2C run or real disease/activity model has been
+run. Manuscript replacement, submission, GitHub Release and Zenodo updates
+remain on hold.
 
 Current gate:
 
 ```text
-PASS_RPV4_STAGE_E2_AUTHOR_CONTRACT_AND_CANONICAL_PIPELINE_BINDING__HOLD_EXACT_CODE_GO
+PASS_STAGE_F2_INTEGRITY_HARDENING_AND_REBIND__HOLD_POST_COMMIT_EXACT_CODE_GO
 ```
 
 Next stage:
 
 ```text
-RPV4_STAGE_F__POST_COMMIT_EXACT_CODE_GO_REVIEW
+RPV4_STAGE_G__POST_PATCH_EXACT_CODE_AND_RUNTIME_GO_REVIEW
 ```
 
 ## Scientific position
@@ -69,6 +71,44 @@ predeclared questions about annotation sensitivity, composition, within-state
 effects and the identifiability of those quantities.
 
 ## RP v4 progress
+
+### Stage F2: integrity hardening and post-patch rebinding
+
+- Confirmed the Stage F review against GitHub commit `18cbcf0d6269464e2964b6b788c4a35572ed822e`.
+  The review correctly identified that `rp_v4_g2c_truth.py` was used by the
+  Stage 142 engine but omitted from the Stage E2 binding, and that clean-tree,
+  exact-runtime and complete result-payload validation were insufficient.
+- Preserved Stage E2 unchanged and added a new Stage F2 pipeline. The source
+  binding now contains the complete local dependency set, including the truth
+  helper, frozen contracts, calibration model and historical truth table.
+- Final authorization now requires the exact Git HEAD, a clean worktree, the
+  source-binding digest, the qualified Python executable SHA-256 and exact
+  Python/NumPy/SciPy/statsmodels versions.
+- Every outer chunk and truth checkpoint is write-once and SHA-256 sealed.
+  Final adjudication must reconcile the chunk manifest, attempt accounting,
+  truth checkpoint inventory, truth CSV and their receipts before reading any
+  result.
+- Every supported attempt must satisfy the exact HC3-t(64) interval identity.
+  The truth engine also performs an independent score-formula cross-check and
+  supports deterministic per-scenario checkpoint resumption without
+  replenishment or seed changes.
+- The combined G2C, Stage A, Stage D, Stage E2 and Stage F2 regression and
+  adversarial suite passed 61/61.
+  Windows stage-132 qualification completed 24 outer attempts, three truth
+  scenarios and 48 truth checkpoints. Fresh/resume trees were byte-stable and
+  maximum `MCSE / typical SE` remained 0.005907.
+- Source-binding SHA-256 is
+  `e69ca282c046e43325ee2ae1f0b53f76bf2ee017771423ace1e866c646bf21a8`;
+  qualified-runtime receipt SHA-256 is
+  `bc743876f470bca0e2fb9c8df73bd4f07f2d61f5de8600b5b2150e7cb8b4386d`.
+  Stage 141/142 remain unstarted and unauthorized.
+
+Decision:
+`PASS_STAGE_F2_INTEGRITY_HARDENING_AND_REBIND__HOLD_POST_COMMIT_EXACT_CODE_GO`.
+
+See the [Stage F2 advisor review](phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/09_STAGE_F2_ADVISOR_REVIEW.md),
+[machine-readable gate](phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/07_STAGE_F2_GATE_STATUS.json)
+and [Stage G exact-code contract](phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/10_STAGE_G_GO_NO_GO_CONTRACT.md).
 
 ### Stage E2: author contract and canonical final-pipeline binding
 
@@ -367,16 +407,17 @@ See the [pooled-measurement advisor review](phase17_v7/rp_v3_redesign/20261010_w
 [machine-readable gate](phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/12_WP3_MEASUREMENT_GATE_STATUS.json)
 and [scope-closure recommendation](phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/15_RP_V3_SCOPE_CLOSURE_RECOMMENDATION.md).
 
-## Next gate: post-commit exact-code GO review
+## Next gate: post-patch exact-code and runtime GO review
 
-The next action is `RPV4_STAGE_F__POST_COMMIT_EXACT_CODE_GO_REVIEW`. After this
-Stage E2 implementation is committed and synchronized, both authors must review
-that exact Git commit and source-binding manifest. Only a newly issued
-`GO_FOR_FULL_SYNTHETIC_G2C` receipt binding those bytes may open stage 141/142
-and start the 160,000-attempt run. The current template is false and cannot
-authorize execution. Large raw download, real WP2 effects, new-cohort
-disease/activity effects, WP4, manuscript replacement and submission remain
-unauthorized.
+The next action is
+`RPV4_STAGE_G__POST_PATCH_EXACT_CODE_AND_RUNTIME_GO_REVIEW`. After the Stage F2
+implementation is committed and synchronized, both authors must review that
+exact Git commit, source-binding digest and qualified-runtime receipt digest.
+Only a newly issued `GO_FOR_FULL_SYNTHETIC_G2C` receipt binding all three may
+open stage 141/142 and start the 160,000-attempt run. The tracked template is
+false and cannot authorize execution. Large raw download, real WP2 effects,
+new-cohort disease/activity effects, WP4, manuscript replacement and submission
+remain unauthorized.
 
 ## Reproduce the active redesign
 
@@ -447,6 +488,12 @@ powershell -ExecutionPolicy Bypass `
   -Python D:\bioinfor\python.exe `
   -OutputRoot .\phase17_v7\rp_v4_redesign\_software_tests\stageE2_reproduction `
   -CanonicalOutput .\phase17_v7\rp_v4_redesign\stageE2_reproduction_freeze
+
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_rp_v4_stageF2_preflight.ps1 `
+  -Python D:\bioinfor\python.exe `
+  -WorkRoot .\phase17_v7\rp_v4_redesign\_software_tests\stageF2_reproduction `
+  -CanonicalOutput .\phase17_v7\rp_v4_redesign\stageF2_reproduction_freeze
 ```
 
 Run the focused tests:
@@ -477,6 +524,7 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 | RP v4 Stage C method/input protocol freeze | [`phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/`](phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/) |
 | RP v4 Stage D canonical technical freeze | [`phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/`](phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/) |
 | RP v4 Stage E2 canonical preflight | [`phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/`](phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/) |
+| RP v4 Stage F2 integrity hardening freeze | [`phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/`](phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/) |
 | Historical RP v3 status | [`00_project_management/RP_V3_REDESIGN_STATUS.md`](00_project_management/RP_V3_REDESIGN_STATUS.md) |
 | Full file audit | [`00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md`](00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md) |
 | Valuable asset register | [`00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv`](00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv) |

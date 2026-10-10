@@ -6,7 +6,7 @@ The active branch state is `ACTIVE_RP_V4_SCIENTIFIC_REDESIGN` with journal
 submission on hold. RP v3 is retained as a complete bounded historical record.
 The public v1.1.0 release described below remains an immutable historical
 reproducibility snapshot; it does not contain the later RP v3 analyses or the
-RP v4 Stage A, Stage C, Stage D and Stage E2 work.
+RP v4 Stage A, Stage C, Stage D, Stage E2 and Stage F2 work.
 
 Completed active gates:
 
@@ -24,6 +24,18 @@ Completed active gates:
   resumable outer runner, independent truth runner and write-once adjudicator,
   and passed 15/15 tests plus non-final stage-132 qualification. Exact-code GO
   is still unissued; stage 141/142 remain unopened.
+- RP v4 Stage F/F2: independently confirmed that the Stage E2 binding omitted
+  a truth-engine dependency and lacked complete runtime, workspace, payload and
+  interval-identity checks. The additive F2 implementation now binds the full
+  dependency set, qualified Windows executable and clean worktree; seals and
+  reconciles every outer chunk and truth checkpoint; and independently checks
+  HC3-t(64) interval algebra. The combined Stage A/D/E2/F2 suite passed 61/61
+  tests. The frozen source-binding SHA-256 is
+  `e69ca282c046e43325ee2ae1f0b53f76bf2ee017771423ace1e866c646bf21a8` and
+  the runtime-receipt SHA-256 is
+  `bc743876f470bca0e2fb9c8df73bd4f07f2d61f5de8600b5b2150e7cb8b4386d`.
+  Exact post-commit Stage G approval is still required; stages 141/142 remain
+  unopened.
 
 - Stage 0: recovered and hashed 21/21 inputs; registered units, chronology,
   estimands, branches and open parameters.
@@ -104,6 +116,12 @@ powershell -ExecutionPolicy Bypass `
   -Python D:\bioinfor\python.exe `
   -OutputRoot .\phase17_v7\rp_v4_redesign\_software_tests\stageE2_reproduction `
   -CanonicalOutput .\phase17_v7\rp_v4_redesign\stageE2_reproduction_freeze
+
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_rp_v4_stageF2_preflight.ps1 `
+  -Python D:\bioinfor\python.exe `
+  -WorkRoot .\phase17_v7\rp_v4_redesign\_software_tests\stageF2_reproduction `
+  -CanonicalOutput .\phase17_v7\rp_v4_redesign\stageF2_reproduction_freeze
 ```
 
 The raw full-G2 and full-G2B runs are intentionally Git-ignored. The canonical
@@ -115,10 +133,10 @@ manifest. The validated local runtime was `D:\bioinfor\python.exe` (Python
 3.13.7, NumPy 2.3.3). No real WP2 response was loaded or fitted.
 
 The active next gate is
-`RPV4_STAGE_F__POST_COMMIT_EXACT_CODE_GO_REVIEW`. Stage 141/142, real WP2
+`RPV4_STAGE_G__POST_PATCH_EXACT_CODE_AND_RUNTIME_GO_REVIEW`. Stage 141/142, real WP2
 effects, external outcomes, large SRA download, WP4, manuscript replacement,
 submission package, GitHub Release and Zenodo remain unauthorized. See
-`phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/` and
+`phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/` and
 `00_project_management/RP_V4_REDESIGN_STATUS.md`.
 
 ## Current correction status

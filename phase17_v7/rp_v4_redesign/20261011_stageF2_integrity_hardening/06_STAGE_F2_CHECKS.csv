@@ -1,0 +1,13 @@
+check,pass,detail
+external_stageF_payload,True,7/7 SHA-256; CRC clean
+unbound_truth_helper_repaired,True,rp_v4_g2c_truth.py bound
+clean_worktree_final_gate,True,fail closed
+exact_runtime_final_gate,True,executable hash and package versions
+outer_chunk_sealing,True,payload and seal manifest reconciled
+truth_checkpoint_resume,True,48/48 qualification checkpoints
+truth_and_accounting_receipt_hashes,True,mandatory
+HC3_t64_interval_identity,True,per supported attempt
+independent_truth_score_crosscheck,True,runtime cross-check
+negative_tamper_suite,True,Stage F2 integrity/adversarial tests included; 61/61 PASS
+stage141_fail_closed,True,exact post-commit GO absent
+stage142_fail_closed,True,exact post-commit GO absent

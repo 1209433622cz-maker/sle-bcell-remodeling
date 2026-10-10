@@ -1,0 +1,16 @@
+{
+  "negative_tamper_tests": "Stage F2 integrity/adversarial tests included; 61/61 PASS",
+  "outer_attempts": 24,
+  "outer_chunks": 3,
+  "outer_fresh_resume_payload_verified": true,
+  "real_effects_fitted": false,
+  "schema": "RP_V4_STAGE_F2_QUALIFICATION_RECEIPT_1.0",
+  "stage141_started": false,
+  "stage142_started": false,
+  "truth_all_precision_pass": true,
+  "truth_checkpoints": 48,
+  "truth_independent_score_crosscheck": true,
+  "truth_maximum_mcse_over_typical_se": 0.005907133725217648,
+  "truth_scenarios": 3,
+  "unit_and_regression_tests": "61/61 PASS"
+}
