@@ -228,8 +228,10 @@ Final G2C, real WP2 effects and external outcome analysis remain locked.
 
 - Stage C implementation/results commit: `fe9e114` (`Freeze RP v4 Stage C protocol`).
 - Local ancestry remains linear: `f2eca1a -> 8cba831 -> 16f1539 -> fe9e114`.
-- A normal `git push origin main` was attempted after all tests and the commit.
-- GitHub could not be reached on port 443 after 21,080 ms, so the push stopped
-  before authentication or object transfer.
+- The first normal `git push origin main` could not reach GitHub on port 443
+  after 21,080 ms and stopped before authentication or object transfer.
+- A second normal retry succeeded and fast-forwarded remote `main` from
+  `f2eca1a` through the Stage C implementation and synchronization record.
 - No force push, history rewrite, API reconstruction or alternate remote was
-  used. The complete audited history remains local and ahead of `origin/main`.
+  used. Any later status-only commit remains ordinary linear history and does
+  not alter the scientific artifacts or gate decision.
