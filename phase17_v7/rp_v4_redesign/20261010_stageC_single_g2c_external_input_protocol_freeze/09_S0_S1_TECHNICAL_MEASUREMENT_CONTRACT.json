@@ -1,0 +1,36 @@
+{
+  "S0": {
+    "formula": "mean_g[(log2(full-library CPM_g + 0.5)-mu_g_43HC)/sd_g_43HC]",
+    "genes": [
+      "IFI44L",
+      "IFI6",
+      "IFIT1",
+      "IFIT2",
+      "IFIT3",
+      "IRF7",
+      "ISG15",
+      "LY6E",
+      "MX1",
+      "MX2",
+      "OAS1",
+      "OAS2"
+    ],
+    "missing_annotation_rule": "technical failure; never impute an absent gene as zero",
+    "reference_refit_permitted": false,
+    "status": "PRIMARY_FROZEN_ANCHOR",
+    "zero_count_rule": "retain zero and apply the frozen +0.5 offset"
+  },
+  "S1": {
+    "clinical_promotion_permitted": false,
+    "formula": "mean percentile rank of the same 12 genes within the frozen 18,873-symbol background",
+    "missing_background_rule": "intersect only after a sealed mapping audit; report retained background fraction",
+    "status": "TECHNICAL_SENSITIVITY_ONLY"
+  },
+  "S2": {
+    "reason": "no unique result-blind formula, denominator and missing-feature rule",
+    "status": "ABANDONED_NOT_ADMITTED"
+  },
+  "outcome_based_score_selection": false,
+  "outcome_unlock": false,
+  "schema": "RP_V4_STAGE_C_SCORE_CONTRACT_1.0"
+}

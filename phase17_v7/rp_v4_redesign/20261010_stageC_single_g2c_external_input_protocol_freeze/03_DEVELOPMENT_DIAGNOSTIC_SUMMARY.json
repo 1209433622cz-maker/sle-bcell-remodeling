@@ -1,0 +1,30 @@
+{
+  "WP2_REAL_EFFECT_UNLOCK": false,
+  "all_applicable_development_pass": true,
+  "applicable_scenarios": 15,
+  "candidate_development_passes": 15,
+  "diagnostic_attempts_per_scenario": 8,
+  "estimand": "delta_profile",
+  "forward_validation_executed": false,
+  "historical_stage": 121,
+  "interpretation": {
+    "DGP_SENSITIVITY": "requires independent shifted-DGP validation before any PASS",
+    "DONOR_LEVERAGE": "evaluate from the frozen leverage diagnostic",
+    "FINITE_MC_MARGIN": "historical G2B misses were mild; this candidate is evaluated only on exposed development streams",
+    "NEAR_ZERO_STUDENTIZER": "evaluate from the frozen p01/median diagnostic",
+    "NONSMOOTH_DELTA": "not indicated; the delta is an algebraically exact coefficient difference",
+    "SUPPORT_SELECTION": "R1/R3 remain reported boundaries and are excluded from applicable-domain conjunction",
+    "TRUTH_MISMATCH": "not indicated by the registered observed-measurement truth contract"
+  },
+  "maximum_abs_tstar_excess_kurtosis": 0.7720246723239228,
+  "maximum_abs_tstar_skew": 0.6371693725598244,
+  "maximum_bootstrap_leverage": 0.21038165675989332,
+  "maximum_delta_algebra_abs_error": 4.567526912246933e-15,
+  "maximum_inner_failures": 0,
+  "maximum_point_leverage": 0.10456714629326525,
+  "minimum_betaB_profile_bootstrap_corr": 0.9924657174837809,
+  "minimum_se_p01_over_median": 0.5319972380905513,
+  "outer_attempts_per_scenario": 2000,
+  "real_effects_fitted": false,
+  "status": "DEVELOPMENT_ONLY__NOT_FORWARD_VALIDATION"
+}

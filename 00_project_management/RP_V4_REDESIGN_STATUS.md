@@ -6,7 +6,7 @@
 
 **Submission state:** `HOLD`
 
-**Current gate:** `PASS_RPV4_STAGE_A_AND_V4B_HISTORICAL_DIAGNOSIS__HOLD_G2C_AND_NEW_COHORT_OUTCOMES`
+**Current gate:** `PASS_RPV4_STAGE_C_PROTOCOL_FREEZE__AUTHOR_SIGNOFF_REQUIRED_BEFORE_FINAL`
 
 ## Scope
 
@@ -87,19 +87,70 @@ lineage.
 - `S2`: not admitted because a unique outcome-blind formula, denominator and
   missing-feature rule do not yet exist.
 
+## Stage C completed
+
+### Single estimand and method
+
+- Primary estimand: `delta_profile`, the disease-coefficient difference between
+  the frozen fixed-profile mixture score and pooled-count score.
+- Interpretation: association difference between two observed measurement and
+  mixing rules; not a causal mediation proportion or cell-intrinsic effect.
+- Primary method: direct donor-level OLS of the delta response, HC3 influence
+  variance and a two-sided `t(64)` interval.
+- Fallback: none. A failed final G2C closes the decomposition branch; no G2D is
+  permitted.
+
+The exposed development replay passed 15/15 applicable cells. Studentizer and
+leverage diagnostics did not indicate collapse: minimum bootstrap-SE
+p01/median 0.532, maximum point leverage 0.105, zero inner failures and
+algebraic delta error at most `4.57e-15`. This is method-development evidence,
+not independent validation.
+
+### Final simulation contract
+
+- independent seed base `2026101004`;
+- final outer stage 141 and truth stage 142;
+- 25 old-comparable scenarios plus 15 prespecified shifted DGPs;
+- 4,000 outer attempts per scenario, 160,000 total, no replenishment;
+- 30 scenarios in the applicable conjunction and 10 mandatory boundaries;
+- unchanged bias, Wilson coverage, exact-null type-I, truth-precision and
+  numerical-failure gates.
+
+The final simulation has not been run and requires exact author sign-off.
+
+### External raw-input contract
+
+Official NCBI RunInfo was downloaded and hashed:
+
+| Accession | Runs | Experiments | Bases | SRA payload |
+|---|---:|---:|---:|---:|
+| GSE262846 / PRJNA1093470 | 176 | 88 | 752.70 G | 233.21 GB |
+| GSE118254 / PRJNA484963 | 85 | 83 | 174.96 G | 64.37 GB |
+
+Raw count reconstruction is technically feasible but pending. At least 2.5 TB
+scratch is recommended. Because shared-donor provenance cannot be excluded from
+public de-identification tokens, the studies are treated as potentially
+overlapping and cannot count as two independent confirmations.
+
+S0 remains primary, S1 remains a technical sensitivity and S2 is abandoned.
+All disease/activity outcomes remain sealed.
+
 ## Current authorization
 
 Allowed:
 
-- freeze one primary G2C estimand/method and at most one prespecified fallback;
-- define independent final-simulation random streams, DGP shifts, thresholds and
-  compute budget;
-- resolve raw-count compatibility and donor provenance for GSE262846/GSE118254;
-- freeze result-blind S0/S1 technical handling.
+- implement and unit-test the frozen HC3-t wrapper, shifted DGP generator and
+  independent truth engine;
+- run a small non-adjudicative technical pilot for deterministic replay,
+  checkpointing and resource benchmarking;
+- generate resumable SRA download/count scripts without starting the large
+  download;
+- verify S0/S1 feature mapping in count-only, outcome-free technical objects.
 
 Not allowed:
 
-- run final G2C validation;
+- run the 160,000-attempt final G2C validation before exact protocol sign-off;
+- change the estimand, t(64) method, DGP registry, thresholds or seed base;
 - fit or inspect real WP2 effects;
 - fit new-cohort diagnosis/activity effects;
 - introduce S2 by outcome tuning;
@@ -108,13 +159,13 @@ Not allowed:
 
 ## Next gate
 
-`RPV4_STAGE_C__SINGLE_G2C_AND_EXTERNAL_INPUT_PROTOCOL_FREEZE`
+`RPV4_STAGE_D__G2C_IMPLEMENTATION_AND_EXTERNAL_RAW_INTAKE_TECHNICAL_PILOT`
 
-The next gate must decide one estimand and one primary method before final
-simulation, separate interval calibration from point-estimator bias, and issue
-a fail-closed raw-count/provenance decision for each external candidate. If the
-single frozen G2C strategy fails, the decomposition branch closes; RP v4 does not
-permit a G2D rescue.
+Stage D must implement only the frozen contracts, qualify independent shifted
+truths, demonstrate deterministic checkpoint/replay and produce a resumable raw
+intake runbook. It must not inspect final performance or real outcomes. Exact
+author approval remains required before any final G2C execution or large data
+download.
 
 ## Canonical evidence
 
@@ -122,3 +173,6 @@ permit a G2D rescue.
 - [`phase17_v7/rp_v4_redesign/20261010_stageA_authority_feasibility_freeze/11_RPV4_STAGE_A_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261010_stageA_authority_feasibility_freeze/11_RPV4_STAGE_A_ADVISOR_REVIEW.md)
 - [`phase17_v7/rp_v4_redesign/20261010_stageA_authority_feasibility_freeze/12_RPV4_STAGE_C_PROTOCOL_REQUIREMENTS.md`](../phase17_v7/rp_v4_redesign/20261010_stageA_authority_feasibility_freeze/12_RPV4_STAGE_C_PROTOCOL_REQUIREMENTS.md)
 - [`00_project_management/action_record_2026-10-10_rp_v4_stageA_authority_feasibility_freeze.md`](action_record_2026-10-10_rp_v4_stageA_authority_feasibility_freeze.md)
+- [`phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/11_RPV4_STAGE_C_GATE_STATUS.json`](../phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/11_RPV4_STAGE_C_GATE_STATUS.json)
+- [`phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/12_RPV4_STAGE_C_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/12_RPV4_STAGE_C_ADVISOR_REVIEW.md)
+- [`phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/13_STAGE_D_TECHNICAL_PILOT_PROTOCOL.md`](../phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/13_STAGE_D_TECHNICAL_PILOT_PROTOCOL.md)

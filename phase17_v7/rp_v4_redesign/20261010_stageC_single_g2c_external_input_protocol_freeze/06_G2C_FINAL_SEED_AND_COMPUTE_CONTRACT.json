@@ -1,0 +1,33 @@
+{
+  "applicable_conjunction_scenarios": 30,
+  "bias_gate": "(abs(bias)+1.96*MCSE_bias)/EmpSD <= 0.10",
+  "boundary_report_scenarios": 10,
+  "checkpoint_attempts": 100,
+  "counter_address": [
+    "seed_base",
+    "stage",
+    "scenario_index",
+    "attempt_id",
+    "component_id"
+  ],
+  "coverage_gate": "Wilson 95% interval wholly within [0.925,0.975]",
+  "development_stage": 131,
+  "estimated_runtime_note": "analytic HC3-t removes the 2,000-fold inner bootstrap; Stage D must benchmark before final execution",
+  "exact_null_type_i_gate": "Wilson 95% upper bound <= 0.075",
+  "final_execution_authorized": false,
+  "final_outer_stage": 141,
+  "final_scenarios": 40,
+  "final_truth_stage": 142,
+  "inner_bootstraps": 0,
+  "max_numerical_failure_fraction": 0.01,
+  "minimum_supported_for_performance": 274,
+  "no_replenishment": true,
+  "old_comparable_scenarios": 25,
+  "outer_attempts_per_scenario": 4000,
+  "random_seed_base": 2026101004,
+  "registered_outer_attempts": 160000,
+  "schema": "RP_V4_G2C_FINAL_SEED_AND_BUDGET_1.0",
+  "shifted_scenarios": 15,
+  "truth_effort_per_nonnull_shifted_scenario_per_arm": 131072,
+  "truth_precision_rule": "truth MCSE <= 0.01 * fixed-design typical coefficient SE"
+}

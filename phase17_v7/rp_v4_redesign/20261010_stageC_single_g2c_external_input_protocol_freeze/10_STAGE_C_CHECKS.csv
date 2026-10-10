@@ -1,0 +1,17 @@
+check,pass,detail
+single_estimand,True,exactly one registered estimand
+single_primary_method,True,one HC3-t method; no fallback search
+development_not_final,True,historical streams labelled development only
+development_grid,True,15/15 exposed applicable cells; not confirmatory
+new_seed_base,True,independent base 2026101004
+new_dgp_shifts,True,15 shifted scenarios
+full_attempt_accounting,True,"40 x 4,000; no replenishment"
+no_inner_method_search,True,analytic single method
+raw_runinfo_262846,True,NCBI RunInfo reconciled
+raw_runinfo_118254,True,NCBI RunInfo reconciled
+provenance_fail_closed,True,no false independent-cohort claim
+S0_locked,True,unchanged primary score
+S1_limited,True,cannot be promoted by P value
+S2_excluded,True,no arbitrary new score
+real_outcome_lock,True,WP2 and external outcomes locked
+final_execution_lock,True,exact protocol sign-off required

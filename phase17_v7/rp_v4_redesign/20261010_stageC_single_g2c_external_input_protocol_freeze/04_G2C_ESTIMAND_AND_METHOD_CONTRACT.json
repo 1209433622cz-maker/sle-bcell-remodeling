@@ -1,0 +1,32 @@
+{
+  "alpha": 0.05,
+  "automatic_unlock_permitted": false,
+  "bound_git_head_before_stageC_commit": "16f15399f090f0631f5c9dd33d2adf015bd0b0b4",
+  "degrees_of_freedom": 64,
+  "development_evidence": {
+    "applicable_scenarios_passed": "15/15",
+    "maximum_delta_algebra_abs_error": 4.567526912246933e-15,
+    "maximum_inner_failures": 0,
+    "maximum_point_leverage": 0.10456714629326525,
+    "minimum_betaB_profile_bootstrap_corr": 0.9924657174837809,
+    "minimum_bootstrap_se_p01_over_median": 0.5319972380905513,
+    "not_forward_confirmation": true,
+    "status": "EXPOSED_HISTORICAL_DEVELOPMENT_ONLY"
+  },
+  "estimand_formula": "b_X[T0(sum_k pi_ref,k m_ikg)] - b_X[T0(sum_k q_UMI,ik m_ikg)]",
+  "estimand_id": "delta_profile",
+  "fallback_method": null,
+  "fallback_policy": "none; failure closes the decomposition branch and no G2D is permitted",
+  "implementation_formula": "OLS disease coefficient for donor response T0(fixed-profile mixture) - T0(pooled counts)",
+  "kernel": "audit_tools/rp_v4_g2c_hc3t.py",
+  "kernel_sha256": "0e05531a66931a0e2109cf15f59277257674aab8701c262ce579e9c7e2135ba6",
+  "method_sources": [
+    "https://doi.org/10.1016/0304-4076(85)90158-7",
+    "https://doi.org/10.1080/00031305.2000.10474549"
+  ],
+  "primary_method": "direct donor-level OLS delta_profile; HC3 influence variance; two-sided t critical with df=68-4=64",
+  "real_effects_permitted": false,
+  "schema": "RP_V4_STAGE_C_G2C_METHOD_1.0",
+  "scientific_interpretation": "association difference between two observed measurement/mixing rules; not a causal mediation proportion",
+  "selection_reason": "delta_profile passed all 15 historical G2B point-bias gates and concentrated the residual problem in interval coverage"
+}

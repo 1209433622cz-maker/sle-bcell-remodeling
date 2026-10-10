@@ -19,30 +19,37 @@ not pass its frozen conjunction, and WP3 ended with outcome-blind pooled
 measurement diagnostics only.
 
 The active project now follows Research Plan v4 as a separate prospective
-branch. Stage A verified the proposal bundle, corrected the Git authority chain,
-carried forward all RP v3 HOLD decisions, independently diagnosed the 17 G2B
-failures and audited official GEO MINiML metadata without fitting any new disease
-effect. `GSE262846` resolves to 45 patient IDs from 88 libraries and `GSE118254`
-to 17 donor tokens from 83 libraries, but count-scale compatibility and
-cross-study independence remain unresolved. Manuscript replacement, submission,
-GitHub Release and Zenodo updates remain on hold.
+branch. Stage A verified the proposal bundle, carried forward every RP v3 HOLD,
+diagnosed the 17 G2B failures and audited official GEO metadata. Stage C has now
+frozen exactly one G2C estimand and one method, independent final random streams,
+40 data-generating scenarios, S0/S1 measurement handling and a fail-closed raw
+input protocol. No final G2C run or real disease/activity model has been run.
+Manuscript replacement, submission, GitHub Release and Zenodo updates remain on
+hold.
 
 Current gate:
 
 ```text
-PASS_RPV4_STAGE_A_AND_V4B_HISTORICAL_DIAGNOSIS__HOLD_G2C_AND_NEW_COHORT_OUTCOMES
+PASS_RPV4_STAGE_C_PROTOCOL_FREEZE__AUTHOR_SIGNOFF_REQUIRED_BEFORE_FINAL
 ```
 
 Next stage:
 
 ```text
-RPV4_STAGE_C__SINGLE_G2C_AND_EXTERNAL_INPUT_PROTOCOL_FREEZE
+RPV4_STAGE_D__G2C_IMPLEMENTATION_AND_EXTERNAL_RAW_INTAKE_TECHNICAL_PILOT
 ```
 
 ## Scientific position
 
 The stable historical conclusion remains **reproducible process-level B_CONV
 IFN/ISG remodeling**, bounded by three permanent limitations:
+
+Historical scientific-presentation title: **Disease-blind reconstruction
+distinguishes reproducible interferon remodeling from unstable B-cell state
+assignments in systemic lupus erythematosus**.
+
+End-to-end resampling did not meet the frozen identity criterion: the B_ASC median Jaccard was 0.930, below 0.95.
+This historical HOLD remains in force.
 
 1. **Identity ceiling:** end-to-end B_ASC membership did not meet the frozen
    reproducibility criterion (median Jaccard 0.930323 < 0.95).
@@ -58,6 +65,37 @@ predeclared questions about annotation sensitivity, composition, within-state
 effects and the identifiability of those quantities.
 
 ## RP v4 progress
+
+### Stage C: single G2C and external-input protocol freeze
+
+- Selected only `delta_profile`, because its historical G2B point-bias gate
+  passed in all 15 applicable scenarios and its residual failures were confined
+  to interval coverage. `delta_cellref` was not selected because it mixed
+  coverage and point-bias failures.
+- Replayed the exposed historical development stream. Bootstrap-SE p01/median
+  was at least 0.532, maximum point leverage was 0.105, no inner diagnostic fit
+  failed, and the direct delta equalled the coefficient difference to within
+  `4.57e-15`. This argues against a collapsed studentizer or non-smooth target.
+- Froze one method: direct donor-level `delta_profile` OLS with HC3 influence
+  variance and a two-sided `t(64)` interval. It passed 15/15 exposed applicable
+  development cells, but this is explicitly not forward confirmation.
+- Registered a new seed base, 25 old-comparable plus 15 shifted DGPs and 4,000
+  outer attempts per scenario (160,000 total). The final run is not authorized.
+- Reconciled official NCBI SRA RunInfo: GSE262846 has 176 runs/88 experiments
+  (about 233.21 GB SRA) and GSE118254 has 85 runs/83 experiments (about 64.37 GB).
+  Raw reconstruction is feasible but pending; both outcome tables remain locked.
+- Conservatively treat the two candidates as potentially donor-overlapping.
+  GSE118254 cannot be counted as a second independent confirmation of GSE262846.
+- Retained S0 as the primary frozen score and S1 as a technical sensitivity;
+  S2 was abandoned because no unique result-blind formula could be justified.
+
+Decision:
+`PASS_RPV4_STAGE_C_PROTOCOL_FREEZE__AUTHOR_SIGNOFF_REQUIRED_BEFORE_FINAL`.
+
+See the [Stage C advisor review](phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/12_RPV4_STAGE_C_ADVISOR_REVIEW.md),
+[method contract](phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/04_G2C_ESTIMAND_AND_METHOD_CONTRACT.json),
+[external-input contract](phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/08_EXTERNAL_RAW_RECONSTRUCTION_AND_PROVENANCE_CONTRACT.md)
+and [machine-readable gate](phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/11_RPV4_STAGE_C_GATE_STATUS.json).
 
 ### Stage A: authority, historical diagnosis and external feasibility
 
@@ -263,14 +301,13 @@ See the [pooled-measurement advisor review](phase17_v7/rp_v3_redesign/20261010_w
 [machine-readable gate](phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/12_WP3_MEASUREMENT_GATE_STATUS.json)
 and [scope-closure recommendation](phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/15_RP_V3_SCOPE_CLOSURE_RECOMMENDATION.md).
 
-## Next gate: single G2C and external-input protocol freeze
+## Next gate: G2C implementation and external raw-intake technical pilot
 
-The next action is source-level protocol work only: choose one primary G2C
-estimand and method, freeze its independent final-simulation DGPs, seeds,
-thresholds and compute budget, and decide whether GSE262846/GSE118254 can be
-reconstructed on a compatible count scale with defensible donor provenance.
-Final G2C execution, real WP2 effects, new-cohort disease/activity effects, WP4,
-manuscript replacement and submission remain unauthorized.
+The next action is implementation qualification only: implement the frozen
+shifted DGPs and truth engine, run a small non-adjudicative technical pilot and
+generate resumable SRA download/count scripts. Final G2C execution, large raw
+download, real WP2 effects, new-cohort disease/activity effects, WP4, manuscript
+replacement and submission remain unauthorized until a later explicit gate.
 
 ## Reproduce the active redesign
 
@@ -285,6 +322,17 @@ evidence and official MINiML files recorded by the action report:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v4_stageA.ps1
+```
+
+Reproduce the exposed Stage C development diagnosis in a new directory, then
+verify the tracked frozen contract with its focused regression tests:
+
+```powershell
+python .\audit_tools\rp_v4_stageC_01_development_diagnostic.py `
+  --output-dir .\phase17_v7\rp_v4_redesign\stageC_development_reproduction
+
+& 'C:\ProgramData\miniforge3\envs\sle-bcell\python.exe' `
+  -m unittest discover -s audit_tools -p 'test_rp_v4_g2c.py' -v
 ```
 
 Run the completed gates from the repository root:
@@ -330,7 +378,8 @@ D:\bioinfor\python.exe -m unittest -v `
   audit_tools.test_rp_v3_wp1 `
   audit_tools.test_rp_v3_wp2_prefit `
   audit_tools.test_rp_v3_g2 `
-  audit_tools.test_rp_v3_g2b
+  audit_tools.test_rp_v3_g2b `
+  audit_tools.test_rp_v4_g2c
 ```
 
 Large public matrices and cell-level intermediates are intentionally outside
@@ -343,6 +392,7 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 |---|---|
 | Current project status | [`00_project_management/RP_V4_REDESIGN_STATUS.md`](00_project_management/RP_V4_REDESIGN_STATUS.md) |
 | RP v4 Stage A authority/feasibility freeze | [`phase17_v7/rp_v4_redesign/20261010_stageA_authority_feasibility_freeze/`](phase17_v7/rp_v4_redesign/20261010_stageA_authority_feasibility_freeze/) |
+| RP v4 Stage C method/input protocol freeze | [`phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/`](phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/) |
 | Historical RP v3 status | [`00_project_management/RP_V3_REDESIGN_STATUS.md`](00_project_management/RP_V3_REDESIGN_STATUS.md) |
 | Full file audit | [`00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md`](00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md) |
 | Valuable asset register | [`00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv`](00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv) |
