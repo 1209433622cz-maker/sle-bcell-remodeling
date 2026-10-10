@@ -1,0 +1,19 @@
+{
+  "GO_FOR_FULL_SYNTHETIC_G2C": false,
+  "author_contract_approved": true,
+  "canonical_adjudicator_bound": true,
+  "canonical_independent_truth_runner_bound": true,
+  "canonical_outer_runner_bound": true,
+  "canonical_windows_runtime_qualified": true,
+  "decision": "PASS_RPV4_STAGE_E2_AUTHOR_CONTRACT_AND_CANONICAL_PIPELINE_BINDING__HOLD_EXACT_CODE_GO",
+  "external_disease_outcomes_authorized": false,
+  "large_SRA_download_authorized": false,
+  "manuscript_or_submission_modified": false,
+  "next_stage": "RPV4_STAGE_F__POST_COMMIT_EXACT_CODE_GO_REVIEW",
+  "old_G2_G2B_hold_preserved": true,
+  "qualification_stage132_pass": true,
+  "real_WP2_authorized": false,
+  "schema": "RP_V4_STAGE_E2_GATE_1.0",
+  "stage141_started": false,
+  "stage142_started": false
+}

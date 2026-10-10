@@ -1,0 +1,14 @@
+check,pass,detail
+external_zip_crc,True,154 entries; CRC clean
+external_payload_manifest,True,153/153 exact
+external_windows_encoding_portability,False,candidate preflight uses default CSV encoding; canonical code repaired
+author_contract_signoff,True,Zhi Chen and Teng Qi; all frozen scientific terms approved
+code_and_contract_hash_binding,True,canonical source binding verified
+windows_runtime_qualification,True,D:\bioinfor\python.exe
+unit_tests,True,15/15 PASS
+outer_qualification_replay,True,24 attempts; fresh/resume stable
+truth_qualification,True,3/3 precision pass on stage132
+stage141_fail_closed,True,exact-code GO absent
+stage142_fail_closed,True,exact-code GO absent
+full_G2C_authorized,False,separate post-commit exact-code GO required
+real_outcomes_loaded,False,locked

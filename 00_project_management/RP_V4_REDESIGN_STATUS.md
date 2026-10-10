@@ -6,7 +6,7 @@
 
 **Submission state:** `HOLD`
 
-**Current gate:** `PASS_RPV4_STAGE_D_CANONICAL_TECHNICAL_IMPLEMENTATION__HOLD_STAGE_E_AUTHOR_SIGNOFF_AND_FINAL_G2C`
+**Current gate:** `PASS_RPV4_STAGE_E2_AUTHOR_CONTRACT_AND_CANONICAL_PIPELINE_BINDING__HOLD_EXACT_CODE_GO`
 
 ## Scope
 
@@ -176,23 +176,64 @@ All disease/activity outcomes remain sealed.
 Stage D decision:
 `PASS_RPV4_STAGE_D_CANONICAL_TECHNICAL_IMPLEMENTATION__HOLD_STAGE_E_AUTHOR_SIGNOFF_AND_FINAL_G2C`.
 
+## Stage E2 completed
+
+### External intake and independent replay
+
+- The received Stage E ZIP contained 154 entries and passed CRC testing. Its
+  153-row payload manifest matched all controlled files by byte size and
+  SHA-256.
+- The external adjudicator passed 14/14 focused tests. Its 15 shifted-DGP
+  stage-131 truth-budget rows reproduced on `D:\bioinfor\python.exe`: all
+  statuses matched, the largest truth difference was zero, and the largest
+  MCSE difference was `4.34e-19`.
+- The external preflight was not portable as written: a CSV opened without an
+  explicit encoding failed under the Windows GBK default. The canonical Stage
+  E2 implementation uses UTF-8 explicitly and records this candidate defect.
+
+### Author contract and code binding
+
+- Zhi Chen and Teng Qi approved the single `delta_profile` estimand, the sole
+  OLS/HC3/t(64) method, 40 x 4,000 grid, seed base `2026101004`, final stages
+  141/142, unchanged truth/performance thresholds, no replenishment and the
+  no-G2D stop rule.
+- This approval is stored as a scientific-contract sign-off. It does not claim
+  that the authors approved code bytes that had not yet been committed.
+- The canonical project implementation now contains a resumable outer runner,
+  independent shifted-DGP truth runner, fail-closed authorization validator,
+  pure adjudicator and write-once full adjudication driver. The source manifest
+  binds all code, Stage C contracts, calibration model and historical truth.
+
+### Windows qualification
+
+- Project-side Stage E2 tests passed 15/15 under `D:\bioinfor\python.exe`
+  (Python 3.13.7, NumPy 2.3.3, SciPy 1.16.2, statsmodels 0.14.6).
+- The non-final stage-132 outer qualification executed 24 attempts across
+  C0_X1, C1_X2 and C2_X3. Resume and independent fresh outputs were identical
+  for all stable files.
+- Three stage-132 truth cases used the full 131,072-per-arm budget and all met
+  the precision criterion; maximum `MCSE / typical SE` was 0.005907.
+- The unissued exact-code GO template was rejected for both outer and truth
+  execution. Stage 141 and stage 142 were not started.
+
+Stage E2 decision:
+`PASS_RPV4_STAGE_E2_AUTHOR_CONTRACT_AND_CANONICAL_PIPELINE_BINDING__HOLD_EXACT_CODE_GO`.
+
 ## Current authorization
 
 Allowed:
 
-- prepare the exact Stage E author-signoff receipt;
-- implement and unit-test the complete stage-142 truth runner and stage-141
-  runner/adjudicator without opening their final namespaces;
+- review the committed Stage E2 code and source-binding manifest;
+- prepare a new exact-code GO receipt only after the commit hash exists;
 - exercise checkpoint, resume, overwrite refusal and fail-closed adjudication
   on non-final technical streams;
-- bind all code, contracts, calibration inputs and the qualified runtime by
-  SHA-256;
 - estimate final compute/storage requirements without executing the final grid.
 
 Not allowed:
 
-- run the 160,000-attempt final G2C validation before an explicit
-  `GO_FOR_FULL_SYNTHETIC_G2C` gate;
+- run the 160,000-attempt final G2C validation before a new exact-code
+  `GO_FOR_FULL_SYNTHETIC_G2C` receipt binds both authors, the committed Git HEAD
+  and the Stage E2 source manifest;
 - consume stage-141 or stage-142 random streams during preflight;
 - change the estimand, t(64) method, DGP registry, thresholds or seed base;
 - fit or inspect real WP2 effects;
@@ -203,13 +244,12 @@ Not allowed:
 
 ## Next gate
 
-`RPV4_STAGE_E__AUTHOR_SIGNOFF_AND_FINAL_G2C_PREFLIGHT`
+`RPV4_STAGE_F__POST_COMMIT_EXACT_CODE_GO_REVIEW`
 
-Stage E must bind exact author approval, complete and test the final runner,
-truth engine and independent adjudicator, and prove the final workflow is
-fail-closed without opening stages 141/142. Only a later explicit gate may
-authorize the final synthetic run. Exact author approval remains separately
-required before any large data download.
+Stage F must bind both authors to the exact synchronized Git commit and the
+existing source-binding manifest. Only a newly issued receipt may authorize
+stage 141 and stage 142. The current template remains false. Large data download
+and all real outcomes still require separate later approval.
 
 ## Canonical evidence
 
@@ -223,3 +263,6 @@ required before any large data download.
 - [`phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/09_STAGE_D_GATE_STATUS.json`](../phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/09_STAGE_D_GATE_STATUS.json)
 - [`phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/11_STAGE_D_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/11_STAGE_D_ADVISOR_REVIEW.md)
 - [`phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/12_STAGE_E_PREFLIGHT_CONTRACT.md`](../phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/12_STAGE_E_PREFLIGHT_CONTRACT.md)
+- [`phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/07_STAGE_E2_GATE_STATUS.json`](../phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/07_STAGE_E2_GATE_STATUS.json)
+- [`phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/09_STAGE_E2_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/09_STAGE_E2_ADVISOR_REVIEW.md)
+- [`phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/10_STAGE_F_GO_NO_GO_CONTRACT.md`](../phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/10_STAGE_F_GO_NO_GO_CONTRACT.md)

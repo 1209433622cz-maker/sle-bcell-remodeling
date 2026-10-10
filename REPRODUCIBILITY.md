@@ -6,7 +6,7 @@ The active branch state is `ACTIVE_RP_V4_SCIENTIFIC_REDESIGN` with journal
 submission on hold. RP v3 is retained as a complete bounded historical record.
 The public v1.1.0 release described below remains an immutable historical
 reproducibility snapshot; it does not contain the later RP v3 analyses or the
-RP v4 Stage A, Stage C and Stage D work.
+RP v4 Stage A, Stage C, Stage D and Stage E2 work.
 
 Completed active gates:
 
@@ -19,6 +19,11 @@ Completed active gates:
   obtained 28/28 byte-identical fresh-versus-resume files. The only qualified
   Windows runtime is `D:\bioinfor\python.exe`; the `sle-bcell` Miniforge runtime
   is disqualified for G2C after native exit `0xC06D007F` on the X2 path.
+- RP v4 Stage E2: recorded both authors' scientific-contract approval, repaired
+  a Windows CSV-encoding defect in the external preflight, byte-bound the
+  resumable outer runner, independent truth runner and write-once adjudicator,
+  and passed 15/15 tests plus non-final stage-132 qualification. Exact-code GO
+  is still unissued; stage 141/142 remain unopened.
 
 - Stage 0: recovered and hashed 21/21 inputs; registered units, chronology,
   estimands, branches and open parameters.
@@ -93,6 +98,12 @@ powershell -ExecutionPolicy Bypass `
   -File .\audit_tools\run_rp_v4_stageD.ps1 `
   -Python D:\bioinfor\python.exe `
   -OutputRoot .\phase17_v7\rp_v4_redesign\stageD_technical_reproduction
+
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_rp_v4_stageE2_preflight.ps1 `
+  -Python D:\bioinfor\python.exe `
+  -OutputRoot .\phase17_v7\rp_v4_redesign\_software_tests\stageE2_reproduction `
+  -CanonicalOutput .\phase17_v7\rp_v4_redesign\stageE2_reproduction_freeze
 ```
 
 The raw full-G2 and full-G2B runs are intentionally Git-ignored. The canonical
@@ -104,10 +115,10 @@ manifest. The validated local runtime was `D:\bioinfor\python.exe` (Python
 3.13.7, NumPy 2.3.3). No real WP2 response was loaded or fitted.
 
 The active next gate is
-`RPV4_STAGE_E__AUTHOR_SIGNOFF_AND_FINAL_G2C_PREFLIGHT`. Stage 141/142, real WP2
+`RPV4_STAGE_F__POST_COMMIT_EXACT_CODE_GO_REVIEW`. Stage 141/142, real WP2
 effects, external outcomes, large SRA download, WP4, manuscript replacement,
 submission package, GitHub Release and Zenodo remain unauthorized. See
-`phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/` and
+`phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/` and
 `00_project_management/RP_V4_REDESIGN_STATUS.md`.
 
 ## Current correction status

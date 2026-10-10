@@ -1,0 +1,18 @@
+{
+  "external_adjudicator_tests": "14/14 PASS",
+  "external_preflight_windows_result": "FAIL_UTF8_DEFAULT_ENCODING_GBK",
+  "payload_manifest_failures": 0,
+  "payload_manifest_rows": 153,
+  "schema": "RP_V4_STAGE_E_EXTERNAL_RECEIPT_1.0",
+  "stage141_started": false,
+  "stage142_started": false,
+  "windows_stage131_max_mcse_abs_difference": 4.336808689942018e-19,
+  "windows_stage131_max_mcse_over_typical_se": 0.007754568766074131,
+  "windows_stage131_max_truth_abs_difference": 0.0,
+  "windows_stage131_shifted_truth_replay": "15/15 status match",
+  "zip_bytes": 688646,
+  "zip_crc_pass": true,
+  "zip_entries": 154,
+  "zip_filename": "SLE_RPv4_StageE_Preflight_20261011.zip",
+  "zip_sha256": "fe603e4d31031037428a3fa241678b7d5b14752d111fa739b317574215741e74"
+}

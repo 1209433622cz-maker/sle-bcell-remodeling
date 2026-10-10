@@ -1,0 +1,22 @@
+{
+  "GO_FOR_FULL_SYNTHETIC_G2C": false,
+  "approval_evidence": "The user explicitly stated 'all approved' in the project thread on 2026-10-11; prior thread confirmations bind both listed authors.",
+  "approved_at": "2026-10-11 Asia/Hong_Kong; thread date recorded, exact clock time not captured",
+  "approved_by": [
+    "Zhi Chen",
+    "Teng Qi"
+  ],
+  "author_contract_approved": true,
+  "code_binding_manifest_sha256": "3941ec72ba39bc3ceedf64926fc4ffcbcd8f14e160155e0c68fc65f9e9abcbb0",
+  "failure_closes_branch_no_G2D": true,
+  "final_G2C_does_not_unlock_real_outcomes_automatically": true,
+  "fixed_40_scenarios_4000_attempts_each": true,
+  "fixed_seed_base_2026101004_stage141_truth142": true,
+  "fixed_truth_precision_and_acceptance_thresholds": true,
+  "large_SRA_download_requires_separate_authorization": true,
+  "no_replenishment_or_posthoc_scenario_removal": true,
+  "note": "Scientific contract approval is recorded. Exact-code execution GO is deliberately separate because the final Git commit did not yet exist.",
+  "schema": "RP_V4_STAGE_E2_AUTHOR_CONTRACT_SIGNOFF_1.0",
+  "single_estimand_delta_profile": true,
+  "single_method_OLS_HC3_t64": true
+}

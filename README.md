@@ -8,7 +8,7 @@ Repository: [1209433622cz-maker/sle-bcell-remodeling](https://github.com/1209433
 
 ## Current status
 
-**Active state on 10 October 2026:**
+**Active state on 11 October 2026:**
 `ACTIVE_RP_V4_SCIENTIFIC_REDESIGN / HOLD_SUBMISSION`.
 
 The public v1.1.0 archive and the September scientific-presentation baseline are
@@ -23,22 +23,24 @@ branch. Stage A verified the proposal bundle, carried forward every RP v3 HOLD,
 diagnosed the 17 G2B failures and audited official GEO metadata. Stage C froze
 exactly one G2C estimand and one method, independent final random streams, 40
 data-generating scenarios, S0/S1 measurement handling and a fail-closed raw
-input protocol. Stage D has independently re-audited and canonically integrated
-the shifted-DGP generator, independent truth engine, checkpointed technical
-pilot and plan-only SRA ledger. No final G2C run or real disease/activity model
-has been run. Manuscript replacement, submission, GitHub Release and Zenodo
-updates remain on hold.
+input protocol. Stage D canonically integrated the shifted-DGP generator and
+technical pilot. Stage E2 now records both authors' approval of the frozen
+scientific contract and byte-binds the Windows outer runner, independent truth
+runner and result-blind adjudicator. Their non-final stage-132 qualification
+passed, while the exact-code GO remains deliberately unissued. No final G2C run
+or real disease/activity model has been run. Manuscript replacement, submission,
+GitHub Release and Zenodo updates remain on hold.
 
 Current gate:
 
 ```text
-PASS_RPV4_STAGE_D_CANONICAL_TECHNICAL_IMPLEMENTATION__HOLD_STAGE_E_AUTHOR_SIGNOFF_AND_FINAL_G2C
+PASS_RPV4_STAGE_E2_AUTHOR_CONTRACT_AND_CANONICAL_PIPELINE_BINDING__HOLD_EXACT_CODE_GO
 ```
 
 Next stage:
 
 ```text
-RPV4_STAGE_E__AUTHOR_SIGNOFF_AND_FINAL_G2C_PREFLIGHT
+RPV4_STAGE_F__POST_COMMIT_EXACT_CODE_GO_REVIEW
 ```
 
 ## Scientific position
@@ -67,6 +69,37 @@ predeclared questions about annotation sensitivity, composition, within-state
 effects and the identifiability of those quantities.
 
 ## RP v4 progress
+
+### Stage E2: author contract and canonical final-pipeline binding
+
+- Independently verified the received Stage E package: 154 ZIP entries, clean
+  CRC and 153/153 manifest-controlled payloads. The 15 shifted-DGP stage-131
+  truth-budget results reproduced on the qualified Windows runtime; the largest
+  `MCSE / typical SE` remained 0.007755.
+- Found and repaired a real portability defect in the external candidate: its
+  preflight opened CSV files with the Windows default encoding and failed under
+  GBK. Canonical text readers now require UTF-8 explicitly.
+- Recorded Zhi Chen and Teng Qi's approval of the single estimand, single method,
+  40 x 4,000 grid, fixed seed/stages, unchanged thresholds, no replenishment and
+  no-G2D stop rule. This contract sign-off is separate from exact-code execution
+  authorization.
+- Added a resumable stage-141-capable outer runner, independent stage-142 truth
+  runner, fail-closed authorization binding and write-once 40-scenario
+  adjudication driver. The final namespaces cannot open without a new receipt
+  that binds both authors, the committed Git HEAD and the source manifest SHA.
+- Passed 15/15 project-side tests. A non-final stage-132 qualification executed
+  24 outer attempts with fresh/resume equivalence; three truth cases passed the
+  full 131,072-per-arm budget with maximum `MCSE / typical SE = 0.005907`.
+- Confirmed that stage 141 and stage 142 were not started and no real outcome,
+  SRA download, manuscript or submission asset was touched.
+
+Decision:
+`PASS_RPV4_STAGE_E2_AUTHOR_CONTRACT_AND_CANONICAL_PIPELINE_BINDING__HOLD_EXACT_CODE_GO`.
+
+See the [Stage E2 advisor review](phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/09_STAGE_E2_ADVISOR_REVIEW.md),
+[machine-readable gate](phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/07_STAGE_E2_GATE_STATUS.json),
+[author contract sign-off](phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/02_AUTHOR_CONTRACT_SIGNOFF.json)
+and [Stage F exact-code contract](phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/10_STAGE_F_GO_NO_GO_CONTRACT.md).
 
 ### Stage D: canonical technical implementation
 
@@ -334,16 +367,16 @@ See the [pooled-measurement advisor review](phase17_v7/rp_v3_redesign/20261010_w
 [machine-readable gate](phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/12_WP3_MEASUREMENT_GATE_STATUS.json)
 and [scope-closure recommendation](phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/15_RP_V3_SCOPE_CLOSURE_RECOMMENDATION.md).
 
-## Next gate: author sign-off and final-G2C preflight
+## Next gate: post-commit exact-code GO review
 
-The next action is `RPV4_STAGE_E__AUTHOR_SIGNOFF_AND_FINAL_G2C_PREFLIGHT`.
-It must bind an exact author approval receipt, implement and test the complete
-stage-142 truth runner and stage-141 runner/adjudicator, prove fail-closed
-checkpoint/resume behavior on non-final streams and estimate runtime without
-opening either final namespace. Only a later explicit
-`GO_FOR_FULL_SYNTHETIC_G2C` may start the 160,000-attempt run. Large raw download,
-real WP2 effects, new-cohort disease/activity effects, WP4, manuscript
-replacement and submission remain unauthorized.
+The next action is `RPV4_STAGE_F__POST_COMMIT_EXACT_CODE_GO_REVIEW`. After this
+Stage E2 implementation is committed and synchronized, both authors must review
+that exact Git commit and source-binding manifest. Only a newly issued
+`GO_FOR_FULL_SYNTHETIC_G2C` receipt binding those bytes may open stage 141/142
+and start the 160,000-attempt run. The current template is false and cannot
+authorize execution. Large raw download, real WP2 effects, new-cohort
+disease/activity effects, WP4, manuscript replacement and submission remain
+unauthorized.
 
 ## Reproduce the active redesign
 
@@ -408,6 +441,12 @@ powershell -ExecutionPolicy Bypass `
   -File .\audit_tools\run_rp_v4_stageD.ps1 `
   -Python D:\bioinfor\python.exe `
   -OutputRoot .\phase17_v7\rp_v4_redesign\stageD_technical_reproduction
+
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_rp_v4_stageE2_preflight.ps1 `
+  -Python D:\bioinfor\python.exe `
+  -OutputRoot .\phase17_v7\rp_v4_redesign\_software_tests\stageE2_reproduction `
+  -CanonicalOutput .\phase17_v7\rp_v4_redesign\stageE2_reproduction_freeze
 ```
 
 Run the focused tests:
@@ -421,7 +460,8 @@ D:\bioinfor\python.exe -m unittest -v `
   audit_tools.test_rp_v3_g2 `
   audit_tools.test_rp_v3_g2b `
   audit_tools.test_rp_v4_g2c `
-  audit_tools.test_rp_v4_stageD
+  audit_tools.test_rp_v4_stageD `
+  audit_tools.test_rp_v4_stageE2
 ```
 
 Large public matrices and cell-level intermediates are intentionally outside
@@ -436,6 +476,7 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 | RP v4 Stage A authority/feasibility freeze | [`phase17_v7/rp_v4_redesign/20261010_stageA_authority_feasibility_freeze/`](phase17_v7/rp_v4_redesign/20261010_stageA_authority_feasibility_freeze/) |
 | RP v4 Stage C method/input protocol freeze | [`phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/`](phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/) |
 | RP v4 Stage D canonical technical freeze | [`phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/`](phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/) |
+| RP v4 Stage E2 canonical preflight | [`phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/`](phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/) |
 | Historical RP v3 status | [`00_project_management/RP_V3_REDESIGN_STATUS.md`](00_project_management/RP_V3_REDESIGN_STATUS.md) |
 | Full file audit | [`00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md`](00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md) |
 | Valuable asset register | [`00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv`](00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv) |

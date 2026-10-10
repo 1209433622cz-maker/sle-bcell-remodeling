@@ -1,0 +1,20 @@
+{
+  "GO_FOR_FULL_SYNTHETIC_G2C": false,
+  "approved_at": null,
+  "approved_by": [],
+  "author_contract_approved": false,
+  "authorize_outer_stage141": false,
+  "authorize_truth_stage142": false,
+  "binding_git_commit": null,
+  "code_binding_manifest_sha256": "3941ec72ba39bc3ceedf64926fc4ffcbcd8f14e160155e0c68fc65f9e9abcbb0",
+  "failure_closes_branch_no_G2D": false,
+  "final_G2C_does_not_unlock_real_outcomes_automatically": false,
+  "fixed_40_scenarios_4000_attempts_each": false,
+  "fixed_seed_base_2026101004_stage141_truth142": false,
+  "fixed_truth_precision_and_acceptance_thresholds": false,
+  "no_replenishment_or_posthoc_scenario_removal": false,
+  "schema": "RP_V4_STAGE_F_EXACT_CODE_GO_1.0",
+  "single_estimand_delta_profile": false,
+  "single_method_OLS_HC3_t64": false,
+  "status": "UNISSUED_TEMPLATE__DO_NOT_RUN_FINAL_STREAMS"
+}

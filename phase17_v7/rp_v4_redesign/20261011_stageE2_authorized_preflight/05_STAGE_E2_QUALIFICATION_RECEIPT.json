@@ -1,0 +1,24 @@
+{
+  "outer_attempts": 24,
+  "outer_resume_and_fresh_byte_equivalent": true,
+  "outer_resume_tree_files": 5,
+  "outer_scenarios": [
+    "C0_X1",
+    "C1_X2",
+    "C2_X3"
+  ],
+  "qualification_stage": 132,
+  "real_effects_fitted": false,
+  "schema": "RP_V4_STAGE_E2_QUALIFICATION_RECEIPT_1.0",
+  "stage141_started": false,
+  "stage142_started": false,
+  "truth_all_precision_pass": true,
+  "truth_effort_per_arm": 131072,
+  "truth_maximum_mcse_over_typical_se": 0.005907133725217648,
+  "truth_scenarios": [
+    "C0_X1",
+    "C1_X2",
+    "C2_X3"
+  ],
+  "unit_tests": "15/15 PASS"
+}

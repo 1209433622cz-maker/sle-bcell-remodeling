@@ -1,0 +1,50 @@
+{
+  "approved_by": [
+    "Zhi Chen",
+    "Teng Qi"
+  ],
+  "author_contract_sha256": "ee50f82a371afc95780d58d602effda2ee2dadb1ed68d483db63535976f4d9ea",
+  "binding_manifest_sha256": "3941ec72ba39bc3ceedf64926fc4ffcbcd8f14e160155e0c68fc65f9e9abcbb0",
+  "decision": "PASS_STAGE_E2_WINDOWS_PREFLIGHT__HOLD_EXACT_CODE_GO",
+  "full_synthetic_G2C_authorized": false,
+  "numpy": "2.3.3",
+  "outer_qualification": {
+    "accounting_sha256": "b4365e015f237f545b98984b695c5754c321189be0b02227194ca75bd8ae9dc8",
+    "attempts": 24,
+    "created_chunks": 0,
+    "final_G2C_adjudicated": false,
+    "mode": "qualification",
+    "real_effects_fitted": false,
+    "reused_chunks": 3,
+    "scenario_count": 3,
+    "schema": "RP_V4_STAGE_E2_OUTER_RECEIPT_1.0",
+    "stage": 132
+  },
+  "outer_qualification_receipt_sha256": "0fa2f012be75ef3432c52786b3665e5dc72c0de2196c3168ae63852dc794c5b2",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python_executable": "D:\\bioinfor\\python.exe",
+  "python_version": "3.13.7",
+  "real_outcomes_loaded": false,
+  "schema": "RP_V4_STAGE_E2_WINDOWS_PREFLIGHT_1.0",
+  "scipy": "1.16.2",
+  "stage141_fail_closed_without_exact_code_go": true,
+  "stage141_started": false,
+  "stage142_fail_closed_without_exact_code_go": true,
+  "stage142_started": false,
+  "statsmodels": "0.14.6",
+  "truth_qualification": {
+    "all_precision_pass": true,
+    "authorization_sha256": null,
+    "binding_manifest_sha256": null,
+    "final": false,
+    "maximum_mcse_over_typical_se": 0.005907133725217648,
+    "mode": "qualification",
+    "real_effects_fitted": false,
+    "scenario_count": 3,
+    "schema": "RP_V4_STAGE_E2_TRUTH_RECEIPT_1.0",
+    "seed_base": 2026101004,
+    "stage": 132,
+    "truth_csv_sha256": "1ca161d3024d9af47d0a059c945be8def0466fc6a333f2ba968fccd600f70503"
+  },
+  "truth_qualification_receipt_sha256": "301ab76dcf06a9ca022b4c3b99f0ff5b0b2d5b1a917d80c0d1ef0cabef958fe1"
+}
