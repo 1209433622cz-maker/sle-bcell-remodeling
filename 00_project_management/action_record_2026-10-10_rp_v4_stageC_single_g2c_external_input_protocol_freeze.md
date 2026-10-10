@@ -223,3 +223,13 @@ Stage D should:
 5. require exact author sign-off before final G2C or any large raw download.
 
 Final G2C, real WP2 effects and external outcome analysis remain locked.
+
+## 12. Git record and remote synchronization
+
+- Stage C implementation/results commit: `fe9e114` (`Freeze RP v4 Stage C protocol`).
+- Local ancestry remains linear: `f2eca1a -> 8cba831 -> 16f1539 -> fe9e114`.
+- A normal `git push origin main` was attempted after all tests and the commit.
+- GitHub could not be reached on port 443 after 21,080 ms, so the push stopped
+  before authentication or object transfer.
+- No force push, history rewrite, API reconstruction or alternate remote was
+  used. The complete audited history remains local and ahead of `origin/main`.
