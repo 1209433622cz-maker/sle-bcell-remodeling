@@ -3,7 +3,7 @@
 **Effective date:** 2026-10-10
 **Overall state:** `ACTIVE_RP_V3_SCIENTIFIC_REDESIGN`
 **Submission state:** `HOLD`
-**Current gate:** `PROSPECTIVE_G2B_PROTOCOL_FROZEN__REAL_WP2_STILL_LOCKED`
+**Current gate:** `HOLD_CURRENT_WP2_METHOD__RP_V3_SCOPE_CONTRACTION`
 
 ## Completed gates
 
@@ -17,7 +17,8 @@
 | WP2 effect-free preflight | `PASS_WP2_EFFECT_FREE_PREFLIGHT` | Five-bin support, count/library/cell closure, p/q geometry and 8/8 ILR design verified without fitting a disease effect |
 | G2 implementation/domain freeze | `PASS_G2_IMPLEMENTATION_AND_DOMAIN_FREEZE__READY_FOR_FULL_G2` | 934/934 bundle payloads, 48/48 candidate tests, 50-attempt Windows pilot, 250/250 truth precision and 10/10 canonical integration tests |
 | Full G2 operating-characteristic execution | `HOLD_G2_APPLICABLE_DOMAIN` | 25/25 scenarios, 50,000 outer attempts, 60,106,000 paired-bootstrap fits, independent byte-identical readjudication; 90/150 applicable target-scenario cells passed and 60/150 held |
-| G2B single-method integration and binding | `PROSPECTIVE_G2B_PROTOCOL_FROZEN__REAL_WP2_STILL_LOCKED` | One HC3 bootstrap-t amendment; 901/901 external payloads, 42/42 external tests, 150-object Windows replay, 4,500 expanded-row checks and 58/58 canonical tests; full G2B not run |
+| G2B single-method integration and binding | `PROSPECTIVE_G2B_PROTOCOL_FROZEN__REAL_WP2_STILL_LOCKED` | One HC3 bootstrap-t amendment; 901/901 external payloads, 42/42 external tests, 150-object Windows replay, 4,500 expanded-row checks and 58/58 canonical tests |
+| Full G2B execution and independent adjudication | `HOLD_G2B_APPLICABLE_DOMAIN` | 25/25 scenarios, 2,000/2,000 chunks, 50,000 outer attempts and 60,112,000 successful inner draws; formal and independent outputs byte-identical; 133/150 applicable rows passed and 17/150 held |
 
 ## WP1 numerical record
 
@@ -100,23 +101,33 @@ diagnostic gate selected one theory-driven replacement only: paired donor
 bootstrap-t with an HC3 studentizer. Its point estimator, targets, scenarios,
 truth and acceptance rules are unchanged.
 
-The canonical G2B implementation is now frozen at stage 121 under binding
+The canonical G2B implementation was executed at stage 121 under binding
 `ce40a673df8c051e4eb7036292fe5827eb6ce8b552ee56964affc61d1fa25d0c`.
-This is an implementation/protocol decision; `G2B=NOT_RUN` and
-`WP2_REAL_EFFECT_UNLOCK=false`. The next authorized stage is
-`G2B_FULL_SYNTHETIC_EXECUTION_AND_INDEPENDENT_ADJUDICATION`. A G2B PASS requires
-a separate post-G2B review, while a G2B HOLD ends interval-method development
-and triggers RP v3 scope contraction. The original G2 failure remains permanent
-provenance and will not be overwritten.
+All 25 scenarios completed with 2,000 outer attempts per scenario. The run
+contains 30,056 interval-computed objects, 19,944 support stops, no numerical
+failure and 60,112,000 successful inner bootstrap draws. Within the 150
+applicable target-scenario rows, 133 passed and 17 held. There were six bias
+failures, 11 coverage failures and one overlapping exact-null type-I failure.
+
+G2B materially reduced the original coverage problem but did not satisfy the
+ten-target conjunction. The official and independent adjudications are
+byte-identical. `WP2_REAL_EFFECT_UNLOCK=false`; no real WP2 response was loaded
+or fitted. The frozen stop rule therefore closes interval development and moves
+the project to `HOLD_CURRENT_WP2_METHOD__RP_V3_SCOPE_CONTRACTION`. The original
+G2 and final G2B failures remain permanent provenance and will not be
+overwritten.
 
 Canonical compact evidence is in
 `phase17_v7/rp_v3_redesign/20261010_g2_full_adjudication/`.
 The G2B protocol freeze and runbook are in
 `phase17_v7/rp_v3_redesign/20261010_g2b_protocol_freeze/`.
+The full G2B adjudication, recovery receipt, independent summaries and
+scope-contraction contract are in
+`phase17_v7/rp_v3_redesign/20261010_g2b_full_adjudication/`.
 
 ## Closed workstreams
 
-While G2B has not passed a separate post-run review, do not:
+Under the final G2B HOLD and scope-contraction contract, do not:
 
 - rewrite the manuscript around RP v3 results;
 - replace main or supplementary figures;
@@ -127,3 +138,10 @@ While G2B has not passed a separate post-run review, do not:
 - load or fit real WP2 responses under the held implementation;
 - delete failed scenarios or rewrite the full-G2 HOLD as a partial PASS.
 - try a second interval method, change stage 121 or rerun seeds after seeing G2B results.
+- unlock only the four targets that passed 15/15 applicable scenarios;
+- run WP3 outcomes before a result-blind incremental-knowledge GO/NO-GO protocol.
+
+The next permitted stage is
+`RP_V3_SCOPE_CONTRACTION_AND_WP3_RESULT_BLIND_GO_NO_GO`. It may define and audit
+a prospective WP3 protocol, but it may not reopen WP2, run WP4, or modify the
+manuscript/submission/release state.

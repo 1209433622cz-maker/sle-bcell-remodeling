@@ -1,0 +1,28 @@
+{
+  "WP2_REAL_EFFECT_UNLOCK": false,
+  "WP4": "HOLD_CONDITIONAL",
+  "adjudicable_target_scenario_rows": 150,
+  "binding_sha256": "ce40a673df8c051e4eb7036292fe5827eb6ce8b552ee56964affc61d1fa25d0c",
+  "boundary_policy": "R1 and R3 remain mandatory reported stress domains but do not enter the applicable-domain conjunction",
+  "boundary_target_scenario_rows": 100,
+  "decision": "HOLD_G2B_APPLICABLE_DOMAIN",
+  "full_grid_complete": true,
+  "original_G2_decision": "HOLD_G2_APPLICABLE_DOMAIN",
+  "post_G2B_review_required": true,
+  "recommended_for_post_G2B_unlock_review": false,
+  "simultaneous_confidence_claim": false,
+  "submission": "HOLD",
+  "target_scenario_rows": 250,
+  "target_unlock_recommendation": {
+    "beta_B": false,
+    "beta_S_cellref": true,
+    "beta_S_profile": true,
+    "beta_bin_1": true,
+    "beta_bin_2": false,
+    "beta_bin_3": false,
+    "beta_bin_4": false,
+    "beta_bin_5": true,
+    "delta_cellref": false,
+    "delta_profile": false
+  }
+}

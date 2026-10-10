@@ -13,25 +13,24 @@ Repository: [1209433622cz-maker/sle-bcell-remodeling](https://github.com/1209433
 
 The public v1.1.0 archive and the September scientific-presentation baseline are
 retained as historical, reproducible snapshots. They are not being silently
-rewritten. The active project is now following the focused redesign specified by
-Research Plan v3. Stage 0 input recovery, Stage 0B protocol/identifiability work,
-WP1 annotation sensitivity, the WP2 effect-free structural preflight and the G2
-implementation/domain freeze are complete. The full 25-scenario G2 operating-
-characteristic run returned a coverage-driven HOLD. One theory-driven interval
-amendment has now passed technical integration and prospective binding, but its
-complete G2B validation has not yet run. Manuscript replacement, submission,
-GitHub Release and Zenodo updates therefore remain on hold.
+rewritten. The active project follows the focused redesign specified by Research
+Plan v3. Stage 0, Stage 0B, WP1, the WP2 effect-free preflight, full G2 and the
+single permitted G2B amendment are complete. G2B improved the applicable-domain
+result from 90/150 to 133/150 PASS target-scenario rows, but 17 rows still failed
+the frozen conjunction. The current WP2 method branch is therefore closed and
+real disease effects remain locked. Manuscript replacement, submission, GitHub
+Release and Zenodo updates remain on hold.
 
 Current gate:
 
 ```text
-PROSPECTIVE_G2B_PROTOCOL_FROZEN__REAL_WP2_STILL_LOCKED
+HOLD_CURRENT_WP2_METHOD__RP_V3_SCOPE_CONTRACTION
 ```
 
 Next stage:
 
 ```text
-G2B_FULL_SYNTHETIC_EXECUTION_AND_INDEPENDENT_ADJUDICATION
+RP_V3_SCOPE_CONTRACTION_AND_WP3_RESULT_BLIND_GO_NO_GO
 ```
 
 ## Scientific position
@@ -162,7 +161,7 @@ See the [G2 implementation review](phase17_v7/rp_v3_redesign/20261010_g2_impleme
 [execution contract](phase17_v7/rp_v3_redesign/20261010_g2_implementation_freeze/08_G2_EXECUTION_CONTRACT.json)
 and [full-G2 post-adjudication review](phase17_v7/rp_v3_redesign/20261010_g2_full_adjudication/08_G2_POST_ADJUDICATION_REVIEW.md).
 
-### G2B prospective amendment freeze
+### G2B full execution and scope contraction
 
 The G2 HOLD was diagnosed without reading real WP2 outcomes. Exactly one
 replacement was selected on methodological grounds: an equal-tailed paired
@@ -176,26 +175,34 @@ On Windows, the 150-object development replay reproduced 90 supported intervals,
 4,500 explicit expanded-row statsmodels fits agreed with the vectorized HC3
 kernel. The canonical Stage 0 through G2B test suite passed 58/58 tests.
 
-The project-side `rp_v3_g2b_*` implementation now uses a hash-bound stage-121
-random namespace, rejects old G2 bindings and keeps `WP2_REAL_EFFECT_UNLOCK=false`.
-This is an implementation/protocol PASS, not a coverage PASS: G2B remains
-`NOT_RUN`.
+The project-side `rp_v3_g2b_*` implementation used a hash-bound stage-121 random
+namespace and rejected old G2 bindings. The full grid completed 25/25 scenarios,
+2,000/2,000 chunks, 50,000 outer attempts and 60,112,000 successful inner
+bootstrap draws with no numerical failures. Formal and independent adjudications
+were byte-identical.
+
+Among 150 applicable target-scenario rows, 133 passed and 17 held. Coverage
+failures fell from 59 under G2 to 11 under G2B, but six bias failures and one
+overlapping exact-null type-I failure remained. Four targets passed 15/15
+applicable scenarios; partial target unlock was not part of the frozen contract.
+The final decision therefore keeps `WP2_REAL_EFFECT_UNLOCK=false`.
 
 Decision:
-`PROSPECTIVE_G2B_PROTOCOL_FROZEN__REAL_WP2_STILL_LOCKED`.
+`HOLD_G2B_APPLICABLE_DOMAIN`.
 
-See the [G2B advisor review](phase17_v7/rp_v3_redesign/20261010_g2b_protocol_freeze/05_G2B_IMPLEMENTATION_ADVISOR_REVIEW.md),
-[execution contract](phase17_v7/rp_v3_redesign/20261010_g2b_protocol_freeze/03_G2B_EXECUTION_CONTRACT.json)
-and [full-run runbook](phase17_v7/rp_v3_redesign/20261010_g2b_protocol_freeze/06_G2B_FULL_RUN_RUNBOOK.md).
+See the [G2B post-adjudication review](phase17_v7/rp_v3_redesign/20261010_g2b_full_adjudication/09_G2B_POST_ADJUDICATION_REVIEW.md),
+[machine-readable decision](phase17_v7/rp_v3_redesign/20261010_g2b_full_adjudication/03_G2B_FINAL_DECISION.json)
+and [scope-contraction contract](phase17_v7/rp_v3_redesign/20261010_g2b_full_adjudication/10_G2B_SCOPE_CONTRACTION_CONTRACT.md).
 
-## Next gate: full G2B synthetic validation
+## Next gate: scope contraction and result-blind WP3 go/no-go
 
-The complete G2B run must execute all 25 registered scenarios with 2,000 outer
-attempts and 2,000 inner paired bootstraps for every supported object. It may not
-relax thresholds, remove adverse scenarios, inspect real WP2 responses or
-overwrite the current G2 HOLD. A complete PASS still requires a separate
-post-G2B review before any real effect is considered. A HOLD ends interval-method
-development and triggers RP v3 scope contraction.
+The G2B HOLD ends interval-method development for the current WP2 branch. The
+next permitted work is a result-blind scope review that asks whether WP3 can add
+independent information beyond the already established external IFN replication.
+It must freeze the external cohort, biological unit, `T_frozen` primary score,
+`T_rank` sensitivity, calibration policy, test families and stop rules before
+any WP3 outcome is inspected. Failure to identify prospective incremental value
+closes or retopics RP v3; it does not authorize another rescue analysis.
 
 ## Reproduce the active redesign
 
@@ -272,6 +279,7 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 | G2 implementation/domain freeze | [`phase17_v7/rp_v3_redesign/20261010_g2_implementation_freeze/`](phase17_v7/rp_v3_redesign/20261010_g2_implementation_freeze/) |
 | Full G2 adjudication and next-stage contract | [`phase17_v7/rp_v3_redesign/20261010_g2_full_adjudication/`](phase17_v7/rp_v3_redesign/20261010_g2_full_adjudication/) |
 | G2B single-method protocol freeze | [`phase17_v7/rp_v3_redesign/20261010_g2b_protocol_freeze/`](phase17_v7/rp_v3_redesign/20261010_g2b_protocol_freeze/) |
+| Full G2B adjudication and scope-contraction contract | [`phase17_v7/rp_v3_redesign/20261010_g2b_full_adjudication/`](phase17_v7/rp_v3_redesign/20261010_g2b_full_adjudication/) |
 | Reproducibility detail | [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) |
 
 ## Repository layout
