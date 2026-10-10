@@ -1,0 +1,10 @@
+{
+  "accepted_role": "EXTERNAL_PROPOSAL_CANDIDATE_AND_EVIDENCE_INPUT",
+  "candidate_bundle": "C:\\Users\\Administrator\\Downloads\\SLE_Bcell_RP_v4_Proposal_Audit_20261010.zip",
+  "candidate_bundle_bytes": 224853,
+  "candidate_bundle_sha256": "ad4f422f185a75ead5cec4d7fe91b2bd3b36cbe1b5f3dce227016cd8c2fd3b05",
+  "candidate_decision_inherited": false,
+  "internal_manifest_pass": true,
+  "internal_manifest_rows": 10,
+  "project_side_adjudication_required": true
+}

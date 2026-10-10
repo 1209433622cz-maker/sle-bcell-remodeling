@@ -1,0 +1,14 @@
+check,pass,detail
+proposal_manifest,True,10/10 files
+git_authority,True,baseline ahead=1
+G2_recount,True,90/150 PASS
+G2B_recount,True,133/150 PASS
+G2B_failure_accounting,True,fail=17 coverage=11 bias=6 typeI=1
+historical_boundaries_preserved,True,6/6 carried
+GSE262846_units,True,45 patient IDs from 88 libraries
+GSE118254_units,True,17 donor tokens from 83 libraries
+cross_accession_exact_token_overlap,True,no exact token overlap; independence still HOLD
+external_count_compatibility,False,GSE262846/GSE118254 require raw-count reconstruction
+S0_S1_roles_locked,True,S0 primary; S1 sensitivity
+S2_unique_formula,False,S2 not admitted
+real_effects_fitted,True,none; outcome execution locked

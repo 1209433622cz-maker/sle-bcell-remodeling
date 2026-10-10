@@ -1,0 +1,4 @@
+score_id,definition_status,allowed_role,technical_basis,selection_rule,stageA_decision
+S0_T_frozen,FROZEN_HISTORICAL_ANCHOR,primary measurement anchor,12 genes; full-library CPM; log2(CPM+0.5); frozen discovery-control mean/SD,never refit or replace based on new outcome association,RETAIN
+S1_T_rank,IMPLEMENTED_HISTORICAL_SENSITIVITY,technical sensitivity comparator only,"12 genes ranked in the frozen 18,873-symbol background",cannot become primary because of a smaller disease P value,RETAIN_AS_SENSITIVITY
+S2_detection_capture_robust,NO_UNIQUE_MATHEMATICAL_FORMULA,none until a unique result-blind formula and missing-gene rule exist,proposal concept only,"must not be trained or tuned on disease direction, effect size or P value",NOT_ADMITTED_TO_V4C

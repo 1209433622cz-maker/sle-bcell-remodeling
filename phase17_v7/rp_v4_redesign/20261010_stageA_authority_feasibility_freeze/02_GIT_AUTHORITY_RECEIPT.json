@@ -1,0 +1,14 @@
+{
+  "ahead_count": 1,
+  "authority_scope": "RP_V4_INPUT_BASELINE_BEFORE_THIS_STAGE_COMMIT",
+  "behind_count": 0,
+  "candidate_report_authority_correction": "Local WP3 commit is accessible and verifiably descends directly from origin/main; the external proposal's inaccessible-local-commit statement is superseded.",
+  "head": "8cba83172a52b71528cc2ab44dd3a936cb4dd8c7",
+  "head_parents": [
+    "f2eca1abec44afb73688823f57e42ab78b971203"
+  ],
+  "head_subject": "Complete RP v3 WP3 pooled measurement gate",
+  "origin_main": "f2eca1abec44afb73688823f57e42ab78b971203",
+  "origin_main_is_ancestor_of_head": true,
+  "origin_main_is_direct_parent": true
+}

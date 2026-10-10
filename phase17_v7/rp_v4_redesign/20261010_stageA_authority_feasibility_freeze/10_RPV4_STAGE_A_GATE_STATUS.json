@@ -1,0 +1,30 @@
+{
+  "G2": "HOLD_G2_APPLICABLE_DOMAIN",
+  "G2B": "HOLD_G2B_APPLICABLE_DOMAIN",
+  "G2C_FINAL_EXECUTION_AUTHORIZED": false,
+  "NEW_COHORT_OUTCOME_EXECUTION_AUTHORIZED": false,
+  "S2_ADMITTED": false,
+  "WP2_REAL_EFFECT_UNLOCK": false,
+  "WP4": "HOLD_CONDITIONAL",
+  "authorized_scope": [
+    "single G2C estimand and method protocol freeze",
+    "new final-simulation seed/DGP/budget contract",
+    "GSE262846/GSE118254 raw-count and provenance feasibility",
+    "S0/S1 result-blind technical contract"
+  ],
+  "created_at": "2026-10-10T22:36:54+08:00",
+  "decision": "PASS_RPV4_STAGE_A_AND_V4B_HISTORICAL_DIAGNOSIS__HOLD_G2C_AND_NEW_COHORT_OUTCOMES",
+  "git_authority_pass": true,
+  "historical_G2B_failures": {
+    "bias": 6,
+    "coverage": 11,
+    "total": 17,
+    "type_i_overlapping": 1
+  },
+  "historical_G2B_pass_cells": 133,
+  "historical_G2_pass_cells": 90,
+  "next_stage": "RPV4_STAGE_C__SINGLE_G2C_AND_EXTERNAL_INPUT_PROTOCOL_FREEZE",
+  "proposal_manifest_pass": true,
+  "schema": "RP_V4_STAGE_A_1.0",
+  "submission": "HOLD"
+}

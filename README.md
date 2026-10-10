@@ -9,32 +9,34 @@ Repository: [1209433622cz-maker/sle-bcell-remodeling](https://github.com/1209433
 ## Current status
 
 **Active state on 10 October 2026:**
-`ACTIVE_RP_V3_SCIENTIFIC_REDESIGN / HOLD_SUBMISSION`.
+`ACTIVE_RP_V4_SCIENTIFIC_REDESIGN / HOLD_SUBMISSION`.
 
 The public v1.1.0 archive and the September scientific-presentation baseline are
 retained as historical, reproducible snapshots. They are not being silently
-rewritten. The active project follows the focused redesign specified by Research
-Plan v3. Stage 0, Stage 0B, WP1, the WP2 effect-free preflight, full G2 and the
-single permitted G2B amendment are complete. G2B improved the applicable-domain
-result from 90/150 to 133/150 PASS target-scenario rows, but 17 rows still failed
-the frozen conjunction. The current WP2 method branch is therefore closed. A
-result-blind WP3 prefit verified the available external objects, donor linkage,
-count closure, support and frozen score-operator identity. The authorized pooled
-measurement stage then showed stable ordering across `T_frozen`, `T_rank` and
-all 12 single-gene omissions without loading disease labels or fitting outcomes.
-Manuscript replacement, submission, GitHub Release and Zenodo updates remain on
-hold.
+rewritten. RP v3 is retained as a completed bounded record: G2B improved the
+applicable-domain result from 90/150 to 133/150 PASS target-scenario rows but did
+not pass its frozen conjunction, and WP3 ended with outcome-blind pooled
+measurement diagnostics only.
+
+The active project now follows Research Plan v4 as a separate prospective
+branch. Stage A verified the proposal bundle, corrected the Git authority chain,
+carried forward all RP v3 HOLD decisions, independently diagnosed the 17 G2B
+failures and audited official GEO MINiML metadata without fitting any new disease
+effect. `GSE262846` resolves to 45 patient IDs from 88 libraries and `GSE118254`
+to 17 donor tokens from 83 libraries, but count-scale compatibility and
+cross-study independence remain unresolved. Manuscript replacement, submission,
+GitHub Release and Zenodo updates remain on hold.
 
 Current gate:
 
 ```text
-PASS_WP3_POOLED_MEASUREMENT_DIAGNOSTICS__HOLD_OUTCOME_EXECUTION
+PASS_RPV4_STAGE_A_AND_V4B_HISTORICAL_DIAGNOSIS__HOLD_G2C_AND_NEW_COHORT_OUTCOMES
 ```
 
 Next stage:
 
 ```text
-RP_V3_AUTHOR_SCOPE_CLOSURE_DECISION
+RPV4_STAGE_C__SINGLE_G2C_AND_EXTERNAL_INPUT_PROTOCOL_FREEZE
 ```
 
 ## Scientific position
@@ -55,7 +57,37 @@ The redesign does not attempt to rescue these HOLD decisions. It asks narrower,
 predeclared questions about annotation sensitivity, composition, within-state
 effects and the identifiability of those quantities.
 
-## RP v3 progress
+## RP v4 progress
+
+### Stage A: authority, historical diagnosis and external feasibility
+
+- Rechecked all ten files in the external RP v4 proposal manifest by byte size
+  and SHA-256; the bundle is evidence input, not a self-authorizing gate.
+- Verified that the local RP v3 WP3 commit is accessible and descends directly
+  from the current `origin/main`, correcting the proposal candidate's stale
+  authority statement.
+- Reproduced the historical G2 90/150 and G2B 133/150 applicable-cell counts.
+- Classified all 17 G2B failures from the 2,000-attempt raw outputs: 11 coverage
+  failures, six bias failures and one exact-null type-I failure overlapping a
+  coverage failure.
+- Localized residual undercoverage to nine `delta_profile` and two
+  `delta_cellref` cells. The misses are mild and broadly two-sided; the frozen
+  outputs do not identify a unique corrective interval.
+- Parsed official GEO MINiML metadata for five candidate accessions. The two
+  leading bulk candidates have recoverable donor structures, but neither is
+  authorized for outcome analysis until raw-count compatibility and provenance
+  independence are resolved.
+- Retained `S0=T_frozen` as the primary measurement anchor and `S1=T_rank` as a
+  sensitivity. S2 was not admitted because no unique result-blind formula exists.
+
+Decision:
+`PASS_RPV4_STAGE_A_AND_V4B_HISTORICAL_DIAGNOSIS__HOLD_G2C_AND_NEW_COHORT_OUTCOMES`.
+
+See the [Stage A advisor review](phase17_v7/rp_v4_redesign/20261010_stageA_authority_feasibility_freeze/11_RPV4_STAGE_A_ADVISOR_REVIEW.md),
+[machine-readable gate](phase17_v7/rp_v4_redesign/20261010_stageA_authority_feasibility_freeze/10_RPV4_STAGE_A_GATE_STATUS.json)
+and [next protocol requirements](phase17_v7/rp_v4_redesign/20261010_stageA_authority_feasibility_freeze/12_RPV4_STAGE_C_PROTOCOL_REQUIREMENTS.md).
+
+## RP v3 historical progress
 
 ### Stage 0: inputs, units and estimands
 
@@ -231,13 +263,14 @@ See the [pooled-measurement advisor review](phase17_v7/rp_v3_redesign/20261010_w
 [machine-readable gate](phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/12_WP3_MEASUREMENT_GATE_STATUS.json)
 and [scope-closure recommendation](phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/15_RP_V3_SCOPE_CLOSURE_RECOMMENDATION.md).
 
-## Next gate: author scope closure
+## Next gate: single G2C and external-input protocol freeze
 
-The limited WP3 measurement question is complete. The next action is an author-
-level decision on closing the current RP v3 computational scope and on whether
-the pooled measurement fact remains provenance only or merits a separate,
-narrowly bounded manuscript/supplement integration review. Disease-outcome
-execution, WP4, manuscript replacement and submission remain unauthorized.
+The next action is source-level protocol work only: choose one primary G2C
+estimand and method, freeze its independent final-simulation DGPs, seeds,
+thresholds and compute budget, and decide whether GSE262846/GSE118254 can be
+reconstructed on a compatible count scale with defensible donor provenance.
+Final G2C execution, real WP2 effects, new-cohort disease/activity effects, WP4,
+manuscript replacement and submission remain unauthorized.
 
 ## Reproduce the active redesign
 
@@ -245,6 +278,13 @@ Create or check the scientific environment first:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\02_analysis\scripts\00_create_conda_env.ps1
+```
+
+Reproduce the active RP v4 Stage A gate after restoring the ignored proposal
+evidence and official MINiML files recorded by the action report:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v4_stageA.ps1
 ```
 
 Run the completed gates from the repository root:
@@ -301,7 +341,9 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 
 | Purpose | Canonical location |
 |---|---|
-| Current project status | [`00_project_management/RP_V3_REDESIGN_STATUS.md`](00_project_management/RP_V3_REDESIGN_STATUS.md) |
+| Current project status | [`00_project_management/RP_V4_REDESIGN_STATUS.md`](00_project_management/RP_V4_REDESIGN_STATUS.md) |
+| RP v4 Stage A authority/feasibility freeze | [`phase17_v7/rp_v4_redesign/20261010_stageA_authority_feasibility_freeze/`](phase17_v7/rp_v4_redesign/20261010_stageA_authority_feasibility_freeze/) |
+| Historical RP v3 status | [`00_project_management/RP_V3_REDESIGN_STATUS.md`](00_project_management/RP_V3_REDESIGN_STATUS.md) |
 | Full file audit | [`00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md`](00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md) |
 | Valuable asset register | [`00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv`](00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv) |
 | Manuscript source baseline | [`01_manuscript/Manuscript.md`](01_manuscript/Manuscript.md) |

@@ -171,3 +171,8 @@ phase17_v7/rp_v3_redesign/g2_full_runs/
 phase17_v7/rp_v3_redesign/g2b_full_runs/
 phase17_v7/rp_v3_redesign/20261010_post_g2b_wp3_external_candidate/
 phase17_v7/rp_v3_redesign/20261010_wp3_pooled_external_candidate/
+
+# RP v4 proposal audit is retained as local review evidence. Canonical RP v4
+# contracts and compact outputs are promoted separately after project-side review.
+phase17_v7/rp_v4_redesign/20261010_proposal_external_candidate/
+phase17_v7/rp_v4_redesign/**/source_metadata/

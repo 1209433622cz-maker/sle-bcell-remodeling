@@ -1,0 +1,10 @@
+{
+  "GSE118254_unique_tokens": 17,
+  "GSE262846_unique_tokens": 45,
+  "comparison": "GSE262846 patient-id tokens versus GSE118254 title-derived subject tokens",
+  "exact_token_overlap": [],
+  "exact_token_overlap_count": 0,
+  "independence_established": false,
+  "interpretation": "No exact token overlap was observed, but the accessions use different studies and may use different de-identification namespaces. Shared investigators and biological design require a provenance-level overlap statement before independent-validation language.",
+  "outcome_fields_used_for_effect_estimation": false
+}
