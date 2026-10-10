@@ -1,0 +1,16 @@
+{
+  "GO_FOR_FULL_SYNTHETIC_G2C": false,
+  "approved_at": null,
+  "approved_by": null,
+  "author_approved": false,
+  "code_binding_sha256": "c26dc81a2322bd73b51b3fa929c35eca18873ad4ccee17d795eaf42b8eed5653",
+  "failure_closes_branch_no_G2D": false,
+  "final_G2C_does_not_unlock_real_outcomes_automatically": false,
+  "fixed_40_scenarios_4000_attempts_each": false,
+  "fixed_seed_base_2026101004_stage141_truth142": false,
+  "fixed_truth_precision_and_acceptance_thresholds": false,
+  "no_replenishment_or_posthoc_scenario_removal": false,
+  "schema": "RP_V4_STAGE_E_AUTHOR_SIGNOFF_1.0",
+  "single_estimand_delta_profile": false,
+  "single_method_OLS_HC3_t64": false
+}

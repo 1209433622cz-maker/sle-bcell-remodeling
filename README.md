@@ -20,23 +20,25 @@ measurement diagnostics only.
 
 The active project now follows Research Plan v4 as a separate prospective
 branch. Stage A verified the proposal bundle, carried forward every RP v3 HOLD,
-diagnosed the 17 G2B failures and audited official GEO metadata. Stage C has now
-frozen exactly one G2C estimand and one method, independent final random streams,
-40 data-generating scenarios, S0/S1 measurement handling and a fail-closed raw
-input protocol. No final G2C run or real disease/activity model has been run.
-Manuscript replacement, submission, GitHub Release and Zenodo updates remain on
-hold.
+diagnosed the 17 G2B failures and audited official GEO metadata. Stage C froze
+exactly one G2C estimand and one method, independent final random streams, 40
+data-generating scenarios, S0/S1 measurement handling and a fail-closed raw
+input protocol. Stage D has independently re-audited and canonically integrated
+the shifted-DGP generator, independent truth engine, checkpointed technical
+pilot and plan-only SRA ledger. No final G2C run or real disease/activity model
+has been run. Manuscript replacement, submission, GitHub Release and Zenodo
+updates remain on hold.
 
 Current gate:
 
 ```text
-PASS_RPV4_STAGE_C_PROTOCOL_FREEZE__AUTHOR_SIGNOFF_REQUIRED_BEFORE_FINAL
+PASS_RPV4_STAGE_D_CANONICAL_TECHNICAL_IMPLEMENTATION__HOLD_STAGE_E_AUTHOR_SIGNOFF_AND_FINAL_G2C
 ```
 
 Next stage:
 
 ```text
-RPV4_STAGE_D__G2C_IMPLEMENTATION_AND_EXTERNAL_RAW_INTAKE_TECHNICAL_PILOT
+RPV4_STAGE_E__AUTHOR_SIGNOFF_AND_FINAL_G2C_PREFLIGHT
 ```
 
 ## Scientific position
@@ -65,6 +67,37 @@ predeclared questions about annotation sensitivity, composition, within-state
 effects and the identifiability of those quantities.
 
 ## RP v4 progress
+
+### Stage D: canonical technical implementation
+
+- Independently verified the received Stage D ZIP: 87 entries, 86 controlled
+  payloads, zero CRC/size/SHA-256 failures and 6/6 Stage C inputs byte-identical
+  to the repository authority.
+- Integrated the shifted 40-DGP generator and independent development-stage
+  truth engine while retaining the existing Stage C HC3-t kernel as the single
+  canonical estimator.
+- Passed 22/22 project-side Stage C/Stage D tests under
+  `D:\bioinfor\python.exe`.
+- Reproduced the fixed 24-attempt technical pilot: 18 supported attempts, six
+  prespecified support stops and zero numerical failures. A 4-attempt checkpoint
+  resumed to eight attempts matched a fresh eight-attempt run in 28/28 files
+  byte for byte.
+- Confirmed technical precision in the three selected development oracle cases;
+  these are not the complete stage-142 truths and are not a G2C performance
+  result.
+- Generated a plan-only ledger for 261 SRA runs/171 experiments and 297.574 GB
+  reported payload. No download, alignment or outcome inspection occurred.
+- Qualified `D:\bioinfor\python.exe` for this stage. The Miniforge `sle-bcell`
+  runtime exits with native code `0xC06D007F` on the X2 Cholesky path and is not
+  approved for G2C execution.
+
+Decision:
+`PASS_RPV4_STAGE_D_CANONICAL_TECHNICAL_IMPLEMENTATION__HOLD_STAGE_E_AUTHOR_SIGNOFF_AND_FINAL_G2C`.
+
+See the [Stage D advisor review](phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/11_STAGE_D_ADVISOR_REVIEW.md),
+[machine-readable gate](phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/09_STAGE_D_GATE_STATUS.json),
+[runtime qualification](phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/03_WINDOWS_RUNTIME_QUALIFICATION.json)
+and [Stage E preflight contract](phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/12_STAGE_E_PREFLIGHT_CONTRACT.md).
 
 ### Stage C: single G2C and external-input protocol freeze
 
@@ -301,13 +334,16 @@ See the [pooled-measurement advisor review](phase17_v7/rp_v3_redesign/20261010_w
 [machine-readable gate](phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/12_WP3_MEASUREMENT_GATE_STATUS.json)
 and [scope-closure recommendation](phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/15_RP_V3_SCOPE_CLOSURE_RECOMMENDATION.md).
 
-## Next gate: G2C implementation and external raw-intake technical pilot
+## Next gate: author sign-off and final-G2C preflight
 
-The next action is implementation qualification only: implement the frozen
-shifted DGPs and truth engine, run a small non-adjudicative technical pilot and
-generate resumable SRA download/count scripts. Final G2C execution, large raw
-download, real WP2 effects, new-cohort disease/activity effects, WP4, manuscript
-replacement and submission remain unauthorized until a later explicit gate.
+The next action is `RPV4_STAGE_E__AUTHOR_SIGNOFF_AND_FINAL_G2C_PREFLIGHT`.
+It must bind an exact author approval receipt, implement and test the complete
+stage-142 truth runner and stage-141 runner/adjudicator, prove fail-closed
+checkpoint/resume behavior on non-final streams and estimate runtime without
+opening either final namespace. Only a later explicit
+`GO_FOR_FULL_SYNTHETIC_G2C` may start the 160,000-attempt run. Large raw download,
+real WP2 effects, new-cohort disease/activity effects, WP4, manuscript
+replacement and submission remain unauthorized.
 
 ## Reproduce the active redesign
 
@@ -367,6 +403,11 @@ D:\bioinfor\python.exe `
   -Regimes @('R0','R1','R2','R3','R4') `
   -ChunkSize 25 `
   -Adjudicate
+
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_rp_v4_stageD.ps1 `
+  -Python D:\bioinfor\python.exe `
+  -OutputRoot .\phase17_v7\rp_v4_redesign\stageD_technical_reproduction
 ```
 
 Run the focused tests:
@@ -379,7 +420,8 @@ D:\bioinfor\python.exe -m unittest -v `
   audit_tools.test_rp_v3_wp2_prefit `
   audit_tools.test_rp_v3_g2 `
   audit_tools.test_rp_v3_g2b `
-  audit_tools.test_rp_v4_g2c
+  audit_tools.test_rp_v4_g2c `
+  audit_tools.test_rp_v4_stageD
 ```
 
 Large public matrices and cell-level intermediates are intentionally outside
@@ -393,6 +435,7 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 | Current project status | [`00_project_management/RP_V4_REDESIGN_STATUS.md`](00_project_management/RP_V4_REDESIGN_STATUS.md) |
 | RP v4 Stage A authority/feasibility freeze | [`phase17_v7/rp_v4_redesign/20261010_stageA_authority_feasibility_freeze/`](phase17_v7/rp_v4_redesign/20261010_stageA_authority_feasibility_freeze/) |
 | RP v4 Stage C method/input protocol freeze | [`phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/`](phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/) |
+| RP v4 Stage D canonical technical freeze | [`phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/`](phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/) |
 | Historical RP v3 status | [`00_project_management/RP_V3_REDESIGN_STATUS.md`](00_project_management/RP_V3_REDESIGN_STATUS.md) |
 | Full file audit | [`00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md`](00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md) |
 | Valuable asset register | [`00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv`](00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv) |

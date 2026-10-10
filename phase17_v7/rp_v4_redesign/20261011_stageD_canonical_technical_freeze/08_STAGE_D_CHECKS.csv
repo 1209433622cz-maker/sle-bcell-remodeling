@@ -1,0 +1,15 @@
+check,pass,detail
+external_zip_integrity,True,87 entries; 510740 uncompressed bytes
+external_manifest,True,86 controlled payloads plus manifest
+stage_c_contract_exact,True,6/6 Stage C inputs byte-identical
+external_resume_replay,True,28 files; 0 differences
+canonical_project_tests,True,22/22 under D:\bioinfor\python.exe
+canonical_resume_replay,True,28 files; 0 differences
+technical_accounting,True,"24 attempts: 18 supported, 6 protocol stops"
+technical_oracle,True,3/3 selected development truths technically precise
+windows_runtime_qualified,True,D:\bioinfor\python.exe
+miniforge_runtime_disqualified,True,sle-bcell test_05/X2 path exits 0xC06D007F; not approved for G2C
+sra_plan_only,True,261 runs; no download or alignment
+outcomes_locked,True,WP2 and external disease/activity outcomes untouched
+final_streams_untouched,True,stages 141 and 142 unused
+manuscript_submission_locked,True,"manuscript, submission, release and Zenodo unchanged"

@@ -1,0 +1,11 @@
+{
+  "authority": "EVIDENCE_INPUT_ONLY__NOT_SELF_AUTHORIZING",
+  "bound_git_head_before_stageD_commit": "e66c0bd073a7cacf708c4a909e74babeb9894507",
+  "created_at": "2026-10-11T00:00:00+08:00",
+  "external_package_files": 87,
+  "external_package_manifest_failures": 0,
+  "external_package_manifest_rows": 86,
+  "external_zip": "SLE_RPv4_StageD_G2C_TechnicalPilot_20261010.zip",
+  "external_zip_bytes": 162441,
+  "external_zip_sha256": "94b0c2a225111d89c3110cd424668dec0bf1bc50b3749c86e59c5b4e8816ff5b"
+}

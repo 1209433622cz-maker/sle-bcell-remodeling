@@ -1,0 +1,13 @@
+{
+  "aggregate_reported_size_MB": 297574.0,
+  "alignment_started": false,
+  "author_signoff_for_download": false,
+  "disease_activity_results_inspected": false,
+  "donor_independence": "UNRESOLVED__TREAT_POTENTIAL_OVERLAP",
+  "download_started": false,
+  "execute_option_available": false,
+  "experiments": 171,
+  "minimum_recommended_scratch_TB": 2.5,
+  "runs": 261,
+  "schema": "RPV4_STAGE_D_SRA_PLAN_ONLY_1.0"
+}

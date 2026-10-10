@@ -1,0 +1,18 @@
+{
+  "EXTERNAL_OUTCOME_UNLOCK": false,
+  "G2C_PASS": false,
+  "LARGE_SRA_DOWNLOAD_AUTHORIZED": false,
+  "MANUSCRIPT_REPLACEMENT": "HOLD",
+  "SUBMISSION": "HOLD",
+  "WP2_REAL_EFFECT_UNLOCK": false,
+  "checks_passed": 14,
+  "checks_total": 14,
+  "created_at": "2026-10-11T00:00:00+08:00",
+  "decision": "PASS_RPV4_STAGE_D_CANONICAL_TECHNICAL_IMPLEMENTATION__HOLD_STAGE_E_AUTHOR_SIGNOFF_AND_FINAL_G2C",
+  "final_G2C_authorized": false,
+  "final_truth_authorized": false,
+  "next_stage": "RPV4_STAGE_E__AUTHOR_SIGNOFF_AND_FINAL_G2C_PREFLIGHT",
+  "technical_attempts": 24,
+  "technical_support_stop": 6,
+  "technical_supported": 18
+}

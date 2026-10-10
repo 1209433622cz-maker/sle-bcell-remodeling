@@ -1,0 +1,13 @@
+{
+  "canonical_resume_replay": "28/28 byte-identical",
+  "disqualification": "native exit 0xC06D007F on correlated-capture Cholesky path",
+  "disqualified_runtime": "C:/ProgramData/miniforge3/envs/sle-bcell/python.exe",
+  "final_runtime_authorized": false,
+  "numpy": "2.3.3",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "project_tests": "22/22 PASS",
+  "python_version": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "qualified_runtime": "D:\\bioinfor\\python.exe",
+  "scipy": "1.16.2",
+  "statsmodels": "0.14.6"
+}

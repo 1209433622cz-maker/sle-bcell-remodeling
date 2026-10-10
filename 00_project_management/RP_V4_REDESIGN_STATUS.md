@@ -1,12 +1,12 @@
 # RP v4 scientific redesign status
 
-**Effective date:** 2026-10-10
+**Effective date:** 2026-10-11
 
 **Overall state:** `ACTIVE_RP_V4_SCIENTIFIC_REDESIGN`
 
 **Submission state:** `HOLD`
 
-**Current gate:** `PASS_RPV4_STAGE_C_PROTOCOL_FREEZE__AUTHOR_SIGNOFF_REQUIRED_BEFORE_FINAL`
+**Current gate:** `PASS_RPV4_STAGE_D_CANONICAL_TECHNICAL_IMPLEMENTATION__HOLD_STAGE_E_AUTHOR_SIGNOFF_AND_FINAL_G2C`
 
 ## Scope
 
@@ -135,21 +135,65 @@ overlapping and cannot count as two independent confirmations.
 S0 remains primary, S1 remains a technical sensitivity and S2 is abandoned.
 All disease/activity outcomes remain sealed.
 
+## Stage D completed
+
+### Independent intake and canonical integration
+
+- The received ZIP had 87 entries and 510,740 uncompressed bytes. Its 86-row
+  payload manifest matched every listed file by size and SHA-256; ZIP CRC was
+  clean.
+- Six Stage C contract inputs in the received package were byte-identical to
+  the repository authority.
+- The project promoted the shifted-DGP generator and independent truth engine,
+  but retained `audit_tools/rp_v4_g2c_hc3t.py` as the only canonical estimator.
+  The candidate's duplicate kernel was not promoted.
+- Project-side Stage C + Stage D tests passed 22/22 under
+  `D:\bioinfor\python.exe`.
+
+### Technical pilot and truth qualification
+
+- The fixed pilot executed 24 development-stream attempts: 18 were supported,
+  six reached the prespecified support stop and none failed numerically.
+- All six support stops occurred in the selected X3 stress case. They are a
+  domain-risk signal, not software failure and not evidence that X3 passes.
+- A four-attempt checkpoint resumed to eight attempts matched a fresh
+  eight-attempt execution in 28/28 files byte for byte.
+- Three selected development-stage oracle cases met the technical precision
+  rule. They do not replace the complete stage-142 truth calculation and do not
+  support a bias, coverage or type-I claim.
+
+### Windows runtime and SRA boundary
+
+- `D:\bioinfor\python.exe` (Python 3.13.7, NumPy 2.3.3, SciPy 1.16.2,
+  statsmodels 0.14.6) is the only Windows runtime qualified by Stage D.
+- `C:\ProgramData\miniforge3\envs\sle-bcell\python.exe` terminates on the X2
+  Cholesky path with native exit `0xC06D007F`; it is explicitly disqualified for
+  final G2C unless repaired and independently requalified.
+- The plan-only SRA ledger covers 261 runs, 171 experiments and 297.574 GB of
+  reported payload. No download, alignment, count reconstruction or outcome
+  inspection was performed.
+
+Stage D decision:
+`PASS_RPV4_STAGE_D_CANONICAL_TECHNICAL_IMPLEMENTATION__HOLD_STAGE_E_AUTHOR_SIGNOFF_AND_FINAL_G2C`.
+
 ## Current authorization
 
 Allowed:
 
-- implement and unit-test the frozen HC3-t wrapper, shifted DGP generator and
-  independent truth engine;
-- run a small non-adjudicative technical pilot for deterministic replay,
-  checkpointing and resource benchmarking;
-- generate resumable SRA download/count scripts without starting the large
-  download;
-- verify S0/S1 feature mapping in count-only, outcome-free technical objects.
+- prepare the exact Stage E author-signoff receipt;
+- implement and unit-test the complete stage-142 truth runner and stage-141
+  runner/adjudicator without opening their final namespaces;
+- exercise checkpoint, resume, overwrite refusal and fail-closed adjudication
+  on non-final technical streams;
+- bind all code, contracts, calibration inputs and the qualified runtime by
+  SHA-256;
+- estimate final compute/storage requirements without executing the final grid.
 
 Not allowed:
 
-- run the 160,000-attempt final G2C validation before exact protocol sign-off;
+- run the 160,000-attempt final G2C validation before an explicit
+  `GO_FOR_FULL_SYNTHETIC_G2C` gate;
+- consume stage-141 or stage-142 random streams during preflight;
 - change the estimand, t(64) method, DGP registry, thresholds or seed base;
 - fit or inspect real WP2 effects;
 - fit new-cohort diagnosis/activity effects;
@@ -159,13 +203,13 @@ Not allowed:
 
 ## Next gate
 
-`RPV4_STAGE_D__G2C_IMPLEMENTATION_AND_EXTERNAL_RAW_INTAKE_TECHNICAL_PILOT`
+`RPV4_STAGE_E__AUTHOR_SIGNOFF_AND_FINAL_G2C_PREFLIGHT`
 
-Stage D must implement only the frozen contracts, qualify independent shifted
-truths, demonstrate deterministic checkpoint/replay and produce a resumable raw
-intake runbook. It must not inspect final performance or real outcomes. Exact
-author approval remains required before any final G2C execution or large data
-download.
+Stage E must bind exact author approval, complete and test the final runner,
+truth engine and independent adjudicator, and prove the final workflow is
+fail-closed without opening stages 141/142. Only a later explicit gate may
+authorize the final synthetic run. Exact author approval remains separately
+required before any large data download.
 
 ## Canonical evidence
 
@@ -176,3 +220,6 @@ download.
 - [`phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/11_RPV4_STAGE_C_GATE_STATUS.json`](../phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/11_RPV4_STAGE_C_GATE_STATUS.json)
 - [`phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/12_RPV4_STAGE_C_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/12_RPV4_STAGE_C_ADVISOR_REVIEW.md)
 - [`phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/13_STAGE_D_TECHNICAL_PILOT_PROTOCOL.md`](../phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/13_STAGE_D_TECHNICAL_PILOT_PROTOCOL.md)
+- [`phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/09_STAGE_D_GATE_STATUS.json`](../phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/09_STAGE_D_GATE_STATUS.json)
+- [`phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/11_STAGE_D_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/11_STAGE_D_ADVISOR_REVIEW.md)
+- [`phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/12_STAGE_E_PREFLIGHT_CONTRACT.md`](../phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/12_STAGE_E_PREFLIGHT_CONTRACT.md)

@@ -1,0 +1,62 @@
+{
+  "final_stage142_consumed": false,
+  "independence": "separate Philox oracle; count intensities aggregated before Poisson",
+  "stage": 131,
+  "truth": [
+    {
+      "attempts_per_arm": 32768,
+      "batches": 16,
+      "final_stage_142_consumed": false,
+      "mcse_over_typical": 0.0,
+      "minimum_conditional_support": 1.0,
+      "n0": 32768,
+      "n1": 32768,
+      "observed_pair_difference": 0.0,
+      "paired_mcse_before_exact_symmetry": 0.0,
+      "real_effects_fitted": false,
+      "scenario_id": "C0_X1",
+      "status": "TECHNICAL_PRECISION_PASS",
+      "truth": 0.0,
+      "truth_mcse": 0.0,
+      "truth_type": "EXACT_SYMMETRY",
+      "typical_coefficient_se": 0.040576023614206945
+    },
+    {
+      "attempts_per_arm": 32768,
+      "batches": 16,
+      "final_stage_142_consumed": false,
+      "mcse_over_typical": 0.008694289061616336,
+      "minimum_conditional_support": 1.0,
+      "n0": 32768,
+      "n1": 32768,
+      "observed_pair_difference": -0.003810359230670423,
+      "paired_mcse_before_exact_symmetry": 0.000152889180845336,
+      "real_effects_fitted": false,
+      "scenario_id": "C1_X2",
+      "status": "TECHNICAL_PRECISION_PASS",
+      "truth": -0.003810359230670423,
+      "truth_mcse": 0.000152889180845336,
+      "truth_type": "PAIRED_INDEPENDENT_ORACLE",
+      "typical_coefficient_se": 0.017585012387075237
+    },
+    {
+      "attempts_per_arm": 32768,
+      "batches": 16,
+      "final_stage_142_consumed": false,
+      "mcse_over_typical": 0.0070370018042602445,
+      "minimum_conditional_support": 0.980682373046875,
+      "n0": 32135,
+      "n1": 32135,
+      "observed_pair_difference": 0.00181441803890358,
+      "paired_mcse_before_exact_symmetry": 8.97578798230931e-05,
+      "real_effects_fitted": false,
+      "scenario_id": "C2_X3",
+      "status": "TECHNICAL_PRECISION_PASS",
+      "truth": 0.00181441803890358,
+      "truth_mcse": 8.97578798230931e-05,
+      "truth_type": "PAIRED_INDEPENDENT_ORACLE",
+      "typical_coefficient_se": 0.012755130994673488
+    }
+  ],
+  "truth_runs": 3
+}

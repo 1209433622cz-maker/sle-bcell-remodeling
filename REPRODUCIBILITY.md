@@ -1,14 +1,24 @@
 # Reproducibility and repository scope
 
-## Active RP v3 redesign
+## Active RP v4 redesign and RP v3 historical record
 
-The active branch state is `ACTIVE_RP_V3_SCIENTIFIC_REDESIGN` with journal
-submission on hold. The public v1.1.0 release described below remains an
-immutable historical reproducibility snapshot; it does not contain the newer
-RP v3 Stage 0, Stage 0B, WP1, WP2 effect-free preflight, full G2, G2B protocol
-freeze, full G2B, WP3 effect-free prefit or WP3 pooled measurement work.
+The active branch state is `ACTIVE_RP_V4_SCIENTIFIC_REDESIGN` with journal
+submission on hold. RP v3 is retained as a complete bounded historical record.
+The public v1.1.0 release described below remains an immutable historical
+reproducibility snapshot; it does not contain the later RP v3 analyses or the
+RP v4 Stage A, Stage C and Stage D work.
 
 Completed active gates:
+
+- RP v4 Stage A/C: carried forward all RP v3 HOLD decisions, froze one
+  `delta_profile` estimand, one OLS/HC3/t(64) method, 40 final DGPs, independent
+  stage-141/142 streams and fail-closed S0/S1 external-input contracts.
+- RP v4 Stage D: independently verified the external technical package,
+  integrated the shifted generator and independent truth engine, passed 22/22
+  project tests, reproduced 18 supported and six support-stop attempts, and
+  obtained 28/28 byte-identical fresh-versus-resume files. The only qualified
+  Windows runtime is `D:\bioinfor\python.exe`; the `sle-bcell` Miniforge runtime
+  is disqualified for G2C after native exit `0xC06D007F` on the X2 path.
 
 - Stage 0: recovered and hashed 21/21 inputs; registered units, chronology,
   estimands, branches and open parameters.
@@ -78,6 +88,11 @@ powershell -ExecutionPolicy Bypass `
   -File .\audit_tools\run_rp_v3_wp3_pooled_measurement.ps1 `
   -Python D:\bioinfor\python.exe `
   -OutputDir .\phase17_v7\rp_v3_redesign\wp3_measurement_reproduction
+
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_rp_v4_stageD.ps1 `
+  -Python D:\bioinfor\python.exe `
+  -OutputRoot .\phase17_v7\rp_v4_redesign\stageD_technical_reproduction
 ```
 
 The raw full-G2 and full-G2B runs are intentionally Git-ignored. The canonical
@@ -88,12 +103,12 @@ boundary comparisons, the independent readjudication receipt and a hash
 manifest. The validated local runtime was `D:\bioinfor\python.exe` (Python
 3.13.7, NumPy 2.3.3). No real WP2 response was loaded or fitted.
 
-The next gate is `RP_V3_AUTHOR_SCOPE_CLOSURE_DECISION`. The bounded measurement
-question is complete; no additional transform, interval or disease-analysis
-loop is authorized. No WP2 disease coefficient, WP3 outcome, WP4 analysis,
-manuscript replacement, submission package, GitHub Release or Zenodo update is
-authorized. See `phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/`
-and `00_project_management/RP_V3_REDESIGN_STATUS.md`.
+The active next gate is
+`RPV4_STAGE_E__AUTHOR_SIGNOFF_AND_FINAL_G2C_PREFLIGHT`. Stage 141/142, real WP2
+effects, external outcomes, large SRA download, WP4, manuscript replacement,
+submission package, GitHub Release and Zenodo remain unauthorized. See
+`phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/` and
+`00_project_management/RP_V4_REDESIGN_STATUS.md`.
 
 ## Current correction status
 

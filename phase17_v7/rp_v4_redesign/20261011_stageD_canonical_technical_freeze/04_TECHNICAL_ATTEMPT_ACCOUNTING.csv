@@ -1,0 +1,4 @@
+scenario_id,attempts,supported,support_stop,numerical_failures,inference,real_effects_fitted
+C0_X1,8,8,0,0,TECHNICAL_DIAGNOSTIC_ONLY,False
+C1_X2,8,8,0,0,TECHNICAL_DIAGNOSTIC_ONLY,False
+C2_X3,8,2,6,0,TECHNICAL_DIAGNOSTIC_ONLY,False
