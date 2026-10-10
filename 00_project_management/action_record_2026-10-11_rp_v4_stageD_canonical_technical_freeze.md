@@ -258,3 +258,15 @@ Stage E must:
 Even that later GO will authorize only synthetic validation. It will not
 automatically unlock real WP2 effects, external disease/activity analyses,
 large SRA download, manuscript replacement or submission.
+
+## 12. Git and GitHub synchronization
+
+- Canonical Stage D implementation/results commit: `5c3f66b`
+  (`Freeze RP v4 Stage D technical implementation`).
+- Before synchronization, local `main` was two commits ahead of
+  `origin/main`: the previously retained Stage C action-record correction
+  `e66c0bd` and the new Stage D commit.
+- A normal `git push origin main` fast-forwarded GitHub from `6bdadc0` to
+  `5c3f66b` and included both commits.
+- No force push, history rewrite, alternate remote, Release or Zenodo update
+  was used.
