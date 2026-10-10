@@ -1,0 +1,10 @@
+check,observed,criterion,pass,boundary
+design_anchor_identity,0.0,max_abs_difference = 0,True,same 68x4 design used by synthetic validation
+cell_template_identity,0.0,max_abs_difference = 0,True,same 68x5 support template
+capture_rate_identity,4.547473508864641e-13,max_abs_difference <= 1e-9,True,same captured-UMI-per-cell anchor
+regularized_category_probability_identity,0.0,max_abs_difference = 0,True,same 12 genes plus background probabilities
+fixed_profile_identity,0.0,max_abs_difference <= 1e-15,True,same pi_ref
+minimum_bin_support,30,>= 30 cells in all 340 donor-bins,True,no donor removal or threshold change
+maximum_design_leverage,0.10456714629326525,equals frozen anchor and < 1,True,outcome-blind hat-matrix diagnostic
+observed_cell_composition_closure,3.3306690738754696e-16,row-sum error <= 1e-12,True,positive observed composition
+observed_UMI_composition_closure,3.3306690738754696e-16,row-sum error <= 1e-12,True,positive observed captured-library composition

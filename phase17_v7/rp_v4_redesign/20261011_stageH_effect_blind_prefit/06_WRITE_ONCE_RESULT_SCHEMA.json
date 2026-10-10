@@ -1,0 +1,37 @@
+{
+  "effect_fit_performed_in_stage_H": false,
+  "forbidden_payloads": [
+    "donor_level_response",
+    "additional_estimands",
+    "external_outcomes",
+    "S2_tuning",
+    "posthoc_subgroups"
+  ],
+  "receipt_file": "02_SINGLE_REAL_DELTA_PROFILE_RECEIPT.json",
+  "required_result_fields": [
+    "schema",
+    "estimand",
+    "point_estimate",
+    "standard_error_HC3",
+    "df",
+    "critical_value",
+    "test_statistic",
+    "two_sided_p_value",
+    "ci_lower",
+    "ci_upper",
+    "max_point_leverage",
+    "n_donors",
+    "controls",
+    "managed_SLE",
+    "method",
+    "scientific_interpretation",
+    "input_binding_manifest_sha256",
+    "authorization_sha256",
+    "execution_script_sha256",
+    "binding_git_commit",
+    "runtime"
+  ],
+  "result_file": "01_SINGLE_REAL_DELTA_PROFILE_RESULT.json",
+  "schema": "RP_V4_STAGE_I_WRITE_ONCE_RESULT_SCHEMA_1.0",
+  "write_once": true
+}

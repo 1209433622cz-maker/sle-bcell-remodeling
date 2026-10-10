@@ -1,0 +1,25 @@
+{
+  "calibration_anchor_exact_for_design_cells_probabilities": true,
+  "calibration_anchor_rate_max_abs_difference": 4.547473508864641e-13,
+  "captured_UMI_per_cell_quantiles": {
+    "0.05": 678.5272467320261,
+    "0.5": 1618.0684523809523,
+    "0.95": 2528.952
+  },
+  "controls": 31,
+  "disease_coefficient_fitted": false,
+  "disease_response_loaded": false,
+  "donor_bins": 340,
+  "donors": 68,
+  "hat_leverage_sum": 4.0,
+  "managed_SLE": 37,
+  "maximum_cells_per_bin": 946,
+  "maximum_full_captured_UMI_per_bin": 2333206,
+  "maximum_hat_leverage": 0.10456714629326525,
+  "median_hat_leverage": 0.055629985369731905,
+  "minimum_cells_per_bin": 30,
+  "minimum_full_captured_UMI_per_bin": 18671,
+  "observed_geometry_extrapolation": false,
+  "schema": "RP_V4_STAGE_H_EFFECT_BLIND_GEOMETRY_1.0",
+  "unverifiable_model_boundary": "aggregate inputs cannot prove the true latent overdispersion, capture correlation or label-contamination mechanism"
+}

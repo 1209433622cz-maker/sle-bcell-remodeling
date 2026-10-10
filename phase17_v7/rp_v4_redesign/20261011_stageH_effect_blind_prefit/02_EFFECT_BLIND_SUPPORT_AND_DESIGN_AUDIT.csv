@@ -1,0 +1,10 @@
+check,observed,criterion,pass,effect_blind
+common_support,68 unique donors,68,True,True
+arm_support,31 control / 37 managed-SLE,31 / 37,True,True
+design_rank,4,4,True,True
+design_missing_values,0,0,True,True
+geometry_missing_values,0,0,True,True
+donor_design_join,68/68 aligned,68/68,True,True
+minimum_bin_support,30,>=30,True,True
+maximum_leverage,0.104567146293265,<1 and anchor-identical,True,True
+real_effect_fit,not performed,must remain absent,True,True

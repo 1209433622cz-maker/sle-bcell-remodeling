@@ -1,0 +1,14 @@
+{
+  "alpha": 0.05,
+  "coefficient": "is_managed coefficient in the frozen four-column donor-level OLS design",
+  "degrees_of_freedom": 64,
+  "effect_fit_performed": false,
+  "estimand_id": "delta_profile",
+  "external_outcomes_authorized": false,
+  "fallback": null,
+  "interpretation": "association difference between fixed-profile and pooled-count measurement rules; not causal mediation or a cell-intrinsic disease effect",
+  "method": "direct donor-level OLS; HC3 influence variance; two-sided t interval with df=64",
+  "other_historical_targets_authorized": false,
+  "response_formula": "T0(sum_k pi_ref,k m_ikg) - T0(sum_k q_UMI,ik m_ikg)",
+  "schema": "RP_V4_STAGE_H_SINGLE_REAL_ESTIMAND_1.0"
+}

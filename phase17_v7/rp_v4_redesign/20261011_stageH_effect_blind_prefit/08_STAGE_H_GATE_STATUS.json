@@ -1,0 +1,20 @@
+{
+  "applicability_checks_passed": 9,
+  "applicability_checks_total": 9,
+  "created_at": "2026-10-10T19:46:00.605194+00:00",
+  "decision": "PASS_STAGE_H_EFFECT_BLIND_APPLICABILITY__HOLD_STAGE_I_AUTHOR_SIGNOFF",
+  "effect_blind": true,
+  "execution_script_sha256": "bfaec257573be85c972edb72bb29f441a2e4fcd681402ee59d1528c43f91071d",
+  "input_binding_manifest_sha256": "38174638ebcd927276e8d845a1a27041cf17017cd8088cfd6eb5401d66e213f0",
+  "model_boundary": "aggregate inputs cannot prove the true latent overdispersion, capture correlation or label-contamination mechanism",
+  "next_if_hold": "close real delta_profile execution; retain Stage G as methods evidence only",
+  "next_if_pass": "new author sign-off for one write-once real delta_profile execution",
+  "observed_geometry_extrapolation": false,
+  "real_WP2_outcomes_authorized": false,
+  "real_disease_coefficient_fitted": false,
+  "real_response_loaded": false,
+  "schema": "RP_V4_STAGE_H_GATE_1.0",
+  "stage_I_execution_authorized": false,
+  "support_and_design_checks_passed": 9,
+  "support_and_design_checks_total": 9
+}

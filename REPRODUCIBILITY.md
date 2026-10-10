@@ -6,7 +6,7 @@ The active branch state is `ACTIVE_RP_V4_SCIENTIFIC_REDESIGN` with journal
 submission on hold. RP v3 is retained as a complete bounded historical record.
 The public v1.1.0 release described below remains an immutable historical
 reproducibility snapshot; it does not contain the later RP v3 analyses or the
-RP v4 Stage A, Stage C, Stage D, Stage E2, Stage F2 and Stage G work.
+RP v4 Stage A, Stage C, Stage D, Stage E2, Stage F2, Stage G and Stage H work.
 
 Completed active gates:
 
@@ -42,6 +42,14 @@ Completed active gates:
   shifted-DGP truth scenarios in 240 sealed checkpoints. The applicable
   conjunction passed 30/30 with 10/10 boundaries reported, and a second
   adjudication was byte-identical. This does not authorize real outcomes.
+- RP v4 Stage H: bound the exact real-input support, design, donor-bin counts,
+  frozen scoring parameters and synthetic calibration anchor. Nine of nine
+  design/support checks and nine of nine applicability checks passed. The
+  real 68 x 4 design and 68 x 5 cell template are anchor-identical, maximum
+  leverage is 0.104567 and minimum donor-bin support is 30. The preflight did
+  not construct a real response or fit a disease coefficient. A separate
+  two-author exact-code GO remains mandatory before the single write-once
+  `delta_profile` execution.
 
 - Stage 0: recovered and hashed 21/21 inputs; registered units, chronology,
   estimands, branches and open parameters.
@@ -128,6 +136,11 @@ powershell -ExecutionPolicy Bypass `
   -Python D:\bioinfor\python.exe `
   -WorkRoot .\phase17_v7\rp_v4_redesign\_software_tests\stageF2_reproduction `
   -CanonicalOutput .\phase17_v7\rp_v4_redesign\stageF2_reproduction_freeze
+
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_rp_v4_stageH_preflight.ps1 `
+  -Python D:\bioinfor\python.exe `
+  -Output .\phase17_v7\rp_v4_redesign\stageH_reproduction
 ```
 
 The raw full-G2 and full-G2B runs are intentionally Git-ignored. The canonical

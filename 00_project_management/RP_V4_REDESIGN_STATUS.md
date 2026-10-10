@@ -6,7 +6,7 @@
 
 **Submission state:** `HOLD`
 
-**Current gate:** `G2C_SYNTHETIC_PASS__SEPARATE_REAL_OUTCOME_REVIEW_REQUIRED`
+**Current gate:** `PASS_STAGE_H_EFFECT_BLIND_APPLICABILITY__HOLD_STAGE_I_AUTHOR_SIGNOFF`
 
 ## Scope
 
@@ -312,19 +312,44 @@ and runtime-receipt SHA-256
 Stage G decision:
 `G2C_SYNTHETIC_PASS__SEPARATE_REAL_OUTCOME_REVIEW_REQUIRED`.
 
+## Stage H completed
+
+Stage H remained fully effect blind and bound the exact canonical real-input
+objects by SHA-256. The common support remains 68 unique donors with 31 controls
+and 37 managed-SLE donors. The four-column design has rank 4, maximum
+outcome-blind hat leverage 0.104567 and no missing design values. All 340
+donor-bin units are present, minimum support is 30 cells and every full captured
+library is positive.
+
+The real 68 x 4 design and 68 x 5 cell template are exactly identical to the
+synthetic calibration anchor. The regularized 12-gene-plus-background
+probabilities are identical, and captured-UMI-per-cell rates agree to a maximum
+absolute difference of `4.55e-13`. Thus no observed support, leverage, library
+or mixture-geometry extrapolation was detected. Aggregate inputs still cannot
+prove that the unknown real latent overdispersion, capture correlation or label
+contamination mechanism equals a simulated DGP.
+
+The project froze one real estimand and one write-once result schema only. The
+unsigned Stage I template is fail-closed, and its rejection was tested before
+response construction. Stage H loaded no real response and fit no disease
+coefficient.
+
+Stage H decision:
+`PASS_STAGE_H_EFFECT_BLIND_APPLICABILITY__HOLD_STAGE_I_AUTHOR_SIGNOFF`.
+
 ## Current authorization
 
 Allowed:
 
-- preserve and independently review the completed Stage G synthetic evidence;
-- bind real-data inputs and inspect donor support, design rank, leverage,
-  missingness and DGP applicability under an outcome firewall;
-- freeze one real `delta_profile` execution contract without fitting it.
+- preserve and independently review the completed Stage G and Stage H evidence;
+- review the exact Stage I sign-off template, input manifest, execution-script
+  hash and write-once schema;
+- prepare a post-Stage-H committed baseline for a separate two-author decision.
 
 Not allowed:
 
-- inspect, fit or preview the real WP2 disease coefficient before Stage H
-  preflight and a separate post-prefit author approval;
+- inspect, fit or preview the real WP2 disease coefficient before a separate
+  post-Stage-H two-author approval bound to the committed exact baseline;
 - reopen or selectively rerun the completed stage-141/142 streams;
 - change the estimand, t(64) method, DGP registry, thresholds or seed base;
 - fit or inspect real WP2 effects;
@@ -335,14 +360,15 @@ Not allowed:
 
 ## Next gate
 
-`RPV4_STAGE_H__REAL_DATA_APPLICABILITY_AND_EFFECT_BLIND_PREFLIGHT`
+`RPV4_STAGE_I__AUTHOR_SIGNOFF_AND_SINGLE_REAL_DELTA_PROFILE_EXECUTION`
 
-Stage H must bind the canonical real-input objects and verify common support,
-design, leverage, missingness, measurement identity and applicability to the
-validated synthetic domain without reading or fitting the disease coefficient.
-It must freeze one real `delta_profile` model and write-once result schema. A
-new author approval is required after this effect-blind review. Large data
-download and all external outcomes still require separate later approval.
+Stage I first requires a new authorization from Zhi Chen and Teng Qi. The GO
+must bind the committed Git baseline, Stage H input-manifest SHA-256, exact
+execution-script SHA-256 and `D:\bioinfor\python.exe`. Only then may one
+write-once `delta_profile` OLS/HC3/t(64) result be produced. No preview,
+fallback, donor removal, alternate target or selective rerun is permitted.
+Large data download, external outcomes, WP4, manuscript replacement and
+submission remain outside this authorization.
 
 ## Canonical evidence
 
@@ -367,3 +393,7 @@ download and all external outcomes still require separate later approval.
 - [`phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/14_STAGE_G_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/14_STAGE_G_ADVISOR_REVIEW.md)
 - [`phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/15_STAGE_H_EFFECT_BLIND_PREFLIGHT_CONTRACT.md`](../phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/15_STAGE_H_EFFECT_BLIND_PREFLIGHT_CONTRACT.md)
 - [`00_project_management/action_record_2026-10-11_rp_v4_stageG_final_synthetic_validation.md`](action_record_2026-10-11_rp_v4_stageG_final_synthetic_validation.md)
+- [`phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/08_STAGE_H_GATE_STATUS.json`](../phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/08_STAGE_H_GATE_STATUS.json)
+- [`phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/09_STAGE_H_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/09_STAGE_H_ADVISOR_REVIEW.md)
+- [`phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/10_STAGE_I_EXECUTION_CONTRACT.md`](../phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/10_STAGE_I_EXECUTION_CONTRACT.md)
+- [`00_project_management/action_record_2026-10-11_rp_v4_stageH_effect_blind_prefit.md`](action_record_2026-10-11_rp_v4_stageH_effect_blind_prefit.md)

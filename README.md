@@ -31,19 +31,22 @@ those issues additively, re-bound the complete local dependency set and passed
 the canonical Windows qualification. Both authors then approved the exact
 post-patch baseline. Final stages 141/142 completed and the single G2C procedure
 passed all 30 applicable synthetic scenarios; 10 mandatory boundary scenarios
-were retained. No real disease/activity model has been run. Manuscript
+were retained. Stage H then bound the exact 68-donor real-input geometry and
+confirmed, without constructing a response, that the observed design, support,
+library and mixture anchors are inside the frozen synthetic applicability
+domain. No real disease/activity coefficient has been fit. Manuscript
 replacement, submission, GitHub Release and Zenodo updates remain on hold.
 
 Current gate:
 
 ```text
-G2C_SYNTHETIC_PASS__SEPARATE_REAL_OUTCOME_REVIEW_REQUIRED
+PASS_STAGE_H_EFFECT_BLIND_APPLICABILITY__HOLD_STAGE_I_AUTHOR_SIGNOFF
 ```
 
 Next stage:
 
 ```text
-RPV4_STAGE_H__REAL_DATA_APPLICABILITY_AND_EFFECT_BLIND_PREFLIGHT
+RPV4_STAGE_I__AUTHOR_SIGNOFF_AND_SINGLE_REAL_DELTA_PROFILE_EXECUTION
 ```
 
 ## Scientific position
@@ -72,6 +75,32 @@ predeclared questions about annotation sensitivity, composition, within-state
 effects and the identifiability of those quantities.
 
 ## RP v4 progress
+
+### Stage H: effect-blind real-data applicability preflight
+
+- Bound the canonical common-support set, four-column design, donor-bin raw
+  sufficient counts, frozen T0 reference, `pi_ref`, effect-blind WP2 geometry,
+  synthetic calibration model and final Stage G decision by SHA-256.
+- Reconfirmed 68 unique donors (31 controls, 37 managed-SLE), rank 4, 340/340
+  donor-bin units, minimum support of 30 cells and maximum outcome-blind hat
+  leverage of 0.104567.
+- The real design and 68 x 5 cell template are exactly identical to the G2C
+  calibration anchor. Regularized 12-gene-plus-background probabilities are
+  identical; captured-UMI-per-cell rates differ by at most `4.55e-13` from
+  floating-point reconstruction.
+- All 9 support/design checks and all 9 applicability checks passed. No
+  observed-geometry extrapolation was found, while the untestable latent-DGP
+  boundary remains explicit.
+- The Stage I runner is write-once and fail-closed. Its unsigned template was
+  rejected before response construction. Stage H loaded no real response and
+  fit no disease coefficient.
+
+Decision:
+`PASS_STAGE_H_EFFECT_BLIND_APPLICABILITY__HOLD_STAGE_I_AUTHOR_SIGNOFF`.
+
+See the [Stage H advisor review](phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/09_STAGE_H_ADVISOR_REVIEW.md),
+[machine-readable gate](phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/08_STAGE_H_GATE_STATUS.json)
+and [Stage I contract](phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/10_STAGE_I_EXECUTION_CONTRACT.md).
 
 ### Stage G: final synthetic G2C validation
 
@@ -552,6 +581,7 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 | RP v4 Stage E2 canonical preflight | [`phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/`](phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/) |
 | RP v4 Stage F2 integrity hardening freeze | [`phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/`](phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/) |
 | RP v4 Stage G final synthetic validation | [`phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/`](phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/) |
+| RP v4 Stage H effect-blind applicability preflight | [`phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/`](phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/) |
 | Historical RP v3 status | [`00_project_management/RP_V3_REDESIGN_STATUS.md`](00_project_management/RP_V3_REDESIGN_STATUS.md) |
 | Full file audit | [`00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md`](00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md) |
 | Valuable asset register | [`00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv`](00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv) |
