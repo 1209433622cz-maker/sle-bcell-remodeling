@@ -1,0 +1,6 @@
+file,n_rows,n_controls,n_SLE,design_columns,identity_role
+GSE135779_adult_min50_design.csv,11,5,6,intercept;is_sle,SANITIZED_HISTORICAL_COUNTS_ONLY__NOT_JOIN_KEY
+GSE135779_childhood_min50_design.csv,43,11,32,intercept;is_sle,SANITIZED_HISTORICAL_COUNTS_ONLY__NOT_JOIN_KEY
+GSE135779_combined_min100_design.csv,51,16,35,intercept;is_sle;is_adult,SANITIZED_HISTORICAL_COUNTS_ONLY__NOT_JOIN_KEY
+GSE135779_combined_min20_design.csv,56,16,40,intercept;is_sle;is_adult,SANITIZED_HISTORICAL_COUNTS_ONLY__NOT_JOIN_KEY
+GSE135779_combined_min50_design.csv,54,16,38,intercept;is_sle;is_adult,SANITIZED_HISTORICAL_COUNTS_ONLY__NOT_JOIN_KEY

@@ -17,20 +17,22 @@ rewritten. The active project follows the focused redesign specified by Research
 Plan v3. Stage 0, Stage 0B, WP1, the WP2 effect-free preflight, full G2 and the
 single permitted G2B amendment are complete. G2B improved the applicable-domain
 result from 90/150 to 133/150 PASS target-scenario rows, but 17 rows still failed
-the frozen conjunction. The current WP2 method branch is therefore closed and
-real disease effects remain locked. Manuscript replacement, submission, GitHub
-Release and Zenodo updates remain on hold.
+the frozen conjunction. The current WP2 method branch is therefore closed. A
+result-blind WP3 prefit verified the available external objects, donor linkage,
+count closure, support and frozen score-operator identity, but generated no new
+score or disease outcome. Manuscript replacement, submission, GitHub Release and
+Zenodo updates remain on hold.
 
 Current gate:
 
 ```text
-HOLD_CURRENT_WP2_METHOD__RP_V3_SCOPE_CONTRACTION
+PASS_WP3_AVAILABLE_OBJECTS_PREFIT__HOLD_OUTCOME_EXECUTION
 ```
 
 Next stage:
 
 ```text
-RP_V3_SCOPE_CONTRACTION_AND_WP3_RESULT_BLIND_GO_NO_GO
+WP3_EFFECT_FREE_MEASUREMENT_SENSITIVITY_PROTOCOL_AND_DRY_RUN
 ```
 
 ## Scientific position
@@ -194,15 +196,32 @@ See the [G2B post-adjudication review](phase17_v7/rp_v3_redesign/20261010_g2b_fu
 [machine-readable decision](phase17_v7/rp_v3_redesign/20261010_g2b_full_adjudication/03_G2B_FINAL_DECISION.json)
 and [scope-contraction contract](phase17_v7/rp_v3_redesign/20261010_g2b_full_adjudication/10_G2B_SCOPE_CONTRACTION_CONTRACT.md).
 
-## Next gate: scope contraction and result-blind WP3 go/no-go
+### WP3 result-blind available-object prefit
 
-The G2B HOLD ends interval-method development for the current WP2 branch. The
-next permitted work is a result-blind scope review that asks whether WP3 can add
-independent information beyond the already established external IFN replication.
-It must freeze the external cohort, biological unit, `T_frozen` primary score,
-`T_rank` sensitivity, calibration policy, test families and stop rules before
-any WP3 outcome is inspected. Failure to identify prospective incremental value
-closes or retopics RP v3; it does not authorize another rescue analysis.
+The project-side prefit passed 22/22 checks without computing new external
+scores, disease-group summaries, coefficients, intervals or P values. It bound
+56 unique source donors, exact eight-label-to-B_CONV closure, 54 min50-eligible
+objects and a 43-donor childhood primary design (11 controls and 32 SLE donors).
+All 12 IFN genes and 18,873 frozen rank-background symbols are present. The
+source `T_rank` convention is now explicitly verified as average rank divided by
+the fixed background size.
+
+Decision:
+`PASS_WP3_AVAILABLE_OBJECTS_PREFIT__HOLD_OUTCOME_EXECUTION`.
+
+See the [WP3 prefit advisor review](phase17_v7/rp_v3_redesign/20261010_wp3_effect_free_prefit/12_WP3_PREFIT_ADVISOR_REVIEW.md),
+[gate status](phase17_v7/rp_v3_redesign/20261010_wp3_effect_free_prefit/10_WP3_PREFIT_GATE_STATUS.json)
+and [measurement-scope protocol](phase17_v7/rp_v3_redesign/20261010_wp3_effect_free_prefit/11_WP3_EFFECT_FREE_MEASUREMENT_SCOPE_PROTOCOL.md).
+
+## Next gate: effect-free measurement sensitivity
+
+The only permitted next work is a pooled, unstratified measurement-sensitivity
+analysis of `T_frozen` and `T_rank` over the 54 eligible external donors. It may
+assess score finiteness, rank concordance, gene detection and leave-one-gene-out
+stability, but may not use disease groups, fit an association, generate a P
+value, select the more favorable transform or claim cross-platform calibration.
+If this adds no interpretable information beyond Stage 0B computability and the
+historical IFN replication, WP3 closes without outcome execution.
 
 ## Reproduce the active redesign
 
@@ -280,6 +299,7 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 | Full G2 adjudication and next-stage contract | [`phase17_v7/rp_v3_redesign/20261010_g2_full_adjudication/`](phase17_v7/rp_v3_redesign/20261010_g2_full_adjudication/) |
 | G2B single-method protocol freeze | [`phase17_v7/rp_v3_redesign/20261010_g2b_protocol_freeze/`](phase17_v7/rp_v3_redesign/20261010_g2b_protocol_freeze/) |
 | Full G2B adjudication and scope-contraction contract | [`phase17_v7/rp_v3_redesign/20261010_g2b_full_adjudication/`](phase17_v7/rp_v3_redesign/20261010_g2b_full_adjudication/) |
+| WP3 effect-free prefit and measurement-scope contract | [`phase17_v7/rp_v3_redesign/20261010_wp3_effect_free_prefit/`](phase17_v7/rp_v3_redesign/20261010_wp3_effect_free_prefit/) |
 | Reproducibility detail | [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) |
 
 ## Repository layout

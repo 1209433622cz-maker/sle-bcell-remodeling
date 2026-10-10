@@ -1,0 +1,52 @@
+{
+  "status": "PASS_WP3_AVAILABLE_OBJECTS_PREFIT__HOLD_OUTCOME_EXECUTION",
+  "checks_passed": 22,
+  "counts_shape": [
+    672,
+    32738
+  ],
+  "counts_nnz": 4537683,
+  "sample_matrices": 56,
+  "source_donors": 56,
+  "eligible_min50": 54,
+  "primary_childhood": 43,
+  "primary_controls": 11,
+  "primary_SLE": 32,
+  "metadata_only_donors_without_source_matrix": [
+    {
+      "sample_id": "JB19002",
+      "donor_name": "aHD2",
+      "cohort": "adult"
+    },
+    {
+      "sample_id": "JB19016",
+      "donor_name": "aSLE8",
+      "cohort": "adult"
+    }
+  ],
+  "source_labels": [
+    "B-caSC0",
+    "B-caSC1",
+    "B-caSC2",
+    "B-caSC3",
+    "B-caSC4",
+    "B-caSC5",
+    "B-caSC6",
+    "B-caSC7"
+  ],
+  "source_gene_features": 32738,
+  "rank_symbols": 18873,
+  "IFN_members": 12,
+  "T0_control_reference_n": 43,
+  "T_rank_percentile_convention": "average_rank_divided_by_background_size_M",
+  "stage0b_score_operator_sha256": "13a5ea7bf395968cd95317e9ce49344290e22c41bec8d2d4068fc5b221676853",
+  "raw_tar_and_barcode_regeneration_performed": false,
+  "source_label_independent_mapping_performed": false,
+  "real_IFN_scores_generated": false,
+  "disease_group_expression_summaries_generated": false,
+  "real_disease_effects_fitted": false,
+  "confidence_intervals_or_p_values_generated": false,
+  "clinical_or_cross_platform_measurement_calibration_validated": false,
+  "WP3_OUTCOME_EXECUTION_AUTHORIZED": false,
+  "next_stage": "WP3_EFFECT_FREE_MEASUREMENT_SENSITIVITY_PROTOCOL_AND_DRY_RUN"
+}

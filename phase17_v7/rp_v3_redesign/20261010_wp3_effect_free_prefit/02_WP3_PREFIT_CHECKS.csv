@@ -1,0 +1,23 @@
+check,pass,detail
+matrix_shape_and_dictionary_rows,True,"672 rows x 32,738 measured features"
+pseudobulk_row_index_exact,True,
+all_full_library_sums_exact,True,
+detected_genes_match,True,
+sample_donor_identity_unique,True,
+broad_rows_one_per_sample,True,
+compartment_source_count_metadata_match,True,
+eight_frozen_bconv_source_labels,True,
+56_of_56_label_to_broad_count_and_cell_closure,True,
+t0_gene_set_order_exact,True,
+t0_finite_positive_reference43,True,
+rank_background_unique18873,True,
+rank_background_available_external,True,
+IFN12_present,True,
+childhood_ID_linked_design_blob_verified,True,
+childhood_donor_and_cohort_match,True,
+childhood_design_exact_support,True,
+childhood_raw_metadata_matches_frozen_design,True,
+childhood_explicit_groups,True,
+childhood_design_rank2,True,
+T_rank_source_operator_exact,True,scipy rankdata(method=average) divided by full background size M
+input_hashes_unchanged_during_run,True,

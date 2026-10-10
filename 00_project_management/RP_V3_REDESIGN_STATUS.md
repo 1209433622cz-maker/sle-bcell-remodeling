@@ -3,7 +3,7 @@
 **Effective date:** 2026-10-10
 **Overall state:** `ACTIVE_RP_V3_SCIENTIFIC_REDESIGN`
 **Submission state:** `HOLD`
-**Current gate:** `HOLD_CURRENT_WP2_METHOD__RP_V3_SCOPE_CONTRACTION`
+**Current gate:** `PASS_WP3_AVAILABLE_OBJECTS_PREFIT__HOLD_OUTCOME_EXECUTION`
 
 ## Completed gates
 
@@ -19,6 +19,7 @@
 | Full G2 operating-characteristic execution | `HOLD_G2_APPLICABLE_DOMAIN` | 25/25 scenarios, 50,000 outer attempts, 60,106,000 paired-bootstrap fits, independent byte-identical readjudication; 90/150 applicable target-scenario cells passed and 60/150 held |
 | G2B single-method integration and binding | `PROSPECTIVE_G2B_PROTOCOL_FROZEN__REAL_WP2_STILL_LOCKED` | One HC3 bootstrap-t amendment; 901/901 external payloads, 42/42 external tests, 150-object Windows replay, 4,500 expanded-row checks and 58/58 canonical tests |
 | Full G2B execution and independent adjudication | `HOLD_G2B_APPLICABLE_DOMAIN` | 25/25 scenarios, 2,000/2,000 chunks, 50,000 outer attempts and 60,112,000 successful inner draws; formal and independent outputs byte-identical; 133/150 applicable rows passed and 17/150 held |
+| WP3 result-blind available-object prefit | `PASS_WP3_AVAILABLE_OBJECTS_PREFIT__HOLD_OUTCOME_EXECUTION` | 22/22 canonical checks, 56 unique donors, 54 min50-eligible source-label B_CONV objects, 43 childhood primary donors, 12/12 IFN genes and 18,873/18,873 rank-background symbols; no new score or disease outcome generated |
 
 ## WP1 numerical record
 
@@ -139,9 +140,28 @@ Under the final G2B HOLD and scope-contraction contract, do not:
 - delete failed scenarios or rewrite the full-G2 HOLD as a partial PASS.
 - try a second interval method, change stage 121 or rerun seeds after seeing G2B results.
 - unlock only the four targets that passed 15/15 applicable scenarios;
-- run WP3 outcomes before a result-blind incremental-knowledge GO/NO-GO protocol.
+- run WP3 disease outcomes without a separate author-reviewed uncertainty and
+  multiplicity contract.
+
+## WP3 result-blind prefit
+
+The available external sufficient-count object contains 672 rows by 32,738
+features, representing multiple stored views of 56 samples rather than 672
+donors. Exact source linkage confirms 56 unique donors. Eight source labels sum
+exactly to the B_CONV_ANALOG count and cell totals in every sample. Fifty-four
+donors meet the frozen 50-cell rule; the childhood primary set contains 43
+donors (11 controls and 32 SLE).
+
+All 12 frozen IFN genes, the complete 18,873-symbol rank background and the
+43-control discovery reference are available. The source `T_rank` implementation
+was tested as `rankdata(method="average") / M`. The current ID-linked design does
+not verify age, sex, ancestry, treatment, activity or processing-batch columns.
+The prefit did not regenerate the raw TAR/barcodes, reopen source-label-
+independent mapping, compute new real scores, summarize disease groups or fit an
+outcome.
 
 The next permitted stage is
-`RP_V3_SCOPE_CONTRACTION_AND_WP3_RESULT_BLIND_GO_NO_GO`. It may define and audit
-a prospective WP3 protocol, but it may not reopen WP2, run WP4, or modify the
-manuscript/submission/release state.
+`WP3_EFFECT_FREE_MEASUREMENT_SENSITIVITY_PROTOCOL_AND_DRY_RUN`. It is limited to
+pooled, unstratified `T_frozen`/`T_rank` measurement diagnostics and synthetic
+operator checks. WP2 remains closed; WP3 outcomes, WP4 and all manuscript/
+submission/release changes remain unauthorized.

@@ -1,0 +1,7 @@
+covariate,verified_in_current_ID_linked_design,column_names,interpretation
+age,False,,not_available_in_this_verified_design
+sex,False,,not_available_in_this_verified_design
+ancestry,False,,not_available_in_this_verified_design
+treatment,False,,not_available_in_this_verified_design
+activity,False,,not_available_in_this_verified_design
+processing_batch,False,,not_available_in_this_verified_design

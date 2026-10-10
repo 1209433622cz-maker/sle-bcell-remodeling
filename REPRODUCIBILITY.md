@@ -6,7 +6,7 @@ The active branch state is `ACTIVE_RP_V3_SCIENTIFIC_REDESIGN` with journal
 submission on hold. The public v1.1.0 release described below remains an
 immutable historical reproducibility snapshot; it does not contain the newer
 RP v3 Stage 0, Stage 0B, WP1, WP2 effect-free preflight, full G2, G2B protocol
-freeze or full G2B work.
+freeze, full G2B or WP3 effect-free prefit work.
 
 Completed active gates:
 
@@ -41,6 +41,12 @@ Completed active gates:
   failure. The applicable domain returned 133/150 PASS and 17/150 HOLD rows;
   formal and independent adjudications were byte-identical. Decision:
   `HOLD_G2B_APPLICABLE_DOMAIN`; the current WP2 method branch is closed.
+- WP3 effect-free prefit: bound the canonical external count object to 56 unique
+  donors, verified 56/56 source-label closure, retained 54 min50 objects and the
+  43-donor childhood design, and confirmed 12/12 program genes plus all 18,873
+  rank-background symbols. Project tests passed 9/9 and real-input checks passed
+  22/22. Decision:
+  `PASS_WP3_AVAILABLE_OBJECTS_PREFIT__HOLD_OUTCOME_EXECUTION`.
 
 Current one-command entry points are:
 
@@ -56,6 +62,11 @@ powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_wp2_prefit.ps1 
   -Regimes R0,R1,R2,R3,R4 `
   -ChunkSize 25 `
   -Adjudicate
+
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_rp_v3_wp3_effect_free_prefit.ps1 `
+  -Python D:\bioinfor\python.exe `
+  -OutputDir .\phase17_v7\rp_v3_redesign\wp3_prefit_reproduction
 ```
 
 The raw full-G2 and full-G2B runs are intentionally Git-ignored. The canonical
@@ -67,14 +78,13 @@ manifest. The validated local runtime was `D:\bioinfor\python.exe` (Python
 3.13.7, NumPy 2.3.3). No real WP2 response was loaded or fitted.
 
 The next permitted work is
-`RP_V3_SCOPE_CONTRACTION_AND_WP3_RESULT_BLIND_GO_NO_GO`. It may freeze and audit
-a prospective WP3 question only if that question adds information beyond the
-already established external IFN replication. No WP2 disease coefficient,
-WP3 outcome, manuscript replacement, submission package, GitHub Release or
-Zenodo update is authorized. Threshold relaxation, adverse-scenario removal,
-another interval search, target-wise partial unlock and overwriting either HOLD
-are prohibited. See
-`phase17_v7/rp_v3_redesign/20261010_g2b_full_adjudication/` and
+`WP3_EFFECT_FREE_MEASUREMENT_SENSITIVITY_PROTOCOL_AND_DRY_RUN`. It may calculate
+pooled, unstratified measurement diagnostics over the 54 eligible external
+objects, but may not use disease groups, fit an association, generate inferential
+intervals or P values, or select a transform by apparent favorability. No WP2
+disease coefficient, WP3 outcome, manuscript replacement, submission package,
+GitHub Release or Zenodo update is authorized. See
+`phase17_v7/rp_v3_redesign/20261010_wp3_effect_free_prefit/` and
 `00_project_management/RP_V3_REDESIGN_STATUS.md`.
 
 ## Current correction status
