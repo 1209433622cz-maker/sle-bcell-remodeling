@@ -19,20 +19,22 @@ single permitted G2B amendment are complete. G2B improved the applicable-domain
 result from 90/150 to 133/150 PASS target-scenario rows, but 17 rows still failed
 the frozen conjunction. The current WP2 method branch is therefore closed. A
 result-blind WP3 prefit verified the available external objects, donor linkage,
-count closure, support and frozen score-operator identity, but generated no new
-score or disease outcome. Manuscript replacement, submission, GitHub Release and
-Zenodo updates remain on hold.
+count closure, support and frozen score-operator identity. The authorized pooled
+measurement stage then showed stable ordering across `T_frozen`, `T_rank` and
+all 12 single-gene omissions without loading disease labels or fitting outcomes.
+Manuscript replacement, submission, GitHub Release and Zenodo updates remain on
+hold.
 
 Current gate:
 
 ```text
-PASS_WP3_AVAILABLE_OBJECTS_PREFIT__HOLD_OUTCOME_EXECUTION
+PASS_WP3_POOLED_MEASUREMENT_DIAGNOSTICS__HOLD_OUTCOME_EXECUTION
 ```
 
 Next stage:
 
 ```text
-WP3_EFFECT_FREE_MEASUREMENT_SENSITIVITY_PROTOCOL_AND_DRY_RUN
+RP_V3_AUTHOR_SCOPE_CLOSURE_DECISION
 ```
 
 ## Scientific position
@@ -213,15 +215,29 @@ See the [WP3 prefit advisor review](phase17_v7/rp_v3_redesign/20261010_wp3_effec
 [gate status](phase17_v7/rp_v3_redesign/20261010_wp3_effect_free_prefit/10_WP3_PREFIT_GATE_STATUS.json)
 and [measurement-scope protocol](phase17_v7/rp_v3_redesign/20261010_wp3_effect_free_prefit/11_WP3_EFFECT_FREE_MEASUREMENT_SCOPE_PROTOCOL.md).
 
-## Next gate: effect-free measurement sensitivity
+### WP3 pooled measurement diagnostics
 
-The only permitted next work is a pooled, unstratified measurement-sensitivity
-analysis of `T_frozen` and `T_rank` over the 54 eligible external donors. It may
-assess score finiteness, rank concordance, gene detection and leave-one-gene-out
-stability, but may not use disease groups, fit an association, generate a P
-value, select the more favorable transform or claim cross-platform calibration.
-If this adds no interpretable information beyond Stage 0B computability and the
-historical IFN replication, WP3 closes without outcome execution.
+The project-side pooled stage passed 13/13 focused tests, 25/25 real-input checks
+and 4,389/4,389 independent numerical comparisons. Across 54 eligible objects,
+`T_frozen` versus `T_rank` pooled Spearman correlation was 0.985744 and the
+maximum rank displacement was 6. All 12 leave-one-gene-out correlations were at
+least 0.995883. These are pooled measurement diagnostics, not a disease effect,
+clinical calibration or cross-platform validation.
+
+Decision:
+`PASS_WP3_POOLED_MEASUREMENT_DIAGNOSTICS__HOLD_OUTCOME_EXECUTION`.
+
+See the [pooled-measurement advisor review](phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/14_WP3_POOLED_MEASUREMENT_ADVISOR_REVIEW.md),
+[machine-readable gate](phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/12_WP3_MEASUREMENT_GATE_STATUS.json)
+and [scope-closure recommendation](phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/15_RP_V3_SCOPE_CLOSURE_RECOMMENDATION.md).
+
+## Next gate: author scope closure
+
+The limited WP3 measurement question is complete. The next action is an author-
+level decision on closing the current RP v3 computational scope and on whether
+the pooled measurement fact remains provenance only or merits a separate,
+narrowly bounded manuscript/supplement integration review. Disease-outcome
+execution, WP4, manuscript replacement and submission remain unauthorized.
 
 ## Reproduce the active redesign
 
@@ -300,6 +316,7 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 | G2B single-method protocol freeze | [`phase17_v7/rp_v3_redesign/20261010_g2b_protocol_freeze/`](phase17_v7/rp_v3_redesign/20261010_g2b_protocol_freeze/) |
 | Full G2B adjudication and scope-contraction contract | [`phase17_v7/rp_v3_redesign/20261010_g2b_full_adjudication/`](phase17_v7/rp_v3_redesign/20261010_g2b_full_adjudication/) |
 | WP3 effect-free prefit and measurement-scope contract | [`phase17_v7/rp_v3_redesign/20261010_wp3_effect_free_prefit/`](phase17_v7/rp_v3_redesign/20261010_wp3_effect_free_prefit/) |
+| WP3 pooled measurement diagnostics and scope recommendation | [`phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/`](phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/) |
 | Reproducibility detail | [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) |
 
 ## Repository layout

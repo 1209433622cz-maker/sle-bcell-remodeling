@@ -1,0 +1,11 @@
+{
+  "all_passed": true,
+  "checks": 4389,
+  "disease_stratification": false,
+  "independent_rank_implementation": "Python sorted exact tie groups",
+  "max_absolute_error": 1.7763568394002505e-15,
+  "p_values_or_intervals": false,
+  "population": 54,
+  "primary_pipeline_imported": false,
+  "tolerance": 1e-11
+}

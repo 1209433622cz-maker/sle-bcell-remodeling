@@ -1,0 +1,17 @@
+{
+  "detection_unit": "donor pseudobulk aggregated UMI > 0; not individual cells",
+  "duplicate_symbols_count": 95,
+  "measured_features": 32738,
+  "normalization_denominator": "all 32738 measured features, including features outside rank background",
+  "rank_background": 18873,
+  "rank_background_captured_library_fraction": {
+    "max": 0.9668707130191126,
+    "median": 0.9603675883444316,
+    "min": 0.950889511742809,
+    "q05": 0.9548227144836988,
+    "q25": 0.958369728703788,
+    "q75": 0.9621240409004658,
+    "q95": 0.9647195104275882
+  },
+  "unique_valid_measured_symbols": 32639
+}

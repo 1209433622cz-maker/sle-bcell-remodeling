@@ -1,0 +1,21 @@
+{
+  "T_frozen_remains_primary": true,
+  "T_rank_remains_sensitivity": true,
+  "WP2_REAL_EFFECT_UNLOCK": false,
+  "WP3_OUTCOME_EXECUTION_AUTHORIZED": false,
+  "WP4": "HOLD_CONDITIONAL",
+  "checks_passed": 25,
+  "clinical_calibration_validated": false,
+  "confidence_intervals_or_p_values_generated": false,
+  "cross_platform_equivalence_validated": false,
+  "disease_labels_loaded": false,
+  "disease_or_age_stratification_performed": false,
+  "manuscript_replacement": "HOLD",
+  "n_eligible": 54,
+  "new_disease_effects_fitted": false,
+  "next_stage": "RP_V3_AUTHOR_SCOPE_CLOSURE_DECISION",
+  "real_scores_generated": true,
+  "stage0b_operator_sha256": "13a5ea7bf395968cd95317e9ce49344290e22c41bec8d2d4068fc5b221676853",
+  "status": "PASS_WP3_POOLED_MEASUREMENT_DIAGNOSTICS__HOLD_OUTCOME_EXECUTION",
+  "submission": "HOLD"
+}

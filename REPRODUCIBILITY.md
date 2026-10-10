@@ -6,7 +6,7 @@ The active branch state is `ACTIVE_RP_V3_SCIENTIFIC_REDESIGN` with journal
 submission on hold. The public v1.1.0 release described below remains an
 immutable historical reproducibility snapshot; it does not contain the newer
 RP v3 Stage 0, Stage 0B, WP1, WP2 effect-free preflight, full G2, G2B protocol
-freeze, full G2B or WP3 effect-free prefit work.
+freeze, full G2B, WP3 effect-free prefit or WP3 pooled measurement work.
 
 Completed active gates:
 
@@ -47,6 +47,12 @@ Completed active gates:
   rank-background symbols. Project tests passed 9/9 and real-input checks passed
   22/22. Decision:
   `PASS_WP3_AVAILABLE_OBJECTS_PREFIT__HOLD_OUTCOME_EXECUTION`.
+- WP3 pooled measurement: used all 54 eligible objects without phenotype fields.
+  Project tests passed 13/13, real-input checks passed 25/25 and an independent
+  scalar implementation reproduced 4,389/4,389 values. `T_frozen` versus
+  `T_rank` pooled Spearman was 0.985744 and all 12 single-gene-omission
+  correlations were at least 0.995883. Decision:
+  `PASS_WP3_POOLED_MEASUREMENT_DIAGNOSTICS__HOLD_OUTCOME_EXECUTION`.
 
 Current one-command entry points are:
 
@@ -67,6 +73,11 @@ powershell -ExecutionPolicy Bypass `
   -File .\audit_tools\run_rp_v3_wp3_effect_free_prefit.ps1 `
   -Python D:\bioinfor\python.exe `
   -OutputDir .\phase17_v7\rp_v3_redesign\wp3_prefit_reproduction
+
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_rp_v3_wp3_pooled_measurement.ps1 `
+  -Python D:\bioinfor\python.exe `
+  -OutputDir .\phase17_v7\rp_v3_redesign\wp3_measurement_reproduction
 ```
 
 The raw full-G2 and full-G2B runs are intentionally Git-ignored. The canonical
@@ -77,15 +88,12 @@ boundary comparisons, the independent readjudication receipt and a hash
 manifest. The validated local runtime was `D:\bioinfor\python.exe` (Python
 3.13.7, NumPy 2.3.3). No real WP2 response was loaded or fitted.
 
-The next permitted work is
-`WP3_EFFECT_FREE_MEASUREMENT_SENSITIVITY_PROTOCOL_AND_DRY_RUN`. It may calculate
-pooled, unstratified measurement diagnostics over the 54 eligible external
-objects, but may not use disease groups, fit an association, generate inferential
-intervals or P values, or select a transform by apparent favorability. No WP2
-disease coefficient, WP3 outcome, manuscript replacement, submission package,
-GitHub Release or Zenodo update is authorized. See
-`phase17_v7/rp_v3_redesign/20261010_wp3_effect_free_prefit/` and
-`00_project_management/RP_V3_REDESIGN_STATUS.md`.
+The next gate is `RP_V3_AUTHOR_SCOPE_CLOSURE_DECISION`. The bounded measurement
+question is complete; no additional transform, interval or disease-analysis
+loop is authorized. No WP2 disease coefficient, WP3 outcome, WP4 analysis,
+manuscript replacement, submission package, GitHub Release or Zenodo update is
+authorized. See `phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/`
+and `00_project_management/RP_V3_REDESIGN_STATUS.md`.
 
 ## Current correction status
 

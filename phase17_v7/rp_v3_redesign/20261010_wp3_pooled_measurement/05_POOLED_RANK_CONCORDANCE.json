@@ -1,0 +1,13 @@
+{
+  "T_frozen_T_rank_spearman": 0.9857442348008386,
+  "between_transform_max_abs_rank_displacement": 6.0,
+  "between_transform_mean_abs_rank_displacement": 2.111111111111111,
+  "confidence_intervals_computed": false,
+  "disease_or_age_stratification_performed": false,
+  "n": 54,
+  "p_values_computed": false,
+  "primary_transform": "T_frozen",
+  "scope": "pooled_54_only",
+  "sensitivity_transform": "T_rank",
+  "transform_selection_performed": false
+}
