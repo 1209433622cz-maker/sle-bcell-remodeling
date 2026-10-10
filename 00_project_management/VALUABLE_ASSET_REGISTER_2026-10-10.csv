@@ -31,4 +31,7 @@ P3,RP v3 interrupted exports,phase17_v7/rp_v3_redesign/20261010_wp1_prefit_expor
 P3,WP2 external review candidate,phase17_v7/rp_v3_redesign/20261010_wp2_external_candidate/,review input,Retain locally for forensic comparison; project-side preflight is canonical,IGNORE
 P3,G2 external technical candidate,phase17_v7/rp_v3_redesign/20261010_g2_external_candidate/,review input,Retain locally for bundle and cross-platform forensic comparison,IGNORE
 P2,G2 full-run checkpoints,phase17_v7/rp_v3_redesign/g2_full_runs/,future canonical evidence after review,Large resumable synthetic Monte Carlo chunks; retain locally until post-G2 compact freeze,LOCAL_ONLY
+P0,G2B protocol freeze,phase17_v7/rp_v3_redesign/20261010_g2b_protocol_freeze/,current canonical,Single HC3 bootstrap-t method binding Windows qualification advisor review and full-run contract,TRACK
+P0,G2B canonical code,audit_tools/rp_v3_g2b_*.py; audit_tools/run_rp_v3_g2b_full.ps1; audit_tools/test_rp_v3_g2b.py,current canonical,Stage121 synthetic runner interval kernel independent adjudicator validation and resumable execution,TRACK
+P2,G2B full-run checkpoints,phase17_v7/rp_v3_redesign/g2b_full_runs/,future canonical evidence after review,Large resumable stage121 synthetic Monte Carlo chunks; keep local until compact adjudication freeze,LOCAL_ONLY
 P3,Workspace archives,6013RP-wyf.zip; phase17_v7/*.zip,local backups,Disaster recovery after independent checksum review,LOCAL_ONLY

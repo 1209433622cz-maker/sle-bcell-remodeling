@@ -1,0 +1,71 @@
+{
+  "candidate_archive": {
+    "bytes": 65473733,
+    "manifest_failures": 0,
+    "manifest_payloads": 901,
+    "path_at_review": "C:/Users/Administrator/Downloads/SLE_RPv3_G2_HOLD_Diagnostic_Single_G2B_Candidate_20261010.zip",
+    "sha256": "8db6ac265f013cf7fb7208a85f05141015f26f4ce33dcc5db9bb8f437fea03d6",
+    "zip_crc_pass": true
+  },
+  "candidate_status_accepted_with_scope": "PASS_HOLD_DIAGNOSTIC__SINGLE_G2B_CANDIDATE_TECHNICALLY_QUALIFIED",
+  "canonical_project_tests": {
+    "pass": true,
+    "result": "58/58 PASS",
+    "scope": "Stage 0, Stage 0B, WP1, WP2 preflight, parent G2 and canonical G2B"
+  },
+  "cross_platform_comparison": {
+    "attempt_status_mismatches": 0,
+    "bootstrap_index_arrays_exact": "90/90",
+    "cell_count_arrays_exact": "150/150",
+    "design_arrays_exact": "150/150",
+    "maximum_bootstrap_estimate_absolute_difference": 3.1086244689504383e-15,
+    "maximum_hc3_se_absolute_difference": 1.6653345369377348e-16,
+    "maximum_interval_endpoint_absolute_difference": 2.6645352591003757e-15,
+    "maximum_response_absolute_difference": 8.881784197001252e-16,
+    "success_masks_exact": "90/90",
+    "template_arrays_exact": "150/150"
+  },
+  "external_candidate_tests": {
+    "pass": true,
+    "result": "42/42 PASS"
+  },
+  "independent_expanded_row_audit": {
+    "all_pass": true,
+    "explicit_statsmodels_hc3_fits": 4500,
+    "maximum_coefficient_absolute_error": 1.4654943925052066e-14,
+    "maximum_hc3_se_absolute_error": 3.9968028886505635e-15,
+    "supported_outer_datasets": 90
+  },
+  "local_development_replay": {
+    "G2B_PASS": false,
+    "WP2_REAL_EFFECT_UNLOCK": false,
+    "inner_attempted": 180000,
+    "inner_failures": 0,
+    "planned_outer": 150,
+    "recorded_outer": 150,
+    "resume_new_objects": 0,
+    "support_stops": 60,
+    "supported": 90
+  },
+  "local_runtime": {
+    "numpy": "2.3.3",
+    "pandas": "2.3.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.7",
+    "python_executable": "D:/bioinfor/python.exe",
+    "scipy": "1.16.2",
+    "statsmodels": "0.14.6",
+    "thread_limits": 1
+  },
+  "methodological_sources_verified": [
+    "https://doi.org/10.1214/aos/1176350933",
+    "https://doi.org/10.1016/0304-4076(85)90158-7"
+  ],
+  "original_G2": "HOLD_G2_APPLICABLE_DOMAIN",
+  "review_date": "2026-10-10",
+  "scientific_interpretation": "Technical qualification and cross-platform equivalence only; not a finite-sample coverage PASS and not biological replication.",
+  "status": "PASS_EXTERNAL_CANDIDATE_AND_WINDOWS_TECHNICAL_REQUALIFICATION",
+  "warnings_repaired_during_canonical_integration": [
+    "All-invalid bootstrap diagnostic now returns null maximum leverage without an All-NaN RuntimeWarning."
+  ]
+}

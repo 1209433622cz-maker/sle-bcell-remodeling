@@ -1,0 +1,66 @@
+{
+  "G2B": "NOT_RUN",
+  "G2B_PASS": false,
+  "WP2_REAL_EFFECT_UNLOCK": false,
+  "WP4": "HOLD_CONDITIONAL",
+  "acceptance_rules_changed": false,
+  "approved_for_full_G2B_execution": true,
+  "automatic_unlock_permitted": false,
+  "binding": {
+    "automatic_unlock_permitted": false,
+    "binding_sha256": "ce40a673df8c051e4eb7036292fe5827eb6ce8b552ee56964affc61d1fa25d0c",
+    "hashes": {
+      "acceptance_registry": "5b2d60e574ac6b92e4c3b9acb00d9c1372261b1be83ab045c2c1192ce625b24e",
+      "amendment_spec": "8485e87178e3b72246a33511567156c8d08e1129cac94482c0dceb8ed151462f",
+      "calibration_model": "ecc817549566c1a423237d488313efdba3684965e5c30ff2aa89fc6dc3d7fa0f",
+      "domain_policy": "ed123508f562978fcb7aff16f14c9792c2238b61bd0150a084f33142de501001",
+      "g2b_adjudicator": "a5e7b00faacc83019fc1186c88aeea96e9cf98befeaad2edbf5087c2ccd8a901",
+      "g2b_full_runner": "e3cc63c9b8e79d664cf35d379f620615c5a9dd9781a298b7ef62cda9a7a618c8",
+      "g2b_interval_kernel": "c95c45953f71ea5db5cd153e59286cb16a9e0ff31b45b3f4a9bb87eb6a27dcc1",
+      "generator": "1a6a2bfd46fc9f9dee9ac27a31c3a7091cfacf29fa1d68b5252832bd76c4d615",
+      "parent_estimator": "0973b83fca955fa76d1d9fb47cd8792138ea7ff3b9c2dce1b873f6931b3f6b40",
+      "scenario_registry": "d12b2d63edb10df4ef4eb420654e53515c63d5b82696034478f4d1cbd3c51c30",
+      "target_registry": "f3e5fabf339aa3d6add44c77c8a263ee753e6da8f8d622d2c2d31f025acdd6f7",
+      "truth_table": "52e2847c1aa6e38c4a6260b695a806e201d24ffa5e287ef6d5589f0ebe00d15a"
+    },
+    "inner_paired_bootstraps": 2000,
+    "interval_method": "equal-tailed paired donor bootstrap-t with HC3 studentizer",
+    "original_G2_decision": "HOLD_G2_APPLICABLE_DOMAIN",
+    "outer_attempts_per_scenario": 2000,
+    "outer_seed_base": 2026101002,
+    "real_effects_permitted": false,
+    "scenario_count": 25,
+    "schema": "RP_V3_G2B_FULL_1.0",
+    "stage": 121,
+    "target_count": 10
+  },
+  "boundary_regimes": [
+    "R1",
+    "R3"
+  ],
+  "full_grid": "25 scenarios x 2000 outer attempts x 2000 paired inner bootstraps when supported",
+  "method_candidates_permitted": 1,
+  "next_stage": "G2B_FULL_SYNTHETIC_EXECUTION_AND_INDEPENDENT_ADJUDICATION",
+  "original_G2": "HOLD_G2_APPLICABLE_DOMAIN",
+  "original_G2_outputs_overwritten": false,
+  "parent_source_commit": "e8265cefa5124b36e29f9acdf8ef6fe7bfe7e8a1",
+  "point_estimator_changed": false,
+  "post_G2B_review_required": true,
+  "prohibited_until_post_G2B_review": [
+    "WP2 real disease effects",
+    "WP4",
+    "manuscript replacement",
+    "submission",
+    "release",
+    "Zenodo"
+  ],
+  "random_stream_stage": 121,
+  "real_data_access_in_G2B_code": false,
+  "qualification_artifact_hashes": {
+    "audit_tools/run_rp_v3_g2b_full.ps1": "c195572a93c503cf6e3f6d65cb2bc59bb702e29302541b82e8c77077be7c0e67",
+    "audit_tools/test_rp_v3_g2b.py": "474b2c09aea7be7d351fc0123b66e76c59e05d663cf8370bc1d973bf678da79e"
+  },
+  "status": "PROSPECTIVE_G2B_PROTOCOL_FROZEN__REAL_WP2_STILL_LOCKED",
+  "submission": "HOLD",
+  "truth_values_changed": false
+}

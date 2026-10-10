@@ -17,20 +17,21 @@ rewritten. The active project is now following the focused redesign specified by
 Research Plan v3. Stage 0 input recovery, Stage 0B protocol/identifiability work,
 WP1 annotation sensitivity, the WP2 effect-free structural preflight and the G2
 implementation/domain freeze are complete. The full 25-scenario G2 operating-
-characteristic run is also complete and returned a coverage-driven HOLD. Therefore,
-manuscript replacement, submission, GitHub Release and Zenodo updates remain on
-hold until the redesign produces a fully gated and materially informative result.
+characteristic run returned a coverage-driven HOLD. One theory-driven interval
+amendment has now passed technical integration and prospective binding, but its
+complete G2B validation has not yet run. Manuscript replacement, submission,
+GitHub Release and Zenodo updates therefore remain on hold.
 
 Current gate:
 
 ```text
-HOLD_G2_APPLICABLE_DOMAIN__WP2_REAL_EFFECTS_LOCKED
+PROSPECTIVE_G2B_PROTOCOL_FROZEN__REAL_WP2_STILL_LOCKED
 ```
 
 Next stage:
 
 ```text
-RP_V3_G2_HOLD_DIAGNOSTIC_AND_AMENDMENT_GATE
+G2B_FULL_SYNTHETIC_EXECUTION_AND_INDEPENDENT_ADJUDICATION
 ```
 
 ## Scientific position
@@ -161,16 +162,40 @@ See the [G2 implementation review](phase17_v7/rp_v3_redesign/20261010_g2_impleme
 [execution contract](phase17_v7/rp_v3_redesign/20261010_g2_implementation_freeze/08_G2_EXECUTION_CONTRACT.json)
 and [full-G2 post-adjudication review](phase17_v7/rp_v3_redesign/20261010_g2_full_adjudication/08_G2_POST_ADJUDICATION_REVIEW.md).
 
-## Next gate: G2 HOLD diagnosis and prospective amendment
+### G2B prospective amendment freeze
 
-The held percentile-bootstrap implementation cannot be used for real WP2
-effects. The next gate may diagnose undercoverage and prospectively freeze at
-most one scientifically justified replacement implementation. It may not relax
-the acceptance thresholds, remove adverse scenarios, inspect real WP2 responses
-or overwrite the current HOLD. Any G2B must retain the target/scenario contract,
-use a new binding and fresh random streams, and pass a complete adjudication plus
-separate review before an unlock recommendation can be considered. Scope
-contraction remains the required exit if no defensible repair is frozen.
+The G2 HOLD was diagnosed without reading real WP2 outcomes. Exactly one
+replacement was selected on methodological grounds: an equal-tailed paired
+donor bootstrap-t interval with an HC3 studentizer. The point estimator,
+generator, ten targets, 25 scenarios, truth table, applicable/boundary split and
+all acceptance thresholds remain unchanged.
+
+The external candidate archive passed 901/901 payload checks and 42/42 tests.
+On Windows, the 150-object development replay reproduced 90 supported intervals,
+60 support stops and 180,000 inner attempts with no numerical failures. A further
+4,500 explicit expanded-row statsmodels fits agreed with the vectorized HC3
+kernel. The canonical Stage 0 through G2B test suite passed 58/58 tests.
+
+The project-side `rp_v3_g2b_*` implementation now uses a hash-bound stage-121
+random namespace, rejects old G2 bindings and keeps `WP2_REAL_EFFECT_UNLOCK=false`.
+This is an implementation/protocol PASS, not a coverage PASS: G2B remains
+`NOT_RUN`.
+
+Decision:
+`PROSPECTIVE_G2B_PROTOCOL_FROZEN__REAL_WP2_STILL_LOCKED`.
+
+See the [G2B advisor review](phase17_v7/rp_v3_redesign/20261010_g2b_protocol_freeze/05_G2B_IMPLEMENTATION_ADVISOR_REVIEW.md),
+[execution contract](phase17_v7/rp_v3_redesign/20261010_g2b_protocol_freeze/03_G2B_EXECUTION_CONTRACT.json)
+and [full-run runbook](phase17_v7/rp_v3_redesign/20261010_g2b_protocol_freeze/06_G2B_FULL_RUN_RUNBOOK.md).
+
+## Next gate: full G2B synthetic validation
+
+The complete G2B run must execute all 25 registered scenarios with 2,000 outer
+attempts and 2,000 inner paired bootstraps for every supported object. It may not
+relax thresholds, remove adverse scenarios, inspect real WP2 responses or
+overwrite the current G2 HOLD. A complete PASS still requires a separate
+post-G2B review before any real effect is considered. A HOLD ends interval-method
+development and triggers RP v3 scope contraction.
 
 ## Reproduce the active redesign
 
@@ -200,6 +225,18 @@ D:\bioinfor\python.exe `
   .\audit_tools\rp_v3_g2_04_finalize_full_adjudication.py `
   --run-root .\phase17_v7\rp_v3_redesign\g2_full_runs\20261010_full `
   --output-dir .\phase17_v7\rp_v3_redesign\g2_full_adjudication_reproduction
+
+& .\audit_tools\run_rp_v3_g2b_full.ps1 `
+  -Python D:\bioinfor\python.exe `
+  -OutputRoot .\phase17_v7\rp_v3_redesign\g2b_full_runs\20261010_stage121_full `
+  -ValidateOnly
+
+& .\audit_tools\run_rp_v3_g2b_full.ps1 `
+  -Python D:\bioinfor\python.exe `
+  -OutputRoot .\phase17_v7\rp_v3_redesign\g2b_full_runs\20261010_stage121_full `
+  -Regimes @('R0','R1','R2','R3','R4') `
+  -ChunkSize 25 `
+  -Adjudicate
 ```
 
 Run the focused tests:
@@ -210,7 +247,8 @@ D:\bioinfor\python.exe -m unittest -v `
   audit_tools.test_rp_v3_stage0b `
   audit_tools.test_rp_v3_wp1 `
   audit_tools.test_rp_v3_wp2_prefit `
-  audit_tools.test_rp_v3_g2
+  audit_tools.test_rp_v3_g2 `
+  audit_tools.test_rp_v3_g2b
 ```
 
 Large public matrices and cell-level intermediates are intentionally outside
@@ -233,6 +271,7 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 | WP2 effect-free preflight and G2 registries | [`phase17_v7/rp_v3_redesign/20261010_wp2_effect_free_prefit/`](phase17_v7/rp_v3_redesign/20261010_wp2_effect_free_prefit/) |
 | G2 implementation/domain freeze | [`phase17_v7/rp_v3_redesign/20261010_g2_implementation_freeze/`](phase17_v7/rp_v3_redesign/20261010_g2_implementation_freeze/) |
 | Full G2 adjudication and next-stage contract | [`phase17_v7/rp_v3_redesign/20261010_g2_full_adjudication/`](phase17_v7/rp_v3_redesign/20261010_g2_full_adjudication/) |
+| G2B single-method protocol freeze | [`phase17_v7/rp_v3_redesign/20261010_g2b_protocol_freeze/`](phase17_v7/rp_v3_redesign/20261010_g2b_protocol_freeze/) |
 | Reproducibility detail | [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) |
 
 ## Repository layout

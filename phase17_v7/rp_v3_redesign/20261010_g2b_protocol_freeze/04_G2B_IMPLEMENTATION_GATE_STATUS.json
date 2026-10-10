@@ -1,0 +1,15 @@
+{
+  "G2B": "NOT_RUN",
+  "WP2_REAL_EFFECT_UNLOCK": false,
+  "candidate_archive": "901/901 manifested payloads; ZIP CRC PASS",
+  "canonical_project_tests": "58/58 PASS",
+  "decision": "PROSPECTIVE_G2B_PROTOCOL_FROZEN__REAL_WP2_STILL_LOCKED",
+  "external_candidate_tests": "42/42 PASS",
+  "full_G2B_scheduler_and_adjudicator_implemented": true,
+  "independent_expanded_row_checks": "4500/4500 PASS",
+  "next_stage": "G2B_FULL_SYNTHETIC_EXECUTION_AND_INDEPENDENT_ADJUDICATION",
+  "original_G2": "HOLD_G2_APPLICABLE_DOMAIN",
+  "stage121_binding_frozen": true,
+  "windows_development_replay": "150/150 accounted; 90 intervals; 60 support stops; 180000 inner attempts; 0 inner failures; resume added 0",
+  "windows_validate_only_entrypoint_pass": true
+}

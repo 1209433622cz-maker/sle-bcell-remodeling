@@ -3,7 +3,7 @@
 **Effective date:** 2026-10-10
 **Overall state:** `ACTIVE_RP_V3_SCIENTIFIC_REDESIGN`
 **Submission state:** `HOLD`
-**Current gate:** `HOLD_G2_APPLICABLE_DOMAIN__WP2_REAL_EFFECTS_LOCKED`
+**Current gate:** `PROSPECTIVE_G2B_PROTOCOL_FROZEN__REAL_WP2_STILL_LOCKED`
 
 ## Completed gates
 
@@ -17,6 +17,7 @@
 | WP2 effect-free preflight | `PASS_WP2_EFFECT_FREE_PREFLIGHT` | Five-bin support, count/library/cell closure, p/q geometry and 8/8 ILR design verified without fitting a disease effect |
 | G2 implementation/domain freeze | `PASS_G2_IMPLEMENTATION_AND_DOMAIN_FREEZE__READY_FOR_FULL_G2` | 934/934 bundle payloads, 48/48 candidate tests, 50-attempt Windows pilot, 250/250 truth precision and 10/10 canonical integration tests |
 | Full G2 operating-characteristic execution | `HOLD_G2_APPLICABLE_DOMAIN` | 25/25 scenarios, 50,000 outer attempts, 60,106,000 paired-bootstrap fits, independent byte-identical readjudication; 90/150 applicable target-scenario cells passed and 60/150 held |
+| G2B single-method integration and binding | `PROSPECTIVE_G2B_PROTOCOL_FROZEN__REAL_WP2_STILL_LOCKED` | One HC3 bootstrap-t amendment; 901/901 external payloads, 42/42 external tests, 150-object Windows replay, 4,500 expanded-row checks and 58/58 canonical tests; full G2B not run |
 
 ## WP1 numerical record
 
@@ -95,18 +96,27 @@ instability or a missing simulation truth.
 Decision: `HOLD_G2_APPLICABLE_DOMAIN`.
 WP2 real disease effects remain locked. This HOLD cannot be overridden by a
 small real-data P value or by weakening the frozen acceptance contract. The
-next authorized stage is
-`RP_V3_G2_HOLD_DIAGNOSTIC_AND_AMENDMENT_GATE`: diagnose the interval method and
-either contract the RP v3 scope or prospectively freeze one replacement method
-for a fully versioned G2B run with fresh random streams. The current failure is
-permanent provenance and will not be overwritten.
+diagnostic gate selected one theory-driven replacement only: paired donor
+bootstrap-t with an HC3 studentizer. Its point estimator, targets, scenarios,
+truth and acceptance rules are unchanged.
+
+The canonical G2B implementation is now frozen at stage 121 under binding
+`ce40a673df8c051e4eb7036292fe5827eb6ce8b552ee56964affc61d1fa25d0c`.
+This is an implementation/protocol decision; `G2B=NOT_RUN` and
+`WP2_REAL_EFFECT_UNLOCK=false`. The next authorized stage is
+`G2B_FULL_SYNTHETIC_EXECUTION_AND_INDEPENDENT_ADJUDICATION`. A G2B PASS requires
+a separate post-G2B review, while a G2B HOLD ends interval-method development
+and triggers RP v3 scope contraction. The original G2 failure remains permanent
+provenance and will not be overwritten.
 
 Canonical compact evidence is in
 `phase17_v7/rp_v3_redesign/20261010_g2_full_adjudication/`.
+The G2B protocol freeze and runbook are in
+`phase17_v7/rp_v3_redesign/20261010_g2b_protocol_freeze/`.
 
 ## Closed workstreams
 
-While G2 is held, do not:
+While G2B has not passed a separate post-run review, do not:
 
 - rewrite the manuscript around RP v3 results;
 - replace main or supplementary figures;
@@ -116,3 +126,4 @@ While G2 is held, do not:
 - tune thresholds after inspecting simulation or disease effects;
 - load or fit real WP2 responses under the held implementation;
 - delete failed scenarios or rewrite the full-G2 HOLD as a partial PASS.
+- try a second interval method, change stage 121 or rerun seeds after seeing G2B results.

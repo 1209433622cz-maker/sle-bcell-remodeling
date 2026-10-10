@@ -5,7 +5,8 @@
 The active branch state is `ACTIVE_RP_V3_SCIENTIFIC_REDESIGN` with journal
 submission on hold. The public v1.1.0 release described below remains an
 immutable historical reproducibility snapshot; it does not contain the newer
-RP v3 Stage 0, Stage 0B, WP1, WP2 effect-free preflight or full-G2 work.
+RP v3 Stage 0, Stage 0B, WP1, WP2 effect-free preflight, full-G2 or G2B
+protocol-freeze work.
 
 Completed active gates:
 
@@ -29,6 +30,12 @@ Completed active gates:
   to the official output. The applicable domain returned 90/150 PASS and
   60/150 HOLD target-scenario cells, so the decision is
   `HOLD_G2_APPLICABLE_DOMAIN` and real WP2 effects remain locked.
+- G2B protocol freeze: integrated one paired donor bootstrap-t/HC3 interval in
+  a separate stage-121 namespace. The external package passed 901/901 payload
+  checks and 42/42 tests; Windows replay accounted for 150/150 objects and
+  180,000 inner attempts; 4,500 expanded-row HC3 checks and 58/58 canonical
+  tests passed. Decision:
+  `PROSPECTIVE_G2B_PROTOCOL_FROZEN__REAL_WP2_STILL_LOCKED`; full G2B is not run.
 
 Current one-command entry points are:
 
@@ -38,6 +45,10 @@ powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_stage0b.ps1
 powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_wp1.ps1
 powershell -ExecutionPolicy Bypass -File .\audit_tools\run_rp_v3_wp2_prefit.ps1 `
   -OutputDir .\phase17_v7\rp_v3_redesign\wp2_prefit_reproduction
+& .\audit_tools\run_rp_v3_g2b_full.ps1 `
+  -Python D:\bioinfor\python.exe `
+  -OutputRoot .\phase17_v7\rp_v3_redesign\g2b_full_runs\20261010_stage121_full `
+  -ValidateOnly
 ```
 
 The raw full-G2 run is intentionally Git-ignored because it contains 6,004
@@ -48,14 +59,13 @@ readjudication receipt and a hash manifest. The validated local runtime was
 the Miniforge environment terminated inside NumPy linear algebra before
 simulation; no frozen output was changed.
 
-The next permitted work is only
-`RP_V3_G2_HOLD_DIAGNOSTIC_AND_AMENDMENT_GATE`. It may diagnose interval
-undercoverage and prospectively freeze one replacement implementation, or
-contract the RP v3 scope. No WP2 disease coefficient, manuscript replacement,
+The next permitted work is
+`G2B_FULL_SYNTHETIC_EXECUTION_AND_INDEPENDENT_ADJUDICATION` under the frozen
+stage-121 binding. No WP2 disease coefficient, manuscript replacement,
 submission package, GitHub Release or Zenodo update is authorized. Threshold
-relaxation, adverse-scenario removal and overwriting the current HOLD are
-prohibited. See
-`phase17_v7/rp_v3_redesign/20261010_g2_full_adjudication/` and
+relaxation, adverse-scenario removal, another interval search and overwriting
+the current HOLD are prohibited. See
+`phase17_v7/rp_v3_redesign/20261010_g2b_protocol_freeze/` and
 `00_project_management/RP_V3_REDESIGN_STATUS.md`.
 
 ## Current correction status
