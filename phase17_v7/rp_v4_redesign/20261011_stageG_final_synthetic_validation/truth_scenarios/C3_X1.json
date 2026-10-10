@@ -1,0 +1,156 @@
+{
+  "batch_inventory": [
+    {
+      "payload_bytes": 441,
+      "payload_path": "checkpoints/C3_X1/batch_00.json",
+      "payload_sha256": "600e019b818d5ad9a4e9eead03ca1087639dbd969f8e199006a9f5b004b0573c",
+      "seal_bytes": 388,
+      "seal_path": "checkpoints/C3_X1/batch_00.json.seal.json",
+      "seal_sha256": "14531d0fa42bef4aa35e79fd47760e0b25ed31fa90ba2694a45eb1d691f49257"
+    },
+    {
+      "payload_bytes": 442,
+      "payload_path": "checkpoints/C3_X1/batch_01.json",
+      "payload_sha256": "53fdefedf132c6c77d2b2a39d5327160bc21dda60c9d449e6d3fa6f14860fd96",
+      "seal_bytes": 388,
+      "seal_path": "checkpoints/C3_X1/batch_01.json.seal.json",
+      "seal_sha256": "5f6d00a6ef604dbb103affd7f10d9e46ebfcaf87b0657702f5cd6cd534708d70"
+    },
+    {
+      "payload_bytes": 444,
+      "payload_path": "checkpoints/C3_X1/batch_02.json",
+      "payload_sha256": "ced5b3fee713320c572417d17caa7369dc76eae5b83ec4f57ec53d613726453e",
+      "seal_bytes": 388,
+      "seal_path": "checkpoints/C3_X1/batch_02.json.seal.json",
+      "seal_sha256": "30f73e04f0c542297739d023e671fd5222bebcf46c00a03b88db2635d6565c95"
+    },
+    {
+      "payload_bytes": 441,
+      "payload_path": "checkpoints/C3_X1/batch_03.json",
+      "payload_sha256": "da07a2c636f08b0d56b6cbaebed56d1af726ff46e717a71ca0eb2e0f33f227c1",
+      "seal_bytes": 388,
+      "seal_path": "checkpoints/C3_X1/batch_03.json.seal.json",
+      "seal_sha256": "85c301f295f3d3103d4186cce5f650dee752614487f414acbf53b1e2b9806d34"
+    },
+    {
+      "payload_bytes": 443,
+      "payload_path": "checkpoints/C3_X1/batch_04.json",
+      "payload_sha256": "fe014d54be49d62e1b2da1342cfc05be6a1052a4f98b69f5d3f42ab9c7d12094",
+      "seal_bytes": 388,
+      "seal_path": "checkpoints/C3_X1/batch_04.json.seal.json",
+      "seal_sha256": "583720b42e7756cf6b02a21ed33b7e0d6512a35ba86512d0a7821721f8ddc4db"
+    },
+    {
+      "payload_bytes": 443,
+      "payload_path": "checkpoints/C3_X1/batch_05.json",
+      "payload_sha256": "75a8f319b630e845734b6e5706ebb237d146b3a0cb31613026f6e68d8dd2bb20",
+      "seal_bytes": 388,
+      "seal_path": "checkpoints/C3_X1/batch_05.json.seal.json",
+      "seal_sha256": "03af6bd1e83d88d4cd4ea9a79b92b37857fb71fb97105f5271443b6c1d9573b5"
+    },
+    {
+      "payload_bytes": 442,
+      "payload_path": "checkpoints/C3_X1/batch_06.json",
+      "payload_sha256": "d88c6e23048990bc7fab4a2241c40e44df1846bd5eb34300e2eb3bb23ba288c9",
+      "seal_bytes": 388,
+      "seal_path": "checkpoints/C3_X1/batch_06.json.seal.json",
+      "seal_sha256": "ed39ce0090f7380af79714982224fa7581b9ccf70aaf3285f30358df6f39a774"
+    },
+    {
+      "payload_bytes": 443,
+      "payload_path": "checkpoints/C3_X1/batch_07.json",
+      "payload_sha256": "c272e30b94a446e5d37ebc77ff6157c6e28132c2044871b2d94ab556eb891146",
+      "seal_bytes": 388,
+      "seal_path": "checkpoints/C3_X1/batch_07.json.seal.json",
+      "seal_sha256": "81af54c26a1e027a7a41b3e7380e295296822a9ab2121142198830f7a63ea651"
+    },
+    {
+      "payload_bytes": 442,
+      "payload_path": "checkpoints/C3_X1/batch_08.json",
+      "payload_sha256": "0d47337b1a848d7ac863b52e68fec09b572b3fc478fb9a69cc8ce86245b71c4c",
+      "seal_bytes": 388,
+      "seal_path": "checkpoints/C3_X1/batch_08.json.seal.json",
+      "seal_sha256": "762baffb2e45ee5d3bfdf1d7ad1b23154e9c914642cb78b544e7ccc1a24d3df9"
+    },
+    {
+      "payload_bytes": 442,
+      "payload_path": "checkpoints/C3_X1/batch_09.json",
+      "payload_sha256": "ad0ae20eb0e3d56911702d288fa268321b018deb96aa3e5138ec2539a4cb0911",
+      "seal_bytes": 388,
+      "seal_path": "checkpoints/C3_X1/batch_09.json.seal.json",
+      "seal_sha256": "645a7e07f03d14f8c18f25558bdef7730cfca33e308cf4d9835d9c234e3a7506"
+    },
+    {
+      "payload_bytes": 445,
+      "payload_path": "checkpoints/C3_X1/batch_10.json",
+      "payload_sha256": "5b387d0321664b1bf2eaff3b8f7badab4546d2ffc55e26b4c460ab7e384e4fd5",
+      "seal_bytes": 389,
+      "seal_path": "checkpoints/C3_X1/batch_10.json.seal.json",
+      "seal_sha256": "aa0ef4b62309e10a2801631ad9ec0176d559e0c141b6a38408ae5d5edc1ff20c"
+    },
+    {
+      "payload_bytes": 445,
+      "payload_path": "checkpoints/C3_X1/batch_11.json",
+      "payload_sha256": "c0deaad18328d694855236d5c55d38d08ac00dfcfe176b32b23217e325aad015",
+      "seal_bytes": 389,
+      "seal_path": "checkpoints/C3_X1/batch_11.json.seal.json",
+      "seal_sha256": "9e61829dfadf7f00e9e4db116e4f06951518e73de15d4a613e188af3c69feeba"
+    },
+    {
+      "payload_bytes": 442,
+      "payload_path": "checkpoints/C3_X1/batch_12.json",
+      "payload_sha256": "df7ab163c394bc7aad45d7996e90f26301a3fff465d4632f412b35d2f84b02c8",
+      "seal_bytes": 389,
+      "seal_path": "checkpoints/C3_X1/batch_12.json.seal.json",
+      "seal_sha256": "a3babcf38cb9eaf7f6d9ca9b6ffa7c41496340e0383fd3b2f32d64989a0072f7"
+    },
+    {
+      "payload_bytes": 444,
+      "payload_path": "checkpoints/C3_X1/batch_13.json",
+      "payload_sha256": "974b73ef7541e5c08b85bc401f133ae0991f18211c7bb0b8eca3254711a42260",
+      "seal_bytes": 389,
+      "seal_path": "checkpoints/C3_X1/batch_13.json.seal.json",
+      "seal_sha256": "5c129390a854d0a7d4b8eee54e0c964ac8792366bf14977f168e4767848c5ed8"
+    },
+    {
+      "payload_bytes": 441,
+      "payload_path": "checkpoints/C3_X1/batch_14.json",
+      "payload_sha256": "d29b2ce4e3ad4841558ed6684025ee3f4f88ec58d2db311eea1dc2196f339dab",
+      "seal_bytes": 389,
+      "seal_path": "checkpoints/C3_X1/batch_14.json.seal.json",
+      "seal_sha256": "748bc5a0cbd95d7d0490afd52622eb57ecc6591406fbd0e2231e5891af112224"
+    },
+    {
+      "payload_bytes": 443,
+      "payload_path": "checkpoints/C3_X1/batch_15.json",
+      "payload_sha256": "a58b7bafb4c3d73f9955b11443d76f48d9474b57597b423cf8677e3ef2ae22c6",
+      "seal_bytes": 389,
+      "seal_path": "checkpoints/C3_X1/batch_15.json.seal.json",
+      "seal_sha256": "b5847aa58d898159d6a4d13c92160950ec4ae9c2720e8a1477be5e45ad4b404d"
+    }
+  ],
+  "scenario_id": "C3_X1",
+  "schema": "RP_V4_STAGE_F2_TRUTH_SCENARIO_RESULT_1.0",
+  "truth": {
+    "accepted_arm0": 131072,
+    "accepted_arm1": 131072,
+    "attempted_per_arm": 131072,
+    "batches": 16,
+    "data_kind": "SIMULATED_ONLY",
+    "exact_null_registered": false,
+    "final": true,
+    "independent_score_crosscheck": true,
+    "mcse_over_typical_se": 0.0034999144085215233,
+    "observed_pair_difference": 0.000880847635972487,
+    "paired_mcse_before_exact_symmetry": 0.00014096435989055333,
+    "precision_pass": true,
+    "real_effects_fitted": false,
+    "scenario_id": "C3_X1",
+    "seed_base": 2026101004,
+    "stage": 142,
+    "truth": 0.000880847635972487,
+    "truth_basis": "PAIRED_INDEPENDENT_ORACLE",
+    "truth_mcse": 0.00014096435989055333,
+    "typical_coefficient_se": 0.04027651634775298
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "GO_FOR_FULL_SYNTHETIC_G2C": true,
+  "approved_at": "2026-10-11T03:09:34+08:00",
+  "approved_by": [
+    "Zhi Chen",
+    "Teng Qi"
+  ],
+  "author_contract_approved": true,
+  "authorize_outer_stage141": true,
+  "authorize_truth_stage142": true,
+  "binding_git_commit": "ca95aa656e73694e80c8030e42608f6712099404",
+  "clean_worktree_required": true,
+  "code_binding_manifest_sha256": "e69ca282c046e43325ee2ae1f0b53f76bf2ee017771423ace1e866c646bf21a8",
+  "complete_payload_hash_sealing_required": true,
+  "exact_qualified_runtime_required": true,
+  "failure_closes_branch_no_G2D": true,
+  "final_G2C_does_not_unlock_real_outcomes_automatically": true,
+  "fixed_40_scenarios_4000_attempts_each": true,
+  "fixed_seed_base_2026101004_stage141_truth142": true,
+  "fixed_truth_precision_and_acceptance_thresholds": true,
+  "no_replenishment_or_posthoc_scenario_removal": true,
+  "qualified_runtime_receipt_sha256": "bc743876f470bca0e2fb9c8df73bd4f07f2d61f5de8600b5b2150e7cb8b4386d",
+  "schema": "RP_V4_STAGE_G_EXACT_CODE_GO_1.0",
+  "single_estimand_delta_profile": true,
+  "single_method_OLS_HC3_t64": true,
+  "status": "ISSUED_EXACT_CODE_GO"
+}

@@ -6,7 +6,7 @@
 
 **Submission state:** `HOLD`
 
-**Current gate:** `PASS_STAGE_F2_INTEGRITY_HARDENING_AND_REBIND__HOLD_POST_COMMIT_EXACT_CODE_GO`
+**Current gate:** `G2C_SYNTHETIC_PASS__SEPARATE_REAL_OUTCOME_REVIEW_REQUIRED`
 
 ## Scope
 
@@ -285,23 +285,47 @@ Stage F decision:
 Stage F2 decision:
 `PASS_STAGE_F2_INTEGRITY_HARDENING_AND_REBIND__HOLD_POST_COMMIT_EXACT_CODE_GO`.
 
+## Stage G completed
+
+Both authors approved the exact synchronized F2 baseline and separately
+authorized outer stage 141 and truth stage 142. The issued GO bound Git commit
+`ca95aa656e73694e80c8030e42608f6712099404`, source-binding SHA-256
+`e69ca282c046e43325ee2ae1f0b53f76bf2ee017771423ace1e866c646bf21a8`
+and runtime-receipt SHA-256
+`bc743876f470bca0e2fb9c8df73bd4f07f2d61f5de8600b5b2150e7cb8b4386d`.
+
+- Stage 141 completed 40/40 scenarios, 160,000/160,000 attempts and 1,600
+  sealed chunks with zero numerical failures. Resume verification reused all
+  chunks without changing any summary hash.
+- Stage 142 completed 15/15 shifted-DGP truth scenarios and 240 sealed
+  checkpoints. All precision and independent score checks passed; maximum
+  `MCSE / typical SE` was 0.007842.
+- The result-blind adjudicator returned 30/30 applicable PASS and reported all
+  10 mandatory boundaries. A second full adjudication was byte-identical.
+- The nearest bias boundary was `C4_X3` at 0.098054 versus 0.10. The largest
+  coverage Wilson upper bound was 0.972152 in `C0_X3` versus 0.975. These are
+  passing but must remain explicit near-boundary results.
+- The result validates only the single `delta_profile` OLS/HC3/t(64) procedure
+  in the frozen synthetic domain. It does not validate the other historical
+  targets, establish causal mediation or automatically unlock real outcomes.
+
+Stage G decision:
+`G2C_SYNTHETIC_PASS__SEPARATE_REAL_OUTCOME_REVIEW_REQUIRED`.
+
 ## Current authorization
 
 Allowed:
 
-- review the committed F2 code, source-binding manifest and qualified-runtime
-  receipt;
-- prepare a new Stage G exact-code GO receipt only after the F2 commit hash is
-  synchronized and both authors approve that exact identity;
-- repeat non-final integrity checks without consuming stage-141/142 streams;
-- estimate final compute/storage requirements without executing the final grid.
+- preserve and independently review the completed Stage G synthetic evidence;
+- bind real-data inputs and inspect donor support, design rank, leverage,
+  missingness and DGP applicability under an outcome firewall;
+- freeze one real `delta_profile` execution contract without fitting it.
 
 Not allowed:
 
-- run the 160,000-attempt final G2C validation before a new exact-code
-  `GO_FOR_FULL_SYNTHETIC_G2C` receipt binds both authors, the synchronized F2
-  Git HEAD, source-binding digest and qualified-runtime receipt;
-- consume stage-141 or stage-142 random streams during preflight;
+- inspect, fit or preview the real WP2 disease coefficient before Stage H
+  preflight and a separate post-prefit author approval;
+- reopen or selectively rerun the completed stage-141/142 streams;
 - change the estimand, t(64) method, DGP registry, thresholds or seed base;
 - fit or inspect real WP2 effects;
 - fit new-cohort diagnosis/activity effects;
@@ -311,14 +335,14 @@ Not allowed:
 
 ## Next gate
 
-`RPV4_STAGE_G__POST_PATCH_EXACT_CODE_AND_RUNTIME_GO_REVIEW`
+`RPV4_STAGE_H__REAL_DATA_APPLICABILITY_AND_EFFECT_BLIND_PREFLIGHT`
 
-Stage G must independently recheck the synchronized F2 commit, source-binding
-digest, clean worktree and qualified-runtime receipt, then obtain explicit
-approval from both authors for stage 141 and stage 142 separately. Only a newly
-issued receipt may authorize either final stream. The current template remains
-false. Large data download and all real outcomes still require separate later
-approval.
+Stage H must bind the canonical real-input objects and verify common support,
+design, leverage, missingness, measurement identity and applicability to the
+validated synthetic domain without reading or fitting the disease coefficient.
+It must freeze one real `delta_profile` model and write-once result schema. A
+new author approval is required after this effect-blind review. Large data
+download and all external outcomes still require separate later approval.
 
 ## Canonical evidence
 
@@ -339,3 +363,7 @@ approval.
 - [`phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/09_STAGE_F2_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/09_STAGE_F2_ADVISOR_REVIEW.md)
 - [`phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/10_STAGE_G_GO_NO_GO_CONTRACT.md`](../phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/10_STAGE_G_GO_NO_GO_CONTRACT.md)
 - [`00_project_management/action_record_2026-10-11_rp_v4_stageF2_integrity_hardening.md`](action_record_2026-10-11_rp_v4_stageF2_integrity_hardening.md)
+- [`phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/11_FINAL_SYNTHETIC_GATE.json`](../phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/11_FINAL_SYNTHETIC_GATE.json)
+- [`phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/14_STAGE_G_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/14_STAGE_G_ADVISOR_REVIEW.md)
+- [`phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/15_STAGE_H_EFFECT_BLIND_PREFLIGHT_CONTRACT.md`](../phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/15_STAGE_H_EFFECT_BLIND_PREFLIGHT_CONTRACT.md)
+- [`00_project_management/action_record_2026-10-11_rp_v4_stageG_final_synthetic_validation.md`](action_record_2026-10-11_rp_v4_stageG_final_synthetic_validation.md)

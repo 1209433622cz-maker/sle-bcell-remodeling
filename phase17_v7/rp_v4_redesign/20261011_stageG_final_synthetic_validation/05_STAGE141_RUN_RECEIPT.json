@@ -1,0 +1,17 @@
+{
+  "accounting_sha256": "f5713cd6eb5aba1ca881bb678daa972b05240ac49fa6adb2fbbb03de74fc0908",
+  "attempts": 160000,
+  "authorization_sha256": "b0a0c207099f81a0218e2a3225f34ae4e339eba4d8d21d6e2b1f44a97e2d4216",
+  "binding_manifest_sha256": "e69ca282c046e43325ee2ae1f0b53f76bf2ee017771423ace1e866c646bf21a8",
+  "chunk_count": 1600,
+  "chunk_manifest_sha256": "4594057ec5887a44442265b2652a029d246e098e4ac6b062d93629e77431ca40",
+  "contract_sha256": "a3eb8b6fb09480505230dafa6e74ac9d7143005ad29dffd4454b3de55d78a1f9",
+  "final": true,
+  "final_G2C_adjudicated": false,
+  "mode": "final",
+  "real_effects_fitted": false,
+  "runtime_receipt_sha256": "bc743876f470bca0e2fb9c8df73bd4f07f2d61f5de8600b5b2150e7cb8b4386d",
+  "scenario_count": 40,
+  "schema": "RP_V4_STAGE_F2_OUTER_RECEIPT_1.0",
+  "stage": 141
+}

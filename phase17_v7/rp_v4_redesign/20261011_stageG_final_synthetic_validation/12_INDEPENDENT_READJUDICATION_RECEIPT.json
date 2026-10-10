@@ -1,0 +1,19 @@
+{
+  "applicable_pass": 30,
+  "applicable_total": 30,
+  "boundary_integrity_pass": true,
+  "boundary_scenarios_reported": 10,
+  "first_gate_sha256": "361e24b4e78d5d267f15bcce71ea470c239350bb75b1c77b8d7f676c956781c5",
+  "first_scenario_adjudication_sha256": "821a3fd63c65d245affdae533c24d40418ede73a8208f0f59e79331ac2b19e64",
+  "gate_files_byte_identical": true,
+  "generated_at": "2026-10-11T03:18:48+08:00",
+  "real_outcomes_loaded": false,
+  "scenario_files_byte_identical": true,
+  "schema": "RP_V4_STAGE_G_INDEPENDENT_READJUDICATION_1.0",
+  "second_gate_sha256": "361e24b4e78d5d267f15bcce71ea470c239350bb75b1c77b8d7f676c956781c5",
+  "second_scenario_adjudication_sha256": "821a3fd63c65d245affdae533c24d40418ede73a8208f0f59e79331ac2b19e64",
+  "status_counts": {
+    "BOUNDARY_REPORTED": 10,
+    "PASS": 30
+  }
+}

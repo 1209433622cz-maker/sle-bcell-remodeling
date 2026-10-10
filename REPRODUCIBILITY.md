@@ -6,7 +6,7 @@ The active branch state is `ACTIVE_RP_V4_SCIENTIFIC_REDESIGN` with journal
 submission on hold. RP v3 is retained as a complete bounded historical record.
 The public v1.1.0 release described below remains an immutable historical
 reproducibility snapshot; it does not contain the later RP v3 analyses or the
-RP v4 Stage A, Stage C, Stage D, Stage E2 and Stage F2 work.
+RP v4 Stage A, Stage C, Stage D, Stage E2, Stage F2 and Stage G work.
 
 Completed active gates:
 
@@ -22,8 +22,8 @@ Completed active gates:
 - RP v4 Stage E2: recorded both authors' scientific-contract approval, repaired
   a Windows CSV-encoding defect in the external preflight, byte-bound the
   resumable outer runner, independent truth runner and write-once adjudicator,
-  and passed 15/15 tests plus non-final stage-132 qualification. Exact-code GO
-  is still unissued; stage 141/142 remain unopened.
+  and passed 15/15 tests plus non-final stage-132 qualification. At that gate,
+  exact-code GO was unissued and stage 141/142 were unopened.
 - RP v4 Stage F/F2: independently confirmed that the Stage E2 binding omitted
   a truth-engine dependency and lacked complete runtime, workspace, payload and
   interval-identity checks. The additive F2 implementation now binds the full
@@ -34,8 +34,14 @@ Completed active gates:
   `e69ca282c046e43325ee2ae1f0b53f76bf2ee017771423ace1e866c646bf21a8` and
   the runtime-receipt SHA-256 is
   `bc743876f470bca0e2fb9c8df73bd4f07f2d61f5de8600b5b2150e7cb8b4386d`.
-  Exact post-commit Stage G approval is still required; stages 141/142 remain
-  unopened.
+  This F2 freeze was subsequently approved as the exact Stage G execution
+  baseline.
+- RP v4 Stage G: the author-issued GO bound commit `ca95aa656e73694e80c8030e42608f6712099404`,
+  the F2 source manifest and the qualified runtime. Stage 141 completed 40
+  scenarios and 160,000 attempts in 1,600 sealed chunks; stage 142 completed 15
+  shifted-DGP truth scenarios in 240 sealed checkpoints. The applicable
+  conjunction passed 30/30 with 10/10 boundaries reported, and a second
+  adjudication was byte-identical. This does not authorize real outcomes.
 
 - Stage 0: recovered and hashed 21/21 inputs; registered units, chronology,
   estimands, branches and open parameters.
@@ -133,10 +139,10 @@ manifest. The validated local runtime was `D:\bioinfor\python.exe` (Python
 3.13.7, NumPy 2.3.3). No real WP2 response was loaded or fitted.
 
 The active next gate is
-`RPV4_STAGE_G__POST_PATCH_EXACT_CODE_AND_RUNTIME_GO_REVIEW`. Stage 141/142, real WP2
+`RPV4_STAGE_H__REAL_DATA_APPLICABILITY_AND_EFFECT_BLIND_PREFLIGHT`. Real WP2
 effects, external outcomes, large SRA download, WP4, manuscript replacement,
 submission package, GitHub Release and Zenodo remain unauthorized. See
-`phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/` and
+`phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/` and
 `00_project_management/RP_V4_REDESIGN_STATUS.md`.
 
 ## Current correction status

@@ -1,0 +1,19 @@
+{
+  "all_independent_score_crosschecks_pass": true,
+  "all_precision_pass": true,
+  "authorization_sha256": "b0a0c207099f81a0218e2a3225f34ae4e339eba4d8d21d6e2b1f44a97e2d4216",
+  "binding_manifest_sha256": "e69ca282c046e43325ee2ae1f0b53f76bf2ee017771423ace1e866c646bf21a8",
+  "checkpoint_count": 240,
+  "contract_sha256": "48b3bbc2d5ee61d06d3ae009657e82026debffb450b4d1c1bf029b6a7de93f84",
+  "final": true,
+  "maximum_mcse_over_typical_se": 0.007842054902253218,
+  "mode": "final",
+  "real_effects_fitted": false,
+  "runtime_receipt_sha256": "bc743876f470bca0e2fb9c8df73bd4f07f2d61f5de8600b5b2150e7cb8b4386d",
+  "scenario_count": 15,
+  "scenario_manifest_sha256": "32ebc5cb1b22f9b7db47f0b1180079b2a0fba73a80e2730a699c66f750dd4bbb",
+  "schema": "RP_V4_STAGE_F2_TRUTH_RECEIPT_1.0",
+  "seed_base": 2026101004,
+  "stage": 142,
+  "truth_csv_sha256": "1f9d9fe3409419965f380853a117a2ac43951560ab4f634452ea368fdf7f1d7b"
+}

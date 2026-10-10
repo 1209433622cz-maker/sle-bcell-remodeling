@@ -28,21 +28,22 @@ technical pilot. Stage E2 recorded both authors' approval of the frozen
 scientific contract. The independent Stage F review then identified an unbound
 truth helper and incomplete runtime/payload integrity checks. Stage F2 repaired
 those issues additively, re-bound the complete local dependency set and passed
-the canonical Windows qualification. The exact post-patch GO remains
-deliberately unissued. No final G2C run or real disease/activity model has been
-run. Manuscript replacement, submission, GitHub Release and Zenodo updates
-remain on hold.
+the canonical Windows qualification. Both authors then approved the exact
+post-patch baseline. Final stages 141/142 completed and the single G2C procedure
+passed all 30 applicable synthetic scenarios; 10 mandatory boundary scenarios
+were retained. No real disease/activity model has been run. Manuscript
+replacement, submission, GitHub Release and Zenodo updates remain on hold.
 
 Current gate:
 
 ```text
-PASS_STAGE_F2_INTEGRITY_HARDENING_AND_REBIND__HOLD_POST_COMMIT_EXACT_CODE_GO
+G2C_SYNTHETIC_PASS__SEPARATE_REAL_OUTCOME_REVIEW_REQUIRED
 ```
 
 Next stage:
 
 ```text
-RPV4_STAGE_G__POST_PATCH_EXACT_CODE_AND_RUNTIME_GO_REVIEW
+RPV4_STAGE_H__REAL_DATA_APPLICABILITY_AND_EFFECT_BLIND_PREFLIGHT
 ```
 
 ## Scientific position
@@ -71,6 +72,31 @@ predeclared questions about annotation sensitivity, composition, within-state
 effects and the identifiability of those quantities.
 
 ## RP v4 progress
+
+### Stage G: final synthetic G2C validation
+
+- Both authors approved commit
+  `ca95aa656e73694e80c8030e42608f6712099404`, the F2 source binding and the
+  qualified runtime, and separately authorized stages 141 and 142.
+- Stage 141 completed 40 scenarios, 160,000 attempts and 1,600 sealed chunks.
+  A resume audit reused all chunks without changing their hashes.
+- Stage 142 completed 15 shifted-DGP scenarios and 240 sealed checkpoints. All
+  truth precision and independent score checks passed; maximum
+  `MCSE / typical SE` was 0.007842.
+- Final result-blind adjudication returned 30/30 applicable scenarios PASS and
+  10/10 mandatory boundaries reported, with zero numerical failures. An
+  independent readjudication was byte-identical.
+- The closest bias case was `C4_X3` at 0.098054 against the 0.10 limit. The
+  largest coverage Wilson upper bound was 0.972152 in `C0_X3` against 0.975.
+  These passing but near-boundary results remain part of the interpretation.
+- This synthetic PASS applies only to `delta_profile` under the frozen DGPs. It
+  does not erase G2/G2B HOLDs or authorize a real coefficient.
+
+Decision: `G2C_SYNTHETIC_PASS__SEPARATE_REAL_OUTCOME_REVIEW_REQUIRED`.
+
+See the [Stage G advisor review](phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/14_STAGE_G_ADVISOR_REVIEW.md),
+[final gate](phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/11_FINAL_SYNTHETIC_GATE.json)
+and [Stage H effect-blind contract](phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/15_STAGE_H_EFFECT_BLIND_PREFLIGHT_CONTRACT.md).
 
 ### Stage F2: integrity hardening and post-patch rebinding
 
@@ -101,7 +127,7 @@ effects and the identifiability of those quantities.
   `e69ca282c046e43325ee2ae1f0b53f76bf2ee017771423ace1e866c646bf21a8`;
   qualified-runtime receipt SHA-256 is
   `bc743876f470bca0e2fb9c8df73bd4f07f2d61f5de8600b5b2150e7cb8b4386d`.
-  Stage 141/142 remain unstarted and unauthorized.
+  At the F2 freeze, Stage 141/142 remained unstarted and unauthorized.
 
 Decision:
 `PASS_STAGE_F2_INTEGRITY_HARDENING_AND_REBIND__HOLD_POST_COMMIT_EXACT_CODE_GO`.
@@ -130,7 +156,7 @@ and [Stage G exact-code contract](phase17_v7/rp_v4_redesign/20261011_stageF2_int
 - Passed 15/15 project-side tests. A non-final stage-132 qualification executed
   24 outer attempts with fresh/resume equivalence; three truth cases passed the
   full 131,072-per-arm budget with maximum `MCSE / typical SE = 0.005907`.
-- Confirmed that stage 141 and stage 142 were not started and no real outcome,
+- Confirmed that at Stage E2, stages 141 and 142 were not started and no real outcome,
   SRA download, manuscript or submission asset was touched.
 
 Decision:
@@ -407,16 +433,15 @@ See the [pooled-measurement advisor review](phase17_v7/rp_v3_redesign/20261010_w
 [machine-readable gate](phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/12_WP3_MEASUREMENT_GATE_STATUS.json)
 and [scope-closure recommendation](phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/15_RP_V3_SCOPE_CLOSURE_RECOMMENDATION.md).
 
-## Next gate: post-patch exact-code and runtime GO review
+## Next gate: effect-blind real-data applicability preflight
 
 The next action is
-`RPV4_STAGE_G__POST_PATCH_EXACT_CODE_AND_RUNTIME_GO_REVIEW`. After the Stage F2
-implementation is committed and synchronized, both authors must review that
-exact Git commit, source-binding digest and qualified-runtime receipt digest.
-Only a newly issued `GO_FOR_FULL_SYNTHETIC_G2C` receipt binding all three may
-open stage 141/142 and start the 160,000-attempt run. The tracked template is
-false and cannot authorize execution. Large raw download, real WP2 effects,
-new-cohort disease/activity effects, WP4, manuscript replacement and submission
+`RPV4_STAGE_H__REAL_DATA_APPLICABILITY_AND_EFFECT_BLIND_PREFLIGHT`. It may bind
+and inspect the real-input donor support, design rank, leverage, missingness,
+measurement inputs and DGP applicability, but it may not inspect or fit the
+disease coefficient. A separate author approval after that preflight is
+required before one real `delta_profile` estimate can run. Large raw download,
+external disease/activity effects, WP4, manuscript replacement and submission
 remain unauthorized.
 
 ## Reproduce the active redesign
@@ -508,7 +533,8 @@ D:\bioinfor\python.exe -m unittest -v `
   audit_tools.test_rp_v3_g2b `
   audit_tools.test_rp_v4_g2c `
   audit_tools.test_rp_v4_stageD `
-  audit_tools.test_rp_v4_stageE2
+  audit_tools.test_rp_v4_stageE2 `
+  audit_tools.test_rp_v4_stageF2
 ```
 
 Large public matrices and cell-level intermediates are intentionally outside
@@ -525,6 +551,7 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 | RP v4 Stage D canonical technical freeze | [`phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/`](phase17_v7/rp_v4_redesign/20261011_stageD_canonical_technical_freeze/) |
 | RP v4 Stage E2 canonical preflight | [`phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/`](phase17_v7/rp_v4_redesign/20261011_stageE2_authorized_preflight/) |
 | RP v4 Stage F2 integrity hardening freeze | [`phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/`](phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/) |
+| RP v4 Stage G final synthetic validation | [`phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/`](phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/) |
 | Historical RP v3 status | [`00_project_management/RP_V3_REDESIGN_STATUS.md`](00_project_management/RP_V3_REDESIGN_STATUS.md) |
 | Full file audit | [`00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md`](00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md) |
 | Valuable asset register | [`00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv`](00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv) |
