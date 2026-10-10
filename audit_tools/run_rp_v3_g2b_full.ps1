@@ -1,7 +1,7 @@
 param(
     [string]$Python = 'D:\bioinfor\python.exe',
     [Parameter(Mandatory = $true)][string]$OutputRoot,
-    [ValidateSet('R0', 'R1', 'R2', 'R3', 'R4')][string[]]$Regimes = @('R0'),
+    [string[]]$Regimes = @('R0'),
     [ValidateRange(1, 2000)][int]$ChunkSize = 25,
     [switch]$ValidateOnly,
     [switch]$Adjudicate
@@ -12,6 +12,23 @@ $RepoRoot = Split-Path -Parent $PSScriptRoot
 $Runner = Join-Path $PSScriptRoot 'rp_v3_g2b_full_runner.py'
 $Adjudicator = Join-Path $PSScriptRoot 'rp_v3_g2b_adjudicate.py'
 $ScenarioRegistry = Join-Path $RepoRoot 'phase17_v7\rp_v3_redesign\20261010_wp2_effect_free_prefit\08_G2_SCENARIO_REGISTRY_FROZEN_FOR_IMPLEMENTATION.csv'
+
+# powershell.exe -File passes comma-separated values as one string, whereas
+# direct invocation can pass a real string array. Normalize both forms before
+# validating so the documented commands behave identically.
+$AllowedRegimes = @('R0', 'R1', 'R2', 'R3', 'R4')
+$Regimes = @(
+    $Regimes |
+        ForEach-Object { $_ -split ',' } |
+        ForEach-Object { $_.Trim().ToUpperInvariant() } |
+        Where-Object { $_ } |
+        Select-Object -Unique
+)
+$InvalidRegimes = @($Regimes | Where-Object { $AllowedRegimes -notcontains $_ })
+if ($InvalidRegimes.Count -gt 0) {
+    throw "Invalid regime(s): $($InvalidRegimes -join ', '). Allowed values: $($AllowedRegimes -join ', ')."
+}
+if ($Regimes.Count -eq 0) { throw 'At least one regime is required.' }
 
 if (-not (Test-Path -LiteralPath $Python)) { throw "Python executable not found: $Python" }
 if (-not (Test-Path -LiteralPath $ScenarioRegistry)) { throw "Scenario registry not found: $ScenarioRegistry" }
@@ -55,7 +72,7 @@ foreach ($scenario in $selected) {
 }
 
 if ($Adjudicate) {
-    $allRegimes = @('R0', 'R1', 'R2', 'R3', 'R4')
+    $allRegimes = $AllowedRegimes
     if (@($allRegimes | Where-Object { $Regimes -notcontains $_ }).Count -gt 0) {
         throw '-Adjudicate requires all five regimes. Partial results cannot receive a final G2B decision.'
     }

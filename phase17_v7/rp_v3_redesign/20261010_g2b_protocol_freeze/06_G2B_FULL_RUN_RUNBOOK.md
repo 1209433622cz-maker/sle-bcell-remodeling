@@ -21,13 +21,18 @@ attempt is written.
 ## 2. Complete execution and adjudication
 
 ```powershell
-& .\audit_tools\run_rp_v3_g2b_full.ps1 `
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_rp_v3_g2b_full.ps1 `
   -Python D:\bioinfor\python.exe `
   -OutputRoot .\phase17_v7\rp_v3_redesign\g2b_full_runs\20261010_stage121_full `
-  -Regimes @('R0','R1','R2','R3','R4') `
+  -Regimes R0,R1,R2,R3,R4 `
   -ChunkSize 25 `
   -Adjudicate
 ```
+
+The wrapper normalizes both the comma-separated form above and a true
+PowerShell array supplied during direct invocation. Invalid or empty regime
+sets fail before any synthetic attempt is started.
 
 This executes 25 scenarios and 50,000 outer attempts. Each supported object
 receives exactly 2,000 paired inner draws. Runtime can be long; keep the terminal
