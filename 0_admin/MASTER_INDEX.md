@@ -21,6 +21,14 @@ indexes rather than silently relocating or deleting scientific evidence.
 - `9_version`: 39,521-file baseline inventory, SHA-256, content
   checks, duplicate groups and organization receipts.
 
+## Nested topic indexes
+
+All organized folders except the already completed `4_figures` tree now include
+a `SUBFOLDER_INDEX.md`. The complete taxonomy is recorded in
+`0_admin/SUBFOLDER_TAXONOMY_2026-10-12.md`, and the one-row-per-file mapping is
+`9_version/inventory/SUBFOLDER_CLASSIFICATION_2026-10-12.csv`. These are
+navigation catalogs only: the original frozen source paths remain authoritative.
+
 ## Scientific status
 
 The stable positive claim remains reproducible process-level B_CONV IFN/ISG

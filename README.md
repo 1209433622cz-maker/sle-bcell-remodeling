@@ -17,6 +17,13 @@ all frozen analysis paths and hashes. Start with the
 [archive decisions](8_archive/), [references](8_reference/) and
 [version/integrity records](9_version/).
 
+Each organized folder now also contains a
+[subfolder index](0_admin/SUBFOLDER_TAXONOMY_2026-10-12.md). The nested
+folders are non-destructive catalog views: they classify every baseline file
+outside the already organized figure tree, but keep the authoritative source
+path unchanged. The workspace-wide mapping is recorded in
+[SUBFOLDER_CLASSIFICATION_2026-10-12.csv](9_version/inventory/SUBFOLDER_CLASSIFICATION_2026-10-12.csv).
+
 The current verified package is
 [`SLE_Bcell_Submission_Package_2026-10-12`](6_release/SLE_Bcell_Submission_Package_2026-10-12/)
 with a matching downloadable ZIP. Its state is
