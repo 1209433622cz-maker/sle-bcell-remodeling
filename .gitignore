@@ -188,3 +188,9 @@ phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/qa_r2/
 # including its bounded supplementary-data ZIPs and the verified package ZIP.
 !6_release/
 !6_release/**
+
+# Local recovery payloads created before the 12 October 2026 GitHub repository
+# recreation. Compact metadata, release notes and checksum receipts remain
+# trackable; large release ZIPs and the full Git bundle remain local.
+8_archive/github_repository_recreation_2026-10-12/*.bundle
+8_archive/github_repository_recreation_2026-10-12/releases/**/*.zip

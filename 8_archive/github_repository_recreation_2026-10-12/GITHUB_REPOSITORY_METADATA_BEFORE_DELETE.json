@@ -1,0 +1,135 @@
+{
+  "captured_at": "2026-10-11T18:46:25.016734+00:00",
+  "repository": {
+    "createdAt": "2026-08-10T11:45:36Z",
+    "defaultBranchRef": {
+      "name": "main"
+    },
+    "description": "Outcome-locked, disease-blind single-cell analysis workflow for SLE B-cell remodeling and external validation.",
+    "forkCount": 0,
+    "hasIssuesEnabled": true,
+    "hasProjectsEnabled": true,
+    "hasWikiEnabled": false,
+    "homepageUrl": "",
+    "isPrivate": false,
+    "licenseInfo": {
+      "key": "mit",
+      "name": "MIT License",
+      "nickname": ""
+    },
+    "nameWithOwner": "1209433622cz-maker/sle-bcell-remodeling",
+    "repositoryTopics": null,
+    "stargazerCount": 0,
+    "updatedAt": "2026-10-11T18:42:25Z",
+    "url": "https://github.com/1209433622cz-maker/sle-bcell-remodeling",
+    "visibility": "PUBLIC"
+  },
+  "issues": [],
+  "pull_requests": [],
+  "releases": [
+    {
+      "assets": [
+        {
+          "apiUrl": "https://api.github.com/repos/1209433622cz-maker/sle-bcell-remodeling/releases/assets/528186138",
+          "contentType": "application/x-zip-compressed",
+          "createdAt": "2026-08-24T21:06:00Z",
+          "digest": "sha256:1fb1170b68e399edbcf95400611fdf733bdcb3b64ba64640af0958494cc7904a",
+          "downloadCount": 1,
+          "id": "RA_kwDOT0KVWs4fe3sa",
+          "label": "",
+          "name": "package_genome_medicine_gateC8BRF_author_release_2026-08-25.zip",
+          "size": 46055879,
+          "state": "uploaded",
+          "updatedAt": "2026-08-24T21:06:32Z",
+          "url": "https://github.com/1209433622cz-maker/sle-bcell-remodeling/releases/download/v1.0.0/package_genome_medicine_gateC8BRF_author_release_2026-08-25.zip"
+        },
+        {
+          "apiUrl": "https://api.github.com/repos/1209433622cz-maker/sle-bcell-remodeling/releases/assets/528187279",
+          "contentType": "text/plain",
+          "createdAt": "2026-08-24T21:06:57Z",
+          "digest": "sha256:ea45ae5a2ef565e05dffc96ad952e56e14d192916d678f3ad46a5af15c3372d5",
+          "downloadCount": 0,
+          "id": "RA_kwDOT0KVWs4fe3-P",
+          "label": "",
+          "name": "SHA256SUMS_v1.0.0.txt",
+          "size": 235,
+          "state": "uploaded",
+          "updatedAt": "2026-08-24T21:06:58Z",
+          "url": "https://github.com/1209433622cz-maker/sle-bcell-remodeling/releases/download/v1.0.0/SHA256SUMS_v1.0.0.txt"
+        },
+        {
+          "apiUrl": "https://api.github.com/repos/1209433622cz-maker/sle-bcell-remodeling/releases/assets/528186717",
+          "contentType": "application/x-zip-compressed",
+          "createdAt": "2026-08-24T21:06:32Z",
+          "digest": "sha256:94fbe198a0eeaaa2d6a491ec1c10f5c4020d1d5a82985daf19799acdd73f6999",
+          "downloadCount": 1,
+          "id": "RA_kwDOT0KVWs4fe31d",
+          "label": "",
+          "name": "sle-bcell-remodeling-v1.0.0-source.zip",
+          "size": 41764089,
+          "state": "uploaded",
+          "updatedAt": "2026-08-24T21:06:57Z",
+          "url": "https://github.com/1209433622cz-maker/sle-bcell-remodeling/releases/download/v1.0.0/sle-bcell-remodeling-v1.0.0-source.zip"
+        }
+      ],
+      "body": "# SLE B-cell remodeling analysis v1.0.0\r\n\r\nThis is the author-approved reproducible release supporting the manuscript:\r\n\r\n> Disease-blind single-cell reconstruction separates unstable B-cell states from reproducible interferon remodeling in systemic lupus erythematosus\r\n\r\n## Release contents\r\n\r\n- Versioned analysis and audit code for the disease-blind single-cell workflow.\r\n- Five publication main figures and seven supplementary figures.\r\n- Machine-readable source data for all main figures.\r\n- Complete gene-level statistical results, sanitized design matrices and regulator-sensitivity outputs.\r\n- Final manuscript, supplementary information, cover letter and portal upload maps.\r\n- Environment records, machine-readable decisions and SHA-256 integrity manifests.\r\n\r\n## Scientific scope\r\n\r\nThe release supports a broad conventional-B identity scope, sample-level composition analysis, within-compartment IFN/ISG transcription, independent external validation and prespecified regulatory and perturbational evidence. The findings are observational and do not establish a discrete B-cell subtype, causal regulator, unique upstream stimulus or treatment benefit.\r\n\r\n## Persistent identifier\r\n\r\nZenodo DOI: [10.5281/zenodo.22086892](https://doi.org/10.5281/zenodo.22086892)\r\n\r\n## Licences\r\n\r\n- Original code: MIT License.\r\n- Original manuscript text, composite figures, project documentation and project-generated derived source tables: CC BY 4.0.\r\n- Third-party GEO, CELLxGENE, database and software materials are excluded and are not relicensed.\r\n\r\nSee `LICENSE`, `LICENSE_CONTENT_CC_BY_4.0.md` and `LICENSE_SCOPE.md` for the controlling scope.\r\n\r\n## Citation\r\n\r\nUse the metadata in `CITATION.cff` or cite the Zenodo DOI above.",
+      "isDraft": false,
+      "isPrerelease": false,
+      "name": "SLE B-cell remodeling analysis v1.0.0",
+      "publishedAt": "2026-08-24T21:08:02Z",
+      "tagName": "v1.0.0"
+    },
+    {
+      "assets": [
+        {
+          "apiUrl": "https://api.github.com/repos/1209433622cz-maker/sle-bcell-remodeling/releases/assets/534806680",
+          "contentType": "application/octet-stream",
+          "createdAt": "2026-08-29T05:30:31Z",
+          "digest": "sha256:aae67863fc6b34b0ac091f8d38524ffc55a7cf364ff7ff4b4d43fedfa4ae0095",
+          "downloadCount": 0,
+          "id": "RA_kwDOT0KVWs4f4ICY",
+          "label": "",
+          "name": "Research_Archive.zip",
+          "size": 25577813,
+          "state": "uploaded",
+          "updatedAt": "2026-08-29T05:30:37Z",
+          "url": "https://github.com/1209433622cz-maker/sle-bcell-remodeling/releases/download/v1.1.0/Research_Archive.zip"
+        },
+        {
+          "apiUrl": "https://api.github.com/repos/1209433622cz-maker/sle-bcell-remodeling/releases/assets/534807018",
+          "contentType": "application/octet-stream",
+          "createdAt": "2026-08-29T05:31:00Z",
+          "digest": "sha256:be96eec9c0610208f867fe7258a3c7e672a63e8273c486cc09caae2bfcdb457b",
+          "downloadCount": 0,
+          "id": "RA_kwDOT0KVWs4f4IHq",
+          "label": "",
+          "name": "SHA256SUMS.txt",
+          "size": 171,
+          "state": "uploaded",
+          "updatedAt": "2026-08-29T05:31:00Z",
+          "url": "https://github.com/1209433622cz-maker/sle-bcell-remodeling/releases/download/v1.1.0/SHA256SUMS.txt"
+        },
+        {
+          "apiUrl": "https://api.github.com/repos/1209433622cz-maker/sle-bcell-remodeling/releases/assets/534806763",
+          "contentType": "application/octet-stream",
+          "createdAt": "2026-08-29T05:30:38Z",
+          "digest": "sha256:51b1007908668f8ee25971e99270bf8477720a25ed7491bacd2f7572a4e24645",
+          "downloadCount": 0,
+          "id": "RA_kwDOT0KVWs4f4IDr",
+          "label": "",
+          "name": "Source_Code.zip",
+          "size": 78040863,
+          "state": "uploaded",
+          "updatedAt": "2026-08-29T05:30:59Z",
+          "url": "https://github.com/1209433622cz-maker/sle-bcell-remodeling/releases/download/v1.1.0/Source_Code.zip"
+        }
+      ],
+      "body": "## Reproducibility release\n\nThis release mirrors the verified Zenodo archive at **https://doi.org/10.5281/zenodo.22151739**. The source-code snapshot corresponds exactly to commit f1859ff8498d5569a1d5027b36ed18c8b7c7536f; the post-publication verification ledger is on main at 3d39835a76944a99769f5f1e0979647c25e39cef.\n\n### Scientific boundaries\n\n- QiTeng R2 is the author-confirmed scientific manuscript baseline.\n- R1 remains HOLD_FULL_PIPELINE_TWO_COMPARTMENT_REPRODUCIBILITY; it is not rescued as PASS.\n- C9R remains HOLD_C9A_PREFREEZE_REVIEW_REQUIRED.\n- Corrected external outcome unlock remains false; no corrected external disease effects were estimated.\n- Regulatory analyses are observational and do not establish causal binding, a unique upstream ligand, or clinical utility.\n\nThe initial Zenodo version 10.5281/zenodo.22086892 has been withdrawn after verified replacement and now resolves to a tombstone. The concept DOI 10.5281/zenodo.22086891 resolves to this latest version.\n\n### Files and licenses\n\n- Research_Archive.zip: manuscript, supplementary material, figures, source data, R1/C9R evidence, provenance, and quality-control receipts.\n- Source_Code.zip: exact Git archive of the release commit.\n- SHA256SUMS.txt: SHA-256 checksums for both ZIP archives.\n\nOriginal project code is licensed under MIT. Original manuscript content, composite figures, documentation, and project-generated derived source-data tables are licensed under CC BY 4.0. Third-party source resources retain their original terms.",
+      "isDraft": false,
+      "isPrerelease": false,
+      "name": "SLE B-cell remodeling reproducibility release",
+      "publishedAt": "2026-08-29T05:31:01Z",
+      "tagName": "v1.1.0"
+    }
+  ]
+}

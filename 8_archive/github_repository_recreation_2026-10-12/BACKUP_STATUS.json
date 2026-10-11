@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-10-11T18:46:32.842901+00:00",
+  "status": "PASS_GITHUB_REPOSITORY_PREDELETE_BACKUP",
+  "repository": "1209433622cz-maker/sle-bcell-remodeling",
+  "head": "e520a9a79f41f27f3db1d078eb4743b253ff79b3",
+  "release_count": 2,
+  "release_asset_count": 6,
+  "issue_count": 0,
+  "pull_request_count": 0,
+  "bundle": "8_archive/github_repository_recreation_2026-10-12/sle-bcell-remodeling_before_remote_recreation.bundle",
+  "bundle_bytes": 363645713,
+  "manifest_files": 15
+}

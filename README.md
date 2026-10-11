@@ -588,16 +588,17 @@ See the [pooled-measurement advisor review](phase17_v7/rp_v3_redesign/20261010_w
 [machine-readable gate](phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/12_WP3_MEASUREMENT_GATE_STATUS.json)
 and [scope-closure recommendation](phase17_v7/rp_v3_redesign/20261010_wp3_pooled_measurement/15_RP_V3_SCOPE_CLOSURE_RECOMMENDATION.md).
 
-## Next gate: effect-blind real-data applicability preflight
+## Next gate: qualified raw-count reconstruction
 
-The next action is
-`RPV4_STAGE_H__REAL_DATA_APPLICABILITY_AND_EFFECT_BLIND_PREFLIGHT`. It may bind
-and inspect the real-input donor support, design rank, leverage, missingness,
-measurement inputs and DGP applicability, but it may not inspect or fit the
-disease coefficient. A separate author approval after that preflight is
-required before one real `delta_profile` estimate can run. Large raw download,
-external disease/activity effects, WP4, manuscript replacement and submission
-remain unauthorized.
+The next scientific action is
+`RPV4_STAGE_N__QUALIFIED_RUNTIME_STORAGE_AND_WRITE_ONCE_RAW_RECONSTRUCTION`.
+Stage H and the single write-once Stage I fit are already complete. Stage N is
+limited to disease-blind reconstruction of the 176 frozen SRA runs into the
+sealed 88-library count/QC object. It requires the pinned Linux x86-64
+toolchain, at least 2.5 TB scratch storage and a completed two-author download
+authorization. Patient identity and disease/activity metadata may not be
+joined until the count/QC object is sealed. External outcomes, manuscript
+replacement and submission remain locked.
 
 ## Reproduce the active redesign
 
@@ -674,6 +675,10 @@ powershell -ExecutionPolicy Bypass `
   -Python D:\bioinfor\python.exe `
   -WorkRoot .\phase17_v7\rp_v4_redesign\_software_tests\stageF2_reproduction `
   -CanonicalOutput .\phase17_v7\rp_v4_redesign\stageF2_reproduction_freeze
+
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_rp_v4_stageM.ps1 `
+  -Python C:\ProgramData\miniforge3\envs\sle-bcell\python.exe
 ```
 
 Run the focused tests:
@@ -689,7 +694,8 @@ D:\bioinfor\python.exe -m unittest -v `
   audit_tools.test_rp_v4_g2c `
   audit_tools.test_rp_v4_stageD `
   audit_tools.test_rp_v4_stageE2 `
-  audit_tools.test_rp_v4_stageF2
+  audit_tools.test_rp_v4_stageF2 `
+  audit_tools.test_rp_v4_stageM
 ```
 
 Large public matrices and cell-level intermediates are intentionally outside
@@ -711,7 +717,11 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 | RP v4 Stage I single real delta-profile result | [`phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/`](phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/) |
 | RP v4 Stage K limited manuscript integration | [`phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/`](phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/) |
 | RP v4 Stage L external-cohort metadata gate | [`phase17_v7/rp_v4_redesign/20261011_stageL_external_cohort_gate/`](phase17_v7/rp_v4_redesign/20261011_stageL_external_cohort_gate/) |
+| RP v4 Stage M disease-blind raw pipeline freeze | [`phase17_v7/rp_v4_redesign/20261011_stageM_raw_pipeline_freeze/`](phase17_v7/rp_v4_redesign/20261011_stageM_raw_pipeline_freeze/) |
 | Historical RP v3 status | [`00_project_management/RP_V3_REDESIGN_STATUS.md`](00_project_management/RP_V3_REDESIGN_STATUS.md) |
+| Current full local audit | [`9_version/full_local_reaudit_2026-10-12/`](9_version/full_local_reaudit_2026-10-12/) |
+| Current submission package | [`6_release/SLE_Bcell_Submission_Package_2026-10-12/`](6_release/SLE_Bcell_Submission_Package_2026-10-12/) |
+| Nested project taxonomy | [`0_admin/SUBFOLDER_TAXONOMY_2026-10-12.md`](0_admin/SUBFOLDER_TAXONOMY_2026-10-12.md) |
 | Full file audit | [`00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md`](00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md) |
 | Valuable asset register | [`00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv`](00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv) |
 | Manuscript source baseline | [`01_manuscript/Manuscript.md`](01_manuscript/Manuscript.md) |
@@ -745,21 +755,27 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 
 ## Workspace audit
 
-The 10 October 2026 full audit hashed and structurally checked every regular
-workspace file outside `.git` and the audit-output directory. At scan time it
-covered 7,850 files (5.687 GiB): 7,433 directly validated files, five separately
-validated HDF5/H5AD containers, one benign empty package marker and 411
-binary/compiled-cache files without a format-specific parser. No corrupt JSON,
-CSV, ZIP/OOXML, PDF,
-image, gzip, tar, NPZ or HDF5 object was found.
+The 12 October 2026 full local reaudit independently hashed and structurally
+checked 39,886 current project files (5.689 GiB), including the legacy analysis
+tree, organized view, manuscript, figures, submission package, work records and
+the pre-recreation GitHub backup. Only `.git` internals and the audit output
+directory itself were excluded. All 39,886 files passed their applicable
+content checks; there were no HOLD or FAIL objects.
 
-Large duplicate groups account for approximately 340 MiB, mainly historical
-submission copies and render/portability tests. They are retained locally for
-provenance and excluded from new Git tracking. Deep third-party QiTeng runtime
-copies generated 119 Windows paths longer than 240 characters and are also kept
-outside Git. See the [full audit](00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md).
+The audit identified 14,279 duplicate groups with approximately 1.34 GB of
+theoretical redundant storage. These are not automatic deletion targets:
+historical submissions, negative decisions, release assets and reproducibility
+copies remain valuable evidence. The full file inventory, duplicate map,
+content summaries and value-role register are in
+[`9_version/full_local_reaudit_2026-10-12/`](9_version/full_local_reaudit_2026-10-12/).
 
 ## Public reproducibility archive
+
+The GitHub repository was backed up and recreated as a public repository on
+12 October 2026. The complete pre-deletion Git history, two historical Release
+records and six Release assets are retained locally with SHA-256 receipts under
+`8_archive/github_repository_recreation_2026-10-12/`. The public repository
+continues to use the same canonical URL.
 
 The immutable public reference remains:
 

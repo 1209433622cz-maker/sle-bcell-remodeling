@@ -1,0 +1,11 @@
+The bundle contains these 8 refs:
+8230be428dee6a81535103a203f0310e496ce4d4 refs/codex/turn-diffs/captures/1791744187352/f44f8616-26fc-4436-89ec-edc400699b42/base
+47c0c9dbdfea337adb60ef3959b909f6e5f7d6d2 refs/codex/turn-diffs/checkpoints/253869ca35c8eb6c9b3cd33af49419fb/fc7fd773b7cdb4e70a65ccea26d539d4/1791713202328/e5884ef2-97d8-4a92-8240-fcd66539ad91
+e520a9a79f41f27f3db1d078eb4743b253ff79b3 refs/heads/main
+e520a9a79f41f27f3db1d078eb4743b253ff79b3 refs/remotes/origin/HEAD
+e520a9a79f41f27f3db1d078eb4743b253ff79b3 refs/remotes/origin/main
+7e2786127bffc53dfc8b09c6e65f4527dba0ea73 refs/tags/v1.0.0
+6e492e3dcd5e6ee89b386e6c459622dffe0d9269 refs/tags/v1.1.0
+e520a9a79f41f27f3db1d078eb4743b253ff79b3 HEAD
+The bundle records a complete history.
+The bundle uses this hash algorithm: sha1

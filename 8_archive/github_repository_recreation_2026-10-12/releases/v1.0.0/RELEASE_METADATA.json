@@ -1,0 +1,52 @@
+{
+  "assets": [
+    {
+      "apiUrl": "https://api.github.com/repos/1209433622cz-maker/sle-bcell-remodeling/releases/assets/528186138",
+      "contentType": "application/x-zip-compressed",
+      "createdAt": "2026-08-24T21:06:00Z",
+      "digest": "sha256:1fb1170b68e399edbcf95400611fdf733bdcb3b64ba64640af0958494cc7904a",
+      "downloadCount": 1,
+      "id": "RA_kwDOT0KVWs4fe3sa",
+      "label": "",
+      "name": "package_genome_medicine_gateC8BRF_author_release_2026-08-25.zip",
+      "size": 46055879,
+      "state": "uploaded",
+      "updatedAt": "2026-08-24T21:06:32Z",
+      "url": "https://github.com/1209433622cz-maker/sle-bcell-remodeling/releases/download/v1.0.0/package_genome_medicine_gateC8BRF_author_release_2026-08-25.zip"
+    },
+    {
+      "apiUrl": "https://api.github.com/repos/1209433622cz-maker/sle-bcell-remodeling/releases/assets/528187279",
+      "contentType": "text/plain",
+      "createdAt": "2026-08-24T21:06:57Z",
+      "digest": "sha256:ea45ae5a2ef565e05dffc96ad952e56e14d192916d678f3ad46a5af15c3372d5",
+      "downloadCount": 0,
+      "id": "RA_kwDOT0KVWs4fe3-P",
+      "label": "",
+      "name": "SHA256SUMS_v1.0.0.txt",
+      "size": 235,
+      "state": "uploaded",
+      "updatedAt": "2026-08-24T21:06:58Z",
+      "url": "https://github.com/1209433622cz-maker/sle-bcell-remodeling/releases/download/v1.0.0/SHA256SUMS_v1.0.0.txt"
+    },
+    {
+      "apiUrl": "https://api.github.com/repos/1209433622cz-maker/sle-bcell-remodeling/releases/assets/528186717",
+      "contentType": "application/x-zip-compressed",
+      "createdAt": "2026-08-24T21:06:32Z",
+      "digest": "sha256:94fbe198a0eeaaa2d6a491ec1c10f5c4020d1d5a82985daf19799acdd73f6999",
+      "downloadCount": 1,
+      "id": "RA_kwDOT0KVWs4fe31d",
+      "label": "",
+      "name": "sle-bcell-remodeling-v1.0.0-source.zip",
+      "size": 41764089,
+      "state": "uploaded",
+      "updatedAt": "2026-08-24T21:06:57Z",
+      "url": "https://github.com/1209433622cz-maker/sle-bcell-remodeling/releases/download/v1.0.0/sle-bcell-remodeling-v1.0.0-source.zip"
+    }
+  ],
+  "body": "# SLE B-cell remodeling analysis v1.0.0\r\n\r\nThis is the author-approved reproducible release supporting the manuscript:\r\n\r\n> Disease-blind single-cell reconstruction separates unstable B-cell states from reproducible interferon remodeling in systemic lupus erythematosus\r\n\r\n## Release contents\r\n\r\n- Versioned analysis and audit code for the disease-blind single-cell workflow.\r\n- Five publication main figures and seven supplementary figures.\r\n- Machine-readable source data for all main figures.\r\n- Complete gene-level statistical results, sanitized design matrices and regulator-sensitivity outputs.\r\n- Final manuscript, supplementary information, cover letter and portal upload maps.\r\n- Environment records, machine-readable decisions and SHA-256 integrity manifests.\r\n\r\n## Scientific scope\r\n\r\nThe release supports a broad conventional-B identity scope, sample-level composition analysis, within-compartment IFN/ISG transcription, independent external validation and prespecified regulatory and perturbational evidence. The findings are observational and do not establish a discrete B-cell subtype, causal regulator, unique upstream stimulus or treatment benefit.\r\n\r\n## Persistent identifier\r\n\r\nZenodo DOI: [10.5281/zenodo.22086892](https://doi.org/10.5281/zenodo.22086892)\r\n\r\n## Licences\r\n\r\n- Original code: MIT License.\r\n- Original manuscript text, composite figures, project documentation and project-generated derived source tables: CC BY 4.0.\r\n- Third-party GEO, CELLxGENE, database and software materials are excluded and are not relicensed.\r\n\r\nSee `LICENSE`, `LICENSE_CONTENT_CC_BY_4.0.md` and `LICENSE_SCOPE.md` for the controlling scope.\r\n\r\n## Citation\r\n\r\nUse the metadata in `CITATION.cff` or cite the Zenodo DOI above.",
+  "isDraft": false,
+  "isPrerelease": false,
+  "name": "SLE B-cell remodeling analysis v1.0.0",
+  "publishedAt": "2026-08-24T21:08:02Z",
+  "tagName": "v1.0.0"
+}

@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-11T18:40:43.593788+00:00",
+  "created_at": "2026-10-11T18:54:59.025410+00:00",
   "status": "PASS_NON_DESTRUCTIVE_SUBFOLDER_ORGANIZATION",
   "source_inventory": "9_version/inventory/WORKSPACE_FILE_INVENTORY_2026-10-12.csv",
   "source_inventory_rows": 39521,
