@@ -99,7 +99,14 @@ def main() -> None:
         "releases": releases,
     }
     write_text(OUTPUT / "GITHUB_REPOSITORY_METADATA_BEFORE_DELETE.json", json.dumps(snapshot, indent=2, ensure_ascii=False))
-    write_text(OUTPUT / "REMOTE_REFS_BEFORE_DELETE.txt", run(["git", "ls-remote", "--heads", "--tags", "origin"]))
+    remote_refs_path = OUTPUT / "REMOTE_REFS_BEFORE_DELETE.txt"
+    try:
+        remote_refs = run(["git", "ls-remote", "--heads", "--tags", "origin"])
+    except subprocess.CalledProcessError:
+        if not remote_refs_path.is_file():
+            raise
+        remote_refs = remote_refs_path.read_text(encoding="utf-8")
+    write_text(remote_refs_path, remote_refs)
     write_text(OUTPUT / "LOCAL_REFS_BEFORE_DELETE.txt", run(["git", "show-ref", "--heads", "--tags"]))
 
     bundle = OUTPUT / "sle-bcell-remodeling_before_remote_recreation.bundle"
@@ -108,7 +115,12 @@ def main() -> None:
     write_text(OUTPUT / "GIT_BUNDLE_VERIFICATION.txt", bundle_verification)
 
     manifest_path = OUTPUT / "BACKUP_SHA256.csv"
-    files = sorted(path for path in OUTPUT.rglob("*") if path.is_file() and path != manifest_path)
+    status_path = OUTPUT / "BACKUP_STATUS.json"
+    files = sorted(
+        path
+        for path in OUTPUT.rglob("*")
+        if path.is_file() and path not in {manifest_path, status_path}
+    )
     rows = [
         {
             "relative_path": path.relative_to(OUTPUT).as_posix(),
@@ -135,7 +147,7 @@ def main() -> None:
         "bundle_bytes": bundle.stat().st_size,
         "manifest_files": len(rows),
     }
-    write_text(OUTPUT / "BACKUP_STATUS.json", json.dumps(status, indent=2, ensure_ascii=False))
+    write_text(status_path, json.dumps(status, indent=2, ensure_ascii=False))
     print(json.dumps(status, indent=2, ensure_ascii=False))
 
 

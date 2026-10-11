@@ -756,7 +756,7 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 ## Workspace audit
 
 The 12 October 2026 full local reaudit independently hashed and structurally
-checked 39,886 current project files (5.689 GiB), including the legacy analysis
+checked 39,886 current project files (5.691 GiB), including the legacy analysis
 tree, organized view, manuscript, figures, submission package, work records and
 the pre-recreation GitHub backup. Only `.git` internals and the audit output
 directory itself were excluded. All 39,886 files passed their applicable
