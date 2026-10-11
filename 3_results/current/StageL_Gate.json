@@ -1,0 +1,25 @@
+{
+  "automatic_unlocks": {
+    "atac_integration": false,
+    "external_outcomes": false,
+    "manuscript_external_claim": false,
+    "sra_download": false,
+    "submission": false
+  },
+  "checks": {
+    "cross_assay_sledai_discordance_preserved": true,
+    "external_outcome_execution": false,
+    "paired_sle_design_12_active_14_inactive": true,
+    "raw_count_gate": false,
+    "rna_atac_overlap_reconstructed": true,
+    "rna_pairing_43": true,
+    "rna_patient_identity_45": true,
+    "rna_sample_identity_88": true,
+    "stage_k_manifest_18_of_18": true,
+    "title_patient_anomaly_preserved": true
+  },
+  "created_at": "2026-10-11T17:09:46+08:00",
+  "decision": "PASS_STAGE_L_METADATA_IDENTITY_AND_UNIQUE_QUESTION_FREEZE__HOLD_RAW_DOWNLOAD_AND_OUTCOME_EXECUTION",
+  "next_gate": "RPV4_STAGE_M__RAW_RECONSTRUCTION_AUTHORIZATION_AND_DISEASE_BLIND_COUNT_PIPELINE_FREEZE",
+  "schema": "RPV4_STAGE_L_GATE_1.0"
+}

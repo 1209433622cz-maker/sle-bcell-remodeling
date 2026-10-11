@@ -1,0 +1,20 @@
+{
+  "WP4_unlocked": false,
+  "automatic_manuscript_or_submission_unlock": false,
+  "causal_mediation_supported": false,
+  "cell_intrinsic_effect_supported": false,
+  "ci_lower": 0.011834174910715159,
+  "ci_upper": 0.05801582938258895,
+  "decision": "PASS_STAGE_I_WRITE_ONCE_EXECUTION__POSITIVE_DELTA_PROFILE_ASSOCIATION__HOLD_AUTOMATIC_UNLOCK",
+  "estimand": "delta_profile",
+  "external_outcomes_unlocked": false,
+  "interpretation": "managed-SLE versus control association is greater under the fixed-profile measurement rule than under pooled counts; measurement-rule sensitivity only",
+  "interval_class": "positive",
+  "next_stage": "RPV4_STAGE_J__SCIENTIFIC_INTEGRATION_SCOPE_AND_AUTHOR_REVIEW",
+  "other_historical_targets_unlocked": false,
+  "point_estimate": 0.034925002146652055,
+  "schema": "RP_V4_STAGE_I_GATE_1.0",
+  "single_prespecified_test": true,
+  "standard_error_HC3": 0.011558534552475956,
+  "two_sided_p_value": 0.0036124588023115677
+}

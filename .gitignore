@@ -183,3 +183,8 @@ phase17_v7/rp_v4_redesign/**/source_metadata/
 # DOCX/PDF deliverables and compact audit records in Git.
 phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/qa/
 phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/qa_r2/
+
+# The 12 October 2026 organized release is intentionally complete in Git,
+# including its bounded supplementary-data ZIPs and the verified package ZIP.
+!6_release/
+!6_release/**

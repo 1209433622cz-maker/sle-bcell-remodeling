@@ -6,6 +6,24 @@ study of B-cell remodeling in systemic lupus erythematosus (SLE).
 
 Repository: [1209433622cz-maker/sle-bcell-remodeling](https://github.com/1209433622cz-maker/sle-bcell-remodeling)
 
+## Organized project view
+
+The 12 October 2026 audit adds a non-destructive project view while preserving
+all frozen analysis paths and hashes. Start with the
+[master index](0_admin/MASTER_INDEX.md), then use the dedicated folders for
+[data](1_data/), [code](2_code/), [results](3_results/),
+[figures](4_figures/), [manuscript](5_manuscript/),
+[release package](6_release/), [reports](7_report/),
+[archive decisions](8_archive/), [references](8_reference/) and
+[version/integrity records](9_version/).
+
+The current verified package is
+[`SLE_Bcell_Submission_Package_2026-10-12`](6_release/SLE_Bcell_Submission_Package_2026-10-12/)
+with a matching downloadable ZIP. Its state is
+`PRE_SUBMISSION_MASTER_PACKAGE__NOT_SUBMITTED`: the scientific text is the RP
+v4 Stage K limited-integration baseline, Figures 1-5 use the QiTeng
+reader-language freeze, and no Stage L/M external outcome has been inserted.
+
 ## Current status
 
 **Active state on 11 October 2026:**

@@ -1,0 +1,32 @@
+{
+  "automatic_unlocks": {
+    "atac_integration": false,
+    "count_reconstruction": false,
+    "external_outcomes": false,
+    "manuscript_external_claim": false,
+    "raw_download": false,
+    "submission": false
+  },
+  "checks": {
+    "base_and_size_totals": true,
+    "disease_blind_samplesheet": true,
+    "download_authorized": false,
+    "expression_outcome_accessed": false,
+    "external_outcome_fitted": false,
+    "library_identity_88": true,
+    "pipeline_version_frozen": true,
+    "raw_download_started": false,
+    "reference_annotation_frozen": true,
+    "run_identity_176": true,
+    "runinfo_sha256": true,
+    "runtime_qualified": false,
+    "small_sample_simulation": true,
+    "stage_l_integrity": true,
+    "storage_qualified": false,
+    "two_runs_per_library": true
+  },
+  "created_at": "2026-10-11T18:02:34+08:00",
+  "decision": "PASS_STAGE_M_DISEASE_BLIND_PIPELINE_AND_SIMULATION_FREEZE__HOLD_RUNTIME_STORAGE_AND_DOWNLOAD_AUTHORIZATION",
+  "next_gate": "RPV4_STAGE_N__QUALIFIED_RUNTIME_STORAGE_AND_WRITE_ONCE_RAW_RECONSTRUCTION",
+  "schema": "RPV4_STAGE_M_GATE_1.0"
+}

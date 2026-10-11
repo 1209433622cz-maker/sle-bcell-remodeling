@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-10-11T17:18:16+08:00",
+  "decision": "PASS_STAGE_K_LIMITED_SOURCE_INTEGRATION__HOLD_SUBMISSION_AND_EXTERNAL_OUTCOMES",
+  "stage_i_rerun": false,
+  "same_donors_same_estimand": true,
+  "independent_replication_claim_authorized": false,
+  "manuscript_methods_added": true,
+  "manuscript_discussion_added": true,
+  "supplementary_table_s10_added": true,
+  "source_data_rows_added": 2,
+  "main_figure_changes": 0,
+  "supplementary_figure_changes": 0,
+  "submission_unlocked": false,
+  "external_outcomes_unlocked": false,
+  "release_or_zenodo_change": false,
+  "next_gate": "RPV4_STAGE_L__EXTERNAL_COHORT_UNIQUE_QUESTION_AND_RAW_COUNT_GATE"
+}

@@ -1,0 +1,33 @@
+{
+  "authorization_sha256": "9d8a74cda21f6a72cce91660abd3c8bbb6d13274d235aff98a58b62179a109ae",
+  "automatic_manuscript_or_submission_unlock": false,
+  "binding_git_commit": "b413ce09fae520eef0a7a781ee71ddece7606be0",
+  "ci_lower": 0.011834174910715159,
+  "ci_upper": 0.05801582938258895,
+  "controls": 31,
+  "critical_value": 1.9977296543176926,
+  "df": 64,
+  "estimand": "delta_profile",
+  "execution_script_sha256": "bfaec257573be85c972edb72bb29f441a2e4fcd681402ee59d1528c43f91071d",
+  "external_outcomes_fitted": false,
+  "input_binding_manifest_sha256": "38174638ebcd927276e8d845a1a27041cf17017cd8088cfd6eb5401d66e213f0",
+  "managed_SLE": 37,
+  "max_point_leverage": 0.10456714629326525,
+  "method": "direct donor-level OLS delta_profile; HC3 influence variance; two-sided t(64) interval",
+  "n_donors": 68,
+  "other_historical_targets_fitted": false,
+  "point_estimate": 0.034925002146652055,
+  "runtime": {
+    "numpy": "2.3.3",
+    "python_executable": "D:\\bioinfor\\python.exe",
+    "python_executable_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+    "python_version": "3.13.7",
+    "scipy": "1.16.2",
+    "statsmodels": "0.14.6"
+  },
+  "schema": "RP_V4_STAGE_I_SINGLE_REAL_DELTA_PROFILE_RESULT_1.0",
+  "scientific_interpretation": "association difference between fixed-profile and pooled-count measurement rules; not causal mediation or a cell-intrinsic disease effect",
+  "standard_error_HC3": 0.011558534552475956,
+  "test_statistic": 3.0215769990643633,
+  "two_sided_p_value": 0.0036124588023115677
+}

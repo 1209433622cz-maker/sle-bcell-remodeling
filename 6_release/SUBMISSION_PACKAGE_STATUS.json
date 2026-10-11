@@ -1,0 +1,14 @@
+{
+  "created_on": "2026-10-12",
+  "external_outcome_included": false,
+  "figure_baseline": "QiTeng 2026-09-29 reader-language freeze",
+  "package_directory": "6_release/SLE_Bcell_Submission_Package_2026-10-12",
+  "package_files_excluding_manifest": 40,
+  "schema": "SLE_BCELL_SUBMISSION_MASTER_PACKAGE_1.0",
+  "scientific_text_baseline": "RPv4 Stage K limited integration",
+  "status": "PRE_SUBMISSION_MASTER_PACKAGE__NOT_SUBMITTED",
+  "submitted": false,
+  "zip": "6_release/SLE_Bcell_Submission_Package_2026-10-12.zip",
+  "zip_bytes": 20091489,
+  "zip_sha256": "510286f49e71d59ff87486111e786db2b360f1fb77ea79650edadea87ee85eba"
+}

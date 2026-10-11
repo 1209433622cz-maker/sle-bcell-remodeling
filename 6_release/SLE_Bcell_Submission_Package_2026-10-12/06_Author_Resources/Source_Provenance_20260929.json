@@ -1,0 +1,179 @@
+[
+  {
+    "package_path": "Manuscript/Manuscript.docx",
+    "source_path": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/documents/Manuscript_Scientific_Presentation_Freeze.docx",
+    "sha256": "82031AA9ACEE5DF50E5135C94AD066423F3C345234D55BEF55F23372E5255418",
+    "parent_sha256": "18982775B6AADD45DC70B37113F08FBAD6282714495652C31BD319562507E854",
+    "revision_date": "2026-09-29",
+    "revision_note": "QiTeng v0.3.24.2 guarded scientific-writing refinement; parent scientific content preserved, terminology/definitions and reader-facing legends refined.",
+    "derived_via": "QiTeng_Academic_Writing_Skill_v0.3.24.2 guarded refinement"
+  },
+  {
+    "package_path": "Supplementary_Information/Supplementary_Information.docx",
+    "source_path": "phase17_v7/npj_sba_qiteng_round3/20260929_reader_language_hard_negative/candidate/SLE_Bcell_Submission_Package/Supplementary_Information/Supplementary_Information.docx",
+    "sha256": "1B59B86FA65A8AD7F7AE7164D283FAAD32B4E2D4A6CEDCABB72D4AD7A3C577F0",
+    "parent_sha256": "57DEDF3D91E13994537A1B775B8405A7D12CCA14F4A0975DE770066CA2BFC716",
+    "revision_note": "Rebuilt from canonical Markdown with reader-facing terminology, retained S7 readability layout and source-redrawn S10.",
+    "revision_date": "2026-09-29",
+    "derived_via": "QiTeng Academic Writing Skill v0.3.24.2 reader-language and hard-negative gate"
+  },
+  {
+    "package_path": "Manuscript/Manuscript.pdf",
+    "source_path": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/documents/Manuscript_Scientific_Presentation_Freeze.pdf",
+    "sha256": "5E19BEC79115A0E57C7CC3BAB5323446907FE239B2756BE7574A0858671B1638",
+    "parent_sha256": "5936E699167148357E38526DE87B8E20DBEA69181FE5854D67F8E2F64D6E61AE",
+    "revision_date": "2026-09-29",
+    "revision_note": "Rendered from the revised Manuscript.docx after full-page visual QA; 31 pages.",
+    "derived_via": "QiTeng_Academic_Writing_Skill_v0.3.24.2 guarded refinement"
+  },
+  {
+    "package_path": "Supplementary_Information/Supplementary_Information.pdf",
+    "source_path": "phase17_v7/npj_sba_qiteng_round3/20260929_reader_language_hard_negative/candidate/SLE_Bcell_Submission_Package/Supplementary_Information/Supplementary_Information.pdf",
+    "sha256": "57173D9F6AED516E377FB49C34BF088E876347997CC8D809BED7E3271F8B6400",
+    "parent_sha256": "E6747F721617560576A44DAE02C9DB4ECE75939D6672237502A70A2F43A08A9D",
+    "revision_note": "WPS export of the rebuilt Supplementary Information; 15 pages and cross-render checked with LibreOffice.",
+    "revision_date": "2026-09-29",
+    "derived_via": "QiTeng Academic Writing Skill v0.3.24.2 reader-language and hard-negative gate"
+  },
+  {
+    "package_path": "Figures/Figure_1.pdf",
+    "source_path": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/figures/figures/Figure1_disease_blind_identity_scope.pdf",
+    "sha256": "E81D2167F09B91FAF6FBA388D645EC002674721EF0139C498045B7AA96998397"
+  },
+  {
+    "package_path": "Figures/Figure_2.pdf",
+    "source_path": "phase17_v7/npj_sba_qiteng_round3/20260929_reader_language_hard_negative/artwork/figures/Figure2_sample_level_composition.pdf",
+    "sha256": "A28C23E1AC139D568818040CBCBC949C9E1A386E9BCF84C0D5E6F591199D7C3A",
+    "parent_sha256": "6103EA12DB456078C770E84518A2EC277A1B23FCDA6D48180B74E47A351A73D2",
+    "revision_note": "Source-level reader-language rebuild: 'Primary >=50'; scientific source data are byte-identical to the parent package.",
+    "revision_date": "2026-09-29",
+    "derived_via": "QiTeng Academic Writing Skill v0.3.24.2 reader-language and hard-negative gate"
+  },
+  {
+    "package_path": "Figures/Figure_3.pdf",
+    "source_path": "phase17_v7/npj_sba_qiteng_round3/20260929_reader_language_hard_negative/artwork/figures/Figure3_gse174188_bconv_transcription.pdf",
+    "sha256": "64962FF28617E39F4A64DD98E3775B64D2894E9EF429DB42159C32E40A1D5537",
+    "parent_sha256": "792C5048178B91A7AAC2D4D2CD08AB070FB19C231D625A0B2A3156ABDCE19B8C",
+    "revision_note": "Source-level reader-language rebuild: prespecified-program terminology; scientific source data are byte-identical to the parent package.",
+    "revision_date": "2026-09-29",
+    "derived_via": "QiTeng Academic Writing Skill v0.3.24.2 reader-language and hard-negative gate"
+  },
+  {
+    "package_path": "Figures/Figure_4.pdf",
+    "source_path": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/figures/figures/Figure4_independent_ifn_replication.pdf",
+    "sha256": "B1120AA60E9B03FBE835E9979F0449F67B483B792C9339737CB0CD40C5A2B75F"
+  },
+  {
+    "package_path": "Figures/Figure_5.pdf",
+    "source_path": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/figures/figures/Figure5_regulatory_evidence.pdf",
+    "sha256": "287E6A792E5CD7AE656258301BD406FEEFF4F0D75F160BC6A0F7168BDB97943A"
+  },
+  {
+    "package_path": "Author_Resources/Supplementary_Figures/Supplementary_Figure_S1.pdf",
+    "source_path": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/figures/figures/Supplementary_Figure_S1_source_integrity_qc.pdf",
+    "sha256": "F458B1BD2E807D139A01821C031D7496F3CCE0719BBFE3A4BF9BC7A8B4E8B6AC"
+  },
+  {
+    "package_path": "Author_Resources/Supplementary_Figures/Supplementary_Figure_S2.pdf",
+    "source_path": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/figures/figures/Supplementary_Figure_S2_representation_diagnostics.pdf",
+    "sha256": "FF640D1A27AB108D1E1D7B2363EC45DE3BCA7D16CBEDE366353E79B744A8FB86"
+  },
+  {
+    "package_path": "Author_Resources/Supplementary_Figures/Supplementary_Figure_S3.pdf",
+    "source_path": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/figures/figures/Supplementary_Figure_S3_fine_state_failure_transition_structure.pdf",
+    "sha256": "ECB80FF10A95FFEE71F86A5D940EADA465D523143AA5EE9216BB41CA1C885934"
+  },
+  {
+    "package_path": "Author_Resources/Supplementary_Figures/Supplementary_Figure_S4.pdf",
+    "source_path": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/figures/figures/Supplementary_Figure_S4_identity_boundary_and_propagation.pdf",
+    "sha256": "A6CF24AEF64220251A2B97EE35446875CEFD5C7AD59F985231E78D7FCD2DB1EC"
+  },
+  {
+    "package_path": "Author_Resources/Supplementary_Figures/Supplementary_Figure_S5.pdf",
+    "source_path": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/figures/figures/Supplementary_Figure_S5_composition_diagnostics.pdf",
+    "sha256": "92E4F1667D9B7915A7F98393A4C0168B80D9EA1054E8024B4DC14A0B1638C1F2"
+  },
+  {
+    "package_path": "Author_Resources/Supplementary_Figures/Supplementary_Figure_S6.pdf",
+    "source_path": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/figures/figures/Supplementary_Figure_S6_pseudobulk_ranked_list_diagnostics.pdf",
+    "sha256": "AA2A6F9D0BCD49B4B26D311C479AA74E39BCCC5D7830447DB3026ACF79C5F0CF"
+  },
+  {
+    "package_path": "Author_Resources/Supplementary_Figures/Supplementary_Figure_S7.pdf",
+    "source_path": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/figures/figures/Supplementary_Figure_S7_replication_robustness_diagnostics.pdf",
+    "sha256": "F76A84E04A56669FB48A06CBAEC415646EB12C56547069485E8D5DB3AA2A5027"
+  },
+  {
+    "package_path": "Author_Resources/Supplementary_Figures/Supplementary_Figure_S8.pdf",
+    "source_path": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/figures/figures/Supplementary_Figure_S8_reference_calibration_boundary.pdf",
+    "sha256": "7659A5793827941D5A8AA0F97969A90E1DDA789D8F4A2641AF0409557F019F96"
+  },
+  {
+    "package_path": "Author_Resources/Supplementary_Figures/Supplementary_Figure_S9.pdf",
+    "source_path": "phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/20260908_final_cross_document/figures/figures/Supplementary_Figure_S9_regulator_correlation_sensitivity.pdf",
+    "sha256": "3DCE41FF9A20F17D5D4071E8C6FAC7E32BC0F63272F19646EFE1046612C76417"
+  },
+  {
+    "package_path": "Author_Resources/Supplementary_Figures/Supplementary_Figure_S10.pdf",
+    "source_path": "phase17_v7/npj_sba_qiteng_round3/20260929_reader_language_hard_negative/artwork/supplementary_figures/Supplementary_Figure_S10_overlap_depletion.pdf",
+    "sha256": "97951C70A175A8C2CB9797C44009C937CF7AE3D0B3F360EFC50B68B61A9F6A6C",
+    "parent_sha256": "2566E12D7F819E105506653173D43DBB0921F4D5C63EDE0C9D98099A76D3B75D",
+    "revision_note": "Source-level terminology rebuild only; 36-row depletion source data are byte-identical to the frozen archive.",
+    "revision_date": "2026-09-29",
+    "derived_via": "QiTeng Academic Writing Skill v0.3.24.2 reader-language and hard-negative gate"
+  },
+  {
+    "package_path": "Supplementary_Data/Supplementary_Data_2_Regulator_Sensitivity.zip",
+    "source_path": "04_submission/current_submission_package/SLE_Bcell_Submission_Package/05_Source_Data/Regulator_Sensitivity.zip",
+    "sha256": "C1F40EB90D344A150D61DE472C9F6B37FA9470CDD2CD0BBC45988D18B8CEA7F8"
+  },
+  {
+    "package_path": "Supplementary_Data/Supplementary_Data_3_Full_Statistical_Results.zip",
+    "source_path": "04_submission/current_submission_package/SLE_Bcell_Submission_Package/05_Source_Data/Full_Statistical_Results.zip",
+    "sha256": "A3E1F5328BBF8A84C55FF075FD15D50DDB4AF7CA65ED700DE3C7820D1664314D"
+  },
+  {
+    "package_path": "Cover_Letter/Cover_Letter.docx",
+    "source_path": "QiTeng_Round2_2026-09-29/Cover_Letter/Cover_Letter.docx",
+    "sha256": "93FD66493EF647A982CAB6FF2C22D473A814753A6741A6398F54647F2816001D",
+    "revision_date": "2026-09-29",
+    "revision_note": "Journal-specific cover letter reframed around the reproducibility hierarchy and explicit evidential ceilings."
+  },
+  {
+    "package_path": "Cover_Letter/Cover_Letter.pdf",
+    "source_path": "QiTeng_Round2_2026-09-29/Cover_Letter/Cover_Letter.pdf",
+    "sha256": "14A2551984A35DE375095EC2CD85563AD89B674F7F2397948EDEF7A4967570D9",
+    "revision_date": "2026-09-29",
+    "revision_note": "Rendered from the revised cover-letter DOCX."
+  },
+  {
+    "package_path": "Author_Resources/Authors_and_Declarations.docx",
+    "source_path": "QiTeng_Round2_2026-09-29/Author_Resources/Authors_and_Declarations.docx",
+    "sha256": "23C317D3A5BDB5D635CEB473F0B75F2A3085CEF786866CAAE50A6FADEB3FFBC6",
+    "revision_date": "2026-09-29",
+    "revision_note": "Declarations synchronized with manuscript AI-assistance scope and author accountability wording."
+  },
+  {
+    "package_path": "Author_Resources/Authors_and_Declarations.pdf",
+    "source_path": "QiTeng_Round2_2026-09-29/Author_Resources/Authors_and_Declarations.pdf",
+    "sha256": "16D59E846CD693A0612D584EEEA7A49D8D682DED9D89382E0FCAA35F6F064B50",
+    "revision_date": "2026-09-29",
+    "revision_note": "Rendered from the revised declarations DOCX."
+  },
+  {
+    "package_path": "Author_Resources/Reporting_Information.md",
+    "source_path": "QiTeng_Round2_2026-09-29/Author_Resources/Reporting_Information.md",
+    "sha256": "695223B4E71C94B24F36BBC3FD239CA08BA768478CAD0F231E027FCCC0D0BE64",
+    "revision_date": "2026-09-29",
+    "revision_note": "Reporting text synchronized with the secondary-analysis design and AI disclosure."
+  },
+  {
+    "package_path": "Author_Resources/Manuscript_With_Figures.pdf",
+    "source_path": "assembled from current Manuscript/Manuscript.pdf and Figures/Figure_1.pdf through Figure_5.pdf",
+    "sha256": "163C9154201056EE08D5E625823B93450E9EFE4B8BDD73D39C3C18F048410171",
+    "revision_date": "2026-09-29",
+    "revision_note": "Reviewer convenience PDF rebuilt from the current 31-page manuscript and five current one-page main figures.",
+    "parent_sha256": "F153095823E1B858C8BD6976293637F7542C5080C32D169692FA13FCFD917C52",
+    "derived_via": "QiTeng Academic Writing Skill v0.3.24.2 reader-language and hard-negative gate"
+  }
+]

@@ -1,0 +1,66 @@
+panel,series,category,estimate,ci_low,ci_high,p_value,q_value,n_or_targets,evidence_owner,branch,contrast,regulator,matched_targets_before,removed_targets,matched_targets_after,target_retention_fraction,baseline_ulm_slope,attenuation_ratio_vs_baseline,ci_excludes_zero
+B,regulator_activity,gse174188_primary|STAT1,1.2853227600953685,0.9603788749738308,1.610266645216906,1.0912993950800102e-14,6.547796370480064e-14,98,Figure 5b,,,,,,,,,,
+B,regulator_activity,gse174188_primary|STAT2,2.182323743129181,1.325600862826093,3.0390466234322693,6.143418325317636e-07,1.8430254975952908e-06,14,Figure 5b,,,,,,,,,,
+B,regulator_activity,gse174188_primary|IRF7,1.2109287565006193,-0.2247760423956057,2.6466335553968445,0.098287520926619,0.1474312813899285,5,Figure 5b,,,,,,,,,,
+B,regulator_activity,gse174188_primary|IRF9,3.446381839465805,2.236607497628673,4.656156181302936,2.476860260199373e-08,8.492092320683567e-08,7,Figure 5b,,,,,,,,,,
+C,regulator_activity,gse174188_primary|E2F1,0.0843664661298491,-0.269486698228625,0.4382196304883234,0.640217317741058,0.6984188920811542,83,Figure 5c,,,,,,,,,,
+C,regulator_activity,gse174188_primary|FOXM1,-0.132697622837725,-0.9358845375547932,0.6704892918793431,0.7460275049715046,0.7784634834485267,16,Figure 5c,,,,,,,,,,
+C,regulator_activity,gse174188_primary|MYC,-0.3555316596463829,-0.5391622524115026,-0.1719010668812633,0.0001491580671746,0.0003254357829265,317,Figure 5c,,,,,,,,,,
+C,regulator_activity,gse174188_primary|MYBL2,-0.1254292182379653,-1.2611856072936862,1.0103271708177557,0.8285991469525991,0.8285991469525991,8,Figure 5c,,,,,,,,,,
+B,regulator_activity,gse174188_internal_nonoverlap|STAT1,1.0905000927531063,0.8426463925489134,1.3383537929572993,8.074312172520138e-18,6.45944973801611e-17,129,Figure 5b,,,,,,,,,,
+B,regulator_activity,gse174188_internal_nonoverlap|STAT2,2.9618546143648667,2.321101625258525,3.602607603471208,1.7028231779037046e-19,2.0433878134844454e-18,19,Figure 5b,,,,,,,,,,
+B,regulator_activity,gse174188_internal_nonoverlap|IRF7,2.196592154220724,0.941394399344812,3.451789909096636,0.0006062259859119,0.0012124519718238,5,Figure 5b,,,,,,,,,,
+B,regulator_activity,gse174188_internal_nonoverlap|IRF9,2.6863533076648323,1.8006107926064092,3.572095822723256,2.9088745387023286e-09,1.1635498154809313e-08,10,Figure 5b,,,,,,,,,,
+C,regulator_activity,gse174188_internal_nonoverlap|E2F1,0.147988766981057,-0.1222451708788351,0.4182227048409492,0.2830657137749098,0.3774209516998798,109,Figure 5c,,,,,,,,,,
+C,regulator_activity,gse174188_internal_nonoverlap|FOXM1,-0.3834709118626436,-0.9697137909448016,0.2027719672195143,0.1997865320120059,0.2820515746051848,23,Figure 5c,,,,,,,,,,
+C,regulator_activity,gse174188_internal_nonoverlap|MYC,-0.2253662146384061,-0.3694934502107305,-0.0812389790660817,0.0021838384141296,0.0037437229956509,393,Figure 5c,,,,,,,,,,
+C,regulator_activity,gse174188_internal_nonoverlap|MYBL2,-0.7760912802957612,-1.5873354759491742,0.0351529153576518,0.0607845031424468,0.0972552050279149,12,Figure 5c,,,,,,,,,,
+B,regulator_activity,gse135779_childhood|STAT1,1.1380140564628496,0.9127219837512872,1.363306129174412,5.452692050218495e-23,1.3086460920524386e-21,161,Figure 5b,,,,,,,,,,
+B,regulator_activity,gse135779_childhood|STAT2,2.4001804460700447,1.7631449275384132,3.037215964601676,1.660736696766168e-13,7.971536144477607e-13,20,Figure 5b,,,,,,,,,,
+B,regulator_activity,gse135779_childhood|IRF7,1.8489521217533444,0.7702513321693409,2.927652911337348,0.0007829663275844,0.0014454762970789,7,Figure 5b,,,,,,,,,,
+B,regulator_activity,gse135779_childhood|IRF9,2.1617992056979647,1.2598990231050349,3.0636993882908943,2.6610202906104966e-06,7.096054108294657e-06,10,Figure 5b,,,,,,,,,,
+C,regulator_activity,gse135779_childhood|E2F1,-0.0753920364830301,-0.3095490646824216,0.1587649917163613,0.5279634082522323,0.6220333592567167,150,Figure 5c,,,,,,,,,,
+C,regulator_activity,gse135779_childhood|FOXM1,0.173370719617974,-0.3870853686823202,0.7338268079182683,0.544279189349627,0.6220333592567167,26,Figure 5c,,,,,,,,,,
+C,regulator_activity,gse135779_childhood|MYC,-0.2584789674525961,-0.3919742987394374,-0.1249836361657548,0.0001483725376623,0.0003254357829265,470,Figure 5c,,,,,,,,,,
+C,regulator_activity,gse135779_childhood|MYBL2,-0.2795662585493987,-1.0431239996265336,0.4839914825277361,0.4729517835949494,0.5974127792778308,14,Figure 5c,,,,,,,,,,
+A,MSigDB_M5911_NES,gse174188_primary,3.186802649601297,,,0.0001680107526881,0.0001724137931034,54,Figure 5a evidence summary; Supplementary Table S3 quantitative detail,,,,,,,,,,
+A,MSigDB_M5911_NES,gse174188_internal_nonoverlap,3.049861281625484,,,0.0001497902935889,0.0001724137931034,68,Figure 5a evidence summary; Supplementary Table S3 quantitative detail,,,,,,,,,,
+A,MSigDB_M5911_NES,gse135779_childhood,3.5271419267951707,,,0.0001724137931034,0.0001724137931034,81,Figure 5a evidence summary; Supplementary Table S3 quantitative detail,,,,,,,,,,
+E,GSE23307_mean_paired_log2p1_effect,HI1,3.293570512080079,,,not_calculated_n_equals_2,,12,Figure 5e,,,,,,,,,,
+E,GSE23307_mean_paired_log2p1_effect,HI2,3.665668905432541,,,not_calculated_n_equals_2,,12,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI1|ISG15,4.647006250467168,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI1|IFIT1,5.149329737034242,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI1|IFIT2,4.958605163044293,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI1|IFIT3,5.813213412292564,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI1|MX1,2.3200153050600303,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI1|MX2,2.003883222052468,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI1|OAS1,2.633118348247864,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI1|OAS2,2.821185916681798,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI1|IFI44L,4.0106406658083245,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI1|IFI6,1.2152333277020873,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI1|LY6E,1.809206982763968,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI1|IRF7,2.141407813806146,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI2|ISG15,5.234677349067114,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI2|IFIT1,5.091644216655895,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI2|IFIT2,5.420716334074259,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI2|IFIT3,5.5198302375369455,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI2|MX1,2.157411699135409,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI2|MX2,2.748889290151161,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI2|OAS1,2.937644524914039,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI2|OAS2,2.7566595647451457,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI2|IFI44L,4.0317079880409175,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI2|IFI6,3.8659302285331183,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI2|LY6E,2.6029712849443083,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+E,GSE23307_paired_gene_log2p1_effect,HI2|IRF7,1.6199441473921858,,,not_calculated_n_equals_2,,1,Figure 5e,,,,,,,,,,
+D,ULM_IFN_overlap_depletion,gse174188_primary|STAT1|frozen_ifn12_depleted,0.962658859300595,0.626437718349468,1.29888000025172,2.10730680657423e-08,3.16096020986134e-08,92,Figure 5d ULM summary; Supplementary Fig. S10 and Table S4b full audit,frozen_ifn12_depleted,gse174188_primary,STAT1,98.0,6.0,92.0,0.938775510204082,1.28532276009537,0.748962742423676,True
+D,ULM_IFN_overlap_depletion,gse174188_primary|STAT1|m5911_depleted,0.418210996980237,0.0502208941397627,0.786201099820711,0.025926843784868,0.0311122125418416,77,Figure 5d ULM summary; Supplementary Fig. S10 and Table S4b full audit,m5911_depleted,gse174188_primary,STAT1,98.0,21.0,77.0,0.785714285714286,1.28532276009537,0.325374302832081,True
+D,ULM_IFN_overlap_depletion,gse174188_primary|STAT2|frozen_ifn12_depleted,1.1672481760262,0.198949511598964,2.13554684045344,0.0181555187440453,0.0181555187440453,11,Figure 5d ULM summary; Supplementary Fig. S10 and Table S4b full audit,frozen_ifn12_depleted,gse174188_primary,STAT2,14.0,3.0,11.0,0.785714285714286,2.18232374312918,0.534864810824315,True
+D,ULM_IFN_overlap_depletion,gse174188_primary|STAT2|m5911_depleted,0.390657714569951,-0.745046177194798,1.5263616063347,0.500111148687377,0.500111148687377,8,Figure 5d ULM summary; Supplementary Fig. S10 and Table S4b full audit,m5911_depleted,gse174188_primary,STAT2,14.0,6.0,8.0,0.571428571428571,2.18232374312918,0.179009973107747,False
+D,ULM_IFN_overlap_depletion,gse174188_internal_nonoverlap|STAT1|frozen_ifn12_depleted,0.864025489644753,0.608675922210408,1.1193750570791,3.56755152298926e-11,7.13510304597852e-11,122,Figure 5d ULM summary; Supplementary Fig. S10 and Table S4b full audit,frozen_ifn12_depleted,gse174188_internal_nonoverlap,STAT1,129.0,7.0,122.0,0.945736434108527,1.09050009275311,0.792320418298554,True
+D,ULM_IFN_overlap_depletion,gse174188_internal_nonoverlap|STAT1|m5911_depleted,0.542175592139553,0.265356061214947,0.818995123064158,0.0001245241343911,0.0001867862015867,104,Figure 5d ULM summary; Supplementary Fig. S10 and Table S4b full audit,m5911_depleted,gse174188_internal_nonoverlap,STAT1,129.0,25.0,104.0,0.806201550387597,1.09050009275311,0.497180693282438,True
+D,ULM_IFN_overlap_depletion,gse174188_internal_nonoverlap|STAT2|frozen_ifn12_depleted,2.60060974790123,1.87779820743375,3.32342128836871,1.9430482024878e-12,5.829144607463399e-12,15,Figure 5d ULM summary; Supplementary Fig. S10 and Table S4b full audit,frozen_ifn12_depleted,gse174188_internal_nonoverlap,STAT2,19.0,4.0,15.0,0.789473684210526,2.96185461436487,0.878034234120873,True
+D,ULM_IFN_overlap_depletion,gse174188_internal_nonoverlap|STAT2|m5911_depleted,2.49578968891926,1.68698815834744,3.30459121949109,1.54200861654954e-09,9.25205169929726e-09,12,Figure 5d ULM summary; Supplementary Fig. S10 and Table S4b full audit,m5911_depleted,gse174188_internal_nonoverlap,STAT2,19.0,7.0,12.0,0.631578947368421,2.96185461436487,0.842644225957207,True
+D,ULM_IFN_overlap_depletion,gse135779_childhood|STAT1|frozen_ifn12_depleted,0.952494192417521,0.721049801469641,1.1839385833654,8.17325021991151e-16,4.9039501319469e-15,153,Figure 5d ULM summary; Supplementary Fig. S10 and Table S4b full audit,frozen_ifn12_depleted,gse135779_childhood,STAT1,161.0,8.0,153.0,0.950310559006211,1.13801405646285,0.836979285983551,True
+D,ULM_IFN_overlap_depletion,gse135779_childhood|STAT1|m5911_depleted,0.703584090746525,0.457859743201573,0.949308438291478,2.05384729311444e-08,6.16154187934332e-08,136,Figure 5d ULM summary; Supplementary Fig. S10 and Table S4b full audit,m5911_depleted,gse135779_childhood,STAT1,161.0,25.0,136.0,0.84472049689441,1.13801405646285,0.618256063491333,True
+D,ULM_IFN_overlap_depletion,gse135779_childhood|STAT2|frozen_ifn12_depleted,1.91206497643788,1.19887829151599,2.62525166135976,1.51265421272444e-07,1.81518505526932e-07,16,Figure 5d ULM summary; Supplementary Fig. S10 and Table S4b full audit,frozen_ifn12_depleted,gse135779_childhood,STAT2,20.0,4.0,16.0,0.8,2.40018044607004,0.796633844579733,True
+D,ULM_IFN_overlap_depletion,gse135779_childhood|STAT2|m5911_depleted,1.64779576047695,0.856215255866363,2.43937626508755,4.53421777946175e-05,9.0684355589235e-05,13,Figure 5d ULM summary; Supplementary Fig. S10 and Table S4b full audit,m5911_depleted,gse135779_childhood,STAT2,20.0,7.0,13.0,0.65,2.40018044607004,0.686529949518998,True

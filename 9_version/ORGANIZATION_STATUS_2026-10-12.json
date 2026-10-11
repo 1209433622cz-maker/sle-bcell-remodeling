@@ -1,0 +1,32 @@
+{
+  "baseline_bytes": 5403475540,
+  "baseline_files": 39521,
+  "content_fail": 0,
+  "content_hold": 0,
+  "content_pass": 39521,
+  "created_on": "2026-10-12",
+  "decision": "PASS_NONDESTRUCTIVE_ORGANIZED_VIEW__REVIEW_RECORDED_CONTENT_EXCEPTIONS",
+  "duplicate_groups": 14256,
+  "ignored_local_files": 35126,
+  "legacy_paths_deleted": 0,
+  "legacy_paths_moved": 0,
+  "organized_directories": [
+    "0_admin",
+    "1_data",
+    "2_code",
+    "3_results",
+    "4_figures",
+    "5_manuscript",
+    "6_release",
+    "7_report",
+    "8_archive",
+    "8_reference",
+    "9_version"
+  ],
+  "schema": "SLE_BCELL_FULL_WORKSPACE_ORGANIZATION_1.0",
+  "submission_package_zip": "6_release/SLE_Bcell_Submission_Package_2026-10-12.zip",
+  "submission_package_zip_sha256": "510286f49e71d59ff87486111e786db2b360f1fb77ea79650edadea87ee85eba",
+  "tracked_files": 4395,
+  "untracked_files": 0,
+  "visual_assets": 4123
+}
