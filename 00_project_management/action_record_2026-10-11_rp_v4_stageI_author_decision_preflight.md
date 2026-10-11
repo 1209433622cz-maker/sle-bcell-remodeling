@@ -1,8 +1,11 @@
 # RP v4 Stage I author-decision preflight action record
 
-**Date:** 2026-10-11  
-**Scope:** post-Stage-H exact-baseline verification and unsigned two-author decision packet  
-**Scientific effect status:** not loaded, not constructed and not fitted  
+**Date:** 2026-10-11
+
+**Scope:** post-Stage-H exact-baseline verification and unsigned two-author decision packet
+
+**Scientific effect status:** not loaded, not constructed and not fitted
+
 **Decision:** `READY_FOR_EXPLICIT_TWO_AUTHOR_DECISION__STAGE_I_NOT_AUTHORIZED`
 
 ## Purpose
