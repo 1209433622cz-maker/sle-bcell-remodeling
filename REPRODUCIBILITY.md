@@ -50,6 +50,10 @@ Completed active gates:
   not construct a real response or fit a disease coefficient. A separate
   two-author exact-code GO remains mandatory before the single write-once
   `delta_profile` execution.
+- RP v4 Stage I author preflight: rechecks the clean synchronized branch, Stage
+  H integrity, exact input/code hashes and the qualified Windows runtime; emits
+  only an unsigned local decision packet; and proves that the real runner rejects
+  it before response construction. Stage I remains unauthorized.
 
 - Stage 0: recovered and hashed 21/21 inputs; registered units, chronology,
   estimands, branches and open parameters.
@@ -141,6 +145,11 @@ powershell -ExecutionPolicy Bypass `
   -File .\audit_tools\run_rp_v4_stageH_preflight.ps1 `
   -Python D:\bioinfor\python.exe `
   -Output .\phase17_v7\rp_v4_redesign\stageH_reproduction
+
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_rp_v4_stageI_author_preflight.ps1 `
+  -Python D:\bioinfor\python.exe `
+  -Output .\phase17_v7\rp_v4_redesign\_software_tests\stageI_author_decision_packet
 ```
 
 The raw full-G2 and full-G2B runs are intentionally Git-ignored. The canonical
@@ -152,10 +161,11 @@ manifest. The validated local runtime was `D:\bioinfor\python.exe` (Python
 3.13.7, NumPy 2.3.3). No real WP2 response was loaded or fitted.
 
 The active next gate is
-`RPV4_STAGE_H__REAL_DATA_APPLICABILITY_AND_EFFECT_BLIND_PREFLIGHT`. Real WP2
-effects, external outcomes, large SRA download, WP4, manuscript replacement,
-submission package, GitHub Release and Zenodo remain unauthorized. See
-`phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/` and
+`RPV4_STAGE_I__EXPLICIT_TWO_AUTHOR_GO_OR_CLOSE_REAL_EXECUTION`. Real WP2
+execution remains locked until both named authors approve the exact post-Stage-H
+six-condition form. External outcomes, large SRA download, WP4, manuscript
+replacement, submission package, GitHub Release and Zenodo remain unauthorized.
+See `phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/` and
 `00_project_management/RP_V4_REDESIGN_STATUS.md`.
 
 ## Current correction status

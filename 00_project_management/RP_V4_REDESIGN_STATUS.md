@@ -6,7 +6,7 @@
 
 **Submission state:** `HOLD`
 
-**Current gate:** `PASS_STAGE_H_EFFECT_BLIND_APPLICABILITY__HOLD_STAGE_I_AUTHOR_SIGNOFF`
+**Current gate:** `READY_FOR_EXPLICIT_TWO_AUTHOR_DECISION__STAGE_I_NOT_AUTHORIZED`
 
 ## Scope
 
@@ -337,6 +337,22 @@ coefficient.
 Stage H decision:
 `PASS_STAGE_H_EFFECT_BLIND_APPLICABILITY__HOLD_STAGE_I_AUTHOR_SIGNOFF`.
 
+## Stage I author-decision preflight prepared
+
+The project now has a separate effect-firewalled preflight for the post-Stage-H
+author decision. It requires a clean synchronized `main`, rechecks the complete
+Stage H integrity manifest, exact input and execution-code hashes, and the Stage
+F2 qualified Windows runtime. It writes only an unsigned, commit-bound local
+decision packet under the ignored `_software_tests` tree.
+
+The unsigned draft is actively passed to the real Stage I runner and must fail
+before response construction and before a result directory is created. A
+general instruction to continue is not substituted for explicit approval by
+both Zhi Chen and Teng Qi. No real response or coefficient has been accessed.
+
+Current decision:
+`READY_FOR_EXPLICIT_TWO_AUTHOR_DECISION__STAGE_I_NOT_AUTHORIZED`.
+
 ## Current authorization
 
 Allowed:
@@ -360,7 +376,7 @@ Not allowed:
 
 ## Next gate
 
-`RPV4_STAGE_I__AUTHOR_SIGNOFF_AND_SINGLE_REAL_DELTA_PROFILE_EXECUTION`
+`RPV4_STAGE_I__EXPLICIT_TWO_AUTHOR_GO_OR_CLOSE_REAL_EXECUTION`
 
 Stage I first requires a new authorization from Zhi Chen and Teng Qi. The GO
 must bind the committed Git baseline, Stage H input-manifest SHA-256, exact

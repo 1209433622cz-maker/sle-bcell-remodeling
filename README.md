@@ -40,7 +40,7 @@ replacement, submission, GitHub Release and Zenodo updates remain on hold.
 Current gate:
 
 ```text
-PASS_STAGE_H_EFFECT_BLIND_APPLICABILITY__HOLD_STAGE_I_AUTHOR_SIGNOFF
+READY_FOR_EXPLICIT_TWO_AUTHOR_DECISION__STAGE_I_NOT_AUTHORIZED
 ```
 
 Next stage:
@@ -75,6 +75,24 @@ predeclared questions about annotation sensitivity, composition, within-state
 effects and the identifiability of those quantities.
 
 ## RP v4 progress
+
+### Stage I author-decision preflight
+
+- Rechecks the clean synchronized `main` baseline, all 10 Stage H controlled
+  files, the input-manifest and execution-script hashes, and the exact qualified
+  Windows runtime before creating any decision object.
+- Produces an unsigned draft bound to the final Git commit in the ignored local
+  `_software_tests` area, avoiding a self-referential commit hash.
+- Passes that unsigned draft to the real Stage I runner and requires fail-closed
+  rejection before response construction or output creation.
+- Does not count a general instruction to continue as approval by both authors.
+  No real disease/activity response has been loaded or fitted.
+
+Decision:
+`READY_FOR_EXPLICIT_TWO_AUTHOR_DECISION__STAGE_I_NOT_AUTHORIZED`.
+
+The next scientific action is a binary author decision on the exact six-condition
+form. It is not an invitation to preview or tune the coefficient.
 
 ### Stage H: effect-blind real-data applicability preflight
 
