@@ -1,0 +1,65 @@
+{
+  "schema": "SLE_BCELL_GITHUB_REPOSITORY_RECREATION_RECEIPT_1.0",
+  "date_hong_kong": "2026-10-12",
+  "status": "PASS_PUBLIC_GITHUB_RECREATION",
+  "repository": {
+    "name_with_owner": "1209433622cz-maker/sle-bcell-remodeling",
+    "url": "https://github.com/1209433622cz-maker/sle-bcell-remodeling",
+    "visibility": "PUBLIC",
+    "default_branch": "main",
+    "description": "Outcome-locked, disease-blind single-cell analysis workflow for SLE B-cell remodeling and reproducible external validation.",
+    "initial_recreated_main_sha": "09e931e7c929d4a66dc8ea3f334d6a11c1d1087f",
+    "issues_enabled": true,
+    "projects_enabled": true,
+    "wiki_enabled": false,
+    "license": "MIT"
+  },
+  "predelete_backup": {
+    "status": "PASS_GITHUB_REPOSITORY_PREDELETE_BACKUP",
+    "directory": "8_archive/github_repository_recreation_2026-10-12",
+    "bundle": "8_archive/github_repository_recreation_2026-10-12/sle-bcell-remodeling_before_remote_recreation.bundle",
+    "bundle_bytes": 365516479,
+    "release_count": 2,
+    "release_asset_count": 6,
+    "manifest_files": 15
+  },
+  "restored_refs": {
+    "branches": ["main"],
+    "tags": ["v1.0.0", "v1.1.0"]
+  },
+  "restored_releases": [
+    {
+      "tag": "v1.0.0",
+      "title": "SLE B-cell remodeling analysis v1.0.0",
+      "asset_count": 3,
+      "asset_integrity": "PASS_SIZE_AND_SHA256"
+    },
+    {
+      "tag": "v1.1.0",
+      "title": "SLE B-cell remodeling reproducibility release",
+      "asset_count": 3,
+      "asset_integrity": "PASS_SIZE_AND_SHA256"
+    }
+  ],
+  "full_local_reaudit": {
+    "status": "PASS",
+    "directory": "9_version/full_local_reaudit_2026-10-12",
+    "files": 39886,
+    "bytes": 6110895142,
+    "content_pass": 39886,
+    "content_hold": 0,
+    "content_fail": 0,
+    "duplicate_groups": 14279,
+    "theoretical_redundant_bytes": 1339514932
+  },
+  "submission_package": {
+    "status": "PRE_SUBMISSION_MASTER_PACKAGE__NOT_SUBMITTED",
+    "zip": "6_release/SLE_Bcell_Submission_Package_2026-10-12.zip",
+    "zip_bytes": 20091489,
+    "zip_sha256": "349d69afa3d5a3b93b9e601186e6016ac5c9494eb64e79d00b36d607e561ed6e",
+    "payload_integrity": "40/40 PASS"
+  },
+  "scientific_next_gate": "RPV4_STAGE_N__QUALIFIED_RUNTIME_STORAGE_AND_WRITE_ONCE_RAW_RECONSTRUCTION",
+  "external_outcome_unlocked": false,
+  "submission_executed": false
+}
