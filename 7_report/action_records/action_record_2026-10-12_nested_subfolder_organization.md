@@ -84,6 +84,10 @@ The stable manuscript conclusion remains reproducible process-level B_CONV IFN/I
 
 The project is now browsable at both the top-folder and topic-subfolder levels without compromising reproducibility. The organized folders are navigation views; frozen source paths remain authoritative.
 
+## GitHub synchronization
+
+The organization change was committed as `91b3843ca3d000252e78b0b2204cd3b28391e19f` with message `Organize project catalog subfolders` and pushed successfully from local `main` to `origin/main`. The push advanced the remote from `bdc5556e86164c15cdf3085610f3f6b8ef2b616d` to the organization commit.
+
 ## Next stage
 
 The scientific next target remains `RPV4_STAGE_N__QUALIFIED_RUNTIME_STORAGE_AND_WRITE_ONCE_RAW_RECONSTRUCTION`.
