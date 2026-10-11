@@ -146,3 +146,9 @@ ZIP：`6_release/SLE_Bcell_Submission_Package_2026-10-12.zip`
 - 主文/补充 PDF：32/16 pages。
 - 原文件：0 moved，0 deleted。
 - 完整机器记录：`9_version/ORGANIZATION_STATUS_2026-10-12.json`。
+
+## 10. GitHub 同步结果
+
+组织与投稿包 commit 为 `23f241268e5ad6d9f1c65daea065886f7ccc1fdb`，远端 `main` 从 `c0af11487eb3f0c49fb58ec54755f6aa175bc645` 非强制快进到该 commit。
+
+本机 Git smart-HTTP 到 `github.com:443` 在推送阶段被网络重置，但 GitHub API 与已登录 `gh` 账号正常。为避免改变提交身份，本轮通过 Git Database API 上传本地 index 中的 125 个唯一 blob（161 个路径），逐一要求远端 blob SHA 与本地一致；随后生成的 tree SHA `dcad22de851bae2fa652fb1a7a0ba18f2ee9c983` 和 commit SHA 均与本地 Git 对象完全一致。分支更新使用 `force=false`，更新前后均回读远端 SHA；没有覆盖、重写或强推历史。
