@@ -114,6 +114,8 @@ Decision:
 
 - Zhi Chen and Teng Qi jointly approved all six frozen conditions and one
   write-once execution bound to commit `b413ce09fae520eef0a7a781ee71ddece7606be0`.
+- Both authors explicitly reconfirmed the same six conditions after execution;
+  the reconfirmation is archival and does not authorize a second run.
 - The sole estimate was `0.034925` T0 score units (HC3 SE `0.011559`, t(64)
   95% CI `0.011834` to `0.058016`, two-sided `P=0.003612`).
 - Under the frozen sign convention, the managed-SLE versus control association

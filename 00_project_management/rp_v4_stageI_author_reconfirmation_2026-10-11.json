@@ -1,0 +1,31 @@
+{
+  "schema": "RP_V4_STAGE_I_POST_EXECUTION_AUTHOR_RECONFIRMATION_1.0",
+  "recorded_at": "2026-10-11T17:34:21+08:00",
+  "approved_by": [
+    "Zhi Chen",
+    "Teng Qi"
+  ],
+  "evidence_source": "User reported explicit joint approval in the current Codex thread",
+  "all_six_stage_I_conditions_reconfirmed": true,
+  "conditions": {
+    "approve_exact_68_donor_31_37_design": true,
+    "approve_single_estimand_delta_profile": true,
+    "approve_single_method_OLS_HC3_t64": true,
+    "approve_write_once_result_and_no_preview": true,
+    "acknowledge_association_not_causal_mediation": true,
+    "acknowledge_no_other_target_external_outcome_or_submission_unlock": true
+  },
+  "historical_single_execution_GO_reaffirmed": true,
+  "stage_I_write_once_execution_already_consumed": true,
+  "new_execution_authorized": false,
+  "rerun_permitted": false,
+  "current_project_gate_changed": false,
+  "current_project_gate": "PASS_STAGE_L_METADATA_IDENTITY_AND_UNIQUE_QUESTION_FREEZE__HOLD_RAW_DOWNLOAD_AND_OUTCOME_EXECUTION",
+  "bindings": {
+    "stage_I_template_sha256": "9775f2930b6ea2a1262b6adf2418c9cad6e6a7433a2e4fc7e7e5cbb94f4eece6",
+    "executed_author_GO_sha256": "9d8a74cda21f6a72cce91660abd3c8bbb6d13274d235aff98a58b62179a109ae",
+    "stage_I_result_sha256": "068c7492406575c61445680b31cf83db17506842f11be0e269629eaa03a754c1",
+    "stage_I_integrity_manifest_sha256": "731340905b94934ee0d889c228c2a39e95c5387655f17ed1ddd6e1c5294cd32e"
+  },
+  "scope_note": "This post-execution reconfirmation records the authors' approval of the historical six-condition Stage I template. It does not authorize a second execution, a new target, external outcomes, WP4 or submission."
+}

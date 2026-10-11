@@ -374,6 +374,12 @@ WP4 and submission unlocks remain false.
 Stage I decision:
 `PASS_STAGE_I_WRITE_ONCE_EXECUTION__POSITIVE_DELTA_PROFILE_ASSOCIATION__HOLD_AUTOMATIC_UNLOCK`.
 
+On 11 October 2026, Zhi Chen and Teng Qi explicitly jointly reconfirmed all six
+conditions in the Stage I template. This is an archival post-execution
+reconfirmation bound to the original template, executed GO, result and
+integrity-manifest hashes. It does not authorize a second Stage I execution and
+does not change the current Stage L gate.
+
 ## Stage J-K evidence reconciliation and limited integration
 
 Independent rechecking established that RP v3 WP1 and RP v4 Stage I use the
@@ -477,6 +483,8 @@ External outcomes, WP4 and submission remain unauthorized.
 - [`phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/04_STAGE_I_GATE_STATUS.json`](../phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/04_STAGE_I_GATE_STATUS.json)
 - [`phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/05_STAGE_I_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/05_STAGE_I_ADVISOR_REVIEW.md)
 - [`00_project_management/action_record_2026-10-11_rp_v4_stageI_single_real_delta_profile.md`](action_record_2026-10-11_rp_v4_stageI_single_real_delta_profile.md)
+- [`00_project_management/rp_v4_stageI_author_reconfirmation_2026-10-11.json`](rp_v4_stageI_author_reconfirmation_2026-10-11.json)
+- [`00_project_management/action_record_2026-10-11_rp_v4_stageI_author_reconfirmation.md`](action_record_2026-10-11_rp_v4_stageI_author_reconfirmation.md)
 - [`phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/03_STAGE_K_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/03_STAGE_K_ADVISOR_REVIEW.md)
 - [`phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/06_DOCUMENT_QA.json`](../phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/06_DOCUMENT_QA.json)
 - [`phase17_v7/rp_v4_redesign/20261011_stageL_external_cohort_gate/09_PROSPECTIVE_ANALYSIS_CONTRACT.md`](../phase17_v7/rp_v4_redesign/20261011_stageL_external_cohort_gate/09_PROSPECTIVE_ANALYSIS_CONTRACT.md)
