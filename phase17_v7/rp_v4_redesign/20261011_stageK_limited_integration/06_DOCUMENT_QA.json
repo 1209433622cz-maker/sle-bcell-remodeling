@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-10-11T17:18:16+08:00",
+  "decision": "PASS_STAGE_K_DOCUMENT_QA",
+  "libreoffice": {
+    "manuscript_pages": 32,
+    "supplement_pages": 16,
+    "manuscript_pdf_sha256": "13fefb26e243ecf95dbed6eea453d9a430f0d5f9b014a44feccf2c343db5fc40",
+    "supplement_pdf_sha256": "edb29de6e629545934e636a336b3636be76c386520de018c901c01981cd325f0"
+  },
+  "wps": {
+    "manuscript_pages": 32,
+    "supplement_pages": 16,
+    "manuscript_pdf_sha256": "8693c151f57954a17859614e5d7a64c1427745127b0392f08a4c2962cefb98ae",
+    "supplement_pdf_sha256": "1be5a76504a3f3e959decbdf5111ab8f204b20c5bf8c6e4656b7f2b69a4a047"
+  },
+  "editable_documents": {
+    "manuscript_docx_sha256": "ec1f2f84f4e6b2dffb297f6519267866c376f62ccc53b2f53dc97e836fbb440b",
+    "supplement_docx_sha256": "97847d1ea604dd027ca3fe91cf67b196fb8a8968039419c75ec2c771982c6611"
+  },
+  "accessibility": {
+    "manuscript": {"high": 0, "medium": 0, "low": 0},
+    "supplement": {"high": 0, "medium": 0, "low": 0}
+  },
+  "visual_review": {
+    "libreoffice_all_pages_reviewed": true,
+    "wps_target_pages_reviewed": ["manuscript:15", "manuscript:18", "supplement:6"],
+    "clipping_or_overlap": false,
+    "unexpected_pagination": false,
+    "figure_changes": 0
+  },
+  "text_anchors": {
+    "manuscript_reestimated_uncertainty": true,
+    "manuscript_table_s10_reference": true,
+    "supplement_table_s10": true,
+    "supplement_nominal_p_boundary": true
+  }
+}

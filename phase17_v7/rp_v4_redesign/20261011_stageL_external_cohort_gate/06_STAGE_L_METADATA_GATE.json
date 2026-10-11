@@ -1,0 +1,42 @@
+{
+  "created_at": "2026-10-11T17:09:46+08:00",
+  "cross_assay": {
+    "discordant_patient_ids": [
+      "1655",
+      "3651"
+    ],
+    "patient_id_overlap": 36,
+    "same_visit_multiomics_established": false,
+    "sledai_discordant_overlap": 2
+  },
+  "expression_matrix_read": false,
+  "gse262846": {
+    "libraries": 88,
+    "linked_pubmed_id": null,
+    "official_title": "Transcriptomic Analysis of SLE Disease Activity in Resting Naive (rN) and Transitional (T1T2) B cells",
+    "paired_active_sle": 12,
+    "paired_hc": 17,
+    "paired_inactive_sle": 14,
+    "paired_patients": 43,
+    "paired_sle_patients": 26,
+    "patients": 45,
+    "processed_object": "RPKM_ONLY__NOT_INTEGER_COUNTS",
+    "source_sha256": "a5b87d097c94527288fd82bc0d2dbe6cfd496fe737231de79a2a44fb543fd1c2",
+    "title_patient_mismatches": 1
+  },
+  "gse263716": {
+    "libraries": 62,
+    "linked_pubmed_id": null,
+    "official_title": "Epigenetic Analysis of SLE Disease Activity in Resting Naive (rN) and Transitional (T1T2) B cells",
+    "paired_patients": 19,
+    "patients": 43,
+    "source_sha256": "167463fda8655f8eb78837226f972767fdce1089ef2571c60ce9d9134c2770bb"
+  },
+  "outcome_model_fitted": false,
+  "schema": "RPV4_STAGE_L_METADATA_GATE_1.0",
+  "sra_download_started": false,
+  "stage_k_manifest": {
+    "pass": true,
+    "payloads": 18
+  }
+}

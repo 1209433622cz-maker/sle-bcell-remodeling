@@ -1,0 +1,13 @@
+{
+  "gse262846_miniml": "phase17_v7/rp_v4_redesign/20261010_stageA_authority_feasibility_freeze/source_metadata/GSE262846_family.xml.tgz",
+  "gse263716_miniml": "phase17_v7/rp_v4_redesign/_software_tests/20261011_stageL_metadata/source_metadata/GSE263716_family.xml.tgz",
+  "official_urls": {
+    "GSE118254": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE118254",
+    "GSE262846": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE262846",
+    "GSE263716": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE263716",
+    "GSE263717": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE263717"
+  },
+  "outcome_accessed": false,
+  "stage_k_root": "phase17_v7/rp_v4_redesign/_software_tests/20261011_stageK_external_candidate/SLE_StageK",
+  "stage_k_zip_sha256": "f81798c2e1dfb3159986d8977a8a843ab40b0636490056f95fcb4a4f6ba15e8f"
+}

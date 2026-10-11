@@ -178,3 +178,8 @@ phase17_v7/rp_v4_redesign/20261010_proposal_external_candidate/
 phase17_v7/rp_v4_redesign/20261011_stageD_external_candidate/
 phase17_v7/rp_v4_redesign/20261011_stageE_external_candidate/
 phase17_v7/rp_v4_redesign/**/source_metadata/
+
+# Stage K document renders are reproducible QA caches. Keep only the canonical
+# DOCX/PDF deliverables and compact audit records in Git.
+phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/qa/
+phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/qa_r2/

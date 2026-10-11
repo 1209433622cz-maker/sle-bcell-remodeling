@@ -36,19 +36,22 @@ confirmed, without constructing a response, that the observed design, support,
 library and mixture anchors are inside the frozen synthetic applicability
 domain. Both authors then approved all six Stage I conditions. The single
 write-once real `delta_profile` fit completed and found a positive
-measurement-rule association difference. Manuscript replacement, submission,
-GitHub Release and Zenodo updates remain on hold pending integration review.
+measurement-rule association difference. Stage K then integrated this result
+only as an uncertainty-method sensitivity for the same 68-donor estimand;
+Stage L independently froze a clinically distinct external-cohort question
+without reading expression outcomes. Submission, external outcome fitting,
+GitHub Release and Zenodo updates remain on hold.
 
 Current gate:
 
 ```text
-PASS_STAGE_I_WRITE_ONCE_EXECUTION__POSITIVE_DELTA_PROFILE_ASSOCIATION__HOLD_AUTOMATIC_UNLOCK
+PASS_STAGE_L_METADATA_IDENTITY_AND_UNIQUE_QUESTION_FREEZE__HOLD_RAW_DOWNLOAD_AND_OUTCOME_EXECUTION
 ```
 
 Next stage:
 
 ```text
-RPV4_STAGE_J__SCIENTIFIC_INTEGRATION_SCOPE_AND_AUTHOR_REVIEW
+RPV4_STAGE_M__RAW_RECONSTRUCTION_AUTHORIZATION_AND_DISEASE_BLIND_COUNT_PIPELINE_FREEZE
 ```
 
 ## Scientific position
@@ -77,6 +80,35 @@ predeclared questions about annotation sensitivity, composition, within-state
 effects and the identifiability of those quantities.
 
 ## RP v4 progress
+
+### Stage K-L: bounded integration and external-question freeze
+
+- Stage K independently confirmed that RP v3 WP1 and RP v4 Stage I are the
+  same 68-donor `delta_profile` estimand: both point estimates are 0.034925002,
+  differing only at floating-point precision. They are not independent
+  replications.
+- The manuscript received one bounded Methods addition and one bounded
+  Discussion addition; Supplementary Table S10 and two full-precision Source
+  Data rows compare the paired percentile and HC3-t(64) intervals. Figures 1-5
+  and Supplementary Figures S1-S10 were unchanged.
+- WPS and LibreOffice both render the integrated manuscript at 32 pages and
+  the Supplementary Information at 16 pages. DOCX accessibility is 0/0/0 for
+  both files; the Stage K controlled manifest is 10/10 PASS.
+- Stage L reconstructed official GSE262846 metadata as 88 RNA libraries from
+  45 patient IDs. Forty-three patients are rN/T1T2 paired; the prospective
+  SLE-only primary set is 26 paired patients (12 active, 14 inactive).
+- The unique external question is the patient-level T1T2-minus-rN IFN/ISG
+  score difference between active and inactive SLE. Healthy controls are
+  descriptive context; continuous SLEDAI is secondary.
+- GSE263716 cannot yet be treated as same-visit multi-omic confirmation: only
+  36 patient IDs overlap the RNA series and two overlapping IDs have discordant
+  deposited SLEDAI values.
+- No expression matrix was read, no SRA download began and no external outcome
+  was fitted. The 233.209 GB raw payload and at least 2.5 TB scratch require a
+  separate Stage M authorization and disease-blind count-pipeline freeze.
+
+Decision:
+`PASS_STAGE_L_METADATA_IDENTITY_AND_UNIQUE_QUESTION_FREEZE__HOLD_RAW_DOWNLOAD_AND_OUTCOME_EXECUTION`.
 
 ### Stage I: single real `delta_profile`
 
@@ -619,6 +651,8 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 | RP v4 Stage G final synthetic validation | [`phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/`](phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/) |
 | RP v4 Stage H effect-blind applicability preflight | [`phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/`](phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/) |
 | RP v4 Stage I single real delta-profile result | [`phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/`](phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/) |
+| RP v4 Stage K limited manuscript integration | [`phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/`](phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/) |
+| RP v4 Stage L external-cohort metadata gate | [`phase17_v7/rp_v4_redesign/20261011_stageL_external_cohort_gate/`](phase17_v7/rp_v4_redesign/20261011_stageL_external_cohort_gate/) |
 | Historical RP v3 status | [`00_project_management/RP_V3_REDESIGN_STATUS.md`](00_project_management/RP_V3_REDESIGN_STATUS.md) |
 | Full file audit | [`00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md`](00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md) |
 | Valuable asset register | [`00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv`](00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv) |

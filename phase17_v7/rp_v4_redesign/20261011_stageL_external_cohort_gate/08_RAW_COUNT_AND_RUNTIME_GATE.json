@@ -1,0 +1,14 @@
+{
+  "decision": "HOLD_RAW_DOWNLOAD_COUNT_RECONSTRUCTION_AND_OUTCOME_EXECUTION",
+  "download_authorized": false,
+  "download_started": false,
+  "gene_annotation_frozen": false,
+  "gse262846_reported_sra_payload_gb": 233.209,
+  "gse262846_sra_runs": 176,
+  "integer_count_reconstruction_complete": false,
+  "minimum_recommended_scratch_tb": 2.5,
+  "raw_count_gate_pass": false,
+  "reference_build_frozen": false,
+  "sample_to_run_reconciliation_complete": false,
+  "schema": "RPV4_STAGE_L_RAW_COUNT_GATE_1.0"
+}

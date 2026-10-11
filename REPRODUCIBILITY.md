@@ -6,7 +6,8 @@ The active branch state is `ACTIVE_RP_V4_SCIENTIFIC_REDESIGN` with journal
 submission on hold. RP v3 is retained as a complete bounded historical record.
 The public v1.1.0 release described below remains an immutable historical
 reproducibility snapshot; it does not contain the later RP v3 analyses or the
-RP v4 Stage A, Stage C, Stage D, Stage E2, Stage F2, Stage G, Stage H and Stage I work.
+RP v4 Stage A, Stage C, Stage D, Stage E2, Stage F2, Stage G, Stage H,
+Stage I, Stage K and Stage L work.
 
 Completed active gates:
 
@@ -61,6 +62,15 @@ Completed active gates:
   t(64) 95% CI 0.011834 to 0.058016; two-sided P=0.003612), and exported no
   donor-level response. This is measurement-rule sensitivity evidence and does
   not automatically unlock other targets, external outcomes or submission.
+- RP v4 Stage K: independently reconciled Stage I with the earlier WP1 result,
+  demonstrated that both are the same 68-donor estimand, and integrated only a
+  bounded uncertainty-method sensitivity into Methods, Discussion,
+  Supplementary Table S10 and Source Data. WPS/LibreOffice pagination is 32/16
+  pages and both DOCX accessibility audits are 0/0/0.
+- RP v4 Stage L: reconstructed official GSE262846/GSE263716 patient identity
+  without reading expression outcomes, froze the 26-patient paired-SLE activity
+  question, documented cross-assay identity/SLEDAI conflicts, and kept the raw
+  SRA download and all external outcome models closed.
 
 - Stage 0: recovered and hashed 21/21 inputs; registered units, chronology,
   estimands, branches and open parameters.
@@ -157,6 +167,11 @@ powershell -ExecutionPolicy Bypass `
   -File .\audit_tools\run_rp_v4_stageI_author_preflight.ps1 `
   -Python D:\bioinfor\python.exe `
   -Output .\phase17_v7\rp_v4_redesign\_software_tests\stageI_author_decision_packet
+
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_rp_v4_stageL.ps1 `
+  -Python D:\bioinfor\python.exe `
+  -Output .\phase17_v7\rp_v4_redesign\stageL_reproduction
 ```
 
 The Stage I real execution is write-once and has completed. Do not run it
@@ -172,11 +187,11 @@ manifest. The validated local runtime was `D:\bioinfor\python.exe` (Python
 3.13.7, NumPy 2.3.3). No real WP2 response was loaded or fitted.
 
 The active next gate is
-`RPV4_STAGE_J__SCIENTIFIC_INTEGRATION_SCOPE_AND_AUTHOR_REVIEW`. Stage I must
-not be rerun. External outcomes, large SRA download, WP4, manuscript
-replacement, submission package, GitHub Release and Zenodo remain unauthorized
-until a separate scientific integration decision. See
-`phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/` and
+`RPV4_STAGE_M__RAW_RECONSTRUCTION_AUTHORIZATION_AND_DISEASE_BLIND_COUNT_PIPELINE_FREEZE`.
+Stage I must not be rerun. External outcomes, the 233.209 GB SRA download, WP4,
+submission package, GitHub Release and Zenodo remain unauthorized. See
+`phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/`,
+`phase17_v7/rp_v4_redesign/20261011_stageL_external_cohort_gate/` and
 `00_project_management/RP_V4_REDESIGN_STATUS.md`.
 
 ## Current correction status

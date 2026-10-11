@@ -6,7 +6,7 @@
 
 **Submission state:** `HOLD`
 
-**Current gate:** `PASS_STAGE_I_WRITE_ONCE_EXECUTION__POSITIVE_DELTA_PROFILE_ASSOCIATION__HOLD_AUTOMATIC_UNLOCK`
+**Current gate:** `PASS_STAGE_L_METADATA_IDENTITY_AND_UNIQUE_QUESTION_FREEZE__HOLD_RAW_DOWNLOAD_AND_OUTCOME_EXECUTION`
 
 ## Scope
 
@@ -374,16 +374,54 @@ WP4 and submission unlocks remain false.
 Stage I decision:
 `PASS_STAGE_I_WRITE_ONCE_EXECUTION__POSITIVE_DELTA_PROFILE_ASSOCIATION__HOLD_AUTOMATIC_UNLOCK`.
 
+## Stage J-K evidence reconciliation and limited integration
+
+Independent rechecking established that RP v3 WP1 and RP v4 Stage I use the
+same 68 donors, outcome definition, four-column design and `delta_profile`
+estimand. Their point estimates agree to approximately `6.94e-18`. Stage I is
+therefore an uncertainty re-estimation for the existing measurement-rule
+contrast, not an independent positive finding.
+
+The author-approved limited integration adds exact Methods and Discussion
+boundaries, Supplementary Table S10 and two full-precision Source Data rows.
+Figures 1-5 and Supplementary Figures S1-S10 are unchanged. WPS and
+LibreOffice both produced 32 manuscript pages and 16 Supplementary pages;
+DOCX accessibility is 0 high / 0 medium / 0 low for both documents.
+
+Stage K decision:
+`PASS_STAGE_K_LIMITED_SOURCE_INTEGRATION__HOLD_SUBMISSION_AND_EXTERNAL_OUTCOMES`.
+
+## Stage L external-cohort unique-question gate
+
+Official GEO MINiML was independently reconstructed without reading expression
+outcomes. GSE262846 contains 88 RNA libraries from 45 patient IDs, including
+43 rN/T1T2-paired patients. The prospective primary set is 26 paired SLE
+patients: 12 active and 14 inactive. The only differentiated primary question
+is whether the patient-level T1T2-minus-rN IFN/ISG score differs by activity.
+
+GSE263716 contains 62 ATAC libraries from 43 patient IDs, but only 36 IDs
+overlap the RNA series and patients 1655 and 3651 have discordant deposited
+SLEDAI values. Same-visit multi-omic confirmation is therefore not established.
+
+The deposited RNA matrix is RPKM rather than integer counts. No expression
+matrix was read, no SRA payload was downloaded and no activity effect was
+fitted. Raw reconstruction remains blocked pending a separate authorization,
+sample-to-run reconciliation, frozen GRCh38/GENCODE configuration and
+small-sample operating-characteristic qualification.
+
+Stage L decision:
+`PASS_STAGE_L_METADATA_IDENTITY_AND_UNIQUE_QUESTION_FREEZE__HOLD_RAW_DOWNLOAD_AND_OUTCOME_EXECUTION`.
+
 ## Current authorization
 
 Allowed:
 
-- preserve and independently review the completed Stage G, Stage H and Stage I
+- preserve and independently review the completed Stage G through Stage L
   evidence;
-- design a bounded Stage J scientific-integration proposal without changing the
-  result or fitting another target;
-- assign a proposed manuscript claim owner and figure/table location for author
-  review.
+- use the Stage K integrated documents as a scientific candidate while
+  submission remains on hold;
+- prepare a disease-blind Stage M raw-count reconstruction contract without
+  downloading data or fitting outcomes.
 
 Not allowed:
 
@@ -393,18 +431,21 @@ Not allowed:
 - fit or inspect any additional real WP2 effect;
 - fit new-cohort diagnosis/activity effects;
 - introduce S2 by outcome tuning;
-- rewrite the manuscript or figures around RP v4;
+- promote Stage I as independent replication or rewrite the figures around it;
+- download the 233.209 GB GSE262846 SRA payload without separate authorization;
+- read the external expression matrix or fit diagnosis/activity outcomes;
 - rebuild a submission package, GitHub Release or Zenodo version.
 
 ## Next gate
 
-`RPV4_STAGE_J__SCIENTIFIC_INTEGRATION_SCOPE_AND_AUTHOR_REVIEW`
+`RPV4_STAGE_M__RAW_RECONSTRUCTION_AUTHORIZATION_AND_DISEASE_BLIND_COUNT_PIPELINE_FREEZE`
 
-Stage I is complete and must not be rerun. Stage J should adjudicate whether the
-bounded measurement-rule sensitivity result belongs in the redesigned
-manuscript and assign its exact claim owner and figure/table location. Large
-data download, external outcomes, WP4, manuscript replacement and submission
-remain outside the completed Stage I authorization.
+Stage I is complete and must not be rerun. Stage K integrated it only as a
+bounded uncertainty-method sensitivity, and Stage L froze the external
+patient-paired question without outcomes. Stage M must bind raw-run identity,
+reference/annotation versions, count reconstruction, storage, checksums and a
+prospective small-sample simulation before any raw download or activity model.
+External outcomes, WP4 and submission remain unauthorized.
 
 ## Canonical evidence
 
@@ -436,3 +477,8 @@ remain outside the completed Stage I authorization.
 - [`phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/04_STAGE_I_GATE_STATUS.json`](../phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/04_STAGE_I_GATE_STATUS.json)
 - [`phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/05_STAGE_I_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/05_STAGE_I_ADVISOR_REVIEW.md)
 - [`00_project_management/action_record_2026-10-11_rp_v4_stageI_single_real_delta_profile.md`](action_record_2026-10-11_rp_v4_stageI_single_real_delta_profile.md)
+- [`phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/03_STAGE_K_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/03_STAGE_K_ADVISOR_REVIEW.md)
+- [`phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/06_DOCUMENT_QA.json`](../phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/06_DOCUMENT_QA.json)
+- [`phase17_v7/rp_v4_redesign/20261011_stageL_external_cohort_gate/09_PROSPECTIVE_ANALYSIS_CONTRACT.md`](../phase17_v7/rp_v4_redesign/20261011_stageL_external_cohort_gate/09_PROSPECTIVE_ANALYSIS_CONTRACT.md)
+- [`phase17_v7/rp_v4_redesign/20261011_stageL_external_cohort_gate/11_STAGE_L_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261011_stageL_external_cohort_gate/11_STAGE_L_ADVISOR_REVIEW.md)
+- [`00_project_management/action_record_2026-10-11_rp_v4_stageK_limited_integration_stageL_external_gate.md`](action_record_2026-10-11_rp_v4_stageK_limited_integration_stageL_external_gate.md)

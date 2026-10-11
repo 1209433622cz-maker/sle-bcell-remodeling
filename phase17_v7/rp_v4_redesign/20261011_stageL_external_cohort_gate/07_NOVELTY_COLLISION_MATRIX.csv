@@ -1,0 +1,5 @@
+candidate_claim,collision,reason,decision
+generic SLE IFN positivity,HIGH,already established in the current manuscript and prior SLE literature,DO_NOT_USE_AS_NEW_PRIMARY_CLAIM
+active-versus-inactive difference in paired T1T2-minus-rN IFN score,LOWER_BUT_NOT_ZERO,new paired compartment-by-activity question; small 12-versus-14 SLE design,PRIMARY_EXTERNAL_QUESTION_IF_RAW_COUNT_GATE_PASSES
+same-visit RNA-ATAC multi-omic confirmation,NOT_ADJUDICABLE,36 patient IDs overlap but two have discordant SLEDAI and visit identity is unresolved,HOLD_UNTIL_VISIT_PROVENANCE_IS_RESOLVED
+GSE118254 as a second independent IFN replication,HIGH,published subset biology and donor independence from GSE262846 are not established,TECHNICAL_OR_HISTORICAL_CONTEXT_ONLY
