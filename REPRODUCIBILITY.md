@@ -6,7 +6,7 @@ The active branch state is `ACTIVE_RP_V4_SCIENTIFIC_REDESIGN` with journal
 submission on hold. RP v3 is retained as a complete bounded historical record.
 The public v1.1.0 release described below remains an immutable historical
 reproducibility snapshot; it does not contain the later RP v3 analyses or the
-RP v4 Stage A, Stage C, Stage D, Stage E2, Stage F2, Stage G and Stage H work.
+RP v4 Stage A, Stage C, Stage D, Stage E2, Stage F2, Stage G, Stage H and Stage I work.
 
 Completed active gates:
 
@@ -53,7 +53,14 @@ Completed active gates:
 - RP v4 Stage I author preflight: rechecks the clean synchronized branch, Stage
   H integrity, exact input/code hashes and the qualified Windows runtime; emits
   only an unsigned local decision packet; and proves that the real runner rejects
-  it before response construction. Stage I remains unauthorized.
+  it before response construction. This historical checkpoint was later
+  superseded by explicit two-author authorization.
+- RP v4 Stage I execution: both authors approved the exact six-condition form
+  bound to commit `b413ce09fae520eef0a7a781ee71ddece7606be0`. The write-once
+  runner produced one `delta_profile` estimate, 0.034925 (HC3 SE 0.011559;
+  t(64) 95% CI 0.011834 to 0.058016; two-sided P=0.003612), and exported no
+  donor-level response. This is measurement-rule sensitivity evidence and does
+  not automatically unlock other targets, external outcomes or submission.
 
 - Stage 0: recovered and hashed 21/21 inputs; registered units, chronology,
   estimands, branches and open parameters.
@@ -152,6 +159,10 @@ powershell -ExecutionPolicy Bypass `
   -Output .\phase17_v7\rp_v4_redesign\_software_tests\stageI_author_decision_packet
 ```
 
+The Stage I real execution is write-once and has completed. Do not run it
+again. The canonical directory contains a result-only algebra and integrity
+audit that did not reconstruct the response or refit the coefficient.
+
 The raw full-G2 and full-G2B runs are intentionally Git-ignored. The canonical
 G2B run contains 6,004 files and 17,994,581 bytes, excluding three independent
 readjudication copies. Its tracked compact adjudication
@@ -161,11 +172,11 @@ manifest. The validated local runtime was `D:\bioinfor\python.exe` (Python
 3.13.7, NumPy 2.3.3). No real WP2 response was loaded or fitted.
 
 The active next gate is
-`RPV4_STAGE_I__EXPLICIT_TWO_AUTHOR_GO_OR_CLOSE_REAL_EXECUTION`. Real WP2
-execution remains locked until both named authors approve the exact post-Stage-H
-six-condition form. External outcomes, large SRA download, WP4, manuscript
-replacement, submission package, GitHub Release and Zenodo remain unauthorized.
-See `phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/` and
+`RPV4_STAGE_J__SCIENTIFIC_INTEGRATION_SCOPE_AND_AUTHOR_REVIEW`. Stage I must
+not be rerun. External outcomes, large SRA download, WP4, manuscript
+replacement, submission package, GitHub Release and Zenodo remain unauthorized
+until a separate scientific integration decision. See
+`phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/` and
 `00_project_management/RP_V4_REDESIGN_STATUS.md`.
 
 ## Current correction status

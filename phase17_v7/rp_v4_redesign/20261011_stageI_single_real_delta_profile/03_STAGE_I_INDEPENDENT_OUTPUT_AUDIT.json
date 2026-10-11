@@ -1,0 +1,157 @@
+{
+  "authorization_sha256": "9d8a74cda21f6a72cce91660abd3c8bbb6d13274d235aff98a58b62179a109ae",
+  "checks": [
+    {
+      "check": "result_schema",
+      "detail": "RP_V4_STAGE_I_SINGLE_REAL_DELTA_PROFILE_RESULT_1.0",
+      "pass": true
+    },
+    {
+      "check": "receipt_schema",
+      "detail": "RP_V4_STAGE_I_SINGLE_REAL_RESULT_RECEIPT_1.0",
+      "pass": true
+    },
+    {
+      "check": "required_fields",
+      "detail": "missing=[]",
+      "pass": true
+    },
+    {
+      "check": "forbidden_payloads_absent",
+      "detail": "present=[]",
+      "pass": true
+    },
+    {
+      "check": "single_estimand",
+      "detail": "delta_profile only",
+      "pass": true
+    },
+    {
+      "check": "write_once_receipt",
+      "detail": "write_once=true",
+      "pass": true
+    },
+    {
+      "check": "no_donor_response_export",
+      "detail": "false",
+      "pass": true
+    },
+    {
+      "check": "result_bytes",
+      "detail": "1547",
+      "pass": true
+    },
+    {
+      "check": "result_sha256",
+      "detail": "068c7492406575c61445680b31cf83db17506842f11be0e269629eaa03a754c1",
+      "pass": true
+    },
+    {
+      "check": "authorization_schema",
+      "detail": "RP_V4_STAGE_I_REAL_DELTA_PROFILE_GO_1.0",
+      "pass": true
+    },
+    {
+      "check": "two_author_approval",
+      "detail": "['Zhi Chen', 'Teng Qi']",
+      "pass": true
+    },
+    {
+      "check": "six_condition_go",
+      "detail": "all required fields true",
+      "pass": true
+    },
+    {
+      "check": "authorization_hash",
+      "detail": "9d8a74cda21f6a72cce91660abd3c8bbb6d13274d235aff98a58b62179a109ae",
+      "pass": true
+    },
+    {
+      "check": "input_binding_hash",
+      "detail": "38174638ebcd927276e8d845a1a27041cf17017cd8088cfd6eb5401d66e213f0",
+      "pass": true
+    },
+    {
+      "check": "execution_script_hash",
+      "detail": "bfaec257573be85c972edb72bb29f441a2e4fcd681402ee59d1528c43f91071d",
+      "pass": true
+    },
+    {
+      "check": "binding_commit",
+      "detail": "b413ce09fae520eef0a7a781ee71ddece7606be0",
+      "pass": true
+    },
+    {
+      "check": "binding_commit_exists",
+      "detail": "b413ce09fae520eef0a7a781ee71ddece7606be0",
+      "pass": true
+    },
+    {
+      "check": "qualified_runtime",
+      "detail": "D:\\bioinfor\\python.exe",
+      "pass": true
+    },
+    {
+      "check": "support",
+      "detail": "68=31+37",
+      "pass": true
+    },
+    {
+      "check": "degrees_of_freedom",
+      "detail": "64",
+      "pass": true
+    },
+    {
+      "check": "leverage",
+      "detail": "0.104567146293265",
+      "pass": true
+    },
+    {
+      "check": "scope_locks",
+      "detail": "all false",
+      "pass": true
+    },
+    {
+      "check": "positive_standard_error",
+      "detail": "0.011558534552476",
+      "pass": true
+    },
+    {
+      "check": "test_statistic_identity",
+      "detail": "3.021576999064363",
+      "pass": true
+    },
+    {
+      "check": "critical_value_identity",
+      "detail": "1.997729654317693",
+      "pass": true
+    },
+    {
+      "check": "p_value_identity",
+      "detail": "0.003612458802312",
+      "pass": true
+    },
+    {
+      "check": "lower_interval_identity",
+      "detail": "0.011834174910715",
+      "pass": true
+    },
+    {
+      "check": "upper_interval_identity",
+      "detail": "0.058015829382589",
+      "pass": true
+    }
+  ],
+  "checks_passed": 28,
+  "checks_total": 28,
+  "ci_lower": 0.011834174910715159,
+  "ci_upper": 0.05801582938258895,
+  "created_at": "2026-10-11T07:58:18.143418+00:00",
+  "interval_class": "positive",
+  "point_estimate": 0.034925002146652055,
+  "refit_performed": false,
+  "result_sha256": "068c7492406575c61445680b31cf83db17506842f11be0e269629eaa03a754c1",
+  "schema": "RP_V4_STAGE_I_POSTRUN_AUDIT_1.0",
+  "standard_error_HC3": 0.011558534552475956,
+  "two_sided_p_value": 0.0036124588023115677
+}

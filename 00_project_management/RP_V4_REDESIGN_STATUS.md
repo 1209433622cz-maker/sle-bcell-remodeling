@@ -6,7 +6,7 @@
 
 **Submission state:** `HOLD`
 
-**Current gate:** `READY_FOR_EXPLICIT_TWO_AUTHOR_DECISION__STAGE_I_NOT_AUTHORIZED`
+**Current gate:** `PASS_STAGE_I_WRITE_ONCE_EXECUTION__POSITIVE_DELTA_PROFILE_ASSOCIATION__HOLD_AUTOMATIC_UNLOCK`
 
 ## Scope
 
@@ -353,22 +353,44 @@ both Zhi Chen and Teng Qi. No real response or coefficient has been accessed.
 Current decision:
 `READY_FOR_EXPLICIT_TWO_AUTHOR_DECISION__STAGE_I_NOT_AUTHORIZED`.
 
+## Stage I completed once
+
+Zhi Chen and Teng Qi jointly approved all six frozen conditions and authorized
+one write-once execution bound to commit
+`b413ce09fae520eef0a7a781ee71ddece7606be0`. The exact Stage I runner produced
+one result and receipt; it exported no donor-level response and fitted no other
+target or external outcome.
+
+The `delta_profile` estimate was 0.034925002 T0 score units with HC3 standard
+error 0.011558535, t(64) 95% CI 0.011834175 to 0.058015829 and two-sided
+P=0.003612459. Under the frozen sign convention, the managed-SLE versus control
+association is greater under the fixed-profile rule than under pooled counts.
+
+This is measurement/mixing-rule sensitivity evidence. It is not a mediation
+proportion, causal cell-intrinsic effect, proof of a latent mechanism or
+validation of other historical targets. Automatic manuscript, external-outcome,
+WP4 and submission unlocks remain false.
+
+Stage I decision:
+`PASS_STAGE_I_WRITE_ONCE_EXECUTION__POSITIVE_DELTA_PROFILE_ASSOCIATION__HOLD_AUTOMATIC_UNLOCK`.
+
 ## Current authorization
 
 Allowed:
 
-- preserve and independently review the completed Stage G and Stage H evidence;
-- review the exact Stage I sign-off template, input manifest, execution-script
-  hash and write-once schema;
-- prepare a post-Stage-H committed baseline for a separate two-author decision.
+- preserve and independently review the completed Stage G, Stage H and Stage I
+  evidence;
+- design a bounded Stage J scientific-integration proposal without changing the
+  result or fitting another target;
+- assign a proposed manuscript claim owner and figure/table location for author
+  review.
 
 Not allowed:
 
-- inspect, fit or preview the real WP2 disease coefficient before a separate
-  post-Stage-H two-author approval bound to the committed exact baseline;
+- rerun, preview or alter the completed Stage I coefficient;
 - reopen or selectively rerun the completed stage-141/142 streams;
 - change the estimand, t(64) method, DGP registry, thresholds or seed base;
-- fit or inspect real WP2 effects;
+- fit or inspect any additional real WP2 effect;
 - fit new-cohort diagnosis/activity effects;
 - introduce S2 by outcome tuning;
 - rewrite the manuscript or figures around RP v4;
@@ -376,15 +398,13 @@ Not allowed:
 
 ## Next gate
 
-`RPV4_STAGE_I__EXPLICIT_TWO_AUTHOR_GO_OR_CLOSE_REAL_EXECUTION`
+`RPV4_STAGE_J__SCIENTIFIC_INTEGRATION_SCOPE_AND_AUTHOR_REVIEW`
 
-Stage I first requires a new authorization from Zhi Chen and Teng Qi. The GO
-must bind the committed Git baseline, Stage H input-manifest SHA-256, exact
-execution-script SHA-256 and `D:\bioinfor\python.exe`. Only then may one
-write-once `delta_profile` OLS/HC3/t(64) result be produced. No preview,
-fallback, donor removal, alternate target or selective rerun is permitted.
-Large data download, external outcomes, WP4, manuscript replacement and
-submission remain outside this authorization.
+Stage I is complete and must not be rerun. Stage J should adjudicate whether the
+bounded measurement-rule sensitivity result belongs in the redesigned
+manuscript and assign its exact claim owner and figure/table location. Large
+data download, external outcomes, WP4, manuscript replacement and submission
+remain outside the completed Stage I authorization.
 
 ## Canonical evidence
 
@@ -413,3 +433,6 @@ submission remain outside this authorization.
 - [`phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/09_STAGE_H_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/09_STAGE_H_ADVISOR_REVIEW.md)
 - [`phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/10_STAGE_I_EXECUTION_CONTRACT.md`](../phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/10_STAGE_I_EXECUTION_CONTRACT.md)
 - [`00_project_management/action_record_2026-10-11_rp_v4_stageH_effect_blind_prefit.md`](action_record_2026-10-11_rp_v4_stageH_effect_blind_prefit.md)
+- [`phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/04_STAGE_I_GATE_STATUS.json`](../phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/04_STAGE_I_GATE_STATUS.json)
+- [`phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/05_STAGE_I_ADVISOR_REVIEW.md`](../phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/05_STAGE_I_ADVISOR_REVIEW.md)
+- [`00_project_management/action_record_2026-10-11_rp_v4_stageI_single_real_delta_profile.md`](action_record_2026-10-11_rp_v4_stageI_single_real_delta_profile.md)

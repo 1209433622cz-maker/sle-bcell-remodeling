@@ -34,19 +34,21 @@ passed all 30 applicable synthetic scenarios; 10 mandatory boundary scenarios
 were retained. Stage H then bound the exact 68-donor real-input geometry and
 confirmed, without constructing a response, that the observed design, support,
 library and mixture anchors are inside the frozen synthetic applicability
-domain. No real disease/activity coefficient has been fit. Manuscript
-replacement, submission, GitHub Release and Zenodo updates remain on hold.
+domain. Both authors then approved all six Stage I conditions. The single
+write-once real `delta_profile` fit completed and found a positive
+measurement-rule association difference. Manuscript replacement, submission,
+GitHub Release and Zenodo updates remain on hold pending integration review.
 
 Current gate:
 
 ```text
-READY_FOR_EXPLICIT_TWO_AUTHOR_DECISION__STAGE_I_NOT_AUTHORIZED
+PASS_STAGE_I_WRITE_ONCE_EXECUTION__POSITIVE_DELTA_PROFILE_ASSOCIATION__HOLD_AUTOMATIC_UNLOCK
 ```
 
 Next stage:
 
 ```text
-RPV4_STAGE_I__AUTHOR_SIGNOFF_AND_SINGLE_REAL_DELTA_PROFILE_EXECUTION
+RPV4_STAGE_J__SCIENTIFIC_INTEGRATION_SCOPE_AND_AUTHOR_REVIEW
 ```
 
 ## Scientific position
@@ -76,7 +78,23 @@ effects and the identifiability of those quantities.
 
 ## RP v4 progress
 
-### Stage I author-decision preflight
+### Stage I: single real `delta_profile`
+
+- Zhi Chen and Teng Qi jointly approved all six frozen conditions and one
+  write-once execution bound to commit `b413ce09fae520eef0a7a781ee71ddece7606be0`.
+- The sole estimate was `0.034925` T0 score units (HC3 SE `0.011559`, t(64)
+  95% CI `0.011834` to `0.058016`, two-sided `P=0.003612`).
+- Under the frozen sign convention, the managed-SLE versus control association
+  was greater under the fixed-profile measurement rule than under pooled counts.
+- This is bounded measurement/mixing-rule sensitivity evidence, not causal
+  mediation, a cell-intrinsic disease effect or validation of other targets.
+- No donor-level response was exported, no fallback or rerun occurred, and no
+  external outcome, manuscript or submission gate was automatically unlocked.
+
+Decision:
+`PASS_STAGE_I_WRITE_ONCE_EXECUTION__POSITIVE_DELTA_PROFILE_ASSOCIATION__HOLD_AUTOMATIC_UNLOCK`.
+
+### Historical Stage I author-decision preflight
 
 - Rechecks the clean synchronized `main` baseline, all 10 Stage H controlled
   files, the input-manifest and execution-script hashes, and the exact qualified
@@ -88,7 +106,7 @@ effects and the identifiability of those quantities.
 - Does not count a general instruction to continue as approval by both authors.
   No real disease/activity response has been loaded or fitted.
 
-Decision:
+Checkpoint decision, subsequently superseded by the authorized execution:
 `READY_FOR_EXPLICIT_TWO_AUTHOR_DECISION__STAGE_I_NOT_AUTHORIZED`.
 
 The next scientific action is a binary author decision on the exact six-condition
@@ -600,6 +618,7 @@ using [Data/README.md](Data/README.md) and verify the recorded checksums.
 | RP v4 Stage F2 integrity hardening freeze | [`phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/`](phase17_v7/rp_v4_redesign/20261011_stageF2_integrity_hardening/) |
 | RP v4 Stage G final synthetic validation | [`phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/`](phase17_v7/rp_v4_redesign/20261011_stageG_final_synthetic_validation/) |
 | RP v4 Stage H effect-blind applicability preflight | [`phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/`](phase17_v7/rp_v4_redesign/20261011_stageH_effect_blind_prefit/) |
+| RP v4 Stage I single real delta-profile result | [`phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/`](phase17_v7/rp_v4_redesign/20261011_stageI_single_real_delta_profile/) |
 | Historical RP v3 status | [`00_project_management/RP_V3_REDESIGN_STATUS.md`](00_project_management/RP_V3_REDESIGN_STATUS.md) |
 | Full file audit | [`00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md`](00_project_management/full_project_audit_2026-10-10/FINAL_FULL_PROJECT_AUDIT_2026-10-10.md) |
 | Valuable asset register | [`00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv`](00_project_management/VALUABLE_ASSET_REGISTER_2026-10-10.csv) |

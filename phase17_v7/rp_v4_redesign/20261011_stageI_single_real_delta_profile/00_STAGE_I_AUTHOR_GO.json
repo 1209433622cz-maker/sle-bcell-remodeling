@@ -1,0 +1,19 @@
+{
+  "GO_FOR_SINGLE_REAL_DELTA_PROFILE": true,
+  "acknowledge_association_not_causal_mediation": true,
+  "acknowledge_no_other_target_external_outcome_or_submission_unlock": true,
+  "approve_exact_68_donor_31_37_design": true,
+  "approve_single_estimand_delta_profile": true,
+  "approve_single_method_OLS_HC3_t64": true,
+  "approve_write_once_result_and_no_preview": true,
+  "approved_at": "2026-10-11T07:51:32.5628422Z",
+  "approved_by": [
+    "Zhi Chen",
+    "Teng Qi"
+  ],
+  "binding_git_commit": "b413ce09fae520eef0a7a781ee71ddece7606be0",
+  "execution_script_sha256": "bfaec257573be85c972edb72bb29f441a2e4fcd681402ee59d1528c43f91071d",
+  "input_binding_manifest_sha256": "38174638ebcd927276e8d845a1a27041cf17017cd8088cfd6eb5401d66e213f0",
+  "qualified_python_executable": "D:/bioinfor/python.exe",
+  "schema": "RP_V4_STAGE_I_REAL_DELTA_PROFILE_GO_1.0"
+}
