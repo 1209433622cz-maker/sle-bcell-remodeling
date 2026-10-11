@@ -1,0 +1,19 @@
+{
+  "approve_approximately_233_209_mb_sra_download": false,
+  "approve_at_least_2_5_tb_scratch": false,
+  "approve_disease_blind_count_and_qc_only": false,
+  "approve_fail_closed_stop_without_outcome_fit": false,
+  "approve_full_quality_sra_only": false,
+  "approve_pinned_gencode50_nfcore3270_pipeline": false,
+  "approved_by_teng_qi": false,
+  "approved_by_zhi_chen": false,
+  "decision": "HOLD_NOT_AUTHORIZED",
+  "new_external_outcome_execution_authorized": false,
+  "qualified_runtime_receipt_sha256": "BIND_AFTER_RUNTIME_QUALIFICATION",
+  "qualified_storage_root": "",
+  "runinfo_sha256": "25f5a677e283d3f3dedf957699c8c56abfdb6e41aafc09b2fb36f054fe441ad0",
+  "schema": "RPV4_STAGE_N_RAW_RECONSTRUCTION_AUTHORIZATION_1.0",
+  "stage_m_gate_sha256": "BIND_AFTER_STAGE_M_COMMIT",
+  "status": "UNSIGNED_TEMPLATE",
+  "submission_or_release_authorized": false
+}

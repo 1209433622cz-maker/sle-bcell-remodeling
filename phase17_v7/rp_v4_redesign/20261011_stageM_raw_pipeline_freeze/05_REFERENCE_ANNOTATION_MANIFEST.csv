@@ -1,0 +1,4 @@
+resource,assembly,release,filename,url,checksum_algorithm,expected_checksum,status
+genome_fasta,GRCh38.p14_primary_assembly,GENCODE_50,GRCh38.primary_assembly.genome.fa.gz,https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_50/GRCh38.primary_assembly.genome.fa.gz,MD5,da1a11258be075cfa7af718162c894e7,FROZEN_NOT_DOWNLOADED
+gene_annotation_gtf,GRCh38.p14_primary_assembly,GENCODE_50,gencode.v50.primary_assembly.annotation.gtf.gz,https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_50/gencode.v50.primary_assembly.annotation.gtf.gz,MD5,289b91e5e95e8b0450d223246f10a12e,FROZEN_NOT_DOWNLOADED
+gencode_checksum_manifest,GRCh38.p14_primary_assembly,GENCODE_50,MD5SUMS,https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_50/MD5SUMS,SOURCE_MANIFEST,VERIFY_AT_RETRIEVAL,FROZEN_NOT_DOWNLOADED

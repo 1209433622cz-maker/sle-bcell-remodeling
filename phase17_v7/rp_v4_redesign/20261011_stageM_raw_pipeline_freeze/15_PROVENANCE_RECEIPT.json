@@ -1,0 +1,14 @@
+{
+  "expression_matrix_read": false,
+  "external_outcome_fitted": false,
+  "internet_checked_on": "2026-10-11",
+  "official_reference_checksum_source": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_50/MD5SUMS",
+  "raw_download_started": false,
+  "reference_download_started": false,
+  "runinfo": "phase17_v7/rp_v4_redesign/20261010_stageC_single_g2c_external_input_protocol_freeze/source_metadata/PRJNA1093470_RunInfo.csv",
+  "runinfo_sha256": "25f5a677e283d3f3dedf957699c8c56abfdb6e41aafc09b2fb36f054fe441ad0",
+  "schema": "RPV4_STAGE_M_PROVENANCE_1.0",
+  "stage_l_manifest_sha256": "b35741544b5ab939db052be1a42743c6abce55ba02230df7bdf9c6227ba95b42",
+  "stage_l_root": "phase17_v7/rp_v4_redesign/20261011_stageL_external_cohort_gate",
+  "stage_l_sample_map_sha256": "212ae3bad4affc4b3b8c2ecb88a93126f03ff6f21a48f2c557ed66cbe26ee60a"
+}

@@ -1,0 +1,34 @@
+{
+  "acceptance": {
+    "absolute_bias_max": 0.05,
+    "alternative_power_is_descriptive_only": true,
+    "coverage_rate_min": 0.925,
+    "null_type1_rate_max": 0.075
+  },
+  "alternative_replicates_per_scenario": 10000,
+  "checks": {
+    "all_eight_bias_checks_pass": true,
+    "all_eight_coverage_rates_pass": true,
+    "all_six_null_type1_rates_pass": true
+  },
+  "decision": "PASS_PROSPECTIVE_SMALL_SAMPLE_HC3_T_GATE",
+  "design_geometry": {
+    "batch_activity_cells": {
+      "active_batch2": 5,
+      "active_batch3": 7,
+      "inactive_batch2": 7,
+      "inactive_batch3": 7
+    },
+    "condition_number": 3.094129741368656,
+    "n_active": 12,
+    "n_inactive": 14,
+    "n_patients": 26,
+    "rank": 3,
+    "residual_df": 23
+  },
+  "expression_outcome_accessed": false,
+  "null_replicates_per_scenario": 25000,
+  "pass": true,
+  "schema": "RPV4_STAGE_M_SMALL_SAMPLE_GATE_1.0",
+  "seed": 20261011
+}

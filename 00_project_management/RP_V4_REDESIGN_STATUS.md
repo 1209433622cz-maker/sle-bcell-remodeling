@@ -6,7 +6,7 @@
 
 **Submission state:** `HOLD`
 
-**Current gate:** `PASS_STAGE_L_METADATA_IDENTITY_AND_UNIQUE_QUESTION_FREEZE__HOLD_RAW_DOWNLOAD_AND_OUTCOME_EXECUTION`
+**Current gate:** `PASS_STAGE_M_DISEASE_BLIND_PIPELINE_AND_SIMULATION_FREEZE__HOLD_RUNTIME_STORAGE_AND_DOWNLOAD_AUTHORIZATION`
 
 ## Scope
 
@@ -22,6 +22,54 @@ The active questions are limited to:
    scale without outcome-based score selection; and
 3. whether a genuinely independent public cohort has recoverable donor units,
    suitable raw counts and a prespecifiable clinical question.
+
+## Stage M completed
+
+### Run and library identity
+
+- The frozen PRJNA1093470 RunInfo retains SHA-256
+  `25f5a677e283d3f3dedf957699c8c56abfdb6e41aafc09b2fb36f054fe441ad0`.
+- It closes exactly over 176 runs, 88 experiments, 88 BioSamples and 88 GSM
+  libraries, with two runs per GSM, 752,698,793,704 bases and 233,209 MB.
+- Disease-blind execution files contain no patient, disease, activity, SLEDAI,
+  cell-type or effect field. The deposited `GSM8180322` title anomaly is not
+  used to infer patient identity.
+
+### Frozen count workflow
+
+- Full-quality SRA Toolkit 3.4.1; SRA Lite is not admitted.
+- nf-core/rnaseq 3.27.0 under Linux x86-64 Docker and Nextflow >=25.10.4 for
+  STAR alignment/QC, followed by Subread featureCounts 2.1.1 for integer
+  fragment counts; no trimming and fixed automatic strandedness.
+- GENCODE release 50 comprehensive primary-assembly GTF and GRCh38.p14 primary
+  assembly FASTA, with official MD5 values frozen before retrieval.
+- Multiple runs merge only within the same SRA experiment/GSM. The 12 frozen
+  IFN/ISG symbols must all map; absent annotation is failure, not zero.
+
+### Prospective small-sample gate
+
+The fixed 26-patient design contains 12 active and 14 inactive SLE patients,
+with intercept, activity and RNA batch and residual df 23. Across 25,000
+replicates in each of six null scenarios, empirical type-I error ranged from
+0.0303 to 0.0436. Across all six null and two alternative scenarios, 95%
+coverage ranged from 0.9564 to 0.9697 and all absolute biases were below 0.05.
+The OLS/HC3/t(23) implementation therefore passes prospectively; alternative
+power was not an acceptance criterion.
+
+### Remaining HOLD
+
+The current host has WSL2 but lacks SRA Toolkit, Nextflow, Docker and
+featureCounts. The largest host-volume free space is approximately 0.354 TB.
+The WSL virtual root reports approximately 0.987 TB but cannot qualify physical
+scratch; both values are below the required 2.5 TB. The two-author Stage N
+template is unsigned. No raw/reference payload was downloaded, no expression
+outcome was read and no activity model was fitted.
+
+Decision:
+`PASS_STAGE_M_DISEASE_BLIND_PIPELINE_AND_SIMULATION_FREEZE__HOLD_RUNTIME_STORAGE_AND_DOWNLOAD_AUTHORIZATION`.
+
+Next gate:
+`RPV4_STAGE_N__QUALIFIED_RUNTIME_STORAGE_AND_WRITE_ONCE_RAW_RECONSTRUCTION`.
 
 ## Stage A completed
 

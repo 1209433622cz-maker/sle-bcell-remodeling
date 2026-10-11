@@ -1,0 +1,47 @@
+{
+  "acceptance": {
+    "absolute_bias_max_each_scenario": 0.05,
+    "coverage_min_each_scenario": 0.925,
+    "power": "DESCRIPTIVE_ONLY_NO_SELECTION",
+    "type1_max_each_null": 0.075
+  },
+  "alternative_effects": [
+    0.5,
+    0.8
+  ],
+  "design_columns": [
+    "intercept",
+    "active_SLE",
+    "RNA_batch_3"
+  ],
+  "design_geometry": {
+    "batch_activity_cells": {
+      "active_batch2": 5,
+      "active_batch3": 7,
+      "inactive_batch2": 7,
+      "inactive_batch3": 7
+    },
+    "condition_number": 3.094129741368656,
+    "n_active": 12,
+    "n_inactive": 14,
+    "n_patients": 26,
+    "rank": 3,
+    "residual_df": 23
+  },
+  "design_record_count": 26,
+  "estimator": "donor-level OLS active coefficient",
+  "expression_outcome_accessed": false,
+  "null_scenarios": [
+    "homoskedastic normal",
+    "fourfold active-group variance",
+    "fourfold batch-3 variance",
+    "scaled t(3)",
+    "centered standardized lognormal",
+    "5% contaminated normal"
+  ],
+  "reference_distribution": "two-sided Student t with 23 residual df",
+  "response_source": "SYNTHETIC_ONLY",
+  "schema": "RPV4_STAGE_M_SMALL_SAMPLE_PROTOCOL_1.0",
+  "seed": 20261011,
+  "variance": "HC3"
+}

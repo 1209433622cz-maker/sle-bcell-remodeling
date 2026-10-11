@@ -7,7 +7,7 @@ submission on hold. RP v3 is retained as a complete bounded historical record.
 The public v1.1.0 release described below remains an immutable historical
 reproducibility snapshot; it does not contain the later RP v3 analyses or the
 RP v4 Stage A, Stage C, Stage D, Stage E2, Stage F2, Stage G, Stage H,
-Stage I, Stage K and Stage L work.
+Stage I, Stage K, Stage L and Stage M work.
 
 Completed active gates:
 
@@ -71,6 +71,13 @@ Completed active gates:
   without reading expression outcomes, froze the 26-patient paired-SLE activity
   question, documented cross-assay identity/SLEDAI conflicts, and kept the raw
   SRA download and all external outcome models closed.
+- RP v4 Stage M: reconciled the hashed PRJNA1093470 RunInfo to 176 runs and 88
+  two-run GSM libraries; emitted a disease-blind nf-core samplesheet; pinned
+  full-quality SRA Toolkit 3.4.1, nf-core/rnaseq 3.27.0, Subread featureCounts
+  2.1.1 and GENCODE 50 on GRCh38.p14 primary assembly; and passed the
+  prospective OLS/HC3/t(23) simulation gate. Runtime, 2.5 TB storage and
+  two-author download approval are still absent, so no sequence/reference
+  payload or external outcome was read.
 
 - Stage 0: recovered and hashed 21/21 inputs; registered units, chronology,
   estimands, branches and open parameters.
@@ -172,6 +179,11 @@ powershell -ExecutionPolicy Bypass `
   -File .\audit_tools\run_rp_v4_stageL.ps1 `
   -Python D:\bioinfor\python.exe `
   -Output .\phase17_v7\rp_v4_redesign\stageL_reproduction
+
+powershell -ExecutionPolicy Bypass `
+  -File .\audit_tools\run_rp_v4_stageM.ps1 `
+  -Python D:\bioinfor\python.exe `
+  -Output .\phase17_v7\rp_v4_redesign\stageM_reproduction_freeze
 ```
 
 The Stage I real execution is write-once and has completed. Do not run it
@@ -187,11 +199,15 @@ manifest. The validated local runtime was `D:\bioinfor\python.exe` (Python
 3.13.7, NumPy 2.3.3). No real WP2 response was loaded or fitted.
 
 The active next gate is
-`RPV4_STAGE_M__RAW_RECONSTRUCTION_AUTHORIZATION_AND_DISEASE_BLIND_COUNT_PIPELINE_FREEZE`.
-Stage I must not be rerun. External outcomes, the 233.209 GB SRA download, WP4,
-submission package, GitHub Release and Zenodo remain unauthorized. See
+`RPV4_STAGE_N__QUALIFIED_RUNTIME_STORAGE_AND_WRITE_ONCE_RAW_RECONSTRUCTION`.
+Stage I must not be rerun. Stage M froze the count pipeline and passed the
+synthetic inference gate, but the 233.209 GB SRA download still requires a
+qualified Linux/Docker runtime, at least 2.5 TB scratch and explicit two-author
+authorization. External outcomes, WP4, submission package, GitHub Release and
+Zenodo remain unauthorized. See
 `phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/`,
 `phase17_v7/rp_v4_redesign/20261011_stageL_external_cohort_gate/` and
+`phase17_v7/rp_v4_redesign/20261011_stageM_raw_pipeline_freeze/` and
 `00_project_management/RP_V4_REDESIGN_STATUS.md`.
 
 ## Current correction status

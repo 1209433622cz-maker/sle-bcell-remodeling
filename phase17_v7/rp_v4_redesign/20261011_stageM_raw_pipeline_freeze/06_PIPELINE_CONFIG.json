@@ -1,0 +1,78 @@
+{
+  "count_seal": {
+    "disease_metadata_join": "PROHIBITED_UNTIL_COUNT_QC_SEAL_AND_SIMULATION_GATE_PASS",
+    "expected_libraries": 88,
+    "missing_symbol_rule": "TECHNICAL_FAILURE_NOT_ZERO",
+    "required_ifn_symbols": [
+      "IFI44L",
+      "IFI6",
+      "IFIT1",
+      "IFIT2",
+      "IFIT3",
+      "IRF7",
+      "ISG15",
+      "LY6E",
+      "MX1",
+      "MX2",
+      "OAS1",
+      "OAS2"
+    ],
+    "true_zero_rule": "RETAIN_ZERO",
+    "unit": "GEO library/GSM after within-experiment run merge"
+  },
+  "integer_count_step": {
+    "both_ends_required": true,
+    "chimeric_pairs_excluded": true,
+    "command_template": "featureCounts -T <N> -p --countReadPairs -B -C -s <0|1|2> -t exon -g gene_id -a <GENCODE_GTF> -o <GSM_COUNTS> <GSM_STAR_BAM>",
+    "input": "one saved STAR BAM per merged GSM library",
+    "merge_rule": "merge integer gene_id rows across 88 GSM files in frozen GSM order",
+    "multi_mapping": "default exclusion",
+    "multi_overlap": "default exclusion",
+    "official_source": "https://subread.sourceforge.net/",
+    "strandedness_rule": "translate each sealed nf-core auto call to featureCounts 0/1/2; undetermined calls stop without outcome access",
+    "tool": "Subread featureCounts",
+    "version": "2.1.1"
+  },
+  "official_sources": {
+    "gencode_release_50": "https://www.gencodegenes.org/human/",
+    "nfcore_multiple_runs": "https://nf-co.re/rnaseq/usage",
+    "nfcore_rnaseq_3_27_0": "https://nf-co.re/rnaseq/3.27.0",
+    "sra_toolkit_3_4_1": "https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit"
+  },
+  "reference": {
+    "annotation": "GENCODE release 50 comprehensive primary-assembly GTF",
+    "assembly": "GRCh38.p14 primary assembly",
+    "star_index": "built by the pinned nf-core/rnaseq pipeline from the two verified resources"
+  },
+  "runinfo_sha256": "25f5a677e283d3f3dedf957699c8c56abfdb6e41aafc09b2fb36f054fe441ad0",
+  "schema": "RPV4_STAGE_M_PIPELINE_CONFIG_1.0",
+  "sra_toolkit": {
+    "archive_policy": "SRA_NORMALIZED_FULL_QUALITY_ONLY",
+    "compression": "pigz --processes <N> <FASTQ>",
+    "conversion": "fasterq-dump --split-files --threads <N> --temp <SCRATCH> <SRR>",
+    "official_md5_manifest": "https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/3.4.1/md5sum.txt",
+    "prefetch": "prefetch --type sra --max-size 100G <SRR>",
+    "ubuntu64_archive_md5": "ec6e9056a2bfebcf23c6cd6e02951ef2",
+    "validation": "vdb-validate <SRR_DIRECTORY>",
+    "version": "3.4.1"
+  },
+  "study": "GSE262846_PRJNA1093470",
+  "workflow": {
+    "aligner": "star_salmon",
+    "engine": "Nextflow",
+    "minimum_version": "25.10.4",
+    "outcome_fields_in_samplesheet": false,
+    "pipeline": "nf-core/rnaseq",
+    "pipeline_version": "3.27.0",
+    "profile": "docker",
+    "release_commit_short": "a1fcddd",
+    "salmon_role": "strandedness support and secondary pipeline QC only; not the integer-count owner",
+    "sample_exclusion_by_disease_qc": false,
+    "save_align_intermeds": true,
+    "skip_trimming": true,
+    "stranded_threshold": 0.8,
+    "strandedness": "auto",
+    "technical_replicate_rule": "identical GSM sample IDs are concatenated before alignment",
+    "unstranded_threshold": 0.1
+  }
+}

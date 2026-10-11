@@ -39,19 +39,23 @@ write-once real `delta_profile` fit completed and found a positive
 measurement-rule association difference. Stage K then integrated this result
 only as an uncertainty-method sensitivity for the same 68-donor estimand;
 Stage L independently froze a clinically distinct external-cohort question
-without reading expression outcomes. Submission, external outcome fitting,
+without reading expression outcomes. Stage M then closed the 176-run/88-library
+identity map, pinned a disease-blind GENCODE 50 / nf-core-rnaseq 3.27.0 count
+workflow and passed a prospective synthetic HC3-t(23) small-sample gate. The
+current host still lacks the canonical toolchain and 2.5 TB scratch, and no
+download authorization has been signed. Submission, external outcome fitting,
 GitHub Release and Zenodo updates remain on hold.
 
 Current gate:
 
 ```text
-PASS_STAGE_L_METADATA_IDENTITY_AND_UNIQUE_QUESTION_FREEZE__HOLD_RAW_DOWNLOAD_AND_OUTCOME_EXECUTION
+PASS_STAGE_M_DISEASE_BLIND_PIPELINE_AND_SIMULATION_FREEZE__HOLD_RUNTIME_STORAGE_AND_DOWNLOAD_AUTHORIZATION
 ```
 
 Next stage:
 
 ```text
-RPV4_STAGE_M__RAW_RECONSTRUCTION_AUTHORIZATION_AND_DISEASE_BLIND_COUNT_PIPELINE_FREEZE
+RPV4_STAGE_N__QUALIFIED_RUNTIME_STORAGE_AND_WRITE_ONCE_RAW_RECONSTRUCTION
 ```
 
 ## Scientific position
@@ -80,6 +84,33 @@ predeclared questions about annotation sensitivity, composition, within-state
 effects and the identifiability of those quantities.
 
 ## RP v4 progress
+
+### Stage M: disease-blind raw-count pipeline freeze
+
+- The Stage C RunInfo SHA-256 closes exactly over 176 unique paired-end runs,
+  88 experiments, 88 BioSamples and 88 GSM libraries; every GSM has exactly
+  two runs. Totals remain 752,698,793,704 bases and 233,209 MB.
+- The execution map and nf-core samplesheet contain no patient, disease,
+  SLEDAI, activity, cell-type or effect field. Patient identity is joined only
+  after a sealed count/QC object, so the known `GSM8180322` title typo cannot
+  silently alter donor mapping.
+- The only admitted workflow is full-quality SRA Toolkit 3.4.1 followed by
+  nf-core/rnaseq 3.27.0 under Linux x86-64 Docker for STAR alignment/QC, then
+  standalone Subread featureCounts 2.1.1 for integer fragment counts, with no
+  trimming, automatic strandedness and GENCODE 50 GRCh38.p14 primary assembly.
+- The fixed 26-patient OLS/HC3/t(23) estimator passed six null and two
+  alternative synthetic scenarios. Null rejection rates were 0.0303-0.0436;
+  interval coverage was 0.9564-0.9697. Alternative power is descriptive only.
+- WSL2 is present, but SRA Toolkit, Nextflow, Docker and featureCounts are absent.
+  The largest host-volume free space is approximately 0.354 TB. WSL reports a
+  0.987 TB virtual root, but this is diagnostic only and cannot qualify physical
+  scratch. Both are below the frozen 2.5 TB requirement, and the Stage N
+  authorization template remains unsigned.
+- No SRA/reference payload was downloaded, no expression matrix was read and
+  no external activity coefficient was fitted.
+
+Decision:
+`PASS_STAGE_M_DISEASE_BLIND_PIPELINE_AND_SIMULATION_FREEZE__HOLD_RUNTIME_STORAGE_AND_DOWNLOAD_AUTHORIZATION`.
 
 ### Stage K-L: bounded integration and external-question freeze
 

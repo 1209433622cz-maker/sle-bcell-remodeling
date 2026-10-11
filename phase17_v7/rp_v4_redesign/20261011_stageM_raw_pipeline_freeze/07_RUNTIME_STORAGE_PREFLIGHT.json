@@ -1,0 +1,58 @@
+{
+  "canonical_target": "Linux_x86_64_Docker",
+  "created_at": "2026-10-11T18:02:34+08:00",
+  "filesystem_volumes": [
+    {
+      "free_bytes": 106349572096,
+      "root": "C:\\",
+      "total_bytes": 355124375552
+    },
+    {
+      "free_bytes": 99421716480,
+      "root": "D:\\",
+      "total_bytes": 644743987200
+    },
+    {
+      "free_bytes": 353716228096,
+      "root": "H:\\",
+      "total_bytes": 1024207089664
+    }
+  ],
+  "host": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.7"
+  },
+  "largest_host_volume_free_bytes": 353716228096,
+  "largest_observed_free_bytes": 986807500800,
+  "minimum_scratch_bytes": 2500000000000,
+  "pass": false,
+  "runtime_ready": false,
+  "schema": "RPV4_STAGE_M_RUNTIME_STORAGE_PREFLIGHT_1.0",
+  "storage_readiness_rule": "host filesystem volumes only; WSL virtual-root capacity is diagnostic and cannot qualify physical scratch",
+  "storage_ready": false,
+  "windows_tools": {
+    "docker": null,
+    "fasterq-dump": null,
+    "featureCounts": null,
+    "nextflow": null,
+    "prefetch": null,
+    "vdb-validate": null
+  },
+  "wsl": {
+    "available": true,
+    "distribution": "Ubuntu-22.04",
+    "root_free_bytes": 986807500800,
+    "tools": {
+      "apptainer": null,
+      "docker": null,
+      "fasterq-dump": null,
+      "featureCounts": null,
+      "java": "/usr/bin/java",
+      "nextflow": null,
+      "prefetch": null,
+      "singularity": null,
+      "vdb-validate": null
+    }
+  },
+  "wsl_root_reported_free_bytes": 986807500800
+}
