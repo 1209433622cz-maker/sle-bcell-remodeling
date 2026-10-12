@@ -76,3 +76,15 @@ phase17_v7/npj_sba_figure5_regulatory_ceiling/**/*.diff -whitespace
 phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/** -text -whitespace
 phase17_v7/npj_sba_scientific_presentation_maintenance_freeze/**/*.diff -whitespace
 00_project_management/post_s7_independent_review_2026-09-09/received/** -text -whitespace
+
+# Public review manifests bind exact bytes. Do not normalize new evidence or
+# source-data copies when cloning on another operating system.
+CITATION.cff text eol=lf
+0_admin/CITATION.cff text eol=lf
+0_admin/PUBLIC_*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+3_results/scientific_summary/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+4_figures/Fig1/candidate_2026-10-12_truetype/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+4_figures/Supplementary/source_data/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+4_figures/Supplementary/SUPPLEMENTARY_SOURCE_COPY_MANIFEST.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+5_manuscript/scientific_narrative_candidate_2026-10-12/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+7_report/scientific_narrative_reaudit_2026-10-12/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

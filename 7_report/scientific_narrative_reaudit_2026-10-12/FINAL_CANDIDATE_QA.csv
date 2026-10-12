@@ -1,0 +1,128 @@
+﻿check,status,detail
+Unchanged canonical 4_figures/Fig1/canonical/Figure_1.pdf,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Fig1/canonical/Figure_1.png,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Fig2/canonical/Figure_2.pdf,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Fig2/canonical/Figure_2.png,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Fig3/canonical/Figure_3.pdf,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Fig3/canonical/Figure_3.png,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Fig4/canonical/Figure_4.pdf,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Fig4/canonical/Figure_4.png,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Fig5/canonical/Figure_5.pdf,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Fig5/canonical/Figure_5.png,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S10_overlap_depletion.pdf,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S10_overlap_depletion.png,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S1_source_integrity_qc.pdf,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S1_source_integrity_qc.png,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S2_representation_diagnostics.pdf,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S2_representation_diagnostics.png,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S3_fine_state_failure_transition_structure.pdf,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S3_fine_state_failure_transition_structure.png,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S4_identity_boundary_and_propagation.pdf,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S4_identity_boundary_and_propagation.png,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S5_composition_diagnostics.pdf,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S5_composition_diagnostics.png,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S6_pseudobulk_ranked_list_diagnostics.pdf,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S6_pseudobulk_ranked_list_diagnostics.png,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S7_replication_robustness_diagnostics.pdf,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S7_replication_robustness_diagnostics.png,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S8_reference_calibration_boundary.pdf,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S8_reference_calibration_boundary.png,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S9_regulator_correlation_sensitivity.pdf,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Supplementary/Supplementary_Figure_S9_regulator_correlation_sensitivity.png,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Fig1/source_data/Figure_1_source_data.csv,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Fig2/source_data/Figure_2_source_data.csv,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Fig3/source_data/Figure_3_source_data.csv,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Fig4/source_data/Figure_4_source_data.csv,PASS,no canonical scientific asset overwritten
+Unchanged canonical 4_figures/Fig5/source_data/Figure_5_source_data.csv,PASS,no canonical scientific asset overwritten
+Unchanged canonical phase17_v7/npj_sba_figure5_regulatory_ceiling/20260908_canonical_source_integration/figures/source_data/Supplementary_Figure_S1_source_data.csv,PASS,no canonical scientific asset overwritten
+Unchanged canonical phase17_v7/npj_sba_figure5_regulatory_ceiling/20260908_canonical_source_integration/figures/source_data/Supplementary_Figure_S2_source_data.csv,PASS,no canonical scientific asset overwritten
+Unchanged canonical phase17_v7/npj_sba_figure5_regulatory_ceiling/20260908_canonical_source_integration/figures/source_data/Supplementary_Figure_S3_source_data.csv,PASS,no canonical scientific asset overwritten
+Unchanged canonical phase17_v7/npj_sba_figure5_regulatory_ceiling/20260908_canonical_source_integration/figures/source_data/Supplementary_Figure_S4_source_data.csv,PASS,no canonical scientific asset overwritten
+Unchanged canonical phase17_v7/npj_sba_figure5_regulatory_ceiling/20260908_canonical_source_integration/figures/source_data/Supplementary_Figure_S5_source_data.csv,PASS,no canonical scientific asset overwritten
+Unchanged canonical phase17_v7/npj_sba_figure5_regulatory_ceiling/20260908_canonical_source_integration/figures/source_data/Supplementary_Figure_S6_source_data.csv,PASS,no canonical scientific asset overwritten
+Unchanged canonical phase17_v7/npj_sba_figure5_regulatory_ceiling/20260908_canonical_source_integration/figures/source_data/Supplementary_Figure_S7_source_data.csv,PASS,no canonical scientific asset overwritten
+Unchanged canonical phase17_v7/npj_sba_figure5_regulatory_ceiling/20260908_canonical_source_integration/figures/source_data/Supplementary_Figure_S8_source_data.csv,PASS,no canonical scientific asset overwritten
+Unchanged canonical phase17_v7/npj_sba_figure5_regulatory_ceiling/20260908_canonical_source_integration/figures/source_data/Supplementary_Figure_S9_source_data.csv,PASS,no canonical scientific asset overwritten
+Unchanged canonical phase17_v7/npj_sba_figure5_regulatory_ceiling/20260908_canonical_source_integration/figures/source_data/Supplementary_Figure_S10_source_data.csv,PASS,no canonical scientific asset overwritten
+Panel selection coverage,PASS,21 main and 38 supplementary panels; individual roles and rejected alternatives
+Claim owners have existing sources,PASS,15 claim/design records including negative ceilings
+G2C saved scenario accounting,PASS,saved adjudication recount only; no new simulation or independent trial-level readjudication this round
+G2C adjudication receipt binding,PASS,saved CSV matches immutable gate binding
+Reference identities,PASS,33 unchanged bibliographic paragraphs
+Reference automatic numbering,PASS,Reference paragraphs have OOXML automatic list numbering; literal-number parsers need a separate check
+Main editable text/Markdown identity,PASS,"including title, reference numbers and legends"
+Supplement editable text/Markdown identity,PASS,including table cells and image links
+Citation first-appearance sequence,PASS,"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]"
+Discussion has interpretation not a new numeric packet,PASS,numeric packet has a Results owner and Table S10
+Measurement-rule body type size,PASS,two inherited 9 pt paragraphs rebuilt as 12 pt
+Supplement figure media fingerprints,PASS,all ten embedded images unchanged
+Rendered supplementary image fingerprints,PASS,baseline and candidate rerendered with the same current WPS helper/settings; historical lower-resolution PDF is not an equal-renderer comparator
+S1 heading/image co-location,PASS,[7]
+S2 heading/image co-location,PASS,[8]
+S3 heading/image co-location,PASS,[9]
+S4 heading/image co-location,PASS,[10]
+S5 heading/image co-location,PASS,[11]
+S6 heading/image co-location,PASS,[12]
+S7 heading/image co-location,PASS,[13]
+S8 heading/image co-location,PASS,[14]
+S9 heading/image co-location,PASS,[15]
+S10 heading/image co-location,PASS,[16]
+Manuscript final page count,PASS,33
+Manuscript page 1 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 2 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 3 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 4 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 5 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 6 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 7 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 8 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 9 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 10 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 11 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 12 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 13 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 14 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 15 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 16 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 17 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 18 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 19 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 20 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 21 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 22 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 23 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 24 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 25 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 26 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 27 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 28 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 29 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 30 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 31 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 32 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Manuscript page 33 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Supplementary_Information final page count,PASS,16
+Supplementary_Information page 1 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Supplementary_Information page 2 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Supplementary_Information page 3 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Supplementary_Information page 4 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Supplementary_Information page 5 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Supplementary_Information page 6 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Supplementary_Information page 7 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Supplementary_Information page 8 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Supplementary_Information page 9 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Supplementary_Information page 10 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Supplementary_Information page 11 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Supplementary_Information page 12 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Supplementary_Information page 13 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Supplementary_Information page 14 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Supplementary_Information page 15 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Supplementary_Information page 16 render present,PASS,rendered and visually inspected; no clipping/overlap observed
+Figure 1 candidate TrueType export,PASS,"[('Type0', 'ELUGPM+ArialMT'), ('Type0', 'ELUGPM+Arial-BoldMT')]"
+Figure 1 final 170 mm width,PASS,source-built single-page vector
+Figure 1 unchanged source CSV,PASS,byte-identical numerical records; layout/export fix only
+Manuscript accessibility,PASS,"{'high': 0, 'medium': 0, 'low': 0}"
+Supplementary_Information accessibility,PASS,"{'high': 0, 'medium': 0, 'low': 0}"
+Supplementary_Table_S10_source_data.csv source identity,PASS,3_results/current/StageK_Source_Data.csv
+Supplementary_Table_S10_execution_record.json source identity,PASS,3_results/current/StageI_Result.json
+Prior submission package not changed,PASS,candidate work did not refresh this older package

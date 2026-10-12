@@ -1,0 +1,27 @@
+{
+  "schema": "PUBLIC_REPOSITORY_STRUCTURE_1",
+  "date": "2026-10-12",
+  "tracked_paths_seen": 4789,
+  "indexed_payloads": 4785,
+  "indexed_bytes": 972681789,
+  "curated_manifest_assets": 125,
+  "primary_folders": [
+    "0_admin",
+    "1_data",
+    "2_code",
+    "3_results",
+    "4_figures",
+    "5_manuscript",
+    "6_release",
+    "7_report"
+  ],
+  "index_self_exclusions": [
+    "0_admin/PUBLIC_ASSET_MANIFEST.csv",
+    "0_admin/PUBLIC_REPOSITORY_INDEX.csv",
+    "0_admin/REPOSITORY_STRUCTURE_STATUS.json",
+    "7_report/action_records/PUBLIC_REPOSITORY_QA_2026-10-12.json"
+  ],
+  "candidate_adopted": false,
+  "submission_package_refreshed": false,
+  "frozen_backend_relocated": false
+}

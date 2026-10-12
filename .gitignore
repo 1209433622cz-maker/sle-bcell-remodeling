@@ -194,3 +194,13 @@ phase17_v7/rp_v4_redesign/20261011_stageK_limited_integration/qa_r2/
 # trackable; large release ZIPs and the full Git bundle remain local.
 8_archive/github_repository_recreation_2026-10-12/*.bundle
 8_archive/github_repository_recreation_2026-10-12/releases/**/*.zip
+
+# Scientific review: publish compact evidence and editable candidates, not
+# third-party Skill distributions, local path inventories or page-render caches.
+8_reference/qiteng_v03242/
+9_version/scientific_content_reaudit_2026-10-12/
+7_report/scientific_narrative_reaudit_2026-10-12/render_qa/
+7_report/scientific_narrative_reaudit_2026-10-12/Baseline_Supplementary_Information_WPS.pdf
+7_report/scientific_narrative_reaudit_2026-10-12/BASELINE_DOCX_TEXT.md
+7_report/scientific_narrative_reaudit_2026-10-12/PREEXISTING_MD_DOCX_DRIFT.diff
+7_report/action_records/GITHUB_PUSH_RECEIPT_2026-10-12.json

@@ -1,0 +1,134 @@
+{
+  "read_only": true,
+  "models_refitted": false,
+  "checks": [
+    {
+      "check": "Raw count shape",
+      "pass": true,
+      "detail": [
+        150402,
+        30172
+      ]
+    },
+    {
+      "check": "CSR pointer integrity",
+      "pass": true,
+      "detail": {
+        "nnz": 103783938,
+        "pointer_rows": 150403
+      }
+    },
+    {
+      "check": "CSR index/data length",
+      "pass": true,
+      "detail": 103783938
+    },
+    {
+      "check": "All CSR values finite",
+      "pass": true,
+      "detail": 103783938
+    },
+    {
+      "check": "All raw values nonnegative integer",
+      "pass": true,
+      "detail": {
+        "total_counts": 323179379
+      }
+    },
+    {
+      "check": "All gene indices in bounds",
+      "pass": true,
+      "detail": 30172
+    },
+    {
+      "check": "Unique cell IDs",
+      "pass": true,
+      "detail": 150402
+    },
+    {
+      "check": "Representation cell ordering",
+      "pass": true,
+      "detail": "embedding and raw counts retain the same cell order"
+    },
+    {
+      "check": "donor_id unique support",
+      "pass": true,
+      "detail": 259
+    },
+    {
+      "check": "sample_uuid unique support",
+      "pass": true,
+      "detail": 271
+    },
+    {
+      "check": "library_uuid unique support",
+      "pass": true,
+      "detail": 88
+    },
+    {
+      "check": "Representation is embedding-only",
+      "pass": true,
+      "detail": "not a substitute for the separately retained raw count matrix"
+    },
+    {
+      "check": "X_pca dimensions and finiteness",
+      "pass": true,
+      "detail": [
+        150402,
+        50
+      ]
+    },
+    {
+      "check": "X_pca_harmony dimensions and finiteness",
+      "pass": true,
+      "detail": [
+        150402,
+        50
+      ]
+    },
+    {
+      "check": "X_umap_harmony dimensions and finiteness",
+      "pass": true,
+      "detail": [
+        150402,
+        2
+      ]
+    },
+    {
+      "check": "X_umap_unintegrated dimensions and finiteness",
+      "pass": true,
+      "detail": [
+        150402,
+        2
+      ]
+    },
+    {
+      "check": "External source TAR member structure",
+      "pass": true,
+      "detail": {
+        "regular_members": 112,
+        "compressed_matrix_members": 56
+      }
+    }
+  ],
+  "pass_count": 17,
+  "fail_count": 0,
+  "files": [
+    {
+      "path": "phase17_v7/gateC2B1/20260810_171000_full_library_doublets/04_full_raw_counts.h5ad",
+      "bytes": 270671628,
+      "sha256": "dc3e96bcc53b52d5c53cc0515ee352dc414ae81340032108830408e06f244ad5"
+    },
+    {
+      "path": "phase17_v7/gateC2B2/20260812_full_representation/06_primary_all_cells_representation.h5ad",
+      "bytes": 114432893,
+      "sha256": "594a040fc483973b38b744d5d0e526633d7f1c91f2544d34c28d35f2084e3afb"
+    },
+    {
+      "path": "Data/processed/GSE135779_nehar_validation/source/GSE135779_RAW.tar",
+      "bytes": 1299783680,
+      "sha256": "b5764c303ac76873738d6e05b6992277fcd6a14bf5bfcb27331e54dcbcac619b"
+    }
+  ],
+  "limits": "Does not revalidate all biological annotations, refit disease models, or decompress and re-estimate every external matrix."
+}

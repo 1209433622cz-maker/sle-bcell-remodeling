@@ -1,10 +1,10 @@
 cff-version: 1.2.0
-message: "If you use this software or its derived source data, please cite the archived release."
+message: "Cite this historical core archive; later RP v3/RP v4 work and manuscript candidates are not included in this DOI."
 title: "SLE B-cell remodeling analysis: code, source data and reproducible release"
 type: software
-version: 1.0.0
-date-released: 2026-08-25
-doi: "10.5281/zenodo.22086892"
+version: 1.1.0
+date-released: 2026-08-29
+doi: "10.5281/zenodo.22151739"
 repository-code: "https://github.com/1209433622cz-maker/sle-bcell-remodeling"
 license: MIT
 authors:
@@ -20,7 +20,7 @@ preferred-citation:
   type: generic
   title: "SLE B-cell remodeling analysis: code, source data and reproducible release"
   year: 2026
-  doi: "10.5281/zenodo.22086892"
+  doi: "10.5281/zenodo.22151739"
   authors:
     - family-names: Chen
       given-names: Zhi

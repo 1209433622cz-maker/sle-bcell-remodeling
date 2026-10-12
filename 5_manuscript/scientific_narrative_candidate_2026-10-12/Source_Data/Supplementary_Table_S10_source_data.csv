@@ -1,0 +1,3 @@
+contrast_id,interval_method,n_donors,n_control,n_managed_SLE,point_estimate_T0,ci_95_low,ci_95_high,standard_error_HC3,nominal_p_value,bootstrap_replicates,data_relationship,provenance
+delta_profile,RPv3_WP1_paired_percentile,68,31,37,0.03492500214665206,0.013789273887900366,0.057129573029123096,,,2000,SAME_DONORS_SAME_ESTIMAND,WP1_earlier_positive_contrast
+delta_profile,RPv4_STAGE_I_HC3_t64,68,31,37,0.034925002146652055,0.011834174910715159,0.05801582938258895,0.011558534552475956,0.0036124588023115677,,SAME_DONORS_SAME_ESTIMAND,post_WP1_method_development_G2C_qualified_nominal_P

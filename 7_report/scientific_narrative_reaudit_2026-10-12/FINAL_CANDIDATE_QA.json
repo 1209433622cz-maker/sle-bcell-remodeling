@@ -1,0 +1,11 @@
+{
+  "checks": 127,
+  "pass": 127,
+  "hold": 0,
+  "visual_pages": 49,
+  "canonical_assets_protected": 45,
+  "author_candidate_review_required": true,
+  "fresh_full_pipeline_rerun": false,
+  "all_33_references_primary_fulltext_revalidated": false,
+  "libreoffice_render_this_round": false
+}

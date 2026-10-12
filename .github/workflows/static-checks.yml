@@ -13,4 +13,10 @@ jobs:
         with:
           python-version: "3.11"
       - name: Compile analysis scripts
-        run: python -m compileall -q 02_analysis/scripts audit_tools
+        run: python -m compileall -q 02_analysis/scripts audit_tools 2_code
+      - name: Test public verification safeguards
+        run: python -m unittest discover -s 2_code/tests -p "test_public_repository.py" -v
+      - name: Verify public repository assets and navigation
+        run: python 2_code/audit_quality_control/verify_repository.py
+      - name: Verify full Git blob inventory
+        run: python 2_code/audit_quality_control/verify_git_inventory.py

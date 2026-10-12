@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "manifest_assets": 125,
+  "navigation_local_links": 125,
+  "required_folders": [
+    "0_admin",
+    "1_data",
+    "2_code",
+    "3_results",
+    "4_figures",
+    "5_manuscript",
+    "6_release",
+    "7_report"
+  ],
+  "errors": [],
+  "scientific_pipeline_rerun": false
+}

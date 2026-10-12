@@ -1,0 +1,45 @@
+﻿check,status,detail
+Figure_1 PDF structure,HOLD,one page; selectable text; extractable non-Type3 fonts=False
+Figure_2 PDF structure,PASS,one page; selectable text; extractable non-Type3 fonts=True
+Figure_3 PDF structure,PASS,one page; selectable text; extractable non-Type3 fonts=True
+Figure_4 PDF structure,PASS,one page; selectable text; extractable non-Type3 fonts=True
+Figure_5 PDF structure,PASS,one page; selectable text; extractable non-Type3 fonts=True
+Supplementary_Figure_S10_overlap_depletion PDF structure,PASS,one page; selectable text; extractable non-Type3 fonts=True
+Supplementary_Figure_S1_source_integrity_qc PDF structure,PASS,one page; selectable text; extractable non-Type3 fonts=True
+Supplementary_Figure_S2_representation_diagnostics PDF structure,PASS,one page; selectable text; extractable non-Type3 fonts=True
+Supplementary_Figure_S3_fine_state_failure_transition_structure PDF structure,PASS,one page; selectable text; extractable non-Type3 fonts=True
+Supplementary_Figure_S4_identity_boundary_and_propagation PDF structure,PASS,one page; selectable text; extractable non-Type3 fonts=True
+Supplementary_Figure_S5_composition_diagnostics PDF structure,PASS,one page; selectable text; extractable non-Type3 fonts=True
+Supplementary_Figure_S6_pseudobulk_ranked_list_diagnostics PDF structure,PASS,one page; selectable text; extractable non-Type3 fonts=True
+Supplementary_Figure_S7_replication_robustness_diagnostics PDF structure,PASS,one page; selectable text; extractable non-Type3 fonts=True
+Supplementary_Figure_S8_reference_calibration_boundary PDF structure,PASS,one page; selectable text; extractable non-Type3 fonts=True
+Supplementary_Figure_S9_regulator_correlation_sensitivity PDF structure,PASS,one page; selectable text; extractable non-Type3 fonts=True
+F1 source rows,PASS,20
+F2 source rows,PASS,191
+F3 source rows,PASS,38
+F4 source rows,PASS,4424
+F5 source rows,PASS,65
+S1 archived-source identity,PASS,Supplementary_Figure_S1_source_data.csv
+S2 archived-source identity,PASS,Supplementary_Figure_S2_source_data.csv
+S3 archived-source identity,PASS,Supplementary_Figure_S3_source_data.csv
+S4 archived-source identity,PASS,Supplementary_Figure_S4_source_data.csv
+S5 archived-source identity,PASS,Supplementary_Figure_S5_source_data.csv
+S6 archived-source identity,PASS,Supplementary_Figure_S6_source_data.csv
+S7 archived-source identity,PASS,Supplementary_Figure_S7_source_data.csv
+S8 archived-source identity,PASS,Supplementary_Figure_S8_source_data.csv
+S9 archived-source identity,PASS,Supplementary_Figure_S9_source_data.csv
+S10 archived-source identity,PASS,Supplementary_Figure_S10_source_data.csv
+Four-program family,PASS,"['NAIVE_TO_MEMORY_AXIS', 'ATYPICAL_LOW_NAIVE_AXIS', 'APC_HLA', 'IFN_ISG']"
+F3 CI algebra NAIVE_TO_MEMORY_AXIS,PASS,saved effect/SE/df; no refit
+F3 CI algebra ATYPICAL_LOW_NAIVE_AXIS,PASS,saved effect/SE/df; no refit
+F3 CI algebra APC_HLA,PASS,saved effect/SE/df; no refit
+F3 CI algebra IFN_ISG,PASS,saved effect/SE/df; no refit
+Positive primary pan-B control retained,PASS,0.408920593284872; nominal-only QC
+Calibration boundary,PASS,"[('Coverage', '0.941958041958042', '0.8'), ('B_CONV precision', '0.9964495087110892', '0.9'), ('B_ASC precision', '0.8852097130242825', '0.9')]"
+F4 shared genes and recomputed concordance,PASS,n=4410; rho=0.026051909
+Ten jointly tested IFN genes,PASS,10
+Depletion records,PASS,12
+Depletion negative interval not hidden,PASS,"[('gse174188_primary', 'STAT2', '0.500111148687377')]"
+Stage I same estimand as WP1,PASS,not independent replication
+Stage I Wald identities,PASS,direct saved-value algebra; not refit
+Stage I independent nominal P,PASS,SciPy t distribution; no model refit

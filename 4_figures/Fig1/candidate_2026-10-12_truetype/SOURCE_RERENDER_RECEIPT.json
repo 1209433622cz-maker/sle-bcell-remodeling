@@ -1,0 +1,26 @@
+{
+  "source_sha256": "cdc5d50d16bb718ae410516a5456e16b513bd6c62c752e87480c149f0a0bd3e2",
+  "source_copy_sha256": "cdc5d50d16bb718ae410516a5456e16b513bd6c62c752e87480c149f0a0bd3e2",
+  "builder_sha256": "df83ad4cf85c3a5b562c0a651937eaa214b9b1feed20b8e735a472b0ddced0c3",
+  "shared_artwork_sha256": "7d6c206ab300f81a7612a27fe1c408b67de5b78e69c6505b0eb15a744f046797",
+  "python_executable": "D:\\bioinfor\\python.exe",
+  "matplotlib": "3.10.7",
+  "canonical_unchanged": true,
+  "explicit_changes": [
+    "pdf.fonttype=42",
+    "b legend moved away from minimum-ARI points",
+    "c/d fixed ticks match the parent figure"
+  ],
+  "original_pixels": [
+    3086,
+    4015,
+    3
+  ],
+  "candidate_pixels": [
+    3086,
+    4015,
+    3
+  ],
+  "exact_pixel_match": false,
+  "changed_pixel_fraction": 0.064998236522309
+}

@@ -1,0 +1,25 @@
+{
+  "zip_sha256": "d52d3804bf067f9ef469c9bc732ddc1acb4c123a49d086db5cec0b728e8ff17b",
+  "package_qa_exit": 1,
+  "manifest_mismatches": 464,
+  "active_core_mismatches": [],
+  "archive_matches": [
+    {
+      "path": "00_CONTROL/VERSION_REGISTRY.json",
+      "zip_sha": "cce0b73dfea67e92b5398d8f3bca9a4ac5126af92789c2f92ed167a15672f439",
+      "extracted_sha": "cce0b73dfea67e92b5398d8f3bca9a4ac5126af92789c2f92ed167a15672f439"
+    },
+    {
+      "path": "01_RUNTIME/CORE/SKILL.md",
+      "zip_sha": "322a67501a784f40cf9ac903d6bfacf52118f4f33d737abf15706ceafe509ef8",
+      "extracted_sha": "322a67501a784f40cf9ac903d6bfacf52118f4f33d737abf15706ceafe509ef8"
+    },
+    {
+      "path": "04_EXECUTABLE_QA/qiteng_qa.py",
+      "zip_sha": "b6cd9791d2aa9cfe9cf017e97f2f624ddc82cc539ad612357ad151d514e4f21a",
+      "extracted_sha": "b6cd9791d2aa9cfe9cf017e97f2f624ddc82cc539ad612357ad151d514e4f21a"
+    }
+  ],
+  "scientific_validation": false,
+  "behavioral_specs": 570
+}
