@@ -72,7 +72,15 @@
 
 进一步复核确认：93 项内容差异全部为 CRLF/LF 等价；另一个历史中文路径在该 tar 导出中未按索引名称找到。Python 普通路径还触发了 44 个 Windows 长路径假缺失，使用 extended-length path 后仅剩上述一个导出名称问题。最终 Git 对象校验没有这些导出/路径问题，4,785/4,785 PASS；精选清单在加入新校验器后为 125/125，导航 125/125。本轮没有改写历史文件来迁就导出工具。
 
-当前记录状态：`PRE_PUSH_LOCAL_VERIFICATION_COMPLETE`。公开提交、远端精确 SHA 和 GitHub Actions 结果将在实际推送后补录；不得预先宣称成功。还需从暂存区 tree 导出干净字节、运行公开校验，随后非 force 推送并核对远端目录和 CI。
+当前记录状态：`PASS_GITHUB_STRUCTURE_SYNC__SCIENTIFIC_CANDIDATE_REVIEW_REQUIRED`。
+
+重构内容已非 force 推送，提交为 `c9ee10120ee755efd033879490161fc72080c21f`；86 个变更文件。`git ls-remote` 确认远端 `main` 指向同一提交。GitHub API 在该精确提交下确认八个主目录均存在；远端 README 的 Git object ID `b36054fbb3a3dbb336a4718a0e76feb62bae0dbe` 与本地一致。
+
+GitHub Actions 的 [Static checks 38246420810](https://github.com/1209433622cz-maker/sle-bcell-remodeling/actions/runs/38246420810) 已完成，结论 `success`；包含脚本语法编译、18 项测试、精选公开文件/导航校验与全量 Git blob 索引校验。仓库维持 PUBLIC，简介更新为可审计的 SLE B-cell 分析、图件、源数据、稿件候选及有边界的可复现记录，避免将未解锁工作表述为完整外部验证。
+
+本记录的推送后补录与同步索引另作一个小型收尾提交，避免改写首轮提交历史；最终收尾 SHA、远端一致性和 CI 收据保存在本地 `GITHUB_PUSH_RECEIPT_2026-10-12.json`，排除自引用和重复提交循环。Git 索引共 4,789 个受跟踪路径，4,785 项可索引负载，四份派生文件排除自引用；不是新增 4,789 文件，也不是上传大型本地原始数据。
+
+本轮 `tmp/public_repository_export_20261012_98ff207/` 临时 tar/checkout 的清理指令被工具策略拒绝，未删除，也未使用其他方式绕过。它仍为 Git 忽略的本地取证临时目录，不进入推送；该限制不影响完整性核验或公开同步结果。
 
 ## 7. 未变更对象与下一阶段
 
